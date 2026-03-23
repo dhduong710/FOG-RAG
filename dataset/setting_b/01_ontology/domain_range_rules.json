@@ -1,0 +1,29 @@
+{
+  "indication": {
+    "head_type": "drug",
+    "tail_type": "disease",
+    "role": "setting_a_main_task"
+  },
+  "contraindication": {
+    "head_type": "drug",
+    "tail_type": "disease",
+    "role": "setting_b_auxiliary_safety"
+  },
+  "target": {
+    "head_type": "drug",
+    "tail_type": "gene/protein",
+    "role": "train_graph_enrichment"
+  },
+  "associated_with": {
+    "head_type": "gene/protein",
+    "tail_type": "disease",
+    "role": "train_graph_enrichment"
+  },
+  "ppi": {
+    "head_type": "gene/protein",
+    "tail_type": "gene/protein",
+    "role": "train_graph_enrichment",
+    "symmetric": true,
+    "counting_convention": "unordered_collapsed"
+  }
+}

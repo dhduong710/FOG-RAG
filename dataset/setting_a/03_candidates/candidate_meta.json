@@ -1,0 +1,10 @@
+{
+  "k": 20,
+  "base_seed": 2025,
+  "candidate_type": "drug",
+  "gold_included": true,
+  "ranking_policy": "gold-first + deterministic shuffled train-drug negatives",
+  "drug_universe_size": 1801,
+  "drug_universe_source": "dataset/setting_a/01_split/train.tsv",
+  "mock_ranker": true
+}

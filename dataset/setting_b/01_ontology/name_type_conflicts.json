@@ -1,0 +1,379 @@
+{
+  "4-hydroxyphenylacetic aciduria": [
+    "disease",
+    "effect/phenotype"
+  ],
+  "Acetaminophen": [
+    "drug",
+    "exposure"
+  ],
+  "Ammonia": [
+    "drug",
+    "exposure"
+  ],
+  "Amoxicillin": [
+    "drug",
+    "exposure"
+  ],
+  "Androstenedione": [
+    "drug",
+    "exposure"
+  ],
+  "Axenfeld anomaly": [
+    "disease",
+    "effect/phenotype"
+  ],
+  "Barrett esophagus": [
+    "disease",
+    "effect/phenotype"
+  ],
+  "Budd-Chiari syndrome": [
+    "disease",
+    "effect/phenotype"
+  ],
+  "Burkitt lymphoma": [
+    "disease",
+    "effect/phenotype"
+  ],
+  "Caffeine": [
+    "drug",
+    "exposure"
+  ],
+  "Calcifediol": [
+    "drug",
+    "exposure"
+  ],
+  "Calcium": [
+    "drug",
+    "exposure"
+  ],
+  "Chloroform": [
+    "drug",
+    "exposure"
+  ],
+  "Chromium": [
+    "drug",
+    "exposure"
+  ],
+  "Ciprofloxacin": [
+    "drug",
+    "exposure"
+  ],
+  "Clarithromycin": [
+    "drug",
+    "exposure"
+  ],
+  "Clostridium difficile colitis": [
+    "disease",
+    "effect/phenotype"
+  ],
+  "Copper": [
+    "drug",
+    "exposure"
+  ],
+  "Coumaphos": [
+    "drug",
+    "exposure"
+  ],
+  "Cryptococcal meningitis": [
+    "disease",
+    "effect/phenotype"
+  ],
+  "Cyanamide": [
+    "drug",
+    "exposure"
+  ],
+  "Cysteine": [
+    "drug",
+    "exposure"
+  ],
+  "DDT": [
+    "exposure",
+    "gene/protein"
+  ],
+  "DNA methylation": [
+    "biological_process",
+    "pathway"
+  ],
+  "DNA replication initiation": [
+    "biological_process",
+    "pathway"
+  ],
+  "DNA strand elongation": [
+    "biological_process",
+    "pathway"
+  ],
+  "Dichlorvos": [
+    "drug",
+    "exposure"
+  ],
+  "Doxorubicin": [
+    "drug",
+    "exposure"
+  ],
+  "Doxycycline": [
+    "drug",
+    "exposure"
+  ],
+  "Estradiol": [
+    "drug",
+    "exposure"
+  ],
+  "Estriol": [
+    "drug",
+    "exposure"
+  ],
+  "Estrone": [
+    "drug",
+    "exposure"
+  ],
+  "Ethanol": [
+    "drug",
+    "exposure"
+  ],
+  "Ewing sarcoma": [
+    "disease",
+    "effect/phenotype"
+  ],
+  "Fluconazole": [
+    "drug",
+    "exposure"
+  ],
+  "Formaldehyde": [
+    "drug",
+    "exposure"
+  ],
+  "Genistein": [
+    "drug",
+    "exposure"
+  ],
+  "Graves disease": [
+    "disease",
+    "effect/phenotype"
+  ],
+  "Hashimoto thyroiditis": [
+    "disease",
+    "effect/phenotype"
+  ],
+  "Heberden's node": [
+    "disease",
+    "effect/phenotype"
+  ],
+  "Horner syndrome": [
+    "disease",
+    "effect/phenotype"
+  ],
+  "Ibuprofen": [
+    "drug",
+    "exposure"
+  ],
+  "Iodine": [
+    "drug",
+    "exposure"
+  ],
+  "Iron": [
+    "drug",
+    "exposure"
+  ],
+  "Levofloxacin": [
+    "drug",
+    "exposure"
+  ],
+  "Lincomycin": [
+    "drug",
+    "exposure"
+  ],
+  "Lutein": [
+    "drug",
+    "exposure"
+  ],
+  "MCC": [
+    "drug",
+    "gene/protein"
+  ],
+  "Madelung deformity": [
+    "disease",
+    "effect/phenotype"
+  ],
+  "Magnesium": [
+    "drug",
+    "exposure"
+  ],
+  "Malathion": [
+    "drug",
+    "exposure"
+  ],
+  "Manganese": [
+    "drug",
+    "exposure"
+  ],
+  "Mitotane": [
+    "drug",
+    "exposure"
+  ],
+  "Moxifloxacin": [
+    "drug",
+    "exposure"
+  ],
+  "NADPH regeneration": [
+    "biological_process",
+    "pathway"
+  ],
+  "Nicotine": [
+    "drug",
+    "exposure"
+  ],
+  "Nitric Oxide": [
+    "drug",
+    "exposure"
+  ],
+  "Opium": [
+    "drug",
+    "exposure"
+  ],
+  "Oxygen": [
+    "drug",
+    "exposure"
+  ],
+  "Permethrin": [
+    "drug",
+    "exposure"
+  ],
+  "Phenol": [
+    "drug",
+    "exposure"
+  ],
+  "Phosmet": [
+    "drug",
+    "exposure"
+  ],
+  "Platinum": [
+    "drug",
+    "exposure"
+  ],
+  "Potassium": [
+    "drug",
+    "exposure"
+  ],
+  "Progesterone": [
+    "drug",
+    "exposure"
+  ],
+  "Pyrimethamine": [
+    "drug",
+    "exposure"
+  ],
+  "Rieger anomaly": [
+    "disease",
+    "effect/phenotype"
+  ],
+  "SRP-dependent cotranslational protein targeting to membrane": [
+    "biological_process",
+    "pathway"
+  ],
+  "Selenium": [
+    "drug",
+    "exposure"
+  ],
+  "Silver": [
+    "drug",
+    "exposure"
+  ],
+  "Sulfadoxine": [
+    "drug",
+    "exposure"
+  ],
+  "Testosterone": [
+    "drug",
+    "exposure"
+  ],
+  "Thiabendazole": [
+    "drug",
+    "exposure"
+  ],
+  "Thimerosal": [
+    "drug",
+    "exposure"
+  ],
+  "Thyrotropin": [
+    "drug",
+    "exposure"
+  ],
+  "Trichloroethylene": [
+    "drug",
+    "exposure"
+  ],
+  "Triclosan": [
+    "drug",
+    "exposure"
+  ],
+  "Vitamin A": [
+    "drug",
+    "exposure"
+  ],
+  "Vitamin D": [
+    "drug",
+    "exposure"
+  ],
+  "Vitamin E": [
+    "drug",
+    "exposure",
+    "pathway"
+  ],
+  "Warfarin": [
+    "drug",
+    "exposure"
+  ],
+  "Zinc": [
+    "drug",
+    "exposure"
+  ],
+  "bicornuate uterus": [
+    "anatomy",
+    "disease"
+  ],
+  "capsule": [
+    "anatomy",
+    "cellular_component"
+  ],
+  "climbing fiber": [
+    "anatomy",
+    "cellular_component"
+  ],
+  "egg chorion": [
+    "anatomy",
+    "cellular_component"
+  ],
+  "epicanthal fold": [
+    "anatomy",
+    "disease"
+  ],
+  "gamma-Tocopherol": [
+    "drug",
+    "exposure"
+  ],
+  "mRNA 3'-end processing": [
+    "biological_process",
+    "pathway"
+  ],
+  "parallel fiber": [
+    "anatomy",
+    "cellular_component"
+  ],
+  "rRNA processing": [
+    "biological_process",
+    "pathway"
+  ],
+  "synostosis": [
+    "anatomy",
+    "disease"
+  ],
+  "tRNA processing": [
+    "biological_process",
+    "pathway"
+  ],
+  "yolk": [
+    "anatomy",
+    "cellular_component"
+  ]
+}

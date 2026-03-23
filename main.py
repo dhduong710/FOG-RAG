@@ -11,7 +11,6 @@ from transformers import AutoModelForCausalLM, LlamaForCausalLM
 from transformers import Seq2SeqTrainingArguments, Seq2SeqTrainer, HfArgumentParser
 from transformers import set_seed, Seq2SeqTrainer, BitsAndBytesConfig
 
-
 from peft.tuners.lora import LoraLayer
 from peft import LoraConfig, get_peft_model, PeftModelForCausalLM, prepare_model_for_kbit_training
 
@@ -22,7 +21,7 @@ from model import GraphEnhancer, DrKGC
 def get_accelerate_model(args, config, pretrained_model_class):
     device_map = 'auto' if os.environ.get('LOCAL_RANK') is None else {'': int(os.environ.get('LOCAL_RANK', '0'))}
     
-   
+  
     if args.use_quant:
         compute_dtype = torch.bfloat16 
         model = pretrained_model_class.from_pretrained(
@@ -66,14 +65,14 @@ def get_accelerate_model(args, config, pretrained_model_class):
         bias="none",
         task_type="CAUSAL_LM",
         target_modules=[
-            "q_proj",
-            "k_proj",
-            "v_proj",
-            "o_proj",
-            "gate_proj",
-            "up_proj",
-            "down_proj",
-            "lm_head",
+            "q_proj", // query, từ hiện tại đang muốn tìm kiếm thông tin gì từ các từ khác
+            "k_proj", // key, thông tin mà một từ đang nắm giữ, dùng để trả lời cho query của các từ khác
+            "v_proj", // value, nội dung thực sự của từ đó sẽ được truyền đi nếu query và key khớp nhau
+            "o_proj", // output, sau khi tính toán xong attention, tổng hợp và chiếu các thông tin đó ra để truyền sang bước tiếp theo
+            "gate_proj", // quyết định xem lượng thông tin nào được phép đi qua dựa trên hàm kích hoạt
+            "up_proj", // chiếu vector thông tin lên một chiều không gian lớn hơn để mô hình học các biểu diễn phức tạp
+            "down_proj", // chiếu vector về lại kích thước ban đầu để đẩy sang khối transformer tiếp theo
+            "lm_head", // language modeling head, lớp tuyến tính cuối cùng của toàn bộ mô hình, nhận thông tin đã được xử lý qua lớp ẩn và biến đổi chúng thành một danh sách xác suất để dự đoán từ tiếp theo được sinh ra là từ gì
             ],
 )
         

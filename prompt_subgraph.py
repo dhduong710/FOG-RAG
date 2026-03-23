@@ -200,6 +200,15 @@ def default(o):
     raise TypeError(f"Object of type {o.__class__.__name__} is not JSON serializable")
 
 
+def count_exact_leaks(data):
+    leak = 0
+    for item in data:
+        gold = tuple(item["triple_id"])
+        if any(tuple(x) == gold for x in item.get("subgraph", [])):
+            leak += 1
+    return leak
+
+
 def main(args):
     with open(args.train_json_path, 'r', encoding='utf-8') as json_file:
         train_json = json.load(json_file)
@@ -223,13 +232,10 @@ def main(args):
     train_df = pd.read_csv(args.train_raw, sep="\t", header=None)
     valid_df = pd.read_csv(args.valid_raw, sep="\t", header=None)
     test_df = pd.read_csv(args.test_raw, sep="\t", header=None)
-    graph_df = pd.concat([train_df, valid_df, test_df])
 
     train_id = map_graph(train_df, entity2id, relation2id)
     valid_id = map_graph(valid_df, entity2id, relation2id)
     test_id = map_graph(test_df, entity2id, relation2id)
-    graph_id = map_graph(graph_df, entity2id, relation2id)
-    tv_id = pd.concat([train_id, valid_id])
 
     # Add prompts
     for raw in train_json:
@@ -254,7 +260,7 @@ def main(args):
     }
 
     G = nx.MultiGraph()
-    for index, row in tv_id.iterrows():
+    for index, row in train_id.iterrows():
         head = int(row[0])
         relation = row[1]
         tail = int(row[2])
@@ -272,6 +278,15 @@ def main(args):
     test_subgraph = subgraph_func(test_json, args.graph_size, G, rules)
     for i in range(len(test_subgraph)):
         test_json[i]['subgraph'] = test_subgraph[i]
+
+    valid_leak = count_exact_leaks(valid_json)
+    test_leak = count_exact_leaks(test_json)
+
+    print(f"valid exact leak count: {valid_leak}")
+    print(f"test exact leak count: {test_leak}")
+
+    assert valid_leak == 0, f"Validation leakage detected: {valid_leak}"
+    assert test_leak == 0, f"Test leakage detected: {test_leak}"
 
     with open(args.valid_path_saved, 'w', encoding='utf-8') as f:
         json.dump(valid_json, f, ensure_ascii=False, indent=4, default=default)
