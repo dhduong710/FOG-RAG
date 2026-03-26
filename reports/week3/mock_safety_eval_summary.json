@@ -1,0 +1,14 @@
+{
+  "num_queries": 2,
+  "metrics": {
+    "SafetyViolation@1": 0.0,
+    "Contra@1": 0.0,
+    "SafetyViolation@3": 0.5,
+    "Contra@3": 0.5
+  },
+  "input_path": "dataset/setting_b/02_eval_ready/mock_safety_eval.json",
+  "ks": [
+    1,
+    3
+  ]
+}
