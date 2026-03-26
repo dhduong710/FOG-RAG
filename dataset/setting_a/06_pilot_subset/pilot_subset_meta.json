@@ -1,0 +1,38 @@
+{
+  "seed": 2025,
+  "train_ratio": 0.1,
+  "valid_target": 100,
+  "test_target": 100,
+  "source_train": "dataset/setting_a/04_drkgc_json/train_mock_ranked.json",
+  "source_valid": "dataset/setting_a/04_drkgc_json/valid_mock_ranked.json",
+  "source_test": "dataset/setting_a/04_drkgc_json/test_mock_ranked.json",
+  "train_summary": {
+    "num_samples": 839,
+    "num_unique_query_entities": 491,
+    "num_unique_gold_entities": 508,
+    "gold_in_candidate_count": 839,
+    "bad_format_count": 0,
+    "candidate_len_min": 20,
+    "candidate_len_max": 20
+  },
+  "valid_summary": {
+    "num_samples": 100,
+    "num_unique_query_entities": 80,
+    "num_unique_gold_entities": 64,
+    "gold_in_candidate_count": 100,
+    "bad_format_count": 0,
+    "candidate_len_min": 20,
+    "candidate_len_max": 20
+  },
+  "test_summary": {
+    "num_samples": 100,
+    "num_unique_query_entities": 79,
+    "num_unique_gold_entities": 64,
+    "gold_in_candidate_count": 100,
+    "bad_format_count": 0,
+    "candidate_len_min": 20,
+    "candidate_len_max": 20
+  },
+  "valid_pool_before_truncation": 204,
+  "test_pool_before_truncation": 211
+}
