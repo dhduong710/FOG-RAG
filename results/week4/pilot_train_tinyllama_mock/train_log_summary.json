@@ -1,0 +1,26 @@
+{
+  "num_logged_steps": 20,
+  "first_step_log": {
+    "epoch": 0.01,
+    "grad_norm": 6.312127113342285,
+    "learning_rate": 0.0002,
+    "loss": 0.6501,
+    "step": 1
+  },
+  "last_step_log": {
+    "epoch": 0.19,
+    "grad_norm": 0.16567111015319824,
+    "learning_rate": 0.0002,
+    "loss": 0.0022,
+    "step": 20
+  },
+  "min_logged_loss": 0.0002,
+  "max_logged_loss": 0.6501,
+  "final_train_results": {
+    "epoch": 0.19,
+    "train_loss": 0.07094827135151718,
+    "train_runtime": 63.3561,
+    "train_samples_per_second": 2.525,
+    "train_steps_per_second": 0.316
+  }
+}
