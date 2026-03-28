@@ -42,12 +42,14 @@ Assuming the same debug configuration and similar sequence-length behavior:
 ## 5. Interpretation
 - The current debug configuration fits comfortably for week-4 pilot purposes.
 - The current pilot confirms system stability, not scientific performance.
-- Because the current run still uses TinyLlama + mock entity embeddings, these numbers are conservative engineering estimates only.
+- The day-2 dry-run VRAM value is a forward-pass reference only and should not be treated as full training peak VRAM.
+- The pilot infer RSS value reflects host memory usage, not GPU peak memory.
+- Because the current run still uses TinyLlama + mock entity embeddings, all runtime estimates here are conservative engineering estimates for the debug configuration only.
 - The pilot does **not** justify jumping directly to a large month-2 run without one more cautious reproduction-style smoke run.
 
 ## 6. Final plan
 ### Recommended option: Plan B
-**Plan B**: pilot fit is good enough, but month 2 should start with a conservative reproduction configuration before scaling.
+**Plan B**: the week-4 pilot is stable enough to proceed, but month 2 should begin with a conservative reproduction configuration before any scaling.
 
 ### Main month-2 recommendation
 - primary month-2 goal: reproduce the DrKGC-style backbone on full Setting A first
@@ -57,13 +59,14 @@ Assuming the same debug configuration and similar sequence-length behavior:
 - do not add fuzzy or safety modules before backbone stability is confirmed
 
 ### Practical recommendation
-- debug model: keep the current TinyLlama-based pipeline for fast debugging
-- month-2 main run: move to the intended backbone gradually, not in one jump
-- first full-A smoke run in month 2 should be short and checkpoint-safe
-- only after that should you launch a longer reproduction run
+- keep the current TinyLlama-based pipeline as a fast debugging path
+- treat the current timing numbers as debug-cost estimates only
+- the first full-A month-2 run should be a short checkpoint-safe smoke run
+- only after that should a longer reproduction run be launched
 
 ## 7. Risks to watch
-- VRAM may rise substantially when replacing the debug model or mock embeddings
+- GPU memory may rise substantially when replacing the debug model or mock embeddings
+- training memory will be higher than the current dry-run forward memory
 - preprocessing time may become a bottleneck on full data
 - checkpoint storage can grow if save frequency is too aggressive
 - the current pilot infer is optimistic because the coarse ranker is still mock
