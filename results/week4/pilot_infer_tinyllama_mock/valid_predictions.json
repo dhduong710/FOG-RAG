@@ -1,0 +1,3002 @@
+[
+  {
+    "triple": [
+      "Paclitaxel",
+      "indication",
+      "ovarian endometrioid adenocarcinoma"
+    ],
+    "triple_id": [
+      6680,
+      1,
+      10068
+    ],
+    "type": "predicted_head",
+    "query_entity": "ovarian endometrioid adenocarcinoma",
+    "query_entity_id": 10068,
+    "target": "Paclitaxel",
+    "pred": "Paclitaxel",
+    "coarse_rank": 1,
+    "pred_rank": 1,
+    "exact_match": 1,
+    "candidate_top5": [
+      "Paclitaxel",
+      "Cerivastatin",
+      "Eptifibatide",
+      "Tinidazole",
+      "Lesinurad"
+    ],
+    "num_candidates": 20,
+    "subgraph_size": 72,
+    "input_preview": "You are a biomedical scientist. The task is to predict the answer based on the given question, and you only need to answer one entity. The answer must be in ('Paclitaxel', 'Cerivastatin', 'Eptifibatide', 'Tinidazole', 'Lesinurad', 'Diazoxide', 'Buclizine', 'Dichlorophen', 'Mepolizumab', 'Auranofin', 'Medrysone', 'Dehydrocholic acid', 'Clonazepam', 'Bosutinib', 'Paramethadione', 'Ripasudil', 'Escit"
+  },
+  {
+    "triple": [
+      "Triamcinolone",
+      "indication",
+      "periarthritis"
+    ],
+    "triple_id": [
+      8732,
+      1,
+      10106
+    ],
+    "type": "predicted_head",
+    "query_entity": "periarthritis",
+    "query_entity_id": 10106,
+    "target": "Triamcinolone",
+    "pred": "Triamcinolone",
+    "coarse_rank": 1,
+    "pred_rank": 1,
+    "exact_match": 1,
+    "candidate_top5": [
+      "Triamcinolone",
+      "Metharbital",
+      "Irinotecan",
+      "Ethionamide",
+      "Levamisole"
+    ],
+    "num_candidates": 20,
+    "subgraph_size": 80,
+    "input_preview": "You are a biomedical scientist. The task is to predict the answer based on the given question, and you only need to answer one entity. The answer must be in ('Triamcinolone', 'Metharbital', 'Irinotecan', 'Ethionamide', 'Levamisole', 'Cloxacillin', 'Chloral hydrate', 'Mepolizumab', 'Itopride', 'Rotigotine', 'Trastuzumab', 'Diflunisal', 'Lutein', 'Belotecan', 'Salicylamide', 'Miltefosine', 'Sonidegi"
+  },
+  {
+    "triple": [
+      "Demeclocycline",
+      "indication",
+      "conjunctivitis"
+    ],
+    "triple_id": [
+      2367,
+      1,
+      9481
+    ],
+    "type": "predicted_head",
+    "query_entity": "conjunctivitis",
+    "query_entity_id": 9481,
+    "target": "Demeclocycline",
+    "pred": "Demeclocycline",
+    "coarse_rank": 1,
+    "pred_rank": 1,
+    "exact_match": 1,
+    "candidate_top5": [
+      "Demeclocycline",
+      "Acetohydroxamic acid",
+      "Mebeverine",
+      "Sildenafil",
+      "Triprolidine"
+    ],
+    "num_candidates": 20,
+    "subgraph_size": 78,
+    "input_preview": "You are a biomedical scientist. The task is to predict the answer based on the given question, and you only need to answer one entity. The answer must be in ('Demeclocycline', 'Acetohydroxamic acid', 'Mebeverine', 'Sildenafil', 'Triprolidine', 'Simeprevir', 'Chlorpromazine', 'Colistin', 'Tretamine', 'Povidone K30', 'Migalastat', 'Colchicine', 'Clomipramine', 'Norepinephrine', 'Trepibutone', 'Turoc"
+  },
+  {
+    "triple": [
+      "Ciclopirox",
+      "indication",
+      "seborrheic dermatitis"
+    ],
+    "triple_id": [
+      1984,
+      1,
+      10270
+    ],
+    "type": "predicted_head",
+    "query_entity": "seborrheic dermatitis",
+    "query_entity_id": 10270,
+    "target": "Ciclopirox",
+    "pred": "Ciclopirox",
+    "coarse_rank": 1,
+    "pred_rank": 1,
+    "exact_match": 1,
+    "candidate_top5": [
+      "Ciclopirox",
+      "Prucalopride",
+      "Guanethidine",
+      "Polidocanol",
+      "Sivelestat"
+    ],
+    "num_candidates": 20,
+    "subgraph_size": 78,
+    "input_preview": "You are a biomedical scientist. The task is to predict the answer based on the given question, and you only need to answer one entity. The answer must be in ('Ciclopirox', 'Prucalopride', 'Guanethidine', 'Polidocanol', 'Sivelestat', 'Oxytetracycline', 'Glyburide', 'Glycine', 'Velpatasvir', 'Vandetanib', 'Isosorbide', 'Cefotaxime', 'Cinoxacin', 'Lonidamine', 'Didanosine', 'Mestranol', 'Lincomycin',"
+  },
+  {
+    "triple": [
+      "Ceftriaxone",
+      "indication",
+      "yaws"
+    ],
+    "triple_id": [
+      1941,
+      1,
+      10451
+    ],
+    "type": "predicted_head",
+    "query_entity": "yaws",
+    "query_entity_id": 10451,
+    "target": "Ceftriaxone",
+    "pred": "Ceftriaxone",
+    "coarse_rank": 1,
+    "pred_rank": 1,
+    "exact_match": 1,
+    "candidate_top5": [
+      "Ceftriaxone",
+      "Ergoloid mesylate",
+      "Testosterone cypionate",
+      "Baloxavir marboxil",
+      "Vorinostat"
+    ],
+    "num_candidates": 20,
+    "subgraph_size": 86,
+    "input_preview": "You are a biomedical scientist. The task is to predict the answer based on the given question, and you only need to answer one entity. The answer must be in ('Ceftriaxone', 'Ergoloid mesylate', 'Testosterone cypionate', 'Baloxavir marboxil', 'Vorinostat', 'Phenylbutyric acid', 'Amyl Nitrite', 'Risedronic acid', 'Trilostane', 'Bendamustine', 'Ranitidine', 'Aflibercept', 'Vitamin A', 'Phenmetrazine'"
+  },
+  {
+    "triple": [
+      "Acetylsalicylic acid",
+      "indication",
+      "migraine with or without aura, susceptibility to"
+    ],
+    "triple_id": [
+      632,
+      1,
+      9942
+    ],
+    "type": "predicted_head",
+    "query_entity": "migraine with or without aura, susceptibility to",
+    "query_entity_id": 9942,
+    "target": "Acetylsalicylic acid",
+    "pred": "Acetylsalicylic acid",
+    "coarse_rank": 1,
+    "pred_rank": 1,
+    "exact_match": 1,
+    "candidate_top5": [
+      "Acetylsalicylic acid",
+      "Enoxacin",
+      "Melphalan",
+      "Praziquantel",
+      "Tagraxofusp"
+    ],
+    "num_candidates": 20,
+    "subgraph_size": 78,
+    "input_preview": "You are a biomedical scientist. The task is to predict the answer based on the given question, and you only need to answer one entity. The answer must be in ('Acetylsalicylic acid', 'Enoxacin', 'Melphalan', 'Praziquantel', 'Tagraxofusp', 'Propylene glycol', 'Collagenase clostridium histolyticum', 'Carbinoxamine', 'Ticagrelor', 'Lutein', 'Lincomycin', 'Ethambutol', 'Fluoxetine', 'Somatrem', 'Loxapi"
+  },
+  {
+    "triple": [
+      "Betamethasone",
+      "indication",
+      "familial glucocorticoid deficiency"
+    ],
+    "triple_id": [
+      962,
+      1,
+      9627
+    ],
+    "type": "predicted_head",
+    "query_entity": "familial glucocorticoid deficiency",
+    "query_entity_id": 9627,
+    "target": "Betamethasone",
+    "pred": "Betamethasone",
+    "coarse_rank": 1,
+    "pred_rank": 1,
+    "exact_match": 1,
+    "candidate_top5": [
+      "Betamethasone",
+      "Cefepime",
+      "Doripenem",
+      "Enalaprilat",
+      "Metixene"
+    ],
+    "num_candidates": 20,
+    "subgraph_size": 76,
+    "input_preview": "You are a biomedical scientist. The task is to predict the answer based on the given question, and you only need to answer one entity. The answer must be in ('Betamethasone', 'Cefepime', 'Doripenem', 'Enalaprilat', 'Metixene', 'Penbutolol', 'Sparfloxacin', 'Etidronic acid', 'Lithium carbonate', 'Bupropion', 'Cinoxacin', 'Udenafil', 'Repaglinide', 'Mepolizumab', 'Tocilizumab', 'Sucralfate', 'Insuli"
+  },
+  {
+    "triple": [
+      "Prednisolone",
+      "indication",
+      "gout"
+    ],
+    "triple_id": [
+      6826,
+      1,
+      9700
+    ],
+    "type": "predicted_head",
+    "query_entity": "gout",
+    "query_entity_id": 9700,
+    "target": "Prednisolone",
+    "pred": "Prednisolone",
+    "coarse_rank": 1,
+    "pred_rank": 1,
+    "exact_match": 1,
+    "candidate_top5": [
+      "Prednisolone",
+      "Moroctocog alfa",
+      "Loprazolam",
+      "Epitizide",
+      "Eldecalcitol"
+    ],
+    "num_candidates": 20,
+    "subgraph_size": 77,
+    "input_preview": "You are a biomedical scientist. The task is to predict the answer based on the given question, and you only need to answer one entity. The answer must be in ('Prednisolone', 'Moroctocog alfa', 'Loprazolam', 'Epitizide', 'Eldecalcitol', 'Benperidol', 'Alirocumab', 'Valproic acid', 'Zaleplon', 'Sulbactam', 'Etidronic acid', 'Oxacillin', 'Sulfisoxazole', 'Luliconazole', 'Eslicarbazepine acetate', 'La"
+  },
+  {
+    "triple": [
+      "Trihexyphenidyl",
+      "indication",
+      "parkinsonian disorder"
+    ],
+    "triple_id": [
+      8746,
+      1,
+      10087
+    ],
+    "type": "predicted_head",
+    "query_entity": "parkinsonian disorder",
+    "query_entity_id": 10087,
+    "target": "Trihexyphenidyl",
+    "pred": "Trihexyphenidyl",
+    "coarse_rank": 1,
+    "pred_rank": 1,
+    "exact_match": 1,
+    "candidate_top5": [
+      "Trihexyphenidyl",
+      "Carbimazole",
+      "Teduglutide",
+      "Efinaconazole",
+      "Thiothixene"
+    ],
+    "num_candidates": 20,
+    "subgraph_size": 76,
+    "input_preview": "You are a biomedical scientist. The task is to predict the answer based on the given question, and you only need to answer one entity. The answer must be in ('Trihexyphenidyl', 'Carbimazole', 'Teduglutide', 'Efinaconazole', 'Thiothixene', 'Metacycline', 'Dexibuprofen', 'Dactinomycin', 'Lurasidone', 'Levobetaxolol', 'Reproterol', 'Estradiol cypionate', 'Acetic acid', 'Repaglinide', 'Nisoldipine', '"
+  },
+  {
+    "triple": [
+      "Triamcinolone",
+      "indication",
+      "nephrotic syndrome"
+    ],
+    "triple_id": [
+      8732,
+      1,
+      9993
+    ],
+    "type": "predicted_head",
+    "query_entity": "nephrotic syndrome",
+    "query_entity_id": 9993,
+    "target": "Triamcinolone",
+    "pred": "Triamcinolone",
+    "coarse_rank": 1,
+    "pred_rank": 1,
+    "exact_match": 1,
+    "candidate_top5": [
+      "Triamcinolone",
+      "Pegaptanib",
+      "Physostigmine",
+      "Natalizumab",
+      "Tamibarotene"
+    ],
+    "num_candidates": 20,
+    "subgraph_size": 80,
+    "input_preview": "You are a biomedical scientist. The task is to predict the answer based on the given question, and you only need to answer one entity. The answer must be in ('Triamcinolone', 'Pegaptanib', 'Physostigmine', 'Natalizumab', 'Tamibarotene', 'Pindolol', 'Tivozanib', 'Mifepristone', 'Temazepam', 'Dexibuprofen', 'Rimexolone', 'Isoflupredone acetate', 'Neostigmine', 'Calcium lactate gluconate', 'Tamoxifen"
+  },
+  {
+    "triple": [
+      "Betamethasone",
+      "indication",
+      "obsolete Hodgkin's granuloma"
+    ],
+    "triple_id": [
+      962,
+      1,
+      10028
+    ],
+    "type": "predicted_head",
+    "query_entity": "obsolete Hodgkin's granuloma",
+    "query_entity_id": 10028,
+    "target": "Betamethasone",
+    "pred": "Betamethasone",
+    "coarse_rank": 1,
+    "pred_rank": 1,
+    "exact_match": 1,
+    "candidate_top5": [
+      "Betamethasone",
+      "Dupilumab",
+      "Ampicillin",
+      "Uridine triacetate",
+      "Ticarcillin"
+    ],
+    "num_candidates": 20,
+    "subgraph_size": 73,
+    "input_preview": "You are a biomedical scientist. The task is to predict the answer based on the given question, and you only need to answer one entity. The answer must be in ('Betamethasone', 'Dupilumab', 'Ampicillin', 'Uridine triacetate', 'Ticarcillin', 'Meclizine', 'Tolazoline', 'Nivolumab', 'Tiocarlide', 'Tafluprost', 'Cefuroxime', 'Olaparib', 'Tetryzoline', 'Silicon dioxide', 'Vilanterol', 'Pravastatin', 'Rop"
+  },
+  {
+    "triple": [
+      "Diclofenac",
+      "indication",
+      "skin disease"
+    ],
+    "triple_id": [
+      2397,
+      1,
+      10289
+    ],
+    "type": "predicted_head",
+    "query_entity": "skin disease",
+    "query_entity_id": 10289,
+    "target": "Diclofenac",
+    "pred": "Diclofenac",
+    "coarse_rank": 1,
+    "pred_rank": 1,
+    "exact_match": 1,
+    "candidate_top5": [
+      "Diclofenac",
+      "Monoxerutin",
+      "Quinupristin",
+      "Anisotropine methylbromide",
+      "Cysteamine"
+    ],
+    "num_candidates": 20,
+    "subgraph_size": 74,
+    "input_preview": "You are a biomedical scientist. The task is to predict the answer based on the given question, and you only need to answer one entity. The answer must be in ('Diclofenac', 'Monoxerutin', 'Quinupristin', 'Anisotropine methylbromide', 'Cysteamine', 'Dexamethasone acetate', 'Homatropine', 'Dexamethasone', 'Butacaine', 'Menatetrenone', 'Testolactone', 'Carbromal', 'Ozanimod', 'Mannitol', 'Codeine', 'C"
+  },
+  {
+    "triple": [
+      "Erythromycin",
+      "indication",
+      "staphylococcus aureus infection"
+    ],
+    "triple_id": [
+      2746,
+      1,
+      10313
+    ],
+    "type": "predicted_head",
+    "query_entity": "staphylococcus aureus infection",
+    "query_entity_id": 10313,
+    "target": "Erythromycin",
+    "pred": "Erythromycin",
+    "coarse_rank": 1,
+    "pred_rank": 1,
+    "exact_match": 1,
+    "candidate_top5": [
+      "Erythromycin",
+      "Telmisartan",
+      "Dexamethasone acetate",
+      "Aliskiren",
+      "Melphalan"
+    ],
+    "num_candidates": 20,
+    "subgraph_size": 72,
+    "input_preview": "You are a biomedical scientist. The task is to predict the answer based on the given question, and you only need to answer one entity. The answer must be in ('Erythromycin', 'Telmisartan', 'Dexamethasone acetate', 'Aliskiren', 'Melphalan', 'Luseogliflozin', 'Erlotinib', 'Dihydroergotamine', 'Paramethadione', 'Lithium carbonate', 'Cefalotin', 'Aripiprazole lauroxil', 'Brentuximab vedotin', 'Gemtuzu"
+  },
+  {
+    "triple": [
+      "Sunitinib",
+      "indication",
+      "renal cell adenocarcinoma"
+    ],
+    "triple_id": [
+      8112,
+      1,
+      10228
+    ],
+    "type": "predicted_head",
+    "query_entity": "renal cell adenocarcinoma",
+    "query_entity_id": 10228,
+    "target": "Sunitinib",
+    "pred": "Sunitinib",
+    "coarse_rank": 1,
+    "pred_rank": 1,
+    "exact_match": 1,
+    "candidate_top5": [
+      "Sunitinib",
+      "Triamterene",
+      "Duvelisib",
+      "Motretinide",
+      "Hydroflumethiazide"
+    ],
+    "num_candidates": 20,
+    "subgraph_size": 62,
+    "input_preview": "You are a biomedical scientist. The task is to predict the answer based on the given question, and you only need to answer one entity. The answer must be in ('Sunitinib', 'Triamterene', 'Duvelisib', 'Motretinide', 'Hydroflumethiazide', 'Denosumab', 'Tacrolimus', 'Trelagliptin', 'Emedastine', 'Quinacrine', 'Polyvinyl alcohol', 'Tafluprost', 'Tolnaftate', 'Clonidine', 'Almitrine', 'Sildenafil', 'Tol"
+  },
+  {
+    "triple": [
+      "Altretamine",
+      "indication",
+      "malignant non-dysgerminomatous germ cell tumor of ovary"
+    ],
+    "triple_id": [
+      674,
+      1,
+      9915
+    ],
+    "type": "predicted_head",
+    "query_entity": "malignant non-dysgerminomatous germ cell tumor of ovary",
+    "query_entity_id": 9915,
+    "target": "Altretamine",
+    "pred": "Altretamine",
+    "coarse_rank": 1,
+    "pred_rank": 1,
+    "exact_match": 1,
+    "candidate_top5": [
+      "Altretamine",
+      "Methyprylon",
+      "Disulfiram",
+      "Sucralfate",
+      "Sulconazole"
+    ],
+    "num_candidates": 20,
+    "subgraph_size": 69,
+    "input_preview": "You are a biomedical scientist. The task is to predict the answer based on the given question, and you only need to answer one entity. The answer must be in ('Altretamine', 'Methyprylon', 'Disulfiram', 'Sucralfate', 'Sulconazole', 'Calcium lactate gluconate', 'Physostigmine', 'Dihydroergotamine', 'Rasagiline', 'Somatrem', 'Warfarin', 'Acipimox', 'Streptomycin', 'Pirbuterol', 'Troleandomycin', 'Cen"
+  },
+  {
+    "triple": [
+      "Dexamethasone",
+      "indication",
+      "hereditary angioedema"
+    ],
+    "triple_id": [
+      2378,
+      1,
+      9732
+    ],
+    "type": "predicted_head",
+    "query_entity": "hereditary angioedema",
+    "query_entity_id": 9732,
+    "target": "Dexamethasone",
+    "pred": "Dexamethasone",
+    "coarse_rank": 1,
+    "pred_rank": 1,
+    "exact_match": 1,
+    "candidate_top5": [
+      "Dexamethasone",
+      "Pimozide",
+      "Chlorpropamide",
+      "Temsirolimus",
+      "Sulfabenzamide"
+    ],
+    "num_candidates": 20,
+    "subgraph_size": 67,
+    "input_preview": "You are a biomedical scientist. The task is to predict the answer based on the given question, and you only need to answer one entity. The answer must be in ('Dexamethasone', 'Pimozide', 'Chlorpropamide', 'Temsirolimus', 'Sulfabenzamide', 'Tibolone', 'Mebicar', 'Quinacrine', 'Ozanimod', 'Sodium phosphate P 32', 'Auranofin', 'Levmetamfetamine', 'Racecadotril', 'Hexamidine', 'Zolmitriptan', 'Pegapta"
+  },
+  {
+    "triple": [
+      "Dexbrompheniramine",
+      "indication",
+      "papillary conjunctivitis"
+    ],
+    "triple_id": [
+      2380,
+      1,
+      10080
+    ],
+    "type": "predicted_head",
+    "query_entity": "papillary conjunctivitis",
+    "query_entity_id": 10080,
+    "target": "Dexbrompheniramine",
+    "pred": "Dexbrompheniramine",
+    "coarse_rank": 1,
+    "pred_rank": 1,
+    "exact_match": 1,
+    "candidate_top5": [
+      "Dexbrompheniramine",
+      "Lefamulin",
+      "Beta-D-Glucose",
+      "Asfotase alfa",
+      "Telmisartan"
+    ],
+    "num_candidates": 20,
+    "subgraph_size": 74,
+    "input_preview": "You are a biomedical scientist. The task is to predict the answer based on the given question, and you only need to answer one entity. The answer must be in ('Dexbrompheniramine', 'Lefamulin', 'Beta-D-Glucose', 'Asfotase alfa', 'Telmisartan', 'Trazodone', 'Ambenonium', 'Moxifloxacin', 'Floxuridine', 'Testosterone cypionate', 'Calcitriol', 'Trepibutone', 'Telaprevir', 'Azapropazone', 'Darifenacin',"
+  },
+  {
+    "triple": [
+      "Ergotamine",
+      "indication",
+      "migraine disorder"
+    ],
+    "triple_id": [
+      2741,
+      1,
+      9941
+    ],
+    "type": "predicted_head",
+    "query_entity": "migraine disorder",
+    "query_entity_id": 9941,
+    "target": "Ergotamine",
+    "pred": "Ergotamine",
+    "coarse_rank": 1,
+    "pred_rank": 1,
+    "exact_match": 1,
+    "candidate_top5": [
+      "Ergotamine",
+      "Cephalexin",
+      "Nisoldipine",
+      "Ecallantide",
+      "Befunolol"
+    ],
+    "num_candidates": 20,
+    "subgraph_size": 75,
+    "input_preview": "You are a biomedical scientist. The task is to predict the answer based on the given question, and you only need to answer one entity. The answer must be in ('Ergotamine', 'Cephalexin', 'Nisoldipine', 'Ecallantide', 'Befunolol', 'Safinamide', 'Ammonia', 'Dabrafenib', 'Cianidanol', 'Empagliflozin', 'Buclizine', 'Phenmetrazine', 'Pantoprazole', 'Polyvinyl alcohol', 'Vildagliptin', 'Atazanavir', 'Met"
+  },
+  {
+    "triple": [
+      "Triamcinolone",
+      "indication",
+      "mycosis fungoides and variants"
+    ],
+    "triple_id": [
+      8732,
+      1,
+      9965
+    ],
+    "type": "predicted_head",
+    "query_entity": "mycosis fungoides and variants",
+    "query_entity_id": 9965,
+    "target": "Triamcinolone",
+    "pred": "Triamcinolone",
+    "coarse_rank": 1,
+    "pred_rank": 1,
+    "exact_match": 1,
+    "candidate_top5": [
+      "Triamcinolone",
+      "Esketamine",
+      "Etofenamate",
+      "Cromoglicic acid",
+      "Efonidipine"
+    ],
+    "num_candidates": 20,
+    "subgraph_size": 76,
+    "input_preview": "You are a biomedical scientist. The task is to predict the answer based on the given question, and you only need to answer one entity. The answer must be in ('Triamcinolone', 'Esketamine', 'Etofenamate', 'Cromoglicic acid', 'Efonidipine', 'Carteolol', 'Bleomycin', 'Terbutaline', 'Fosfomycin', 'Cenegermin', 'Allantoin', 'Undecylenic acid', 'Blonanserin', 'Porfimer sodium', 'Vindesine', 'Darifenacin"
+  },
+  {
+    "triple": [
+      "Tetracycline",
+      "indication",
+      "pneumonia"
+    ],
+    "triple_id": [
+      8666,
+      1,
+      10150
+    ],
+    "type": "predicted_head",
+    "query_entity": "pneumonia",
+    "query_entity_id": 10150,
+    "target": "Tetracycline",
+    "pred": "Tetracycline",
+    "coarse_rank": 1,
+    "pred_rank": 1,
+    "exact_match": 1,
+    "candidate_top5": [
+      "Tetracycline",
+      "Meloxicam",
+      "Lorlatinib",
+      "Etidronic acid",
+      "Diazoxide"
+    ],
+    "num_candidates": 20,
+    "subgraph_size": 62,
+    "input_preview": "You are a biomedical scientist. The task is to predict the answer based on the given question, and you only need to answer one entity. The answer must be in ('Tetracycline', 'Meloxicam', 'Lorlatinib', 'Etidronic acid', 'Diazoxide', 'Tolnaftate', 'Dalfopristin', 'Butylphthalide', 'Crisaborole', 'Ustekinumab', 'Gimeracil', 'Theophylline', 'Loprazolam', 'Daunorubicin', 'Ibrutinib', 'Ivacaftor', 'Cape"
+  },
+  {
+    "triple": [
+      "Belotecan",
+      "indication",
+      "ovarian clear cell adenocarcinoma"
+    ],
+    "triple_id": [
+      937,
+      1,
+      10067
+    ],
+    "type": "predicted_head",
+    "query_entity": "ovarian clear cell adenocarcinoma",
+    "query_entity_id": 10067,
+    "target": "Belotecan",
+    "pred": "Belotecan",
+    "coarse_rank": 1,
+    "pred_rank": 1,
+    "exact_match": 1,
+    "candidate_top5": [
+      "Belotecan",
+      "Aztreonam",
+      "Testosterone undecanoate",
+      "Cholic Acid",
+      "Carbetocin"
+    ],
+    "num_candidates": 20,
+    "subgraph_size": 74,
+    "input_preview": "You are a biomedical scientist. The task is to predict the answer based on the given question, and you only need to answer one entity. The answer must be in ('Belotecan', 'Aztreonam', 'Testosterone undecanoate', 'Cholic Acid', 'Carbetocin', 'Dutasteride', 'Atovaquone', 'Sulfabenzamide', 'Magnesium hydroxide', 'Benzoic acid', 'Pioglitazone', 'Pasireotide', 'Candicidin', 'Flunoxaprofen', 'Burosumab'"
+  },
+  {
+    "triple": [
+      "Prednisolone",
+      "indication",
+      "precursor T-cell acute lymphoblastic leukemia"
+    ],
+    "triple_id": [
+      6826,
+      1,
+      10168
+    ],
+    "type": "predicted_head",
+    "query_entity": "precursor T-cell acute lymphoblastic leukemia",
+    "query_entity_id": 10168,
+    "target": "Prednisolone",
+    "pred": "Prednisolone",
+    "coarse_rank": 1,
+    "pred_rank": 1,
+    "exact_match": 1,
+    "candidate_top5": [
+      "Prednisolone",
+      "Tofacitinib",
+      "Infliximab",
+      "Spironolactone",
+      "Temoporfin"
+    ],
+    "num_candidates": 20,
+    "subgraph_size": 68,
+    "input_preview": "You are a biomedical scientist. The task is to predict the answer based on the given question, and you only need to answer one entity. The answer must be in ('Prednisolone', 'Tofacitinib', 'Infliximab', 'Spironolactone', 'Temoporfin', 'Carteolol', 'Mepolizumab', 'Buformin', 'Linagliptin', 'Acetylcarnitine', 'Methyprylon', 'Reproterol', 'Quinfamide', 'Fexofenadine', 'Colestilan chloride', 'Bilastin"
+  },
+  {
+    "triple": [
+      "Tolnaftate",
+      "indication",
+      "dermatophytosis of groin and perianal area"
+    ],
+    "triple_id": [
+      8705,
+      1,
+      9523
+    ],
+    "type": "predicted_head",
+    "query_entity": "dermatophytosis of groin and perianal area",
+    "query_entity_id": 9523,
+    "target": "Tolnaftate",
+    "pred": "Tolnaftate",
+    "coarse_rank": 1,
+    "pred_rank": 1,
+    "exact_match": 1,
+    "candidate_top5": [
+      "Tolnaftate",
+      "Romiplostim",
+      "Mometasone furoate",
+      "Ethosuximide",
+      "Felodipine"
+    ],
+    "num_candidates": 20,
+    "subgraph_size": 77,
+    "input_preview": "You are a biomedical scientist. The task is to predict the answer based on the given question, and you only need to answer one entity. The answer must be in ('Tolnaftate', 'Romiplostim', 'Mometasone furoate', 'Ethosuximide', 'Felodipine', 'Acetylcarnitine', 'Vorinostat', 'Tolcapone', 'Rizatriptan', 'Methotrexate', 'Carbutamide', 'Desoximetasone', 'Dolutegravir', 'Elbasvir', 'Lithium carbonate', 'M"
+  },
+  {
+    "triple": [
+      "Erythromycin",
+      "indication",
+      "conjunctivitis"
+    ],
+    "triple_id": [
+      2746,
+      1,
+      9481
+    ],
+    "type": "predicted_head",
+    "query_entity": "conjunctivitis",
+    "query_entity_id": 9481,
+    "target": "Erythromycin",
+    "pred": "Erythromycin",
+    "coarse_rank": 1,
+    "pred_rank": 1,
+    "exact_match": 1,
+    "candidate_top5": [
+      "Erythromycin",
+      "Progesterone",
+      "Etizolam",
+      "Tegafur",
+      "Midodrine"
+    ],
+    "num_candidates": 20,
+    "subgraph_size": 85,
+    "input_preview": "You are a biomedical scientist. The task is to predict the answer based on the given question, and you only need to answer one entity. The answer must be in ('Erythromycin', 'Progesterone', 'Etizolam', 'Tegafur', 'Midodrine', 'Idursulfase', 'Ramipril', 'Terbinafine', 'Olmutinib', 'Auranofin', 'Lesinurad', 'Potassium Iodide', 'Cyclacillin', 'Reserpine', 'Tagraxofusp', 'Atenolol', 'Potassium glucona"
+  },
+  {
+    "triple": [
+      "Indomethacin",
+      "indication",
+      "periarthritis"
+    ],
+    "triple_id": [
+      4130,
+      1,
+      10106
+    ],
+    "type": "predicted_head",
+    "query_entity": "periarthritis",
+    "query_entity_id": 10106,
+    "target": "Indomethacin",
+    "pred": "Indomethacin",
+    "coarse_rank": 1,
+    "pred_rank": 1,
+    "exact_match": 1,
+    "candidate_top5": [
+      "Indomethacin",
+      "Naloxone",
+      "Eprosartan",
+      "Amcinonide",
+      "Azapetine"
+    ],
+    "num_candidates": 20,
+    "subgraph_size": 84,
+    "input_preview": "You are a biomedical scientist. The task is to predict the answer based on the given question, and you only need to answer one entity. The answer must be in ('Indomethacin', 'Naloxone', 'Eprosartan', 'Amcinonide', 'Azapetine', 'Baloxavir marboxil', 'Dexrabeprazole', 'Tridihexethyl', 'Luspatercept', 'Cefepime', 'Ponatinib', 'Dopamine', 'Halazepam', 'Olaratumab', 'Mephenytoin', 'Tafluprost', 'Methyl"
+  },
+  {
+    "triple": [
+      "Melphalan",
+      "indication",
+      "hereditary site-specific ovarian cancer syndrome"
+    ],
+    "triple_id": [
+      5389,
+      1,
+      9741
+    ],
+    "type": "predicted_head",
+    "query_entity": "hereditary site-specific ovarian cancer syndrome",
+    "query_entity_id": 9741,
+    "target": "Melphalan",
+    "pred": "Melphalan",
+    "coarse_rank": 1,
+    "pred_rank": 1,
+    "exact_match": 1,
+    "candidate_top5": [
+      "Melphalan",
+      "Clioquinol",
+      "Telavancin",
+      "Itraconazole",
+      "Guaiacol"
+    ],
+    "num_candidates": 20,
+    "subgraph_size": 70,
+    "input_preview": "You are a biomedical scientist. The task is to predict the answer based on the given question, and you only need to answer one entity. The answer must be in ('Melphalan', 'Clioquinol', 'Telavancin', 'Itraconazole', 'Guaiacol', 'Tacrolimus', 'Eslicarbazepine acetate', 'Silicon dioxide', 'Aceprometazine', 'Brinzolamide', 'Talaporfin', 'Edetic acid', 'Atorvastatin', 'Uridine triacetate', 'Azithromyci"
+  },
+  {
+    "triple": [
+      "Triprolidine",
+      "indication",
+      "vernal conjunctivitis"
+    ],
+    "triple_id": [
+      8756,
+      1,
+      10433
+    ],
+    "type": "predicted_head",
+    "query_entity": "vernal conjunctivitis",
+    "query_entity_id": 10433,
+    "target": "Triprolidine",
+    "pred": "Triprolidine",
+    "coarse_rank": 1,
+    "pred_rank": 1,
+    "exact_match": 1,
+    "candidate_top5": [
+      "Triprolidine",
+      "Octreotide",
+      "Nafarelin",
+      "Loperamide",
+      "Melarsoprol"
+    ],
+    "num_candidates": 20,
+    "subgraph_size": 75,
+    "input_preview": "You are a biomedical scientist. The task is to predict the answer based on the given question, and you only need to answer one entity. The answer must be in ('Triprolidine', 'Octreotide', 'Nafarelin', 'Loperamide', 'Melarsoprol', 'Levmetamfetamine', 'Lisdexamfetamine', 'Hydroxocobalamin', 'Alectinib', 'Azelastine', 'Estradiol', 'Trimethadione', 'Endralazine', 'Heparin', 'Altretamine', 'Zinc oxide'"
+  },
+  {
+    "triple": [
+      "Prednisolone",
+      "indication",
+      "Hodgkin's paragranuloma"
+    ],
+    "triple_id": [
+      6826,
+      1,
+      3812
+    ],
+    "type": "predicted_head",
+    "query_entity": "Hodgkin's paragranuloma",
+    "query_entity_id": 3812,
+    "target": "Prednisolone",
+    "pred": "Prednisolone",
+    "coarse_rank": 1,
+    "pred_rank": 1,
+    "exact_match": 1,
+    "candidate_top5": [
+      "Prednisolone",
+      "Orlistat",
+      "Albendazole",
+      "Dihydrocodeine",
+      "Eprosartan"
+    ],
+    "num_candidates": 20,
+    "subgraph_size": 71,
+    "input_preview": "You are a biomedical scientist. The task is to predict the answer based on the given question, and you only need to answer one entity. The answer must be in ('Prednisolone', 'Orlistat', 'Albendazole', 'Dihydrocodeine', 'Eprosartan', 'Fluvastatin', 'Emedastine', 'Clobazam', 'Pomalidomide', 'Phenylephrine', 'Modafinil', 'Testosterone', 'Evolocumab', 'Antazoline', 'Bosentan', 'Relebactam', 'Selexipag"
+  },
+  {
+    "triple": [
+      "Desoximetasone",
+      "indication",
+      "granuloma annulare"
+    ],
+    "triple_id": [
+      2375,
+      1,
+      9702
+    ],
+    "type": "predicted_head",
+    "query_entity": "granuloma annulare",
+    "query_entity_id": 9702,
+    "target": "Desoximetasone",
+    "pred": "Desoximetasone",
+    "coarse_rank": 1,
+    "pred_rank": 1,
+    "exact_match": 1,
+    "candidate_top5": [
+      "Desoximetasone",
+      "Temoporfin",
+      "Chlorcyclizine",
+      "Tenofovir alafenamide",
+      "Cromoglicic acid"
+    ],
+    "num_candidates": 20,
+    "subgraph_size": 78,
+    "input_preview": "You are a biomedical scientist. The task is to predict the answer based on the given question, and you only need to answer one entity. The answer must be in ('Desoximetasone', 'Temoporfin', 'Chlorcyclizine', 'Tenofovir alafenamide', 'Cromoglicic acid', 'Ipratropium', 'Insulin aspart', 'Acetazolamide', 'Mepolizumab', 'Hachimycin', 'Bacitracin', 'Crotamiton', 'Ocrelizumab', 'Isoflupredone acetate', "
+  },
+  {
+    "triple": [
+      "Mechlorethamine",
+      "indication",
+      "primary cutaneous T-cell lymphoma"
+    ],
+    "triple_id": [
+      5376,
+      1,
+      10177
+    ],
+    "type": "predicted_head",
+    "query_entity": "primary cutaneous T-cell lymphoma",
+    "query_entity_id": 10177,
+    "target": "Mechlorethamine",
+    "pred": "Mechlorethamine",
+    "coarse_rank": 1,
+    "pred_rank": 1,
+    "exact_match": 1,
+    "candidate_top5": [
+      "Mechlorethamine",
+      "Eribulin",
+      "Nifurtimox",
+      "Ammonium chloride",
+      "Butacaine"
+    ],
+    "num_candidates": 20,
+    "subgraph_size": 66,
+    "input_preview": "You are a biomedical scientist. The task is to predict the answer based on the given question, and you only need to answer one entity. The answer must be in ('Mechlorethamine', 'Eribulin', 'Nifurtimox', 'Ammonium chloride', 'Butacaine', 'Artenimol', 'Etanercept', 'Leflunomide', 'Isocarboxazid', 'Zopiclone', 'Chlorphentermine', 'Pimozide', 'Levobunolol', 'Quinestrol', 'Bacampicillin', 'Mizolastine'"
+  },
+  {
+    "triple": [
+      "Fluocinonide",
+      "indication",
+      "neurodermatitis"
+    ],
+    "triple_id": [
+      3089,
+      1,
+      9997
+    ],
+    "type": "predicted_head",
+    "query_entity": "neurodermatitis",
+    "query_entity_id": 9997,
+    "target": "Fluocinonide",
+    "pred": "Fluocinonide",
+    "coarse_rank": 1,
+    "pred_rank": 1,
+    "exact_match": 1,
+    "candidate_top5": [
+      "Fluocinonide",
+      "Acetophenazine",
+      "Carbenicillin",
+      "Neltenexine",
+      "Edetic acid"
+    ],
+    "num_candidates": 20,
+    "subgraph_size": 80,
+    "input_preview": "You are a biomedical scientist. The task is to predict the answer based on the given question, and you only need to answer one entity. The answer must be in ('Fluocinonide', 'Acetophenazine', 'Carbenicillin', 'Neltenexine', 'Edetic acid', 'Raloxifene', 'Vincristine', 'Safinamide', 'Ibandronate', 'Clofarabine', 'Glasdegib', 'Magnesium sulfate', 'Alatrofloxacin', 'Copanlisib', 'Reproterol', 'Pramira"
+  },
+  {
+    "triple": [
+      "Haloperidol",
+      "indication",
+      "schizophrenia"
+    ],
+    "triple_id": [
+      3801,
+      1,
+      10263
+    ],
+    "type": "predicted_head",
+    "query_entity": "schizophrenia",
+    "query_entity_id": 10263,
+    "target": "Haloperidol",
+    "pred": "Haloperidol",
+    "coarse_rank": 1,
+    "pred_rank": 1,
+    "exact_match": 1,
+    "candidate_top5": [
+      "Haloperidol",
+      "Testolactone",
+      "Tyloxapol",
+      "Tazarotene",
+      "Ketanserin"
+    ],
+    "num_candidates": 20,
+    "subgraph_size": 51,
+    "input_preview": "You are a biomedical scientist. The task is to predict the answer based on the given question, and you only need to answer one entity. The answer must be in ('Haloperidol', 'Testolactone', 'Tyloxapol', 'Tazarotene', 'Ketanserin', 'Ferrous fumarate', 'Selenium Sulfide', 'Sulfasalazine', 'Bupivacaine', 'Pancrelipase', 'Oxetorone', 'Chlorambucil', 'Benznidazole', 'Nelfinavir', 'Piroxicam', 'Tolcapone"
+  },
+  {
+    "triple": [
+      "Betamethasone",
+      "indication",
+      "acute lymphoblastic leukemia (disease)"
+    ],
+    "triple_id": [
+      962,
+      1,
+      9243
+    ],
+    "type": "predicted_head",
+    "query_entity": "acute lymphoblastic leukemia (disease)",
+    "query_entity_id": 9243,
+    "target": "Betamethasone",
+    "pred": "Betamethasone",
+    "coarse_rank": 1,
+    "pred_rank": 1,
+    "exact_match": 1,
+    "candidate_top5": [
+      "Betamethasone",
+      "Riociguat",
+      "Guanadrel",
+      "Temocapril",
+      "Epinephrine"
+    ],
+    "num_candidates": 20,
+    "subgraph_size": 63,
+    "input_preview": "You are a biomedical scientist. The task is to predict the answer based on the given question, and you only need to answer one entity. The answer must be in ('Betamethasone', 'Riociguat', 'Guanadrel', 'Temocapril', 'Epinephrine', 'Omidenepag isopropyl', 'Dimethyl fumarate', 'Cianidanol', 'Rilpivirine', 'Droxidopa', 'Latanoprost', 'Synephrine', 'Dexamethasone acetate', 'Pegvisomant', 'Tiotropium', "
+  },
+  {
+    "triple": [
+      "Homatropine",
+      "indication",
+      "neurocirculatory asthenia"
+    ],
+    "triple_id": [
+      3814,
+      1,
+      9996
+    ],
+    "type": "predicted_head",
+    "query_entity": "neurocirculatory asthenia",
+    "query_entity_id": 9996,
+    "target": "Homatropine",
+    "pred": "Homatropine",
+    "coarse_rank": 1,
+    "pred_rank": 1,
+    "exact_match": 1,
+    "candidate_top5": [
+      "Homatropine",
+      "Guanethidine",
+      "Travoprost",
+      "Zoledronic acid",
+      "Dalbavancin"
+    ],
+    "num_candidates": 20,
+    "subgraph_size": 73,
+    "input_preview": "You are a biomedical scientist. The task is to predict the answer based on the given question, and you only need to answer one entity. The answer must be in ('Homatropine', 'Guanethidine', 'Travoprost', 'Zoledronic acid', 'Dalbavancin', 'Entecavir', 'Ferrous sulfate anhydrous', 'Cefadroxil', 'Prussian blue', 'Nicotine', 'Capsaicin', 'Ammonium chloride', 'Lercanidipine', 'Perphenazine', 'Cemiplimab"
+  },
+  {
+    "triple": [
+      "Salicylic acid",
+      "indication",
+      "osteoarthritis susceptibility"
+    ],
+    "triple_id": [
+      8022,
+      1,
+      10059
+    ],
+    "type": "predicted_head",
+    "query_entity": "osteoarthritis susceptibility",
+    "query_entity_id": 10059,
+    "target": "Salicylic acid",
+    "pred": "Salicylic acid",
+    "coarse_rank": 1,
+    "pred_rank": 1,
+    "exact_match": 1,
+    "candidate_top5": [
+      "Salicylic acid",
+      "Tienilic acid",
+      "Opipramol",
+      "Trastuzumab",
+      "Aranidipine"
+    ],
+    "num_candidates": 20,
+    "subgraph_size": 66,
+    "input_preview": "You are a biomedical scientist. The task is to predict the answer based on the given question, and you only need to answer one entity. The answer must be in ('Salicylic acid', 'Tienilic acid', 'Opipramol', 'Trastuzumab', 'Aranidipine', 'Dabrafenib', 'Droxidopa', 'Endralazine', 'Nitisinone', 'Clomifene', 'Zinc gluconate', 'Cholic Acid', 'Lithium carbonate', 'Protriptyline', 'Ecabet', 'Acetylcarniti"
+  },
+  {
+    "triple": [
+      "Griseofulvin",
+      "indication",
+      "tinea corporis"
+    ],
+    "triple_id": [
+      3510,
+      1,
+      10378
+    ],
+    "type": "predicted_head",
+    "query_entity": "tinea corporis",
+    "query_entity_id": 10378,
+    "target": "Griseofulvin",
+    "pred": "Griseofulvin",
+    "coarse_rank": 1,
+    "pred_rank": 1,
+    "exact_match": 1,
+    "candidate_top5": [
+      "Griseofulvin",
+      "Melatonin",
+      "Ubidecarenone",
+      "Carbromal",
+      "Polidocanol"
+    ],
+    "num_candidates": 20,
+    "subgraph_size": 85,
+    "input_preview": "You are a biomedical scientist. The task is to predict the answer based on the given question, and you only need to answer one entity. The answer must be in ('Griseofulvin', 'Melatonin', 'Ubidecarenone', 'Carbromal', 'Polidocanol', 'Beclabuvir', 'Oprelvekin', 'Gemtuzumab ozogamicin', 'Efmoroctocog alfa', 'Emedastine', 'Ustekinumab', 'Fremanezumab', 'Podofilox', 'Cemiplimab', 'Vorinostat', 'Metacyc"
+  },
+  {
+    "triple": [
+      "Hydrocortisone",
+      "indication",
+      "dermatophytosis of groin and perianal area"
+    ],
+    "triple_id": [
+      3824,
+      1,
+      9523
+    ],
+    "type": "predicted_head",
+    "query_entity": "dermatophytosis of groin and perianal area",
+    "query_entity_id": 9523,
+    "target": "Hydrocortisone",
+    "pred": "Hydrocortisone",
+    "coarse_rank": 1,
+    "pred_rank": 1,
+    "exact_match": 1,
+    "candidate_top5": [
+      "Hydrocortisone",
+      "Aprobarbital",
+      "Tecovirimat",
+      "Guaifenesin",
+      "Pegademase"
+    ],
+    "num_candidates": 20,
+    "subgraph_size": 74,
+    "input_preview": "You are a biomedical scientist. The task is to predict the answer based on the given question, and you only need to answer one entity. The answer must be in ('Hydrocortisone', 'Aprobarbital', 'Tecovirimat', 'Guaifenesin', 'Pegademase', 'Zolmitriptan', 'Metamfetamine', 'Esketamine', 'Rizatriptan', 'Tolvaptan', 'Etodolac', 'Ibritumomab tiuxetan', 'Lanadelumab', 'Vindesine', 'Potassium citrate', 'Qui"
+  },
+  {
+    "triple": [
+      "Betamethasone",
+      "indication",
+      "folliculotropic mycosis fungoides"
+    ],
+    "triple_id": [
+      962,
+      1,
+      9658
+    ],
+    "type": "predicted_head",
+    "query_entity": "folliculotropic mycosis fungoides",
+    "query_entity_id": 9658,
+    "target": "Betamethasone",
+    "pred": "Betamethasone",
+    "coarse_rank": 1,
+    "pred_rank": 1,
+    "exact_match": 1,
+    "candidate_top5": [
+      "Betamethasone",
+      "Dexmethylphenidate",
+      "Lumiracoxib",
+      "Acebutolol",
+      "Darifenacin"
+    ],
+    "num_candidates": 20,
+    "subgraph_size": 78,
+    "input_preview": "You are a biomedical scientist. The task is to predict the answer based on the given question, and you only need to answer one entity. The answer must be in ('Betamethasone', 'Dexmethylphenidate', 'Lumiracoxib', 'Acebutolol', 'Darifenacin', 'Diiodohydroxyquinoline', 'Roxatidine acetate', 'Xylometazoline', 'Venlafaxine', 'Salmon calcitonin', 'Mefenorex', 'Desloratadine', 'Omalizumab', 'Acetylsalicy"
+  },
+  {
+    "triple": [
+      "Prednisolone",
+      "indication",
+      "hereditary angioedema"
+    ],
+    "triple_id": [
+      6826,
+      1,
+      9732
+    ],
+    "type": "predicted_head",
+    "query_entity": "hereditary angioedema",
+    "query_entity_id": 9732,
+    "target": "Prednisolone",
+    "pred": "Prednisolone",
+    "coarse_rank": 1,
+    "pred_rank": 1,
+    "exact_match": 1,
+    "candidate_top5": [
+      "Prednisolone",
+      "Bismuth subsalicylate",
+      "Lomitapide",
+      "Reserpine",
+      "Paliperidone"
+    ],
+    "num_candidates": 20,
+    "subgraph_size": 79,
+    "input_preview": "You are a biomedical scientist. The task is to predict the answer based on the given question, and you only need to answer one entity. The answer must be in ('Prednisolone', 'Bismuth subsalicylate', 'Lomitapide', 'Reserpine', 'Paliperidone', 'Tioguanine', 'Penthienate', 'Mosapramine', 'Iproniazid', 'Estradiol', 'Zanamivir', 'Synephrine', 'Faropenem', 'Lamivudine', 'Captopril', 'Sarecycline', 'Tacr"
+  },
+  {
+    "triple": [
+      "Zinc oxide",
+      "indication",
+      "tinea infection"
+    ],
+    "triple_id": [
+      9207,
+      1,
+      10380
+    ],
+    "type": "predicted_head",
+    "query_entity": "tinea infection",
+    "query_entity_id": 10380,
+    "target": "Zinc oxide",
+    "pred": "Zinc oxide",
+    "coarse_rank": 1,
+    "pred_rank": 1,
+    "exact_match": 1,
+    "candidate_top5": [
+      "Zinc oxide",
+      "Vernakalant",
+      "Potassium gluconate",
+      "Cefapirin",
+      "Albutrepenonacog alfa"
+    ],
+    "num_candidates": 20,
+    "subgraph_size": 83,
+    "input_preview": "You are a biomedical scientist. The task is to predict the answer based on the given question, and you only need to answer one entity. The answer must be in ('Zinc oxide', 'Vernakalant', 'Potassium gluconate', 'Cefapirin', 'Albutrepenonacog alfa', 'Tripelennamine', 'Ethinylestradiol', 'Toloxatone', 'Leuprolide', 'Entecavir', 'Raltegravir', 'Frovatriptan', 'Irbesartan', 'Iproniazid', 'Pentobarbital"
+  },
+  {
+    "triple": [
+      "Clobetasol propionate",
+      "indication",
+      "contact dermatitis"
+    ],
+    "triple_id": [
+      2010,
+      1,
+      9484
+    ],
+    "type": "predicted_head",
+    "query_entity": "contact dermatitis",
+    "query_entity_id": 9484,
+    "target": "Clobetasol propionate",
+    "pred": "Clobetasol propionate",
+    "coarse_rank": 1,
+    "pred_rank": 1,
+    "exact_match": 1,
+    "candidate_top5": [
+      "Clobetasol propionate",
+      "Tioguanine",
+      "Etizolam",
+      "Histamine",
+      "Toloxatone"
+    ],
+    "num_candidates": 20,
+    "subgraph_size": 71,
+    "input_preview": "You are a biomedical scientist. The task is to predict the answer based on the given question, and you only need to answer one entity. The answer must be in ('Clobetasol propionate', 'Tioguanine', 'Etizolam', 'Histamine', 'Toloxatone', 'Antazoline', 'Cisplatin', 'Almasilate', 'Forodesine', 'Venlafaxine', 'Penthienate', 'Vonoprazan', 'Acetoxolone', 'Aztreonam', 'Cetirizine', 'Beclomethasone dipropi"
+  },
+  {
+    "triple": [
+      "Ampicillin",
+      "indication",
+      "infectious otitis media"
+    ],
+    "triple_id": [
+      705,
+      1,
+      9809
+    ],
+    "type": "predicted_head",
+    "query_entity": "infectious otitis media",
+    "query_entity_id": 9809,
+    "target": "Ampicillin",
+    "pred": "Ampicillin",
+    "coarse_rank": 1,
+    "pred_rank": 1,
+    "exact_match": 1,
+    "candidate_top5": [
+      "Ampicillin",
+      "Caplacizumab",
+      "Omidenepag isopropyl",
+      "Ravulizumab",
+      "Eszopiclone"
+    ],
+    "num_candidates": 20,
+    "subgraph_size": 98,
+    "input_preview": "You are a biomedical scientist. The task is to predict the answer based on the given question, and you only need to answer one entity. The answer must be in ('Ampicillin', 'Caplacizumab', 'Omidenepag isopropyl', 'Ravulizumab', 'Eszopiclone', 'Velaglucerase alfa', 'Migalastat', 'Zinc oxide', 'Romosozumab', 'Polyvinyl alcohol', 'Sildenafil', 'Candesartan cilexetil', 'Demeclocycline', 'Flutamide', 'T"
+  },
+  {
+    "triple": [
+      "Paclitaxel",
+      "indication",
+      "hypertensive disorder"
+    ],
+    "triple_id": [
+      6680,
+      1,
+      9772
+    ],
+    "type": "predicted_head",
+    "query_entity": "hypertensive disorder",
+    "query_entity_id": 9772,
+    "target": "Paclitaxel",
+    "pred": "Paclitaxel",
+    "coarse_rank": 1,
+    "pred_rank": 1,
+    "exact_match": 1,
+    "candidate_top5": [
+      "Paclitaxel",
+      "Pirfenidone",
+      "Ixekizumab",
+      "Ceftriaxone",
+      "Flupentixol"
+    ],
+    "num_candidates": 20,
+    "subgraph_size": 67,
+    "input_preview": "You are a biomedical scientist. The task is to predict the answer based on the given question, and you only need to answer one entity. The answer must be in ('Paclitaxel', 'Pirfenidone', 'Ixekizumab', 'Ceftriaxone', 'Flupentixol', 'Fluoxymesterone', 'Dronedarone', 'Aldesleukin', 'Bupivacaine', 'Piretanide', 'Ibandronate', 'Theophylline', 'Ambroxol', 'Teicoplanin', 'Tamibarotene', 'Ciprofloxacin', "
+  },
+  {
+    "triple": [
+      "Prednisolone",
+      "indication",
+      "granuloma annulare"
+    ],
+    "triple_id": [
+      6826,
+      1,
+      9702
+    ],
+    "type": "predicted_head",
+    "query_entity": "granuloma annulare",
+    "query_entity_id": 9702,
+    "target": "Prednisolone",
+    "pred": "Prednisolone",
+    "coarse_rank": 1,
+    "pred_rank": 1,
+    "exact_match": 1,
+    "candidate_top5": [
+      "Prednisolone",
+      "Avapritinib",
+      "Dimethyl fumarate",
+      "Oxaceprol",
+      "Alteplase"
+    ],
+    "num_candidates": 20,
+    "subgraph_size": 78,
+    "input_preview": "You are a biomedical scientist. The task is to predict the answer based on the given question, and you only need to answer one entity. The answer must be in ('Prednisolone', 'Avapritinib', 'Dimethyl fumarate', 'Oxaceprol', 'Alteplase', 'Fenoldopam', 'Ethyl loflazepate', 'Teniposide', 'Miglustat', 'Chlormezanone', 'Captopril', 'Polyethylene glycol 400', 'Selenium Sulfide', 'Poldine', 'Canakinumab',"
+  },
+  {
+    "triple": [
+      "Prednisolone",
+      "indication",
+      "spondyloarthropathy, susceptibility to"
+    ],
+    "triple_id": [
+      6826,
+      1,
+      10301
+    ],
+    "type": "predicted_head",
+    "query_entity": "spondyloarthropathy, susceptibility to",
+    "query_entity_id": 10301,
+    "target": "Prednisolone",
+    "pred": "Prednisolone",
+    "coarse_rank": 1,
+    "pred_rank": 1,
+    "exact_match": 1,
+    "candidate_top5": [
+      "Prednisolone",
+      "Aluminum hydroxide",
+      "Insulin degludec",
+      "Sodium oxybate",
+      "Carbetocin"
+    ],
+    "num_candidates": 20,
+    "subgraph_size": 75,
+    "input_preview": "You are a biomedical scientist. The task is to predict the answer based on the given question, and you only need to answer one entity. The answer must be in ('Prednisolone', 'Aluminum hydroxide', 'Insulin degludec', 'Sodium oxybate', 'Carbetocin', 'Endralazine', 'Beta-D-Glucose', 'Clortermine', 'Trioxsalen', 'L-Glutamine', 'Demeclocycline', 'Desmopressin', 'Iguratimod', 'Diethylcarbamazine', 'Flut"
+  },
+  {
+    "triple": [
+      "Cortisone acetate",
+      "indication",
+      "spondyloarthropathy, susceptibility to"
+    ],
+    "triple_id": [
+      2042,
+      1,
+      10301
+    ],
+    "type": "predicted_head",
+    "query_entity": "spondyloarthropathy, susceptibility to",
+    "query_entity_id": 10301,
+    "target": "Cortisone acetate",
+    "pred": "Cortisone acetate",
+    "coarse_rank": 1,
+    "pred_rank": 1,
+    "exact_match": 1,
+    "candidate_top5": [
+      "Cortisone acetate",
+      "Clevudine",
+      "Naftifine",
+      "Nelfinavir",
+      "Aripiprazole"
+    ],
+    "num_candidates": 20,
+    "subgraph_size": 75,
+    "input_preview": "You are a biomedical scientist. The task is to predict the answer based on the given question, and you only need to answer one entity. The answer must be in ('Cortisone acetate', 'Clevudine', 'Naftifine', 'Nelfinavir', 'Aripiprazole', 'Estradiol cypionate', 'Raxibacumab', 'Miglustat', 'Ethosuximide', 'Nebivolol', 'Dinoprost', 'Benazepril', 'Phentolamine', 'Raloxifene', 'Ibrutinib', 'Adenosine', 'T"
+  },
+  {
+    "triple": [
+      "Procaine benzylpenicillin",
+      "indication",
+      "streptococcal pneumonia"
+    ],
+    "triple_id": [
+      6836,
+      1,
+      10319
+    ],
+    "type": "predicted_head",
+    "query_entity": "streptococcal pneumonia",
+    "query_entity_id": 10319,
+    "target": "Procaine benzylpenicillin",
+    "pred": "Procaine benzylpenicillin",
+    "coarse_rank": 1,
+    "pred_rank": 1,
+    "exact_match": 1,
+    "candidate_top5": [
+      "Procaine benzylpenicillin",
+      "Phenoxymethylpenicillin",
+      "Theophylline",
+      "Blonanserin",
+      "Bitolterol"
+    ],
+    "num_candidates": 20,
+    "subgraph_size": 66,
+    "input_preview": "You are a biomedical scientist. The task is to predict the answer based on the given question, and you only need to answer one entity. The answer must be in ('Procaine benzylpenicillin', 'Phenoxymethylpenicillin', 'Theophylline', 'Blonanserin', 'Bitolterol', 'Levofloxacin', 'Belotecan', 'Dopamine', 'Topiroxostat', 'Colfosceril palmitate', 'Succinic acid', 'Guanabenz', 'Capecitabine', 'Ospemifene',"
+  },
+  {
+    "triple": [
+      "Avanafil",
+      "indication",
+      "psychologic dyspareunia"
+    ],
+    "triple_id": [
+      748,
+      1,
+      10206
+    ],
+    "type": "predicted_head",
+    "query_entity": "psychologic dyspareunia",
+    "query_entity_id": 10206,
+    "target": "Avanafil",
+    "pred": "Avanafil",
+    "coarse_rank": 1,
+    "pred_rank": 1,
+    "exact_match": 1,
+    "candidate_top5": [
+      "Avanafil",
+      "Bremelanotide",
+      "Nifedipine",
+      "Moclobemide",
+      "Umifenovir"
+    ],
+    "num_candidates": 20,
+    "subgraph_size": 71,
+    "input_preview": "You are a biomedical scientist. The task is to predict the answer based on the given question, and you only need to answer one entity. The answer must be in ('Avanafil', 'Bremelanotide', 'Nifedipine', 'Moclobemide', 'Umifenovir', 'Fidaxomicin', 'Gemigliptin', 'Tofacitinib', 'Alglucosidase alfa', 'Golodirsen', 'Padeliporfin', 'Fimasartan', 'Butriptyline', 'Romidepsin', 'Bortezomib', 'Pexidartinib',"
+  },
+  {
+    "triple": [
+      "Doxorubicin",
+      "indication",
+      "acute myeloid leukemia with t(6;9)(p23;q34)"
+    ],
+    "triple_id": [
+      2446,
+      1,
+      9253
+    ],
+    "type": "predicted_head",
+    "query_entity": "acute myeloid leukemia with t(6;9)(p23;q34)",
+    "query_entity_id": 9253,
+    "target": "Doxorubicin",
+    "pred": "Doxorubicin",
+    "coarse_rank": 1,
+    "pred_rank": 1,
+    "exact_match": 1,
+    "candidate_top5": [
+      "Doxorubicin",
+      "Warfarin",
+      "Megestrol acetate",
+      "Hematin",
+      "Tazemetostat"
+    ],
+    "num_candidates": 20,
+    "subgraph_size": 69,
+    "input_preview": "You are a biomedical scientist. The task is to predict the answer based on the given question, and you only need to answer one entity. The answer must be in ('Doxorubicin', 'Warfarin', 'Megestrol acetate', 'Hematin', 'Tazemetostat', 'Testosterone propionate', 'Temoporfin', 'Alteplase', 'Altretamine', 'Sulconazole', 'Thiabendazole', 'Trabectedin', 'Liraglutide', 'Olmutinib', 'Sulbentine', 'Chloroqu"
+  },
+  {
+    "triple": [
+      "Dexrabeprazole",
+      "indication",
+      "peptic ulcer disease"
+    ],
+    "triple_id": [
+      2387,
+      1,
+      10105
+    ],
+    "type": "predicted_head",
+    "query_entity": "peptic ulcer disease",
+    "query_entity_id": 10105,
+    "target": "Dexrabeprazole",
+    "pred": "Dexrabeprazole",
+    "coarse_rank": 1,
+    "pred_rank": 1,
+    "exact_match": 1,
+    "candidate_top5": [
+      "Dexrabeprazole",
+      "Flurazepam",
+      "Crofelemer",
+      "Midodrine",
+      "Rifaximin"
+    ],
+    "num_candidates": 20,
+    "subgraph_size": 72,
+    "input_preview": "You are a biomedical scientist. The task is to predict the answer based on the given question, and you only need to answer one entity. The answer must be in ('Dexrabeprazole', 'Flurazepam', 'Crofelemer', 'Midodrine', 'Rifaximin', 'Iloperidone', 'Levacetylmethadol', 'Mephenytoin', 'Perospirone', 'Insulin glargine', 'Emicizumab', 'Pegademase', 'Quinfamide', 'Bumetanide', 'Lesinurad', 'Tinidazole', '"
+  },
+  {
+    "triple": [
+      "Doxorubicin",
+      "indication",
+      "plasma cell myeloma"
+    ],
+    "triple_id": [
+      2446,
+      1,
+      10142
+    ],
+    "type": "predicted_head",
+    "query_entity": "plasma cell myeloma",
+    "query_entity_id": 10142,
+    "target": "Doxorubicin",
+    "pred": "Doxorubicin",
+    "coarse_rank": 1,
+    "pred_rank": 1,
+    "exact_match": 1,
+    "candidate_top5": [
+      "Doxorubicin",
+      "Polmacoxib",
+      "Norfloxacin",
+      "Roxadustat",
+      "Verapamil"
+    ],
+    "num_candidates": 20,
+    "subgraph_size": 71,
+    "input_preview": "You are a biomedical scientist. The task is to predict the answer based on the given question, and you only need to answer one entity. The answer must be in ('Doxorubicin', 'Polmacoxib', 'Norfloxacin', 'Roxadustat', 'Verapamil', 'Etanercept', 'Levosimendan', 'Sparfloxacin', 'Idoxuridine', 'Ibrutinib', 'Tedizolid phosphate', 'Isosorbide', 'Cianidanol', 'Besifloxacin', 'Ketoconazole', 'Romiplostim',"
+  },
+  {
+    "triple": [
+      "Pantoprazole",
+      "indication",
+      "gastroesophageal reflux disease"
+    ],
+    "triple_id": [
+      6688,
+      1,
+      9675
+    ],
+    "type": "predicted_head",
+    "query_entity": "gastroesophageal reflux disease",
+    "query_entity_id": 9675,
+    "target": "Pantoprazole",
+    "pred": "Pantoprazole",
+    "coarse_rank": 1,
+    "pred_rank": 1,
+    "exact_match": 1,
+    "candidate_top5": [
+      "Pantoprazole",
+      "Fluvoxamine",
+      "Ramucirumab",
+      "Labetalol",
+      "Galcanezumab"
+    ],
+    "num_candidates": 20,
+    "subgraph_size": 68,
+    "input_preview": "You are a biomedical scientist. The task is to predict the answer based on the given question, and you only need to answer one entity. The answer must be in ('Pantoprazole', 'Fluvoxamine', 'Ramucirumab', 'Labetalol', 'Galcanezumab', 'Methadyl acetate', 'Oxetorone', 'Bezafibrate', 'Levamisole', 'Menatetrenone', 'Didanosine', 'Hydrocodone', 'Ammonium lactate', 'Dasatinib', 'Aceprometazine', 'Gatiflo"
+  },
+  {
+    "triple": [
+      "Adalimumab",
+      "indication",
+      "spondyloarthropathy, susceptibility to"
+    ],
+    "triple_id": [
+      637,
+      1,
+      10301
+    ],
+    "type": "predicted_head",
+    "query_entity": "spondyloarthropathy, susceptibility to",
+    "query_entity_id": 10301,
+    "target": "Adalimumab",
+    "pred": "Adalimumab",
+    "coarse_rank": 1,
+    "pred_rank": 1,
+    "exact_match": 1,
+    "candidate_top5": [
+      "Adalimumab",
+      "Serine",
+      "Orphenadrine",
+      "Leuprolide",
+      "Teriparatide"
+    ],
+    "num_candidates": 20,
+    "subgraph_size": 74,
+    "input_preview": "You are a biomedical scientist. The task is to predict the answer based on the given question, and you only need to answer one entity. The answer must be in ('Adalimumab', 'Serine', 'Orphenadrine', 'Leuprolide', 'Teriparatide', 'Finafloxacin', 'Diiodohydroxyquinoline', 'Proglumetacin', 'Mupirocin', 'Methantheline', 'Fingolimod', 'Clomipramine', 'Dimenhydrinate', 'Ampicillin', 'Fluoxetine', 'Dextro"
+  },
+  {
+    "triple": [
+      "Uracil mustard",
+      "indication",
+      "mantle cell lymphoma"
+    ],
+    "triple_id": [
+      8869,
+      1,
+      9920
+    ],
+    "type": "predicted_head",
+    "query_entity": "mantle cell lymphoma",
+    "query_entity_id": 9920,
+    "target": "Uracil mustard",
+    "pred": "Uracil mustard",
+    "coarse_rank": 1,
+    "pred_rank": 1,
+    "exact_match": 1,
+    "candidate_top5": [
+      "Uracil mustard",
+      "Regorafenib",
+      "Lenvatinib",
+      "Ertapenem",
+      "Enfuvirtide"
+    ],
+    "num_candidates": 20,
+    "subgraph_size": 71,
+    "input_preview": "You are a biomedical scientist. The task is to predict the answer based on the given question, and you only need to answer one entity. The answer must be in ('Uracil mustard', 'Regorafenib', 'Lenvatinib', 'Ertapenem', 'Enfuvirtide', 'Quinacrine', 'Fremanezumab', 'Iron sucrose', 'Lodoxamide', 'Lumacaftor', 'Uridine triacetate', 'Prednisone', 'Fexofenadine', 'Icosapent ethyl', 'Calcium glucoheptonat"
+  },
+  {
+    "triple": [
+      "Amikacin",
+      "indication",
+      "arthropathy"
+    ],
+    "triple_id": [
+      686,
+      1,
+      9319
+    ],
+    "type": "predicted_head",
+    "query_entity": "arthropathy",
+    "query_entity_id": 9319,
+    "target": "Amikacin",
+    "pred": "Amikacin",
+    "coarse_rank": 1,
+    "pred_rank": 1,
+    "exact_match": 1,
+    "candidate_top5": [
+      "Amikacin",
+      "Gilteritinib",
+      "Captopril",
+      "Methyclothiazide",
+      "Sulfasalazine"
+    ],
+    "num_candidates": 20,
+    "subgraph_size": 66,
+    "input_preview": "You are a biomedical scientist. The task is to predict the answer based on the given question, and you only need to answer one entity. The answer must be in ('Amikacin', 'Gilteritinib', 'Captopril', 'Methyclothiazide', 'Sulfasalazine', 'Garenoxacin', 'Meticrane', 'Certolizumab pegol', 'Lactulose', 'Aldesleukin', 'Panitumumab', 'Hydromorphone', 'Mesoridazine', 'Darunavir', 'Fosinopril', 'Imatinib',"
+  },
+  {
+    "triple": [
+      "Dexamethasone",
+      "indication",
+      "infectious anterior uveitis"
+    ],
+    "triple_id": [
+      2378,
+      1,
+      9806
+    ],
+    "type": "predicted_head",
+    "query_entity": "infectious anterior uveitis",
+    "query_entity_id": 9806,
+    "target": "Dexamethasone",
+    "pred": "Dexamethasone",
+    "coarse_rank": 1,
+    "pred_rank": 1,
+    "exact_match": 1,
+    "candidate_top5": [
+      "Dexamethasone",
+      "Nalmefene",
+      "Omoconazole",
+      "Lomefloxacin",
+      "Benzocaine"
+    ],
+    "num_candidates": 20,
+    "subgraph_size": 86,
+    "input_preview": "You are a biomedical scientist. The task is to predict the answer based on the given question, and you only need to answer one entity. The answer must be in ('Dexamethasone', 'Nalmefene', 'Omoconazole', 'Lomefloxacin', 'Benzocaine', 'Emtricitabine', 'Dicyclomine', 'Amithiozone', 'Ribavirin', 'Estradiol acetate', 'Loracarbef', 'Epicriptine', 'Carteolol', 'Fosamprenavir', 'Diflunisal', 'Iron sucrose"
+  },
+  {
+    "triple": [
+      "Ceftriaxone",
+      "indication",
+      "leptospirosis"
+    ],
+    "triple_id": [
+      1941,
+      1,
+      9869
+    ],
+    "type": "predicted_head",
+    "query_entity": "leptospirosis",
+    "query_entity_id": 9869,
+    "target": "Ceftriaxone",
+    "pred": "Ceftriaxone",
+    "coarse_rank": 1,
+    "pred_rank": 1,
+    "exact_match": 1,
+    "candidate_top5": [
+      "Ceftriaxone",
+      "Ritonavir",
+      "Tenidap",
+      "Proglumetacin",
+      "Spectinomycin"
+    ],
+    "num_candidates": 20,
+    "subgraph_size": 78,
+    "input_preview": "You are a biomedical scientist. The task is to predict the answer based on the given question, and you only need to answer one entity. The answer must be in ('Ceftriaxone', 'Ritonavir', 'Tenidap', 'Proglumetacin', 'Spectinomycin', 'Lomustine', 'Temoporfin', 'Lefamulin', 'Butylphthalide', 'Mefloquine', 'Vinorelbine', 'Pioglitazone', 'Estradiol acetate', 'Ipragliflozin', 'Ozanimod', 'Piribedil', 'As"
+  },
+  {
+    "triple": [
+      "Hydrocortisone",
+      "indication",
+      "non-Hodgkin lymphoma"
+    ],
+    "triple_id": [
+      3824,
+      1,
+      10015
+    ],
+    "type": "predicted_head",
+    "query_entity": "non-Hodgkin lymphoma",
+    "query_entity_id": 10015,
+    "target": "Hydrocortisone",
+    "pred": "Hydrocortisone",
+    "coarse_rank": 1,
+    "pred_rank": 1,
+    "exact_match": 1,
+    "candidate_top5": [
+      "Hydrocortisone",
+      "Ocrelizumab",
+      "Bleomycin",
+      "Piroxicam",
+      "Norfloxacin"
+    ],
+    "num_candidates": 20,
+    "subgraph_size": 66,
+    "input_preview": "You are a biomedical scientist. The task is to predict the answer based on the given question, and you only need to answer one entity. The answer must be in ('Hydrocortisone', 'Ocrelizumab', 'Bleomycin', 'Piroxicam', 'Norfloxacin', 'Ketoprofen', 'Testosterone propionate', 'Colchicine', 'Sulfanilamide', 'Bitolterol', 'Taliglucerase alfa', 'Alprazolam', 'Vinpocetine', 'Flecainide', 'Mianserin', 'Oza"
+  },
+  {
+    "triple": [
+      "Tranilast",
+      "indication",
+      "allergic rhinitis"
+    ],
+    "triple_id": [
+      8720,
+      1,
+      9279
+    ],
+    "type": "predicted_head",
+    "query_entity": "allergic rhinitis",
+    "query_entity_id": 9279,
+    "target": "Tranilast",
+    "pred": "Tranilast",
+    "coarse_rank": 1,
+    "pred_rank": 1,
+    "exact_match": 1,
+    "candidate_top5": [
+      "Tranilast",
+      "Oxiconazole",
+      "Tienilic acid",
+      "Mianserin",
+      "Metipranolol"
+    ],
+    "num_candidates": 20,
+    "subgraph_size": 72,
+    "input_preview": "You are a biomedical scientist. The task is to predict the answer based on the given question, and you only need to answer one entity. The answer must be in ('Tranilast', 'Oxiconazole', 'Tienilic acid', 'Mianserin', 'Metipranolol', 'Teprotumumab', 'Drostanolone propionate', 'Calcitriol', 'Filgrastim', 'Oxymetholone', 'Methotrexate', 'Delavirdine', 'Eldecalcitol', 'Axitinib', 'Dexibuprofen', 'Histr"
+  },
+  {
+    "triple": [
+      "Ciprofibrate",
+      "indication",
+      "hyperlipidemia, familial combined, LPL related"
+    ],
+    "triple_id": [
+      1993,
+      1,
+      9764
+    ],
+    "type": "predicted_head",
+    "query_entity": "hyperlipidemia, familial combined, LPL related",
+    "query_entity_id": 9764,
+    "target": "Ciprofibrate",
+    "pred": "Ciprofibrate",
+    "coarse_rank": 1,
+    "pred_rank": 1,
+    "exact_match": 1,
+    "candidate_top5": [
+      "Ciprofibrate",
+      "Imiquimod",
+      "Griseofulvin",
+      "Pantoprazole",
+      "Ambroxol"
+    ],
+    "num_candidates": 20,
+    "subgraph_size": 84,
+    "input_preview": "You are a biomedical scientist. The task is to predict the answer based on the given question, and you only need to answer one entity. The answer must be in ('Ciprofibrate', 'Imiquimod', 'Griseofulvin', 'Pantoprazole', 'Ambroxol', 'Nafamostat', 'Atazanavir', 'Flupentixol', 'Prucalopride', 'Zolpidem', 'Niraparib', 'Collagenase clostridium histolyticum', 'Nadolol', 'Eldecalcitol', 'Polyvinyl alcohol"
+  },
+  {
+    "triple": [
+      "Prednisolone",
+      "indication",
+      "pulmonary eosinophilia"
+    ],
+    "triple_id": [
+      6826,
+      1,
+      10212
+    ],
+    "type": "predicted_head",
+    "query_entity": "pulmonary eosinophilia",
+    "query_entity_id": 10212,
+    "target": "Prednisolone",
+    "pred": "Prednisolone",
+    "coarse_rank": 1,
+    "pred_rank": 1,
+    "exact_match": 1,
+    "candidate_top5": [
+      "Prednisolone",
+      "Cobimetinib",
+      "Tasimelteon",
+      "Meropenem",
+      "Meclizine"
+    ],
+    "num_candidates": 20,
+    "subgraph_size": 83,
+    "input_preview": "You are a biomedical scientist. The task is to predict the answer based on the given question, and you only need to answer one entity. The answer must be in ('Prednisolone', 'Cobimetinib', 'Tasimelteon', 'Meropenem', 'Meclizine', 'Fluocinonide', 'Teprotumumab', 'Dihydrotachysterol', 'Oxitropium', 'Bumetanide', 'Lapatinib', 'Mitoxantrone', 'Prucalopride', 'Bosutinib', 'Vildagliptin', 'Floxuridine',"
+  },
+  {
+    "triple": [
+      "Betamethasone",
+      "indication",
+      "asthma"
+    ],
+    "triple_id": [
+      962,
+      1,
+      9324
+    ],
+    "type": "predicted_head",
+    "query_entity": "asthma",
+    "query_entity_id": 9324,
+    "target": "Betamethasone",
+    "pred": "Betamethasone",
+    "coarse_rank": 1,
+    "pred_rank": 1,
+    "exact_match": 1,
+    "candidate_top5": [
+      "Betamethasone",
+      "Uracil mustard",
+      "Zanubrutinib",
+      "Calcium acetate",
+      "Chloral hydrate"
+    ],
+    "num_candidates": 20,
+    "subgraph_size": 68,
+    "input_preview": "You are a biomedical scientist. The task is to predict the answer based on the given question, and you only need to answer one entity. The answer must be in ('Betamethasone', 'Uracil mustard', 'Zanubrutinib', 'Calcium acetate', 'Chloral hydrate', 'Clofazimine', 'Mesalazine', 'Upadacitinib', 'Oxybutynin', 'Pamidronic acid', 'Dicyclomine', 'Benzphetamine', 'Migalastat', 'Ceftizoxime', 'Polyethylene "
+  },
+  {
+    "triple": [
+      "Prednisolone",
+      "indication",
+      "acute contagious conjunctivitis"
+    ],
+    "triple_id": [
+      6826,
+      1,
+      9233
+    ],
+    "type": "predicted_head",
+    "query_entity": "acute contagious conjunctivitis",
+    "query_entity_id": 9233,
+    "target": "Prednisolone",
+    "pred": "Prednisolone",
+    "coarse_rank": 1,
+    "pred_rank": 1,
+    "exact_match": 1,
+    "candidate_top5": [
+      "Prednisolone",
+      "Haloperidol",
+      "Pegloticase",
+      "Luliconazole",
+      "Carmustine"
+    ],
+    "num_candidates": 20,
+    "subgraph_size": 91,
+    "input_preview": "You are a biomedical scientist. The task is to predict the answer based on the given question, and you only need to answer one entity. The answer must be in ('Prednisolone', 'Haloperidol', 'Pegloticase', 'Luliconazole', 'Carmustine', 'Bupropion', 'Fenproporex', 'Conjugated estrogens', 'Tenecteplase', 'Sulfapyridine', 'Fosphenytoin', 'Flurazepam', 'Pyrazinamide', 'Teicoplanin', 'Ampicillin', 'Cetyl"
+  },
+  {
+    "triple": [
+      "Mecamylamine",
+      "indication",
+      "hypertensive disorder"
+    ],
+    "triple_id": [
+      5373,
+      1,
+      9772
+    ],
+    "type": "predicted_head",
+    "query_entity": "hypertensive disorder",
+    "query_entity_id": 9772,
+    "target": "Mecamylamine",
+    "pred": "Mecamylamine",
+    "coarse_rank": 1,
+    "pred_rank": 1,
+    "exact_match": 1,
+    "candidate_top5": [
+      "Mecamylamine",
+      "Cemiplimab",
+      "Alemtuzumab",
+      "Ipragliflozin",
+      "Sildenafil"
+    ],
+    "num_candidates": 20,
+    "subgraph_size": 70,
+    "input_preview": "You are a biomedical scientist. The task is to predict the answer based on the given question, and you only need to answer one entity. The answer must be in ('Mecamylamine', 'Cemiplimab', 'Alemtuzumab', 'Ipragliflozin', 'Sildenafil', 'Captopril', 'Cetilistat', 'Ipidacrine', 'Nafamostat', 'Vitamin E', 'Clortermine', 'Pentoxifylline', 'Ketorolac', 'Salbutamol', 'Migalastat', 'Gemtuzumab ozogamicin',"
+  },
+  {
+    "triple": [
+      "Methylprednisolone",
+      "indication",
+      "classic Hodgkin lymphoma, lymphocyte-rich type"
+    ],
+    "triple_id": [
+      5426,
+      1,
+      9456
+    ],
+    "type": "predicted_head",
+    "query_entity": "classic Hodgkin lymphoma, lymphocyte-rich type",
+    "query_entity_id": 9456,
+    "target": "Methylprednisolone",
+    "pred": "Methylprednisolone",
+    "coarse_rank": 1,
+    "pred_rank": 1,
+    "exact_match": 1,
+    "candidate_top5": [
+      "Methylprednisolone",
+      "Pyrethrum extract",
+      "Metixene",
+      "Acamprosate",
+      "Trelagliptin"
+    ],
+    "num_candidates": 20,
+    "subgraph_size": 71,
+    "input_preview": "You are a biomedical scientist. The task is to predict the answer based on the given question, and you only need to answer one entity. The answer must be in ('Methylprednisolone', 'Pyrethrum extract', 'Metixene', 'Acamprosate', 'Trelagliptin', 'Defibrotide', 'Sulindac', 'Alprostadil', 'Verteporfin', 'Tiagabine', 'Eteplirsen', 'Zuclopenthixol', 'Naftifine', 'Diiodohydroxyquinoline', 'Isoprenaline',"
+  },
+  {
+    "triple": [
+      "Methylprednisolone",
+      "indication",
+      "exanthem (disease)"
+    ],
+    "triple_id": [
+      5426,
+      1,
+      9608
+    ],
+    "type": "predicted_head",
+    "query_entity": "exanthem (disease)",
+    "query_entity_id": 9608,
+    "target": "Methylprednisolone",
+    "pred": "Methylprednisolone",
+    "coarse_rank": 1,
+    "pred_rank": 1,
+    "exact_match": 1,
+    "candidate_top5": [
+      "Methylprednisolone",
+      "Methsuximide",
+      "Fluticasone furoate",
+      "Saquinavir",
+      "Saxagliptin"
+    ],
+    "num_candidates": 20,
+    "subgraph_size": 70,
+    "input_preview": "You are a biomedical scientist. The task is to predict the answer based on the given question, and you only need to answer one entity. The answer must be in ('Methylprednisolone', 'Methsuximide', 'Fluticasone furoate', 'Saquinavir', 'Saxagliptin', 'Daunorubicin', 'Albutrepenonacog alfa', 'Tienilic acid', 'Pentostatin', 'Pirenzepine', 'Amcinonide', 'Atovaquone', 'Fluocinonide', 'Acetazolamide', 'Ox"
+  },
+  {
+    "triple": [
+      "Mechlorethamine",
+      "indication",
+      "Langerhans cell histiocytosis"
+    ],
+    "triple_id": [
+      5376,
+      1,
+      4616
+    ],
+    "type": "predicted_head",
+    "query_entity": "Langerhans cell histiocytosis",
+    "query_entity_id": 4616,
+    "target": "Mechlorethamine",
+    "pred": "Mechlorethamine",
+    "coarse_rank": 1,
+    "pred_rank": 1,
+    "exact_match": 1,
+    "candidate_top5": [
+      "Mechlorethamine",
+      "Oritavancin",
+      "Didanosine",
+      "Vorapaxar",
+      "Oxypertine"
+    ],
+    "num_candidates": 20,
+    "subgraph_size": 73,
+    "input_preview": "You are a biomedical scientist. The task is to predict the answer based on the given question, and you only need to answer one entity. The answer must be in ('Mechlorethamine', 'Oritavancin', 'Didanosine', 'Vorapaxar', 'Oxypertine', 'Beta-D-Glucose', 'Nortriptyline', 'Carbromal', 'Teprotumumab', 'Moclobemide', 'Eltrombopag', 'Sulfinpyrazone', 'Ceftolozane', 'Iron sucrose', 'Omacetaxine mepesuccina"
+  },
+  {
+    "triple": [
+      "Tolnaftate",
+      "indication",
+      "tinea corporis"
+    ],
+    "triple_id": [
+      8705,
+      1,
+      10378
+    ],
+    "type": "predicted_head",
+    "query_entity": "tinea corporis",
+    "query_entity_id": 10378,
+    "target": "Tolnaftate",
+    "pred": "Tolnaftate",
+    "coarse_rank": 1,
+    "pred_rank": 1,
+    "exact_match": 1,
+    "candidate_top5": [
+      "Tolnaftate",
+      "Secobarbital",
+      "Dimethyl sulfoxide",
+      "Cefradine",
+      "Quinupristin"
+    ],
+    "num_candidates": 20,
+    "subgraph_size": 78,
+    "input_preview": "You are a biomedical scientist. The task is to predict the answer based on the given question, and you only need to answer one entity. The answer must be in ('Tolnaftate', 'Secobarbital', 'Dimethyl sulfoxide', 'Cefradine', 'Quinupristin', 'Sulfinpyrazone', 'Montelukast', 'Bilastine', 'Lithium carbonate', 'Methyclothiazide', 'Prasugrel', 'Lamivudine', 'Bosutinib', 'Ethchlorvynol', 'Oxyphencyclimine"
+  },
+  {
+    "triple": [
+      "Tetracycline",
+      "indication",
+      "urinary tract infection (disease)"
+    ],
+    "triple_id": [
+      8666,
+      1,
+      10421
+    ],
+    "type": "predicted_head",
+    "query_entity": "urinary tract infection (disease)",
+    "query_entity_id": 10421,
+    "target": "Tetracycline",
+    "pred": "Tetracycline",
+    "coarse_rank": 1,
+    "pred_rank": 1,
+    "exact_match": 1,
+    "candidate_top5": [
+      "Tetracycline",
+      "Methylphenobarbital",
+      "Octreotide",
+      "Vitamin E",
+      "Clidinium"
+    ],
+    "num_candidates": 20,
+    "subgraph_size": 83,
+    "input_preview": "You are a biomedical scientist. The task is to predict the answer based on the given question, and you only need to answer one entity. The answer must be in ('Tetracycline', 'Methylphenobarbital', 'Octreotide', 'Vitamin E', 'Clidinium', 'Umifenovir', 'Tinidazole', 'Bamipine', 'Temsirolimus', 'Polyethylene glycol 300', 'Efavirenz', 'Tranexamic acid', 'Asfotase alfa', 'Fidaxomicin', 'Latanoprost', '"
+  },
+  {
+    "triple": [
+      "Calcium lactate",
+      "indication",
+      "nephrocalcinosis"
+    ],
+    "triple_id": [
+      1884,
+      1,
+      9990
+    ],
+    "type": "predicted_head",
+    "query_entity": "nephrocalcinosis",
+    "query_entity_id": 9990,
+    "target": "Calcium lactate",
+    "pred": "Calcium lactate",
+    "coarse_rank": 1,
+    "pred_rank": 1,
+    "exact_match": 1,
+    "candidate_top5": [
+      "Calcium lactate",
+      "Denosumab",
+      "Apremilast",
+      "Letermovir",
+      "Sulfadiazine"
+    ],
+    "num_candidates": 20,
+    "subgraph_size": 65,
+    "input_preview": "You are a biomedical scientist. The task is to predict the answer based on the given question, and you only need to answer one entity. The answer must be in ('Calcium lactate', 'Denosumab', 'Apremilast', 'Letermovir', 'Sulfadiazine', 'Entacapone', 'Vismodegib', 'Selegiline', 'Galantamine', 'Ozanimod', 'Oxiconazole', 'Lumateperone', 'Nelarabine', 'Olodaterol', 'Temozolomide', 'Delafloxacin', 'Quaze"
+  },
+  {
+    "triple": [
+      "Hydrocortisone",
+      "indication",
+      "mycosis fungoides and variants"
+    ],
+    "triple_id": [
+      3824,
+      1,
+      9965
+    ],
+    "type": "predicted_head",
+    "query_entity": "mycosis fungoides and variants",
+    "query_entity_id": 9965,
+    "target": "Hydrocortisone",
+    "pred": "Hydrocortisone",
+    "coarse_rank": 1,
+    "pred_rank": 1,
+    "exact_match": 1,
+    "candidate_top5": [
+      "Hydrocortisone",
+      "Padeliporfin",
+      "Opicapone",
+      "Cefamandole",
+      "Alendronic acid"
+    ],
+    "num_candidates": 20,
+    "subgraph_size": 82,
+    "input_preview": "You are a biomedical scientist. The task is to predict the answer based on the given question, and you only need to answer one entity. The answer must be in ('Hydrocortisone', 'Padeliporfin', 'Opicapone', 'Cefamandole', 'Alendronic acid', 'Bosutinib', 'Cefiderocol', 'Histamine', 'Neratinib', 'Orciprenaline', 'Pembrolizumab', 'Nifurtimox', 'Estradiol valerate', 'Aceprometazine', 'Eptifibatide', 'Ep"
+  },
+  {
+    "triple": [
+      "Methylprednisolone",
+      "indication",
+      "chronic beryllium disease"
+    ],
+    "triple_id": [
+      5426,
+      1,
+      9439
+    ],
+    "type": "predicted_head",
+    "query_entity": "chronic beryllium disease",
+    "query_entity_id": 9439,
+    "target": "Methylprednisolone",
+    "pred": "Methylprednisolone",
+    "coarse_rank": 1,
+    "pred_rank": 1,
+    "exact_match": 1,
+    "candidate_top5": [
+      "Methylprednisolone",
+      "Codeine",
+      "Auranofin",
+      "Clopidogrel",
+      "Adefovir dipivoxil"
+    ],
+    "num_candidates": 20,
+    "subgraph_size": 69,
+    "input_preview": "You are a biomedical scientist. The task is to predict the answer based on the given question, and you only need to answer one entity. The answer must be in ('Methylprednisolone', 'Codeine', 'Auranofin', 'Clopidogrel', 'Adefovir dipivoxil', 'Gabapentin', 'Dexchlorpheniramine', 'Eteplirsen', 'Choline magnesium trisalicylate', 'Ammonium chloride', 'Dalfopristin', 'Sumatriptan', 'Eptifibatide', 'Levo"
+  },
+  {
+    "triple": [
+      "Betamethasone",
+      "indication",
+      "allergic rhinitis"
+    ],
+    "triple_id": [
+      962,
+      1,
+      9279
+    ],
+    "type": "predicted_head",
+    "query_entity": "allergic rhinitis",
+    "query_entity_id": 9279,
+    "target": "Betamethasone",
+    "pred": "Betamethasone",
+    "coarse_rank": 1,
+    "pred_rank": 1,
+    "exact_match": 1,
+    "candidate_top5": [
+      "Betamethasone",
+      "Oxybutynin",
+      "Cetuximab",
+      "Flurandrenolide",
+      "Azapropazone"
+    ],
+    "num_candidates": 20,
+    "subgraph_size": 66,
+    "input_preview": "You are a biomedical scientist. The task is to predict the answer based on the given question, and you only need to answer one entity. The answer must be in ('Betamethasone', 'Oxybutynin', 'Cetuximab', 'Flurandrenolide', 'Azapropazone', 'Linezolid', 'Nalmefene', 'Abacavir', 'Quazepam', 'Tedizolid phosphate', 'Pegademase', 'Tirofiban', 'Efavirenz', 'Alfuzosin', 'Flumethasone', 'Cetilistat', 'Omadac"
+  },
+  {
+    "triple": [
+      "Betamethasone",
+      "indication",
+      "granuloma annulare"
+    ],
+    "triple_id": [
+      962,
+      1,
+      9702
+    ],
+    "type": "predicted_head",
+    "query_entity": "granuloma annulare",
+    "query_entity_id": 9702,
+    "target": "Betamethasone",
+    "pred": "Betamethasone",
+    "coarse_rank": 1,
+    "pred_rank": 1,
+    "exact_match": 1,
+    "candidate_top5": [
+      "Betamethasone",
+      "Miglitol",
+      "Enoxaparin",
+      "Ethchlorvynol",
+      "Protriptyline"
+    ],
+    "num_candidates": 20,
+    "subgraph_size": 82,
+    "input_preview": "You are a biomedical scientist. The task is to predict the answer based on the given question, and you only need to answer one entity. The answer must be in ('Betamethasone', 'Miglitol', 'Enoxaparin', 'Ethchlorvynol', 'Protriptyline', 'Moroxydine', 'Amlodipine', 'Ranitidine', 'Cholic Acid', 'Cladribine', 'Hydrocortisone acetate', 'Alteplase', 'Metharbital', 'Carfilzomib', 'Repaglinide', 'Procyclid"
+  },
+  {
+    "triple": [
+      "Tripelennamine",
+      "indication",
+      "angioedema"
+    ],
+    "triple_id": [
+      8755,
+      1,
+      9300
+    ],
+    "type": "predicted_head",
+    "query_entity": "angioedema",
+    "query_entity_id": 9300,
+    "target": "Tripelennamine",
+    "pred": "Tripelennamine",
+    "coarse_rank": 1,
+    "pred_rank": 1,
+    "exact_match": 1,
+    "candidate_top5": [
+      "Tripelennamine",
+      "Racementhol",
+      "Cobicistat",
+      "Alprazolam",
+      "Guaifenesin"
+    ],
+    "num_candidates": 20,
+    "subgraph_size": 70,
+    "input_preview": "You are a biomedical scientist. The task is to predict the answer based on the given question, and you only need to answer one entity. The answer must be in ('Tripelennamine', 'Racementhol', 'Cobicistat', 'Alprazolam', 'Guaifenesin', 'Heparin, bovine', 'Isosorbide', 'Chlorthalidone', 'Desvenlafaxine', 'Laronidase', 'Midodrine', 'Mechlorethamine', 'Norethisterone', 'Tobramycin', 'Polythiazide', 'Di"
+  },
+  {
+    "triple": [
+      "Droxidopa",
+      "indication",
+      "atypical juvenile parkinsonism"
+    ],
+    "triple_id": [
+      2453,
+      1,
+      9336
+    ],
+    "type": "predicted_head",
+    "query_entity": "atypical juvenile parkinsonism",
+    "query_entity_id": 9336,
+    "target": "Droxidopa",
+    "pred": "Droxidopa",
+    "coarse_rank": 1,
+    "pred_rank": 1,
+    "exact_match": 1,
+    "candidate_top5": [
+      "Droxidopa",
+      "Pexidartinib",
+      "Finafloxacin",
+      "Amikacin",
+      "Hydroxychloroquine"
+    ],
+    "num_candidates": 20,
+    "subgraph_size": 65,
+    "input_preview": "You are a biomedical scientist. The task is to predict the answer based on the given question, and you only need to answer one entity. The answer must be in ('Droxidopa', 'Pexidartinib', 'Finafloxacin', 'Amikacin', 'Hydroxychloroquine', 'Gilteritinib', 'Flurandrenolide', 'Gemifloxacin', 'Moexipril', 'Ombitasvir', 'Dextroamphetamine', 'Pantoprazole', 'Vortioxetine', 'Levacetylmethadol', 'Lixisenati"
+  },
+  {
+    "triple": [
+      "Idelalisib",
+      "indication",
+      "follicular lymphoma"
+    ],
+    "triple_id": [
+      4109,
+      1,
+      9656
+    ],
+    "type": "predicted_head",
+    "query_entity": "follicular lymphoma",
+    "query_entity_id": 9656,
+    "target": "Idelalisib",
+    "pred": "Idelalisib",
+    "coarse_rank": 1,
+    "pred_rank": 1,
+    "exact_match": 1,
+    "candidate_top5": [
+      "Idelalisib",
+      "Propylene glycol",
+      "Idarubicin",
+      "Voglibose",
+      "Abatacept"
+    ],
+    "num_candidates": 20,
+    "subgraph_size": 71,
+    "input_preview": "You are a biomedical scientist. The task is to predict the answer based on the given question, and you only need to answer one entity. The answer must be in ('Idelalisib', 'Propylene glycol', 'Idarubicin', 'Voglibose', 'Abatacept', 'Daratumumab', 'Gemigliptin', 'Clevudine', 'Phenytoin', 'Motretinide', 'Dactinomycin', 'Dalteparin', 'Mannitol', 'Pyronaridine', 'Adefovir dipivoxil', 'Acetarsol', 'Ino"
+  },
+  {
+    "triple": [
+      "Cefixime",
+      "indication",
+      "gonorrhea"
+    ],
+    "triple_id": [
+      1929,
+      1,
+      9699
+    ],
+    "type": "predicted_head",
+    "query_entity": "gonorrhea",
+    "query_entity_id": 9699,
+    "target": "Cefixime",
+    "pred": "Cefixime",
+    "coarse_rank": 1,
+    "pred_rank": 1,
+    "exact_match": 1,
+    "candidate_top5": [
+      "Cefixime",
+      "Deflazacort",
+      "Posaconazole",
+      "Besifloxacin",
+      "Ergoloid mesylate"
+    ],
+    "num_candidates": 20,
+    "subgraph_size": 77,
+    "input_preview": "You are a biomedical scientist. The task is to predict the answer based on the given question, and you only need to answer one entity. The answer must be in ('Cefixime', 'Deflazacort', 'Posaconazole', 'Besifloxacin', 'Ergoloid mesylate', 'Cemiplimab', 'Obinutuzumab', 'Ethadione', 'Uridine triacetate', 'Clotrimazole', 'Chlorpheniramine', 'Opipramol', 'Cetirizine', 'Trovafloxacin', 'Ecabet', 'Topiro"
+  },
+  {
+    "triple": [
+      "Prednisone",
+      "indication",
+      "chondrocalcinosis"
+    ],
+    "triple_id": [
+      6828,
+      1,
+      9434
+    ],
+    "type": "predicted_head",
+    "query_entity": "chondrocalcinosis",
+    "query_entity_id": 9434,
+    "target": "Prednisone",
+    "pred": "Prednisone",
+    "coarse_rank": 1,
+    "pred_rank": 1,
+    "exact_match": 1,
+    "candidate_top5": [
+      "Prednisone",
+      "Ivacaftor",
+      "Inositol",
+      "Butacaine",
+      "Atomoxetine"
+    ],
+    "num_candidates": 20,
+    "subgraph_size": 83,
+    "input_preview": "You are a biomedical scientist. The task is to predict the answer based on the given question, and you only need to answer one entity. The answer must be in ('Prednisone', 'Ivacaftor', 'Inositol', 'Butacaine', 'Atomoxetine', 'Valbenazine', 'Agomelatine', 'Tofogliflozin', 'Pentamidine', 'Isotretinoin', 'Ambrisentan', 'Azilsartan medoxomil', 'Ribavirin', 'Rasagiline', 'Nifurtoinol', 'Ipratropium', '"
+  },
+  {
+    "triple": [
+      "Hydrocortisone acetate",
+      "indication",
+      "mantle cell lymphoma"
+    ],
+    "triple_id": [
+      3825,
+      1,
+      9920
+    ],
+    "type": "predicted_head",
+    "query_entity": "mantle cell lymphoma",
+    "query_entity_id": 9920,
+    "target": "Hydrocortisone acetate",
+    "pred": "Hydrocortisone acetate",
+    "coarse_rank": 1,
+    "pred_rank": 1,
+    "exact_match": 1,
+    "candidate_top5": [
+      "Hydrocortisone acetate",
+      "Dacarbazine",
+      "Radotinib",
+      "Fusidic acid",
+      "Stavudine"
+    ],
+    "num_candidates": 20,
+    "subgraph_size": 64,
+    "input_preview": "You are a biomedical scientist. The task is to predict the answer based on the given question, and you only need to answer one entity. The answer must be in ('Hydrocortisone acetate', 'Dacarbazine', 'Radotinib', 'Fusidic acid', 'Stavudine', 'Prednisolone', 'Sebelipase alfa', 'Quinupristin', 'Urea', 'Motretinide', 'Cefotaxime', 'Econazole', 'Chlorprothixene', 'Azelastine', 'Butobarbital', 'Vinfluni"
+  },
+  {
+    "triple": [
+      "Phenylephrine",
+      "indication",
+      "vernal conjunctivitis"
+    ],
+    "triple_id": [
+      6753,
+      1,
+      10433
+    ],
+    "type": "predicted_head",
+    "query_entity": "vernal conjunctivitis",
+    "query_entity_id": 10433,
+    "target": "Phenylephrine",
+    "pred": "Phenylephrine",
+    "coarse_rank": 1,
+    "pred_rank": 1,
+    "exact_match": 1,
+    "candidate_top5": [
+      "Phenylephrine",
+      "Paroxetine",
+      "Magnesium lactate",
+      "Ospemifene",
+      "Glibornuride"
+    ],
+    "num_candidates": 20,
+    "subgraph_size": 80,
+    "input_preview": "You are a biomedical scientist. The task is to predict the answer based on the given question, and you only need to answer one entity. The answer must be in ('Phenylephrine', 'Paroxetine', 'Magnesium lactate', 'Ospemifene', 'Glibornuride', 'Proguanil', 'Lesinurad', 'Bedaquiline', 'Stibophen', 'Quazepam', 'Alclofenac', 'Bencyclane', 'Efinaconazole', 'Primidone', 'Lamotrigine', 'Protriptyline', 'Oxa"
+  },
+  {
+    "triple": [
+      "Cetirizine",
+      "indication",
+      "common cold"
+    ],
+    "triple_id": [
+      1954,
+      1,
+      9464
+    ],
+    "type": "predicted_head",
+    "query_entity": "common cold",
+    "query_entity_id": 9464,
+    "target": "Cetirizine",
+    "pred": "Cetirizine",
+    "coarse_rank": 1,
+    "pred_rank": 1,
+    "exact_match": 1,
+    "candidate_top5": [
+      "Cetirizine",
+      "Atenolol",
+      "Vincristine",
+      "Vinorelbine",
+      "Lomitapide"
+    ],
+    "num_candidates": 20,
+    "subgraph_size": 74,
+    "input_preview": "You are a biomedical scientist. The task is to predict the answer based on the given question, and you only need to answer one entity. The answer must be in ('Cetirizine', 'Atenolol', 'Vincristine', 'Vinorelbine', 'Lomitapide', 'Polysorbate 80', 'Trovafloxacin', 'Oprelvekin', 'Triclabendazole', 'Sodium citrate', 'Isradipine', 'Quinine', 'Cyclopentolate', 'Nystatin', 'Ipriflavone', 'Insulin detemir"
+  },
+  {
+    "triple": [
+      "Dexamethasone",
+      "indication",
+      "granulomatous slack skin disease"
+    ],
+    "triple_id": [
+      2378,
+      1,
+      9704
+    ],
+    "type": "predicted_head",
+    "query_entity": "granulomatous slack skin disease",
+    "query_entity_id": 9704,
+    "target": "Dexamethasone",
+    "pred": "Dexamethasone",
+    "coarse_rank": 1,
+    "pred_rank": 1,
+    "exact_match": 1,
+    "candidate_top5": [
+      "Dexamethasone",
+      "Delamanid",
+      "Ciclopirox",
+      "Minoxidil",
+      "Metreleptin"
+    ],
+    "num_candidates": 20,
+    "subgraph_size": 73,
+    "input_preview": "You are a biomedical scientist. The task is to predict the answer based on the given question, and you only need to answer one entity. The answer must be in ('Dexamethasone', 'Delamanid', 'Ciclopirox', 'Minoxidil', 'Metreleptin', 'Empagliflozin', 'Trimethaphan', 'Pindolol', 'Pranlukast', 'Ibandronate', 'Diloxanide furoate', 'Velpatasvir', 'Gemfibrozil', 'Trihexyphenidyl', 'Levobunolol', 'Aldesleuk"
+  },
+  {
+    "triple": [
+      "Procyclidine",
+      "indication",
+      "blepharospasm"
+    ],
+    "triple_id": [
+      6839,
+      1,
+      9372
+    ],
+    "type": "predicted_head",
+    "query_entity": "blepharospasm",
+    "query_entity_id": 9372,
+    "target": "Procyclidine",
+    "pred": "Procyclidine",
+    "coarse_rank": 1,
+    "pred_rank": 1,
+    "exact_match": 1,
+    "candidate_top5": [
+      "Procyclidine",
+      "Ranitidine",
+      "Selenium Sulfide",
+      "Promethazine",
+      "Metyrosine"
+    ],
+    "num_candidates": 20,
+    "subgraph_size": 88,
+    "input_preview": "You are a biomedical scientist. The task is to predict the answer based on the given question, and you only need to answer one entity. The answer must be in ('Procyclidine', 'Ranitidine', 'Selenium Sulfide', 'Promethazine', 'Metyrosine', 'Trimethoprim', 'Troxipide', 'Vernakalant', 'Benperidol', 'Proguanil', 'Gabapentin', 'Dantrolene', 'Teprotumumab', 'Vintafolide', 'Blonanserin', 'Taliglucerase al"
+  },
+  {
+    "triple": [
+      "Dexrabeprazole",
+      "indication",
+      "gastric ulcer (disease)"
+    ],
+    "triple_id": [
+      2387,
+      1,
+      9671
+    ],
+    "type": "predicted_head",
+    "query_entity": "gastric ulcer (disease)",
+    "query_entity_id": 9671,
+    "target": "Dexrabeprazole",
+    "pred": "Dexrabeprazole",
+    "coarse_rank": 1,
+    "pred_rank": 1,
+    "exact_match": 1,
+    "candidate_top5": [
+      "Dexrabeprazole",
+      "Adefovir dipivoxil",
+      "Valsartan",
+      "Hydralazine",
+      "Ethotoin"
+    ],
+    "num_candidates": 20,
+    "subgraph_size": 71,
+    "input_preview": "You are a biomedical scientist. The task is to predict the answer based on the given question, and you only need to answer one entity. The answer must be in ('Dexrabeprazole', 'Adefovir dipivoxil', 'Valsartan', 'Hydralazine', 'Ethotoin', 'Ritonavir', 'Benazepril', 'Fedratinib', 'Methylprednisolone', 'Boceprevir', 'Biotin', 'Elvitegravir', 'Talinolol', 'Vandetanib', 'Prazepam', 'Lactose', 'Ertuglif"
+  },
+  {
+    "triple": [
+      "Nelarabine",
+      "indication",
+      "precursor T-cell acute lymphoblastic leukemia"
+    ],
+    "triple_id": [
+      5830,
+      1,
+      10168
+    ],
+    "type": "predicted_head",
+    "query_entity": "precursor T-cell acute lymphoblastic leukemia",
+    "query_entity_id": 10168,
+    "target": "Nelarabine",
+    "pred": "Nelarabine",
+    "coarse_rank": 1,
+    "pred_rank": 1,
+    "exact_match": 1,
+    "candidate_top5": [
+      "Nelarabine",
+      "Penbutolol",
+      "Almotriptan",
+      "Iproclozide",
+      "Stavudine"
+    ],
+    "num_candidates": 20,
+    "subgraph_size": 67,
+    "input_preview": "You are a biomedical scientist. The task is to predict the answer based on the given question, and you only need to answer one entity. The answer must be in ('Nelarabine', 'Penbutolol', 'Almotriptan', 'Iproclozide', 'Stavudine', 'Rifamycin', 'Loratadine', 'Atorvastatin', 'Naratriptan', 'Salmeterol', 'Sodium tetradecyl sulfate', 'Ropeginterferon alfa-2b', 'Tripelennamine', 'Amobarbital', 'Vardenafi"
+  },
+  {
+    "triple": [
+      "Hydroxyurea",
+      "indication",
+      "ovarian carcinosarcoma"
+    ],
+    "triple_id": [
+      3830,
+      1,
+      10066
+    ],
+    "type": "predicted_head",
+    "query_entity": "ovarian carcinosarcoma",
+    "query_entity_id": 10066,
+    "target": "Hydroxyurea",
+    "pred": "Hydroxyurea",
+    "coarse_rank": 1,
+    "pred_rank": 1,
+    "exact_match": 1,
+    "candidate_top5": [
+      "Hydroxyurea",
+      "Prednisolone",
+      "Salsalate",
+      "Capsaicin",
+      "Flutamide"
+    ],
+    "num_candidates": 20,
+    "subgraph_size": 62,
+    "input_preview": "You are a biomedical scientist. The task is to predict the answer based on the given question, and you only need to answer one entity. The answer must be in ('Hydroxyurea', 'Prednisolone', 'Salsalate', 'Capsaicin', 'Flutamide', 'Bortezomib', 'Zinc acetate', 'Amlexanox', 'Colchicine', 'Amifampridine', 'Primidone', 'Pranlukast', 'Agomelatine', 'Levetiracetam', 'Kanamycin', 'Choline', 'Bleomycin', 'M"
+  },
+  {
+    "triple": [
+      "Gilteritinib",
+      "indication",
+      "acute myeloid leukemia with minimal differentiation"
+    ],
+    "triple_id": [
+      3484,
+      1,
+      9252
+    ],
+    "type": "predicted_head",
+    "query_entity": "acute myeloid leukemia with minimal differentiation",
+    "query_entity_id": 9252,
+    "target": "Gilteritinib",
+    "pred": "Gilteritinib",
+    "coarse_rank": 1,
+    "pred_rank": 1,
+    "exact_match": 1,
+    "candidate_top5": [
+      "Gilteritinib",
+      "Polyvinyl alcohol",
+      "Fenofibric acid",
+      "Isoprenaline",
+      "Theophylline"
+    ],
+    "num_candidates": 20,
+    "subgraph_size": 64,
+    "input_preview": "You are a biomedical scientist. The task is to predict the answer based on the given question, and you only need to answer one entity. The answer must be in ('Gilteritinib', 'Polyvinyl alcohol', 'Fenofibric acid', 'Isoprenaline', 'Theophylline', 'Tinzaparin', 'Amphotericin B', 'Trimetrexate', 'Padeliporfin', 'Norepinephrine', 'Orciprenaline', 'Famciclovir', 'Rimonabant', 'Natalizumab', 'Sodium pho"
+  },
+  {
+    "triple": [
+      "Clarithromycin",
+      "indication",
+      "infectious otitis media"
+    ],
+    "triple_id": [
+      2000,
+      1,
+      9809
+    ],
+    "type": "predicted_head",
+    "query_entity": "infectious otitis media",
+    "query_entity_id": 9809,
+    "target": "Clarithromycin",
+    "pred": "Clarithromycin",
+    "coarse_rank": 1,
+    "pred_rank": 1,
+    "exact_match": 1,
+    "candidate_top5": [
+      "Clarithromycin",
+      "Arformoterol",
+      "Trihexyphenidyl",
+      "Sertindole",
+      "Meprobamate"
+    ],
+    "num_candidates": 20,
+    "subgraph_size": 93,
+    "input_preview": "You are a biomedical scientist. The task is to predict the answer based on the given question, and you only need to answer one entity. The answer must be in ('Clarithromycin', 'Arformoterol', 'Trihexyphenidyl', 'Sertindole', 'Meprobamate', 'Bezafibrate', 'Levodopa', 'Zinc oxide', 'Duloxetine', 'Moroctocog alfa', 'Isotretinoin', 'Sumatriptan', 'Methimazole', 'Desmopressin', 'Pemirolast', 'Bictegrav"
+  },
+  {
+    "triple": [
+      "Ropinirole",
+      "indication",
+      "early-onset parkinsonism-intellectual disability syndrome"
+    ],
+    "triple_id": [
+      7284,
+      1,
+      9560
+    ],
+    "type": "predicted_head",
+    "query_entity": "early-onset parkinsonism-intellectual disability syndrome",
+    "query_entity_id": 9560,
+    "target": "Ropinirole",
+    "pred": "Ropinirole",
+    "coarse_rank": 1,
+    "pred_rank": 1,
+    "exact_match": 1,
+    "candidate_top5": [
+      "Ropinirole",
+      "Vigabatrin",
+      "Cyproheptadine",
+      "Cefprozil",
+      "Capecitabine"
+    ],
+    "num_candidates": 20,
+    "subgraph_size": 68,
+    "input_preview": "You are a biomedical scientist. The task is to predict the answer based on the given question, and you only need to answer one entity. The answer must be in ('Ropinirole', 'Vigabatrin', 'Cyproheptadine', 'Cefprozil', 'Capecitabine', 'Cyclophosphamide', 'Brompheniramine', 'Acyclovir', 'Bismuth subsalicylate', 'Tipranavir', 'Grepafloxacin', 'Omeprazole', 'Anisotropine methylbromide', 'Stavudine', 'H"
+  },
+  {
+    "triple": [
+      "Doxycycline",
+      "indication",
+      "acne (disease)"
+    ],
+    "triple_id": [
+      2447,
+      1,
+      9218
+    ],
+    "type": "predicted_head",
+    "query_entity": "acne (disease)",
+    "query_entity_id": 9218,
+    "target": "Doxycycline",
+    "pred": "Doxycycline",
+    "coarse_rank": 1,
+    "pred_rank": 1,
+    "exact_match": 1,
+    "candidate_top5": [
+      "Doxycycline",
+      "Riboflavin",
+      "Imidapril",
+      "Ubrogepant",
+      "Boceprevir"
+    ],
+    "num_candidates": 20,
+    "subgraph_size": 77,
+    "input_preview": "You are a biomedical scientist. The task is to predict the answer based on the given question, and you only need to answer one entity. The answer must be in ('Doxycycline', 'Riboflavin', 'Imidapril', 'Ubrogepant', 'Boceprevir', 'Deferasirox', 'Iproclozide', 'Ammonia', 'Blonanserin', 'Dactinomycin', 'Cobicistat', 'Sodium citrate', 'Rifampicin', 'Silicon dioxide', 'Treprostinil', 'Evolocumab', 'Tega"
+  },
+  {
+    "triple": [
+      "Demeclocycline",
+      "indication",
+      "ornithosis"
+    ],
+    "triple_id": [
+      2367,
+      1,
+      10054
+    ],
+    "type": "predicted_head",
+    "query_entity": "ornithosis",
+    "query_entity_id": 10054,
+    "target": "Demeclocycline",
+    "pred": "Demeclocycline",
+    "coarse_rank": 1,
+    "pred_rank": 1,
+    "exact_match": 1,
+    "candidate_top5": [
+      "Demeclocycline",
+      "Propylthiouracil",
+      "Efonidipine",
+      "Parnaparin",
+      "Benoxaprofen"
+    ],
+    "num_candidates": 20,
+    "subgraph_size": 80,
+    "input_preview": "You are a biomedical scientist. The task is to predict the answer based on the given question, and you only need to answer one entity. The answer must be in ('Demeclocycline', 'Propylthiouracil', 'Efonidipine', 'Parnaparin', 'Benoxaprofen', 'Metharbital', 'Clonazepam', 'Flunoxaprofen', 'Eptinezumab', 'Rifaximin', 'Romiplostim', 'Dopamine', 'Secnidazole', 'Epinephrine', 'Paclitaxel', 'Nafcillin', '"
+  },
+  {
+    "triple": [
+      "Melphalan",
+      "indication",
+      "ovarian clear cell adenocarcinoma"
+    ],
+    "triple_id": [
+      5389,
+      1,
+      10067
+    ],
+    "type": "predicted_head",
+    "query_entity": "ovarian clear cell adenocarcinoma",
+    "query_entity_id": 10067,
+    "target": "Melphalan",
+    "pred": "Melphalan",
+    "coarse_rank": 1,
+    "pred_rank": 1,
+    "exact_match": 1,
+    "candidate_top5": [
+      "Melphalan",
+      "Vorapaxar",
+      "Cortisone acetate",
+      "Benzyl alcohol",
+      "Mebeverine"
+    ],
+    "num_candidates": 20,
+    "subgraph_size": 69,
+    "input_preview": "You are a biomedical scientist. The task is to predict the answer based on the given question, and you only need to answer one entity. The answer must be in ('Melphalan', 'Vorapaxar', 'Cortisone acetate', 'Benzyl alcohol', 'Mebeverine', 'Tetramethrin', 'Panitumumab', 'Everolimus', 'Hyoscyamine', 'Radotinib', 'Epinastine', 'Pirbuterol', 'Metolazone', 'Butenafine', 'Testolactone', 'Tiopronin', 'Feno"
+  },
+  {
+    "triple": [
+      "Hydrocortisone",
+      "indication",
+      "thyroiditis (disease)"
+    ],
+    "triple_id": [
+      3824,
+      1,
+      10374
+    ],
+    "type": "predicted_head",
+    "query_entity": "thyroiditis (disease)",
+    "query_entity_id": 10374,
+    "target": "Hydrocortisone",
+    "pred": "Hydrocortisone",
+    "coarse_rank": 1,
+    "pred_rank": 1,
+    "exact_match": 1,
+    "candidate_top5": [
+      "Hydrocortisone",
+      "Phenoxymethylpenicillin",
+      "Calcium chloride",
+      "Lodoxamide",
+      "Delapril"
+    ],
+    "num_candidates": 20,
+    "subgraph_size": 83,
+    "input_preview": "You are a biomedical scientist. The task is to predict the answer based on the given question, and you only need to answer one entity. The answer must be in ('Hydrocortisone', 'Phenoxymethylpenicillin', 'Calcium chloride', 'Lodoxamide', 'Delapril', 'Zolpidem', 'Dexfenfluramine', 'Latanoprost', 'Lixisenatide', 'Sodium phosphate, dibasic', 'Peginterferon alfa-2b', 'Promethazine', 'Fluocinonide', 'Ed"
+  },
+  {
+    "triple": [
+      "Naproxen",
+      "indication",
+      "juvenile arthritis due to defect in LACC1"
+    ],
+    "triple_id": [
+      5821,
+      1,
+      9846
+    ],
+    "type": "predicted_head",
+    "query_entity": "juvenile arthritis due to defect in LACC1",
+    "query_entity_id": 9846,
+    "target": "Naproxen",
+    "pred": "Naproxen",
+    "coarse_rank": 1,
+    "pred_rank": 1,
+    "exact_match": 1,
+    "candidate_top5": [
+      "Naproxen",
+      "Amenamevir",
+      "Crofelemer",
+      "Simoctocog alfa",
+      "Gepirone"
+    ],
+    "num_candidates": 20,
+    "subgraph_size": 67,
+    "input_preview": "You are a biomedical scientist. The task is to predict the answer based on the given question, and you only need to answer one entity. The answer must be in ('Naproxen', 'Amenamevir', 'Crofelemer', 'Simoctocog alfa', 'Gepirone', 'Tedizolid phosphate', 'Mezlocillin', 'Dexpanthenol', 'Troxipide', 'Acefylline', 'Caffeine', 'Medroxyprogesterone acetate', 'Colfosceril palmitate', 'Elbasvir', 'Amcinonid"
+  },
+  {
+    "triple": [
+      "Cortisone acetate",
+      "indication",
+      "sarcoidosis"
+    ],
+    "triple_id": [
+      2042,
+      1,
+      10256
+    ],
+    "type": "predicted_head",
+    "query_entity": "sarcoidosis",
+    "query_entity_id": 10256,
+    "target": "Cortisone acetate",
+    "pred": "Cortisone acetate",
+    "coarse_rank": 1,
+    "pred_rank": 1,
+    "exact_match": 1,
+    "candidate_top5": [
+      "Cortisone acetate",
+      "Carbinoxamine",
+      "Amoxicillin",
+      "Tiotropium",
+      "Isavuconazonium"
+    ],
+    "num_candidates": 20,
+    "subgraph_size": 70,
+    "input_preview": "You are a biomedical scientist. The task is to predict the answer based on the given question, and you only need to answer one entity. The answer must be in ('Cortisone acetate', 'Carbinoxamine', 'Amoxicillin', 'Tiotropium', 'Isavuconazonium', 'Fosinopril', 'Mebeverine', 'Oxyphenisatin', 'Tacrolimus', 'Distigmine', 'Crisaborole', 'Dexibuprofen', 'Calcium lactate', 'Ethadione', 'Levofloxacin', 'Por"
+  },
+  {
+    "triple": [
+      "Doxycycline",
+      "indication",
+      "gonococcal epididymo-orchitis"
+    ],
+    "triple_id": [
+      2447,
+      1,
+      9697
+    ],
+    "type": "predicted_head",
+    "query_entity": "gonococcal epididymo-orchitis",
+    "query_entity_id": 9697,
+    "target": "Doxycycline",
+    "pred": "Doxycycline",
+    "coarse_rank": 1,
+    "pred_rank": 1,
+    "exact_match": 1,
+    "candidate_top5": [
+      "Doxycycline",
+      "Tolmetin",
+      "Efinaconazole",
+      "Homatropine",
+      "Voxilaprevir"
+    ],
+    "num_candidates": 20,
+    "subgraph_size": 91,
+    "input_preview": "You are a biomedical scientist. The task is to predict the answer based on the given question, and you only need to answer one entity. The answer must be in ('Doxycycline', 'Tolmetin', 'Efinaconazole', 'Homatropine', 'Voxilaprevir', 'Cannabidiol', 'Estramustine', 'Avanafil', 'Acrivastine', 'Choline', 'Sertaconazole', 'Cinchophen', 'Cisplatin', 'Amitriptyline', 'Mitoxantrone', 'Cyproheptadine', 'Li"
+  },
+  {
+    "triple": [
+      "Proglumetacin",
+      "indication",
+      "arthropathy"
+    ],
+    "triple_id": [
+      6841,
+      1,
+      9319
+    ],
+    "type": "predicted_head",
+    "query_entity": "arthropathy",
+    "query_entity_id": 9319,
+    "target": "Proglumetacin",
+    "pred": "Proglumetacin",
+    "coarse_rank": 1,
+    "pred_rank": 1,
+    "exact_match": 1,
+    "candidate_top5": [
+      "Proglumetacin",
+      "Anakinra",
+      "Benperidol",
+      "Sertaconazole",
+      "Vinblastine"
+    ],
+    "num_candidates": 20,
+    "subgraph_size": 64,
+    "input_preview": "You are a biomedical scientist. The task is to predict the answer based on the given question, and you only need to answer one entity. The answer must be in ('Proglumetacin', 'Anakinra', 'Benperidol', 'Sertaconazole', 'Vinblastine', 'Amphotericin B', 'Etidronic acid', 'Tadalafil', 'Almasilate', 'Alglucerase', 'Escitalopram', 'Clidinium', 'Phenylmercuric nitrate', 'Tofogliflozin', 'Buclizine', 'Eri"
+  },
+  {
+    "triple": [
+      "Dexamethasone",
+      "indication",
+      "pulmonary eosinophilia"
+    ],
+    "triple_id": [
+      2378,
+      1,
+      10212
+    ],
+    "type": "predicted_head",
+    "query_entity": "pulmonary eosinophilia",
+    "query_entity_id": 10212,
+    "target": "Dexamethasone",
+    "pred": "Dexamethasone",
+    "coarse_rank": 1,
+    "pred_rank": 1,
+    "exact_match": 1,
+    "candidate_top5": [
+      "Dexamethasone",
+      "Artenimol",
+      "Lucinactant",
+      "Reviparin",
+      "Pirenzepine"
+    ],
+    "num_candidates": 20,
+    "subgraph_size": 83,
+    "input_preview": "You are a biomedical scientist. The task is to predict the answer based on the given question, and you only need to answer one entity. The answer must be in ('Dexamethasone', 'Artenimol', 'Lucinactant', 'Reviparin', 'Pirenzepine', 'Bupranolol', 'Diphenylpyraline', 'Aldesleukin', 'Choline magnesium trisalicylate', 'Pegvisomant', 'Simoctocog alfa', 'Grazoprevir', 'Tolcapone', 'Palivizumab', 'Sulfame"
+  },
+  {
+    "triple": [
+      "Dexbrompheniramine",
+      "indication",
+      "angioedema"
+    ],
+    "triple_id": [
+      2380,
+      1,
+      9300
+    ],
+    "type": "predicted_head",
+    "query_entity": "angioedema",
+    "query_entity_id": 9300,
+    "target": "Dexbrompheniramine",
+    "pred": "Dexbrompheniramine",
+    "coarse_rank": 1,
+    "pred_rank": 1,
+    "exact_match": 1,
+    "candidate_top5": [
+      "Dexbrompheniramine",
+      "Insulin glargine",
+      "Etretinate",
+      "Fluvastatin",
+      "Pibrentasvir"
+    ],
+    "num_candidates": 20,
+    "subgraph_size": 67,
+    "input_preview": "You are a biomedical scientist. The task is to predict the answer based on the given question, and you only need to answer one entity. The answer must be in ('Dexbrompheniramine', 'Insulin glargine', 'Etretinate', 'Fluvastatin', 'Pibrentasvir', 'Axitinib', 'Bilastine', 'Idoxuridine', 'Flupentixol', 'Indapamide', 'Gluconolactone', 'Cyclopentolate', 'Opicapone', 'Triprolidine', 'Chlorprothixene', 'G"
+  }
+]
