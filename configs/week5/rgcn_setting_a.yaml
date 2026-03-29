@@ -1,0 +1,20 @@
+week: 5
+stage: rgcn_embedding_export
+
+seed: 2025
+
+graph_path: dataset/setting_a/02_graph/train_enriched_deg1000_final.tsv
+entity2id_path: dataset/setting_a/04_drkgc_json/entity2id.pkl
+relation2id_path: dataset/setting_a/04_drkgc_json/relation2id.pkl
+
+output_embedding_path: dataset/setting_a/08_backbone_ready/entity_embeddings_rgcn.pt
+output_meta_path: results/week5/rgcn_setting_a/export_meta.json
+
+num_rels: 4
+
+embedding_dim: 256
+hidden_dim: 128
+num_layers: 2
+dropout: 0.1
+
+train_or_export_note: "Week 5 only needs the first real embedding source, not the best embedding yet."
