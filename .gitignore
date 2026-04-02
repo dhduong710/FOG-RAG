@@ -11,3 +11,6 @@ checkpoints/
 dataset/raw/
 *.ckpt
 *.bin
+
+.venv/
+

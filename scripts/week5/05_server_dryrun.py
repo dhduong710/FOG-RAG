@@ -236,7 +236,7 @@ def main():
         adapter_size=args.adapter_size,
         output_size=llm.config.hidden_size,
         hidden_act=getattr(llm.config, "hidden_act", "silu"),
-    ).to(llm_device)
+    ).to(device=llm_device, dtype=torch.bfloat16)
 
     model = DrKGC(tokenizer, llm, graph_model).to(llm_device)
     model.eval()
@@ -253,7 +253,7 @@ def main():
             for k, v in batch.items()
         }
 
-        with torch.no_grad():
+        with torch.no_grad(), torch.autocast(device_type="cuda", dtype=torch.bfloat16):
             out = model(
                 input_ids=batch["input_ids"],
                 attention_mask=batch["attention_mask"],
