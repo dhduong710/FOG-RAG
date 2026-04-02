@@ -164,7 +164,8 @@ def train():
         1024,
         llm_config.hidden_size,
         llm_config.hidden_act,
-    )
+    ).to(torch.bfloat16)
+
     model = DrKGC(tokenizer, model, embed_model)
 
     data_module = make_data_module(args, tokenizer)
