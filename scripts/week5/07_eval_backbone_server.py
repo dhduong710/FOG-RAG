@@ -169,10 +169,10 @@ def main():
         args.model_name_or_path,
         low_cpu_mem_usage=True,
         device_map=None,
-        torch_dtype=torch.float16,
+        torch_dtype=torch.bfloat16,
     )
     base_model = PeftModel.from_pretrained(base_model, args.checkpoint_dir)
-    base_model = base_model.half()
+    base_model = base_model.bfloat16()
 
     kge_embedding = torch.load(args.kge_embedding_path, map_location="cpu")
     kge_embedding_dim = kge_embedding.shape[1]
@@ -187,7 +187,7 @@ def main():
         1024,
         llm_config.hidden_size,
         llm_config.hidden_act,
-    )
+    ).to(torch.bfloat16)
 
     ckpt_dir = Path(args.checkpoint_dir)
     graph_state_path = ckpt_dir / "graph_model.bin"
@@ -195,7 +195,7 @@ def main():
     graph_model.load_state_dict(state)
 
     model = DrKGC(tokenizer, base_model, graph_model)
-    model = model.half().cuda()
+    model = model.bfloat16().cuda()
     model.eval()
 
     data_args = argparse.Namespace(
@@ -210,13 +210,13 @@ def main():
     data_module = DataModule(data_args, tokenizer)
 
     if args.split == "valid":
-        dataset = data_module.valid_ds
+        dataset = data_module.eval_ds
     else:
         dataset = data_module.test_ds
 
     generation_config = build_generation_config(args, tokenizer)
 
-    with torch.cuda.amp.autocast():
+    with torch.autocast(device_type="cuda", dtype=torch.bfloat16):
         preds, metrics = ranking_metrics(dataset, tokenizer, model, generation_config, args.split)
 
     pred_path = Path(args.output_dir) / f"eval_{args.split}_prediction.json"

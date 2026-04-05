@@ -6,8 +6,10 @@ cd "${REPO_DIR}"
 
 source .venv/bin/activate
 
+export PYTHONPATH="."
+
 export TOKENIZERS_PARALLELISM=false
-export HF_HOME="${HOME}/Documents/2026-dhd/.cache/huggingface"
+# export HF_HOME="${HOME}/Documents/2026-dhd/.cache/huggingface"
 
 OUT_DIR="results/week5/backbone_llama32_3b_rgcn"
 LOG_DIR="${OUT_DIR}/logs"
