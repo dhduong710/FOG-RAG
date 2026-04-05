@@ -44,12 +44,12 @@ python scripts/week5/06a_launch_main_adaptive.py \
   --double_quant \
   --seed 2025 \
   --save_steps 200 \
+  --save_safetensors false \
   --logging_steps 10 \
   --save_total_limit 2 \
   --gnn_hidden_dim 128 \
   --gnn_num_hidden_layers 1 \
   --adapter_size 1024 \
-  --gradient_checkpointing \
   --prefer_bf16 \
   --snapshot_path "${SNAPSHOT_PATH}" \
   2>&1 | tee "${LOG_PATH}"

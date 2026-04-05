@@ -35,6 +35,7 @@ def parse_args():
     p.add_argument("--save_steps", type=int, default=200)
     p.add_argument("--logging_steps", type=int, default=10)
     p.add_argument("--save_total_limit", type=int, default=2)
+    p.add_argument("--save_safetensors", default="false")
 
     p.add_argument("--gnn_hidden_dim", type=int, default=128)
     p.add_argument("--gnn_num_hidden_layers", type=int, default=1)
@@ -170,6 +171,9 @@ def main():
     )
     used_flags["save_total_limit"] = add_value_arg(
         cmd, help_text, ["--save_total_limit"], args.save_total_limit
+    )
+    used_flags["save_safetensors"] = add_value_arg(
+        cmd, help_text, ["--save_safetensors"], args.save_safetensors
     )
     used_flags["report_to"] = add_value_arg(
         cmd, help_text, ["--report_to"], "none"
