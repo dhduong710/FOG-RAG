@@ -1,0 +1,174 @@
+{
+  "week": 6,
+  "title": "Real coarse ranker for Setting A + rebuild backbone-ready JSON + retrain backbone",
+  "repo_root": "/home/duong/code/FOG-RAG",
+  "goal": "Replace current mock-like candidate source with a real coarse ranker while keeping the backbone path fixed.",
+  "frozen_backbone": {
+    "llm": "meta-llama/Llama-3.2-3B",
+    "graph_branch": "existing week5 graph branch",
+    "entity_embedding": "dataset/setting_a/08_backbone_ready/entity_embeddings_rgcn.pt",
+    "candidate_k": 20,
+    "subgraph_tau": 100,
+    "learning_rate": 0.0002,
+    "lora_r": 32,
+    "lora_alpha": 32,
+    "lora_dropout": 0.1
+  },
+  "primary_ranker": {
+    "type": "R-GCN-based scorer",
+    "query_form": "(?, indication, disease)",
+    "candidate_universe": "Drug-only"
+  },
+  "scientific_protocol": {
+    "valid_only_for_scientific_checking": true,
+    "test_untouched_until_valid_non_degenerate": true,
+    "fuzzy_enabled": false,
+    "safety_enabled_in_main_path": false
+  },
+  "candidate_artifacts": {
+    "top20_raw": {
+      "purpose": "Measure candidate retrieval quality directly.",
+      "metrics": [
+        "candidate_recall@20",
+        "top1_hit_ratio",
+        "gold_rank_distribution",
+        "candidate_type_purity"
+      ],
+      "gold_injection_allowed": false
+    },
+    "top20_drkgc_ready": {
+      "purpose": "Feed into DrKGC-style reranking pipeline.",
+      "metrics": [
+        "inject_count",
+        "inject_ratio",
+        "reranking_MRR",
+        "reranking_Hits@1/3/10"
+      ],
+      "gold_injection_allowed": true,
+      "important_note": "Gold injection must be logged explicitly and never hidden."
+    }
+  },
+  "day1_decisions": [
+    "Week-6 goal is to replace the current mock-like candidate source.",
+    "Primary coarse ranker = R-GCN-based scorer on Setting A.",
+    "Candidate universe is Drug-only.",
+    "Candidate size remains K = 20.",
+    "Backbone path remains Llama-3.2-3B + existing graph branch.",
+    "Fuzzy and safety modules remain disabled in the main path.",
+    "Valid is the only split used for scientific checking this week.",
+    "Test remains untouched until valid becomes non-degenerate."
+  ],
+  "required_inputs": [
+    {
+      "name": "train_graph",
+      "path": "dataset/setting_a/02_graph/train_enriched.tsv",
+      "exists": true,
+      "required": true,
+      "note": "Training graph thật dùng để train/export coarse ranker."
+    },
+    {
+      "name": "split_train",
+      "path": "dataset/setting_a/01_split/train.tsv",
+      "exists": true,
+      "required": true,
+      "note": "Split train của Setting A."
+    },
+    {
+      "name": "split_valid",
+      "path": "dataset/setting_a/01_split/valid.tsv",
+      "exists": true,
+      "required": true,
+      "note": "Split valid của Setting A."
+    },
+    {
+      "name": "split_test",
+      "path": "dataset/setting_a/01_split/test.tsv",
+      "exists": true,
+      "required": true,
+      "note": "Split test của Setting A (không dùng để tuning tuần 6)."
+    },
+    {
+      "name": "entity2id",
+      "path": "dataset/setting_a/04_drkgc_json/entity2id.pkl",
+      "exists": true,
+      "required": true,
+      "note": "ID map đã khóa từ tuần 2/5."
+    },
+    {
+      "name": "id2entity",
+      "path": "dataset/setting_a/04_drkgc_json/id2entity.pkl",
+      "exists": true,
+      "required": true,
+      "note": "ID map ngược."
+    },
+    {
+      "name": "relation2id",
+      "path": "dataset/setting_a/04_drkgc_json/relation2id.pkl",
+      "exists": true,
+      "required": true,
+      "note": "Relation map."
+    },
+    {
+      "name": "id2relation",
+      "path": "dataset/setting_a/04_drkgc_json/id2relation.pkl",
+      "exists": true,
+      "required": true,
+      "note": "Relation map ngược."
+    },
+    {
+      "name": "week5_backbone_train_json",
+      "path": "dataset/setting_a/08_backbone_ready/train.json",
+      "exists": true,
+      "required": true,
+      "note": "Backbone-ready package tuần 5 để đối chiếu."
+    },
+    {
+      "name": "week5_backbone_valid_json",
+      "path": "dataset/setting_a/08_backbone_ready/valid.json",
+      "exists": true,
+      "required": true,
+      "note": "Backbone-ready package tuần 5 để đối chiếu."
+    },
+    {
+      "name": "week5_backbone_test_json",
+      "path": "dataset/setting_a/08_backbone_ready/test.json",
+      "exists": true,
+      "required": true,
+      "note": "Backbone-ready package tuần 5 để đối chiếu."
+    },
+    {
+      "name": "week5_rgcn_embedding",
+      "path": "dataset/setting_a/08_backbone_ready/entity_embeddings_rgcn.pt",
+      "exists": true,
+      "required": true,
+      "note": "Embedding thật tuần 5, tuần 6 vẫn reuse."
+    },
+    {
+      "name": "week5_manifest",
+      "path": "dataset/setting_a/08_backbone_ready/backbone_ready_manifest.json",
+      "exists": true,
+      "required": false,
+      "note": "Nếu có thì đọc để tham khảo metadata."
+    }
+  ],
+  "expected_outputs_day1": [
+    "reports/week6/day1_week6_protocol.md",
+    "dataset/setting_a/09_real_coarse_ranker/week6_protocol.json"
+  ],
+  "expected_outputs_week6": [
+    "dataset/setting_a/09_real_coarse_ranker/train_scores.pt",
+    "dataset/setting_a/09_real_coarse_ranker/valid_scores.pt",
+    "dataset/setting_a/09_real_coarse_ranker/test_scores.pt",
+    "dataset/setting_a/09_real_coarse_ranker/train_top20_raw.json",
+    "dataset/setting_a/09_real_coarse_ranker/valid_top20_raw.json",
+    "dataset/setting_a/09_real_coarse_ranker/test_top20_raw.json",
+    "dataset/setting_a/09_real_coarse_ranker/train_top20_drkgc_ready.json",
+    "dataset/setting_a/09_real_coarse_ranker/valid_top20_drkgc_ready.json",
+    "dataset/setting_a/09_real_coarse_ranker/test_top20_drkgc_ready.json",
+    "dataset/setting_a/09_real_coarse_ranker/candidate_recall_report.json",
+    "dataset/setting_a/10_backbone_ready_real/train.json",
+    "dataset/setting_a/10_backbone_ready_real/valid.json",
+    "dataset/setting_a/10_backbone_ready_real/test.json",
+    "dataset/setting_a/10_backbone_ready_real/backbone_ready_real_manifest.json"
+  ]
+}
