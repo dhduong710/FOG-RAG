@@ -1,0 +1,45 @@
+{
+  "week": 6,
+  "day": 2,
+  "goal": "Dump real coarse-ranker scores for train/valid/test.",
+  "checkpoint_path": "dataset/setting_a/09_real_coarse_ranker/rgcn_ranker_checkpoint.pt",
+  "relation_name": "indication",
+  "relation_id": 1,
+  "drug_universe_size": 1801,
+  "splits": {
+    "train": {
+      "split": "train",
+      "num_queries": 8388,
+      "drug_universe_size": 1801,
+      "score_tensor_shape": [
+        8388,
+        1801
+      ],
+      "top1_hit_ratio_raw": 0.000358,
+      "output_path": "dataset/setting_a/09_real_coarse_ranker/train_scores.pt"
+    },
+    "valid": {
+      "split": "valid",
+      "num_queries": 500,
+      "drug_universe_size": 1801,
+      "score_tensor_shape": [
+        500,
+        1801
+      ],
+      "top1_hit_ratio_raw": 0.0,
+      "output_path": "dataset/setting_a/09_real_coarse_ranker/valid_scores.pt"
+    },
+    "test": {
+      "split": "test",
+      "num_queries": 500,
+      "drug_universe_size": 1801,
+      "score_tensor_shape": [
+        500,
+        1801
+      ],
+      "top1_hit_ratio_raw": 0.0,
+      "output_path": "dataset/setting_a/09_real_coarse_ranker/test_scores.pt"
+    }
+  },
+  "note": "These are raw score dumps. Day 3 will convert them into top20_raw and top20_drkgc_ready artifacts."
+}
