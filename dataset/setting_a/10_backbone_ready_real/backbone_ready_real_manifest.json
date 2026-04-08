@@ -1,0 +1,31 @@
+{
+  "week": 6,
+  "day": 4,
+  "goal": "Rebuild backbone-ready package from real-ranked candidate artifacts.",
+  "source_candidate_dir": "dataset/setting_a/09_real_coarse_ranker",
+  "destination_dir": "dataset/setting_a/10_backbone_ready_real",
+  "relation_name": "indication",
+  "intermediate_ranked_inputs": {
+    "train": {
+      "source_ready_json": "dataset/setting_a/09_real_coarse_ranker/train_top20_drkgc_ready.json",
+      "ranked_input_json": "dataset/setting_a/10_backbone_ready_real/intermediate/train_ranked_input.json",
+      "num_queries": 8388,
+      "inject_count": 8291,
+      "inject_ratio": 0.988436
+    },
+    "valid": {
+      "source_ready_json": "dataset/setting_a/09_real_coarse_ranker/valid_top20_drkgc_ready.json",
+      "ranked_input_json": "dataset/setting_a/10_backbone_ready_real/intermediate/valid_ranked_input.json",
+      "num_queries": 500,
+      "inject_count": 490,
+      "inject_ratio": 0.98
+    },
+    "test": {
+      "source_ready_json": "dataset/setting_a/09_real_coarse_ranker/test_top20_drkgc_ready.json",
+      "ranked_input_json": "dataset/setting_a/10_backbone_ready_real/intermediate/test_ranked_input.json",
+      "num_queries": 500,
+      "inject_count": 496,
+      "inject_ratio": 0.992
+    }
+  }
+}
