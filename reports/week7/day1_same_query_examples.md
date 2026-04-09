@@ -1,0 +1,22 @@
+# Repeated top-5 patterns on valid
+
+- count = 166
+  - top5 = ['Cholestyramine', 'Neratinib', 'Talaporfin', 'Infliximab', 'Levomethadone']
+- count = 63
+  - top5 = ['Cholestyramine', 'Neratinib', 'Talaporfin', 'Infliximab', 'Golimumab']
+- count = 24
+  - top5 = ['Cholestyramine', 'Neratinib', 'Infliximab', 'Talaporfin', 'Golimumab']
+- count = 11
+  - top5 = ['Acenocoumarol', 'Omacetaxine mepesuccinate', 'Azathioprine', 'Mebendazole', 'Oseltamivir']
+- count = 10
+  - top5 = ['Cholestyramine', 'Neratinib', 'Talaporfin', 'Levomethadone', 'Infliximab']
+- count = 8
+  - top5 = ['Azathioprine', 'Bexarotene', 'Podofilox', 'Alfacalcidol', 'Tofacitinib']
+- count = 6
+  - top5 = ['Omacetaxine mepesuccinate', 'Acenocoumarol', 'Azathioprine', 'Podofilox', 'Mebendazole']
+- count = 6
+  - top5 = ['Neratinib', 'Cholestyramine', 'Infliximab', 'Talaporfin', 'Golimumab']
+- count = 6
+  - top5 = ['Acenocoumarol', 'Omacetaxine mepesuccinate', 'Mebendazole', 'Azathioprine', 'Oseltamivir']
+- count = 6
+  - top5 = ['Alfacalcidol', 'Bexarotene', 'Podofilox', 'Azathioprine', 'Urokinase']
