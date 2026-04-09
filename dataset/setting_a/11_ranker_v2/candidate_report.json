@@ -1,0 +1,241 @@
+{
+  "week": 7,
+  "day": 3,
+  "goal": "Build ranker_v2 candidate JSON and analyze candidate retrieval quality.",
+  "splits": {
+    "train": {
+      "split": "train",
+      "num_queries": 8388,
+      "k": 20,
+      "recall_at_k_raw": 0.211373,
+      "top1_hit_ratio_raw": 0.016929,
+      "inject_count_ready": 6615,
+      "inject_ratio_ready": 0.788627,
+      "rank_distribution_raw_top50": {
+        "49": 28,
+        "48": 30,
+        "46": 22,
+        "37": 32,
+        "35": 20,
+        "34": 46,
+        "36": 33,
+        "14": 66,
+        "11": 48,
+        "2": 143,
+        "6": 127,
+        "5": 121,
+        "3": 109,
+        "8": 124,
+        "9": 104,
+        "7": 132,
+        "45": 22,
+        "22": 35,
+        "19": 50,
+        "4": 119,
+        "44": 35,
+        "42": 29,
+        "39": 49,
+        "12": 79,
+        "18": 46,
+        "1": 142,
+        "10": 122,
+        "23": 43,
+        "31": 29,
+        "33": 40,
+        "28": 29,
+        "50": 29,
+        "38": 32,
+        "32": 37,
+        "13": 66,
+        "17": 31,
+        "15": 55,
+        "16": 54,
+        "30": 39,
+        "24": 38,
+        "27": 31,
+        "47": 22,
+        "21": 34,
+        "25": 39,
+        "29": 10,
+        "20": 35,
+        "40": 33,
+        "26": 52,
+        "41": 29,
+        "43": 29
+      },
+      "unique_top1_count_raw": 7,
+      "top1_dominance_ratio_raw": 0.441106,
+      "top1_frequency_raw_top10": [
+        {
+          "drug": "Betamethasone",
+          "count": 3700
+        },
+        {
+          "drug": "Fusidic acid",
+          "count": 3407
+        },
+        {
+          "drug": "Methylprednisolone",
+          "count": 1277
+        },
+        {
+          "drug": "Prednisolone",
+          "count": 1
+        },
+        {
+          "drug": "Hydrocortisone",
+          "count": 1
+        },
+        {
+          "drug": "Cortisone acetate",
+          "count": 1
+        },
+        {
+          "drug": "Triamcinolone",
+          "count": 1
+        }
+      ]
+    },
+    "valid": {
+      "split": "valid",
+      "num_queries": 500,
+      "k": 20,
+      "recall_at_k_raw": 0.192,
+      "top1_hit_ratio_raw": 0.018,
+      "inject_count_ready": 404,
+      "inject_ratio_ready": 0.808,
+      "rank_distribution_raw_top50": {
+        "5": 6,
+        "10": 11,
+        "1": 9,
+        "3": 9,
+        "4": 9,
+        "17": 5,
+        "39": 2,
+        "21": 5,
+        "9": 4,
+        "28": 3,
+        "41": 2,
+        "7": 8,
+        "38": 4,
+        "30": 5,
+        "8": 5,
+        "34": 2,
+        "2": 4,
+        "11": 1,
+        "35": 1,
+        "6": 11,
+        "14": 2,
+        "12": 2,
+        "16": 2,
+        "15": 1,
+        "29": 1,
+        "24": 3,
+        "22": 5,
+        "45": 2,
+        "48": 2,
+        "18": 1,
+        "43": 1,
+        "33": 1,
+        "13": 4,
+        "32": 1,
+        "27": 2,
+        "44": 1,
+        "37": 1,
+        "50": 1,
+        "19": 2,
+        "47": 1
+      },
+      "unique_top1_count_raw": 3,
+      "top1_dominance_ratio_raw": 0.482,
+      "top1_frequency_raw_top10": [
+        {
+          "drug": "Betamethasone",
+          "count": 241
+        },
+        {
+          "drug": "Fusidic acid",
+          "count": 186
+        },
+        {
+          "drug": "Methylprednisolone",
+          "count": 73
+        }
+      ]
+    },
+    "test": {
+      "split": "test",
+      "num_queries": 500,
+      "k": 20,
+      "recall_at_k_raw": 0.238,
+      "top1_hit_ratio_raw": 0.018,
+      "inject_count_ready": 381,
+      "inject_ratio_ready": 0.762,
+      "rank_distribution_raw_top50": {
+        "7": 13,
+        "10": 9,
+        "2": 6,
+        "37": 2,
+        "41": 1,
+        "6": 10,
+        "9": 12,
+        "3": 14,
+        "1": 9,
+        "5": 10,
+        "30": 5,
+        "25": 2,
+        "20": 2,
+        "8": 7,
+        "14": 2,
+        "34": 3,
+        "22": 3,
+        "21": 1,
+        "47": 2,
+        "19": 1,
+        "35": 1,
+        "4": 9,
+        "31": 1,
+        "17": 3,
+        "44": 2,
+        "38": 1,
+        "24": 2,
+        "28": 2,
+        "23": 2,
+        "26": 2,
+        "32": 2,
+        "39": 6,
+        "12": 4,
+        "15": 1,
+        "33": 5,
+        "40": 2,
+        "16": 2,
+        "11": 2,
+        "42": 1,
+        "29": 1,
+        "18": 2,
+        "27": 1,
+        "43": 2,
+        "13": 1,
+        "45": 1,
+        "36": 2
+      },
+      "unique_top1_count_raw": 3,
+      "top1_dominance_ratio_raw": 0.42,
+      "top1_frequency_raw_top10": [
+        {
+          "drug": "Betamethasone",
+          "count": 210
+        },
+        {
+          "drug": "Fusidic acid",
+          "count": 203
+        },
+        {
+          "drug": "Methylprednisolone",
+          "count": 87
+        }
+      ]
+    }
+  },
+  "important_note": "Scientific judgment for week 7 still relies primarily on valid; test artifacts are built mechanically but should not be used for tuning decisions."
+}
