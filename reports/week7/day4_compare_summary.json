@@ -1,0 +1,42 @@
+{
+  "week6_valid": {
+    "recall_at_20_raw": 0.02,
+    "top1_hit_ratio_raw": 0.0,
+    "inject_ratio_ready": 0.98,
+    "unique_top1_count_raw": null,
+    "top1_dominance_ratio_raw": null
+  },
+  "week7_valid": {
+    "recall_at_20_raw": 0.192,
+    "top1_hit_ratio_raw": 0.018,
+    "inject_ratio_ready": 0.808,
+    "unique_top1_count_raw": 3,
+    "top1_dominance_ratio_raw": 0.482
+  },
+  "delta_valid": {
+    "delta_recall_at_20_raw": 0.172,
+    "delta_top1_hit_ratio_raw": 0.018,
+    "delta_inject_ratio_ready": -0.172,
+    "delta_unique_top1_count_raw": 3,
+    "delta_top1_dominance_ratio_raw": 0.482
+  },
+  "per_query_comparison": {
+    "category_counts": {
+      "still_missing": 394,
+      "improved_to_top20": 96,
+      "worsened_out_of_top20": 10
+    },
+    "inject_transition_counts": {
+      "inject_still_needed": 394,
+      "inject_removed": 96,
+      "inject_newly_needed": 10
+    },
+    "rank_delta_summary": {
+      "mean_delta_rank": 596.18,
+      "median_delta_rank": 712.0,
+      "num_positive_delta": 396,
+      "num_zero_delta": 0,
+      "num_negative_delta": 104
+    }
+  }
+}
