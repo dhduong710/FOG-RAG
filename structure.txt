@@ -1,0 +1,411 @@
+.
+├── .gitignore
+├── LICENSE
+├── Miniconda3-latest-Linux-x86_64.sh
+├── README.md
+├── arguments.py
+├── backups
+│   └── month1_freeze
+│       ├── day3_pilot_train.log
+│       ├── day4_pilot_infer.log
+│       └── day5_timed_infer.log
+├── checkpoints
+├── configs
+│   ├── week4
+│   │   └── pilot_setting_a.yaml
+│   └── week5
+│       ├── rgcn_setting_a.yaml
+│       ├── setting_a_local_debug.yaml
+│       └── setting_a_server_3b.yaml
+├── data
+│   ├── __init__.py
+│   ├── collate.py
+│   └── dataset.py
+├── dataset
+│   ├── raw
+│   │   └── primekg
+│   │       └── kg.csv
+│   ├── setting_a
+│   │   ├── 00_raw_triples
+│   │   │   └── primekg_indication_only.tsv
+│   │   ├── 01_split
+│   │   │   ├── split_meta.json
+│   │   │   ├── test.tsv
+│   │   │   ├── train.tsv
+│   │   │   └── valid.tsv
+│   │   ├── 02_graph
+│   │   │   ├── graph_stats.json
+│   │   │   ├── graph_stats_deg1000.json
+│   │   │   ├── graph_stats_deg1000_final.json
+│   │   │   ├── graph_stats_deg500.json
+│   │   │   ├── hub_filtered_genes.txt
+│   │   │   ├── train_enriched.tsv
+│   │   │   └── train_enriched_deg1000_final.tsv
+│   │   ├── 02_graph_audit
+│   │   │   └── ppi_audit.json
+│   │   ├── 03_candidates
+│   │   │   ├── candidate_meta.json
+│   │   │   ├── test_mock_candidates.json
+│   │   │   ├── train_mock_candidates.json
+│   │   │   └── valid_mock_candidates.json
+│   │   ├── 04_drkgc_json
+│   │   │   ├── entity2id.json
+│   │   │   ├── entity2id.pkl
+│   │   │   ├── id2entity.json
+│   │   │   ├── id2entity.pkl
+│   │   │   ├── id2relation.json
+│   │   │   ├── id2relation.pkl
+│   │   │   ├── relation2id.json
+│   │   │   ├── relation2id.pkl
+│   │   │   ├── test_mock_ranked.json
+│   │   │   ├── test_skeleton.json
+│   │   │   ├── train_mock_ranked.json
+│   │   │   ├── train_skeleton.json
+│   │   │   ├── valid_mock_ranked.json
+│   │   │   └── valid_skeleton.json
+│   │   ├── 05_prompt_subgraph_subset
+│   │   │   ├── head_prediction_lexicon.json
+│   │   │   ├── rules.json
+│   │   │   ├── tail_prediction_lexicon.json
+│   │   │   ├── test_20_input.json
+│   │   │   ├── test_20_prompt.json
+│   │   │   ├── test_20_raw_noheader.tsv
+│   │   │   ├── train_20_input.json
+│   │   │   ├── train_20_prompt.json
+│   │   │   ├── train_enriched_noheader.tsv
+│   │   │   ├── valid_20_input.json
+│   │   │   ├── valid_20_prompt.json
+│   │   │   └── valid_20_raw_noheader.tsv
+│   │   ├── 06_pilot_subset
+│   │   │   ├── pilot_subset_meta.json
+│   │   │   ├── test_pilot_input.json
+│   │   │   ├── train_pilot_input.json
+│   │   │   └── valid_pilot_input.json
+│   │   ├── 07_pilot_ready
+│   │   │   ├── _tmp_prompt_subgraph
+│   │   │   │   ├── prep_meta.json
+│   │   │   │   ├── test_pilot_input.json
+│   │   │   │   ├── test_pilot_raw_noheader.tsv
+│   │   │   │   ├── train_graph_noheader.tsv
+│   │   │   │   ├── train_pilot_input.json
+│   │   │   │   ├── train_pilot_raw_noheader.tsv
+│   │   │   │   ├── valid_pilot_input.json
+│   │   │   │   └── valid_pilot_raw_noheader.tsv
+│   │   │   ├── mock_entity_embeddings.pt
+│   │   │   ├── pilot_ready_meta.json
+│   │   │   ├── test.json
+│   │   │   ├── train.json
+│   │   │   └── valid.json
+│   │   ├── 08_backbone_ready
+│   │   │   ├── _tmp_prompt_subgraph
+│   │   │   │   ├── test_input.json
+│   │   │   │   ├── test_raw_noheader.tsv
+│   │   │   │   ├── train_graph_noheader.tsv
+│   │   │   │   ├── train_input.json
+│   │   │   │   ├── valid_input.json
+│   │   │   │   └── valid_raw_noheader.tsv
+│   │   │   ├── backbone_ready_manifest.json
+│   │   │   ├── entity2id.pkl
+│   │   │   ├── entity_embeddings_rgcn.pt
+│   │   │   ├── id2entity.pkl
+│   │   │   ├── id2relation.pkl
+│   │   │   ├── relation2id.pkl
+│   │   │   ├── test.json
+│   │   │   ├── train.json
+│   │   │   └── valid.json
+│   │   ├── 08_check_backbone_ready
+│   │   │   ├── check_backbone_ready_manifest.json
+│   │   │   ├── entity2id.pkl
+│   │   │   ├── id2entity.pkl
+│   │   │   ├── id2relation.pkl
+│   │   │   ├── relation2id.pkl
+│   │   │   ├── test.json
+│   │   │   ├── train.json
+│   │   │   └── valid.json
+│   │   ├── 09_real_coarse_ranker
+│   │   │   ├── candidate_recall_report.json
+│   │   │   ├── rgcn_ranker_checkpoint.pt
+│   │   │   ├── score_dump_meta.json
+│   │   │   ├── scorer_meta.json
+│   │   │   ├── test_scores.pt
+│   │   │   ├── test_top20_drkgc_ready.json
+│   │   │   ├── test_top20_raw.json
+│   │   │   ├── train_scores.pt
+│   │   │   ├── train_top20_drkgc_ready.json
+│   │   │   ├── train_top20_raw.json
+│   │   │   ├── valid_scores.pt
+│   │   │   ├── valid_top20_drkgc_ready.json
+│   │   │   ├── valid_top20_raw.json
+│   │   │   ├── week5_compat
+│   │   │   │   ├── test_mock_ranked.json
+│   │   │   │   ├── train_mock_ranked.json
+│   │   │   │   └── valid_mock_ranked.json
+│   │   │   └── week6_protocol.json
+│   │   └── 10_backbone_ready_real
+│   │       ├── .gitkeep
+│   │       ├── _tmp_prompt_subgraph
+│   │       │   ├── test_input.json
+│   │       │   ├── test_raw_noheader.tsv
+│   │       │   ├── train_graph_noheader.tsv
+│   │       │   ├── train_input.json
+│   │       │   ├── valid_input.json
+│   │       │   └── valid_raw_noheader.tsv
+│   │       ├── backbone_ready_manifest.json
+│   │       ├── backbone_ready_real_manifest.json
+│   │       ├── entity2id.pkl
+│   │       ├── id2entity.pkl
+│   │       ├── id2relation.pkl
+│   │       ├── intermediate
+│   │       │   ├── test_ranked_input.json
+│   │       │   ├── train_ranked_input.json
+│   │       │   └── valid_ranked_input.json
+│   │       ├── relation2id.pkl
+│   │       ├── test.json
+│   │       ├── train.json
+│   │       ├── valid.json
+│   │       └── week5_compat_input
+│   │           ├── test_mock_ranked.json
+│   │           ├── train_mock_ranked.json
+│   │           └── valid_mock_ranked.json
+│   ├── setting_b
+│   │   ├── 00_safety_labels
+│   │   │   ├── contra_by_disease.json
+│   │   │   ├── contra_by_drug.json
+│   │   │   ├── contraindication_edges_full.tsv
+│   │   │   └── contraindication_edges_overlap.tsv
+│   │   ├── 01_annotations
+│   │   │   ├── contraindication_conflicts.tsv
+│   │   │   ├── contraindication_pairs.tsv
+│   │   │   ├── path_templates.yaml
+│   │   │   ├── schema_rules.json
+│   │   │   ├── schema_violations.tsv
+│   │   │   ├── type_map.tsv
+│   │   │   └── type_map_overrides.tsv
+│   │   ├── 01_ontology
+│   │   │   ├── domain_range_rules.json
+│   │   │   ├── entity_name_to_type.json
+│   │   │   ├── missing_split_entities.json
+│   │   │   └── name_type_conflicts.json
+│   │   ├── 02_eval_meta
+│   │   │   └── safety_eval_config.json
+│   │   └── 02_eval_ready
+│   │       ├── mock_constraint_eval.json
+│   │       ├── mock_safety_eval.json
+│   │       ├── test_b_annotations.json
+│   │       └── valid_b_annotations.json
+│   └── toy_debug
+│       ├── entity_embeddings.pt
+│       ├── entity_id_map.json
+│       ├── test.json
+│       ├── train.json
+│       └── valid.json
+├── infer.py
+├── lexicon
+│   ├── fb15k237_head_prediction.json
+│   ├── fb15k237_tail_prediction.json
+│   ├── wn18rr_head_prediction.json
+│   └── wn18rr_tail_prediction.json
+├── logs
+├── main.py
+├── model
+│   ├── __init__.py
+│   ├── drkgc.py
+│   └── gnn.py
+├── prompt_subgraph.py
+├── reports
+│   ├── dataset_cards
+│   ├── decisions
+│   │   ├── setting_a_graph_lock.md
+│   │   └── setting_b.md
+│   ├── week1
+│   │   ├── data_spec.md
+│   │   ├── problem_lock.md
+│   │   ├── repo_map.md
+│   │   └── week1_report.md
+│   ├── week2
+│   │   ├── day1_extract_report.md
+│   │   ├── day2_split_report.md
+│   │   ├── day3_graph_a_report.md
+│   │   ├── day3_graph_a_report_deg1000_final.md
+│   │   ├── day4_setting_b_report.md
+│   │   ├── day5_id_maps_and_skeleton_report.md
+│   │   ├── day6_mock_coarse_ranker_report.md
+│   │   ├── day7_prompt_subgraph_report.md
+│   │   └── week2_report.md
+│   ├── week3
+│   │   ├── dataset_card_v0.md
+│   │   ├── day1_contra_protocol_report.md
+│   │   ├── day4_setting_b_annotation_report.md
+│   │   ├── day6_eval_smoke_report.md
+│   │   ├── mock_constraint_eval_summary.json
+│   │   ├── mock_safety_eval_summary.json
+│   │   ├── schema_validation_report.md
+│   │   ├── setting_b_decisions.md
+│   │   ├── test_constraint_eval_summary.json
+│   │   ├── test_safety_eval_summary.json
+│   │   ├── type_map_report.md
+│   │   ├── valid_constraint_eval_summary.json
+│   │   ├── valid_safety_eval_summary.json
+│   │   └── week3_report.md
+│   ├── week4
+│   │   ├── day1_pilot_subset_report.md
+│   │   ├── day2_dryrun_report.md
+│   │   ├── day2_prepare_pilot_prompt_subgraph_report.md
+│   │   ├── day3_pilot_train_report.md
+│   │   ├── day4_pilot_infer_report.md
+│   │   ├── day6_resource_plan.json
+│   │   ├── day6_resource_plan.md
+│   │   └── day7_month_1_closeout.md
+│   ├── week5
+│   │   ├── day1_week5_decision.md
+│   │   ├── day2_backbone_ready_report.md
+│   │   ├── day2_check_backbone_ready_report.md
+│   │   ├── day3_embedding_report.md
+│   │   ├── day4_server_dryrun_report.md
+│   │   ├── day5_train_report.md
+│   │   ├── day6_eval_report.md
+│   │   └── day7_week5_closeout.md
+│   └── week6
+│       ├── day1_week6_protocol.md
+│       ├── day2_check_report.md
+│       ├── day4_real_json_report.md
+│       ├── day5_debug_and_dryrun_report.md
+│       ├── day5_local_dryrun.log
+│       └── day5_server_dryrun.log
+├── results
+│   ├── week4
+│   │   ├── pilot_infer_tinyllama_mock
+│   │   │   ├── case_review.md
+│   │   │   ├── infer_timing_summary.json
+│   │   │   ├── metrics.json
+│   │   │   ├── test_predictions.json
+│   │   │   └── valid_predictions.json
+│   │   └── pilot_train_tinyllama_mock
+│   │       ├── all_results.json
+│   │       ├── checkpoint-10
+│   │       │   ├── README.md
+│   │       │   ├── adapter_config.json
+│   │       │   ├── adapter_model.bin
+│   │       │   └── graph_model.bin
+│   │       ├── checkpoint-20
+│   │       │   ├── README.md
+│   │       │   ├── adapter_config.json
+│   │       │   ├── adapter_model.bin
+│   │       │   └── graph_model.bin
+│   │       ├── checkpoint-final
+│   │       │   ├── README.md
+│   │       │   ├── adapter_config.json
+│   │       │   ├── adapter_model.bin
+│   │       │   └── graph_model.bin
+│   │       ├── train_log_summary.json
+│   │       ├── train_results.json
+│   │       └── trainer_state.json
+│   ├── week5
+│   │   ├── backbone_llama32_3b_rgcn
+│   │   │   ├── all_results.json
+│   │   │   ├── checkpoint-1000
+│   │   │   │   ├── README.md
+│   │   │   │   └── adapter_config.json
+│   │   │   ├── checkpoint-1048
+│   │   │   │   ├── README.md
+│   │   │   │   └── adapter_config.json
+│   │   │   ├── checkpoint-final
+│   │   │   │   ├── README.md
+│   │   │   │   └── adapter_config.json
+│   │   │   ├── config_snapshot.json
+│   │   │   ├── eval_valid_error_cases.md
+│   │   │   ├── eval_valid_metrics.json
+│   │   │   ├── eval_valid_prediction.json
+│   │   │   ├── train_results.json
+│   │   │   └── trainer_state.json
+│   │   ├── rgcn_setting_a
+│   │   │   └── export_meta.json
+│   │   └── week5_input_freeze_manifest.json
+│   └── week6
+│       └── backbone_llama32_3b_rgcn_real
+│           ├── all_results.json
+│           ├── checkpoint-1000
+│           │   ├── README.md
+│           │   └── adapter_config.json
+│           ├── checkpoint-1048
+│           │   ├── README.md
+│           │   └── adapter_config.json
+│           ├── checkpoint-final
+│           │   ├── README.md
+│           │   └── adapter_config.json
+│           ├── config_snapshot.json
+│           ├── train_results.json
+│           ├── trainer_state.json
+│           └── valid_eval
+│               ├── eval_valid_error_cases.md
+│               ├── eval_valid_metrics.json
+│               └── eval_valid_prediction.json
+├── runs
+│   ├── week4_pilot
+│   │   ├── config_snapshot.yaml
+│   │   ├── day3_pilot_train.log
+│   │   ├── day4_pilot_infer.log
+│   │   ├── day5_timed_infer.log
+│   │   └── month1_freeze_manifest.json
+│   └── week5
+├── scripts
+│   ├── eval_constraint_metrics.py
+│   ├── eval_safety_metrics.py
+│   ├── week1
+│   │   ├── make_toy_debug_data.py
+│   │   ├── sanity_env.py
+│   │   ├── smoke_collator.py
+│   │   ├── smoke_data.py
+│   │   └── smoke_graph_input.py
+│   ├── week2
+│   │   ├── day1_check_primekg_download.py
+│   │   ├── day1_extract_indication_subset.py
+│   │   ├── day2_build_split_a.py
+│   │   ├── day3_audit_ppi_count.py
+│   │   ├── day3_enrich_graph_a.py
+│   │   ├── day4_build_setting_b_meta.py
+│   │   ├── day5_build_id_maps.py
+│   │   ├── day5_build_json_skeleton.py
+│   │   ├── day6_build_mock_candidates.py
+│   │   ├── day7_prepare_prompt_subgraph_subset.py
+│   │   └── test.py
+│   ├── week3
+│   │   ├── day1_prepare_contra_pairs.py
+│   │   ├── day2_freeze_type_map.py
+│   │   ├── day3_freeze_schema_and_paths.py
+│   │   └── day4_annotate_setting_b_candidates.py
+│   ├── week4
+│   │   ├── 01_make_pilot_subset.py
+│   │   ├── 02_dryrun_forward.py
+│   │   ├── 02a_prepare_pilot_prompt_subgraph.py
+│   │   ├── 02b_make_mock_kge_embeddings.py
+│   │   ├── 03_make_train_log_summary.py
+│   │   ├── 03_pilot_train.sh
+│   │   ├── 03_summarize_pilot_train.py
+│   │   ├── 04_pilot_infer.py
+│   │   ├── 04_pilot_infer.sh
+│   │   ├── 05_build_resource_plan.py
+│   │   ├── 05_run_timed_infer.sh
+│   │   └── 06_freeze_month1.sh
+│   ├── week5
+│   │   ├── 01_freeze_week5_inputs.py
+│   │   ├── 02_check_backbone_ready.py
+│   │   ├── 02_prepare_backbone_ready.py
+│   │   ├── 03_train_rgcn_or_export_embeddings.py
+│   │   ├── 04_validate_embeddings_and_ids.py
+│   │   ├── 05_server_dryrun.py
+│   │   ├── 06_train_backbone_server.sh
+│   │   ├── 06a_launch_main_adaptive.py
+│   │   ├── 07_eval_backbone_server.py
+│   │   ├── 07_infer_backbone_server.sh
+│   │   └── 08_collect_error_cases.py
+│   └── week6
+│       ├── 01_lock_week6_protocol.py
+│       ├── 02_train_rgcn_ranker.py
+│       ├── 02b_check_day2_completion.py
+│       ├── 03_score_queries_with_rgcn.py
+│       ├── 04_build_real_candidate_json.py
+│       └── 06_rebuild_prompt_subgraph_real.py
+└── structure.txt
+
+78 directories, 330 files
