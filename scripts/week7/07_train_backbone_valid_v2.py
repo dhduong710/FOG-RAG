@@ -71,6 +71,7 @@ def main():
         "--logging_steps", str(cfg["logging_steps"]),
         "--save_steps", str(cfg["save_steps"]),
         "--save_total_limit", str(cfg["save_total_limit"]),
+        "--save_safetensors", "False",
         "--save_strategy", "steps",
         "--logging_strategy", "steps",
         "--evaluation_strategy", "no",

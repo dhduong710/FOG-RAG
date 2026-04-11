@@ -32,7 +32,7 @@ save_total_limit: 2
 seed: 2025
 
 # precision: choose one
-precision: fp16
+precision: bf16
 
 report_to: none
 overwrite_output_dir: true

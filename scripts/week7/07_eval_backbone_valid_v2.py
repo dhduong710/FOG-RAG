@@ -93,7 +93,7 @@ def run_valid_eval(
             subgraph=subgraph,
             generation_config=generation_config,
         )
-        generated_token_ids.append(output.sequences[0].detach().cpu().tolist())
+        generated_token_ids.append(output[0].detach().cpu().tolist())
 
     decoded_preds = tokenizer.batch_decode(generated_token_ids, skip_special_tokens=True)
 
