@@ -1,8 +1,9 @@
 .
-├── .gitignore
 ├── LICENSE
 ├── Miniconda3-latest-Linux-x86_64.sh
 ├── README.md
+├── __pycache__
+│   └── arguments.cpython-312.pyc
 ├── arguments.py
 ├── backups
 │   └── month1_freeze
@@ -13,12 +14,28 @@
 ├── configs
 │   ├── week4
 │   │   └── pilot_setting_a.yaml
-│   └── week5
-│       ├── rgcn_setting_a.yaml
-│       ├── setting_a_local_debug.yaml
-│       └── setting_a_server_3b.yaml
+│   ├── week5
+│   │   ├── rgcn_setting_a.yaml
+│   │   ├── setting_a_local_debug.yaml
+│   │   └── setting_a_server_3b.yaml
+│   ├── week7
+│   │   ├── backbone_ready_ranker_v2.yaml
+│   │   ├── backbone_valid_v2.yaml
+│   │   ├── backbone_valid_v2_8b.yaml
+│   │   └── rgcn_ranker_v2.yaml
+│   └── week8
+│       ├── backbone_ready_posthoc_debias.yaml
+│       ├── backbone_valid_posthoc_3b.yaml
+│       ├── posthoc_debias_sweep.yaml
+│       ├── retrieval_v3_day1.yaml
+│       ├── retrieval_v3_day2.yaml
+│       └── retrieval_v3_day2b.yaml
 ├── data
 │   ├── __init__.py
+│   ├── __pycache__
+│   │   ├── __init__.cpython-312.pyc
+│   │   ├── collate.cpython-312.pyc
+│   │   └── dataset.cpython-312.pyc
 │   ├── collate.py
 │   └── dataset.py
 ├── dataset
@@ -141,32 +158,147 @@
 │   │   │   │   ├── train_mock_ranked.json
 │   │   │   │   └── valid_mock_ranked.json
 │   │   │   └── week6_protocol.json
-│   │   └── 10_backbone_ready_real
-│   │       ├── .gitkeep
+│   │   ├── 10_backbone_ready_real
+│   │   │   ├── _tmp_prompt_subgraph
+│   │   │   │   ├── test_input.json
+│   │   │   │   ├── test_raw_noheader.tsv
+│   │   │   │   ├── train_graph_noheader.tsv
+│   │   │   │   ├── train_input.json
+│   │   │   │   ├── valid_input.json
+│   │   │   │   └── valid_raw_noheader.tsv
+│   │   │   ├── backbone_ready_manifest.json
+│   │   │   ├── backbone_ready_real_manifest.json
+│   │   │   ├── entity2id.pkl
+│   │   │   ├── id2entity.pkl
+│   │   │   ├── id2relation.pkl
+│   │   │   ├── intermediate
+│   │   │   │   ├── test_ranked_input.json
+│   │   │   │   ├── train_ranked_input.json
+│   │   │   │   └── valid_ranked_input.json
+│   │   │   ├── relation2id.pkl
+│   │   │   ├── test.json
+│   │   │   ├── train.json
+│   │   │   ├── valid.json
+│   │   │   └── week5_compat_input
+│   │   │       ├── test_mock_ranked.json
+│   │   │       ├── train_mock_ranked.json
+│   │   │       └── valid_mock_ranked.json
+│   │   ├── 11_ranker_v2
+│   │   │   ├── candidate_report.json
+│   │   │   ├── ranker_v2_meta.json
+│   │   │   ├── ranker_v2_train_log.jsonl
+│   │   │   ├── rgcn_ranker_v2_checkpoint.pt
+│   │   │   ├── score_dump_meta.json
+│   │   │   ├── test_scores.pt
+│   │   │   ├── test_top20_drkgc_ready.json
+│   │   │   ├── test_top20_raw.json
+│   │   │   ├── train_scores.pt
+│   │   │   ├── train_top20_drkgc_ready.json
+│   │   │   ├── train_top20_raw.json
+│   │   │   ├── valid_scores.pt
+│   │   │   ├── valid_top20_drkgc_ready.json
+│   │   │   └── valid_top20_raw.json
+│   │   ├── 12_backbone_ready_ranker_v2
+│   │   │   ├── _tmp_prompt_subgraph
+│   │   │   │   ├── test_ranked_input.json
+│   │   │   │   ├── test_raw_noheader.tsv
+│   │   │   │   ├── train_graph_noheader.tsv
+│   │   │   │   ├── train_ranked_input.json
+│   │   │   │   ├── valid_ranked_input.json
+│   │   │   │   └── valid_raw_noheader.tsv
+│   │   │   ├── entity2id.pkl
+│   │   │   ├── id2entity.pkl
+│   │   │   ├── id2relation.pkl
+│   │   │   ├── manifest.json
+│   │   │   ├── relation2id.pkl
+│   │   │   ├── test.json
+│   │   │   ├── train.json
+│   │   │   └── valid.json
+│   │   ├── 13_retrieval_v3_prep
+│   │   │   ├── collapse_drug_list.txt
+│   │   │   ├── collapse_summary.json
+│   │   │   ├── drug_bias_stats.json
+│   │   │   ├── train_hard_negative_pools.json
+│   │   │   └── valid_hard_negative_probe.json
+│   │   ├── 14_ranker_v3
+│   │   │   ├── ranker_v3_meta.json
+│   │   │   ├── ranker_v3_train_log.jsonl
+│   │   │   ├── rgcn_ranker_v3_checkpoint.pt
+│   │   │   ├── sampled_train_negatives.json
+│   │   │   └── sampled_valid_probe_negatives.json
+│   │   ├── 14_ranker_v3_day2b
+│   │   │   ├── ranker_v3_day2b_meta.json
+│   │   │   ├── ranker_v3_day2b_train_log.jsonl
+│   │   │   ├── rgcn_ranker_v3_day2b_checkpoint.pt
+│   │   │   └── sampled_train_negatives_day2b.json
+│   │   ├── 15_posthoc_debias
+│   │   │   ├── best_lambda_artifacts
+│   │   │   │   ├── candidate_report.json
+│   │   │   │   ├── test_top20_drkgc_ready.json
+│   │   │   │   ├── test_top20_raw.json
+│   │   │   │   ├── train_top20_drkgc_ready.json
+│   │   │   │   ├── train_top20_raw.json
+│   │   │   │   ├── valid_changed_cases.tsv
+│   │   │   │   ├── valid_top20_drkgc_ready.json
+│   │   │   │   └── valid_top20_raw.json
+│   │   │   ├── valid_by_lambda
+│   │   │   │   ├── lambda_0.0
+│   │   │   │   │   ├── valid_report.json
+│   │   │   │   │   ├── valid_top20_drkgc_ready.json
+│   │   │   │   │   └── valid_top20_raw.json
+│   │   │   │   ├── lambda_0.05
+│   │   │   │   │   ├── valid_report.json
+│   │   │   │   │   ├── valid_top20_drkgc_ready.json
+│   │   │   │   │   └── valid_top20_raw.json
+│   │   │   │   ├── lambda_0.1
+│   │   │   │   │   ├── valid_report.json
+│   │   │   │   │   ├── valid_top20_drkgc_ready.json
+│   │   │   │   │   └── valid_top20_raw.json
+│   │   │   │   ├── lambda_0.2
+│   │   │   │   │   ├── valid_report.json
+│   │   │   │   │   ├── valid_top20_drkgc_ready.json
+│   │   │   │   │   └── valid_top20_raw.json
+│   │   │   │   ├── lambda_0.3
+│   │   │   │   │   ├── valid_report.json
+│   │   │   │   │   ├── valid_top20_drkgc_ready.json
+│   │   │   │   │   └── valid_top20_raw.json
+│   │   │   │   ├── lambda_0.5
+│   │   │   │   │   ├── valid_report.json
+│   │   │   │   │   ├── valid_top20_drkgc_ready.json
+│   │   │   │   │   └── valid_top20_raw.json
+│   │   │   │   ├── lambda_0.75
+│   │   │   │   │   ├── valid_report.json
+│   │   │   │   │   ├── valid_top20_drkgc_ready.json
+│   │   │   │   │   └── valid_top20_raw.json
+│   │   │   │   ├── lambda_1.0
+│   │   │   │   │   ├── valid_report.json
+│   │   │   │   │   ├── valid_top20_drkgc_ready.json
+│   │   │   │   │   └── valid_top20_raw.json
+│   │   │   │   ├── lambda_1.5
+│   │   │   │   │   ├── valid_report.json
+│   │   │   │   │   ├── valid_top20_drkgc_ready.json
+│   │   │   │   │   └── valid_top20_raw.json
+│   │   │   │   └── lambda_2.0
+│   │   │   │       ├── valid_report.json
+│   │   │   │       ├── valid_top20_drkgc_ready.json
+│   │   │   │       └── valid_top20_raw.json
+│   │   │   └── valid_debias_sweep_results.json
+│   │   └── 16_backbone_ready_posthoc_debias
 │   │       ├── _tmp_prompt_subgraph
-│   │       │   ├── test_input.json
+│   │       │   ├── test_ranked_input.json
 │   │       │   ├── test_raw_noheader.tsv
 │   │       │   ├── train_graph_noheader.tsv
-│   │       │   ├── train_input.json
-│   │       │   ├── valid_input.json
+│   │       │   ├── train_ranked_input.json
+│   │       │   ├── valid_ranked_input.json
 │   │       │   └── valid_raw_noheader.tsv
-│   │       ├── backbone_ready_manifest.json
-│   │       ├── backbone_ready_real_manifest.json
 │   │       ├── entity2id.pkl
 │   │       ├── id2entity.pkl
 │   │       ├── id2relation.pkl
-│   │       ├── intermediate
-│   │       │   ├── test_ranked_input.json
-│   │       │   ├── train_ranked_input.json
-│   │       │   └── valid_ranked_input.json
+│   │       ├── manifest.json
 │   │       ├── relation2id.pkl
 │   │       ├── test.json
 │   │       ├── train.json
-│   │       ├── valid.json
-│   │       └── week5_compat_input
-│   │           ├── test_mock_ranked.json
-│   │           ├── train_mock_ranked.json
-│   │           └── valid_mock_ranked.json
+│   │       └── valid.json
 │   ├── setting_b
 │   │   ├── 00_safety_labels
 │   │   │   ├── contra_by_disease.json
@@ -209,6 +341,10 @@
 ├── main.py
 ├── model
 │   ├── __init__.py
+│   ├── __pycache__
+│   │   ├── __init__.cpython-312.pyc
+│   │   ├── drkgc.cpython-312.pyc
+│   │   └── gnn.cpython-312.pyc
 │   ├── drkgc.py
 │   └── gnn.py
 ├── prompt_subgraph.py
@@ -265,13 +401,56 @@
 │   │   ├── day5_train_report.md
 │   │   ├── day6_eval_report.md
 │   │   └── day7_week5_closeout.md
-│   └── week6
-│       ├── day1_week6_protocol.md
-│       ├── day2_check_report.md
-│       ├── day4_real_json_report.md
-│       ├── day5_debug_and_dryrun_report.md
-│       ├── day5_local_dryrun.log
-│       └── day5_server_dryrun.log
+│   ├── week6
+│   │   ├── day1_week6_protocol.md
+│   │   ├── day2_check_report.md
+│   │   ├── day4_real_json_report.md
+│   │   ├── day5_debug_and_dryrun_report.md
+│   │   ├── day5_local_dryrun.log
+│   │   └── day5_server_dryrun.log
+│   ├── week7
+│   │   ├── day1_audit.md
+│   │   ├── day1_audit_summary.json
+│   │   ├── day1_same_query_examples.md
+│   │   ├── day1_top1_drug_frequency.tsv
+│   │   ├── day2_ranker_v2_train.log
+│   │   ├── day2_ranker_v2_train.md
+│   │   ├── day2_score_stats.json
+│   │   ├── day2_top1_probe.tsv
+│   │   ├── day3_build_candidate.log
+│   │   ├── day3_candidate_quality.md
+│   │   ├── day3_score_queries.log
+│   │   ├── day4_compare.log
+│   │   ├── day4_compare_summary.json
+│   │   ├── day4_compare_week6_vs_week7.md
+│   │   ├── day4_improved_cases.tsv
+│   │   ├── day4_rank_distribution_comparison.json
+│   │   ├── day4_worsened_cases.tsv
+│   │   ├── day5_backbone_ready_v2.md
+│   │   ├── day5_prepare_backbone_ready_v2.log
+│   │   ├── day6_8b_eval.log
+│   │   ├── day6_8b_train.log
+│   │   ├── day6_8b_valid_eval.md
+│   │   ├── day6_eval_backbone_v2.log
+│   │   ├── day6_train_backbone_v2.log
+│   │   └── day6_valid_eval_v2.md
+│   └── week8
+│       ├── day1_retrieval_v3_prep.md
+│       ├── day2_ranker_v3_score_stats.json
+│       ├── day2_ranker_v3_top1_probe.tsv
+│       ├── day2_ranker_v3_train.log
+│       ├── day2_ranker_v3_train.md
+│       ├── day2b_ranker_v3_score_stats.json
+│       ├── day2b_ranker_v3_top1_probe.tsv
+│       ├── day2b_ranker_v3_train.log
+│       ├── day2b_ranker_v3_train.md
+│       ├── day3_posthoc_debias_sweep.md
+│       ├── day4_backbone_ready_posthoc.md
+│       ├── day4_prepare_backbone_ready_posthoc.log
+│       ├── day5_eval_backbone_posthoc_3b.log
+│       ├── day5_train_backbone_posthoc_3b.log
+│       ├── day5_valid_posthoc_3b.md
+│       └── day7_week_closeout.md
 ├── results
 │   ├── week4
 │   │   ├── pilot_infer_tinyllama_mock
@@ -321,25 +500,69 @@
 │   │   ├── rgcn_setting_a
 │   │   │   └── export_meta.json
 │   │   └── week5_input_freeze_manifest.json
-│   └── week6
-│       └── backbone_llama32_3b_rgcn_real
+│   ├── week6
+│   │   └── backbone_llama32_3b_rgcn_real
+│   │       ├── all_results.json
+│   │       ├── checkpoint-1000
+│   │       │   ├── README.md
+│   │       │   └── adapter_config.json
+│   │       ├── checkpoint-1048
+│   │       │   ├── README.md
+│   │       │   └── adapter_config.json
+│   │       ├── checkpoint-final
+│   │       │   ├── README.md
+│   │       │   └── adapter_config.json
+│   │       ├── config_snapshot.json
+│   │       ├── train_results.json
+│   │       ├── trainer_state.json
+│   │       └── valid_eval
+│   │           ├── eval_valid_error_cases.md
+│   │           ├── eval_valid_metrics.json
+│   │           └── eval_valid_prediction.json
+│   ├── week7
+│   │   ├── backbone_valid_v2_8b_full
+│   │   │   ├── all_results.json
+│   │   │   ├── checkpoint-final
+│   │   │   │   ├── README.md
+│   │   │   │   └── adapter_config.json
+│   │   │   ├── config_snapshot.json
+│   │   │   ├── train_results.json
+│   │   │   ├── trainer_state.json
+│   │   │   └── valid_eval_8b
+│   │   │       ├── eval_valid_8b_error_cases.md
+│   │   │       ├── eval_valid_8b_metrics.json
+│   │   │       └── eval_valid_8b_prediction.json
+│   │   └── backbone_valid_v2_short
+│   │       ├── all_results.json
+│   │       ├── checkpoint-1000
+│   │       │   ├── README.md
+│   │       │   └── adapter_config.json
+│   │       ├── checkpoint-1048
+│   │       │   ├── README.md
+│   │       │   └── adapter_config.json
+│   │       ├── checkpoint-final
+│   │       │   ├── README.md
+│   │       │   └── adapter_config.json
+│   │       ├── config_snapshot.json
+│   │       ├── train_results.json
+│   │       ├── trainer_state.json
+│   │       └── valid_eval_v2
+│   │           ├── eval_valid_v2_error_cases.md
+│   │           ├── eval_valid_v2_metrics.json
+│   │           └── eval_valid_v2_prediction.json
+│   └── week8
+│       └── backbone_valid_posthoc_3b
 │           ├── all_results.json
-│           ├── checkpoint-1000
-│           │   ├── README.md
-│           │   └── adapter_config.json
-│           ├── checkpoint-1048
-│           │   ├── README.md
-│           │   └── adapter_config.json
 │           ├── checkpoint-final
 │           │   ├── README.md
 │           │   └── adapter_config.json
 │           ├── config_snapshot.json
 │           ├── train_results.json
 │           ├── trainer_state.json
-│           └── valid_eval
-│               ├── eval_valid_error_cases.md
-│               ├── eval_valid_metrics.json
-│               └── eval_valid_prediction.json
+│           └── valid_eval_posthoc_3b
+│               ├── eval_valid_posthoc_3b_error_cases.md
+│               ├── eval_valid_posthoc_3b_metrics.json
+│               └── eval_valid_posthoc_3b_prediction.json
 ├── runs
 │   ├── week4_pilot
 │   │   ├── config_snapshot.yaml
@@ -352,6 +575,8 @@
 │   ├── eval_constraint_metrics.py
 │   ├── eval_safety_metrics.py
 │   ├── week1
+│   │   ├── __pycache__
+│   │   │   └── smoke_collator.cpython-312.pyc
 │   │   ├── make_toy_debug_data.py
 │   │   ├── sanity_env.py
 │   │   ├── smoke_collator.py
@@ -399,13 +624,44 @@
 │   │   ├── 07_eval_backbone_server.py
 │   │   ├── 07_infer_backbone_server.sh
 │   │   └── 08_collect_error_cases.py
-│   └── week6
-│       ├── 01_lock_week6_protocol.py
-│       ├── 02_train_rgcn_ranker.py
-│       ├── 02b_check_day2_completion.py
-│       ├── 03_score_queries_with_rgcn.py
-│       ├── 04_build_real_candidate_json.py
-│       └── 06_rebuild_prompt_subgraph_real.py
+│   ├── week6
+│   │   ├── 01_lock_week6_protocol.py
+│   │   ├── 02_train_rgcn_ranker.py
+│   │   ├── 02b_check_day2_completion.py
+│   │   ├── 03_score_queries_with_rgcn.py
+│   │   ├── 04_build_real_candidate_json.py
+│   │   └── 06_rebuild_prompt_subgraph_real.py
+│   ├── week7
+│   │   ├── 01_audit_week6_ranker.py
+│   │   ├── 02_train_rgcn_ranker_v2.py
+│   │   ├── 02b_check_day2_completion.py
+│   │   ├── 03_score_queries_v2.py
+│   │   ├── 03b_check_day3_completion.py
+│   │   ├── 04_build_candidate_json_v2.py
+│   │   ├── 05_compare_ranker_week6_vs_week7.py
+│   │   ├── 05b_check_day4_completion.py
+│   │   ├── 06_prepare_backbone_ready_v2.py
+│   │   ├── 06b_check_backbone_ready_v2.py
+│   │   ├── 07_eval_backbone_valid_v2.py
+│   │   ├── 07_train_backbone_valid_v2.py
+│   │   ├── 07b_check_day6_completion.py
+│   │   ├── 08_eval_backbone_8b_valid.py
+│   │   ├── 08_train_backbone_8b_full.py
+│   │   └── 08b_check_backbone_8b_completion.py
+│   └── week8
+│       ├── 01_prepare_retrieval_v3.py
+│       ├── 01b_check_retrieval_v3_day1.py
+│       ├── 02_train_retrieval_v3.py
+│       ├── 02b_check_retrieval_v3_day2.py
+│       ├── 02c_train_retrieval_v3_day2b.py
+│       ├── 02d_check_retrieval_v3_day2b.py
+│       ├── 03_posthoc_debias_sweep.py
+│       ├── 03b_check_posthoc_debias.py
+│       ├── 04_prepare_backbone_ready_posthoc.py
+│       ├── 04b_check_backbone_ready_posthoc.py
+│       ├── 05_eval_backbone_posthoc_3b.py
+│       ├── 05_train_backbone_posthoc_3b.py
+│       └── 05b_check_backbone_posthoc_3b.py
 └── structure.txt
 
-78 directories, 330 files
+122 directories, 542 files
