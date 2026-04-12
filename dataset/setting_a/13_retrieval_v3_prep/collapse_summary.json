@@ -1,0 +1,506 @@
+{
+  "config": {
+    "seed": 2025,
+    "train_scores_path": "dataset/setting_a/11_ranker_v2/train_scores.pt",
+    "valid_scores_path": "dataset/setting_a/11_ranker_v2/valid_scores.pt",
+    "train_top20_raw_json": "dataset/setting_a/11_ranker_v2/train_top20_raw.json",
+    "valid_top20_raw_json": "dataset/setting_a/11_ranker_v2/valid_top20_raw.json",
+    "week7_candidate_report_path": "dataset/setting_a/11_ranker_v2/candidate_report.json",
+    "week7_8b_valid_report_path": "reports/week7/day6_8b_valid_eval.md",
+    "output_dir": "dataset/setting_a/13_retrieval_v3_prep",
+    "report_dir": "reports/week8",
+    "collapse_topn": 20,
+    "bias_topn": 100,
+    "hard_pool_size": 64,
+    "raw_topk_keep": 20,
+    "collapse_keep": 20,
+    "bias_keep": 24
+  },
+  "collapse_summary": {
+    "num_drugs_in_universe": 1801,
+    "top10_train_top1_raw": [
+      [
+        "Betamethasone",
+        3700
+      ],
+      [
+        "Fusidic acid",
+        3407
+      ],
+      [
+        "Methylprednisolone",
+        1277
+      ],
+      [
+        "Prednisolone",
+        1
+      ],
+      [
+        "Hydrocortisone",
+        1
+      ],
+      [
+        "Cortisone acetate",
+        1
+      ],
+      [
+        "Triamcinolone",
+        1
+      ]
+    ],
+    "top10_valid_top1_raw": [
+      [
+        "Betamethasone",
+        241
+      ],
+      [
+        "Fusidic acid",
+        186
+      ],
+      [
+        "Methylprednisolone",
+        73
+      ]
+    ],
+    "collapse_topn": 20,
+    "collapse_drugs": [
+      {
+        "drug_id": 962,
+        "drug_name": "Betamethasone",
+        "train_gold_freq": 107,
+        "train_gold_ratio": 0.01275632,
+        "train_top1_count_raw": 3700,
+        "train_top1_ratio_raw": 0.44110634,
+        "valid_top1_count_raw": 241,
+        "valid_top1_ratio_raw": 0.482,
+        "mean_score_train": 2.39484406,
+        "std_score_train": 3.64190292,
+        "collapse_score": 83.02726846
+      },
+      {
+        "drug_id": 3121,
+        "drug_name": "Fusidic acid",
+        "train_gold_freq": 86,
+        "train_gold_ratio": 0.01025274,
+        "train_top1_count_raw": 3407,
+        "train_top1_ratio_raw": 0.40617549,
+        "valid_top1_count_raw": 186,
+        "valid_top1_ratio_raw": 0.372,
+        "mean_score_train": 0.58188719,
+        "std_score_train": 0.93022352,
+        "collapse_score": 70.31505873
+      },
+      {
+        "drug_id": 5426,
+        "drug_name": "Methylprednisolone",
+        "train_gold_freq": 102,
+        "train_gold_ratio": 0.01216023,
+        "train_top1_count_raw": 1277,
+        "train_top1_ratio_raw": 0.1522413,
+        "valid_top1_count_raw": 73,
+        "valid_top1_ratio_raw": 0.146,
+        "mean_score_train": 2.2399981,
+        "std_score_train": 3.11294508,
+        "collapse_score": 30.2668213
+      },
+      {
+        "drug_id": 2042,
+        "drug_name": "Cortisone acetate",
+        "train_gold_freq": 131,
+        "train_gold_ratio": 0.01561755,
+        "train_top1_count_raw": 1,
+        "train_top1_ratio_raw": 0.00011922,
+        "valid_top1_count_raw": 0,
+        "valid_top1_ratio_raw": 0.0,
+        "mean_score_train": 2.19408917,
+        "std_score_train": 3.08936357,
+        "collapse_score": 5.43282104
+      },
+      {
+        "drug_id": 3824,
+        "drug_name": "Hydrocortisone",
+        "train_gold_freq": 122,
+        "train_gold_ratio": 0.01454459,
+        "train_top1_count_raw": 1,
+        "train_top1_ratio_raw": 0.00011922,
+        "valid_top1_count_raw": 0,
+        "valid_top1_ratio_raw": 0.0,
+        "mean_score_train": 2.22459936,
+        "std_score_train": 3.17899823,
+        "collapse_score": 5.21520392
+      },
+      {
+        "drug_id": 6826,
+        "drug_name": "Prednisolone",
+        "train_gold_freq": 124,
+        "train_gold_ratio": 0.01478302,
+        "train_top1_count_raw": 1,
+        "train_top1_ratio_raw": 0.00011922,
+        "valid_top1_count_raw": 0,
+        "valid_top1_ratio_raw": 0.0,
+        "mean_score_train": 2.00061488,
+        "std_score_train": 2.70515156,
+        "collapse_score": 5.13139603
+      },
+      {
+        "drug_id": 8732,
+        "drug_name": "Triamcinolone",
+        "train_gold_freq": 115,
+        "train_gold_ratio": 0.01371006,
+        "train_top1_count_raw": 1,
+        "train_top1_ratio_raw": 0.00011922,
+        "valid_top1_count_raw": 0,
+        "valid_top1_ratio_raw": 0.0,
+        "mean_score_train": 2.19044399,
+        "std_score_train": 3.14510083,
+        "collapse_score": 5.01072327
+      },
+      {
+        "drug_id": 2378,
+        "drug_name": "Dexamethasone",
+        "train_gold_freq": 122,
+        "train_gold_ratio": 0.01454459,
+        "train_top1_count_raw": 0,
+        "train_top1_ratio_raw": 0.0,
+        "valid_top1_count_raw": 0,
+        "valid_top1_ratio_raw": 0.0,
+        "mean_score_train": 1.88144433,
+        "std_score_train": 2.44692779,
+        "collapse_score": 4.99412066
+      },
+      {
+        "drug_id": 6828,
+        "drug_name": "Prednisone",
+        "train_gold_freq": 92,
+        "train_gold_ratio": 0.01096805,
+        "train_top1_count_raw": 0,
+        "train_top1_ratio_raw": 0.0,
+        "valid_top1_count_raw": 0,
+        "valid_top1_ratio_raw": 0.0,
+        "mean_score_train": 1.6621747,
+        "std_score_train": 2.36107111,
+        "collapse_score": 4.0734223
+      },
+      {
+        "drug_id": 3825,
+        "drug_name": "Hydrocortisone acetate",
+        "train_gold_freq": 83,
+        "train_gold_ratio": 0.00989509,
+        "train_top1_count_raw": 0,
+        "train_top1_ratio_raw": 0.0,
+        "valid_top1_count_raw": 0,
+        "valid_top1_ratio_raw": 0.0,
+        "mean_score_train": 1.6700089,
+        "std_score_train": 2.26368666,
+        "collapse_score": 3.84200701
+      },
+      {
+        "drug_id": 2446,
+        "drug_name": "Doxorubicin",
+        "train_gold_freq": 72,
+        "train_gold_ratio": 0.00858369,
+        "train_top1_count_raw": 0,
+        "train_top1_ratio_raw": 0.0,
+        "valid_top1_count_raw": 0,
+        "valid_top1_ratio_raw": 0.0,
+        "mean_score_train": 1.3385067,
+        "std_score_train": 2.21884966,
+        "collapse_score": 3.35162315
+      },
+      {
+        "drug_id": 1913,
+        "drug_name": "Carmustine",
+        "train_gold_freq": 52,
+        "train_gold_ratio": 0.00619933,
+        "train_top1_count_raw": 0,
+        "train_top1_ratio_raw": 0.0,
+        "valid_top1_count_raw": 0,
+        "valid_top1_ratio_raw": 0.0,
+        "mean_score_train": 0.9943729,
+        "std_score_train": 1.49917257,
+        "collapse_score": 2.61737071
+      },
+      {
+        "drug_id": 954,
+        "drug_name": "Benzylpenicillin",
+        "train_gold_freq": 58,
+        "train_gold_ratio": 0.00691464,
+        "train_top1_count_raw": 0,
+        "train_top1_ratio_raw": 0.0,
+        "valid_top1_count_raw": 0,
+        "valid_top1_ratio_raw": 0.0,
+        "mean_score_train": 0.10375468,
+        "std_score_train": 0.92659938,
+        "collapse_score": 2.23289119
+      },
+      {
+        "drug_id": 6847,
+        "drug_name": "Propranolol",
+        "train_gold_freq": 28,
+        "train_gold_ratio": 0.0033381,
+        "train_top1_count_raw": 0,
+        "train_top1_ratio_raw": 0.0,
+        "valid_top1_count_raw": 0,
+        "valid_top1_ratio_raw": 0.0,
+        "mean_score_train": 1.27747381,
+        "std_score_train": 2.10354829,
+        "collapse_score": 2.1598159
+      },
+      {
+        "drug_id": 979,
+        "drug_name": "Bleomycin",
+        "train_gold_freq": 33,
+        "train_gold_ratio": 0.00393419,
+        "train_top1_count_raw": 0,
+        "train_top1_ratio_raw": 0.0,
+        "valid_top1_count_raw": 0,
+        "valid_top1_ratio_raw": 0.0,
+        "mean_score_train": 0.92642361,
+        "std_score_train": 1.21434903,
+        "collapse_score": 2.07741693
+      },
+      {
+        "drug_id": 8674,
+        "drug_name": "Thiotepa",
+        "train_gold_freq": 35,
+        "train_gold_ratio": 0.00417263,
+        "train_top1_count_raw": 0,
+        "train_top1_ratio_raw": 0.0,
+        "valid_top1_count_raw": 0,
+        "valid_top1_ratio_raw": 0.0,
+        "mean_score_train": 0.73547488,
+        "std_score_train": 1.22369814,
+        "collapse_score": 2.01371105
+      },
+      {
+        "drug_id": 8955,
+        "drug_name": "Vincristine",
+        "train_gold_freq": 31,
+        "train_gold_ratio": 0.00369576,
+        "train_top1_count_raw": 0,
+        "train_top1_ratio_raw": 0.0,
+        "valid_top1_count_raw": 0,
+        "valid_top1_ratio_raw": 0.0,
+        "mean_score_train": 0.88930327,
+        "std_score_train": 1.6350683,
+        "collapse_score": 2.00234452
+      },
+      {
+        "drug_id": 5947,
+        "drug_name": "Ofloxacin",
+        "train_gold_freq": 43,
+        "train_gold_ratio": 0.00512637,
+        "train_top1_count_raw": 0,
+        "train_top1_ratio_raw": 0.0,
+        "valid_top1_count_raw": 0,
+        "valid_top1_ratio_raw": 0.0,
+        "mean_score_train": 0.32670522,
+        "std_score_train": 0.67435145,
+        "collapse_score": 1.97491766
+      },
+      {
+        "drug_id": 704,
+        "drug_name": "Amphotericin B",
+        "train_gold_freq": 47,
+        "train_gold_ratio": 0.00560324,
+        "train_top1_count_raw": 0,
+        "train_top1_ratio_raw": 0.0,
+        "valid_top1_count_raw": 0,
+        "valid_top1_ratio_raw": 0.0,
+        "mean_score_train": -0.00880448,
+        "std_score_train": 0.69998431,
+        "collapse_score": 1.87573249
+      },
+      {
+        "drug_id": 5864,
+        "drug_name": "Norfloxacin",
+        "train_gold_freq": 44,
+        "train_gold_ratio": 0.00524559,
+        "train_top1_count_raw": 0,
+        "train_top1_ratio_raw": 0.0,
+        "valid_top1_count_raw": 0,
+        "valid_top1_ratio_raw": 0.0,
+        "mean_score_train": 0.09357096,
+        "std_score_train": 0.69504046,
+        "collapse_score": 1.85929972
+      }
+    ]
+  },
+  "train_hard_negative_summary": {
+    "num_queries": 8388,
+    "hard_pool_size_min": 25,
+    "hard_pool_size_max": 36,
+    "hard_pool_size_mean": 29.5548,
+    "top20_hard_negative_frequency": [
+      [
+        "Vinblastine",
+        8362
+      ],
+      [
+        "Methotrexate",
+        8361
+      ],
+      [
+        "Propranolol",
+        8360
+      ],
+      [
+        "Vincristine",
+        8357
+      ],
+      [
+        "Paclitaxel",
+        8357
+      ],
+      [
+        "Bleomycin",
+        8355
+      ],
+      [
+        "Thiotepa",
+        8353
+      ],
+      [
+        "Minocycline",
+        8349
+      ],
+      [
+        "Ofloxacin",
+        8345
+      ],
+      [
+        "Norfloxacin",
+        8344
+      ],
+      [
+        "Amphotericin B",
+        8341
+      ],
+      [
+        "Carmustine",
+        8336
+      ],
+      [
+        "Benzylpenicillin",
+        8330
+      ],
+      [
+        "Doxorubicin",
+        8316
+      ],
+      [
+        "Hydrocortisone acetate",
+        8305
+      ],
+      [
+        "Fusidic acid",
+        8302
+      ],
+      [
+        "Prednisone",
+        8296
+      ],
+      [
+        "Methylprednisolone",
+        8286
+      ],
+      [
+        "Betamethasone",
+        8281
+      ],
+      [
+        "Triamcinolone",
+        8273
+      ]
+    ]
+  },
+  "valid_hard_negative_summary": {
+    "num_queries": 500,
+    "hard_pool_size_min": 25,
+    "hard_pool_size_max": 36,
+    "hard_pool_size_mean": 29.376,
+    "top20_hard_negative_frequency": [
+      [
+        "Propranolol",
+        500
+      ],
+      [
+        "Carmustine",
+        500
+      ],
+      [
+        "Vincristine",
+        500
+      ],
+      [
+        "Vinblastine",
+        500
+      ],
+      [
+        "Ofloxacin",
+        500
+      ],
+      [
+        "Hydrocortisone acetate",
+        499
+      ],
+      [
+        "Bleomycin",
+        499
+      ],
+      [
+        "Amphotericin B",
+        499
+      ],
+      [
+        "Minocycline",
+        499
+      ],
+      [
+        "Methotrexate",
+        498
+      ],
+      [
+        "Benzylpenicillin",
+        498
+      ],
+      [
+        "Norfloxacin",
+        498
+      ],
+      [
+        "Paclitaxel",
+        498
+      ],
+      [
+        "Thiotepa",
+        497
+      ],
+      [
+        "Fusidic acid",
+        496
+      ],
+      [
+        "Triamcinolone",
+        495
+      ],
+      [
+        "Hydrocortisone",
+        494
+      ],
+      [
+        "Methylprednisolone",
+        493
+      ],
+      [
+        "Prednisone",
+        493
+      ],
+      [
+        "Dexamethasone",
+        492
+      ]
+    ]
+  },
+  "important_note": "These artifacts are intended for retrieval-v3 training with collapse-aware hard negatives and optional score debiasing."
+}

@@ -1,0 +1,23 @@
+seed: 2025
+
+train_scores_path: dataset/setting_a/11_ranker_v2/train_scores.pt
+valid_scores_path: dataset/setting_a/11_ranker_v2/valid_scores.pt
+
+train_top20_raw_json: dataset/setting_a/11_ranker_v2/train_top20_raw.json
+valid_top20_raw_json: dataset/setting_a/11_ranker_v2/valid_top20_raw.json
+
+week7_candidate_report_path: dataset/setting_a/11_ranker_v2/candidate_report.json
+week7_8b_valid_report_path: reports/week7/day6_8b_valid_eval.md
+
+output_dir: dataset/setting_a/13_retrieval_v3_prep
+report_dir: reports/week8
+
+# collapse analysis
+collapse_topn: 20
+bias_topn: 100
+
+# hard negative pool
+hard_pool_size: 64
+raw_topk_keep: 20
+collapse_keep: 20
+bias_keep: 24
