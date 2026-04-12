@@ -1,0 +1,61 @@
+# Week8 / retrieval-v3 Day 2b — ranker_v3 warm-start training
+
+## Scope
+
+- Warm-start from ranker_v2 instead of training from scratch.
+- Use query-specific mixed negatives with small global quotas.
+- Keep retrieval signal while reducing collapse.
+
+## Config
+
+- init_checkpoint_path = `dataset/setting_a/11_ranker_v2/rgcn_ranker_v2_checkpoint.pt`
+- learning_rate = `2e-05`
+- batch_size = `512`
+- num_negatives = `24`
+- raw_keep = `16`
+- collapse_keep = `4`
+- bias_keep = `2`
+- random_fill = `True`
+- random_fill_max = `2`
+
+## Best checkpoint
+
+- best_epoch = `3`
+- valid_probe_recall20 = `0.21`
+- valid_probe_top1_hit_ratio = `0.01`
+- valid_probe_unique_top1_count = `3`
+- valid_probe_top1_dominance_ratio = `0.48`
+- pos_score_mean = `0.20816771686077118`
+- neg_score_mean = `0.31683894991874695`
+- score_gap_mean = `-0.10867121815681458`
+- stopped_early = `True`
+
+## Target reference from week7-v2
+
+- week7_v2_probe_recall20_target = `0.26`
+- week7_v2_probe_top1_dominance_target = `0.5`
+
+## Sampled negative summary
+
+- num_saved_debug_rows = `20`
+- raw_keep = `16`
+- collapse_keep = `4`
+- bias_keep = `2`
+- num_negatives = `24`
+- random_fill_max = `2`
+
+## Last logged rows
+
+- `{"epoch": 1, "global_step": 17, "avg_epoch_loss": 1.713826263183972, "avg_grad_norm": 6.216628242941463, "pos_score_mean": 0.2951506972312927, "pos_score_std": 1.058173656463623, "neg_score_mean": 0.803206205368042, "neg_score_std": 2.350034713745117, "score_gap_mean": -0.5080556273460388, "score_gap_std": 2.4511778354644775, "valid_probe_recall20": 0.15, "valid_probe_top1_hit_ratio": 0.01, "valid_probe_unique_top1_count": 3, "valid_probe_top1_dominance_ratio": 0.45}`
+- `{"epoch": 2, "global_step": 34, "avg_epoch_loss": 1.4803034637903223, "avg_grad_norm": 5.205560852499569, "pos_score_mean": 0.25227758288383484, "pos_score_std": 0.9003742337226868, "neg_score_mean": 0.5404171943664551, "neg_score_std": 1.8488832712173462, "score_gap_mean": -0.28813958168029785, "score_gap_std": 1.9699208736419678, "valid_probe_recall20": 0.18, "valid_probe_top1_hit_ratio": 0.03, "valid_probe_unique_top1_count": 3, "valid_probe_top1_dominance_ratio": 0.46}`
+- `{"epoch": 3, "global_step": 51, "avg_epoch_loss": 1.2899668418514085, "avg_grad_norm": 4.368924828136668, "pos_score_mean": 0.20816771686077118, "pos_score_std": 0.7785170078277588, "neg_score_mean": 0.31683894991874695, "neg_score_std": 1.4826207160949707, "score_gap_mean": -0.10867121815681458, "score_gap_std": 1.6191314458847046, "valid_probe_recall20": 0.21, "valid_probe_top1_hit_ratio": 0.01, "valid_probe_unique_top1_count": 3, "valid_probe_top1_dominance_ratio": 0.48}`
+- `{"epoch": 4, "global_step": 68, "avg_epoch_loss": 1.1518494331899232, "avg_grad_norm": 3.6787589017082665, "pos_score_mean": 0.1614610105752945, "pos_score_std": 0.6941823363304138, "neg_score_mean": 0.1404666155576706, "neg_score_std": 1.2853156328201294, "score_gap_mean": 0.020994406193494797, "score_gap_std": 1.4189990758895874, "valid_probe_recall20": 0.17, "valid_probe_top1_hit_ratio": 0.0, "valid_probe_unique_top1_count": 4, "valid_probe_top1_dominance_ratio": 0.44}`
+- `{"epoch": 5, "global_step": 85, "avg_epoch_loss": 1.024406441462057, "avg_grad_norm": 2.9161377233617447, "pos_score_mean": 0.1114681214094162, "pos_score_std": 0.6519017815589905, "neg_score_mean": -0.05535443499684334, "neg_score_std": 1.2646353244781494, "score_gap_mean": 0.16682255268096924, "score_gap_std": 1.3768349885940552, "valid_probe_recall20": 0.15, "valid_probe_top1_hit_ratio": 0.01, "valid_probe_unique_top1_count": 5, "valid_probe_top1_dominance_ratio": 0.47}`
+- `{"epoch": 6, "global_step": 102, "avg_epoch_loss": 0.937629691606257, "avg_grad_norm": 2.314233394230113, "pos_score_mean": 0.059660349041223526, "pos_score_std": 0.6409918665885925, "neg_score_mean": -0.2249639630317688, "neg_score_std": 1.3491034507751465, "score_gap_mean": 0.284624308347702, "score_gap_std": 1.3895870447158813, "valid_probe_recall20": 0.11, "valid_probe_top1_hit_ratio": 0.01, "valid_probe_unique_top1_count": 6, "valid_probe_top1_dominance_ratio": 0.43}`
+- `{"epoch": 7, "global_step": 119, "avg_epoch_loss": 0.8698542505204251, "avg_grad_norm": 1.798688243417179, "pos_score_mean": 0.0278742965310812, "pos_score_std": 0.6575316786766052, "neg_score_mean": -0.3850548267364502, "neg_score_std": 1.52621328830719, "score_gap_mean": 0.41292914748191833, "score_gap_std": 1.533449649810791, "valid_probe_recall20": 0.17, "valid_probe_top1_hit_ratio": 0.01, "valid_probe_unique_top1_count": 6, "valid_probe_top1_dominance_ratio": 0.46}`
+- `{"epoch": 8, "global_step": 136, "avg_epoch_loss": 0.8231024791868061, "avg_grad_norm": 1.5365269113989437, "pos_score_mean": 0.00013548451534006745, "pos_score_std": 0.6926348209381104, "neg_score_mean": -0.5220403075218201, "neg_score_std": 1.6927646398544312, "score_gap_mean": 0.5221757888793945, "score_gap_std": 1.6818424463272095, "valid_probe_recall20": 0.15, "valid_probe_top1_hit_ratio": 0.02, "valid_probe_unique_top1_count": 7, "valid_probe_top1_dominance_ratio": 0.53}`
+
+## Conclusion
+
+- This run is acceptable only if it preserves a meaningful recall20 probe while reducing top1 dominance versus week7-v2.
+- Day 3 should start only if the tradeoff is clearly better than the failed Day 2 scratch run.
