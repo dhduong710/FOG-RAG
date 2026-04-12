@@ -1,0 +1,17 @@
+{
+  "method": "ComplEx",
+  "protocol": "Setting A structure-only baseline",
+  "num_valid_queries": 500,
+  "drug_universe_size": 1801,
+  "mrr": 0.13171101,
+  "hits1": 0.028,
+  "hits3": 0.102,
+  "hits10": 0.41,
+  "top1_dominance_ratio": 0.056,
+  "unique_top1_count": 154,
+  "checkpoint_path": "results/week8/complex_baseline_full_v1/complex_checkpoint.pt",
+  "checkpoint_best_epoch": 18,
+  "meta_path": "results/week8/complex_baseline_full_v1/complex_meta.json",
+  "valid_queries_path": "dataset/setting_a/01_split/valid.tsv",
+  "device": "cuda"
+}
