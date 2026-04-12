@@ -1,0 +1,17 @@
+{
+  "method": "TransE",
+  "protocol": "Setting A structure-only baseline",
+  "num_valid_queries": 500,
+  "drug_universe_size": 1801,
+  "mrr": 0.08074941,
+  "hits1": 0.014,
+  "hits3": 0.056,
+  "hits10": 0.244,
+  "top1_dominance_ratio": 0.056,
+  "unique_top1_count": 199,
+  "checkpoint_path": "results/week8/transe_baseline_full_v1/transe_checkpoint.pt",
+  "checkpoint_best_epoch": 18,
+  "meta_path": "results/week8/transe_baseline_full_v1/transe_meta.json",
+  "valid_queries_path": "dataset/setting_a/01_split/valid.tsv",
+  "device": "cuda"
+}
