@@ -1,0 +1,2 @@
+{"epoch": 1, "train_loss": 0.8041051, "num_batches": 8, "probe_mrr": 0.00344221, "probe_hits10": 0.0, "probe_top1_dominance_ratio": 0.484375, "probe_unique_top1_count": 6}
+{"epoch": 2, "train_loss": 0.32703549, "num_batches": 8, "probe_mrr": 0.00345169, "probe_hits10": 0.0078125, "probe_top1_dominance_ratio": 0.578125, "probe_unique_top1_count": 5}
