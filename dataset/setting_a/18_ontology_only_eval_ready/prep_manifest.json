@@ -1,0 +1,9 @@
+{
+  "base_package_dir": "dataset/setting_a/12_backbone_ready_ranker_v2",
+  "ontology_candidates": "dataset/setting_a/18_ontology_only/valid_top20_ontology_only.json",
+  "output_package_dir": "dataset/setting_a/18_ontology_only_eval_ready",
+  "num_valid_rows": 500,
+  "num_missing_match": 0,
+  "num_gold_in_topk_ontology": 164,
+  "num_fallback_queries": 94
+}
