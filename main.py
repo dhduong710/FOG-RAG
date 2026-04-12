@@ -46,9 +46,13 @@ def get_accelerate_model(args, config, pretrained_model_class):
             config=config,
             low_cpu_mem_usage=True, 
             device_map=device_map, 
+            torch_dtype=torch.bfloat16,
         )
 
-    model = prepare_model_for_kbit_training(model, use_gradient_checkpointing=args.use_quant)
+    if args.use_quant:
+        model = prepare_model_for_kbit_training(model, use_gradient_checkpointing=True)
+    else:
+        model.gradient_checkpointing_enable()
     
     if args.model_type == "llama":
         config = LoraConfig(
