@@ -1,25 +1,31 @@
 {
-  "day": 2,
-  "title": "Type filtering",
-  "target_type": "Drug",
-  "input_candidates": "dataset/setting_a/11_ranker_v2/valid_top20_drkgc_ready.json",
-  "type_map_tsv": "dataset/setting_b/01_annotations/type_map.tsv",
-  "fallback_type_json": "dataset/setting_b/01_ontology/entity_name_to_type.json",
-  "output_filtered_candidates": "dataset/setting_a/18_ontology_only/valid_top20_type_filtered.json",
-  "output_filter_report": "dataset/setting_a/18_ontology_only/ontology_filter_report.json",
+  "day": 4,
+  "title": "Ontology-only candidate build",
+  "inputs": {
+    "input_candidates": "dataset/setting_a/18_ontology_only/valid_top20_type_filtered.json",
+    "input_evidence": "dataset/setting_a/12_backbone_ready_ranker_v2/valid.json",
+    "type_map_tsv": "dataset/setting_b/01_annotations/type_map.tsv",
+    "schema_rules_json": "dataset/setting_b/01_annotations/schema_rules.json",
+    "path_templates_yaml": "dataset/setting_b/01_annotations/path_templates.yaml"
+  },
+  "outputs": {
+    "ontology_candidate_artifact": "dataset/setting_a/18_ontology_only/valid_top20_ontology_only.json",
+    "ontology_filter_report": "dataset/setting_a/18_ontology_only/ontology_filter_report.json"
+  },
   "total_queries": 500,
   "total_candidates_before": 10000,
-  "total_candidates_after": 10000,
-  "total_removed": 0,
-  "empty_queries_after_filter": 0,
-  "remaining_non_drug_candidates": 0,
-  "top1_changed_queries": 0,
-  "top5_changed_queries": 0,
-  "removed_type_breakdown": {},
-  "type_lookup_source_breakdown": {
-    "type_map.tsv": 10000
-  },
-  "empty_query_examples": [],
+  "total_candidates_after": 3918,
+  "removed_unsupported_candidates": 8082,
+  "candidates_kept_by_direct_support": 1642,
+  "candidates_kept_by_mechanism_support": 276,
+  "queries_with_any_direct_support": 282,
+  "queries_with_any_mechanism_support": 179,
+  "fallback_queries": 100,
+  "empty_queries_before_fallback": 100,
+  "gold_in_ontology_candidates": 146,
+  "top1_changed_queries": 271,
+  "top5_changed_queries": 369,
+  "valid_mechanism_templates_loaded": 2,
   "sample_before_after": [
     {
       "query_entity": "leukemia, lymphocytic, susceptibility to",
@@ -35,9 +41,16 @@
         "Hydrocortisone",
         "Methylprednisolone",
         "Triamcinolone",
-        "Cortisone acetate"
+        "Prednisolone"
       ],
-      "removed_types": {}
+      "support_labels_top5_after": [
+        "direct",
+        "direct",
+        "direct",
+        "direct",
+        "direct"
+      ],
+      "fallback_used": false
     },
     {
       "query_entity": "streptococcal infection",
@@ -50,12 +63,17 @@
       ],
       "after_top5": [
         "Fusidic acid",
-        "Oxytetracycline",
-        "Dexamethasone",
-        "Methylprednisolone",
-        "Prednisolone"
+        "Ofloxacin",
+        "Benzylpenicillin",
+        "Ciprofloxacin"
       ],
-      "removed_types": {}
+      "support_labels_top5_after": [
+        "direct",
+        "direct",
+        "direct",
+        "direct"
+      ],
+      "fallback_used": false
     },
     {
       "query_entity": "dyspepsia",
@@ -73,7 +91,14 @@
         "Methylprednisolone",
         "Methdilazine"
       ],
-      "removed_types": {}
+      "support_labels_top5_after": [
+        "unsupported",
+        "unsupported",
+        "unsupported",
+        "unsupported",
+        "unsupported"
+      ],
+      "fallback_used": true
     },
     {
       "query_entity": "basal cell carcinoma",
@@ -85,13 +110,12 @@
         "Cortisone acetate"
       ],
       "after_top5": [
-        "Betamethasone",
-        "Hydrocortisone",
-        "Triamcinolone",
-        "Methylprednisolone",
-        "Cortisone acetate"
+        "Vismodegib"
       ],
-      "removed_types": {}
+      "support_labels_top5_after": [
+        "mechanism"
+      ],
+      "fallback_used": false
     },
     {
       "query_entity": "obsessive-compulsive disorder",
@@ -103,13 +127,12 @@
         "Triamcinolone"
       ],
       "after_top5": [
-        "Betamethasone",
-        "Methylprednisolone",
-        "Hydrocortisone",
-        "Cortisone acetate",
-        "Triamcinolone"
+        "Propranolol"
       ],
-      "removed_types": {}
+      "support_labels_top5_after": [
+        "mechanism"
+      ],
+      "fallback_used": false
     },
     {
       "query_entity": "Norwegian scabies",
@@ -127,7 +150,14 @@
         "Tobramycin",
         "Dexamethasone"
       ],
-      "removed_types": {}
+      "support_labels_top5_after": [
+        "unsupported",
+        "unsupported",
+        "unsupported",
+        "unsupported",
+        "unsupported"
+      ],
+      "fallback_used": true
     },
     {
       "query_entity": "hypertension",
@@ -139,13 +169,12 @@
         "Oxytetracycline"
       ],
       "after_top5": [
-        "Fusidic acid",
-        "Dexamethasone",
-        "Methylprednisolone",
-        "Prednisolone",
-        "Oxytetracycline"
+        "Dexamethasone"
       ],
-      "removed_types": {}
+      "support_labels_top5_after": [
+        "mechanism"
+      ],
+      "fallback_used": false
     },
     {
       "query_entity": "pneumococcal meningitis",
@@ -157,13 +186,12 @@
         "Oxytetracycline"
       ],
       "after_top5": [
-        "Fusidic acid",
-        "Dexamethasone",
-        "Methylprednisolone",
-        "Prednisolone",
-        "Oxytetracycline"
+        "Benzylpenicillin"
       ],
-      "removed_types": {}
+      "support_labels_top5_after": [
+        "direct"
+      ],
+      "fallback_used": false
     },
     {
       "query_entity": "obsessive-compulsive disorder",
@@ -175,13 +203,14 @@
         "Triamcinolone"
       ],
       "after_top5": [
-        "Betamethasone",
-        "Methylprednisolone",
-        "Hydrocortisone",
-        "Cortisone acetate",
-        "Triamcinolone"
+        "Propranolol",
+        "Paroxetine"
       ],
-      "removed_types": {}
+      "support_labels_top5_after": [
+        "mechanism",
+        "mechanism"
+      ],
+      "fallback_used": false
     },
     {
       "query_entity": "arthropathy",
@@ -193,13 +222,12 @@
         "Triamcinolone"
       ],
       "after_top5": [
-        "Betamethasone",
-        "Methylprednisolone",
-        "Hydrocortisone",
-        "Cortisone acetate",
-        "Triamcinolone"
+        "Fusidic acid"
       ],
-      "removed_types": {}
+      "support_labels_top5_after": [
+        "direct"
+      ],
+      "fallback_used": false
     }
   ]
 }
