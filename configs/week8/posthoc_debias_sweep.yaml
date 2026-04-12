@@ -1,0 +1,37 @@
+seed: 2025
+
+train_scores_path: dataset/setting_a/11_ranker_v2/train_scores.pt
+valid_scores_path: dataset/setting_a/11_ranker_v2/valid_scores.pt
+test_scores_path: dataset/setting_a/11_ranker_v2/test_scores.pt
+
+drug_bias_stats_path: dataset/setting_a/13_retrieval_v3_prep/drug_bias_stats.json
+week7_candidate_report_path: dataset/setting_a/11_ranker_v2/candidate_report.json
+
+output_dir: dataset/setting_a/15_posthoc_debias
+report_dir: reports/week8
+
+# bias source from drug_bias_stats.json
+bias_field: collapse_score
+bias_normalization: minmax
+
+# lambda sweep on valid
+lambdas:
+  - 0.0
+  - 0.05
+  - 0.10
+  - 0.20
+  - 0.30
+  - 0.50
+  - 0.75
+  - 1.00
+  - 1.50
+  - 2.00
+
+# acceptance rule relative to baseline (lambda=0)
+recall_drop_tolerance: 0.01
+min_top1_dominance_improve: 0.03
+min_unique_top1_gain: 2
+
+# if an accepted lambda exists, apply it to all splits and build artifacts
+apply_best_to_all_splits: true
+k: 20
