@@ -1,0 +1,76 @@
+{
+  "week_name": "week8_structural_baselines_setting_a_table_v0",
+  "created_at": "2026-04-12T19:55:28",
+  "task": {
+    "name": "Setting A structural baseline evaluation",
+    "query_form": "(?, indication, disease)",
+    "prediction_type": "head_prediction",
+    "relation": "indication"
+  },
+  "candidate_universe": {
+    "name": "drug_only",
+    "description": "All structural baselines must rank over the full drug-only universe."
+  },
+  "decision_policy": {
+    "primary_split": "valid",
+    "test_policy": "Do not prioritize test this week. Only use later if table v0 is stable."
+  },
+  "metrics": {
+    "main": [
+      "mrr",
+      "hits1",
+      "hits3",
+      "hits10"
+    ],
+    "supporting_only": [
+      "top1_dominance_ratio",
+      "unique_top1_count",
+      "top5_case_review"
+    ],
+    "excluded_from_main_table": [
+      "inject_ratio_ready",
+      "candidate_ready_reranker_metrics"
+    ]
+  },
+  "backbone_reference_policy": {
+    "main_reference": "week7-v2",
+    "supporting_analysis_only": "posthoc_debias_lambda_0.05"
+  },
+  "baseline_registry": [
+    {
+      "name": "R-GCN",
+      "category": "graph",
+      "status": "required",
+      "planned_train_script": "scripts/week8/02_eval_rgcn_structure_baseline.py",
+      "planned_eval_script": "scripts/week8/02_eval_rgcn_structure_baseline.py"
+    },
+    {
+      "name": "HRGAT",
+      "category": "graph",
+      "status": "required",
+      "planned_train_script": "scripts/week8/03_train_hrgat_baseline.py",
+      "planned_eval_script": "scripts/week8/04_eval_hrgat_structure_baseline.py"
+    },
+    {
+      "name": "ComplEx",
+      "category": "kge",
+      "status": "preferred",
+      "planned_train_script": "scripts/week8/05_train_complex_baseline.py",
+      "planned_eval_script": "scripts/week8/06_eval_complex_structure_baseline.py"
+    },
+    {
+      "name": "TransE",
+      "category": "kge",
+      "status": "optional",
+      "planned_train_script": "scripts/week8/07_train_transe_baseline.py",
+      "planned_eval_script": "scripts/week8/08_eval_transe_structure_baseline.py"
+    }
+  ],
+  "table_policy": {
+    "use_two_sections": true,
+    "section_a": "structure_only_baselines",
+    "section_b": "candidate_aware_reference_rows",
+    "warning": "Do not mix structure-only baselines and candidate-aware reranker rows into one undifferentiated table."
+  },
+  "valid_size_detected": 500
+}
