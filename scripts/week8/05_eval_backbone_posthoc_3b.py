@@ -75,7 +75,7 @@ def run_valid_eval(
             subgraph=subgraph,
             generation_config=generation_config,
         )
-        generated_token_ids.append(output.sequences[0].detach().cpu().tolist())
+        generated_token_ids.append(output[0].detach().cpu().tolist())
 
     decoded_preds = tokenizer.batch_decode(generated_token_ids, skip_special_tokens=True)
 
@@ -256,10 +256,10 @@ def main():
     base_model = LlamaForCausalLM.from_pretrained(
         cfg["model_name_or_path"],
         low_cpu_mem_usage=True,
-        torch_dtype=torch.float16,
+        torch_dtype=torch.bfloat16,
     )
     base_model = PeftModel.from_pretrained(base_model, str(checkpoint_dir))
-    base_model = base_model.half().to(device)
+    base_model = base_model.bfloat16().to(device)
     base_model.eval()
 
     kge_embedding = torch.load(cfg["kge_embedding_path"], map_location="cpu")
@@ -278,11 +278,11 @@ def main():
     )
     state = torch.load(checkpoint_dir / "graph_model.bin", map_location="cpu")
     graph_model.load_state_dict(state)
-    graph_model = graph_model.half().to(device)
+    graph_model = graph_model.bfloat16().to(device)
     graph_model.eval()
 
     model = DrKGC(tokenizer, base_model, graph_model)
-    model = model.half().to(device)
+    model = model.bfloat16().to(device)
     model.eval()
 
     data_args = argparse.Namespace(
