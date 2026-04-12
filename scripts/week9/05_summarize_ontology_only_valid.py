@@ -25,6 +25,7 @@ def parse_metrics_file(path: Path):
     for line in text:
         if "ranking metrics:" in line:
             payload = line.split("ranking metrics:", 1)[1].strip()
+            payload = payload.replace("np.float64(", "").replace("np.float32(", "").replace(")", "")
             metrics = ast.literal_eval(payload)
     if metrics is None:
         raise ValueError(f"Cannot parse ranking metrics from {path}")
