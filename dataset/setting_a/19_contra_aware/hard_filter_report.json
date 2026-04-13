@@ -1,0 +1,18 @@
+{
+  "num_queries": 500,
+  "strict_empty_after_hard": 13,
+  "fallback_after_hard_main": 13,
+  "total_removed_candidates_strict": 73,
+  "total_removed_candidates_main": 73,
+  "gold_removed_by_hard_strict": 3,
+  "gold_removed_by_hard_main": 3,
+  "gold_in_topk_hard_strict": 143,
+  "gold_in_topk_hard_main": 156,
+  "missing_type_filtered_match": 0,
+  "avg_removed_candidates_strict": 0.146,
+  "avg_removed_candidates_main": 0.146,
+  "strict_empty_rate": 0.026,
+  "fallback_rate_hard_main": 0.026,
+  "gold_in_topk_rate_hard_strict": 0.286,
+  "gold_in_topk_rate_hard_main": 0.312
+}
