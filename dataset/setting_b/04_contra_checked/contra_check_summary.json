@@ -1,0 +1,104 @@
+{
+  "inputs": {
+    "ontology_candidates": "dataset/setting_a/18_ontology_only/valid_top20_ontology_only.json",
+    "contra_by_disease": "dataset/setting_b/00_safety_labels/contra_by_disease.json",
+    "contra_by_drug": "dataset/setting_b/00_safety_labels/contra_by_drug.json",
+    "valid_annotations": "dataset/setting_b/02_eval_ready/valid_b_annotations.json"
+  },
+  "lookup_summary": {
+    "num_queries": 500,
+    "total_candidates": 3918,
+    "total_contra_candidates": 73,
+    "query_has_contra_candidate_count": 38,
+    "query_has_contra_candidate_rate": 0.076,
+    "top_diseases_by_contra_count": [
+      [
+        "ocular hypertension",
+        18
+      ],
+      [
+        "nephrocalcinosis",
+        12
+      ],
+      [
+        "gastroesophageal reflux disease",
+        8
+      ],
+      [
+        "hypertension",
+        5
+      ],
+      [
+        "hypertensive disorder",
+        4
+      ],
+      [
+        "peptic esophagitis",
+        4
+      ],
+      [
+        "anxiety disorder",
+        3
+      ],
+      [
+        "diabetes mellitus (disease)",
+        3
+      ],
+      [
+        "pulmonary emphysema",
+        2
+      ],
+      [
+        "epilepsy",
+        2
+      ],
+      [
+        "Cushing syndrome",
+        2
+      ],
+      [
+        "central nervous system origin vertigo",
+        2
+      ],
+      [
+        "hyperparathyroidism",
+        1
+      ],
+      [
+        "psoriasis",
+        1
+      ],
+      [
+        "arachnoiditis",
+        1
+      ],
+      [
+        "neurotic disorder",
+        1
+      ],
+      [
+        "pediatric systemic lupus erythematosus",
+        1
+      ],
+      [
+        "adrenal gland hyperfunction",
+        1
+      ],
+      [
+        "dysthymic disorder",
+        1
+      ],
+      [
+        "potassium deficiency disease",
+        1
+      ]
+    ]
+  },
+  "annotation_summary": {
+    "num_annotation_rows": 500,
+    "num_annotation_candidate_pairs": 10000,
+    "num_annotation_contra_pairs": 129
+  },
+  "lookup_symmetry_mismatch_count": 0,
+  "lookup_symmetry_mismatch_examples": []
+}
