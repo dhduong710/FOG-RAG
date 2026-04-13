@@ -299,24 +299,38 @@
 │   │   │   ├── test.json
 │   │   │   ├── train.json
 │   │   │   └── valid.json
-│   │   └── 17_structure_baselines
-│   │       ├── complex_valid_case_samples.json
-│   │       ├── complex_valid_metrics.json
-│   │       ├── complex_valid_scores.pt
-│   │       ├── complex_valid_top1_frequency.tsv
-│   │       ├── hrgat_valid_case_samples.json
-│   │       ├── hrgat_valid_metrics.json
-│   │       ├── hrgat_valid_scores.pt
-│   │       ├── hrgat_valid_top1_frequency.tsv
-│   │       ├── protocol_freeze.json
-│   │       ├── rgcn_valid_case_samples.json
-│   │       ├── rgcn_valid_metrics.json
-│   │       ├── rgcn_valid_scores.pt
-│   │       ├── rgcn_valid_top1_frequency.tsv
-│   │       ├── transe_valid_case_samples.json
-│   │       ├── transe_valid_metrics.json
-│   │       ├── transe_valid_scores.pt
-│   │       └── transe_valid_top1_frequency.tsv
+│   │   ├── 17_structure_baselines
+│   │   │   ├── complex_valid_case_samples.json
+│   │   │   ├── complex_valid_metrics.json
+│   │   │   ├── complex_valid_scores.pt
+│   │   │   ├── complex_valid_top1_frequency.tsv
+│   │   │   ├── hrgat_valid_case_samples.json
+│   │   │   ├── hrgat_valid_metrics.json
+│   │   │   ├── hrgat_valid_scores.pt
+│   │   │   ├── hrgat_valid_top1_frequency.tsv
+│   │   │   ├── protocol_freeze.json
+│   │   │   ├── rgcn_valid_case_samples.json
+│   │   │   ├── rgcn_valid_metrics.json
+│   │   │   ├── rgcn_valid_scores.pt
+│   │   │   ├── rgcn_valid_top1_frequency.tsv
+│   │   │   ├── transe_valid_case_samples.json
+│   │   │   ├── transe_valid_metrics.json
+│   │   │   ├── transe_valid_scores.pt
+│   │   │   └── transe_valid_top1_frequency.tsv
+│   │   ├── 18_ontology_only
+│   │   │   ├── ontology_filter_report.json
+│   │   │   ├── schema_validity_report.json
+│   │   │   ├── valid_top20_ontology_only.json
+│   │   │   └── valid_top20_type_filtered.json
+│   │   └── 18_ontology_only_eval_ready
+│   │       ├── entity2id.pkl
+│   │       ├── id2entity.pkl
+│   │       ├── id2relation.pkl
+│   │       ├── prep_manifest.json
+│   │       ├── relation2id.pkl
+│   │       ├── test.json
+│   │       ├── train.json
+│   │       └── valid.json
 │   ├── setting_b
 │   │   ├── 00_safety_labels
 │   │   │   ├── contra_by_disease.json
@@ -452,29 +466,37 @@
 │   │   ├── day6_eval_backbone_v2.log
 │   │   ├── day6_train_backbone_v2.log
 │   │   └── day6_valid_eval_v2.md
-│   └── week8
+│   ├── week8
+│   │   ├── day1_protocol_freeze.md
+│   │   ├── day1_retrieval_v3_prep.md
+│   │   ├── day2_ranker_v3_score_stats.json
+│   │   ├── day2_ranker_v3_top1_probe.tsv
+│   │   ├── day2_ranker_v3_train.log
+│   │   ├── day2_ranker_v3_train.md
+│   │   ├── day2_rgcn_baseline.md
+│   │   ├── day2b_ranker_v3_score_stats.json
+│   │   ├── day2b_ranker_v3_top1_probe.tsv
+│   │   ├── day2b_ranker_v3_train.log
+│   │   ├── day2b_ranker_v3_train.md
+│   │   ├── day3_posthoc_debias_sweep.md
+│   │   ├── day4_backbone_ready_posthoc.md
+│   │   ├── day4_hrgat_results.md
+│   │   ├── day4_prepare_backbone_ready_posthoc.log
+│   │   ├── day5_complex_or_transe.md
+│   │   ├── day5_eval_backbone_posthoc_3b.log
+│   │   ├── day5_train_backbone_posthoc_3b.log
+│   │   ├── day5_valid_posthoc_3b.md
+│   │   ├── day6_table_v0.md
+│   │   ├── day7_week8_closeout.md
+│   │   └── day7_week_closeout.md
+│   └── week9
 │       ├── day1_protocol_freeze.md
-│       ├── day1_retrieval_v3_prep.md
-│       ├── day2_ranker_v3_score_stats.json
-│       ├── day2_ranker_v3_top1_probe.tsv
-│       ├── day2_ranker_v3_train.log
-│       ├── day2_ranker_v3_train.md
-│       ├── day2_rgcn_baseline.md
-│       ├── day2b_ranker_v3_score_stats.json
-│       ├── day2b_ranker_v3_top1_probe.tsv
-│       ├── day2b_ranker_v3_train.log
-│       ├── day2b_ranker_v3_train.md
-│       ├── day3_posthoc_debias_sweep.md
-│       ├── day4_backbone_ready_posthoc.md
-│       ├── day4_hrgat_results.md
-│       ├── day4_prepare_backbone_ready_posthoc.log
-│       ├── day5_complex_or_transe.md
-│       ├── day5_eval_backbone_posthoc_3b.log
-│       ├── day5_train_backbone_posthoc_3b.log
-│       ├── day5_valid_posthoc_3b.md
-│       ├── day6_table_v0.md
-│       ├── day7_week8_closeout.md
-│       └── day7_week_closeout.md
+│       ├── day2_type_filtering.md
+│       ├── day3_schema_validity.md
+│       ├── day4_ontology_candidate_build.md
+│       ├── day5_valid_sanity_eval.md
+│       ├── day6_error_review.md
+│       └── day7_week9_closeout.md
 ├── results
 │   ├── week4
 │   │   ├── pilot_infer_tinyllama_mock
@@ -574,50 +596,71 @@
 │   │           ├── eval_valid_v2_error_cases.md
 │   │           ├── eval_valid_v2_metrics.json
 │   │           └── eval_valid_v2_prediction.json
-│   └── week8
-│       ├── backbone_valid_posthoc_3b
-│       │   ├── all_results.json
-│       │   ├── checkpoint-final
-│       │   │   ├── README.md
-│       │   │   └── adapter_config.json
-│       │   ├── config_snapshot.json
-│       │   ├── train_results.json
-│       │   ├── trainer_state.json
-│       │   └── valid_eval_posthoc_3b
-│       │       ├── eval_valid_posthoc_3b_error_cases.md
-│       │       ├── eval_valid_posthoc_3b_metrics.json
-│       │       └── eval_valid_posthoc_3b_prediction.json
-│       ├── baseline_table_v0
-│       │   ├── README.md
-│       │   ├── baselines_setting_a.md
-│       │   ├── experimental_setup_setting_a.md
-│       │   ├── setting_a_reference_rows.md
-│       │   ├── setting_a_structure_table_v0.csv
-│       │   ├── setting_a_structure_table_v0.md
-│       │   ├── setting_a_structure_table_v0_preview.txt
-│       │   ├── table_schema.json
-│       │   ├── table_sources.json
-│       │   └── week8_summary_for_paper.md
-│       ├── complex_baseline_full_v1
-│       │   ├── complex_checkpoint.pt
-│       │   ├── complex_meta.json
-│       │   └── complex_train_log.jsonl
-│       ├── hrgat_baseline
-│       │   ├── hrgat_checkpoint.pt
-│       │   ├── hrgat_meta.json
-│       │   └── hrgat_train_log.jsonl
-│       ├── hrgat_baseline_full_v1
-│       │   ├── hrgat_checkpoint.pt
-│       │   ├── hrgat_meta.json
-│       │   └── hrgat_train_log.jsonl
-│       ├── hrgat_baseline_smoke
-│       │   ├── hrgat_checkpoint.pt
-│       │   ├── hrgat_meta.json
-│       │   └── hrgat_train_log.jsonl
-│       └── transe_baseline_full_v1
-│           ├── transe_checkpoint.pt
-│           ├── transe_meta.json
-│           └── transe_train_log.jsonl
+│   ├── week8
+│   │   ├── backbone_valid_posthoc_3b
+│   │   │   ├── all_results.json
+│   │   │   ├── checkpoint-final
+│   │   │   │   ├── README.md
+│   │   │   │   └── adapter_config.json
+│   │   │   ├── config_snapshot.json
+│   │   │   ├── train_results.json
+│   │   │   ├── trainer_state.json
+│   │   │   └── valid_eval_posthoc_3b
+│   │   │       ├── eval_valid_posthoc_3b_error_cases.md
+│   │   │       ├── eval_valid_posthoc_3b_metrics.json
+│   │   │       └── eval_valid_posthoc_3b_prediction.json
+│   │   ├── baseline_table_v0
+│   │   │   ├── README.md
+│   │   │   ├── baselines_setting_a.md
+│   │   │   ├── experimental_setup_setting_a.md
+│   │   │   ├── setting_a_reference_rows.md
+│   │   │   ├── setting_a_structure_table_v0.csv
+│   │   │   ├── setting_a_structure_table_v0.md
+│   │   │   ├── setting_a_structure_table_v0_preview.txt
+│   │   │   ├── table_schema.json
+│   │   │   ├── table_sources.json
+│   │   │   └── week8_summary_for_paper.md
+│   │   ├── complex_baseline_full_v1
+│   │   │   ├── complex_checkpoint.pt
+│   │   │   ├── complex_meta.json
+│   │   │   └── complex_train_log.jsonl
+│   │   ├── hrgat_baseline
+│   │   │   ├── hrgat_checkpoint.pt
+│   │   │   ├── hrgat_meta.json
+│   │   │   └── hrgat_train_log.jsonl
+│   │   ├── hrgat_baseline_full_v1
+│   │   │   ├── hrgat_checkpoint.pt
+│   │   │   ├── hrgat_meta.json
+│   │   │   └── hrgat_train_log.jsonl
+│   │   ├── hrgat_baseline_smoke
+│   │   │   ├── hrgat_checkpoint.pt
+│   │   │   ├── hrgat_meta.json
+│   │   │   └── hrgat_train_log.jsonl
+│   │   └── transe_baseline_full_v1
+│   │       ├── transe_checkpoint.pt
+│   │       ├── transe_meta.json
+│   │       └── transe_train_log.jsonl
+│   └── week9
+│       ├── novelty1_protocol.json
+│       ├── ontology_only_ablation_v0.json
+│       ├── ontology_only_ablation_v0.md
+│       ├── ontology_only_valid
+│       │   ├── candidate_summary.json
+│       │   ├── constraint_metrics.json
+│       │   ├── error_cases.json
+│       │   ├── ranking_metrics.json
+│       │   └── week7_v2_checkpoint-final
+│       │       ├── README.md
+│       │       └── adapter_config.json
+│       └── recover_backbone_valid_v2_short
+│           ├── all_results.json
+│           ├── checkpoint-final
+│           │   ├── README.md
+│           │   └── adapter_config.json
+│           ├── metrics.txt
+│           ├── prediction.json
+│           ├── train_results.json
+│           └── trainer_state.json
 ├── runs
 │   ├── week4_pilot
 │   │   ├── config_snapshot.yaml
@@ -703,30 +746,39 @@
 │   │   ├── 08_eval_backbone_8b_valid.py
 │   │   ├── 08_train_backbone_8b_full.py
 │   │   └── 08b_check_backbone_8b_completion.py
-│   └── week8
-│       ├── 01_freeze_setting_a_baseline_protocol.py
-│       ├── 01_prepare_retrieval_v3.py
-│       ├── 01b_check_retrieval_v3_day1.py
-│       ├── 02_eval_rgcn_structure_baseline.py
-│       ├── 02_train_retrieval_v3.py
-│       ├── 02b_check_retrieval_v3_day2.py
-│       ├── 02c_train_retrieval_v3_day2b.py
-│       ├── 02d_check_retrieval_v3_day2b.py
-│       ├── 03_posthoc_debias_sweep.py
-│       ├── 03_train_hrgat_baseline.py
-│       ├── 03b_check_posthoc_debias.py
-│       ├── 04_eval_hrgat_structure_baseline.py
-│       ├── 04_prepare_backbone_ready_posthoc.py
-│       ├── 04b_check_backbone_ready_posthoc.py
-│       ├── 05_eval_backbone_posthoc_3b.py
-│       ├── 05_train_backbone_posthoc_3b.py
-│       ├── 05_train_complex_baseline.py
-│       ├── 05b_check_backbone_posthoc_3b.py
-│       ├── 06_eval_complex_structure_baseline.py
-│       ├── 07_train_transe_baseline.py
-│       ├── 08_eval_transe_structure_baseline.py
-│       ├── 09_build_setting_a_table_v0.py
-│       └── 10_write_setup_and_baselines_md.py
+│   ├── week8
+│   │   ├── 01_freeze_setting_a_baseline_protocol.py
+│   │   ├── 01_prepare_retrieval_v3.py
+│   │   ├── 01b_check_retrieval_v3_day1.py
+│   │   ├── 02_eval_rgcn_structure_baseline.py
+│   │   ├── 02_train_retrieval_v3.py
+│   │   ├── 02b_check_retrieval_v3_day2.py
+│   │   ├── 02c_train_retrieval_v3_day2b.py
+│   │   ├── 02d_check_retrieval_v3_day2b.py
+│   │   ├── 03_posthoc_debias_sweep.py
+│   │   ├── 03_train_hrgat_baseline.py
+│   │   ├── 03b_check_posthoc_debias.py
+│   │   ├── 04_eval_hrgat_structure_baseline.py
+│   │   ├── 04_prepare_backbone_ready_posthoc.py
+│   │   ├── 04b_check_backbone_ready_posthoc.py
+│   │   ├── 05_eval_backbone_posthoc_3b.py
+│   │   ├── 05_train_backbone_posthoc_3b.py
+│   │   ├── 05_train_complex_baseline.py
+│   │   ├── 05b_check_backbone_posthoc_3b.py
+│   │   ├── 06_eval_complex_structure_baseline.py
+│   │   ├── 07_train_transe_baseline.py
+│   │   ├── 08_eval_transe_structure_baseline.py
+│   │   ├── 09_build_setting_a_table_v0.py
+│   │   └── 10_write_setup_and_baselines_md.py
+│   └── week9
+│       ├── 01_freeze_novelty1_protocol.py
+│       ├── 02_build_type_filtered_candidates.py
+│       ├── 03_check_schema_validity.py
+│       ├── 04_build_ontology_only_variant.py
+│       ├── 05_prepare_ontology_eval_ready.py
+│       ├── 05_summarize_ontology_only_valid.py
+│       ├── 06_collect_ontology_error_cases.py
+│       └── 07_write_week9_closeout.py
 └── structure.txt
 
-129 directories, 600 files
+138 directories, 643 files
