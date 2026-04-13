@@ -4,6 +4,7 @@
 import argparse
 import ast
 import json
+import re
 from pathlib import Path
 
 
@@ -36,6 +37,9 @@ def parse_metrics_txt(path):
     if prefix not in text:
         raise ValueError(f"Cannot parse metrics from {path}")
     payload = text.split(prefix, 1)[1].strip()
+    
+    payload = re.sub(r"np\.float64\((.*?)\)", r"\1", payload)
+    
     metrics = ast.literal_eval(payload)
     return metrics
 

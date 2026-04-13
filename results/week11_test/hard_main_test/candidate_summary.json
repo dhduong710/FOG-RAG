@@ -1,0 +1,6 @@
+{
+  "label": "hard_main_test",
+  "candidate_json": "dataset/setting_a/19_contra_aware/test_top20_hard_main.json",
+  "metrics_txt": "results/week11_test/hard_main_test/metrics.txt",
+  "num_rows": 500
+}
