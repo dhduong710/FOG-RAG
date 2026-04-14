@@ -4,7 +4,7 @@ set -euo pipefail
 # =========================
 # EDIT THESE IF NEEDED
 # =========================
-MODEL_NAME="meta-llama/Llama-3.2-3B-Instruct"
+MODEL_NAME="meta-llama/Llama-3.2-3B"
 KGE_PATH="dataset/setting_a/08_backbone_ready/entity_embeddings_rgcn.pt"
 PYTHON_BIN="python"
 PKG_ROOT="dataset/setting_a/20_test_rerun_eval_ready"
