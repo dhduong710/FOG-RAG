@@ -3,7 +3,8 @@
 ├── Miniconda3-latest-Linux-x86_64.sh
 ├── README.md
 ├── __pycache__
-│   └── arguments.cpython-312.pyc
+│   ├── arguments.cpython-312.pyc
+│   └── prompt_subgraph.cpython-312.pyc
 ├── arguments.py
 ├── backups
 │   └── month1_freeze
@@ -320,17 +321,96 @@
 │   │   ├── 18_ontology_only
 │   │   │   ├── ontology_filter_report.json
 │   │   │   ├── schema_validity_report.json
+│   │   │   ├── test_ontology_filter_report.json
+│   │   │   ├── test_top20_ontology_only.json
+│   │   │   ├── test_top20_type_filtered.json
+│   │   │   ├── test_type_filter_report.json
 │   │   │   ├── valid_top20_ontology_only.json
 │   │   │   └── valid_top20_type_filtered.json
-│   │   └── 18_ontology_only_eval_ready
-│   │       ├── entity2id.pkl
-│   │       ├── id2entity.pkl
-│   │       ├── id2relation.pkl
-│   │       ├── prep_manifest.json
-│   │       ├── relation2id.pkl
-│   │       ├── test.json
-│   │       ├── train.json
-│   │       └── valid.json
+│   │   ├── 18_ontology_only_eval_ready
+│   │   │   ├── entity2id.pkl
+│   │   │   ├── id2entity.pkl
+│   │   │   ├── id2relation.pkl
+│   │   │   ├── prep_manifest.json
+│   │   │   ├── relation2id.pkl
+│   │   │   ├── test.json
+│   │   │   ├── train.json
+│   │   │   └── valid.json
+│   │   ├── 19_contra_aware
+│   │   │   ├── contra_candidate_flags_test.json
+│   │   │   ├── contra_candidate_flags_valid.json
+│   │   │   ├── hard_filter_report.json
+│   │   │   ├── soft_penalty_sweep_report.json
+│   │   │   ├── test_hard_filter_report.json
+│   │   │   ├── test_top20_hard_main.json
+│   │   │   ├── test_top20_hard_strict.json
+│   │   │   ├── test_top20_soft_best.json
+│   │   │   ├── valid_top20_hard_main.json
+│   │   │   ├── valid_top20_hard_strict.json
+│   │   │   ├── valid_top20_soft_best.json
+│   │   │   ├── valid_top20_soft_lambda_0.25.json
+│   │   │   ├── valid_top20_soft_lambda_0.5.json
+│   │   │   ├── valid_top20_soft_lambda_1.0.json
+│   │   │   └── valid_top20_soft_lambda_2.0.json
+│   │   ├── 19_contra_aware_eval_ready
+│   │   │   ├── hard_main
+│   │   │   │   ├── entity2id.pkl
+│   │   │   │   ├── id2entity.pkl
+│   │   │   │   ├── id2relation.pkl
+│   │   │   │   ├── prep_manifest.json
+│   │   │   │   ├── relation2id.pkl
+│   │   │   │   ├── test.json
+│   │   │   │   ├── train.json
+│   │   │   │   └── valid.json
+│   │   │   └── soft_best
+│   │   │       ├── entity2id.pkl
+│   │   │       ├── id2entity.pkl
+│   │   │       ├── id2relation.pkl
+│   │   │       ├── prep_manifest.json
+│   │   │       ├── relation2id.pkl
+│   │   │       ├── test.json
+│   │   │       ├── train.json
+│   │   │       └── valid.json
+│   │   ├── 19_contra_aware_eval_ready_test
+│   │   │   ├── backbone
+│   │   │   │   ├── entity2id.pkl
+│   │   │   │   ├── id2entity.pkl
+│   │   │   │   ├── id2relation.pkl
+│   │   │   │   ├── relation2id.pkl
+│   │   │   │   ├── test.json
+│   │   │   │   ├── train.json
+│   │   │   │   └── valid.json
+│   │   │   ├── hard_main
+│   │   │   │   ├── entity2id.pkl
+│   │   │   │   ├── id2entity.pkl
+│   │   │   │   ├── id2relation.pkl
+│   │   │   │   ├── prep_manifest.json
+│   │   │   │   ├── relation2id.pkl
+│   │   │   │   ├── test.json
+│   │   │   │   ├── train.json
+│   │   │   │   └── valid.json
+│   │   │   ├── ontology
+│   │   │   │   ├── entity2id.pkl
+│   │   │   │   ├── id2entity.pkl
+│   │   │   │   ├── id2relation.pkl
+│   │   │   │   ├── prep_manifest.json
+│   │   │   │   ├── relation2id.pkl
+│   │   │   │   ├── test.json
+│   │   │   │   ├── train.json
+│   │   │   │   └── valid.json
+│   │   │   └── soft_best
+│   │   │       ├── entity2id.pkl
+│   │   │       ├── id2entity.pkl
+│   │   │       ├── id2relation.pkl
+│   │   │       ├── prep_manifest.json
+│   │   │       ├── relation2id.pkl
+│   │   │       ├── test.json
+│   │   │       ├── train.json
+│   │   │       └── valid.json
+│   │   └── 19_contra_aware_test_build
+│   │       ├── test_soft_penalty_sweep_report.json
+│   │       ├── valid_top20_soft_best.json
+│   │       └── valid_top20_soft_lambda_2.0.json
 │   ├── setting_b
 │   │   ├── 00_safety_labels
 │   │   │   ├── contra_by_disease.json
@@ -352,11 +432,30 @@
 │   │   │   └── name_type_conflicts.json
 │   │   ├── 02_eval_meta
 │   │   │   └── safety_eval_config.json
-│   │   └── 02_eval_ready
-│   │       ├── mock_constraint_eval.json
-│   │       ├── mock_safety_eval.json
-│   │       ├── test_b_annotations.json
-│   │       └── valid_b_annotations.json
+│   │   ├── 02_eval_ready
+│   │   │   ├── mock_constraint_eval.json
+│   │   │   ├── mock_safety_eval.json
+│   │   │   ├── test_b_annotations.json
+│   │   │   └── valid_b_annotations.json
+│   │   ├── 04_contra_checked
+│   │   │   ├── contra_check_summary.json
+│   │   │   ├── contra_lookup_by_disease.json
+│   │   │   ├── contra_lookup_by_drug.json
+│   │   │   ├── test_b_annotations_contra_checked.json
+│   │   │   ├── test_contra_check_summary.json
+│   │   │   └── valid_b_annotations_contra_checked.json
+│   │   ├── 05_eval_week11
+│   │   │   ├── eval_ready_summary.json
+│   │   │   ├── valid_backbone_eval.json
+│   │   │   ├── valid_hard_main_eval.json
+│   │   │   ├── valid_ontology_eval.json
+│   │   │   └── valid_soft_best_eval.json
+│   │   └── 06_eval_week11_test
+│   │       ├── test_backbone_eval.json
+│   │       ├── test_eval_ready_summary.json
+│   │       ├── test_hard_main_eval.json
+│   │       ├── test_ontology_eval.json
+│   │       └── test_soft_best_eval.json
 │   └── toy_debug
 │       ├── entity_embeddings.pt
 │       ├── entity_id_map.json
@@ -390,6 +489,35 @@
 │   │   ├── problem_lock.md
 │   │   ├── repo_map.md
 │   │   └── week1_report.md
+│   ├── week10
+│   │   ├── day1_protocol_freeze.md
+│   │   ├── day2_contra_lookup.md
+│   │   ├── day3_hard_filter.md
+│   │   ├── day4_soft_penalty.md
+│   │   ├── day6_error_review.md
+│   │   └── day7_week10_closeout.md
+│   ├── week11
+│   │   ├── day1_protocol_freeze.md
+│   │   ├── day2_eval_ready.md
+│   │   ├── day3_hard_valid.md
+│   │   ├── day4_soft_valid.md
+│   │   ├── day5_backbone_valid.md
+│   │   ├── day5_ontology_valid.md
+│   │   ├── day5_variant_decision.md
+│   │   ├── day6_ablation.md
+│   │   ├── day6_patch_before_closeout.md
+│   │   ├── dayX_test_check_before_closeout.md
+│   │   ├── dayY_full_test_evaluation.md
+│   │   ├── novelty1_final_closeout.md
+│   │   ├── test_backbone_valid.md
+│   │   ├── test_day2_type_filtering.md
+│   │   ├── test_day4_ontology_candidate_build.md
+│   │   ├── test_day_contra_lookup.md
+│   │   ├── test_day_hard_filter.md
+│   │   ├── test_day_soft_penalty.md
+│   │   ├── test_hard_main_valid.md
+│   │   ├── test_ontology_valid.md
+│   │   └── test_soft_best_valid.md
 │   ├── week2
 │   │   ├── day1_extract_report.md
 │   │   ├── day2_split_report.md
@@ -498,6 +626,97 @@
 │       ├── day6_error_review.md
 │       └── day7_week9_closeout.md
 ├── results
+│   ├── week10
+│   │   ├── hard_valid
+│   │   │   ├── candidate_summary.json
+│   │   │   ├── checkpoint-final
+│   │   │   │   ├── README.md
+│   │   │   │   └── adapter_config.json
+│   │   │   ├── metrics.txt
+│   │   │   ├── prediction.json
+│   │   │   ├── ranking_metrics.json
+│   │   │   └── safety_proxy_metrics.json
+│   │   ├── novelty1_safety_protocol.json
+│   │   ├── safety_ablation_v0.md
+│   │   ├── safety_error_cases.json
+│   │   └── soft_valid
+│   │       ├── candidate_summary.json
+│   │       ├── checkpoint-final
+│   │       │   ├── README.md
+│   │       │   └── adapter_config.json
+│   │       ├── metrics.txt
+│   │       ├── prediction.json
+│   │       ├── ranking_metrics.json
+│   │       └── safety_proxy_metrics.json
+│   ├── week11
+│   │   ├── ablation_novelty1_v1.json
+│   │   ├── ablation_novelty1_v1.md
+│   │   ├── ablation_novelty1_v2.json
+│   │   ├── ablation_novelty1_v2.md
+│   │   ├── backbone_valid
+│   │   │   ├── case_samples.json
+│   │   │   └── metrics.json
+│   │   ├── hard_main_valid
+│   │   │   ├── case_samples.json
+│   │   │   └── metrics.json
+│   │   ├── novelty1_safety_support_v2.md
+│   │   ├── ontology_valid
+│   │   │   ├── case_samples.json
+│   │   │   └── metrics.json
+│   │   ├── setting_b_eval_protocol.json
+│   │   ├── soft_best_valid
+│   │   │   ├── case_samples.json
+│   │   │   └── metrics.json
+│   │   └── variant_comparison.json
+│   ├── week11_test
+│   │   ├── ablation_novelty1_test_v1.json
+│   │   ├── ablation_novelty1_test_v1.md
+│   │   ├── backbone_test
+│   │   │   ├── candidate_summary.json
+│   │   │   ├── case_samples.json
+│   │   │   ├── checkpoint-final
+│   │   │   │   ├── README.md
+│   │   │   │   └── adapter_config.json
+│   │   │   ├── metrics.json
+│   │   │   ├── metrics.txt
+│   │   │   ├── prediction.json
+│   │   │   ├── ranking_metrics.json
+│   │   │   └── safety_proxy_metrics.json
+│   │   ├── hard_main_test
+│   │   │   ├── candidate_summary.json
+│   │   │   ├── case_samples.json
+│   │   │   ├── checkpoint-final
+│   │   │   │   ├── README.md
+│   │   │   │   └── adapter_config.json
+│   │   │   ├── metrics.json
+│   │   │   ├── metrics.txt
+│   │   │   ├── prediction.json
+│   │   │   ├── ranking_metrics.json
+│   │   │   └── safety_proxy_metrics.json
+│   │   ├── novelty1_test_support_table.md
+│   │   ├── ontology_test
+│   │   │   ├── candidate_summary.json
+│   │   │   ├── case_samples.json
+│   │   │   ├── checkpoint-final
+│   │   │   │   ├── README.md
+│   │   │   │   └── adapter_config.json
+│   │   │   ├── metrics.json
+│   │   │   ├── metrics.txt
+│   │   │   ├── prediction.json
+│   │   │   ├── ranking_metrics.json
+│   │   │   └── safety_proxy_metrics.json
+│   │   ├── soft_best_test
+│   │   │   ├── candidate_summary.json
+│   │   │   ├── case_samples.json
+│   │   │   ├── checkpoint-final
+│   │   │   │   ├── README.md
+│   │   │   │   └── adapter_config.json
+│   │   │   ├── metrics.json
+│   │   │   ├── metrics.txt
+│   │   │   ├── prediction.json
+│   │   │   ├── ranking_metrics.json
+│   │   │   └── safety_proxy_metrics.json
+│   │   └── variant_comparison_test.json
 │   ├── week4
 │   │   ├── pilot_infer_tinyllama_mock
 │   │   │   ├── case_review.md
@@ -680,6 +899,25 @@
 │   │   ├── smoke_collator.py
 │   │   ├── smoke_data.py
 │   │   └── smoke_graph_input.py
+│   ├── week10
+│   │   ├── 01_freeze_novelty1_safety_protocol.py
+│   │   ├── 02_build_contra_candidate_flags.py
+│   │   ├── 03_build_hard_filter_variants.py
+│   │   ├── 04_build_soft_penalty_variants.py
+│   │   ├── 05_prepare_safety_eval_ready.py
+│   │   ├── 05_summarize_safety_valid.py
+│   │   ├── 06_collect_safety_error_cases.py
+│   │   └── 07_write_week10_closeout.py
+│   ├── week11
+│   │   ├── 01_freeze_setting_b_eval_protocol.py
+│   │   ├── 02_build_setting_b_eval_ready.py
+│   │   ├── 03_eval_setting_b_row.py
+│   │   ├── 05_compare_setting_b_variants.py
+│   │   ├── 06_patch_eval_before_closeout.py
+│   │   ├── 06_write_ablation_v1.py
+│   │   ├── 06a_build_setting_b_test_eval_ready.py
+│   │   ├── 06b_compare_novelty1_test_fixed.py
+│   │   └── 07_write_full_test_evaluation.py
 │   ├── week2
 │   │   ├── day1_check_primekg_download.py
 │   │   ├── day1_extract_indication_subset.py
@@ -781,4 +1019,4 @@
 │       └── 07_write_week9_closeout.py
 └── structure.txt
 
-138 directories, 643 files
+174 directories, 845 files
