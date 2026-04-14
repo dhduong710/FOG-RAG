@@ -1,0 +1,13 @@
+{
+  "variant_json": "dataset/setting_a/19_contra_aware/test_top20_soft_best.json",
+  "base_eval_ready_dir": "dataset/setting_a/18_ontology_only_eval_ready",
+  "out_dir": "dataset/setting_a/19_contra_aware_eval_ready_test/soft_best",
+  "graph_tsv": "dataset/setting_a/02_graph/train_enriched_deg1000_final.tsv",
+  "head_pred_lex": "dataset/setting_a/05_prompt_subgraph_subset/head_prediction_lexicon.json",
+  "tail_pred_lex": "dataset/setting_a/05_prompt_subgraph_subset/tail_prediction_lexicon.json",
+  "rules_json": "dataset/setting_a/05_prompt_subgraph_subset/rules.json",
+  "graph_size": 100,
+  "bkg": true,
+  "num_valid_rows": 500,
+  "exact_leak_count": 0
+}
