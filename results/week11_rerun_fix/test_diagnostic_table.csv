@@ -1,0 +1,5 @@
+Variant,AvgCandidateSize,AvgSubgraphSize,GoldInTopKRate,GoldInjectedRate,PredInCandidateRate,MeanPredRank,SafetyViolation@10,Contra@10,ConstraintViolationRate,QueryHasConstraintViolationRate,NumContraCandidates,QueryHasContraCandidateRate,StrictEmptyRate,FallbackRate,CandidateSummary_AvgSize,CandidateSummary_GoldInTopKRate
+Backbone,20.0,59.932,1.0,0.762,0.984,10.872,,,,,,0.0,,,,
++ Ontology,7.73,9.234,0.28,0.762,0.996,4.876,,,,,,0.0,,,,
++ Ontology + Hard,8.278,10.284,0.31,0.762,0.996,4.924,,,,,,0.0,,,,
++ Ontology + Soft,7.73,9.234,0.28,0.762,0.996,5.176,,,,,,0.074,,,,
