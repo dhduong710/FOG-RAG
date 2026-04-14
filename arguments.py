@@ -18,6 +18,15 @@ class Arguments:
     
     checkpoint_dir: str = field(default=None, metadata={"help": "Checkpoint saveing directory"})
 
+    eval_split: str = field(
+        default="test",
+        metadata={"help": "Which split to evaluate: valid or test"}
+    )
+    output_suffix: str = field(
+        default="",
+        metadata={"help": "Extra suffix for output files, e.g. rerun"}
+    )
+
 
 @dataclass
 class FinetuningArguments(Seq2SeqTrainingArguments):
