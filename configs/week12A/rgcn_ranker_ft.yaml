@@ -1,0 +1,36 @@
+dataset_root: dataset/setting_a
+split_dir: dataset/setting_a/01_split
+graph_path: dataset/setting_a/02_graph/train_enriched_deg1000_final.tsv
+
+target_relation: indication
+candidate_universe: drug_only
+decision_split: valid
+k: 20
+
+model:
+  name: rgcn_ranker_ft
+  embedding_dim: 128
+  hidden_dim: 128
+  num_layers: 2
+  dropout: 0.1
+
+training:
+  seed: 3407
+  epochs: 40
+  batch_size: 512
+  learning_rate: 5.0e-5
+  weight_decay: 1.0e-4
+  negatives_per_query: 32
+  early_stop: 8
+  grad_clip_norm: 1.0
+
+selection:
+  primary_metric: recall_at_20_raw
+  secondary_metric: inject_ratio_ready
+  tertiary_metric: top1_hit_ratio_raw
+
+output:
+  out_dir: dataset/setting_a/21_ranker_rescue
+  checkpoint_name: rgcn_ranker_ft_checkpoint.pt
+  train_log_name: ranker_ft_train_log.jsonl
+  meta_name: ranker_ft_meta.json
