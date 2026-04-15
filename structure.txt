@@ -407,10 +407,46 @@
 │   │   │       ├── test.json
 │   │   │       ├── train.json
 │   │   │       └── valid.json
-│   │   └── 19_contra_aware_test_build
-│   │       ├── test_soft_penalty_sweep_report.json
-│   │       ├── valid_top20_soft_best.json
-│   │       └── valid_top20_soft_lambda_2.0.json
+│   │   ├── 19_contra_aware_test_build
+│   │   │   ├── test_soft_penalty_sweep_report.json
+│   │   │   ├── valid_top20_soft_best.json
+│   │   │   └── valid_top20_soft_lambda_2.0.json
+│   │   └── 20_test_rerun_eval_ready
+│   │       ├── backbone
+│   │       │   ├── entity2id.pkl
+│   │       │   ├── id2entity.pkl
+│   │       │   ├── id2relation.pkl
+│   │       │   ├── relation2id.pkl
+│   │       │   ├── test.json
+│   │       │   ├── train.json
+│   │       │   └── valid.json
+│   │       ├── hard_main
+│   │       │   ├── entity2id.pkl
+│   │       │   ├── id2entity.pkl
+│   │       │   ├── id2relation.pkl
+│   │       │   ├── prep_manifest.json
+│   │       │   ├── relation2id.pkl
+│   │       │   ├── test.json
+│   │       │   ├── train.json
+│   │       │   └── valid.json
+│   │       ├── ontology
+│   │       │   ├── entity2id.pkl
+│   │       │   ├── id2entity.pkl
+│   │       │   ├── id2relation.pkl
+│   │       │   ├── prep_manifest.json
+│   │       │   ├── relation2id.pkl
+│   │       │   ├── test.json
+│   │       │   ├── train.json
+│   │       │   └── valid.json
+│   │       └── soft_best
+│   │           ├── entity2id.pkl
+│   │           ├── id2entity.pkl
+│   │           ├── id2relation.pkl
+│   │           ├── prep_manifest.json
+│   │           ├── relation2id.pkl
+│   │           ├── test.json
+│   │           ├── train.json
+│   │           └── valid.json
 │   ├── setting_b
 │   │   ├── 00_safety_labels
 │   │   │   ├── contra_by_disease.json
@@ -668,6 +704,31 @@
 │   │   │   ├── case_samples.json
 │   │   │   └── metrics.json
 │   │   └── variant_comparison.json
+│   ├── week11_rerun_fix
+│   │   ├── novelty1_closeout_rerun.md
+│   │   ├── rerun_fix_report.md
+│   │   ├── test_diagnostic_table.csv
+│   │   ├── test_diagnostic_table.md
+│   │   ├── test_full_rows.json
+│   │   ├── test_ranking_table.csv
+│   │   ├── test_ranking_table.md
+│   │   ├── valid_diagnostic_table.csv
+│   │   ├── valid_diagnostic_table.md
+│   │   ├── valid_full_rows.json
+│   │   ├── valid_ranking_table.csv
+│   │   └── valid_ranking_table.md
+│   ├── week11_rerun_fix_strict
+│   │   ├── strict_rerun_report.md
+│   │   ├── test_full_table.csv
+│   │   ├── test_full_table.md
+│   │   ├── test_ranking_table.csv
+│   │   ├── test_ranking_table.md
+│   │   ├── test_rows.json
+│   │   ├── valid_full_table.csv
+│   │   ├── valid_full_table.md
+│   │   ├── valid_ranking_table.csv
+│   │   ├── valid_ranking_table.md
+│   │   └── valid_rows.json
 │   ├── week11_test
 │   │   ├── ablation_novelty1_test_v1.json
 │   │   ├── ablation_novelty1_test_v1.md
@@ -679,8 +740,17 @@
 │   │   │   │   └── adapter_config.json
 │   │   │   ├── metrics.json
 │   │   │   ├── metrics.txt
+│   │   │   ├── metrics_test_rerun.txt
+│   │   │   ├── metrics_test_rerun_clean.txt
+│   │   │   ├── metrics_valid_rerun.txt
 │   │   │   ├── prediction.json
+│   │   │   ├── prediction_test_rerun.json
+│   │   │   ├── prediction_test_rerun_clean.json
+│   │   │   ├── prediction_valid_rerun.json
 │   │   │   ├── ranking_metrics.json
+│   │   │   ├── ranking_metrics_test_rerun.json
+│   │   │   ├── ranking_metrics_test_rerun_clean.json
+│   │   │   ├── ranking_metrics_valid_rerun.json
 │   │   │   └── safety_proxy_metrics.json
 │   │   ├── hard_main_test
 │   │   │   ├── candidate_summary.json
@@ -690,8 +760,17 @@
 │   │   │   │   └── adapter_config.json
 │   │   │   ├── metrics.json
 │   │   │   ├── metrics.txt
+│   │   │   ├── metrics_test_rerun.txt
+│   │   │   ├── metrics_test_rerun_clean.txt
+│   │   │   ├── metrics_valid_rerun.txt
 │   │   │   ├── prediction.json
+│   │   │   ├── prediction_test_rerun.json
+│   │   │   ├── prediction_test_rerun_clean.json
+│   │   │   ├── prediction_valid_rerun.json
 │   │   │   ├── ranking_metrics.json
+│   │   │   ├── ranking_metrics_test_rerun.json
+│   │   │   ├── ranking_metrics_test_rerun_clean.json
+│   │   │   ├── ranking_metrics_valid_rerun.json
 │   │   │   └── safety_proxy_metrics.json
 │   │   ├── novelty1_test_support_table.md
 │   │   ├── ontology_test
@@ -702,8 +781,17 @@
 │   │   │   │   └── adapter_config.json
 │   │   │   ├── metrics.json
 │   │   │   ├── metrics.txt
+│   │   │   ├── metrics_test_rerun.txt
+│   │   │   ├── metrics_test_rerun_clean.txt
+│   │   │   ├── metrics_valid_rerun.txt
 │   │   │   ├── prediction.json
+│   │   │   ├── prediction_test_rerun.json
+│   │   │   ├── prediction_test_rerun_clean.json
+│   │   │   ├── prediction_valid_rerun.json
 │   │   │   ├── ranking_metrics.json
+│   │   │   ├── ranking_metrics_test_rerun.json
+│   │   │   ├── ranking_metrics_test_rerun_clean.json
+│   │   │   ├── ranking_metrics_valid_rerun.json
 │   │   │   └── safety_proxy_metrics.json
 │   │   ├── soft_best_test
 │   │   │   ├── candidate_summary.json
@@ -713,8 +801,17 @@
 │   │   │   │   └── adapter_config.json
 │   │   │   ├── metrics.json
 │   │   │   ├── metrics.txt
+│   │   │   ├── metrics_test_rerun.txt
+│   │   │   ├── metrics_test_rerun_clean.txt
+│   │   │   ├── metrics_valid_rerun.txt
 │   │   │   ├── prediction.json
+│   │   │   ├── prediction_test_rerun.json
+│   │   │   ├── prediction_test_rerun_clean.json
+│   │   │   ├── prediction_valid_rerun.json
 │   │   │   ├── ranking_metrics.json
+│   │   │   ├── ranking_metrics_test_rerun.json
+│   │   │   ├── ranking_metrics_test_rerun_clean.json
+│   │   │   ├── ranking_metrics_valid_rerun.json
 │   │   │   └── safety_proxy_metrics.json
 │   │   └── variant_comparison_test.json
 │   ├── week4
@@ -909,15 +1006,24 @@
 │   │   ├── 06_collect_safety_error_cases.py
 │   │   └── 07_write_week10_closeout.py
 │   ├── week11
+│   │   ├── 00_check_eval_packages.py
 │   │   ├── 01_freeze_setting_b_eval_protocol.py
+│   │   ├── 01_rerun_valid_test.sh
 │   │   ├── 02_build_setting_b_eval_ready.py
+│   │   ├── 02_check_rerun_outputs.py
 │   │   ├── 03_eval_setting_b_row.py
+│   │   ├── 04_rebuild_test_eval_ready.py
 │   │   ├── 05_compare_setting_b_variants.py
+│   │   ├── 05_rerun_test_only.sh
+│   │   ├── 06_check_test_rerun_outputs.py
 │   │   ├── 06_patch_eval_before_closeout.py
 │   │   ├── 06_write_ablation_v1.py
 │   │   ├── 06a_build_setting_b_test_eval_ready.py
 │   │   ├── 06b_compare_novelty1_test_fixed.py
-│   │   └── 07_write_full_test_evaluation.py
+│   │   ├── 07_collect_test_rerun_table.py
+│   │   ├── 07_write_full_test_evaluation.py
+│   │   ├── 08_build_full_rerun_evaluation.py
+│   │   └── 09_build_full_rerun_evaluation_strict.py
 │   ├── week2
 │   │   ├── day1_check_primekg_download.py
 │   │   ├── day1_extract_indication_subset.py
@@ -1019,4 +1125,4 @@
 │       └── 07_write_week9_closeout.py
 └── structure.txt
 
-174 directories, 845 files
+181 directories, 944 files
