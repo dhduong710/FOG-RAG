@@ -1,0 +1,10 @@
+{
+  "required_existing_inputs": [
+    "dataset/setting_a/11_ranker_v2/valid_scores.pt",
+    "dataset/setting_a/11_ranker_v2/valid_top20_raw.json",
+    "dataset/setting_a/11_ranker_v2/valid_top20_drkgc_ready.json",
+    "dataset/setting_a/12_backbone_ready_ranker_v2/train.json",
+    "dataset/setting_a/12_backbone_ready_ranker_v2/valid.json",
+    "dataset/setting_a/12_backbone_ready_ranker_v2/test.json"
+  ]
+}
