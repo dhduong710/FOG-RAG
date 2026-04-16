@@ -13,6 +13,9 @@
 │       └── day5_timed_infer.log
 ├── checkpoints
 ├── configs
+│   ├── week12
+│   ├── week12A
+│   │   └── rgcn_ranker_ft.yaml
 │   ├── week4
 │   │   └── pilot_setting_a.yaml
 │   ├── week5
@@ -411,42 +414,84 @@
 │   │   │   ├── test_soft_penalty_sweep_report.json
 │   │   │   ├── valid_top20_soft_best.json
 │   │   │   └── valid_top20_soft_lambda_2.0.json
-│   │   └── 20_test_rerun_eval_ready
-│   │       ├── backbone
-│   │       │   ├── entity2id.pkl
-│   │       │   ├── id2entity.pkl
-│   │       │   ├── id2relation.pkl
-│   │       │   ├── relation2id.pkl
-│   │       │   ├── test.json
-│   │       │   ├── train.json
-│   │       │   └── valid.json
-│   │       ├── hard_main
-│   │       │   ├── entity2id.pkl
-│   │       │   ├── id2entity.pkl
-│   │       │   ├── id2relation.pkl
-│   │       │   ├── prep_manifest.json
-│   │       │   ├── relation2id.pkl
-│   │       │   ├── test.json
-│   │       │   ├── train.json
-│   │       │   └── valid.json
-│   │       ├── ontology
-│   │       │   ├── entity2id.pkl
-│   │       │   ├── id2entity.pkl
-│   │       │   ├── id2relation.pkl
-│   │       │   ├── prep_manifest.json
-│   │       │   ├── relation2id.pkl
-│   │       │   ├── test.json
-│   │       │   ├── train.json
-│   │       │   └── valid.json
-│   │       └── soft_best
-│   │           ├── entity2id.pkl
-│   │           ├── id2entity.pkl
-│   │           ├── id2relation.pkl
-│   │           ├── prep_manifest.json
-│   │           ├── relation2id.pkl
-│   │           ├── test.json
-│   │           ├── train.json
-│   │           └── valid.json
+│   │   ├── 20_test_rerun_eval_ready
+│   │   │   ├── backbone
+│   │   │   │   ├── entity2id.pkl
+│   │   │   │   ├── id2entity.pkl
+│   │   │   │   ├── id2relation.pkl
+│   │   │   │   ├── relation2id.pkl
+│   │   │   │   ├── test.json
+│   │   │   │   ├── train.json
+│   │   │   │   └── valid.json
+│   │   │   ├── hard_main
+│   │   │   │   ├── entity2id.pkl
+│   │   │   │   ├── id2entity.pkl
+│   │   │   │   ├── id2relation.pkl
+│   │   │   │   ├── prep_manifest.json
+│   │   │   │   ├── relation2id.pkl
+│   │   │   │   ├── test.json
+│   │   │   │   ├── train.json
+│   │   │   │   └── valid.json
+│   │   │   ├── ontology
+│   │   │   │   ├── entity2id.pkl
+│   │   │   │   ├── id2entity.pkl
+│   │   │   │   ├── id2relation.pkl
+│   │   │   │   ├── prep_manifest.json
+│   │   │   │   ├── relation2id.pkl
+│   │   │   │   ├── test.json
+│   │   │   │   ├── train.json
+│   │   │   │   └── valid.json
+│   │   │   └── soft_best
+│   │   │       ├── entity2id.pkl
+│   │   │       ├── id2entity.pkl
+│   │   │       ├── id2relation.pkl
+│   │   │       ├── prep_manifest.json
+│   │   │       ├── relation2id.pkl
+│   │   │       ├── test.json
+│   │   │       ├── train.json
+│   │   │       └── valid.json
+│   │   ├── 21_ranker_rescue
+│   │   │   ├── candidate_report.json
+│   │   │   ├── ranker_v2_meta.json
+│   │   │   ├── ranker_v2_train_log.jsonl
+│   │   │   ├── rgcn_ranker_v2_checkpoint.pt
+│   │   │   ├── score_dump_meta.json
+│   │   │   ├── test_scores.pt
+│   │   │   ├── test_top20_drkgc_ready.json
+│   │   │   ├── test_top20_raw.json
+│   │   │   ├── train_scores.pt
+│   │   │   ├── train_top20_drkgc_ready.json
+│   │   │   ├── train_top20_raw.json
+│   │   │   ├── valid_scores.pt
+│   │   │   ├── valid_top20_drkgc_ready.json
+│   │   │   └── valid_top20_raw.json
+│   │   ├── 23_noinj_source
+│   │   │   ├── raw_source_manifest.json
+│   │   │   ├── test_top20_raw.json
+│   │   │   └── valid_top20_raw.json
+│   │   ├── 24_noinj_ontology
+│   │   │   ├── ontology_filter_report_test.json
+│   │   │   ├── ontology_filter_report_test.md
+│   │   │   ├── ontology_filter_report_valid.json
+│   │   │   ├── ontology_filter_report_valid.md
+│   │   │   ├── prep_meta.json
+│   │   │   ├── schema_validity_test.json
+│   │   │   ├── schema_validity_test.md
+│   │   │   ├── schema_validity_valid.json
+│   │   │   ├── schema_validity_valid.md
+│   │   │   ├── test_top20_ontology_raw.json
+│   │   │   ├── test_top20_type_filtered_raw.json
+│   │   │   ├── type_filter_report_test.json
+│   │   │   ├── type_filter_report_test.md
+│   │   │   ├── type_filter_report_valid.json
+│   │   │   ├── type_filter_report_valid.md
+│   │   │   ├── valid_top20_ontology_raw.json
+│   │   │   └── valid_top20_type_filtered_raw.json
+│   │   └── 24b_noinj_evidence
+│   │       ├── alignment_manifest.json
+│   │       ├── test_aligned_evidence.json
+│   │       ├── train_aligned_evidence.json
+│   │       └── valid_aligned_evidence.json
 │   ├── setting_b
 │   │   ├── 00_safety_labels
 │   │   │   ├── contra_by_disease.json
@@ -554,6 +599,18 @@
 │   │   ├── test_hard_main_valid.md
 │   │   ├── test_ontology_valid.md
 │   │   └── test_soft_best_valid.md
+│   ├── week12
+│   │   └── day1_protocol_freeze.md
+│   ├── week12A
+│   │   ├── day1_protocol_freeze.md
+│   │   ├── day2_ranker_design.md
+│   │   ├── day2_ranker_v2_train.md
+│   │   ├── day2_score_stats.json
+│   │   ├── day2_top1_probe.tsv
+│   │   └── day3_candidate_quality.md
+│   ├── week12B
+│   │   ├── day1_protocol_freeze.md
+│   │   └── week12B_closeout.md
 │   ├── week2
 │   │   ├── day1_extract_report.md
 │   │   ├── day2_split_report.md
@@ -814,6 +871,41 @@
 │   │   │   ├── ranking_metrics_valid_rerun.json
 │   │   │   └── safety_proxy_metrics.json
 │   │   └── variant_comparison_test.json
+│   ├── week12
+│   │   └── protocol_freeze
+│   │       ├── input_registry.json
+│   │       └── novelty2_week12_protocol.json
+│   ├── week12A
+│   │   ├── build_candidates
+│   │   │   ├── launch_meta.json
+│   │   │   └── launcher_build.log
+│   │   ├── protocol_freeze
+│   │   │   ├── current_reference_registry.json
+│   │   │   └── retriever_rescue_protocol.json
+│   │   ├── ranker_design
+│   │   │   └── config_snapshot.json
+│   │   ├── ranker_ft_train
+│   │   │   ├── launch_meta.json
+│   │   │   └── launcher_train.log
+│   │   └── score_queries
+│   │       ├── launch_meta.json
+│   │       └── launcher_score.log
+│   ├── week12B
+│   │   ├── build_ontology_raw
+│   │   │   ├── 01_valid_type_filter.log
+│   │   │   ├── 02_test_type_filter.log
+│   │   │   ├── 03_valid_schema_check.log
+│   │   │   ├── 04_test_schema_check.log
+│   │   │   ├── 05_valid_ontology.log
+│   │   │   └── 06_test_ontology.log
+│   │   ├── ontology_pruning_audit
+│   │   │   ├── gold_loss_case_samples.json
+│   │   │   ├── test_gold_loss_audit.json
+│   │   │   ├── test_gold_loss_summary.json
+│   │   │   ├── valid_gold_loss_audit.json
+│   │   │   └── valid_gold_loss_summary.json
+│   │   └── protocol_freeze
+│   │       └── noinj_protocol.json
 │   ├── week4
 │   │   ├── pilot_infer_tinyllama_mock
 │   │   │   ├── case_review.md
@@ -1024,6 +1116,20 @@
 │   │   ├── 07_write_full_test_evaluation.py
 │   │   ├── 08_build_full_rerun_evaluation.py
 │   │   └── 09_build_full_rerun_evaluation_strict.py
+│   ├── week12
+│   │   └── 01_freeze_novelty2_protocol.py
+│   ├── week12A
+│   │   ├── 01_freeze_retriever_rescue_protocol.py
+│   │   ├── 02_validate_ranker_ft_config.py
+│   │   ├── 03_train_rgcn_ranker_ft.py
+│   │   ├── 04_score_queries_ft.py
+│   │   └── 05_build_candidate_json_ft.py
+│   ├── week12B
+│   │   ├── 01_freeze_noinj_protocol.py
+│   │   ├── 02_freeze_raw_source.py
+│   │   ├── 03_build_ontology_raw_variant.py
+│   │   ├── 04_realign_raw_evidence.py
+│   │   └── 05_audit_ontology_pruning.py
 │   ├── week2
 │   │   ├── day1_check_primekg_download.py
 │   │   ├── day1_extract_indication_subset.py
@@ -1125,4 +1231,4 @@
 │       └── 07_write_week9_closeout.py
 └── structure.txt
 
-181 directories, 944 files
+205 directories, 1026 files
