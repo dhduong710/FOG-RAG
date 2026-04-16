@@ -1,0 +1,12 @@
+Saved filtered candidates: dataset/setting_a/24_noinj_ontology/valid_top20_type_filtered_raw.json
+Saved filter report json: dataset/setting_a/24_noinj_ontology/type_filter_report_valid.json
+Saved markdown report: dataset/setting_a/24_noinj_ontology/type_filter_report_valid.md
+Summary:
+  total_queries = 500
+  total_candidates_before = 10000
+  total_candidates_after = 10000
+  total_removed = 0
+  empty_queries_after_filter = 0
+  remaining_non_drug_candidates = 0
+  top1_changed_queries = 0
+  top5_changed_queries = 0

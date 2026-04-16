@@ -1,0 +1,17 @@
+Saved ontology candidates: dataset/setting_a/24_noinj_ontology/test_top20_ontology_raw.json
+Saved ontology report:     dataset/setting_a/24_noinj_ontology/ontology_filter_report_test.json
+Saved markdown report:    dataset/setting_a/24_noinj_ontology/ontology_filter_report_test.md
+Summary:
+  total_queries = 500
+  total_candidates_before = 10000
+  total_candidates_after = 4021
+  removed_unsupported_candidates = 8259
+  candidates_kept_by_direct_support = 1566
+  candidates_kept_by_mechanism_support = 175
+  queries_with_any_direct_support = 299
+  queries_with_any_mechanism_support = 128
+  fallback_queries = 114
+  empty_queries_before_fallback = 114
+  gold_in_ontology_candidates = 6
+  top1_changed_queries = 213
+  top5_changed_queries = 359
