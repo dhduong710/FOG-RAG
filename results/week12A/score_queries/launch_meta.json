@@ -1,0 +1,19 @@
+{
+  "timestamp_start": "2026-04-16T00:17:37.079339",
+  "scorer": "scripts/week7/03_score_queries_v2.py",
+  "config": "configs/week12A/rgcn_ranker_ft.yaml",
+  "command": [
+    "/home/duong/miniconda3/envs/drkgc/bin/python",
+    "scripts/week7/03_score_queries_v2.py",
+    "--config",
+    "configs/week12A/rgcn_ranker_ft.yaml"
+  ],
+  "cwd": "/home/duong/code/FOG-RAG",
+  "expected_outputs": {
+    "train_scores": "dataset/setting_a/21_ranker_rescue/train_scores.pt",
+    "valid_scores": "dataset/setting_a/21_ranker_rescue/valid_scores.pt",
+    "test_scores": "dataset/setting_a/21_ranker_rescue/test_scores.pt"
+  },
+  "timestamp_end": "2026-04-16T00:17:39.514997",
+  "return_code": 0
+}

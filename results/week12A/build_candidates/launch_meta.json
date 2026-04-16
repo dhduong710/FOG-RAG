@@ -1,0 +1,26 @@
+{
+  "timestamp_start": "2026-04-16T00:23:06.127791",
+  "builder": "scripts/week7/04_build_candidate_json_v2.py",
+  "config": "configs/week12A/rgcn_ranker_ft.yaml",
+  "command": [
+    "/home/duong/miniconda3/envs/drkgc/bin/python",
+    "scripts/week7/04_build_candidate_json_v2.py",
+    "--score-dir",
+    "dataset/setting_a/21_ranker_rescue",
+    "--k",
+    "20",
+    "--report-dir",
+    "reports/week12A"
+  ],
+  "cwd": "/home/duong/code/FOG-RAG",
+  "expected_outputs": {
+    "train_top20_raw": "dataset/setting_a/21_ranker_rescue/train_top20_raw.json",
+    "valid_top20_raw": "dataset/setting_a/21_ranker_rescue/valid_top20_raw.json",
+    "test_top20_raw": "dataset/setting_a/21_ranker_rescue/test_top20_raw.json",
+    "train_top20_drkgc_ready": "dataset/setting_a/21_ranker_rescue/train_top20_drkgc_ready.json",
+    "valid_top20_drkgc_ready": "dataset/setting_a/21_ranker_rescue/valid_top20_drkgc_ready.json",
+    "test_top20_drkgc_ready": "dataset/setting_a/21_ranker_rescue/test_top20_drkgc_ready.json"
+  },
+  "timestamp_end": "2026-04-16T00:23:08.874441",
+  "return_code": 0
+}
