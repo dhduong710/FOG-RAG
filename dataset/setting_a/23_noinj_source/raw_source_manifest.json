@@ -1,0 +1,21 @@
+{
+  "source_dir": "dataset/setting_a/21_ranker_rescue",
+  "target_dir": "dataset/setting_a/23_noinj_source",
+  "copied_files": [
+    "valid_top20_raw.json",
+    "test_top20_raw.json"
+  ],
+  "valid_summary": {
+    "num_queries": 500,
+    "recall_at_20_raw": 0.202,
+    "unique_top1_count_raw": 3,
+    "top1_dominance_ratio_raw": 0.66
+  },
+  "test_summary": {
+    "num_queries": 500,
+    "recall_at_20_raw": 0.24,
+    "unique_top1_count_raw": 3,
+    "top1_dominance_ratio_raw": 0.65
+  },
+  "important_note": "This frozen source is the official raw/no-injection source of truth for Week 12B."
+}
