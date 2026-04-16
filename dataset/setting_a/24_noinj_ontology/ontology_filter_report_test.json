@@ -3,7 +3,7 @@
   "title": "Ontology-only candidate build",
   "inputs": {
     "input_candidates": "dataset/setting_a/24_noinj_ontology/test_top20_type_filtered_raw.json",
-    "input_evidence": "dataset/setting_a/20_test_rerun_eval_ready/backbone/test.json",
+    "input_evidence": "dataset/setting_a/24b_noinj_evidence/test_aligned_evidence.json",
     "type_map_tsv": "dataset/setting_b/01_annotations/type_map.tsv",
     "schema_rules_json": "dataset/setting_b/01_annotations/schema_rules.json",
     "path_templates_yaml": "dataset/setting_b/01_annotations/path_templates.yaml"

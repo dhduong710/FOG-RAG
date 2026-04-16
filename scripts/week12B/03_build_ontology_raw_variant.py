@@ -64,8 +64,8 @@ def main() -> None:
     ID2ENTITY_PATH = "dataset/setting_a/04_drkgc_json/id2entity.pkl"
     ID2RELATION_PATH = "dataset/setting_a/04_drkgc_json/id2relation.pkl"
 
-    VALID_EVIDENCE = "dataset/setting_a/20_test_rerun_eval_ready/backbone/valid.json"
-    TEST_EVIDENCE = "dataset/setting_a/20_test_rerun_eval_ready/backbone/test.json"
+    VALID_EVIDENCE = "dataset/setting_a/24b_noinj_evidence/valid_aligned_evidence.json"
+    TEST_EVIDENCE = "dataset/setting_a/24b_noinj_evidence/test_aligned_evidence.json"
 
     # 1) Type-filter valid
     cmd_valid_type = [

@@ -5,7 +5,7 @@ Build the ontology-only candidate artifact using direct valid task edges and val
 
 ## 2. Inputs
 - input_candidates: `dataset/setting_a/24_noinj_ontology/valid_top20_type_filtered_raw.json`
-- input_evidence: `dataset/setting_a/20_test_rerun_eval_ready/backbone/valid.json`
+- input_evidence: `dataset/setting_a/24b_noinj_evidence/valid_aligned_evidence.json`
 - type_map_tsv: `dataset/setting_b/01_annotations/type_map.tsv`
 - schema_rules_json: `dataset/setting_b/01_annotations/schema_rules.json`
 - path_templates_yaml: `dataset/setting_b/01_annotations/path_templates.yaml`
@@ -17,17 +17,17 @@ Build the ontology-only candidate artifact using direct valid task edges and val
 ## 4. Summary
 - total_queries: 500
 - total_candidates_before: 10000
-- total_candidates_after: 6514
-- removed_unsupported_candidates: 8846
-- candidates_kept_by_direct_support: 1049
-- candidates_kept_by_mechanism_support: 105
-- queries_with_any_direct_support: 184
-- queries_with_any_mechanism_support: 74
-- fallback_queries: 268
-- empty_queries_before_fallback: 268
-- gold_in_ontology_candidates: 42
-- top1_changed_queries: 119
-- top5_changed_queries: 213
+- total_candidates_after: 4398
+- removed_unsupported_candidates: 8362
+- candidates_kept_by_direct_support: 1454
+- candidates_kept_by_mechanism_support: 184
+- queries_with_any_direct_support: 269
+- queries_with_any_mechanism_support: 130
+- fallback_queries: 138
+- empty_queries_before_fallback: 138
+- gold_in_ontology_candidates: 7
+- top1_changed_queries: 211
+- top5_changed_queries: 334
 
 ## 5. Sample before/after
 ### Query: leukemia, lymphocytic, susceptibility to
@@ -74,9 +74,9 @@ Build the ontology-only candidate artifact using direct valid task edges and val
 
 ### Query: pneumococcal meningitis
 - before_top5: ['Fusidic acid', 'Cortisone acetate', 'Dexamethasone', 'Hydrocortisone', 'Norfloxacin']
-- after_top5: ['Fusidic acid', 'Cortisone acetate', 'Dexamethasone', 'Hydrocortisone', 'Norfloxacin']
-- support_labels_top5_after: ['unsupported', 'unsupported', 'unsupported', 'unsupported', 'unsupported']
-- fallback_used: True
+- after_top5: ['Ampicillin']
+- support_labels_top5_after: ['direct']
+- fallback_used: False
 
 ### Query: obsessive-compulsive disorder
 - before_top5: ['Cortisone acetate', 'Dexamethasone', 'Methylprednisolone', 'Triamcinolone', 'Hydrocortisone']
@@ -140,15 +140,15 @@ Build the ontology-only candidate artifact using direct valid task edges and val
 
 ### Query: hemoglobinopathy
 - before_top5: ['Cortisone acetate', 'Dexamethasone', 'Methylprednisolone', 'Triamcinolone', 'Hydrocortisone']
-- after_top5: ['Cortisone acetate', 'Dexamethasone', 'Methylprednisolone', 'Triamcinolone', 'Hydrocortisone']
-- support_labels_top5_after: ['unsupported', 'unsupported', 'unsupported', 'unsupported', 'unsupported']
-- fallback_used: True
+- after_top5: ['Hydroxyurea', 'Dexamethasone', 'Hydrocortisone acetate']
+- support_labels_top5_after: ['direct', 'mechanism', 'mechanism']
+- fallback_used: False
 
 ### Query: prostate cancer
 - before_top5: ['Cortisone acetate', 'Dexamethasone', 'Methylprednisolone', 'Triamcinolone', 'Betamethasone']
-- after_top5: ['Cortisone acetate', 'Dexamethasone', 'Methylprednisolone', 'Triamcinolone', 'Betamethasone']
-- support_labels_top5_after: ['unsupported', 'unsupported', 'unsupported', 'unsupported', 'unsupported']
-- fallback_used: True
+- after_top5: ['Dexamethasone', 'Methylprednisolone', 'Hydrocortisone', 'Hydrocortisone acetate', 'Doxorubicin']
+- support_labels_top5_after: ['mechanism', 'mechanism', 'mechanism', 'mechanism', 'mechanism']
+- fallback_used: False
 
 ### Query: chronic cutaneous lupus erythematosus
 - before_top5: ['Cortisone acetate', 'Dexamethasone', 'Hydrocortisone', 'Betamethasone', 'Triamcinolone']
@@ -176,21 +176,21 @@ Build the ontology-only candidate artifact using direct valid task edges and val
 
 ### Query: mental disorder
 - before_top5: ['Cortisone acetate', 'Dexamethasone', 'Methylprednisolone', 'Triamcinolone', 'Hydrocortisone']
-- after_top5: ['Cortisone acetate', 'Dexamethasone', 'Methylprednisolone', 'Triamcinolone', 'Hydrocortisone']
-- support_labels_top5_after: ['unsupported', 'unsupported', 'unsupported', 'unsupported', 'unsupported']
-- fallback_used: True
+- after_top5: ['Propranolol']
+- support_labels_top5_after: ['mechanism']
+- fallback_used: False
 
 ### Query: aspiration pneumonia (disease)
 - before_top5: ['Cortisone acetate', 'Dexamethasone', 'Hydrocortisone', 'Fusidic acid', 'Betamethasone']
-- after_top5: ['Cortisone acetate', 'Dexamethasone', 'Hydrocortisone', 'Fusidic acid', 'Betamethasone']
-- support_labels_top5_after: ['unsupported', 'unsupported', 'unsupported', 'unsupported', 'unsupported']
-- fallback_used: True
+- after_top5: ['Hydrocortisone', 'Betamethasone', 'Triamcinolone', 'Methylprednisolone', 'Prednisolone']
+- support_labels_top5_after: ['direct', 'direct', 'direct', 'direct', 'direct']
+- fallback_used: False
 
 ### Query: autoimmune thrombocytopenic
 - before_top5: ['Cortisone acetate', 'Dexamethasone', 'Hydrocortisone', 'Fusidic acid', 'Triamcinolone']
-- after_top5: ['Cortisone acetate', 'Dexamethasone', 'Hydrocortisone', 'Fusidic acid', 'Triamcinolone']
-- support_labels_top5_after: ['unsupported', 'unsupported', 'unsupported', 'unsupported', 'unsupported']
-- fallback_used: True
+- after_top5: ['Cortisone acetate', 'Dexamethasone', 'Hydrocortisone', 'Triamcinolone', 'Betamethasone']
+- support_labels_top5_after: ['direct', 'direct', 'direct', 'direct', 'direct']
+- fallback_used: False
 
 ### Query: respiratory tract infectious disease
 - before_top5: ['Fusidic acid', 'Norfloxacin', 'Cortisone acetate', 'Hydrocortisone', 'Dexamethasone']
@@ -200,15 +200,15 @@ Build the ontology-only candidate artifact using direct valid task edges and val
 
 ### Query: arteriosclerosis disorder
 - before_top5: ['Cortisone acetate', 'Dexamethasone', 'Methylprednisolone', 'Triamcinolone', 'Betamethasone']
-- after_top5: ['Cortisone acetate', 'Dexamethasone', 'Methylprednisolone', 'Triamcinolone', 'Betamethasone']
-- support_labels_top5_after: ['unsupported', 'unsupported', 'unsupported', 'unsupported', 'unsupported']
-- fallback_used: True
+- after_top5: ['Dexamethasone']
+- support_labels_top5_after: ['mechanism']
+- fallback_used: False
 
 ### Query: gonococcal epididymo-orchitis
 - before_top5: ['Fusidic acid', 'Cortisone acetate', 'Dexamethasone', 'Norfloxacin', 'Hydrocortisone']
-- after_top5: ['Fusidic acid', 'Cortisone acetate', 'Dexamethasone', 'Norfloxacin', 'Hydrocortisone']
-- support_labels_top5_after: ['unsupported', 'unsupported', 'unsupported', 'unsupported', 'unsupported']
-- fallback_used: True
+- after_top5: ['Fusidic acid', 'Tetracycline']
+- support_labels_top5_after: ['direct', 'direct']
+- fallback_used: False
 
 ### Query: ovarian mucinous adenocarcinoma
 - before_top5: ['Cortisone acetate', 'Dexamethasone', 'Methylprednisolone', 'Hydrocortisone', 'Betamethasone']
@@ -224,9 +224,9 @@ Build the ontology-only candidate artifact using direct valid task edges and val
 
 ### Query: scleroderma (disease)
 - before_top5: ['Cortisone acetate', 'Dexamethasone', 'Methylprednisolone', 'Hydrocortisone', 'Triamcinolone']
-- after_top5: ['Cortisone acetate', 'Dexamethasone', 'Methylprednisolone', 'Hydrocortisone', 'Triamcinolone']
-- support_labels_top5_after: ['unsupported', 'unsupported', 'unsupported', 'unsupported', 'unsupported']
-- fallback_used: True
+- after_top5: ['Propranolol']
+- support_labels_top5_after: ['mechanism']
+- fallback_used: False
 
 ### Query: common cold
 - before_top5: ['Fusidic acid', 'Norfloxacin', 'Cortisone acetate', 'Hydrocortisone', 'Dexamethasone']
@@ -254,15 +254,15 @@ Build the ontology-only candidate artifact using direct valid task edges and val
 
 ### Query: mental disorder
 - before_top5: ['Cortisone acetate', 'Dexamethasone', 'Methylprednisolone', 'Triamcinolone', 'Hydrocortisone']
-- after_top5: ['Cortisone acetate', 'Dexamethasone', 'Methylprednisolone', 'Triamcinolone', 'Hydrocortisone']
-- support_labels_top5_after: ['unsupported', 'unsupported', 'unsupported', 'unsupported', 'unsupported']
-- fallback_used: True
+- after_top5: ['Propranolol']
+- support_labels_top5_after: ['mechanism']
+- fallback_used: False
 
 ### Query: dysentery
 - before_top5: ['Fusidic acid', 'Cortisone acetate', 'Norfloxacin', 'Hydrocortisone', 'Dexamethasone']
-- after_top5: ['Fusidic acid', 'Cortisone acetate', 'Norfloxacin', 'Hydrocortisone', 'Dexamethasone']
-- support_labels_top5_after: ['unsupported', 'unsupported', 'unsupported', 'unsupported', 'unsupported']
-- fallback_used: True
+- after_top5: ['Ofloxacin', 'Ciprofloxacin']
+- support_labels_top5_after: ['direct', 'direct']
+- fallback_used: False
 
 ### Query: acute myeloid leukemia with minimal differentiation
 - before_top5: ['Cortisone acetate', 'Dexamethasone', 'Methylprednisolone', 'Hydrocortisone', 'Betamethasone']
@@ -278,9 +278,9 @@ Build the ontology-only candidate artifact using direct valid task edges and val
 
 ### Query: adenocarcinoma of liver and intrahepatic biliary tract
 - before_top5: ['Cortisone acetate', 'Dexamethasone', 'Methylprednisolone', 'Triamcinolone', 'Betamethasone']
-- after_top5: ['Cortisone acetate', 'Dexamethasone', 'Methylprednisolone', 'Triamcinolone', 'Betamethasone']
-- support_labels_top5_after: ['unsupported', 'unsupported', 'unsupported', 'unsupported', 'unsupported']
-- fallback_used: True
+- after_top5: ['Dexamethasone', 'Doxorubicin']
+- support_labels_top5_after: ['mechanism', 'mechanism']
+- fallback_used: False
 
 ### Query: angioedema
 - before_top5: ['Cortisone acetate', 'Dexamethasone', 'Hydrocortisone', 'Triamcinolone', 'Betamethasone']
@@ -296,9 +296,9 @@ Build the ontology-only candidate artifact using direct valid task edges and val
 
 ### Query: granulomatous slack skin disease
 - before_top5: ['Cortisone acetate', 'Dexamethasone', 'Methylprednisolone', 'Hydrocortisone', 'Triamcinolone']
-- after_top5: ['Cortisone acetate', 'Dexamethasone', 'Methylprednisolone', 'Hydrocortisone', 'Triamcinolone']
-- support_labels_top5_after: ['unsupported', 'unsupported', 'unsupported', 'unsupported', 'unsupported']
-- fallback_used: True
+- after_top5: ['Cortisone acetate', 'Methylprednisolone', 'Hydrocortisone', 'Triamcinolone', 'Betamethasone']
+- support_labels_top5_after: ['direct', 'direct', 'direct', 'direct', 'direct']
+- fallback_used: False
 
 ### Query: nasopharyngitis
 - before_top5: ['Fusidic acid', 'Norfloxacin', 'Cortisone acetate', 'Hydrocortisone', 'Dexamethasone']
@@ -308,9 +308,9 @@ Build the ontology-only candidate artifact using direct valid task edges and val
 
 ### Query: urethritis (disease)
 - before_top5: ['Fusidic acid', 'Cortisone acetate', 'Norfloxacin', 'Dexamethasone', 'Hydrocortisone']
-- after_top5: ['Fusidic acid', 'Cortisone acetate', 'Norfloxacin', 'Dexamethasone', 'Hydrocortisone']
-- support_labels_top5_after: ['unsupported', 'unsupported', 'unsupported', 'unsupported', 'unsupported']
-- fallback_used: True
+- after_top5: ['Fusidic acid', 'Ofloxacin']
+- support_labels_top5_after: ['direct', 'direct']
+- fallback_used: False
 
 ### Query: hereditary angioedema with C1Inh deficiency
 - before_top5: ['Cortisone acetate', 'Dexamethasone', 'Methylprednisolone', 'Hydrocortisone', 'Betamethasone']

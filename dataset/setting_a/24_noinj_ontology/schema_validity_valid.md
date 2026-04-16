@@ -11,37 +11,36 @@ Check schema validity for candidate / path / evidence on the valid split.
 
 ## 3. Evidence triple validity summary
 - total_queries_checked: 500
-- total_evidence_triples_checked: 16594
-- valid_evidence_triples: 10549
-- invalid_evidence_triples: 6045
+- total_evidence_triples_checked: 30230
+- valid_evidence_triples: 19372
+- invalid_evidence_triples: 10858
 - missing_relation_rules: 0
 - incomplete_relation_rules: 0
 
 ### Top invalid evidence patterns
-- Disease -[indication]-> Drug: 3872
-- Disease -[associated_with]-> Protein_or_Gene: 1828
-- Protein_or_Gene -[target]-> Drug: 345
+- Disease -[indication]-> Drug: 6365
+- Disease -[associated_with]-> Protein_or_Gene: 3703
+- Protein_or_Gene -[target]-> Drug: 790
 
 ## 4. Path validity summary
 - valid_mechanism_templates_loaded: 2
 - invalid_explanation_relations_loaded: 0
-- total_path_sequences_checked: 14862
-- valid_mechanism_path_sequences: 86
-- direct_task_edge_sequences: 1301
+- total_path_sequences_checked: 28484
+- valid_mechanism_path_sequences: 139
+- direct_task_edge_sequences: 1870
 - blocked_explanation_sequences: 0
-- unsupported_path_sequences: 13475
-- queries_with_no_candidate_to_query_path: 4
+- unsupported_path_sequences: 26475
+- queries_with_no_candidate_to_query_path: 23
 
 ### Top unsupported path patterns
-- indication -> indication -> indication: 7818
-- indication -> associated_with -> associated_with: 5626
-- target -> target -> indication: 31
+- indication -> indication -> indication: 15106
+- indication -> associated_with -> associated_with: 11311
+- target -> target -> indication: 58
 
 ### Sample unsupported paths
 - query=leukemia, lymphocytic, susceptibility to | candidate=Cortisone acetate | path=indication -> indication -> indication
-- query=leukemia, lymphocytic, susceptibility to | candidate=Cortisone acetate | path=indication -> indication -> indication
-- query=leukemia, lymphocytic, susceptibility to | candidate=Cortisone acetate | path=indication -> indication -> indication
-- query=leukemia, lymphocytic, susceptibility to | candidate=Cortisone acetate | path=indication -> indication -> indication
+- query=streptococcal infection | candidate=Cortisone acetate | path=indication -> indication -> indication
+- query=streptococcal infection | candidate=Cortisone acetate | path=indication -> indication -> indication
 - query=streptococcal infection | candidate=Cortisone acetate | path=indication -> indication -> indication
 - query=streptococcal infection | candidate=Cortisone acetate | path=indication -> indication -> indication
 - query=streptococcal infection | candidate=Cortisone acetate | path=indication -> indication -> indication
@@ -78,7 +77,8 @@ Check schema validity for candidate / path / evidence on the valid split.
 - query=streptococcal infection | candidate=Hydrocortisone | path=indication -> indication -> indication
 - query=streptococcal infection | candidate=Hydrocortisone | path=indication -> indication -> indication
 - query=streptococcal infection | candidate=Hydrocortisone | path=indication -> indication -> indication
-- query=streptococcal infection | candidate=Dexamethasone | path=indication -> indication -> indication
+- query=streptococcal infection | candidate=Hydrocortisone | path=indication -> indication -> indication
+- query=streptococcal infection | candidate=Hydrocortisone | path=indication -> indication -> indication
 - query=streptococcal infection | candidate=Dexamethasone | path=indication -> indication -> indication
 - query=streptococcal infection | candidate=Dexamethasone | path=indication -> indication -> indication
 - query=streptococcal infection | candidate=Dexamethasone | path=indication -> indication -> indication

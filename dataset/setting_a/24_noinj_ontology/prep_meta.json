@@ -1,5 +1,5 @@
 {
-  "timestamp_start": "2026-04-16T11:18:05.360034",
+  "timestamp_start": "2026-04-16T11:44:00.424005",
   "raw_input_dir": "dataset/setting_a/23_noinj_source",
   "output_dir": "dataset/setting_a/24_noinj_ontology",
   "notes": [
@@ -7,7 +7,7 @@
     "Gold injection must not be reintroduced in this branch.",
     "Reuse Week-9 logic whenever possible."
   ],
-  "timestamp_end": "2026-04-16T11:18:06.553340",
+  "timestamp_end": "2026-04-16T11:44:01.718721",
   "produced_files": [
     "dataset/setting_a/24_noinj_ontology/valid_top20_type_filtered_raw.json",
     "dataset/setting_a/24_noinj_ontology/test_top20_type_filtered_raw.json",

@@ -3,7 +3,7 @@
   "title": "Schema validity check",
   "inputs": {
     "candidate_artifact": "dataset/setting_a/24_noinj_ontology/valid_top20_type_filtered_raw.json",
-    "evidence_artifact": "dataset/setting_a/20_test_rerun_eval_ready/backbone/valid.json",
+    "evidence_artifact": "dataset/setting_a/24b_noinj_evidence/valid_aligned_evidence.json",
     "type_map_tsv": "dataset/setting_b/01_annotations/type_map.tsv",
     "fallback_type_json": "dataset/setting_b/01_ontology/entity_name_to_type.json",
     "schema_rules_json": "dataset/setting_b/01_annotations/schema_rules.json",
@@ -19,23 +19,23 @@
   },
   "evidence_validity": {
     "total_queries_checked": 500,
-    "total_evidence_triples_checked": 16594,
-    "valid_evidence_triples": 10549,
-    "invalid_evidence_triples": 6045,
+    "total_evidence_triples_checked": 30230,
+    "valid_evidence_triples": 19372,
+    "invalid_evidence_triples": 10858,
     "missing_relation_rules": 0,
     "incomplete_relation_rules": 0,
     "top_invalid_evidence_patterns": [
       [
         "Disease -[indication]-> Drug",
-        3872
+        6365
       ],
       [
         "Disease -[associated_with]-> Protein_or_Gene",
-        1828
+        3703
       ],
       [
         "Protein_or_Gene -[target]-> Drug",
-        345
+        790
       ]
     ],
     "sample_invalid_evidence": [
@@ -113,9 +113,9 @@
       },
       {
         "query_entity": "leukemia, lymphocytic, susceptibility to",
-        "head_name": "acute lymphoblastic leukemia (disease)",
+        "head_name": "melanoma",
         "relation_name": "indication",
-        "tail_name": "Asparaginase Escherichia coli",
+        "tail_name": "Vindesine",
         "head_type": "Disease",
         "tail_type": "Drug",
         "reason": "invalid_head_type"
@@ -356,9 +356,9 @@
       },
       {
         "query_entity": "streptococcal infection",
-        "head_name": "urinary tract infection (disease)",
+        "head_name": "bacterial pneumonia",
         "relation_name": "indication",
-        "tail_name": "Ofloxacin",
+        "tail_name": "Ciprofloxacin",
         "head_type": "Disease",
         "tail_type": "Drug",
         "reason": "invalid_head_type"
@@ -494,24 +494,24 @@
   "path_validity": {
     "valid_mechanism_templates_loaded": 2,
     "invalid_explanation_relations_loaded": 0,
-    "total_path_sequences_checked": 14862,
-    "valid_mechanism_path_sequences": 86,
-    "direct_task_edge_sequences": 1301,
+    "total_path_sequences_checked": 28484,
+    "valid_mechanism_path_sequences": 139,
+    "direct_task_edge_sequences": 1870,
     "blocked_explanation_sequences": 0,
-    "unsupported_path_sequences": 13475,
-    "queries_with_no_candidate_to_query_path": 4,
+    "unsupported_path_sequences": 26475,
+    "queries_with_no_candidate_to_query_path": 23,
     "top_unsupported_path_patterns": [
       [
         "indication -> indication -> indication",
-        7818
+        15106
       ],
       [
         "indication -> associated_with -> associated_with",
-        5626
+        11311
       ],
       [
         "target -> target -> indication",
-        31
+        58
       ]
     ],
     "sample_unsupported_paths": [
@@ -521,17 +521,12 @@
         "relation_sequence": "indication -> indication -> indication"
       },
       {
-        "query_entity": "leukemia, lymphocytic, susceptibility to",
+        "query_entity": "streptococcal infection",
         "candidate_name": "Cortisone acetate",
         "relation_sequence": "indication -> indication -> indication"
       },
       {
-        "query_entity": "leukemia, lymphocytic, susceptibility to",
-        "candidate_name": "Cortisone acetate",
-        "relation_sequence": "indication -> indication -> indication"
-      },
-      {
-        "query_entity": "leukemia, lymphocytic, susceptibility to",
+        "query_entity": "streptococcal infection",
         "candidate_name": "Cortisone acetate",
         "relation_sequence": "indication -> indication -> indication"
       },
@@ -717,7 +712,12 @@
       },
       {
         "query_entity": "streptococcal infection",
-        "candidate_name": "Dexamethasone",
+        "candidate_name": "Hydrocortisone",
+        "relation_sequence": "indication -> indication -> indication"
+      },
+      {
+        "query_entity": "streptococcal infection",
+        "candidate_name": "Hydrocortisone",
         "relation_sequence": "indication -> indication -> indication"
       },
       {
@@ -768,6 +768,6 @@
     ]
   },
   "lookup_source_breakdown": {
-    "type_map.tsv": 43188
+    "type_map.tsv": 70460
   }
 }

@@ -4,14 +4,14 @@ Saved markdown report:    dataset/setting_a/24_noinj_ontology/ontology_filter_re
 Summary:
   total_queries = 500
   total_candidates_before = 10000
-  total_candidates_after = 6514
-  removed_unsupported_candidates = 8846
-  candidates_kept_by_direct_support = 1049
-  candidates_kept_by_mechanism_support = 105
-  queries_with_any_direct_support = 184
-  queries_with_any_mechanism_support = 74
-  fallback_queries = 268
-  empty_queries_before_fallback = 268
-  gold_in_ontology_candidates = 42
-  top1_changed_queries = 119
-  top5_changed_queries = 213
+  total_candidates_after = 4398
+  removed_unsupported_candidates = 8362
+  candidates_kept_by_direct_support = 1454
+  candidates_kept_by_mechanism_support = 184
+  queries_with_any_direct_support = 269
+  queries_with_any_mechanism_support = 130
+  fallback_queries = 138
+  empty_queries_before_fallback = 138
+  gold_in_ontology_candidates = 7
+  top1_changed_queries = 211
+  top5_changed_queries = 334

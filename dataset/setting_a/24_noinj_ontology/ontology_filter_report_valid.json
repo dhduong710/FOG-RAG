@@ -3,7 +3,7 @@
   "title": "Ontology-only candidate build",
   "inputs": {
     "input_candidates": "dataset/setting_a/24_noinj_ontology/valid_top20_type_filtered_raw.json",
-    "input_evidence": "dataset/setting_a/20_test_rerun_eval_ready/backbone/valid.json",
+    "input_evidence": "dataset/setting_a/24b_noinj_evidence/valid_aligned_evidence.json",
     "type_map_tsv": "dataset/setting_b/01_annotations/type_map.tsv",
     "schema_rules_json": "dataset/setting_b/01_annotations/schema_rules.json",
     "path_templates_yaml": "dataset/setting_b/01_annotations/path_templates.yaml"
@@ -14,17 +14,17 @@
   },
   "total_queries": 500,
   "total_candidates_before": 10000,
-  "total_candidates_after": 6514,
-  "removed_unsupported_candidates": 8846,
-  "candidates_kept_by_direct_support": 1049,
-  "candidates_kept_by_mechanism_support": 105,
-  "queries_with_any_direct_support": 184,
-  "queries_with_any_mechanism_support": 74,
-  "fallback_queries": 268,
-  "empty_queries_before_fallback": 268,
-  "gold_in_ontology_candidates": 42,
-  "top1_changed_queries": 119,
-  "top5_changed_queries": 213,
+  "total_candidates_after": 4398,
+  "removed_unsupported_candidates": 8362,
+  "candidates_kept_by_direct_support": 1454,
+  "candidates_kept_by_mechanism_support": 184,
+  "queries_with_any_direct_support": 269,
+  "queries_with_any_mechanism_support": 130,
+  "fallback_queries": 138,
+  "empty_queries_before_fallback": 138,
+  "gold_in_ontology_candidates": 7,
+  "top1_changed_queries": 211,
+  "top5_changed_queries": 334,
   "valid_mechanism_templates_loaded": 2,
   "sample_before_after": [
     {
@@ -192,20 +192,12 @@
         "Norfloxacin"
       ],
       "after_top5": [
-        "Fusidic acid",
-        "Cortisone acetate",
-        "Dexamethasone",
-        "Hydrocortisone",
-        "Norfloxacin"
+        "Ampicillin"
       ],
       "support_labels_top5_after": [
-        "unsupported",
-        "unsupported",
-        "unsupported",
-        "unsupported",
-        "unsupported"
+        "direct"
       ],
-      "fallback_used": true
+      "fallback_used": false
     },
     {
       "query_entity": "obsessive-compulsive disorder",
@@ -437,20 +429,16 @@
         "Hydrocortisone"
       ],
       "after_top5": [
-        "Cortisone acetate",
+        "Hydroxyurea",
         "Dexamethasone",
-        "Methylprednisolone",
-        "Triamcinolone",
-        "Hydrocortisone"
+        "Hydrocortisone acetate"
       ],
       "support_labels_top5_after": [
-        "unsupported",
-        "unsupported",
-        "unsupported",
-        "unsupported",
-        "unsupported"
+        "direct",
+        "mechanism",
+        "mechanism"
       ],
-      "fallback_used": true
+      "fallback_used": false
     },
     {
       "query_entity": "prostate cancer",
@@ -462,20 +450,20 @@
         "Betamethasone"
       ],
       "after_top5": [
-        "Cortisone acetate",
         "Dexamethasone",
         "Methylprednisolone",
-        "Triamcinolone",
-        "Betamethasone"
+        "Hydrocortisone",
+        "Hydrocortisone acetate",
+        "Doxorubicin"
       ],
       "support_labels_top5_after": [
-        "unsupported",
-        "unsupported",
-        "unsupported",
-        "unsupported",
-        "unsupported"
+        "mechanism",
+        "mechanism",
+        "mechanism",
+        "mechanism",
+        "mechanism"
       ],
-      "fallback_used": true
+      "fallback_used": false
     },
     {
       "query_entity": "chronic cutaneous lupus erythematosus",
@@ -579,20 +567,12 @@
         "Hydrocortisone"
       ],
       "after_top5": [
-        "Cortisone acetate",
-        "Dexamethasone",
-        "Methylprednisolone",
-        "Triamcinolone",
-        "Hydrocortisone"
+        "Propranolol"
       ],
       "support_labels_top5_after": [
-        "unsupported",
-        "unsupported",
-        "unsupported",
-        "unsupported",
-        "unsupported"
+        "mechanism"
       ],
-      "fallback_used": true
+      "fallback_used": false
     },
     {
       "query_entity": "aspiration pneumonia (disease)",
@@ -604,20 +584,20 @@
         "Betamethasone"
       ],
       "after_top5": [
-        "Cortisone acetate",
-        "Dexamethasone",
         "Hydrocortisone",
-        "Fusidic acid",
-        "Betamethasone"
+        "Betamethasone",
+        "Triamcinolone",
+        "Methylprednisolone",
+        "Prednisolone"
       ],
       "support_labels_top5_after": [
-        "unsupported",
-        "unsupported",
-        "unsupported",
-        "unsupported",
-        "unsupported"
+        "direct",
+        "direct",
+        "direct",
+        "direct",
+        "direct"
       ],
-      "fallback_used": true
+      "fallback_used": false
     },
     {
       "query_entity": "autoimmune thrombocytopenic",
@@ -632,17 +612,17 @@
         "Cortisone acetate",
         "Dexamethasone",
         "Hydrocortisone",
-        "Fusidic acid",
-        "Triamcinolone"
+        "Triamcinolone",
+        "Betamethasone"
       ],
       "support_labels_top5_after": [
-        "unsupported",
-        "unsupported",
-        "unsupported",
-        "unsupported",
-        "unsupported"
+        "direct",
+        "direct",
+        "direct",
+        "direct",
+        "direct"
       ],
-      "fallback_used": true
+      "fallback_used": false
     },
     {
       "query_entity": "respiratory tract infectious disease",
@@ -679,20 +659,12 @@
         "Betamethasone"
       ],
       "after_top5": [
-        "Cortisone acetate",
-        "Dexamethasone",
-        "Methylprednisolone",
-        "Triamcinolone",
-        "Betamethasone"
+        "Dexamethasone"
       ],
       "support_labels_top5_after": [
-        "unsupported",
-        "unsupported",
-        "unsupported",
-        "unsupported",
-        "unsupported"
+        "mechanism"
       ],
-      "fallback_used": true
+      "fallback_used": false
     },
     {
       "query_entity": "gonococcal epididymo-orchitis",
@@ -705,19 +677,13 @@
       ],
       "after_top5": [
         "Fusidic acid",
-        "Cortisone acetate",
-        "Dexamethasone",
-        "Norfloxacin",
-        "Hydrocortisone"
+        "Tetracycline"
       ],
       "support_labels_top5_after": [
-        "unsupported",
-        "unsupported",
-        "unsupported",
-        "unsupported",
-        "unsupported"
+        "direct",
+        "direct"
       ],
-      "fallback_used": true
+      "fallback_used": false
     },
     {
       "query_entity": "ovarian mucinous adenocarcinoma",
@@ -769,20 +735,12 @@
         "Triamcinolone"
       ],
       "after_top5": [
-        "Cortisone acetate",
-        "Dexamethasone",
-        "Methylprednisolone",
-        "Hydrocortisone",
-        "Triamcinolone"
+        "Propranolol"
       ],
       "support_labels_top5_after": [
-        "unsupported",
-        "unsupported",
-        "unsupported",
-        "unsupported",
-        "unsupported"
+        "mechanism"
       ],
-      "fallback_used": true
+      "fallback_used": false
     },
     {
       "query_entity": "common cold",
@@ -886,20 +844,12 @@
         "Hydrocortisone"
       ],
       "after_top5": [
-        "Cortisone acetate",
-        "Dexamethasone",
-        "Methylprednisolone",
-        "Triamcinolone",
-        "Hydrocortisone"
+        "Propranolol"
       ],
       "support_labels_top5_after": [
-        "unsupported",
-        "unsupported",
-        "unsupported",
-        "unsupported",
-        "unsupported"
+        "mechanism"
       ],
-      "fallback_used": true
+      "fallback_used": false
     },
     {
       "query_entity": "dysentery",
@@ -911,20 +861,14 @@
         "Dexamethasone"
       ],
       "after_top5": [
-        "Fusidic acid",
-        "Cortisone acetate",
-        "Norfloxacin",
-        "Hydrocortisone",
-        "Dexamethasone"
+        "Ofloxacin",
+        "Ciprofloxacin"
       ],
       "support_labels_top5_after": [
-        "unsupported",
-        "unsupported",
-        "unsupported",
-        "unsupported",
-        "unsupported"
+        "direct",
+        "direct"
       ],
-      "fallback_used": true
+      "fallback_used": false
     },
     {
       "query_entity": "acute myeloid leukemia with minimal differentiation",
@@ -976,20 +920,14 @@
         "Betamethasone"
       ],
       "after_top5": [
-        "Cortisone acetate",
         "Dexamethasone",
-        "Methylprednisolone",
-        "Triamcinolone",
-        "Betamethasone"
+        "Doxorubicin"
       ],
       "support_labels_top5_after": [
-        "unsupported",
-        "unsupported",
-        "unsupported",
-        "unsupported",
-        "unsupported"
+        "mechanism",
+        "mechanism"
       ],
-      "fallback_used": true
+      "fallback_used": false
     },
     {
       "query_entity": "angioedema",
@@ -1052,19 +990,19 @@
       ],
       "after_top5": [
         "Cortisone acetate",
-        "Dexamethasone",
         "Methylprednisolone",
         "Hydrocortisone",
-        "Triamcinolone"
+        "Triamcinolone",
+        "Betamethasone"
       ],
       "support_labels_top5_after": [
-        "unsupported",
-        "unsupported",
-        "unsupported",
-        "unsupported",
-        "unsupported"
+        "direct",
+        "direct",
+        "direct",
+        "direct",
+        "direct"
       ],
-      "fallback_used": true
+      "fallback_used": false
     },
     {
       "query_entity": "nasopharyngitis",
@@ -1102,19 +1040,13 @@
       ],
       "after_top5": [
         "Fusidic acid",
-        "Cortisone acetate",
-        "Norfloxacin",
-        "Dexamethasone",
-        "Hydrocortisone"
+        "Ofloxacin"
       ],
       "support_labels_top5_after": [
-        "unsupported",
-        "unsupported",
-        "unsupported",
-        "unsupported",
-        "unsupported"
+        "direct",
+        "direct"
       ],
-      "fallback_used": true
+      "fallback_used": false
     },
     {
       "query_entity": "hereditary angioedema with C1Inh deficiency",
