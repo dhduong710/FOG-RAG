@@ -1,0 +1,1178 @@
+{
+  "summary": {
+    "num_queries": 500,
+    "num_improved_vs_backbone": 80,
+    "num_worsened_vs_backbone": 0,
+    "num_unchanged_bad_vs_backbone": 401,
+    "num_improved_vs_bcap": 80,
+    "num_worsened_vs_bcap": 1,
+    "improved_rate_vs_backbone": 0.16,
+    "worsened_rate_vs_backbone": 0.0,
+    "improved_rate_vs_bcap": 0.16,
+    "worsened_rate_vs_bcap": 0.002
+  },
+  "selected_row": "soft_support_raw",
+  "selected_variant_origin": "soft_support_raw_b050",
+  "top_improved_vs_backbone": [
+    {
+      "query_entity": "mantle cell lymphoma",
+      "gold_entity": "Mechlorethamine",
+      "backbone_rank": 20,
+      "b050_rank": 3,
+      "bcap_rank": 18,
+      "b050_minus_backbone": -17,
+      "b050_minus_bcap": -15,
+      "top5_backbone": [
+        "Cortisone acetate",
+        "Dexamethasone",
+        "Methylprednisolone",
+        "Hydrocortisone",
+        "Triamcinolone"
+      ],
+      "top5_b050": [
+        "Hydrocortisone acetate",
+        "Propranolol",
+        "Mechlorethamine",
+        "Cortisone acetate",
+        "Dexamethasone"
+      ],
+      "top5_bcap": [
+        "Cortisone acetate",
+        "Dexamethasone",
+        "Methylprednisolone",
+        "Hydrocortisone",
+        "Triamcinolone"
+      ],
+      "gold_debug_b050": {
+        "support_score": 1.0,
+        "base_rank": 20,
+        "support_rank": 3,
+        "evidence_edge_touch_count": 1,
+        "candidate_query_edge_count": 0,
+        "ontology_keep_flag": 0,
+        "contra_flag": 0
+      },
+      "gold_debug_bcap": {
+        "support_score": 0.5,
+        "base_rank": 20,
+        "support_rank": 18,
+        "evidence_edge_touch_count": 1,
+        "candidate_query_edge_count": 0,
+        "ontology_keep_flag": 0,
+        "contra_flag": 0
+      }
+    },
+    {
+      "query_entity": "vernal conjunctivitis",
+      "gold_entity": "Phenylephrine",
+      "backbone_rank": 20,
+      "b050_rank": 8,
+      "bcap_rank": 14,
+      "b050_minus_backbone": -12,
+      "b050_minus_bcap": -6,
+      "top5_backbone": [
+        "Fusidic acid",
+        "Cortisone acetate",
+        "Norfloxacin",
+        "Hydrocortisone",
+        "Dexamethasone"
+      ],
+      "top5_b050": [
+        "Triamcinolone",
+        "Methylprednisolone",
+        "Tetracycline",
+        "Ofloxacin",
+        "Hydrocortisone acetate"
+      ],
+      "top5_bcap": [
+        "Fusidic acid",
+        "Cortisone acetate",
+        "Hydrocortisone",
+        "Dexamethasone",
+        "Triamcinolone"
+      ],
+      "gold_debug_b050": {
+        "support_score": 1.0,
+        "base_rank": 20,
+        "support_rank": 8,
+        "evidence_edge_touch_count": 1,
+        "candidate_query_edge_count": 0,
+        "ontology_keep_flag": 0,
+        "contra_flag": 0
+      },
+      "gold_debug_bcap": {
+        "support_score": 0.5,
+        "base_rank": 20,
+        "support_rank": 14,
+        "evidence_edge_touch_count": 1,
+        "candidate_query_edge_count": 0,
+        "ontology_keep_flag": 0,
+        "contra_flag": 0
+      }
+    },
+    {
+      "query_entity": "Langerhans cell histiocytosis",
+      "gold_entity": "Bleomycin",
+      "backbone_rank": 14,
+      "b050_rank": 3,
+      "bcap_rank": 14,
+      "b050_minus_backbone": -11,
+      "b050_minus_bcap": -11,
+      "top5_backbone": [
+        "Cortisone acetate",
+        "Dexamethasone",
+        "Methylprednisolone",
+        "Hydrocortisone",
+        "Triamcinolone"
+      ],
+      "top5_b050": [
+        "Fusidic acid",
+        "Doxorubicin",
+        "Bleomycin",
+        "Propranolol",
+        "Cortisone acetate"
+      ],
+      "top5_bcap": [
+        "Cortisone acetate",
+        "Dexamethasone",
+        "Methylprednisolone",
+        "Hydrocortisone",
+        "Triamcinolone"
+      ],
+      "gold_debug_b050": {
+        "support_score": 1.0,
+        "base_rank": 14,
+        "support_rank": 3,
+        "evidence_edge_touch_count": 1,
+        "candidate_query_edge_count": 0,
+        "ontology_keep_flag": 0,
+        "contra_flag": 0
+      },
+      "gold_debug_bcap": {
+        "support_score": 0.5,
+        "base_rank": 14,
+        "support_rank": 14,
+        "evidence_edge_touch_count": 1,
+        "candidate_query_edge_count": 0,
+        "ontology_keep_flag": 0,
+        "contra_flag": 0
+      }
+    },
+    {
+      "query_entity": "primary cutaneous T-cell lymphoma",
+      "gold_entity": "Methotrexate",
+      "backbone_rank": 19,
+      "b050_rank": 8,
+      "bcap_rank": 17,
+      "b050_minus_backbone": -11,
+      "b050_minus_bcap": -9,
+      "top5_backbone": [
+        "Cortisone acetate",
+        "Dexamethasone",
+        "Methylprednisolone",
+        "Hydrocortisone",
+        "Betamethasone"
+      ],
+      "top5_b050": [
+        "Hydrocortisone",
+        "Doxorubicin",
+        "Carmustine",
+        "Bleomycin",
+        "Thiotepa"
+      ],
+      "top5_bcap": [
+        "Cortisone acetate",
+        "Dexamethasone",
+        "Methylprednisolone",
+        "Hydrocortisone",
+        "Betamethasone"
+      ],
+      "gold_debug_b050": {
+        "support_score": 1.0,
+        "base_rank": 19,
+        "support_rank": 8,
+        "evidence_edge_touch_count": 1,
+        "candidate_query_edge_count": 0,
+        "ontology_keep_flag": 0,
+        "contra_flag": 0
+      },
+      "gold_debug_bcap": {
+        "support_score": 0.5,
+        "base_rank": 19,
+        "support_rank": 17,
+        "evidence_edge_touch_count": 1,
+        "candidate_query_edge_count": 0,
+        "ontology_keep_flag": 0,
+        "contra_flag": 0
+      }
+    },
+    {
+      "query_entity": "primary cutaneous T-cell lymphoma",
+      "gold_entity": "Mechlorethamine",
+      "backbone_rank": 20,
+      "b050_rank": 9,
+      "bcap_rank": 18,
+      "b050_minus_backbone": -11,
+      "b050_minus_bcap": -9,
+      "top5_backbone": [
+        "Cortisone acetate",
+        "Dexamethasone",
+        "Methylprednisolone",
+        "Hydrocortisone",
+        "Betamethasone"
+      ],
+      "top5_b050": [
+        "Hydrocortisone",
+        "Doxorubicin",
+        "Carmustine",
+        "Bleomycin",
+        "Thiotepa"
+      ],
+      "top5_bcap": [
+        "Cortisone acetate",
+        "Dexamethasone",
+        "Methylprednisolone",
+        "Hydrocortisone",
+        "Betamethasone"
+      ],
+      "gold_debug_b050": {
+        "support_score": 1.0,
+        "base_rank": 20,
+        "support_rank": 9,
+        "evidence_edge_touch_count": 1,
+        "candidate_query_edge_count": 0,
+        "ontology_keep_flag": 0,
+        "contra_flag": 0
+      },
+      "gold_debug_bcap": {
+        "support_score": 0.5,
+        "base_rank": 20,
+        "support_rank": 18,
+        "evidence_edge_touch_count": 1,
+        "candidate_query_edge_count": 0,
+        "ontology_keep_flag": 0,
+        "contra_flag": 0
+      }
+    },
+    {
+      "query_entity": "vasomotor rhinitis",
+      "gold_entity": "Prednisone",
+      "backbone_rank": 16,
+      "b050_rank": 6,
+      "bcap_rank": 14,
+      "b050_minus_backbone": -10,
+      "b050_minus_bcap": -8,
+      "top5_backbone": [
+        "Fusidic acid",
+        "Cortisone acetate",
+        "Norfloxacin",
+        "Dexamethasone",
+        "Hydrocortisone"
+      ],
+      "top5_b050": [
+        "Fusidic acid",
+        "Methylprednisolone",
+        "Tetracycline",
+        "Ofloxacin",
+        "Ciprofloxacin"
+      ],
+      "top5_bcap": [
+        "Fusidic acid",
+        "Cortisone acetate",
+        "Dexamethasone",
+        "Hydrocortisone",
+        "Betamethasone"
+      ],
+      "gold_debug_b050": {
+        "support_score": 1.0,
+        "base_rank": 16,
+        "support_rank": 6,
+        "evidence_edge_touch_count": 1,
+        "candidate_query_edge_count": 0,
+        "ontology_keep_flag": 0,
+        "contra_flag": 0
+      },
+      "gold_debug_bcap": {
+        "support_score": 0.5,
+        "base_rank": 16,
+        "support_rank": 14,
+        "evidence_edge_touch_count": 1,
+        "candidate_query_edge_count": 0,
+        "ontology_keep_flag": 0,
+        "contra_flag": 0
+      }
+    },
+    {
+      "query_entity": "papillary conjunctivitis",
+      "gold_entity": "Alimemazine",
+      "backbone_rank": 17,
+      "b050_rank": 8,
+      "bcap_rank": 14,
+      "b050_minus_backbone": -9,
+      "b050_minus_bcap": -6,
+      "top5_backbone": [
+        "Fusidic acid",
+        "Cortisone acetate",
+        "Norfloxacin",
+        "Hydrocortisone",
+        "Dexamethasone"
+      ],
+      "top5_b050": [
+        "Triamcinolone",
+        "Methylprednisolone",
+        "Tetracycline",
+        "Ofloxacin",
+        "Hydrocortisone acetate"
+      ],
+      "top5_bcap": [
+        "Fusidic acid",
+        "Cortisone acetate",
+        "Hydrocortisone",
+        "Dexamethasone",
+        "Triamcinolone"
+      ],
+      "gold_debug_b050": {
+        "support_score": 1.0,
+        "base_rank": 17,
+        "support_rank": 8,
+        "evidence_edge_touch_count": 1,
+        "candidate_query_edge_count": 0,
+        "ontology_keep_flag": 0,
+        "contra_flag": 0
+      },
+      "gold_debug_bcap": {
+        "support_score": 0.5,
+        "base_rank": 17,
+        "support_rank": 14,
+        "evidence_edge_touch_count": 1,
+        "candidate_query_edge_count": 0,
+        "ontology_keep_flag": 0,
+        "contra_flag": 0
+      }
+    },
+    {
+      "query_entity": "chondrocalcinosis",
+      "gold_entity": "Prednisone",
+      "backbone_rank": 11,
+      "b050_rank": 3,
+      "bcap_rank": 10,
+      "b050_minus_backbone": -8,
+      "b050_minus_bcap": -7,
+      "top5_backbone": [
+        "Cortisone acetate",
+        "Dexamethasone",
+        "Hydrocortisone",
+        "Fusidic acid",
+        "Triamcinolone"
+      ],
+      "top5_b050": [
+        "Fusidic acid",
+        "Hydrocortisone acetate",
+        "Prednisone",
+        "Ofloxacin",
+        "Ciprofloxacin"
+      ],
+      "top5_bcap": [
+        "Cortisone acetate",
+        "Dexamethasone",
+        "Hydrocortisone",
+        "Fusidic acid",
+        "Triamcinolone"
+      ],
+      "gold_debug_b050": {
+        "support_score": 1.0,
+        "base_rank": 11,
+        "support_rank": 3,
+        "evidence_edge_touch_count": 1,
+        "candidate_query_edge_count": 0,
+        "ontology_keep_flag": 0,
+        "contra_flag": 0
+      },
+      "gold_debug_bcap": {
+        "support_score": 0.5,
+        "base_rank": 11,
+        "support_rank": 10,
+        "evidence_edge_touch_count": 1,
+        "candidate_query_edge_count": 0,
+        "ontology_keep_flag": 0,
+        "contra_flag": 0
+      }
+    }
+  ],
+  "top_unchanged_bad_vs_backbone": [
+    {
+      "query_entity": "streptococcal infection",
+      "gold_entity": "Cefixime",
+      "backbone_rank": 21,
+      "b050_rank": 21,
+      "bcap_rank": 21,
+      "b050_minus_backbone": 0,
+      "b050_minus_bcap": 0,
+      "top5_backbone": [
+        "Fusidic acid",
+        "Cortisone acetate",
+        "Norfloxacin",
+        "Hydrocortisone",
+        "Dexamethasone"
+      ],
+      "top5_b050": [
+        "Cortisone acetate",
+        "Hydrocortisone",
+        "Dexamethasone",
+        "Triamcinolone",
+        "Prednisolone"
+      ],
+      "top5_bcap": [
+        "Fusidic acid",
+        "Cortisone acetate",
+        "Hydrocortisone",
+        "Dexamethasone",
+        "Triamcinolone"
+      ],
+      "gold_debug_b050": {
+        "support_score": null,
+        "base_rank": null,
+        "support_rank": null,
+        "evidence_edge_touch_count": null,
+        "candidate_query_edge_count": null,
+        "ontology_keep_flag": null,
+        "contra_flag": null
+      },
+      "gold_debug_bcap": {
+        "support_score": null,
+        "base_rank": null,
+        "support_rank": null,
+        "evidence_edge_touch_count": null,
+        "candidate_query_edge_count": null,
+        "ontology_keep_flag": null,
+        "contra_flag": null
+      }
+    },
+    {
+      "query_entity": "dyspepsia",
+      "gold_entity": "Magnesium trisilicate",
+      "backbone_rank": 21,
+      "b050_rank": 21,
+      "bcap_rank": 21,
+      "b050_minus_backbone": 0,
+      "b050_minus_bcap": 0,
+      "top5_backbone": [
+        "Fusidic acid",
+        "Norfloxacin",
+        "Cortisone acetate",
+        "Hydrocortisone",
+        "Dexamethasone"
+      ],
+      "top5_b050": [
+        "Fusidic acid",
+        "Cortisone acetate",
+        "Hydrocortisone",
+        "Dexamethasone",
+        "Tetracycline"
+      ],
+      "top5_bcap": [
+        "Fusidic acid",
+        "Cortisone acetate",
+        "Hydrocortisone",
+        "Dexamethasone",
+        "Tetracycline"
+      ],
+      "gold_debug_b050": {
+        "support_score": null,
+        "base_rank": null,
+        "support_rank": null,
+        "evidence_edge_touch_count": null,
+        "candidate_query_edge_count": null,
+        "ontology_keep_flag": null,
+        "contra_flag": null
+      },
+      "gold_debug_bcap": {
+        "support_score": null,
+        "base_rank": null,
+        "support_rank": null,
+        "evidence_edge_touch_count": null,
+        "candidate_query_edge_count": null,
+        "ontology_keep_flag": null,
+        "contra_flag": null
+      }
+    },
+    {
+      "query_entity": "basal cell carcinoma",
+      "gold_entity": "Vismodegib",
+      "backbone_rank": 21,
+      "b050_rank": 21,
+      "bcap_rank": 21,
+      "b050_minus_backbone": 0,
+      "b050_minus_bcap": 0,
+      "top5_backbone": [
+        "Cortisone acetate",
+        "Dexamethasone",
+        "Methylprednisolone",
+        "Betamethasone",
+        "Hydrocortisone"
+      ],
+      "top5_b050": [
+        "Cortisone acetate",
+        "Dexamethasone",
+        "Methylprednisolone",
+        "Betamethasone",
+        "Hydrocortisone"
+      ],
+      "top5_bcap": [
+        "Cortisone acetate",
+        "Dexamethasone",
+        "Methylprednisolone",
+        "Betamethasone",
+        "Hydrocortisone"
+      ],
+      "gold_debug_b050": {
+        "support_score": null,
+        "base_rank": null,
+        "support_rank": null,
+        "evidence_edge_touch_count": null,
+        "candidate_query_edge_count": null,
+        "ontology_keep_flag": null,
+        "contra_flag": null
+      },
+      "gold_debug_bcap": {
+        "support_score": null,
+        "base_rank": null,
+        "support_rank": null,
+        "evidence_edge_touch_count": null,
+        "candidate_query_edge_count": null,
+        "ontology_keep_flag": null,
+        "contra_flag": null
+      }
+    },
+    {
+      "query_entity": "obsessive-compulsive disorder",
+      "gold_entity": "Fluoxetine",
+      "backbone_rank": 21,
+      "b050_rank": 21,
+      "bcap_rank": 21,
+      "b050_minus_backbone": 0,
+      "b050_minus_bcap": 0,
+      "top5_backbone": [
+        "Cortisone acetate",
+        "Dexamethasone",
+        "Methylprednisolone",
+        "Triamcinolone",
+        "Hydrocortisone"
+      ],
+      "top5_b050": [
+        "Cortisone acetate",
+        "Dexamethasone",
+        "Methylprednisolone",
+        "Triamcinolone",
+        "Hydrocortisone"
+      ],
+      "top5_bcap": [
+        "Cortisone acetate",
+        "Dexamethasone",
+        "Methylprednisolone",
+        "Triamcinolone",
+        "Hydrocortisone"
+      ],
+      "gold_debug_b050": {
+        "support_score": null,
+        "base_rank": null,
+        "support_rank": null,
+        "evidence_edge_touch_count": null,
+        "candidate_query_edge_count": null,
+        "ontology_keep_flag": null,
+        "contra_flag": null
+      },
+      "gold_debug_bcap": {
+        "support_score": null,
+        "base_rank": null,
+        "support_rank": null,
+        "evidence_edge_touch_count": null,
+        "candidate_query_edge_count": null,
+        "ontology_keep_flag": null,
+        "contra_flag": null
+      }
+    },
+    {
+      "query_entity": "Norwegian scabies",
+      "gold_entity": "Lindane",
+      "backbone_rank": 21,
+      "b050_rank": 21,
+      "bcap_rank": 21,
+      "b050_minus_backbone": 0,
+      "b050_minus_bcap": 0,
+      "top5_backbone": [
+        "Fusidic acid",
+        "Norfloxacin",
+        "Cortisone acetate",
+        "Hydrocortisone",
+        "Dexamethasone"
+      ],
+      "top5_b050": [
+        "Fusidic acid",
+        "Cortisone acetate",
+        "Hydrocortisone",
+        "Dexamethasone",
+        "Tetracycline"
+      ],
+      "top5_bcap": [
+        "Hydrocortisone",
+        "Fusidic acid",
+        "Cortisone acetate",
+        "Dexamethasone",
+        "Tetracycline"
+      ],
+      "gold_debug_b050": {
+        "support_score": null,
+        "base_rank": null,
+        "support_rank": null,
+        "evidence_edge_touch_count": null,
+        "candidate_query_edge_count": null,
+        "ontology_keep_flag": null,
+        "contra_flag": null
+      },
+      "gold_debug_bcap": {
+        "support_score": null,
+        "base_rank": null,
+        "support_rank": null,
+        "evidence_edge_touch_count": null,
+        "candidate_query_edge_count": null,
+        "ontology_keep_flag": null,
+        "contra_flag": null
+      }
+    },
+    {
+      "query_entity": "hypertension",
+      "gold_entity": "Amiloride",
+      "backbone_rank": 21,
+      "b050_rank": 21,
+      "bcap_rank": 21,
+      "b050_minus_backbone": 0,
+      "b050_minus_bcap": 0,
+      "top5_backbone": [
+        "Fusidic acid",
+        "Cortisone acetate",
+        "Hydrocortisone",
+        "Norfloxacin",
+        "Dexamethasone"
+      ],
+      "top5_b050": [
+        "Fusidic acid",
+        "Cortisone acetate",
+        "Hydrocortisone",
+        "Dexamethasone",
+        "Betamethasone"
+      ],
+      "top5_bcap": [
+        "Fusidic acid",
+        "Cortisone acetate",
+        "Hydrocortisone",
+        "Dexamethasone",
+        "Betamethasone"
+      ],
+      "gold_debug_b050": {
+        "support_score": null,
+        "base_rank": null,
+        "support_rank": null,
+        "evidence_edge_touch_count": null,
+        "candidate_query_edge_count": null,
+        "ontology_keep_flag": null,
+        "contra_flag": null
+      },
+      "gold_debug_bcap": {
+        "support_score": null,
+        "base_rank": null,
+        "support_rank": null,
+        "evidence_edge_touch_count": null,
+        "candidate_query_edge_count": null,
+        "ontology_keep_flag": null,
+        "contra_flag": null
+      }
+    },
+    {
+      "query_entity": "pneumococcal meningitis",
+      "gold_entity": "Meropenem",
+      "backbone_rank": 21,
+      "b050_rank": 21,
+      "bcap_rank": 21,
+      "b050_minus_backbone": 0,
+      "b050_minus_bcap": 0,
+      "top5_backbone": [
+        "Fusidic acid",
+        "Cortisone acetate",
+        "Dexamethasone",
+        "Hydrocortisone",
+        "Norfloxacin"
+      ],
+      "top5_b050": [
+        "Fusidic acid",
+        "Cortisone acetate",
+        "Dexamethasone",
+        "Hydrocortisone",
+        "Betamethasone"
+      ],
+      "top5_bcap": [
+        "Fusidic acid",
+        "Cortisone acetate",
+        "Dexamethasone",
+        "Hydrocortisone",
+        "Betamethasone"
+      ],
+      "gold_debug_b050": {
+        "support_score": null,
+        "base_rank": null,
+        "support_rank": null,
+        "evidence_edge_touch_count": null,
+        "candidate_query_edge_count": null,
+        "ontology_keep_flag": null,
+        "contra_flag": null
+      },
+      "gold_debug_bcap": {
+        "support_score": null,
+        "base_rank": null,
+        "support_rank": null,
+        "evidence_edge_touch_count": null,
+        "candidate_query_edge_count": null,
+        "ontology_keep_flag": null,
+        "contra_flag": null
+      }
+    },
+    {
+      "query_entity": "obsessive-compulsive disorder",
+      "gold_entity": "Paroxetine",
+      "backbone_rank": 21,
+      "b050_rank": 21,
+      "bcap_rank": 21,
+      "b050_minus_backbone": 0,
+      "b050_minus_bcap": 0,
+      "top5_backbone": [
+        "Cortisone acetate",
+        "Dexamethasone",
+        "Methylprednisolone",
+        "Triamcinolone",
+        "Hydrocortisone"
+      ],
+      "top5_b050": [
+        "Cortisone acetate",
+        "Dexamethasone",
+        "Methylprednisolone",
+        "Triamcinolone",
+        "Hydrocortisone"
+      ],
+      "top5_bcap": [
+        "Cortisone acetate",
+        "Dexamethasone",
+        "Methylprednisolone",
+        "Triamcinolone",
+        "Hydrocortisone"
+      ],
+      "gold_debug_b050": {
+        "support_score": null,
+        "base_rank": null,
+        "support_rank": null,
+        "evidence_edge_touch_count": null,
+        "candidate_query_edge_count": null,
+        "ontology_keep_flag": null,
+        "contra_flag": null
+      },
+      "gold_debug_bcap": {
+        "support_score": null,
+        "base_rank": null,
+        "support_rank": null,
+        "evidence_edge_touch_count": null,
+        "candidate_query_edge_count": null,
+        "ontology_keep_flag": null,
+        "contra_flag": null
+      }
+    }
+  ],
+  "top_improved_vs_bcap": [
+    {
+      "query_entity": "mantle cell lymphoma",
+      "gold_entity": "Mechlorethamine",
+      "backbone_rank": 20,
+      "b050_rank": 3,
+      "bcap_rank": 18,
+      "b050_minus_backbone": -17,
+      "b050_minus_bcap": -15,
+      "top5_backbone": [
+        "Cortisone acetate",
+        "Dexamethasone",
+        "Methylprednisolone",
+        "Hydrocortisone",
+        "Triamcinolone"
+      ],
+      "top5_b050": [
+        "Hydrocortisone acetate",
+        "Propranolol",
+        "Mechlorethamine",
+        "Cortisone acetate",
+        "Dexamethasone"
+      ],
+      "top5_bcap": [
+        "Cortisone acetate",
+        "Dexamethasone",
+        "Methylprednisolone",
+        "Hydrocortisone",
+        "Triamcinolone"
+      ],
+      "gold_debug_b050": {
+        "support_score": 1.0,
+        "base_rank": 20,
+        "support_rank": 3,
+        "evidence_edge_touch_count": 1,
+        "candidate_query_edge_count": 0,
+        "ontology_keep_flag": 0,
+        "contra_flag": 0
+      },
+      "gold_debug_bcap": {
+        "support_score": 0.5,
+        "base_rank": 20,
+        "support_rank": 18,
+        "evidence_edge_touch_count": 1,
+        "candidate_query_edge_count": 0,
+        "ontology_keep_flag": 0,
+        "contra_flag": 0
+      }
+    },
+    {
+      "query_entity": "Langerhans cell histiocytosis",
+      "gold_entity": "Bleomycin",
+      "backbone_rank": 14,
+      "b050_rank": 3,
+      "bcap_rank": 14,
+      "b050_minus_backbone": -11,
+      "b050_minus_bcap": -11,
+      "top5_backbone": [
+        "Cortisone acetate",
+        "Dexamethasone",
+        "Methylprednisolone",
+        "Hydrocortisone",
+        "Triamcinolone"
+      ],
+      "top5_b050": [
+        "Fusidic acid",
+        "Doxorubicin",
+        "Bleomycin",
+        "Propranolol",
+        "Cortisone acetate"
+      ],
+      "top5_bcap": [
+        "Cortisone acetate",
+        "Dexamethasone",
+        "Methylprednisolone",
+        "Hydrocortisone",
+        "Triamcinolone"
+      ],
+      "gold_debug_b050": {
+        "support_score": 1.0,
+        "base_rank": 14,
+        "support_rank": 3,
+        "evidence_edge_touch_count": 1,
+        "candidate_query_edge_count": 0,
+        "ontology_keep_flag": 0,
+        "contra_flag": 0
+      },
+      "gold_debug_bcap": {
+        "support_score": 0.5,
+        "base_rank": 14,
+        "support_rank": 14,
+        "evidence_edge_touch_count": 1,
+        "candidate_query_edge_count": 0,
+        "ontology_keep_flag": 0,
+        "contra_flag": 0
+      }
+    },
+    {
+      "query_entity": "primary cutaneous T-cell lymphoma",
+      "gold_entity": "Methotrexate",
+      "backbone_rank": 19,
+      "b050_rank": 8,
+      "bcap_rank": 17,
+      "b050_minus_backbone": -11,
+      "b050_minus_bcap": -9,
+      "top5_backbone": [
+        "Cortisone acetate",
+        "Dexamethasone",
+        "Methylprednisolone",
+        "Hydrocortisone",
+        "Betamethasone"
+      ],
+      "top5_b050": [
+        "Hydrocortisone",
+        "Doxorubicin",
+        "Carmustine",
+        "Bleomycin",
+        "Thiotepa"
+      ],
+      "top5_bcap": [
+        "Cortisone acetate",
+        "Dexamethasone",
+        "Methylprednisolone",
+        "Hydrocortisone",
+        "Betamethasone"
+      ],
+      "gold_debug_b050": {
+        "support_score": 1.0,
+        "base_rank": 19,
+        "support_rank": 8,
+        "evidence_edge_touch_count": 1,
+        "candidate_query_edge_count": 0,
+        "ontology_keep_flag": 0,
+        "contra_flag": 0
+      },
+      "gold_debug_bcap": {
+        "support_score": 0.5,
+        "base_rank": 19,
+        "support_rank": 17,
+        "evidence_edge_touch_count": 1,
+        "candidate_query_edge_count": 0,
+        "ontology_keep_flag": 0,
+        "contra_flag": 0
+      }
+    },
+    {
+      "query_entity": "primary cutaneous T-cell lymphoma",
+      "gold_entity": "Mechlorethamine",
+      "backbone_rank": 20,
+      "b050_rank": 9,
+      "bcap_rank": 18,
+      "b050_minus_backbone": -11,
+      "b050_minus_bcap": -9,
+      "top5_backbone": [
+        "Cortisone acetate",
+        "Dexamethasone",
+        "Methylprednisolone",
+        "Hydrocortisone",
+        "Betamethasone"
+      ],
+      "top5_b050": [
+        "Hydrocortisone",
+        "Doxorubicin",
+        "Carmustine",
+        "Bleomycin",
+        "Thiotepa"
+      ],
+      "top5_bcap": [
+        "Cortisone acetate",
+        "Dexamethasone",
+        "Methylprednisolone",
+        "Hydrocortisone",
+        "Betamethasone"
+      ],
+      "gold_debug_b050": {
+        "support_score": 1.0,
+        "base_rank": 20,
+        "support_rank": 9,
+        "evidence_edge_touch_count": 1,
+        "candidate_query_edge_count": 0,
+        "ontology_keep_flag": 0,
+        "contra_flag": 0
+      },
+      "gold_debug_bcap": {
+        "support_score": 0.5,
+        "base_rank": 20,
+        "support_rank": 18,
+        "evidence_edge_touch_count": 1,
+        "candidate_query_edge_count": 0,
+        "ontology_keep_flag": 0,
+        "contra_flag": 0
+      }
+    },
+    {
+      "query_entity": "vasomotor rhinitis",
+      "gold_entity": "Prednisone",
+      "backbone_rank": 16,
+      "b050_rank": 6,
+      "bcap_rank": 14,
+      "b050_minus_backbone": -10,
+      "b050_minus_bcap": -8,
+      "top5_backbone": [
+        "Fusidic acid",
+        "Cortisone acetate",
+        "Norfloxacin",
+        "Dexamethasone",
+        "Hydrocortisone"
+      ],
+      "top5_b050": [
+        "Fusidic acid",
+        "Methylprednisolone",
+        "Tetracycline",
+        "Ofloxacin",
+        "Ciprofloxacin"
+      ],
+      "top5_bcap": [
+        "Fusidic acid",
+        "Cortisone acetate",
+        "Dexamethasone",
+        "Hydrocortisone",
+        "Betamethasone"
+      ],
+      "gold_debug_b050": {
+        "support_score": 1.0,
+        "base_rank": 16,
+        "support_rank": 6,
+        "evidence_edge_touch_count": 1,
+        "candidate_query_edge_count": 0,
+        "ontology_keep_flag": 0,
+        "contra_flag": 0
+      },
+      "gold_debug_bcap": {
+        "support_score": 0.5,
+        "base_rank": 16,
+        "support_rank": 14,
+        "evidence_edge_touch_count": 1,
+        "candidate_query_edge_count": 0,
+        "ontology_keep_flag": 0,
+        "contra_flag": 0
+      }
+    },
+    {
+      "query_entity": "mantle cell lymphoma",
+      "gold_entity": "Hydrocortisone acetate",
+      "backbone_rank": 8,
+      "b050_rank": 1,
+      "bcap_rank": 8,
+      "b050_minus_backbone": -7,
+      "b050_minus_bcap": -7,
+      "top5_backbone": [
+        "Cortisone acetate",
+        "Dexamethasone",
+        "Methylprednisolone",
+        "Hydrocortisone",
+        "Triamcinolone"
+      ],
+      "top5_b050": [
+        "Hydrocortisone acetate",
+        "Propranolol",
+        "Mechlorethamine",
+        "Cortisone acetate",
+        "Dexamethasone"
+      ],
+      "top5_bcap": [
+        "Cortisone acetate",
+        "Dexamethasone",
+        "Methylprednisolone",
+        "Hydrocortisone",
+        "Triamcinolone"
+      ],
+      "gold_debug_b050": {
+        "support_score": 1.0,
+        "base_rank": 8,
+        "support_rank": 1,
+        "evidence_edge_touch_count": 1,
+        "candidate_query_edge_count": 0,
+        "ontology_keep_flag": 0,
+        "contra_flag": 0
+      },
+      "gold_debug_bcap": {
+        "support_score": 0.5,
+        "base_rank": 8,
+        "support_rank": 8,
+        "evidence_edge_touch_count": 1,
+        "candidate_query_edge_count": 0,
+        "ontology_keep_flag": 0,
+        "contra_flag": 0
+      }
+    },
+    {
+      "query_entity": "acute lymphoblastic/lymphocytic leukemia",
+      "gold_entity": "Prednisone",
+      "backbone_rank": 8,
+      "b050_rank": 1,
+      "bcap_rank": 8,
+      "b050_minus_backbone": -7,
+      "b050_minus_bcap": -7,
+      "top5_backbone": [
+        "Cortisone acetate",
+        "Dexamethasone",
+        "Methylprednisolone",
+        "Hydrocortisone",
+        "Betamethasone"
+      ],
+      "top5_b050": [
+        "Prednisone",
+        "Carmustine",
+        "Vinblastine",
+        "Bleomycin",
+        "Propranolol"
+      ],
+      "top5_bcap": [
+        "Cortisone acetate",
+        "Dexamethasone",
+        "Methylprednisolone",
+        "Hydrocortisone",
+        "Betamethasone"
+      ],
+      "gold_debug_b050": {
+        "support_score": 1.0,
+        "base_rank": 8,
+        "support_rank": 1,
+        "evidence_edge_touch_count": 1,
+        "candidate_query_edge_count": 0,
+        "ontology_keep_flag": 0,
+        "contra_flag": 0
+      },
+      "gold_debug_bcap": {
+        "support_score": 0.5,
+        "base_rank": 8,
+        "support_rank": 8,
+        "evidence_edge_touch_count": 1,
+        "candidate_query_edge_count": 0,
+        "ontology_keep_flag": 0,
+        "contra_flag": 0
+      }
+    },
+    {
+      "query_entity": "granulomatous slack skin disease",
+      "gold_entity": "Prednisone",
+      "backbone_rank": 9,
+      "b050_rank": 2,
+      "bcap_rank": 9,
+      "b050_minus_backbone": -7,
+      "b050_minus_bcap": -7,
+      "top5_backbone": [
+        "Cortisone acetate",
+        "Dexamethasone",
+        "Methylprednisolone",
+        "Hydrocortisone",
+        "Triamcinolone"
+      ],
+      "top5_b050": [
+        "Dexamethasone",
+        "Prednisone",
+        "Doxorubicin",
+        "Carmustine",
+        "Bleomycin"
+      ],
+      "top5_bcap": [
+        "Cortisone acetate",
+        "Dexamethasone",
+        "Methylprednisolone",
+        "Hydrocortisone",
+        "Triamcinolone"
+      ],
+      "gold_debug_b050": {
+        "support_score": 1.0,
+        "base_rank": 9,
+        "support_rank": 2,
+        "evidence_edge_touch_count": 1,
+        "candidate_query_edge_count": 0,
+        "ontology_keep_flag": 0,
+        "contra_flag": 0
+      },
+      "gold_debug_bcap": {
+        "support_score": 0.5,
+        "base_rank": 9,
+        "support_rank": 9,
+        "evidence_edge_touch_count": 1,
+        "candidate_query_edge_count": 0,
+        "ontology_keep_flag": 0,
+        "contra_flag": 0
+      }
+    }
+  ],
+  "notes": [
+    "This casepack is the compact evidence bundle for the Week 14 row decision.",
+    "Use it next week when explaining why soft_support_raw is the right bridge into retrieval-stage work."
+  ]
+}
