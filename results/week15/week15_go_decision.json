@@ -1,0 +1,87 @@
+{
+  "week": 15,
+  "decision": "GO",
+  "main_input_row": "soft_support_raw",
+  "main_output_row": "soft_support_fuzzy_retrieval_v1",
+  "reference_row": "backbone_raw",
+  "negative_control": "ontology_raw",
+  "week15_main_findings": {
+    "avg_subgraph_size_before": 60.45,
+    "avg_subgraph_size_after": 36.714,
+    "avg_triple_score_after": 0.440709,
+    "direct_shortcut_path_rate_before": 0.184775,
+    "direct_shortcut_path_rate_after": 0.129513,
+    "shortcut_gain_vs_soft_support": 0.055262,
+    "candidate_coverage_preserved_rate": 1.0,
+    "mrr_like_soft_support": 0.097644,
+    "mrr_like_fuzzy_v1": 0.097644,
+    "hits1_like_soft_support": 0.056,
+    "hits1_like_fuzzy_v1": 0.056,
+    "avg_gold_rank_soft_support": 17.676,
+    "avg_gold_rank_fuzzy_v1": 17.676
+  },
+  "delta_vs_soft_support": {
+    "mrr_like": 0.0,
+    "hits1_like": 0.0,
+    "hits3_like": 0.0,
+    "hits10_like": 0.0,
+    "avg_gold_rank": 0.0,
+    "direct_shortcut_path_rate": -0.055262,
+    "avg_top5_direct_link_rate": 0.0
+  },
+  "delta_vs_backbone": {
+    "mrr_like": 0.043841,
+    "hits1_like": 0.032,
+    "hits3_like": 0.088,
+    "hits10_like": 0.024,
+    "avg_gold_rank": -0.7,
+    "direct_shortcut_path_rate": -0.055262,
+    "avg_top5_direct_link_rate": -0.2336
+  },
+  "case_review_summary": {
+    "preserved_improvement_vs_backbone": 80,
+    "same_rank_cleaner_subgraph": 251,
+    "unchanged_bad": 415,
+    "raw_bottleneck_failure": 407,
+    "improved_vs_soft_support": 0,
+    "worsened_vs_soft_support": 0
+  },
+  "anchor_diagnostics": {
+    "avg_query_touch_count_before": 23.854,
+    "avg_query_touch_count_after": 9.73,
+    "avg_non_direct_query_touch_count_before": 13.85,
+    "avg_non_direct_query_touch_count_after": 5.162,
+    "row_has_any_query_touch_before_rate": 1.0,
+    "row_has_any_query_touch_after_rate": 1.0,
+    "row_has_any_non_direct_query_touch_before_rate": 0.974,
+    "row_has_any_non_direct_query_touch_after_rate": 0.974,
+    "non_direct_query_touch_row_preserved_rate": 1.0,
+    "notes": [
+      "Anchor diagnostics are reported as cautionary evidence only.",
+      "They are not used as a hard blocker for week-15 freeze.",
+      "Week-15 main objective is cleaner evidence without ranking collapse."
+    ]
+  },
+  "week15_go_checks": {
+    "valid_fuzzy_retrieval_v1_built_cleanly": true,
+    "shortcut_noise_reduced_vs_soft_support": true,
+    "ranking_like_proxy_not_collapsed": true,
+    "case_review_supports_cleaner_subgraph": true
+  },
+  "main_takeaway": [
+    "Retrieval v1 produces a substantially smaller and cleaner evidence bundle than the original evidence package.",
+    "The main improvement of week 15 is evidence cleanliness, not additional candidate-stage rank movement.",
+    "The dominant remaining failure mode is raw/candidate bottleneck rather than retrieval breakage.",
+    "Query anchoring remains a cautionary factor for week 16 but does not block freeze of retrieval v1."
+  ],
+  "week16_recommendation": {
+    "theme": "retrieval_sweep_and_main_row_selection",
+    "main_goal": "select or refine the main retrieval-stage row on valid before any encoder-stage expansion",
+    "do_not_do": [
+      "do_not_change_raw_source",
+      "do_not_reopen_candidate_stage",
+      "do_not_jump_to_encoder_without_retrieval_selection",
+      "do_not_run_test_yet"
+    ]
+  }
+}
