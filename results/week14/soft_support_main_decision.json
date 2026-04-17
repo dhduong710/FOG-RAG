@@ -1,0 +1,31 @@
+{
+  "week": 14,
+  "decision": "SELECT_SOFT_SUPPORT_MAIN",
+  "selected_variant": "soft_support_raw_b050",
+  "selected_output": "dataset/setting_a/26_n2_soft_support/valid_top20_soft_support_main.json",
+  "reason": {
+    "exact_match_with_b025": true,
+    "better_than_backbone_raw": {
+      "mrr_like_delta": 0.043841,
+      "hits1_like_delta": 0.032,
+      "avg_gold_rank_delta": -0.7,
+      "worsened_rate_vs_backbone_raw": 0.0
+    },
+    "better_than_bcap": {
+      "mrr_like_delta": 0.04318,
+      "avg_gold_rank_delta": -0.576,
+      "top5_direct_link_rate_delta": -0.238
+    },
+    "ontology_raw_is_negative_control": {
+      "ontology_mrr_like": 0.050869,
+      "ontology_gold_present_rate": 0.014,
+      "ontology_worsened_rate_vs_backbone_raw": 0.19
+    }
+  },
+  "week15_policy": [
+    "use soft_support_raw as the main intermediate row",
+    "do not revisit b025",
+    "keep bcap only as a contrast row",
+    "prepare transition toward retrieval-stage work without changing the frozen raw source"
+  ]
+}
