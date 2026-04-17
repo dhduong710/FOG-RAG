@@ -1,0 +1,29 @@
+]633;E;echo "DATE: $(date)";fc9c422a-1be2-49f6-bd65-49b3fcc8fe90]633;CDATE: Fri Apr 17 09:20:44 +07 2026
+BRANCH: week_13
+COMMIT: 436789a236e61ae580f07f7b8ca9a0b341864cb1
+
+TOP-LEVEL TREE:
+.
+./.git
+./.gitignore
+./LICENSE
+./Miniconda3-latest-Linux-x86_64.sh
+./README.md
+./__pycache__
+./arguments.py
+./backups
+./checkpoints
+./configs
+./data
+./dataset
+./infer.py
+./lexicon
+./logs
+./main.py
+./model
+./prompt_subgraph.py
+./reports
+./results
+./runs
+./scripts
+./structure.txt
