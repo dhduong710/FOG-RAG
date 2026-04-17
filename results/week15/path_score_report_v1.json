@@ -1,0 +1,311 @@
+{
+  "week": 15,
+  "day": 6,
+  "variant_name": "soft_support_fuzzy_retrieval_v1",
+  "day2_supporting_summary": {
+    "avg_subgraph_size_before": 60.45,
+    "touch_candidate_rate_before": 0.452341,
+    "direct_candidate_query_rate_before": 0.165492,
+    "contra_flag_rate_before": 0.005459
+  },
+  "day3_retrieval_build_summary": {
+    "num_rows": 500,
+    "avg_original_subgraph_size": 60.45,
+    "avg_selected_subgraph_size": 36.714,
+    "direct_shortcut_rate_before": 0.165492,
+    "direct_shortcut_rate_after": 0.124421,
+    "contra_rate_before": 0.005459,
+    "contra_rate_after": 0.006265,
+    "avg_candidate_coverage_preserved_rate": 1.0,
+    "avg_top_band_coverage_preserved_rate": 1.0
+  },
+  "day4_compare_summary": {
+    "backbone_raw": {
+      "mrr_like": 0.053803,
+      "hits1_like": 0.024,
+      "hits3_like": 0.046,
+      "hits10_like": 0.158,
+      "avg_gold_rank": 18.376,
+      "avg_subgraph_size": 60.45,
+      "avg_triple_score": null,
+      "direct_shortcut_path_rate": 0.184775,
+      "contradiction_path_rate": 0.005681,
+      "candidate_coverage_preserved_rate": 1.0,
+      "avg_top5_direct_link_rate": 0.2408,
+      "avg_top5_evidence_positive_rate": 0.9396,
+      "avg_top5_contra_rate": 0.0108
+    },
+    "soft_support_raw": {
+      "mrr_like": 0.097644,
+      "hits1_like": 0.056,
+      "hits3_like": 0.134,
+      "hits10_like": 0.182,
+      "avg_gold_rank": 17.676,
+      "avg_subgraph_size": 60.45,
+      "avg_triple_score": null,
+      "direct_shortcut_path_rate": 0.184775,
+      "contradiction_path_rate": 0.005681,
+      "candidate_coverage_preserved_rate": 1.0,
+      "avg_top5_direct_link_rate": 0.0072,
+      "avg_top5_evidence_positive_rate": 1.0,
+      "avg_top5_contra_rate": 0.0092
+    },
+    "soft_support_fuzzy_retrieval_v1": {
+      "mrr_like": 0.097644,
+      "hits1_like": 0.056,
+      "hits3_like": 0.134,
+      "hits10_like": 0.182,
+      "avg_gold_rank": 17.676,
+      "avg_subgraph_size": 36.714,
+      "avg_triple_score": 0.440709,
+      "direct_shortcut_path_rate": 0.129513,
+      "contradiction_path_rate": 0.006121,
+      "candidate_coverage_preserved_rate": 1.0,
+      "avg_top5_direct_link_rate": 0.0072,
+      "avg_top5_evidence_positive_rate": 1.0,
+      "avg_top5_contra_rate": 0.0092
+    },
+    "delta_fuzzy_vs_soft_support": {
+      "mrr_like": 0.0,
+      "hits1_like": 0.0,
+      "hits3_like": 0.0,
+      "hits10_like": 0.0,
+      "avg_gold_rank": 0.0,
+      "direct_shortcut_path_rate": -0.055262,
+      "avg_top5_direct_link_rate": 0.0
+    },
+    "delta_fuzzy_vs_backbone": {
+      "mrr_like": 0.043841,
+      "hits1_like": 0.032,
+      "hits3_like": 0.088,
+      "hits10_like": 0.024,
+      "avg_gold_rank": -0.7,
+      "direct_shortcut_path_rate": -0.055262,
+      "avg_top5_direct_link_rate": -0.2336
+    },
+    "case_level": {
+      "improved_vs_backbone": 80,
+      "worsened_vs_backbone": 0,
+      "improved_vs_soft_support": 0,
+      "worsened_vs_soft_support": 0,
+      "sample_cases": [
+        {
+          "row_index": 10,
+          "row_uid": "valid::10::9539::2446",
+          "query_entity": "diffuse large B-cell lymphoma",
+          "gold_entity": "Doxorubicin",
+          "rank_backbone": 10,
+          "rank_soft_support": 8,
+          "rank_fuzzy_v1": 8
+        },
+        {
+          "row_index": 11,
+          "row_uid": "valid::11::10028::962",
+          "query_entity": "obsolete Hodgkin's granuloma",
+          "gold_entity": "Betamethasone",
+          "rank_backbone": 6,
+          "rank_soft_support": 2,
+          "rank_fuzzy_v1": 2
+        },
+        {
+          "row_index": 13,
+          "row_uid": "valid::13::9806::2378",
+          "query_entity": "infectious anterior uveitis",
+          "gold_entity": "Dexamethasone",
+          "rank_backbone": 4,
+          "rank_soft_support": 2,
+          "rank_fuzzy_v1": 2
+        },
+        {
+          "row_index": 20,
+          "row_uid": "valid::20::9440::6826",
+          "query_entity": "chronic cutaneous lupus erythematosus",
+          "gold_entity": "Prednisolone",
+          "rank_backbone": 8,
+          "rank_soft_support": 3,
+          "rank_fuzzy_v1": 3
+        },
+        {
+          "row_index": 29,
+          "row_uid": "valid::29::9697::2447",
+          "query_entity": "gonococcal epididymo-orchitis",
+          "gold_entity": "Doxycycline",
+          "rank_backbone": 10,
+          "rank_soft_support": 7,
+          "rank_fuzzy_v1": 7
+        },
+        {
+          "row_index": 30,
+          "row_uid": "valid::30::10070::3830",
+          "query_entity": "ovarian mucinous adenocarcinoma",
+          "gold_entity": "Hydroxyurea",
+          "rank_backbone": 20,
+          "rank_soft_support": 16,
+          "rank_fuzzy_v1": 16
+        },
+        {
+          "row_index": 36,
+          "row_uid": "valid::36::9231::6828",
+          "query_entity": "actinic keratosis (disease)",
+          "gold_entity": "Prednisone",
+          "rank_backbone": 10,
+          "rank_soft_support": 5,
+          "rank_fuzzy_v1": 5
+        },
+        {
+          "row_index": 40,
+          "row_uid": "valid::40::10121::2447",
+          "query_entity": "pharyngitis",
+          "gold_entity": "Doxycycline",
+          "rank_backbone": 8,
+          "rank_soft_support": 5,
+          "rank_fuzzy_v1": 5
+        },
+        {
+          "row_index": 44,
+          "row_uid": "valid::44::9704::6828",
+          "query_entity": "granulomatous slack skin disease",
+          "gold_entity": "Prednisone",
+          "rank_backbone": 9,
+          "rank_soft_support": 2,
+          "rank_fuzzy_v1": 2
+        },
+        {
+          "row_index": 53,
+          "row_uid": "valid::53::9330::5426",
+          "query_entity": "atopic eczema",
+          "gold_entity": "Methylprednisolone",
+          "rank_backbone": 5,
+          "rank_soft_support": 1,
+          "rank_fuzzy_v1": 1
+        },
+        {
+          "row_index": 54,
+          "row_uid": "valid::54::9704::2378",
+          "query_entity": "granulomatous slack skin disease",
+          "gold_entity": "Dexamethasone",
+          "rank_backbone": 2,
+          "rank_soft_support": 1,
+          "rank_fuzzy_v1": 1
+        },
+        {
+          "row_index": 62,
+          "row_uid": "valid::62::9617::962",
+          "query_entity": "eye disease",
+          "gold_entity": "Betamethasone",
+          "rank_backbone": 5,
+          "rank_soft_support": 2,
+          "rank_fuzzy_v1": 2
+        },
+        {
+          "row_index": 74,
+          "row_uid": "valid::74::9635::6826",
+          "query_entity": "familial nephrotic syndrome",
+          "gold_entity": "Prednisolone",
+          "rank_backbone": 9,
+          "rank_soft_support": 2,
+          "rank_fuzzy_v1": 2
+        },
+        {
+          "row_index": 75,
+          "row_uid": "valid::75::9243::962",
+          "query_entity": "acute lymphoblastic leukemia (disease)",
+          "gold_entity": "Betamethasone",
+          "rank_backbone": 5,
+          "rank_soft_support": 2,
+          "rank_fuzzy_v1": 2
+        },
+        {
+          "row_index": 77,
+          "row_uid": "valid::77::9831::3824",
+          "query_entity": "intrinsic asthma",
+          "gold_entity": "Hydrocortisone",
+          "rank_backbone": 4,
+          "rank_soft_support": 1,
+          "rank_fuzzy_v1": 1
+        },
+        {
+          "row_index": 82,
+          "row_uid": "valid::82::9608::5426",
+          "query_entity": "exanthem (disease)",
+          "gold_entity": "Methylprednisolone",
+          "rank_backbone": 7,
+          "rank_soft_support": 3,
+          "rank_fuzzy_v1": 3
+        },
+        {
+          "row_index": 84,
+          "row_uid": "valid::84::10421::8666",
+          "query_entity": "urinary tract infection (disease)",
+          "gold_entity": "Tetracycline",
+          "rank_backbone": 10,
+          "rank_soft_support": 6,
+          "rank_fuzzy_v1": 6
+        },
+        {
+          "row_index": 92,
+          "row_uid": "valid::92::10289::962",
+          "query_entity": "skin disease",
+          "gold_entity": "Betamethasone",
+          "rank_backbone": 4,
+          "rank_soft_support": 3,
+          "rank_fuzzy_v1": 3
+        },
+        {
+          "row_index": 106,
+          "row_uid": "valid::106::9810::8732",
+          "query_entity": "inflammatory bowel disease",
+          "gold_entity": "Triamcinolone",
+          "rank_backbone": 5,
+          "rank_soft_support": 2,
+          "rank_fuzzy_v1": 2
+        },
+        {
+          "row_index": 117,
+          "row_uid": "valid::117::2047::6826",
+          "query_entity": "Crohn's colitis",
+          "gold_entity": "Prednisolone",
+          "rank_backbone": 7,
+          "rank_soft_support": 1,
+          "rank_fuzzy_v1": 1
+        }
+      ]
+    }
+  },
+  "day5_bucket_counts": {
+    "preserved_improvement_vs_backbone": 80,
+    "same_rank_cleaner_subgraph": 251,
+    "unchanged_bad": 415,
+    "raw_bottleneck_failure": 407
+  },
+  "anchor_diagnostics": {
+    "avg_query_touch_count_before": 23.854,
+    "avg_query_touch_count_after": 9.73,
+    "avg_non_direct_query_touch_count_before": 13.85,
+    "avg_non_direct_query_touch_count_after": 5.162,
+    "row_has_any_query_touch_before_rate": 1.0,
+    "row_has_any_query_touch_after_rate": 1.0,
+    "row_has_any_non_direct_query_touch_before_rate": 0.974,
+    "row_has_any_non_direct_query_touch_after_rate": 0.974,
+    "non_direct_query_touch_row_preserved_rate": 1.0,
+    "notes": [
+      "Anchor diagnostics are reported as cautionary evidence only.",
+      "They are not used as a hard blocker for week-15 freeze.",
+      "Week-15 main objective is cleaner evidence without ranking collapse."
+    ]
+  },
+  "freeze_checks": {
+    "coverage_ok": true,
+    "shortcut_gain_ok": true,
+    "no_worsened_vs_soft": true,
+    "mrr_not_collapsed": true
+  },
+  "shortcut_gain_vs_soft_support": 0.055262,
+  "recommended_action": "freeze_v1",
+  "rationale": "Retrieval v1 reduces shortcut-heavy evidence clearly, preserves candidate coverage, and does not worsen ranking-like proxy relative to soft_support_raw.",
+  "week15_takeaway": [
+    "retrieval v1 cleans the evidence bundle without ranking collapse",
+    "the dominant remaining failure mode is raw / candidate bottleneck rather than retrieval breakage",
+    "query-anchoring diagnostics should be carried as a caution into week 16, but they do not block week-15 freeze"
+  ]
+}
