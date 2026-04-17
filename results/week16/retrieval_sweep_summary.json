@@ -1,0 +1,59 @@
+{
+  "week": 16,
+  "day": 3,
+  "retrieval_variants": [
+    "soft_support_fuzzy_retrieval_v1",
+    "soft_support_fuzzy_retrieval_tight",
+    "soft_support_fuzzy_retrieval_directplus"
+  ],
+  "evidence_cleanliness_order": [
+    {
+      "variant_name": "soft_support_fuzzy_retrieval_tight",
+      "direct_shortcut_path_rate": 0.105536,
+      "avg_subgraph_size": 32.556,
+      "candidate_coverage_preserved_rate": 1.0
+    },
+    {
+      "variant_name": "soft_support_fuzzy_retrieval_v1",
+      "direct_shortcut_path_rate": 0.129513,
+      "avg_subgraph_size": 36.714,
+      "candidate_coverage_preserved_rate": 1.0
+    },
+    {
+      "variant_name": "soft_support_fuzzy_retrieval_directplus",
+      "direct_shortcut_path_rate": 0.129513,
+      "avg_subgraph_size": 36.714,
+      "candidate_coverage_preserved_rate": 1.0
+    }
+  ],
+  "ranking_proxy_order": [
+    {
+      "variant_name": "soft_support_fuzzy_retrieval_v1",
+      "mrr_like": 0.097644,
+      "avg_gold_rank": 17.676,
+      "worsened_vs_soft_support": 0
+    },
+    {
+      "variant_name": "soft_support_fuzzy_retrieval_tight",
+      "mrr_like": 0.097644,
+      "avg_gold_rank": 17.676,
+      "worsened_vs_soft_support": 0
+    },
+    {
+      "variant_name": "soft_support_fuzzy_retrieval_directplus",
+      "mrr_like": 0.097644,
+      "avg_gold_rank": 17.676,
+      "worsened_vs_soft_support": 0
+    }
+  ],
+  "redundancy_check": {
+    "soft_support_fuzzy_retrieval_v1": 1.0,
+    "soft_support_fuzzy_retrieval_tight": 0.176,
+    "soft_support_fuzzy_retrieval_directplus": 0.746
+  },
+  "provisional_read": [
+    "A strong main-row candidate should reduce shortcut-heavy evidence more than v1 without introducing worsened_vs_soft_support.",
+    "If a variant is nearly identical to v1, it should not be kept as a distinct candidate.",
+    "If tight wins on evidence cleanliness but clearly hurts ranking proxy, it may remain a supporting row rather than the main row."
+  ]
+}
