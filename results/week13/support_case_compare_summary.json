@@ -1,0 +1,9 @@
+{
+  "num_queries": 500,
+  "num_improved": 77,
+  "num_worsened": 0,
+  "num_unchanged_good": 20,
+  "num_unchanged_bad": 403,
+  "improved_rate": 0.154,
+  "worsened_rate": 0.0
+}
