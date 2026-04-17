@@ -1,0 +1,123 @@
+{
+  "week": 14,
+  "stage": "valid_compare",
+  "row_summaries": {
+    "backbone_raw": {
+      "row_name": "backbone_raw",
+      "num_queries": 500,
+      "avg_candidate_size": 20.0,
+      "gold_present_rate": 0.202,
+      "mrr_like": 0.091803,
+      "hits1_like": 0.024,
+      "hits3_like": 0.046,
+      "hits10_like": 0.158,
+      "avg_gold_rank": 18.376,
+      "avg_top5_direct_link_rate": 0.2408,
+      "avg_top5_evidence_positive_rate": 0.9396,
+      "avg_top5_ontology_keep_rate": 0.5392,
+      "avg_top5_contra_rate": 0.0,
+      "num_queries_top1_changed_vs_backbone_raw": 0,
+      "top1_changed_rate_vs_backbone_raw": 0.0,
+      "improved_rate_vs_backbone_raw": 0.0,
+      "worsened_rate_vs_backbone_raw": 0.0
+    },
+    "ontology_raw": {
+      "row_name": "ontology_raw",
+      "num_queries": 500,
+      "avg_candidate_size": 8.796,
+      "gold_present_rate": 0.014,
+      "mrr_like": 0.215324,
+      "hits1_like": 0.002,
+      "hits3_like": 0.332,
+      "hits10_like": 0.668,
+      "avg_gold_rank": 9.638,
+      "avg_top5_direct_link_rate": 0.5296,
+      "avg_top5_evidence_positive_rate": 0.9784,
+      "avg_top5_ontology_keep_rate": 1.0,
+      "avg_top5_contra_rate": 0.0,
+      "num_queries_top1_changed_vs_backbone_raw": 211,
+      "top1_changed_rate_vs_backbone_raw": 0.422,
+      "improved_rate_vs_backbone_raw": 0.61,
+      "worsened_rate_vs_backbone_raw": 0.102
+    },
+    "soft_support_raw_b025": {
+      "row_name": "soft_support_raw_b025",
+      "num_queries": 500,
+      "avg_candidate_size": 20.0,
+      "gold_present_rate": 0.202,
+      "mrr_like": 0.135644,
+      "hits1_like": 0.056,
+      "hits3_like": 0.134,
+      "hits10_like": 0.182,
+      "avg_gold_rank": 17.676,
+      "avg_top5_direct_link_rate": 0.0072,
+      "avg_top5_evidence_positive_rate": 1.0,
+      "avg_top5_ontology_keep_rate": 0.3068,
+      "avg_top5_contra_rate": 0.0,
+      "num_queries_top1_changed_vs_backbone_raw": 150,
+      "top1_changed_rate_vs_backbone_raw": 0.3,
+      "improved_rate_vs_backbone_raw": 0.16,
+      "worsened_rate_vs_backbone_raw": 0.0
+    },
+    "soft_support_raw_b050": {
+      "row_name": "soft_support_raw_b050",
+      "num_queries": 500,
+      "avg_candidate_size": 20.0,
+      "gold_present_rate": 0.202,
+      "mrr_like": 0.135644,
+      "hits1_like": 0.056,
+      "hits3_like": 0.134,
+      "hits10_like": 0.182,
+      "avg_gold_rank": 17.676,
+      "avg_top5_direct_link_rate": 0.0072,
+      "avg_top5_evidence_positive_rate": 1.0,
+      "avg_top5_ontology_keep_rate": 0.3068,
+      "avg_top5_contra_rate": 0.0,
+      "num_queries_top1_changed_vs_backbone_raw": 150,
+      "top1_changed_rate_vs_backbone_raw": 0.3,
+      "improved_rate_vs_backbone_raw": 0.16,
+      "worsened_rate_vs_backbone_raw": 0.0
+    },
+    "soft_support_raw_bcap": {
+      "row_name": "soft_support_raw_bcap",
+      "num_queries": 500,
+      "avg_candidate_size": 20.0,
+      "gold_present_rate": 0.202,
+      "mrr_like": 0.092464,
+      "hits1_like": 0.022,
+      "hits3_like": 0.05,
+      "hits10_like": 0.158,
+      "avg_gold_rank": 18.252,
+      "avg_top5_direct_link_rate": 0.2452,
+      "avg_top5_evidence_positive_rate": 1.0,
+      "avg_top5_ontology_keep_rate": 0.544,
+      "avg_top5_contra_rate": 0.0,
+      "num_queries_top1_changed_vs_backbone_raw": 26,
+      "top1_changed_rate_vs_backbone_raw": 0.052,
+      "improved_rate_vs_backbone_raw": 0.056,
+      "worsened_rate_vs_backbone_raw": 0.01
+    }
+  },
+  "pairwise_order_match": {
+    "b025_vs_b050": {
+      "exact_order_match_rate": 1.0,
+      "top5_order_match_rate": 1.0,
+      "top1_match_rate": 1.0
+    },
+    "b025_vs_bcap": {
+      "exact_order_match_rate": 0.432,
+      "top5_order_match_rate": 0.562,
+      "top1_match_rate": 0.662
+    },
+    "b050_vs_bcap": {
+      "exact_order_match_rate": 0.432,
+      "top5_order_match_rate": 0.562,
+      "top1_match_rate": 0.662
+    }
+  },
+  "notes": [
+    "Week 14 is still candidate-stage only.",
+    "No test decision is allowed here.",
+    "Pairwise order match is used to see whether b025 and b050 are effectively the same ordering family."
+  ]
+}
