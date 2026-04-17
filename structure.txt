@@ -1005,7 +1005,11 @@
 │   ├── week12
 │   ├── week12A
 │   │   └── rgcn_ranker_ft.yaml
-│   └── week13
+│   ├── week13
+│   └── week14
+│       ├── soft_support_b025.json
+│       ├── soft_support_b050.json
+│       └── soft_support_bcap.json
 ├── data
 │   ├── __init__.py
 │   ├── __pycache__
@@ -1095,7 +1099,17 @@
 │   │   │   ├── test_aligned_evidence.json
 │   │   │   ├── train_aligned_evidence.json
 │   │   │   └── valid_aligned_evidence.json
-│   │   └── 25_n2_support_features
+│   │   ├── 25_n2_support_features
+│   │   │   ├── support_feature_manifest.json
+│   │   │   ├── valid_support_features.json
+│   │   │   └── valid_support_probe.json
+│   │   └── 26_n2_soft_support
+│   │       ├── support_main_manifest.json
+│   │       ├── support_stage_freeze_manifest.json
+│   │       ├── valid_top20_soft_support_b025.json
+│   │       ├── valid_top20_soft_support_b050.json
+│   │       ├── valid_top20_soft_support_bcap.json
+│   │       └── valid_top20_soft_support_main.json
 │   ├── setting_b
 │   │   ├── 00_safety_labels
 │   │   │   ├── contra_by_disease.json
@@ -1182,9 +1196,15 @@
 │   ├── week12B
 │   │   ├── day1_protocol_freeze.md
 │   │   └── week12B_closeout.md
-│   └── week13
+│   ├── week13
+│   │   ├── day1_protocol_freeze.md
+│   │   ├── day2_soft_prune_report.md
+│   │   └── day7_week13_closeout.md
+│   └── week14
 │       ├── day1_protocol_freeze.md
-│       └── day2_soft_prune_report.md
+│       ├── day5_main_row_decision.md
+│       ├── day6_bridge_prep.md
+│       └── day7_week14_closeout.md
 ├── results
 │   ├── reference_rows
 │   │   ├── backbone_raw_test
@@ -1245,11 +1265,31 @@
 │   │   │   └── valid_gold_loss_summary.json
 │   │   └── protocol_freeze
 │   │       └── noinj_protocol.json
-│   └── week13
-│       ├── clean_tree_snapshot.txt
-│       ├── day1_repo_snapshot.txt
-│       ├── n2_file_registry.json
-│       └── reference_rows_manifest.json
+│   ├── week13
+│   │   ├── clean_tree_snapshot.txt
+│   │   ├── day1_repo_snapshot.txt
+│   │   ├── n2_file_registry.json
+│   │   ├── reference_rows_manifest.json
+│   │   ├── support_case_compare_summary.json
+│   │   ├── support_case_samples.json
+│   │   ├── support_feature_distribution.tsv
+│   │   ├── support_feature_query_summary.tsv
+│   │   ├── support_feature_summary.json
+│   │   ├── support_formula_probe.json
+│   │   └── week13_go_decision.json
+│   └── week14
+│       ├── soft_support_build_summary.json
+│       ├── soft_support_case_samples.json
+│       ├── soft_support_case_summary.json
+│       ├── soft_support_main_casepack.json
+│       ├── soft_support_main_decision.json
+│       ├── soft_support_pairwise_order_match.json
+│       ├── soft_support_reference_table.json
+│       ├── soft_support_stage_report.json
+│       ├── soft_support_valid_compare.json
+│       ├── week14_go_decision.json
+│       ├── week14_input_manifest.json
+│       └── week14_to_week15_bridge.json
 ├── runs
 │   ├── week4_pilot
 │   │   ├── config_snapshot.yaml
@@ -1275,7 +1315,19 @@
 │   │   ├── 03_build_ontology_raw_variant.py
 │   │   ├── 04_realign_raw_evidence.py
 │   │   └── 05_audit_ontology_pruning.py
-│   └── week13
+│   ├── week13
+│   │   ├── 01_build_support_feature_table.py
+│   │   ├── 02_audit_support_features.py
+│   │   ├── 03_probe_support_scoring.py
+│   │   ├── 04_collect_support_cases.py
+│   │   └── 05_write_week13_closeout.py
+│   └── week14
+│       ├── 02_build_soft_support_variants.py
+│       ├── 03_summarize_soft_support_valid.py
+│       ├── 04_collect_soft_support_cases.py
+│       ├── 05_select_soft_support_main.py
+│       ├── 06_freeze_soft_support_bridge.py
+│       └── 07_write_week14_closeout.py
 └── structure.txt
 
-223 directories, 1055 files
+228 directories, 1102 files
