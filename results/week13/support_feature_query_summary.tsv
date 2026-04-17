@@ -1,0 +1,501 @@
+query_entity	gold_entity	gold_in_topk_raw	gold_present_in_feature_table	gold_ontology_keep_flag	gold_candidate_in_aligned_evidence	gold_evidence_edge_touch_count	gold_candidate_query_edge_count	num_candidates	num_ontology_keep	num_contra	num_evidence_touch_positive	num_candidate_query_link_positive
+leukemia, lymphocytic, susceptibility to	Cortisone acetate	True	1	0	1	1	0	20	11	0	18	11
+streptococcal infection	Cefixime	False	0					20	3	0	13	3
+dyspepsia	Magnesium trisilicate	False	0					20	20	0	12	0
+basal cell carcinoma	Vismodegib	False	0					20	20	0	17	0
+obsessive-compulsive disorder	Fluoxetine	False	0					20	1	0	16	0
+Norwegian scabies	Lindane	False	0					20	20	0	12	0
+hypertension	Amiloride	False	0					20	1	0	14	0
+pneumococcal meningitis	Meropenem	False	0					20	1	0	15	1
+obsessive-compulsive disorder	Paroxetine	False	0					20	1	0	16	0
+arthropathy	Diflunisal	False	0					20	1	0	18	1
+diffuse large B-cell lymphoma	Doxorubicin	True	1	0	1	1	0	20	5	0	18	4
+obsolete Hodgkin's granuloma	Betamethasone	True	1	0	1	1	0	20	13	0	18	13
+migraine with or without aura, susceptibility to	Acetylsalicylic acid	False	0					20	20	0	15	0
+infectious anterior uveitis	Dexamethasone	True	1	0	1	1	0	20	2	0	15	2
+chromomycosis	Ketoconazole	False	0					20	20	0	14	0
+proctitis	Pramocaine	False	0					20	1	0	14	1
+nasopharyngitis	Ammonium chloride	False	0					20	20	0	12	0
+acquired thrombocytopenia	Cortisone acetate	True	1	0	1	1	0	20	7	0	16	7
+hemoglobinopathy	Phenprocoumon	False	0					20	3	1	18	1
+prostate cancer	Estramustine	False	0					20	6	0	17	0
+chronic cutaneous lupus erythematosus	Prednisolone	True	1	0	1	1	0	20	6	0	15	6
+pulmonary emphysema	Ipratropium	False	0					20	20	0	18	0
+common cold	Cefprozil	False	0					20	1	0	12	1
+classic Hodgkin lymphoma	Mechlorethamine	False	0					20	13	0	17	13
+mental disorder	Paliperidone	False	0					20	1	0	17	0
+aspiration pneumonia (disease)	Cortisone acetate	True	1	0	1	1	0	20	8	0	16	7
+autoimmune thrombocytopenic	Romiplostim	False	0					20	9	0	14	9
+respiratory tract infectious disease	Loracarbef	False	0					20	20	0	12	0
+arteriosclerosis disorder	Fluvastatin	False	0					20	1	0	17	0
+gonococcal epididymo-orchitis	Doxycycline	True	1	0	1	1	0	20	2	0	15	2
+ovarian mucinous adenocarcinoma	Hydroxyurea	True	1	0	1	1	0	20	2	0	18	2
+visual epilepsy	Phenobarbital	False	0					20	3	0	17	0
+scleroderma (disease)	Aminobenzoic acid	False	0					20	1	0	17	0
+common cold	Methscopolamine	False	0					20	1	0	12	1
+hemiparkinsonism-hemiatrophy syndrome	Biperiden	False	0					20	20	0	17	0
+allergic asthma	Pranlukast	False	0					20	8	0	19	6
+actinic keratosis (disease)	Prednisone	True	1	0	1	1	0	20	5	0	14	5
+mental disorder	Chlorpromazine	False	0					20	1	0	17	0
+dysentery	Norfloxacin	True	1	0	1	1	0	20	2	0	15	2
+acute myeloid leukemia with minimal differentiation	Gilteritinib	False	0					20	1	0	17	1
+pharyngitis	Doxycycline	True	1	0	1	1	0	20	4	0	13	4
+adenocarcinoma of liver and intrahepatic biliary tract	Ramucirumab	False	0					20	2	0	17	0
+angioedema	Dexbrompheniramine	False	0					20	9	0	14	9
+cerebral infarction	Telmisartan	False	0					20	20	0	18	0
+granulomatous slack skin disease	Prednisone	True	1	0	1	1	0	20	11	0	18	10
+nasopharyngitis	Dihydrocodeine	False	0					20	20	0	12	0
+urethritis (disease)	Lidocaine	False	0					20	2	0	14	2
+hereditary angioedema with C1Inh deficiency	Icatibant	False	0					20	20	0	17	0
+brain edema	Mannitol	False	0					20	7	0	15	7
+gastroesophageal reflux disease	Magnesium carbonate	False	0					20	20	0	15	0
+Clostridium difficile colitis	Methscopolamine	False	0					20	20	0	14	0
+early-onset parkinsonism-intellectual disability syndrome	Ropinirole	False	0					20	20	0	17	0
+papillary conjunctivitis	Cetirizine	False	0					20	6	0	13	6
+atopic eczema	Methylprednisolone	True	1	0	1	1	0	20	8	0	16	8
+granulomatous slack skin disease	Dexamethasone	True	1	0	1	1	0	20	11	0	18	10
+papillary conjunctivitis	Mepyramine	False	0					20	6	0	13	6
+hyperparathyroidism	Alfacalcidol	False	0					20	20	0	18	0
+Pediculus humanus corporis infestation	Permethrin	False	0					20	20	0	8	0
+ovarian clear cell adenocarcinoma	Melphalan	False	0					20	2	0	17	2
+discoid lupus erythematosus	Amcinonide	False	0					20	6	0	14	6
+common cold	Cefaclor	False	0					20	1	0	12	1
+dermatophytosis of groin and perianal area	Luliconazole	False	0					20	1	0	12	1
+eye disease	Betamethasone	True	1	0	1	1	0	20	7	0	15	7
+spondyloarthropathy, susceptibility to	Acemetacin	False	0					20	7	0	14	7
+Zollinger-Ellison syndrome	Famotidine	False	0					20	20	0	18	0
+atherosclerosis	Rosuvastatin	False	0					20	1	0	17	0
+papillary conjunctivitis	Dexbrompheniramine	False	0					20	6	0	13	6
+hereditary site-specific ovarian cancer syndrome	Altretamine	False	0					20	2	0	17	2
+trachoma	Chlortetracycline	False	0					20	3	0	13	3
+hemorrhoid	Phenylephrine	False	0					20	1	0	16	1
+staphylococcal infection	Sulbactam	False	0					20	4	0	15	4
+psoriasis	Cortisone acetate	True	1	0	1	1	0	20	9	0	18	9
+visual epilepsy	Lamotrigine	False	0					20	3	0	17	0
+renal cell adenocarcinoma	Sirolimus	False	0					20	20	0	17	0
+familial nephrotic syndrome	Prednisolone	True	1	0	1	1	0	20	8	0	15	8
+acute lymphoblastic leukemia (disease)	Betamethasone	True	1	0	1	1	0	20	10	0	18	10
+hypertension	Irbesartan	False	0					20	1	0	14	0
+intrinsic asthma	Hydrocortisone	True	1	0	1	1	0	20	7	0	18	6
+gastroesophageal reflux disease	Pantoprazole	False	0					20	20	0	15	0
+patent ductus arteriosus	Ibuprofen	False	0					20	20	0	18	0
+morphine dependence	Levacetylmethadol	False	0					20	1	0	17	0
+disseminated intravascular coagulation	Adomiparin	False	0					20	20	0	13	0
+exanthem (disease)	Methylprednisolone	True	1	0	1	1	0	20	6	0	15	6
+multiple sclerosis	Cortisone acetate	True	1	0	1	1	0	20	8	0	18	8
+urinary tract infection (disease)	Tetracycline	True	1	0	1	1	0	20	3	0	12	3
+schizoaffective disorder	Paliperidone	False	0					20	1	0	17	0
+hyperlipidemia, familial combined, LPL related	Pitavastatin	False	0					20	20	0	15	0
+hypertensive disorder	Paclitaxel	False	0					20	1	0	14	0
+seborrheic dermatitis	Ciclopirox	False	0					20	7	0	15	7
+nasopharyngitis	Ephedrine	False	0					20	20	0	12	0
+papillary conjunctivitis	Emedastine	False	0					20	6	0	13	6
+epilepsy	Phenytoin	False	0					20	2	0	17	0
+skin disease	Betamethasone	True	1	0	1	1	0	20	4	0	15	4
+partial epilepsy	Cenobamate	False	0					20	2	0	17	0
+attention deficit-hyperactivity disorder	Atomoxetine	False	0					20	20	0	14	0
+bronchitis	Lomefloxacin	False	0					20	4	0	15	4
+candidemia	Voriconazole	False	0					20	20	0	12	0
+ovarian small cell carcinoma	Melphalan	False	0					20	2	0	17	2
+Cushing syndrome	Pasireotide	False	0					20	20	0	18	0
+bronchial disease	Theophylline	False	0					20	20	0	14	0
+non-small cell lung carcinoma (disease)	Brigatinib	False	0					20	20	0	17	0
+hypochromic anemia	Docusate	False	0					20	1	0	19	0
+attention deficit hyperactivity disorder, inattentive type	Dexmethylphenidate	False	0					20	20	0	14	0
+homozygous familial hypercholesterolemia	Rosuvastatin	False	0					20	20	0	15	0
+pseudotumor cerebri	Mannitol	False	0					20	20	0	14	0
+chronic hepatitis C virus infection	Interferon alfa-2b	False	0					20	20	0	14	0
+inflammatory bowel disease	Triamcinolone	True	1	0	1	1	0	20	7	0	19	7
+streptococcal pneumonia	Procaine benzylpenicillin	False	0					20	3	0	14	3
+dry eye syndrome	Polysorbate 80	False	0					20	1	0	19	1
+immature ovarian teratoma	Rucaparib	False	0					20	2	0	17	2
+Klebsiella pneumonia	Norfloxacin	True	1	1	1	1	0	20	20	0	15	0
+Crohn disease	Natalizumab	False	0					20	9	0	18	9
+cerebellar degeneration	Galantamine	False	0					20	20	0	17	0
+HIV infectious disease	Fosamprenavir	False	0					20	1	0	18	0
+familial dermatographia	Azatadine	False	0					20	1	0	13	1
+pulmonary emphysema	Orciprenaline	False	0					20	20	0	18	0
+migraine disorder	Naproxen	False	0					20	20	0	13	0
+Crohn's colitis	Prednisolone	True	1	0	1	1	0	20	7	0	18	7
+gonorrhea	Cefixime	False	0					20	3	0	14	3
+chronic beryllium disease	Methylprednisolone	True	1	0	1	1	0	20	6	0	18	6
+Hodgkin's paragranuloma	Procarbazine	False	0					20	13	0	17	13
+osteoporosis	Salmon calcitonin	False	0					20	2	0	18	0
+vernal conjunctivitis	Phenylephrine	True	1	0	1	1	0	20	6	0	14	6
+urinary bladder carcinoma	Thiotepa	True	1	0	1	1	0	20	1	0	17	0
+listeriosis	Minocycline	False	0					20	2	0	18	1
+familial dermatographia	Promazine	False	0					20	1	0	13	1
+Pediculus humanus capitis infestation	Piperonyl butoxide	False	0					20	20	0	11	0
+leptospirosis	Amphotericin B	False	0					20	5	0	14	5
+obesity disorder	Bupropion	False	0					20	2	0	17	0
+bronchitis	Orciprenaline	False	0					20	4	0	15	4
+pharyngitis	Chlorcyclizine	False	0					20	4	0	12	4
+hepatitis C virus infection	Simeprevir	False	0					20	20	0	14	0
+ornithosis	Demeclocycline	True	1	0	1	1	0	20	2	0	13	2
+endometrial carcinoma (disease)	Medroxyprogesterone acetate	False	0					20	20	0	17	0
+obsolete neurogenic bladder (disease)	Butacaine	False	0					20	20	0	14	0
+spondyloarthropathy, susceptibility to	Adalimumab	False	0					20	7	0	14	7
+migraine disorder	Acetaminophen	False	0					20	20	0	13	0
+psychologic dyspareunia	Avanafil	False	0					20	20	0	15	0
+obsolete Hodgkin's granuloma	Chlorambucil	False	0					20	13	0	18	13
+tinea infection	Zinc oxide	False	0					20	2	0	12	2
+spotted fever	Chloramphenicol	False	0					20	4	0	14	4
+chronic hepatitis B virus infection	Interferon alfa-2b	False	0					20	20	0	16	0
+juvenile arthritis due to defect in LACC1	Sodium aurothiomalate	False	0					20	7	0	18	7
+postmenopausal osteoporosis	Calcium lactate	False	0					20	2	0	18	0
+headache disorder	Citric acid	False	0					20	20	0	13	0
+type 2 diabetes mellitus	Semaglutide	False	0					20	1	0	17	0
+lichen disease	Flurandrenolide	False	0					20	7	0	15	7
+classic Hodgkin lymphoma, lymphocyte-rich type	Methylprednisolone	True	1	0	1	1	0	20	13	0	18	13
+anxiety disorder	Mebanazine	False	0					20	2	0	17	0
+seborrheic keratosis	Sulfacetamide	False	0					20	8	0	15	8
+mantle cell lymphoma	Hydrocortisone acetate	True	1	0	1	1	0	20	15	0	18	15
+therapy related acute myeloid leukemia and myelodysplastic syndrome	Doxorubicin	True	1	1	1	1	0	20	20	0	17	0
+acute gonococcal cervicitis	Meclocycline	False	0					20	4	0	14	4
+spondyloarthropathy, susceptibility to	Prednisolone	True	1	0	1	1	0	20	7	0	14	7
+temporal arteritis	Tocilizumab	False	0					20	2	0	14	2
+angle-closure glaucoma	Diclofenamide	False	0					20	20	0	14	0
+theca steroid-producing cell malignant tumor of ovary, not further specified	Thiotepa	True	1	0	1	1	0	20	1	0	17	1
+hypertensive disorder	Minoxidil	False	0					20	1	0	14	0
+mantle cell lymphoma	Mechlorethamine	True	1	0	1	1	0	20	15	0	18	15
+pharyngitis	Ampicillin	False	0					20	4	0	12	4
+pneumonia caused by chlamydia	Telithromycin	False	0					20	1	0	13	1
+peptic ulcer disease	Dexrabeprazole	False	0					20	20	0	13	0
+diffuse large B-cell lymphoma of the central nervous system	Doxorubicin	True	1	0	1	1	0	20	6	0	18	5
+bronchitis	Acefylline	False	0					20	4	0	15	4
+nocturnal enuresis	Imipramine	False	0					20	20	0	15	0
+migraine disorder	Almotriptan	False	0					20	20	0	13	0
+Becker muscular dystrophy	Deflazacort	False	0					20	1	0	17	0
+primary cutaneous T-cell non-Hodgkin lymphoma	Fluticasone propionate	False	0					20	9	0	18	8
+X-linked parkinsonism-spasticity syndrome	Rotigotine	False	0					20	20	0	17	0
+uveitis	Loteprednol etabonate	False	0					20	6	0	14	6
+mantle cell lymphoma	Uracil mustard	False	0					20	15	0	18	15
+periarthritis	Triamcinolone	True	1	0	1	1	0	20	6	1	15	6
+necrotizing ulcerative gingivitis	Fusidic acid	True	1	0	1	1	0	20	4	0	14	4
+keratoconjunctivitis	Tobramycin	False	0					20	6	0	12	6
+glycogen storage disease	Tiopronin	False	0					20	2	0	17	0
+obesity disorder	Mazindol	False	0					20	2	0	17	0
+migraine disorder	Ergotamine	False	0					20	20	0	13	0
+exanthem (disease)	Dexamethasone	True	1	0	1	1	0	20	6	0	15	6
+vasomotor rhinitis	Methylprednisolone	True	1	0	1	1	0	20	8	0	14	8
+endometriosis of uterus	Tranexamic acid	False	0					20	1	0	17	0
+hereditary site-specific ovarian cancer syndrome	Melphalan	False	0					20	2	0	17	2
+adrenal gland pheochromocytoma	Metyrosine	False	0					20	1	0	17	0
+keratoacanthoma	Diclofenac	False	0					20	20	0	14	0
+HIV infectious disease	Raltegravir	False	0					20	1	0	18	0
+seborrheic keratosis	Desoximetasone	False	0					20	8	0	15	8
+erythema multiforme	Betamethasone	True	1	0	1	1	0	20	6	0	16	6
+vasomotor rhinitis	Azelastine	False	0					20	8	0	14	8
+restless legs syndrome	Rotigotine	False	0					20	20	0	16	0
+pneumonia	Tetracycline	False	0					20	20	0	19	0
+hepatocellular carcinoma	Ramucirumab	False	0					20	1	0	17	0
+X-linked adrenoleukodystrophy	Solriamfetol	False	0					20	20	0	17	0
+precursor T-cell acute lymphoblastic leukemia	Nelarabine	False	0					20	9	0	18	8
+Stevens-Johnson syndrome	Dexamethasone	True	1	1	1	1	0	20	8	0	18	7
+pancreatic adenocarcinoma	Irinotecan	False	0					20	20	0	13	0
+common cold	Cyclizine	False	0					20	1	0	12	1
+conjunctivitis	Fusidic acid	True	1	0	1	1	0	20	4	0	14	4
+angioedema	Diphenylpyraline	False	0					20	9	0	14	9
+symptomatic form of hemophilia in female carriers	Coagulation Factor IX (Recombinant)	False	0					20	20	0	12	0
+nephrocalcinosis	Magnesium citrate	False	0					20	20	0	15	0
+COPD, severe early onset	Revefenacin	False	0					20	1	0	18	0
+pulmonary eosinophilia	Prednisolone	True	1	0	1	1	0	20	5	0	14	5
+folic acid deficiency anemia	Hematin	False	0					20	20	0	14	0
+non-small cell lung carcinoma (disease)	Vinorelbine	False	0					20	20	0	17	0
+iron deficiency anemia	Ferrous sulfate anhydrous	False	0					20	1	0	18	0
+hypertension	Indapamide	False	0					20	1	0	14	0
+osteoarthritis susceptibility	Azapropazone	False	0					20	20	0	18	0
+pharyngitis	Guaifenesin	False	0					20	4	0	12	4
+Burkitt lymphoma	Doxorubicin	True	1	0	1	1	0	20	3	0	18	3
+malaria	Pyronaridine	False	0					20	1	0	19	0
+allergic asthma	Acefylline	False	0					20	8	0	19	6
+pulmonary eosinophilia	Dexamethasone	True	1	0	1	1	0	20	5	0	14	5
+schizophreniform disorder	Promazine	False	0					20	1	0	17	0
+Q fever	Chloramphenicol	False	0					20	2	0	13	2
+testicular germ cell tumor	Plicamycin	False	0					20	1	0	18	1
+rheumatoid arthritis	Rituximab	False	0					20	10	0	18	9
+anxiety disorder	Isocarboxazid	False	0					20	2	0	17	0
+renal cell adenocarcinoma	Sunitinib	False	0					20	20	0	17	0
+pediatric hepatocellular carcinoma	Regorafenib	False	0					20	1	0	17	0
+hemorrhoid	Hydrocortisone	True	1	0	1	1	0	20	1	0	16	1
+allergic asthma	Theophylline	False	0					20	8	0	19	6
+Reye syndrome	Galantamine	False	0					20	20	0	17	0
+Crohn's colitis	Prednisone	True	1	0	1	1	0	20	7	0	18	7
+Kaposi's sarcoma (disease)	Daunorubicin	False	0					20	1	0	15	1
+schizophrenia	Quetiapine	False	0					20	1	0	17	0
+type 2 diabetes mellitus	Buformin	False	0					20	1	0	17	0
+type 1 diabetes mellitus	Sotagliflozin	False	0					20	1	0	17	0
+HIV infectious disease	Elvitegravir	False	0					20	1	0	18	0
+blepharospasm	Procyclidine	False	0					20	20	0	15	0
+rheumatoid arthritis	Lithium carbonate	False	0					20	10	0	18	9
+medullary thyroid gland carcinoma	Levothyroxine	False	0					20	1	0	18	1
+mycosis fungoides and variants	Hydrocortisone	True	1	0	1	1	0	20	7	0	15	7
+periarthritis	Indomethacin	False	0					20	6	0	15	6
+inherited isolated adrenal insufficiency due to partial CYP11A1 deficiency	Prednisolone	True	1	0	1	1	0	20	7	0	14	7
+acute myeloid leukemia with CEBPA somatic mutations	Histamine	False	0					20	1	0	17	1
+vernal conjunctivitis	Loratadine	False	0					20	6	0	13	6
+unipolar depression	Venlafaxine	False	0					20	2	0	17	0
+vernal conjunctivitis	Triprolidine	False	0					20	6	0	13	6
+chondrocalcinosis	Prednisone	True	1	0	1	1	0	20	7	0	14	7
+granuloma annulare	Desoximetasone	False	0					20	5	0	15	5
+papillary conjunctivitis	Loteprednol etabonate	False	0					20	6	0	13	6
+subacute bacterial endocarditis	Cefazolin	False	0					20	1	0	18	0
+bronchitis	Cyclacillin	False	0					20	4	0	15	4
+precursor T-cell acute lymphoblastic leukemia	Prednisolone	True	1	0	1	1	0	20	9	0	18	8
+phaeochromocytoma	Phentolamine	False	0					20	1	0	17	0
+papillary conjunctivitis	Alimemazine	True	1	0	1	1	0	20	6	0	14	6
+humoral hypercalcemia of malignancy	Zoledronic acid	False	0					20	9	0	16	9
+vasomotor rhinitis	Isoflupredone acetate	False	0					20	8	0	14	8
+mycosis fungoides and variants	Methotrexate	False	0					20	7	0	15	7
+vasomotor rhinitis	Levocetirizine	False	0					20	8	0	14	8
+amebiasis	Diiodohydroxyquinoline	False	0					20	20	0	17	0
+arachnoiditis	Kanamycin	False	0					20	20	0	15	0
+systemic mastocytosis	Rabeprazole	False	0					20	20	0	16	0
+osteoarthritis susceptibility	Salicylic acid	False	0					20	20	0	18	0
+superficial multifocal basal cell carcinoma	Fluorouracil	False	0					20	20	0	16	0
+hypochromic anemia	Ferric oxide	False	0					20	1	0	19	0
+plasma cell myeloma	Doxorubicin	True	1	0	1	1	0	20	2	0	18	2
+mycosis fungoides and variants	Cyclophosphamide	False	0					20	7	0	15	7
+rheumatoid arthritis	Sulindac	False	0					20	10	0	18	9
+seborrheic dermatitis	Chloroxine	False	0					20	7	0	15	7
+juvenile idiopathic arthritis	Sodium aurothiomalate	False	0					20	7	0	18	7
+asthma	Orciprenaline	False	0					20	8	0	19	7
+vasomotor rhinitis	Prednisone	True	1	0	1	1	0	20	8	0	15	8
+xerophthalmia	Polyvinyl alcohol	False	0					20	20	0	14	0
+trisomy 13	Testosterone propionate	False	0					20	20	0	15	0
+sickle cell anemia	Hydroxyurea	True	1	0	1	1	0	20	2	0	18	0
+neurotic disorder	Iproclozide	False	0					20	2	0	17	0
+vitamin B12 deficiency	Cyanocobalamin	False	0					20	20	0	14	0
+unclassified acute myeloid leukemia	Cytarabine	False	0					20	1	0	17	1
+open-angle glaucoma	Befunolol	False	0					20	1	0	14	0
+classic Hodgkin lymphoma	Lomustine	False	0					20	13	0	17	13
+clear cell renal carcinoma	Pazopanib	False	0					20	20	0	17	0
+conjunctivitis	Demeclocycline	True	1	0	1	1	0	20	4	0	14	4
+hereditary angioedema	Prednisolone	True	1	0	1	1	0	20	8	0	17	8
+primary cutaneous T-cell lymphoma	Methotrexate	True	1	0	1	1	0	20	9	0	18	9
+acute lymphoblastic/lymphocytic leukemia	Prednisone	True	1	0	1	1	0	20	12	0	18	12
+endogenous depression	Mirtazapine	False	0					20	1	0	17	0
+breast neoplasm	Epirubicin	False	0					20	2	0	17	1
+ovarian carcinosarcoma	Hydroxyurea	True	1	0	1	1	0	20	2	0	18	2
+conjunctivitis	Erythromycin	False	0					20	4	0	13	4
+ovarian clear cell adenocarcinoma	Carboplatin	False	0					20	2	0	17	2
+adenosarcoma	Doxorubicin	True	1	0	1	1	0	20	1	0	17	1
+hereditary angioedema	Dexamethasone	True	1	0	1	1	0	20	8	0	17	8
+Langerhans cell histiocytosis	Mechlorethamine	False	0					20	14	0	18	14
+respiratory tract infectious disease	Cefradine	False	0					20	20	0	12	0
+ovarian adenocarcinoma	Topotecan	False	0					20	2	0	17	2
+anxiety disorder	Phenelzine	False	0					20	2	0	17	0
+tinea corporis	Griseofulvin	False	0					20	2	0	12	2
+acne (disease)	Doxycycline	True	1	0	1	1	0	20	3	0	16	3
+acute neonatal citrullinemia type I	Phenylbutyric acid	False	0					20	20	0	12	0
+acute myeloid leukemia with t(8;16)(p11;p13) translocation	Aldesleukin	False	0					20	1	0	17	1
+acute lymphoblastic/lymphocytic leukemia	Mercaptopurine	False	0					20	12	0	18	12
+hemoglobinopathy	Lisinopril	False	0					20	3	0	18	1
+juvenile idiopathic arthritis	Naproxen	False	0					20	7	0	18	7
+ciliary body disease	Homatropine	False	0					20	6	0	14	6
+allergic rhinitis	Scopolamine	False	0					20	6	0	14	6
+postencephalitic Parkinson disease	Amantadine	False	0					20	20	0	15	0
+epilepsy	Trimethadione	False	0					20	2	0	17	0
+mature T-cell and NK-cell non-Hodgkin lymphoma	Romidepsin	False	0					20	1	0	18	0
+nephrocalcinosis	Calcium lactate	False	0					20	20	0	15	0
+headache disorder	Magnesium salicylate	False	0					20	20	0	13	0
+multiple endocrine neoplasia	Cimetidine	False	0					20	1	0	18	0
+peptic ulcer disease	Nizatidine	False	0					20	20	0	13	0
+malignant non-dysgerminomatous germ cell tumor of ovary	Altretamine	False	0					20	2	0	17	2
+hypertension	Pindolol	False	0					20	1	0	14	0
+follicular lymphoma	Idelalisib	False	0					20	11	0	18	10
+primary central nervous system lymphoma	Dexamethasone	True	1	0	1	1	0	20	6	0	18	5
+acute gonococcal cervicitis	Cefoxitin	False	0					20	4	0	13	4
+multiple system atrophy	Droxidopa	False	0					20	1	0	14	0
+osteoarthritis	Celecoxib	False	0					20	20	0	18	0
+Langerhans cell histiocytosis	Bleomycin	True	1	0	1	1	0	20	14	0	18	14
+skin disease	Diclofenac	False	0					20	4	0	15	4
+iron deficiency anemia	Ferric oxide	False	0					20	1	0	18	0
+juvenile arthritis due to defect in LACC1	Naproxen	False	0					20	7	0	18	7
+gonorrhea	Fusidic acid	True	1	0	1	1	0	20	3	0	14	3
+maligant granulosa cell tumor of ovary	Topotecan	False	0					20	2	0	17	2
+ascaridiasis	Mebendazole	False	0					20	20	0	13	0
+rheumatoid arthritis	Leflunomide	False	0					20	10	0	18	9
+classic Hodgkin lymphoma	Methylprednisolone	True	1	0	1	1	0	20	13	0	17	13
+nephrocalcinosis	Cholecalciferol	False	0					20	20	0	15	0
+major affective disorder	Quetiapine	False	0					20	1	0	17	0
+postural orthostatic tachycardia syndrome	Droxidopa	False	0					20	20	0	16	0
+common cold	Benzylpenicillin	False	0					20	1	0	12	1
+infectious otitis media	Clarithromycin	False	0					20	20	0	13	0
+thyroiditis (disease)	Hydrocortisone	True	1	0	1	1	0	20	7	0	15	7
+rheumatoid arthritis	Sodium aurothiomalate	False	0					20	10	0	18	9
+mycosis fungoides and variants	Triamcinolone	True	1	0	1	1	0	20	7	0	15	7
+acute myeloid leukemia with t(8;21)(q22;q22) translocation	Glasdegib	False	0					20	1	0	17	1
+ocular hypertension	Latanoprostene bunod	False	0					20	20	0	15	0
+hemoglobinopathy	Deferasirox	False	0					20	3	0	18	1
+arthropathy	Amikacin	False	0					20	1	0	18	1
+cystic fibrosis	Cysteine	False	0					20	1	0	19	0
+common cold	Cetirizine	False	0					20	1	0	12	1
+atherosclerosis	Simvastatin	False	0					20	1	0	17	0
+Richter syndrome	Ofatumumab	False	0					20	2	0	18	2
+arthropathy	Cilastatin	False	0					20	1	0	18	1
+pediatric systemic lupus erythematosus	Belimumab	False	0					20	10	0	18	9
+female breast carcinoma	Tamoxifen	False	0					20	20	0	15	0
+yaws	Ceftriaxone	False	0					20	5	0	14	5
+atopic conjunctivitis	Promethazine	False	0					20	6	0	13	6
+lupus erythematosus	Chloroquine	False	0					20	7	0	14	7
+intrinsic asthma	Norepinephrine	False	0					20	7	0	18	6
+granuloma annulare	Prednisolone	True	1	0	1	3	0	20	5	0	15	5
+central nervous system origin vertigo	Cinnarizine	False	0					20	20	0	10	0
+adrenal gland hyperfunction	Ketoconazole	False	0					20	20	0	18	0
+arthropathy	Cefamandole	False	0					20	1	0	18	1
+acute myeloid leukemia with t(8;16)(p11;p13) translocation	Gilteritinib	False	0					20	1	0	17	1
+ascaridiasis	Levamisole	False	0					20	20	0	13	0
+chronic hepatitis C virus infection	Beclabuvir	False	0					20	20	0	14	0
+gastric ulcer (disease)	Dexrabeprazole	False	0					20	1	0	17	0
+parkinsonian disorder	Trihexyphenidyl	False	0					20	3	0	17	0
+primary non-gestational choriocarcinoma of ovary	Hydroxyurea	True	1	0	1	1	0	20	2	0	18	2
+leptospirosis	Ceftriaxone	False	0					20	5	0	14	5
+neurodermatitis	Fluocinonide	False	0					20	7	0	15	7
+granuloma annulare	Betamethasone	True	1	0	1	1	0	20	5	0	15	5
+Addison disease	Prednisone	True	1	0	1	1	0	20	8	0	15	7
+dysthymic disorder	Mebanazine	False	0					20	2	0	17	0
+classic Hodgkin lymphoma	Dacarbazine	False	0					20	13	0	17	13
+spondyloarthropathy, susceptibility to	Cortisone acetate	True	1	0	1	1	0	20	7	0	14	7
+streptococcal infection	Cefoxitin	False	0					20	3	0	13	3
+necrotizing ulcerative gingivitis	Sulfisoxazole	False	0					20	4	0	14	4
+vasomotor rhinitis	Fluticasone furoate	False	0					20	8	0	14	8
+macular degeneration	Aflibercept	False	0					20	1	0	18	0
+ovarian endometrioid adenocarcinoma	Paclitaxel	False	0					20	1	0	17	1
+ovarian adenocarcinoma	Tretamine	False	0					20	2	0	17	2
+infectious otitis media	Sulfamethizole	False	0					20	20	0	13	0
+staphylococcal infection	Ampicillin	False	0					20	4	0	15	4
+hepatitis C virus infection	Ritonavir	False	0					20	20	0	14	0
+ovarian clear cell adenocarcinoma	Tretamine	False	0					20	2	0	17	2
+endogenous depression	Vilazodone	False	0					20	1	0	17	0
+atypical juvenile parkinsonism	Droxidopa	False	0					20	20	0	17	0
+Lennox-Gastaut syndrome	Phenytoin	False	0					20	20	0	14	0
+hypertensive disorder	Mecamylamine	False	0					20	1	0	14	0
+hypoparathyroidism	Ergocalciferol	False	0					20	1	0	14	0
+hyperthyroidism	Carbimazole	False	0					20	2	0	17	0
+allergic asthma	Cromoglicic acid	False	0					20	8	0	19	6
+peptic esophagitis	Omeprazole	False	0					20	20	0	15	0
+partial epilepsy	Primidone	False	0					20	2	0	17	0
+neurocirculatory asthenia	Homatropine	False	0					20	20	0	15	0
+arthropathy	Metronidazole	False	0					20	1	0	18	1
+open-angle glaucoma	Latanoprost	False	0					20	1	0	14	0
+partial epilepsy	Brivaracetam	False	0					20	2	0	17	0
+angioedema	Tripelennamine	False	0					20	9	0	14	9
+osteoarthritis	Lumiracoxib	False	0					20	20	0	18	0
+potassium deficiency disease	Potassium bicarbonate	False	0					20	20	0	14	0
+gout	Prednisolone	True	1	0	1	1	0	20	8	0	16	8
+beriberi	Nicotinamide	False	0					20	20	0	15	0
+ankylosing spondylitis	Adalimumab	False	0					20	9	0	13	9
+postmenopausal osteoporosis	Ibandronate	False	0					20	2	0	18	0
+premature ejaculation (disease)	Moxisylyte	False	0					20	20	0	17	0
+ovarian clear cell adenocarcinoma	Belotecan	False	0					20	2	0	17	2
+dermatophytosis of groin and perianal area	Hydrocortisone	True	1	0	1	1	0	20	1	0	12	1
+cerebellar degeneration	Rivastigmine	False	0					20	20	0	17	0
+juvenile arthritis due to defect in LACC1	Ibuprofen	False	0					20	7	0	18	7
+punctate epithelial keratoconjunctivitis	Dexamethasone	True	1	1	1	1	0	20	20	0	14	0
+schizophrenia	Haloperidol	False	0					20	1	0	17	0
+punctate epithelial keratoconjunctivitis	Fusidic acid	True	1	1	1	1	0	20	20	0	14	0
+pneumonia caused by chlamydia	Clarithromycin	False	0					20	1	0	13	1
+Mycoplasma pneumoniae pneumonia	Lefamulin	False	0					20	2	0	13	2
+acute myeloblastic leukemia without maturation	Quizartinib	False	0					20	1	0	17	1
+hypertensive disorder	Bendroflumethiazide	False	0					20	1	0	14	0
+peritoneum cancer	Bevacizumab	False	0					20	20	0	16	0
+premature ejaculation (disease)	Sildenafil	False	0					20	20	0	17	0
+diabetes mellitus (disease)	Chlorpropamide	False	0					20	1	0	18	0
+monogenic obesity	Dexfenfluramine	False	0					20	2	0	17	0
+chronic hepatitis C virus infection	Ledipasvir	False	0					20	20	0	14	0
+primary cutaneous T-cell lymphoma	Fluticasone propionate	False	0					20	9	0	18	9
+latent syphilis	Benzylpenicillin	True	1	1	1	1	0	20	20	0	15	0
+neoplasm of mature B-cells	Copanlisib	False	0					20	11	0	18	10
+localized scleroderma	Aminobenzoic acid	False	0					20	20	0	18	0
+pharyngitis	Pseudoephedrine	False	0					20	4	0	12	4
+central nervous system disease	Methylphenidate	False	0					20	20	0	15	0
+prostate carcinoma	Flutamide	False	0					20	6	0	17	0
+gastric carcinoma	Capecitabine	False	0					20	1	0	17	0
+iris disease	Medrysone	False	0					20	4	0	14	4
+inflammatory bowel disease	Methylprednisolone	True	1	0	1	1	0	20	7	0	19	7
+papillary conjunctivitis	Chlorcyclizine	False	0					20	6	0	13	6
+osteoporosis	Ethinylestradiol	False	0					20	2	0	18	0
+cerebral infarction	Rosuvastatin	False	0					20	20	0	18	0
+occupational dermatitis	Benzoyl peroxide	False	0					20	10	0	18	9
+sarcoidosis	Cortisone acetate	True	1	0	1	1	0	20	8	0	16	8
+familial hyperlipidemia	Clofibrate	False	0					20	3	0	16	0
+chronic cutaneous lupus erythematosus	Amcinonide	False	0					20	6	0	15	6
+arthropathy	Proglumetacin	False	0					20	1	0	18	1
+osteoarthritis susceptibility	Fenoprofen	False	0					20	20	0	18	0
+occupational dermatitis	Halcinonide	False	0					20	10	0	18	9
+postencephalitic Parkinson disease	Carbidopa	False	0					20	20	0	15	0
+ocular hypertension	Omidenepag isopropyl	False	0					20	20	1	15	0
+familial glucocorticoid deficiency	Betamethasone	True	1	0	1	1	0	20	7	0	13	7
+obsolete Hodgkin's granuloma	Prednisolone	True	1	0	1	1	0	20	13	0	18	13
+premature menopause	Testosterone cypionate	False	0					20	2	0	17	0
+acromegaly	Pegvisomant	False	0					20	1	0	14	0
+yolk sac tumor	Doxorubicin	True	1	0	1	1	0	20	2	0	18	1
+hypertension	Furosemide	False	0					20	1	0	14	0
+asthma	Betamethasone	True	1	0	1	1	0	20	8	0	19	7
+cutaneous candidiasis	Ciclopirox	False	0					20	1	0	12	1
+urinary bladder neoplasm	Thiotepa	True	1	0	1	1	0	20	1	0	17	0
+obsolete familial combined hyperlipidemia	Fenofibrate	False	0					20	20	0	15	0
+tinea corporis	Tolnaftate	False	0					20	2	0	12	2
+urinary tract infection (disease)	Clavulanic acid	False	0					20	3	0	12	3
+allergic rhinitis	Cromoglicic acid	False	0					20	6	0	14	6
+gout	Topiroxostat	False	0					20	8	0	15	8
+amebiasis	Diloxanide furoate	False	0					20	20	0	17	0
+Klinefelter syndrome	Testosterone propionate	False	0					20	20	0	14	0
+contact dermatitis	Clobetasol propionate	False	0					20	9	0	18	8
+Cushing syndrome	Ketoconazole	False	0					20	20	0	18	0
+allergic rhinitis	Tranilast	False	0					20	6	0	14	6
+Plasmodium vivax malaria	Pyronaridine	False	0					20	20	0	13	0
+yolk sac tumor	Etoposide	False	0					20	2	0	18	1
+rheumatic heart disease	Triamcinolone	True	1	0	1	1	0	20	8	0	16	8
+peptic ulcer disease	Silicon dioxide	False	0					20	20	0	13	0
+acute contagious conjunctivitis	Prednisolone	True	1	0	1	1	0	20	4	0	13	4
+acute myeloid leukemia with CEBPA somatic mutations	Gemtuzumab ozogamicin	False	0					20	1	0	17	1
+familial prostate carcinoma	Apalutamide	False	0					20	6	0	17	0
+acute gonococcal cervicitis	Demeclocycline	True	1	0	1	1	0	20	4	0	14	4
+infectious otitis media	Ampicillin	False	0					20	20	0	13	0
+nephrotic syndrome	Triamcinolone	True	1	0	1	1	0	20	7	0	16	7
+hypophosphatemia (disease)	Calcifediol	False	0					20	2	0	17	0
+malignant Sertoli-Leydig cell tumor of ovary	Rucaparib	False	0					20	2	0	17	2
+superior limbic keratoconjunctivitis	Tobramycin	False	0					20	1	0	15	1
+malignant germ cell tumor of ovary	Trabectedin	False	0					20	2	0	17	2
+narcolepsy	Modafinil	False	0					20	20	0	16	0
+constipation disorder	Dehydrocholic acid	False	0					20	20	0	15	0
+allergic rhinitis	Cortisone acetate	True	1	0	1	1	0	20	6	0	14	6
+acute lymphoblastic/lymphocytic leukemia	Ibrutinib	False	0					20	12	0	18	12
+staphylococcus aureus infection	Erythromycin	False	0					20	5	0	15	5
+osteomalacia (disease)	Dihydrotachysterol	False	0					20	20	0	18	0
+urinary tract infection (disease)	Cefmetazole	False	0					20	3	0	12	3
+osteoarthritis	Meloxicam	False	0					20	20	0	18	0
+beriberi	Inositol	False	0					20	20	0	15	0
+vasomotor rhinitis	Desloratadine	False	0					20	8	0	14	8
+Hodgkin's paragranuloma	Prednisolone	True	1	0	1	1	0	20	13	0	17	13
+AIDS	Efavirenz	False	0					20	20	0	14	0
+motion sickness	Cyclizine	False	0					20	20	0	10	0
+intracranial embolism	Clopidogrel	False	0					20	20	0	15	0
+renal cell carcinoma (disease)	Sirolimus	False	0					20	20	0	17	0
+allergic rhinitis	Dexchlorpheniramine	False	0					20	6	0	14	6
+hereditary late onset Parkinson disease	Levodopa	False	0					20	20	0	17	0
+primary cutaneous T-cell lymphoma	Mechlorethamine	True	1	0	1	1	0	20	9	0	18	9
+acute myeloid leukemia with t(6;9)(p23;q34)	Doxorubicin	True	1	1	1	1	0	20	20	0	17	0
+malignant germ cell tumor of ovary	Topotecan	False	0					20	2	0	17	2
+pulmonary tuberculosis	Serine	False	0					20	20	0	12	0
+primary cutaneous T-cell lymphoma	Flurandrenolide	False	0					20	9	0	18	9
+deficiency anemia	Hematin	False	0					20	1	0	18	0
+ovarian clear cell adenocarcinoma	Hydroxyurea	True	1	0	1	1	0	20	2	0	18	2
+obsolete familial combined hyperlipidemia	Fluvastatin	False	0					20	20	0	15	0
+candidemia	Caspofungin	False	0					20	20	0	12	0
+hyperlipidemia, familial combined, LPL related	Ciprofibrate	False	0					20	20	0	15	0
+diabetes mellitus (disease)	Nateglinide	False	0					20	1	0	18	0
+non-Hodgkin lymphoma	Hydrocortisone	True	1	0	1	1	0	20	16	0	18	16
+acute myeloid leukemia and myelodysplastic syndromes related to topoisomerase type 2 inhibitor	Azacitidine	False	0					20	1	0	17	1
+anxiety	Alprazolam	False	0					20	20	0	14	0
+acute promyelocytic leukemia	Daunorubicin	False	0					20	20	0	18	0
+endogenous depression	Isocarboxazid	False	0					20	1	0	17	0
+diabetes mellitus (disease)	Ertugliflozin	False	0					20	1	0	18	0
+bacterial meningitis	Ceftazidime	False	0					20	1	0	14	1
+folliculotropic mycosis fungoides	Betamethasone	True	1	0	1	1	0	20	7	0	16	7
+vasomotor rhinitis	Epoprostenol	False	0					20	8	0	14	8
+dermatophytosis of groin and perianal area	Tolnaftate	False	0					20	1	0	12	1
+allergic rhinitis	Betamethasone	True	1	0	1	1	0	20	6	0	14	6
+ciliary body disease	Rimexolone	False	0					20	6	0	14	6

@@ -1,0 +1,12 @@
+feature	count_all	count_gold	count_non_gold	mean_all	mean_gold	mean_non_gold	nonzero_rate_all	nonzero_rate_gold	nonzero_rate_non_gold	unique_count	unique_values_preview
+type_valid_flag	10000	101	9899	1	1	1	1.0	1.0	1.0	1	[1]
+schema_valid_flag	10000	101	9899	1	1	1	1.0	1.0	1.0	1	[1]
+type_filtered_keep_flag	10000	101	9899	1	1	1	1.0	1.0	1.0	1	[1]
+ontology_keep_flag	10000	101	9899	0.4398	0.069307	0.44358	0.4398	0.069307	0.44358	2	[0, 1]
+contra_flag	10000	101	9899	0.0003	0	0.000303	0.0003	0.0	0.000303	2	[0, 1]
+conflict_flag	10000	101	9899	0	0	0	0.0	0.0	0.0	1	[0]
+candidate_in_aligned_evidence	10000	101	9899	1	1	1	1.0	1.0	1.0	1	[1]
+evidence_edge_touch_count	10000	101	9899	1.3672	1.019802	1.370745	0.7845	1.0	0.782301	29	[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+query_edge_touch_count	10000	101	9899	23.854	26.980198	23.822103	1.0	1.0	1.0	16	[20, 21, 22, 23, 24, 25, 26, 27, 28, 29]
+candidate_query_edge_count	10000	101	9899	0.5002	0	0.505304	0.1454	0.0	0.146884	21	[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+contra_penalty	10000	101	9899	0.0003	0.0	0.000303	0.0003	0.0	0.000303	2	[0.0, 1.0]
