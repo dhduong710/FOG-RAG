@@ -1,0 +1,36 @@
+{
+  "week": 14,
+  "stage": "soft_support_protocol_freeze",
+  "branch": "week_13",
+  "main_truth": "raw_no_injection",
+  "decision_split": "valid",
+  "reference_rows": {
+    "backbone_raw_valid": "results/reference_rows/backbone_raw_valid",
+    "ontology_raw_valid_source": "dataset/setting_a/24_noinj_ontology/valid_top20_ontology_raw.json"
+  },
+  "inputs": {
+    "support_features": "dataset/setting_a/25_n2_support_features/valid_support_features.json",
+    "raw_source": "dataset/setting_a/23_noinj_source/valid_top20_raw.json",
+    "ontology_raw": "dataset/setting_a/24_noinj_ontology/valid_top20_ontology_raw.json",
+    "aligned_evidence": "dataset/setting_a/24b_noinj_evidence/valid_aligned_evidence.json"
+  },
+  "variant_configs": [
+    "configs/week14/soft_support_b025.json",
+    "configs/week14/soft_support_b050.json",
+    "configs/week14/soft_support_bcap.json"
+  ],
+  "planned_outputs": [
+    "dataset/setting_a/26_n2_soft_support/valid_top20_soft_support_b025.json",
+    "dataset/setting_a/26_n2_soft_support/valid_top20_soft_support_b050.json",
+    "dataset/setting_a/26_n2_soft_support/valid_top20_soft_support_bcap.json",
+    "results/week14/soft_support_valid_compare.json",
+    "results/week14/soft_support_main_decision.json"
+  ],
+  "forbidden_this_week": [
+    "test runs",
+    "fuzzy retrieval",
+    "fuzzy encoder",
+    "hard ontology gating revival",
+    "candidate pruning"
+  ]
+}
