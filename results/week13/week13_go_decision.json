@@ -1,0 +1,85 @@
+{
+  "week": 13,
+  "branch": "week_13",
+  "decision": "GO_TO_WEEK14",
+  "main_truth": "raw_no_injection",
+  "decision_split": "valid",
+  "week13_outputs_confirmed": {
+    "file_registry_frozen": true,
+    "support_feature_table_built": true,
+    "support_feature_audit_built": true,
+    "support_formula_probe_built": true,
+    "support_case_review_built": true
+  },
+  "main_findings": {
+    "constant_features_dropped": [
+      "type_valid_flag",
+      "schema_valid_flag",
+      "type_filtered_keep_flag",
+      "conflict_flag",
+      "candidate_in_aligned_evidence"
+    ],
+    "primary_features_from_audit": [
+      "evidence_edge_touch_count",
+      "query_edge_touch_count"
+    ],
+    "supporting_only_features_from_audit": [
+      "ontology_keep_flag",
+      "contra_flag",
+      "candidate_query_edge_count",
+      "contra_penalty"
+    ],
+    "best_formula_family": "B_evidence_minus_direct",
+    "best_formula_metrics": {
+      "num_queries": 500,
+      "mrr_like": 0.135644,
+      "hits1_like": 0.056,
+      "hits3_like": 0.134,
+      "hits10_like": 0.182,
+      "avg_gold_rank": 17.676,
+      "avg_top5_direct_link_rate": 0.0072,
+      "avg_top5_evidence_positive_rate": 1.0,
+      "avg_top5_ontology_keep_rate": 0.3068,
+      "avg_top5_contra_rate": 0.0
+    },
+    "case_review_summary": {
+      "num_queries": 500,
+      "num_improved": 77,
+      "num_worsened": 0,
+      "num_unchanged_good": 20,
+      "num_unchanged_bad": 403,
+      "improved_rate": 0.154,
+      "worsened_rate": 0.0
+    }
+  },
+  "week14_policy": {
+    "surviving_formula_family": "B_evidence_minus_direct",
+    "do_not_use_as_positive_main_signal": [
+      "type_valid_flag",
+      "schema_valid_flag",
+      "type_filtered_keep_flag",
+      "ontology_keep_flag",
+      "candidate_query_edge_count"
+    ],
+    "keep_as_supporting_or_diagnostic_only": [
+      "contra_flag",
+      "contra_penalty",
+      "query_edge_touch_count"
+    ],
+    "main_direction": [
+      "evidence-aware scoring",
+      "anti-shortcut direct-link penalty",
+      "no hard ontology gating revival"
+    ]
+  },
+  "scientific_interpretation": [
+    "Week 13 confirms that binary ontology support is not a good main positive signal on raw/no-injection candidates.",
+    "A lightweight evidence-aware but anti-shortcut score can improve ranking inside the raw top-k without worsening cases.",
+    "The remaining dominant failure mode is raw-candidate bottleneck when gold is absent from the top-k."
+  ],
+  "notes": [
+    "Week 14 should build a cleaner soft_support_raw branch using the surviving formula family.",
+    "Week 14 should not yet move to test.",
+    "Week 14 should still treat this as candidate-stage work, not final novelty2 closure."
+  ]
+}
