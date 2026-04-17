@@ -32,10 +32,10 @@ def get_candidate_order(row):
     raise KeyError("candidate_entities not found")
 
 
-def get_gold_rank(candidate_order, gold_entity):
+def get_gold_rank(candidate_order, gold_entity, missing_rank=21):
     if gold_entity in candidate_order:
         return candidate_order.index(gold_entity) + 1
-    return len(candidate_order) + 1
+    return missing_rank
 
 
 def build_feature_maps(feature_rows):
@@ -49,7 +49,7 @@ def build_feature_maps(feature_rows):
     return fmap
 
 
-def summarize_row(name, rows, feature_map):
+def summarize_row(name, rows, feature_map, missing_rank=21):
     gold_ranks = []
     avg_candidate_size = []
     top5_direct = []
@@ -75,7 +75,7 @@ def summarize_row(name, rows, feature_map):
         if gold_entity in candidate_order:
             gold_present += 1
 
-        gold_rank = get_gold_rank(candidate_order, gold_entity)
+        gold_rank = get_gold_rank(candidate_order, gold_entity, missing_rank=missing_rank)
         gold_ranks.append(gold_rank)
 
         feat_map = feature_map[key]
@@ -171,7 +171,7 @@ def main():
 
     for name, path in ROW_PATHS.items():
         rows = load_json(path)
-        summary, orders, gold_ranks = summarize_row(name, rows, feature_map)
+        summary, orders, gold_ranks = summarize_row(name, rows, feature_map, missing_rank=21)
         row_summaries[name] = summary
         row_orders[name] = orders
         row_gold_ranks[name] = gold_ranks
