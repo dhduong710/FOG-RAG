@@ -1,0 +1,74 @@
+{
+  "week": 17,
+  "theme": "encoder_readiness_check",
+  "created_at": "2026-04-18T12:13:38",
+  "decision_split": "valid",
+  "main_input_row": "soft_support_fuzzy_retrieval_main",
+  "main_output_row": "soft_support_fuzzy_encoder_probe_v0",
+  "reference_rows": [
+    "soft_support_raw",
+    "soft_support_fuzzy_retrieval_main"
+  ],
+  "week_mode": "encoder_readiness_check_but_not_commit_yet",
+  "allowed_actions": [
+    "build encoder input package from retrieval main",
+    "run one minimal encoder probe v0",
+    "valid-only comparison",
+    "subset dryrun before any full-valid run"
+  ],
+  "forbidden_actions": [
+    "Do not change raw source.",
+    "Do not reopen candidate-stage formulas or rows.",
+    "Do not change retrieval main row during day 1.",
+    "Do not run test split.",
+    "Do not commit to full encoder stage yet.",
+    "Do not introduce multiple encoder variants in week 17.",
+    "Do not start long-run end-to-end training."
+  ],
+  "success_criteria": [
+    "All week-17 folders exist.",
+    "All required input files exist.",
+    "Protocol freeze markdown is written.",
+    "Encoder readiness manifest is written.",
+    "Week-17 main input/output and constraints are unambiguous."
+  ],
+  "input_files": {
+    "raw_source": {
+      "path": "dataset/setting_a/23_noinj_source/valid_top20_raw.json",
+      "exists": true,
+      "size_bytes": 501966
+    },
+    "soft_support_main": {
+      "path": "dataset/setting_a/26_n2_soft_support/valid_top20_soft_support_main.json",
+      "exists": true,
+      "size_bytes": 3978451
+    },
+    "retrieval_main": {
+      "path": "dataset/setting_a/27_n2_fuzzy_retrieval/valid_fuzzy_retrieval_main.json",
+      "exists": true,
+      "size_bytes": 17609764
+    },
+    "type_map": {
+      "path": "dataset/setting_b/01_annotations/type_map.tsv",
+      "exists": true,
+      "size_bytes": 878188
+    },
+    "schema_rules": {
+      "path": "dataset/setting_b/01_annotations/schema_rules.json",
+      "exists": true,
+      "size_bytes": 285
+    },
+    "path_templates": {
+      "path": "dataset/setting_b/01_annotations/path_templates.yaml",
+      "exists": true,
+      "size_bytes": 483
+    },
+    "valid_b_annotations": {
+      "path": "dataset/setting_b/04_contra_checked/valid_b_annotations_contra_checked.json",
+      "exists": true,
+      "size_bytes": 884292
+    }
+  },
+  "missing_inputs": [],
+  "status": "READY"
+}
