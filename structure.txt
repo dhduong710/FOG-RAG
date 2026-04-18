@@ -1010,9 +1010,11 @@
 │   │   ├── soft_support_b025.json
 │   │   ├── soft_support_b050.json
 │   │   └── soft_support_bcap.json
-│   └── week16
-│       ├── retrieval_directplus.json
-│       └── retrieval_tight.json
+│   ├── week16
+│   │   ├── retrieval_directplus.json
+│   │   └── retrieval_tight.json
+│   ├── week17
+│   └── week18
 ├── data
 │   ├── __init__.py
 │   ├── __pycache__
@@ -1113,14 +1115,20 @@
 │   │   │   ├── valid_top20_soft_support_b050.json
 │   │   │   ├── valid_top20_soft_support_bcap.json
 │   │   │   └── valid_top20_soft_support_main.json
-│   │   └── 27_n2_fuzzy_retrieval
-│   │       ├── path_score_manifest.json
-│   │       ├── retrieval_main_manifest.json
-│   │       ├── valid_fuzzy_retrieval_main.json
-│   │       ├── valid_fuzzy_retrieval_v1.json
-│   │       ├── valid_path_features.json
-│   │       ├── valid_soft_support_fuzzy_retrieval_directplus.json
-│   │       └── valid_soft_support_fuzzy_retrieval_tight.json
+│   │   ├── 27_n2_fuzzy_retrieval
+│   │   │   ├── path_score_manifest.json
+│   │   │   ├── retrieval_main_manifest.json
+│   │   │   ├── valid_fuzzy_retrieval_main.json
+│   │   │   ├── valid_fuzzy_retrieval_v1.json
+│   │   │   ├── valid_path_features.json
+│   │   │   ├── valid_soft_support_fuzzy_retrieval_directplus.json
+│   │   │   └── valid_soft_support_fuzzy_retrieval_tight.json
+│   │   └── 28_n2_fuzzy_encoder
+│   │       ├── encoder_probe_manifest.json
+│   │       ├── encoder_probe_manifest_dryrun.json
+│   │       ├── valid_encoder_inputs.json
+│   │       ├── valid_fuzzy_encoder_probe_v0.json
+│   │       └── valid_fuzzy_encoder_probe_v0_dryrun.json
 │   ├── setting_b
 │   │   ├── 00_safety_labels
 │   │   │   ├── contra_by_disease.json
@@ -1166,7 +1174,12 @@
 │   │   │   ├── test_hard_main_eval.json
 │   │   │   ├── test_ontology_eval.json
 │   │   │   └── test_soft_best_eval.json
-│   │   └── 07_n2_eval_valid
+│   │   ├── 07_n2_eval_valid
+│   │   │   ├── valid_backbone_raw_eval.json
+│   │   │   ├── valid_ontology_raw_eval.json
+│   │   │   ├── valid_retrieval_main_eval.json
+│   │   │   └── valid_soft_support_raw_eval.json
+│   │   └── 08_n2_eval_test
 │   └── toy_debug
 │       ├── entity_embeddings.pt
 │       ├── entity_id_map.json
@@ -1224,14 +1237,30 @@
 │   │   ├── day5_case_review.md
 │   │   ├── day6_refine_or_freeze.md
 │   │   └── day7_week15_closeout.md
-│   └── week16
+│   ├── week16
+│   │   ├── day1_protocol_freeze.md
+│   │   ├── day2_build_variants.md
+│   │   ├── day3_valid_sweep_compare.md
+│   │   ├── day4_case_review.md
+│   │   ├── day5_main_row_decision.md
+│   │   ├── day6_freeze_and_bridge.md
+│   │   └── day7_week16_closeout.md
+│   ├── week17
+│   │   ├── day1_protocol_freeze.md
+│   │   ├── day2_encoder_input_build.md
+│   │   ├── day3_probe_design.md
+│   │   ├── day4_probe_compare.md
+│   │   ├── day5_case_review.md
+│   │   ├── day6_freeze_or_defer.md
+│   │   └── day7_week17_closeout.md
+│   └── week18
 │       ├── day1_protocol_freeze.md
-│       ├── day2_build_variants.md
-│       ├── day3_valid_sweep_compare.md
-│       ├── day4_case_review.md
-│       ├── day5_main_row_decision.md
-│       ├── day6_freeze_and_bridge.md
-│       └── day7_week16_closeout.md
+│       ├── day2_valid_eval_ready.md
+│       ├── day3_valid_main_table.md
+│       ├── day4_case_shortlist.md
+│       ├── day5_test_readiness.md
+│       ├── day6_row_lock_and_appendix.md
+│       └── day7_week18_closeout.md
 ├── results
 │   ├── reference_rows
 │   │   ├── backbone_raw_test
@@ -1324,15 +1353,30 @@
 │   │   ├── retrieval_valid_compare_v1.json
 │   │   ├── week15_go_decision.json
 │   │   └── week15_input_manifest.json
-│   └── week16
-│       ├── retrieval_case_samples_main.json
-│       ├── retrieval_main_decision.json
-│       ├── retrieval_stage_freeze_report.json
-│       ├── retrieval_sweep_summary.json
-│       ├── retrieval_valid_compare.json
-│       ├── retrieval_variant_build_summary.json
-│       ├── retrieval_variant_manifest.json
-│       └── week16_go_decision.json
+│   ├── week16
+│   │   ├── retrieval_case_samples_main.json
+│   │   ├── retrieval_main_decision.json
+│   │   ├── retrieval_stage_freeze_report.json
+│   │   ├── retrieval_sweep_summary.json
+│   │   ├── retrieval_valid_compare.json
+│   │   ├── retrieval_variant_build_summary.json
+│   │   ├── retrieval_variant_manifest.json
+│   │   └── week16_go_decision.json
+│   ├── week17
+│   │   ├── encoder_case_samples.json
+│   │   ├── encoder_freeze_report.json
+│   │   ├── encoder_input_summary.json
+│   │   ├── encoder_probe_compare.json
+│   │   ├── encoder_readiness_manifest.json
+│   │   └── week17_go_decision.json
+│   └── week18
+│       ├── encoder_probe_appendix_note.json
+│       ├── novelty2_case_shortlist.json
+│       ├── novelty2_valid_ablation.json
+│       ├── novelty2_valid_main_table.json
+│       ├── retrieval_main_lock_report.json
+│       ├── test_readiness_manifest.json
+│       └── week18_go_decision.json
 ├── runs
 │   ├── week4_pilot
 │   │   ├── config_snapshot.yaml
@@ -1379,14 +1423,30 @@
 │   │   ├── 05_collect_retrieval_cases.py
 │   │   ├── 06_refine_or_freeze_v1.py
 │   │   └── 07_write_week15_closeout.py
-│   └── week16
-│       ├── 01_freeze_retrieval_selection_protocol.py
-│       ├── 02_build_retrieval_variants.py
-│       ├── 03_compare_retrieval_variants.py
-│       ├── 04_collect_retrieval_main_cases.py
-│       ├── 05_select_retrieval_main.py
-│       ├── 06_freeze_retrieval_main_and_bridge.py
-│       └── 07_write_week16_closeout.py
+│   ├── week16
+│   │   ├── 01_freeze_retrieval_selection_protocol.py
+│   │   ├── 02_build_retrieval_variants.py
+│   │   ├── 03_compare_retrieval_variants.py
+│   │   ├── 04_collect_retrieval_main_cases.py
+│   │   ├── 05_select_retrieval_main.py
+│   │   ├── 06_freeze_retrieval_main_and_bridge.py
+│   │   └── 07_write_week16_closeout.py
+│   ├── week17
+│   │   ├── 01_freeze_encoder_readiness_protocol.py
+│   │   ├── 02_build_encoder_inputs.py
+│   │   ├── 03_build_encoder_probe_v0.py
+│   │   ├── 04_compare_encoder_probe.py
+│   │   ├── 05_collect_encoder_cases.py
+│   │   ├── 06_freeze_or_defer_encoder.py
+│   │   └── 07_write_week17_closeout.py
+│   └── week18
+│       ├── 01_freeze_week18_protocol.py
+│       ├── 02_build_valid_eval_ready.py
+│       ├── 03_build_valid_main_table.py
+│       ├── 04_collect_case_shortlist.py
+│       ├── 05_build_test_readiness_manifest.py
+│       ├── 06_write_row_lock_and_appendix.py
+│       └── 07_write_week18_closeout.py
 └── structure.txt
 
-236 directories, 1153 files
+246 directories, 1203 files
