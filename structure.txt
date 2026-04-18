@@ -1006,10 +1006,13 @@
 │   ├── week12A
 │   │   └── rgcn_ranker_ft.yaml
 │   ├── week13
-│   └── week14
-│       ├── soft_support_b025.json
-│       ├── soft_support_b050.json
-│       └── soft_support_bcap.json
+│   ├── week14
+│   │   ├── soft_support_b025.json
+│   │   ├── soft_support_b050.json
+│   │   └── soft_support_bcap.json
+│   └── week16
+│       ├── retrieval_directplus.json
+│       └── retrieval_tight.json
 ├── data
 │   ├── __init__.py
 │   ├── __pycache__
@@ -1103,13 +1106,21 @@
 │   │   │   ├── support_feature_manifest.json
 │   │   │   ├── valid_support_features.json
 │   │   │   └── valid_support_probe.json
-│   │   └── 26_n2_soft_support
-│   │       ├── support_main_manifest.json
-│   │       ├── support_stage_freeze_manifest.json
-│   │       ├── valid_top20_soft_support_b025.json
-│   │       ├── valid_top20_soft_support_b050.json
-│   │       ├── valid_top20_soft_support_bcap.json
-│   │       └── valid_top20_soft_support_main.json
+│   │   ├── 26_n2_soft_support
+│   │   │   ├── support_main_manifest.json
+│   │   │   ├── support_stage_freeze_manifest.json
+│   │   │   ├── valid_top20_soft_support_b025.json
+│   │   │   ├── valid_top20_soft_support_b050.json
+│   │   │   ├── valid_top20_soft_support_bcap.json
+│   │   │   └── valid_top20_soft_support_main.json
+│   │   └── 27_n2_fuzzy_retrieval
+│   │       ├── path_score_manifest.json
+│   │       ├── retrieval_main_manifest.json
+│   │       ├── valid_fuzzy_retrieval_main.json
+│   │       ├── valid_fuzzy_retrieval_v1.json
+│   │       ├── valid_path_features.json
+│   │       ├── valid_soft_support_fuzzy_retrieval_directplus.json
+│   │       └── valid_soft_support_fuzzy_retrieval_tight.json
 │   ├── setting_b
 │   │   ├── 00_safety_labels
 │   │   │   ├── contra_by_disease.json
@@ -1200,11 +1211,27 @@
 │   │   ├── day1_protocol_freeze.md
 │   │   ├── day2_soft_prune_report.md
 │   │   └── day7_week13_closeout.md
-│   └── week14
+│   ├── week14
+│   │   ├── day1_protocol_freeze.md
+│   │   ├── day5_main_row_decision.md
+│   │   ├── day6_bridge_prep.md
+│   │   └── day7_week14_closeout.md
+│   ├── week15
+│   │   ├── day1_protocol_freeze.md
+│   │   ├── day2_path_feature_build.md
+│   │   ├── day3_retrieval_build.md
+│   │   ├── day4_valid_compare.md
+│   │   ├── day5_case_review.md
+│   │   ├── day6_refine_or_freeze.md
+│   │   └── day7_week15_closeout.md
+│   └── week16
 │       ├── day1_protocol_freeze.md
+│       ├── day2_build_variants.md
+│       ├── day3_valid_sweep_compare.md
+│       ├── day4_case_review.md
 │       ├── day5_main_row_decision.md
-│       ├── day6_bridge_prep.md
-│       └── day7_week14_closeout.md
+│       ├── day6_freeze_and_bridge.md
+│       └── day7_week16_closeout.md
 ├── results
 │   ├── reference_rows
 │   │   ├── backbone_raw_test
@@ -1277,19 +1304,35 @@
 │   │   ├── support_feature_summary.json
 │   │   ├── support_formula_probe.json
 │   │   └── week13_go_decision.json
-│   └── week14
-│       ├── soft_support_build_summary.json
-│       ├── soft_support_case_samples.json
-│       ├── soft_support_case_summary.json
-│       ├── soft_support_main_casepack.json
-│       ├── soft_support_main_decision.json
-│       ├── soft_support_pairwise_order_match.json
-│       ├── soft_support_reference_table.json
-│       ├── soft_support_stage_report.json
-│       ├── soft_support_valid_compare.json
-│       ├── week14_go_decision.json
-│       ├── week14_input_manifest.json
-│       └── week14_to_week15_bridge.json
+│   ├── week14
+│   │   ├── soft_support_build_summary.json
+│   │   ├── soft_support_case_samples.json
+│   │   ├── soft_support_case_summary.json
+│   │   ├── soft_support_main_casepack.json
+│   │   ├── soft_support_main_decision.json
+│   │   ├── soft_support_pairwise_order_match.json
+│   │   ├── soft_support_reference_table.json
+│   │   ├── soft_support_stage_report.json
+│   │   ├── soft_support_valid_compare.json
+│   │   ├── week14_go_decision.json
+│   │   ├── week14_input_manifest.json
+│   │   └── week14_to_week15_bridge.json
+│   ├── week15
+│   │   ├── path_feature_summary.json
+│   │   ├── path_score_report_v1.json
+│   │   ├── retrieval_case_samples_v1.json
+│   │   ├── retrieval_valid_compare_v1.json
+│   │   ├── week15_go_decision.json
+│   │   └── week15_input_manifest.json
+│   └── week16
+│       ├── retrieval_case_samples_main.json
+│       ├── retrieval_main_decision.json
+│       ├── retrieval_stage_freeze_report.json
+│       ├── retrieval_sweep_summary.json
+│       ├── retrieval_valid_compare.json
+│       ├── retrieval_variant_build_summary.json
+│       ├── retrieval_variant_manifest.json
+│       └── week16_go_decision.json
 ├── runs
 │   ├── week4_pilot
 │   │   ├── config_snapshot.yaml
@@ -1321,13 +1364,29 @@
 │   │   ├── 03_probe_support_scoring.py
 │   │   ├── 04_collect_support_cases.py
 │   │   └── 05_write_week13_closeout.py
-│   └── week14
-│       ├── 02_build_soft_support_variants.py
-│       ├── 03_summarize_soft_support_valid.py
-│       ├── 04_collect_soft_support_cases.py
-│       ├── 05_select_soft_support_main.py
-│       ├── 06_freeze_soft_support_bridge.py
-│       └── 07_write_week14_closeout.py
+│   ├── week14
+│   │   ├── 02_build_soft_support_variants.py
+│   │   ├── 03_summarize_soft_support_valid.py
+│   │   ├── 04_collect_soft_support_cases.py
+│   │   ├── 05_select_soft_support_main.py
+│   │   ├── 06_freeze_soft_support_bridge.py
+│   │   └── 07_write_week14_closeout.py
+│   ├── week15
+│   │   ├── 01_freeze_retrieval_protocol.py
+│   │   ├── 02_build_path_feature_table.py
+│   │   ├── 03_build_valid_fuzzy_retrieval_v1.py
+│   │   ├── 04_compare_retrieval_valid_v1.py
+│   │   ├── 05_collect_retrieval_cases.py
+│   │   ├── 06_refine_or_freeze_v1.py
+│   │   └── 07_write_week15_closeout.py
+│   └── week16
+│       ├── 01_freeze_retrieval_selection_protocol.py
+│       ├── 02_build_retrieval_variants.py
+│       ├── 03_compare_retrieval_variants.py
+│       ├── 04_collect_retrieval_main_cases.py
+│       ├── 05_select_retrieval_main.py
+│       ├── 06_freeze_retrieval_main_and_bridge.py
+│       └── 07_write_week16_closeout.py
 └── structure.txt
 
-228 directories, 1102 files
+236 directories, 1153 files
