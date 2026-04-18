@@ -1,0 +1,126 @@
+{
+  "week": 19,
+  "stage": "build_retrieval_test",
+  "status": "BUILT",
+  "selected_source_variant": "soft_support_fuzzy_retrieval_tight",
+  "selected_config": {
+    "variant_name": "soft_support_fuzzy_retrieval_tight",
+    "retain_ratio": 0.55,
+    "min_keep": 18,
+    "top_band_weight": 1.0,
+    "mid_band_weight": 0.6,
+    "tail_band_weight": 0.25,
+    "touch_candidate": 0.35,
+    "touch_query": 0.05,
+    "direct_shortcut": -0.8,
+    "contra": -0.1,
+    "density": 0.05,
+    "stage_a_policy": "coverage_pass_best_triple_per_candidate",
+    "notes": [
+      "Week 16 tighter-budget variant.",
+      "Purpose: test whether smaller evidence budget yields cleaner subgraph without major proxy collapse."
+    ]
+  },
+  "input_paths": {
+    "raw_test": "/home/duong/code/FOG-RAG/dataset/setting_a/23_noinj_source/test_top20_raw.json",
+    "aligned_evidence_test": "/home/duong/code/FOG-RAG/dataset/setting_a/24b_noinj_evidence/test_aligned_evidence.json",
+    "soft_support_test": "/home/duong/code/FOG-RAG/dataset/setting_a/26_n2_soft_support/test_top20_soft_support_main.json",
+    "test_b_annotations": "/home/duong/code/FOG-RAG/dataset/setting_b/04_contra_checked/test_b_annotations_contra_checked.json",
+    "retrieval_main_manifest": "/home/duong/code/FOG-RAG/dataset/setting_a/27_n2_fuzzy_retrieval/retrieval_main_manifest.json"
+  },
+  "intermediate_outputs": {
+    "test_path_features": "/home/duong/code/FOG-RAG/dataset/setting_a/27_n2_fuzzy_retrieval/test_path_features.json"
+  },
+  "output_path": "/home/duong/code/FOG-RAG/dataset/setting_a/27_n2_fuzzy_retrieval/test_fuzzy_retrieval_main.json",
+  "path_feature_summary": {
+    "num_rows": 500,
+    "avg_subgraph_num_triples_before_scoring": 59.932,
+    "touch_candidate_rate": 0.490089,
+    "touch_query_rate": 0.402223,
+    "touch_top_band_rate": 0.085997,
+    "direct_shortcut_rate_before": 0.190483,
+    "contra_rate_before": 0.000133,
+    "schema_consistency_rate_known_only": null,
+    "top_relations_seen": [
+      [
+        "indication",
+        21253
+      ],
+      [
+        "associated_with",
+        6840
+      ],
+      [
+        "target",
+        1366
+      ],
+      [
+        "ppi",
+        507
+      ]
+    ]
+  },
+  "retrieval_main_summary": {
+    "num_rows": 500,
+    "avg_original_subgraph_size": 59.932,
+    "avg_selected_subgraph_size": 32.34,
+    "avg_triple_score": 0.504186,
+    "direct_shortcut_path_rate": 0.099505,
+    "contradiction_path_rate": 0.000247,
+    "candidate_coverage_preserved_rate": 1.0,
+    "top_band_coverage_preserved_rate": 1.0
+  },
+  "schema_check": {
+    "num_rows_is_500": true,
+    "selected_source_variant_frozen": true,
+    "canonical_variant_name": [
+      "soft_support_fuzzy_retrieval_main"
+    ],
+    "main_row_keys": [
+      "row_index",
+      "row_uid",
+      "split",
+      "query_entity",
+      "query_entity_id",
+      "gold_entity",
+      "gold_entity_id",
+      "variant_name",
+      "candidate_entities",
+      "candidate_entity_ids",
+      "support_scores",
+      "candidate_support_bands",
+      "contra_flags",
+      "selected_subgraph",
+      "triple_score_rows",
+      "path_scores",
+      "subgraph_summary",
+      "selected_source_variant"
+    ],
+    "triple_score_row_keys": [
+      "triple_index",
+      "head_id",
+      "relation_id",
+      "relation_name",
+      "tail_id",
+      "touches_query",
+      "touches_candidate",
+      "touched_candidate_positions",
+      "touched_candidate_ids",
+      "touched_candidate_names",
+      "touches_top_band_candidate",
+      "direct_candidate_query_flag",
+      "contra_flag",
+      "ontology_consistency_flag",
+      "triple_frequency_in_subgraph",
+      "local_density_hint",
+      "triple_score",
+      "score_debug"
+    ]
+  },
+  "policy_checks": {
+    "retrieval_logic_changed": false,
+    "selected_source_variant_changed": false,
+    "candidate_stage_reopened": false,
+    "encoder_promoted": false
+  }
+}
