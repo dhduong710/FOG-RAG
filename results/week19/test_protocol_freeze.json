@@ -1,0 +1,352 @@
+{
+  "week": 19,
+  "generated_at_utc": "2026-04-18T09:36:48.479297Z",
+  "status": "READY_FOR_LOCKED_TEST_WEEK",
+  "theme": "Build missing main test artifacts then run official locked test",
+  "week_type": "official_locked_test_week",
+  "main_success_criterion": "Under the locked reviewer-safe test protocol, the frozen retrieval main row remains the strongest current row of Novelty 2.",
+  "row_roles": {
+    "reference_row": "backbone_raw",
+    "negative_control": "ontology_raw",
+    "candidate_stage_intermediate": "soft_support_raw",
+    "main_row": "soft_support_fuzzy_retrieval_main",
+    "appendix_only": [
+      "soft_support_fuzzy_encoder_probe_v0"
+    ]
+  },
+  "frozen_logic": {
+    "candidate_formula_change_allowed": false,
+    "retrieval_variant_change_allowed": false,
+    "encoder_promotion_allowed": false,
+    "new_novelty_allowed": false,
+    "row_role_change_allowed": false
+  },
+  "metric_policy": {
+    "main_metric": "mrr_at20",
+    "rr_rule": "1/rank if rank <= 20 else 0",
+    "gold_rank_out_of_top20": 21,
+    "secondary_metrics": [
+      "gold_present_rate",
+      "mrr_present_only",
+      "hits1_at20",
+      "hits3_at20",
+      "hits10_at20",
+      "avg_gold_rank"
+    ]
+  },
+  "decision_split": "test",
+  "week18_prerequisite_checks": [
+    {
+      "path": "results/week18/retrieval_main_lock_report.json",
+      "exists": true,
+      "is_file": true,
+      "size_bytes": 3724
+    },
+    {
+      "path": "results/week18/novelty2_valid_main_table.json",
+      "exists": true,
+      "is_file": true,
+      "size_bytes": 3335
+    },
+    {
+      "path": "results/week18/novelty2_valid_ablation.json",
+      "exists": true,
+      "is_file": true,
+      "size_bytes": 2617
+    },
+    {
+      "path": "results/week18/encoder_probe_appendix_note.json",
+      "exists": true,
+      "is_file": true,
+      "size_bytes": 4808
+    },
+    {
+      "path": "results/week18/test_readiness_manifest.json",
+      "exists": true,
+      "is_file": true,
+      "size_bytes": 3841
+    },
+    {
+      "path": "results/week18/week18_go_decision.json",
+      "exists": true,
+      "is_file": true,
+      "size_bytes": 4280
+    },
+    {
+      "path": "dataset/setting_b/07_n2_eval_valid/valid_backbone_raw_eval.json",
+      "exists": true,
+      "is_file": true,
+      "size_bytes": 1396175
+    },
+    {
+      "path": "dataset/setting_b/07_n2_eval_valid/valid_ontology_raw_eval.json",
+      "exists": true,
+      "is_file": true,
+      "size_bytes": 1224708
+    },
+    {
+      "path": "dataset/setting_b/07_n2_eval_valid/valid_soft_support_raw_eval.json",
+      "exists": true,
+      "is_file": true,
+      "size_bytes": 5110287
+    },
+    {
+      "path": "dataset/setting_b/07_n2_eval_valid/valid_retrieval_main_eval.json",
+      "exists": true,
+      "is_file": true,
+      "size_bytes": 1799885
+    }
+  ],
+  "week18_json_summaries": [
+    {
+      "path": "results/week18/retrieval_main_lock_report.json",
+      "loaded": true,
+      "json_kind": "dict",
+      "top_keys": [
+        "week",
+        "theme",
+        "created_at",
+        "week_mode",
+        "main_truth",
+        "decision_split",
+        "test_mode",
+        "row_roles",
+        "main_table_rows",
+        "appendix_rows",
+        "forbidden_actions",
+        "success_criteria",
+        "input_files",
+        "missing_inputs",
+        "status",
+        "week17_dependency"
+      ]
+    },
+    {
+      "path": "results/week18/novelty2_valid_main_table.json",
+      "loaded": true,
+      "json_kind": "dict",
+      "top_keys": [
+        "week",
+        "day",
+        "decision_split",
+        "metric_policy",
+        "main_row_after_week17",
+        "appendix_row",
+        "rows"
+      ]
+    },
+    {
+      "path": "results/week18/novelty2_valid_ablation.json",
+      "loaded": true,
+      "json_kind": "dict",
+      "top_keys": [
+        "week",
+        "day",
+        "metric_policy",
+        "main_row_after_week17",
+        "comparisons",
+        "appendix_probe_summary",
+        "key_takeaways"
+      ]
+    },
+    {
+      "path": "results/week18/encoder_probe_appendix_note.json",
+      "loaded": true,
+      "json_kind": "dict",
+      "top_keys": [
+        "week",
+        "day",
+        "mode",
+        "row_positioning",
+        "appendix_positioning",
+        "paper_narrative_lock",
+        "current_limitations",
+        "next_step_recommendation",
+        "paper_ready_paragraph"
+      ]
+    },
+    {
+      "path": "results/week18/test_readiness_manifest.json",
+      "loaded": true,
+      "json_kind": "dict",
+      "top_keys": [
+        "week",
+        "day",
+        "mode",
+        "main_row_after_week17",
+        "official_test_run_in_week18",
+        "required_test_sources",
+        "optional_test_sources",
+        "schema_notes",
+        "decision",
+        "decision_notes",
+        "recommended_next_step"
+      ]
+    },
+    {
+      "path": "results/week18/week18_go_decision.json",
+      "loaded": true,
+      "json_kind": "dict",
+      "top_keys": [
+        "week",
+        "theme",
+        "final_decision",
+        "official_locked_test_now",
+        "week19_recommendation",
+        "main_row_after_week18",
+        "appendix_row",
+        "week18_status",
+        "core_findings",
+        "row_lock_summary",
+        "case_shortlist_summary",
+        "test_readiness_summary",
+        "paper_narrative_lock",
+        "successes_of_week18",
+        "remaining_limits",
+        "paper_ready_paragraph",
+        "dependencies_checked"
+      ]
+    },
+    {
+      "path": "dataset/setting_b/07_n2_eval_valid/valid_backbone_raw_eval.json",
+      "loaded": true,
+      "json_kind": "list",
+      "num_rows": 500,
+      "top_keys": [
+        "eval_row_name",
+        "row_uid",
+        "row_index",
+        "split",
+        "query_entity",
+        "query_entity_id",
+        "gold_entity",
+        "gold_entity_id",
+        "candidate_entities",
+        "candidate_entity_ids",
+        "num_candidates",
+        "gold_present",
+        "gold_rank",
+        "gold_rank_source",
+        "top1_candidate",
+        "top5_candidates",
+        "setting_b_annotations",
+        "row_metrics_ready",
+        "stage_specific"
+      ]
+    },
+    {
+      "path": "dataset/setting_b/07_n2_eval_valid/valid_ontology_raw_eval.json",
+      "loaded": true,
+      "json_kind": "list",
+      "num_rows": 500,
+      "top_keys": [
+        "eval_row_name",
+        "row_uid",
+        "row_index",
+        "split",
+        "query_entity",
+        "query_entity_id",
+        "gold_entity",
+        "gold_entity_id",
+        "candidate_entities",
+        "candidate_entity_ids",
+        "num_candidates",
+        "gold_present",
+        "gold_rank",
+        "gold_rank_source",
+        "top1_candidate",
+        "top5_candidates",
+        "setting_b_annotations",
+        "row_metrics_ready",
+        "stage_specific"
+      ]
+    },
+    {
+      "path": "dataset/setting_b/07_n2_eval_valid/valid_soft_support_raw_eval.json",
+      "loaded": true,
+      "json_kind": "list",
+      "num_rows": 500,
+      "top_keys": [
+        "eval_row_name",
+        "row_uid",
+        "row_index",
+        "split",
+        "query_entity",
+        "query_entity_id",
+        "gold_entity",
+        "gold_entity_id",
+        "candidate_entities",
+        "candidate_entity_ids",
+        "num_candidates",
+        "gold_present",
+        "gold_rank",
+        "gold_rank_source",
+        "top1_candidate",
+        "top5_candidates",
+        "setting_b_annotations",
+        "row_metrics_ready",
+        "stage_specific"
+      ]
+    },
+    {
+      "path": "dataset/setting_b/07_n2_eval_valid/valid_retrieval_main_eval.json",
+      "loaded": true,
+      "json_kind": "list",
+      "num_rows": 500,
+      "top_keys": [
+        "eval_row_name",
+        "row_uid",
+        "row_index",
+        "split",
+        "query_entity",
+        "query_entity_id",
+        "gold_entity",
+        "gold_entity_id",
+        "candidate_entities",
+        "candidate_entity_ids",
+        "num_candidates",
+        "gold_present",
+        "gold_rank",
+        "gold_rank_source",
+        "top1_candidate",
+        "top5_candidates",
+        "setting_b_annotations",
+        "row_metrics_ready",
+        "stage_specific"
+      ]
+    }
+  ],
+  "missing_test_artifacts_to_build": [
+    "dataset/setting_a/26_n2_soft_support/test_top20_soft_support_main.json",
+    "dataset/setting_a/27_n2_fuzzy_retrieval/test_fuzzy_retrieval_main.json"
+  ],
+  "future_eval_ready_outputs": [
+    "dataset/setting_b/08_n2_eval_test/test_backbone_raw_eval.json",
+    "dataset/setting_b/08_n2_eval_test/test_ontology_raw_eval.json",
+    "dataset/setting_b/08_n2_eval_test/test_soft_support_raw_eval.json",
+    "dataset/setting_b/08_n2_eval_test/test_retrieval_main_eval.json"
+  ],
+  "allowed_actions_week19": [
+    "build soft_support_raw_test",
+    "build retrieval_main_test",
+    "build test eval-ready package",
+    "run official locked test",
+    "build test main table",
+    "build test ablation",
+    "review test cases",
+    "freeze paper-facing row"
+  ],
+  "forbidden_actions_week19": [
+    "reopen candidate-stage",
+    "change soft_support_raw formula",
+    "change retrieval main variant",
+    "promote encoder to main path",
+    "add new novelty",
+    "change reviewer-safe metric policy",
+    "change row roles frozen on valid"
+  ],
+  "expected_day1_outputs": [
+    "results/week19/test_protocol_freeze.json",
+    "reports/week19/day1_protocol_freeze.md"
+  ]
+}
