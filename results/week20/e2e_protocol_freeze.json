@@ -1,0 +1,279 @@
+{
+  "week": 20,
+  "stage": "week20_protocol_freeze",
+  "generated_at_utc": "2026-04-19T11:42:34.905425Z",
+  "status": "READY_FOR_E2E_CONFIRMATION",
+  "theme": "Frozen end-to-end LLaMA confirmation + paper-ready assets",
+  "week_type": "end_to_end_confirmation_week",
+  "paper_facing_inputs": {
+    "paper_main_row": "soft_support_fuzzy_retrieval_main",
+    "reference_row": "backbone_raw",
+    "negative_control": "ontology_raw",
+    "candidate_stage_intermediate": "soft_support_raw",
+    "appendix_only": [
+      "soft_support_fuzzy_encoder_probe_v0"
+    ],
+    "selected_source_variant": "soft_support_fuzzy_retrieval_tight"
+  },
+  "frozen_e2e_rows": [
+    "backbone_raw",
+    "soft_support_raw",
+    "soft_support_fuzzy_retrieval_main"
+  ],
+  "optional_appendix_rows": [
+    "ontology_raw"
+  ],
+  "forbidden_changes": [
+    "change paper_main_row",
+    "change selected retrieval source variant",
+    "promote encoder to main path",
+    "open new dataset",
+    "open many new models",
+    "change reviewer-safe locked-test narrative"
+  ],
+  "infer_contract": {
+    "required_dataset_files": [
+      "train.json",
+      "valid.json",
+      "test.json"
+    ],
+    "required_sample_fields": [
+      "input",
+      "output",
+      "query_entity_id",
+      "rank_entities_id",
+      "subgraph"
+    ],
+    "eval_split": "test",
+    "main_e2e_rows": [
+      "backbone_raw",
+      "soft_support_raw",
+      "soft_support_fuzzy_retrieval_main"
+    ]
+  },
+  "checkpoint_inventory": {
+    "num_candidates": 0,
+    "candidates": [],
+    "primary_candidate": null
+  },
+  "model_name_or_path_hints": [
+    {
+      "source_file": "/home/anhlq/Documents/2026-dhd/FOG-RAG/configs/reference_backbone/setting_a_server_3b.yaml",
+      "key": "model_name_or_path",
+      "value": "meta-llama/Llama-3.2-3B"
+    },
+    {
+      "source_file": "/home/anhlq/Documents/2026-dhd/FOG-RAG/configs/reference_backbone/backbone_valid_v2.yaml",
+      "key": "model_name_or_path",
+      "value": "meta-llama/Llama-3.2-3B"
+    }
+  ],
+  "kge_embedding_candidates_existing": [
+    "/home/anhlq/Documents/2026-dhd/FOG-RAG/dataset/setting_a/08_backbone_ready/entity_embeddings_rgcn.pt"
+  ],
+  "preferred_kge_embedding_path": "/home/anhlq/Documents/2026-dhd/FOG-RAG/dataset/setting_a/08_backbone_ready/entity_embeddings_rgcn.pt",
+  "prerequisites": {
+    "week19_go_decision": {
+      "path": "/home/anhlq/Documents/2026-dhd/FOG-RAG/results/week19/week19_go_decision.json",
+      "exists": true,
+      "json_kind": "dict",
+      "top_keys": [
+        "week",
+        "stage",
+        "status",
+        "theme",
+        "closeout_checks",
+        "paper_facing_decision",
+        "locked_test_summary",
+        "recommended_case_packs",
+        "next_step",
+        "decision_note"
+      ]
+    },
+    "test_eval_ready": {
+      "backbone_raw": {
+        "path": "/home/anhlq/Documents/2026-dhd/FOG-RAG/dataset/setting_b/08_n2_eval_test/test_backbone_raw_eval.json",
+        "exists": true,
+        "json_kind": "list",
+        "num_rows": 500,
+        "top_keys": [
+          "eval_row_name",
+          "row_uid",
+          "row_index",
+          "split",
+          "query_entity",
+          "query_entity_id",
+          "gold_entity",
+          "gold_entity_id",
+          "candidate_entities",
+          "candidate_entity_ids",
+          "num_candidates",
+          "gold_present",
+          "gold_rank",
+          "gold_rank_source",
+          "top1_candidate",
+          "top5_candidates",
+          "setting_b_annotations",
+          "row_metrics_ready",
+          "stage_specific"
+        ]
+      },
+      "ontology_raw": {
+        "path": "/home/anhlq/Documents/2026-dhd/FOG-RAG/dataset/setting_b/08_n2_eval_test/test_ontology_raw_eval.json",
+        "exists": true,
+        "json_kind": "list",
+        "num_rows": 500,
+        "top_keys": [
+          "eval_row_name",
+          "row_uid",
+          "row_index",
+          "split",
+          "query_entity",
+          "query_entity_id",
+          "gold_entity",
+          "gold_entity_id",
+          "candidate_entities",
+          "candidate_entity_ids",
+          "num_candidates",
+          "gold_present",
+          "gold_rank",
+          "gold_rank_source",
+          "top1_candidate",
+          "top5_candidates",
+          "setting_b_annotations",
+          "row_metrics_ready",
+          "stage_specific"
+        ]
+      },
+      "soft_support_raw": {
+        "path": "/home/anhlq/Documents/2026-dhd/FOG-RAG/dataset/setting_b/08_n2_eval_test/test_soft_support_raw_eval.json",
+        "exists": true,
+        "json_kind": "list",
+        "num_rows": 500,
+        "top_keys": [
+          "eval_row_name",
+          "row_uid",
+          "row_index",
+          "split",
+          "query_entity",
+          "query_entity_id",
+          "gold_entity",
+          "gold_entity_id",
+          "candidate_entities",
+          "candidate_entity_ids",
+          "num_candidates",
+          "gold_present",
+          "gold_rank",
+          "gold_rank_source",
+          "top1_candidate",
+          "top5_candidates",
+          "setting_b_annotations",
+          "row_metrics_ready",
+          "stage_specific"
+        ]
+      },
+      "retrieval_main": {
+        "path": "/home/anhlq/Documents/2026-dhd/FOG-RAG/dataset/setting_b/08_n2_eval_test/test_retrieval_main_eval.json",
+        "exists": true,
+        "json_kind": "list",
+        "num_rows": 500,
+        "top_keys": [
+          "eval_row_name",
+          "row_uid",
+          "row_index",
+          "split",
+          "query_entity",
+          "query_entity_id",
+          "gold_entity",
+          "gold_entity_id",
+          "candidate_entities",
+          "candidate_entity_ids",
+          "num_candidates",
+          "gold_present",
+          "gold_rank",
+          "gold_rank_source",
+          "top1_candidate",
+          "top5_candidates",
+          "setting_b_annotations",
+          "row_metrics_ready",
+          "stage_specific"
+        ]
+      }
+    },
+    "test_stage_artifacts": {
+      "backbone_raw": {
+        "path": "/home/anhlq/Documents/2026-dhd/FOG-RAG/dataset/setting_a/23_noinj_source/test_top20_raw.json",
+        "exists": true,
+        "json_kind": "list",
+        "num_rows": 500,
+        "top_keys": [
+          "split",
+          "query_entity",
+          "query_entity_id",
+          "gold_entity",
+          "gold_entity_id",
+          "candidate_entities",
+          "candidate_entity_ids",
+          "gold_rank_in_full_universe",
+          "gold_in_topk_raw"
+        ]
+      },
+      "soft_support_raw": {
+        "path": "/home/anhlq/Documents/2026-dhd/FOG-RAG/dataset/setting_a/26_n2_soft_support/test_top20_soft_support_main.json",
+        "exists": true,
+        "json_kind": "list",
+        "num_rows": 500,
+        "top_keys": [
+          "split",
+          "query_entity",
+          "query_entity_id",
+          "gold_entity",
+          "gold_entity_id",
+          "gold_rank_in_full_universe",
+          "gold_in_topk_raw",
+          "variant_name",
+          "candidate_entities",
+          "candidate_entity_ids",
+          "support_scores",
+          "support_rank_order",
+          "candidate_debug_rows"
+        ]
+      },
+      "retrieval_main": {
+        "path": "/home/anhlq/Documents/2026-dhd/FOG-RAG/dataset/setting_a/27_n2_fuzzy_retrieval/test_fuzzy_retrieval_main.json",
+        "exists": true,
+        "json_kind": "list",
+        "num_rows": 500,
+        "top_keys": [
+          "row_index",
+          "row_uid",
+          "split",
+          "query_entity",
+          "query_entity_id",
+          "gold_entity",
+          "gold_entity_id",
+          "variant_name",
+          "candidate_entities",
+          "candidate_entity_ids",
+          "support_scores",
+          "candidate_support_bands",
+          "contra_flags",
+          "selected_subgraph",
+          "triple_score_rows",
+          "path_scores",
+          "subgraph_summary",
+          "selected_source_variant"
+        ]
+      }
+    }
+  },
+  "deliverables_day1": [
+    "results/week20/e2e_protocol_freeze.json",
+    "reports/week20/day1_protocol_freeze.md"
+  ],
+  "deliverables_day2_preview": [
+    "dataset/setting_a/29_n2_e2e_infer_ready/test_backbone_raw_infer_ready.json",
+    "dataset/setting_a/29_n2_e2e_infer_ready/test_soft_support_raw_infer_ready.json",
+    "dataset/setting_a/29_n2_e2e_infer_ready/test_retrieval_main_infer_ready.json"
+  ]
+}
