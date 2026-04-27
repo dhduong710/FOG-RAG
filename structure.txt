@@ -1104,12 +1104,28 @@
 │   │   │   ├── valid_path_features.json
 │   │   │   ├── valid_soft_support_fuzzy_retrieval_directplus.json
 │   │   │   └── valid_soft_support_fuzzy_retrieval_tight.json
-│   │   └── 28_n2_fuzzy_encoder
-│   │       ├── encoder_probe_manifest_dryrun.json
-│   │       ├── encoder_probe_manifest.json
-│   │       ├── valid_encoder_inputs.json
-│   │       ├── valid_fuzzy_encoder_probe_v0_dryrun.json
-│   │       └── valid_fuzzy_encoder_probe_v0.json
+│   │   ├── 28_n2_fuzzy_encoder
+│   │   │   ├── encoder_probe_manifest_dryrun.json
+│   │   │   ├── encoder_probe_manifest.json
+│   │   │   ├── valid_encoder_inputs.json
+│   │   │   ├── valid_fuzzy_encoder_probe_v0_dryrun.json
+│   │   │   └── valid_fuzzy_encoder_probe_v0.json
+│   │   └── 29_n2_e2e_infer_ready
+│   │       ├── backbone_raw
+│   │       │   ├── prep_manifest.json
+│   │       │   ├── test.json
+│   │       │   ├── train.json
+│   │       │   └── valid.json
+│   │       ├── retrieval_main
+│   │       │   ├── prep_manifest.json
+│   │       │   ├── test.json
+│   │       │   ├── train.json
+│   │       │   └── valid.json
+│   │       └── soft_support_raw
+│   │           ├── prep_manifest.json
+│   │           ├── test.json
+│   │           ├── train.json
+│   │           └── valid.json
 │   ├── setting_b
 │   │   ├── 00_safety_labels
 │   │   │   ├── contra_by_disease.json
@@ -1258,7 +1274,8 @@
 │   │   ├── day6_test_case_review.md
 │   │   └── day7_week19_closeout.md
 │   └── week20
-│       └── day1_protocol_freeze.md
+│       ├── day1_protocol_freeze.md
+│       └── day2_build_infer_ready.md
 ├── results
 │   ├── reference_rows
 │   │   ├── backbone_raw_test
@@ -1411,7 +1428,13 @@
 │   │   ├── test_protocol_freeze.json
 │   │   └── week19_go_decision.json
 │   ├── week20
-│   │   └── e2e_protocol_freeze.json
+│   │   ├── e2e_primary_checkpoint
+│   │   │   ├── adapter_config.json
+│   │   │   ├── adapter_model.bin
+│   │   │   ├── graph_model.bin
+│   │   │   └── README.md
+│   │   ├── e2e_protocol_freeze.json
+│   │   └── infer_ready_build_summary.json
 │   ├── week5
 │   │   └── backbone_llama32_3b_rgcn
 │   │       ├── checkpoint-1000
@@ -1546,7 +1569,10 @@
 │   │   ├── 06_collect_test_cases.py
 │   │   └── 07_write_week19_closeout.py
 │   └── week20
-│       └── 01_freeze_week20_protocol.py
+│       ├── 01_freeze_week20_protocol.py
+│       ├── 02_build_infer_ready.py
+│       ├── 03_collect_e2e_backbone_soft.py
+│       └── 03_run_e2e_backbone_soft.sh
 └── structure.txt
 
-279 directories, 1271 files
+284 directories, 1292 files
