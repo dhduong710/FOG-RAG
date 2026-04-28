@@ -1,5 +1,5 @@
 {
-  "model_name": "transe",
+  "model_name": "distmult",
   "seed": 2025,
   "dim": 128,
   "epochs": 80,
@@ -15,5 +15,5 @@
   "num_train_indication_pairs": 8388,
   "train_rows_path": "dataset/setting_a/29_n2_e2e_infer_ready/backbone_raw/train.json",
   "enriched_kg_path": "dataset/setting_a/02_graph/train_enriched_deg1000_final.tsv",
-  "elapsed_seconds": 6.6811683177948
+  "elapsed_seconds": 6.080466270446777
 }

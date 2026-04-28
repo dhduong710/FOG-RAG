@@ -1,7 +1,7 @@
 {
-  "model_name": "transe",
+  "model_name": "complex",
   "config": {
-    "model_name": "transe",
+    "model_name": "complex",
     "seed": 2025,
     "dim": 128,
     "epochs": 80,
@@ -17,28 +17,28 @@
     "num_train_indication_pairs": 8388,
     "train_rows_path": "dataset/setting_a/29_n2_e2e_infer_ready/backbone_raw/train.json",
     "enriched_kg_path": "dataset/setting_a/02_graph/train_enriched_deg1000_final.tsv",
-    "elapsed_seconds": 6.6811683177948
+    "elapsed_seconds": 9.389823913574219
   },
   "valid_summary": {
     "split": "valid",
-    "model_name": "transe",
+    "model_name": "complex",
     "num_rows": 500,
     "candidate_size_min": 20,
     "candidate_size_max": 20,
-    "gold_present_at20_raw": 0.104,
-    "gold_rank_21_count": 448,
-    "avg_gold_rank_absent_as_21": 19.824,
-    "output_path": "results/week21/baseline_outputs/transe/valid_top20.json"
+    "gold_present_at20_raw": 0.56,
+    "gold_rank_21_count": 220,
+    "avg_gold_rank_absent_as_21": 14.176,
+    "output_path": "results/week21/baseline_outputs/complex/valid_top20.json"
   },
   "test_summary": {
     "split": "test",
-    "model_name": "transe",
+    "model_name": "complex",
     "num_rows": 500,
     "candidate_size_min": 20,
     "candidate_size_max": 20,
-    "gold_present_at20_raw": 0.104,
-    "gold_rank_21_count": 448,
-    "avg_gold_rank_absent_as_21": 19.642,
-    "output_path": "results/week21/baseline_outputs/transe/test_top20.json"
+    "gold_present_at20_raw": 0.574,
+    "gold_rank_21_count": 213,
+    "avg_gold_rank_absent_as_21": 13.784,
+    "output_path": "results/week21/baseline_outputs/complex/test_top20.json"
   }
 }

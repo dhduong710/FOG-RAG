@@ -15,7 +15,12 @@
   "valid_rows": 500,
   "test_rows": 500,
   "models": [
-    "transe"
+    "transe",
+    "distmult",
+    "complex",
+    "rotate",
+    "rgcn",
+    "hrgat"
   ],
   "gold_injection": false,
   "top_k": 20

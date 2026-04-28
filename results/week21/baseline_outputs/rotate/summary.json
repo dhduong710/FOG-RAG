@@ -1,7 +1,7 @@
 {
-  "model_name": "transe",
+  "model_name": "rotate",
   "config": {
-    "model_name": "transe",
+    "model_name": "rotate",
     "seed": 2025,
     "dim": 128,
     "epochs": 80,
@@ -17,28 +17,28 @@
     "num_train_indication_pairs": 8388,
     "train_rows_path": "dataset/setting_a/29_n2_e2e_infer_ready/backbone_raw/train.json",
     "enriched_kg_path": "dataset/setting_a/02_graph/train_enriched_deg1000_final.tsv",
-    "elapsed_seconds": 6.6811683177948
+    "elapsed_seconds": 9.123846769332886
   },
   "valid_summary": {
     "split": "valid",
-    "model_name": "transe",
+    "model_name": "rotate",
     "num_rows": 500,
     "candidate_size_min": 20,
     "candidate_size_max": 20,
-    "gold_present_at20_raw": 0.104,
-    "gold_rank_21_count": 448,
-    "avg_gold_rank_absent_as_21": 19.824,
-    "output_path": "results/week21/baseline_outputs/transe/valid_top20.json"
+    "gold_present_at20_raw": 0.138,
+    "gold_rank_21_count": 431,
+    "avg_gold_rank_absent_as_21": 19.352,
+    "output_path": "results/week21/baseline_outputs/rotate/valid_top20.json"
   },
   "test_summary": {
     "split": "test",
-    "model_name": "transe",
+    "model_name": "rotate",
     "num_rows": 500,
     "candidate_size_min": 20,
     "candidate_size_max": 20,
-    "gold_present_at20_raw": 0.104,
-    "gold_rank_21_count": 448,
-    "avg_gold_rank_absent_as_21": 19.642,
-    "output_path": "results/week21/baseline_outputs/transe/test_top20.json"
+    "gold_present_at20_raw": 0.134,
+    "gold_rank_21_count": 433,
+    "avg_gold_rank_absent_as_21": 19.436,
+    "output_path": "results/week21/baseline_outputs/rotate/test_top20.json"
   }
 }
