@@ -1275,7 +1275,12 @@
 │   │   └── day7_week19_closeout.md
 │   └── week20
 │       ├── day1_protocol_freeze.md
-│       └── day2_build_infer_ready.md
+│       ├── day2_build_infer_ready.md
+│       ├── day3_run_backbone_and_soft.md
+│       ├── day4_run_retrieval_main.md
+│       ├── day5_e2e_table_and_ablation.md
+│       ├── day6_figures_cases_assets.md
+│       └── day7_week20_closeout.md
 ├── results
 │   ├── reference_rows
 │   │   ├── backbone_raw_test
@@ -1428,13 +1433,43 @@
 │   │   ├── test_protocol_freeze.json
 │   │   └── week19_go_decision.json
 │   ├── week20
+│   │   ├── day3_backbone_raw_e2e.log
+│   │   ├── day3_soft_support_raw_e2e.log
+│   │   ├── day4_retrieval_main_e2e.log
+│   │   ├── e2e_ablation.json
+│   │   ├── e2e_backbone_soft_summary.json
+│   │   ├── e2e_main_table.json
 │   │   ├── e2e_primary_checkpoint
 │   │   │   ├── adapter_config.json
 │   │   │   ├── adapter_model.bin
 │   │   │   ├── graph_model.bin
 │   │   │   └── README.md
 │   │   ├── e2e_protocol_freeze.json
-│   │   └── infer_ready_build_summary.json
+│   │   ├── e2e_retrieval_summary.json
+│   │   ├── infer_ready_build_summary.json
+│   │   ├── metrics_test_backbone_raw_e2e.txt
+│   │   ├── metrics_test_retrieval_main_e2e.txt
+│   │   ├── metrics_test_soft_support_raw_e2e.txt
+│   │   ├── paper_assets
+│   │   │   ├── table1_locked_test_main.csv
+│   │   │   ├── table1_locked_test_main.tex
+│   │   │   ├── table2_e2e_confirmation.csv
+│   │   │   ├── table2_e2e_confirmation.tex
+│   │   │   ├── table3_e2e_ablation.csv
+│   │   │   ├── table3_e2e_ablation.tex
+│   │   │   ├── table4_graph_package.csv
+│   │   │   └── table4_graph_package.tex
+│   │   ├── paper_case_pack.json
+│   │   ├── paper_figures_manifest.json
+│   │   ├── paper_interpretation_snippets.md
+│   │   ├── paper_tables_manifest.json
+│   │   ├── prediction_test_backbone_raw_e2e.json
+│   │   ├── prediction_test_retrieval_main_e2e.json
+│   │   ├── prediction_test_soft_support_raw_e2e.json
+│   │   ├── ranking_metrics_test_backbone_raw_e2e.json
+│   │   ├── ranking_metrics_test_retrieval_main_e2e.json
+│   │   ├── ranking_metrics_test_soft_support_raw_e2e.json
+│   │   └── week20_go_decision.json
 │   ├── week5
 │   │   └── backbone_llama32_3b_rgcn
 │   │       ├── checkpoint-1000
@@ -1572,7 +1607,12 @@
 │       ├── 01_freeze_week20_protocol.py
 │       ├── 02_build_infer_ready.py
 │       ├── 03_collect_e2e_backbone_soft.py
-│       └── 03_run_e2e_backbone_soft.sh
+│       ├── 03_run_e2e_backbone_soft.sh
+│       ├── 04_collect_e2e_retrieval.py
+│       ├── 04_run_e2e_retrieval.sh
+│       ├── 05_build_e2e_table.py
+│       ├── 06_build_paper_assets.py
+│       └── 07_write_week20_closeout.py
 └── structure.txt
 
-284 directories, 1292 files
+285 directories, 1331 files
