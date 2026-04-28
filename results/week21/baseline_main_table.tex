@@ -1,0 +1,26 @@
+\begin{table*}[!t]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{3.5pt}
+\renewcommand{\arraystretch}{1.08}
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{llrrrrrr}
+\toprule
+Method & Group & Gold@20 & MRR@20 & Hits@1 & Hits@3 & Hits@10 & Avg. rank \\
+\midrule
+TransE & Structure baseline & 0.104 & 0.0222 & 0.002 & 0.024 & 0.072 & 19.642 \\
+DistMult & Structure baseline & 0.434 & 0.0891 & 0.028 & 0.074 & 0.264 & 15.916 \\
+ComplEx & Structure baseline & \textbf{0.574} & 0.1247 & 0.032 & 0.118 & \textbf{0.384} & 13.784 \\
+RotatE & Structure baseline & 0.134 & 0.0330 & 0.014 & 0.036 & 0.074 & 19.436 \\
+R-GCN & Structure baseline & 0.220 & 0.0597 & 0.018 & 0.068 & 0.186 & 17.854 \\
+HRGAT & Structure baseline & 0.212 & 0.0331 & 0.002 & 0.028 & 0.128 & 18.590 \\
+\midrule
+DrKGC-style backbone raw & DrKGC-compatible & 0.240 & 0.0646 & 0.024 & 0.070 & 0.192 & 17.652 \\
+Soft support raw & FOG-RAG & 0.240 & \textbf{0.1253} & \textbf{0.072} & \textbf{0.166} & 0.222 & 16.804 \\
+\textbf{FOG-RAG main} & FOG-RAG & 0.240 & \textbf{0.1253} & \textbf{0.072} & \textbf{0.166} & 0.222 & 16.804 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\caption{Locked-test reviewer-safe comparison between structure-only candidate generators and DrKGC-compatible FOG-RAG rows. Gold@20 measures candidate coverage, while MRR@20 uses RR=0 when the gold drug is absent from the top-20 list.}
+\label{tab:week21-baseline-main}
+\end{table*}
