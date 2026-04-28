@@ -1,0 +1,22 @@
+{
+  "train_rows_path": "dataset/setting_a/29_n2_e2e_infer_ready/backbone_raw/train.json",
+  "enriched_kg_path": "dataset/setting_a/02_graph/train_enriched_deg1000_final.tsv",
+  "num_train_triples": 136351,
+  "num_train_indication_pairs": 8388,
+  "num_entities": 17742,
+  "num_relations": 4,
+  "relation_to_id": {
+    "indication": 0,
+    "target": 1,
+    "associated_with": 2,
+    "ppi": 3
+  },
+  "drug_universe_size": 1801,
+  "valid_rows": 500,
+  "test_rows": 500,
+  "models": [
+    "transe"
+  ],
+  "gold_injection": false,
+  "top_k": 20
+}
