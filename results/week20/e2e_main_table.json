@@ -1,0 +1,134 @@
+{
+  "week": 20,
+  "stage": "e2e_main_table_reviewer_safe",
+  "status": "BUILT_REVIEWER_SAFE",
+  "metric_policy": {
+    "candidate_ceiling_rr_rule": "1/rank if rank <= 20 else 0",
+    "e2e_generation_rr_rule": "1/adjusted_rank if adjusted_rank <= 20 else 0",
+    "gold_rank_out_of_top20": 21,
+    "paper_note": "Use reviewer-safe recomputation from prediction rows, not raw infer.py metrics, for paper-facing E2E tables."
+  },
+  "main_rows": [
+    {
+      "row_name": "backbone_raw",
+      "candidate_ceiling_reviewer_safe": {
+        "num_examples": 500,
+        "k": 20,
+        "gold_present_rate": 0.24,
+        "mrr_at20": 0.06456283,
+        "hits1_at20": 0.024,
+        "hits3_at20": 0.07,
+        "hits10_at20": 0.192,
+        "hits20_at20": 0.24,
+        "avg_gold_rank_with_absent_as_21": 17.652,
+        "gold_rank_21_count": 380
+      },
+      "e2e_generation_reviewer_safe": {
+        "num_examples": 500,
+        "k": 20,
+        "gold_present_rate": 0.24,
+        "mrr_at20": 0.04763573,
+        "hits1_at20": 0.002,
+        "hits3_at20": 0.048,
+        "hits10_at20": 0.178,
+        "hits20_at20": 0.24,
+        "avg_adjusted_rank_with_absent_as_21": 17.8,
+        "rank_21_count": 380,
+        "exact_generated_rate": 0.002,
+        "pred_in_candidate_rate": 0.98
+      },
+      "graph_package": {
+        "num_rows": 500,
+        "avg_subgraph_size": 59.932,
+        "min_subgraph_size": 43,
+        "max_subgraph_size": 119
+      }
+    },
+    {
+      "row_name": "soft_support_raw",
+      "candidate_ceiling_reviewer_safe": {
+        "num_examples": 500,
+        "k": 20,
+        "gold_present_rate": 0.24,
+        "mrr_at20": 0.12532618,
+        "hits1_at20": 0.072,
+        "hits3_at20": 0.166,
+        "hits10_at20": 0.222,
+        "hits20_at20": 0.24,
+        "avg_gold_rank_with_absent_as_21": 16.804,
+        "gold_rank_21_count": 380
+      },
+      "e2e_generation_reviewer_safe": {
+        "num_examples": 500,
+        "k": 20,
+        "gold_present_rate": 0.24,
+        "mrr_at20": 0.07467554,
+        "hits1_at20": 0.0,
+        "hits3_at20": 0.132,
+        "hits10_at20": 0.218,
+        "hits20_at20": 0.24,
+        "avg_adjusted_rank_with_absent_as_21": 17.042,
+        "rank_21_count": 380,
+        "exact_generated_rate": 0.0,
+        "pred_in_candidate_rate": 0.98
+      },
+      "graph_package": {
+        "num_rows": 500,
+        "avg_subgraph_size": 59.932,
+        "min_subgraph_size": 43,
+        "max_subgraph_size": 119
+      }
+    },
+    {
+      "row_name": "soft_support_fuzzy_retrieval_main",
+      "candidate_ceiling_reviewer_safe": {
+        "num_examples": 500,
+        "k": 20,
+        "gold_present_rate": 0.24,
+        "mrr_at20": 0.12532618,
+        "hits1_at20": 0.072,
+        "hits3_at20": 0.166,
+        "hits10_at20": 0.222,
+        "hits20_at20": 0.24,
+        "avg_gold_rank_with_absent_as_21": 16.804,
+        "gold_rank_21_count": 380
+      },
+      "e2e_generation_reviewer_safe": {
+        "num_examples": 500,
+        "k": 20,
+        "gold_present_rate": 0.24,
+        "mrr_at20": 0.07468653,
+        "hits1_at20": 0.0,
+        "hits3_at20": 0.132,
+        "hits10_at20": 0.218,
+        "hits20_at20": 0.24,
+        "avg_adjusted_rank_with_absent_as_21": 17.04,
+        "rank_21_count": 380,
+        "exact_generated_rate": 0.0,
+        "pred_in_candidate_rate": 0.998
+      },
+      "graph_package": {
+        "num_rows": 500,
+        "avg_subgraph_size": 32.34,
+        "min_subgraph_size": 24,
+        "max_subgraph_size": 51,
+        "selected_source_variant_set": [
+          "soft_support_fuzzy_retrieval_tight"
+        ],
+        "avg_candidate_coverage_preserved_rate": 1.0,
+        "avg_direct_shortcut_path_rate": 0.11081471
+      }
+    }
+  ],
+  "narrative_checks": {
+    "soft_improves_candidate_mrr_vs_backbone": true,
+    "soft_improves_e2e_mrr_vs_backbone": true,
+    "retrieval_preserves_candidate_mrr_vs_soft": true,
+    "retrieval_preserves_e2e_mrr_vs_soft": true,
+    "retrieval_has_smaller_subgraph_than_soft": true,
+    "retrieval_keeps_candidate_coverage": true,
+    "encoder_remains_appendix_only": true
+  },
+  "provisional_main_row": "soft_support_fuzzy_retrieval_main",
+  "decision_note": "Keep retrieval_main as the paper-facing main row: soft support provides the main ranking gain over backbone, while retrieval_main preserves candidate/E2E performance and substantially reduces the evidence subgraph."
+}
