@@ -1,0 +1,4 @@
+row,avg_subgraph_size,min_subgraph_size,max_subgraph_size,coverage,direct_shortcut_rate,source_variant
+backbone_raw,59.932,43,119,,,
+soft_support_raw,59.932,43,119,,,
+soft_support_fuzzy_retrieval_main,32.34,24,51,1.0,0.11081471,soft_support_fuzzy_retrieval_tight

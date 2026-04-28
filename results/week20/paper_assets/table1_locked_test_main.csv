@@ -1,0 +1,5 @@
+row,gold_present,mrr_at20,hits1,hits3,hits10,avg_gold_rank
+backbone_raw,0.24,0.06456283,0.024,0.07,0.192,17.652
+ontology_raw,0.012,0.00313975,0.002,0.002,0.01,20.84
+soft_support_raw,0.24,0.12532618,0.072,0.166,0.222,16.804
+soft_support_fuzzy_retrieval_main,0.24,0.12532618,0.072,0.166,0.222,16.804
