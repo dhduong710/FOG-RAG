@@ -1273,14 +1273,23 @@
 │   │   ├── day5_locked_test_table.md
 │   │   ├── day6_test_case_review.md
 │   │   └── day7_week19_closeout.md
-│   └── week20
-│       ├── day1_protocol_freeze.md
-│       ├── day2_build_infer_ready.md
-│       ├── day3_run_backbone_and_soft.md
-│       ├── day4_run_retrieval_main.md
-│       ├── day5_e2e_table_and_ablation.md
-│       ├── day6_figures_cases_assets.md
-│       └── day7_week20_closeout.md
+│   ├── week20
+│   │   ├── day1_protocol_freeze.md
+│   │   ├── day2_build_infer_ready.md
+│   │   ├── day3_run_backbone_and_soft.md
+│   │   ├── day4_run_retrieval_main.md
+│   │   ├── day5_e2e_table_and_ablation.md
+│   │   ├── day6_figures_cases_assets.md
+│   │   └── day7_week20_closeout.md
+│   └── week21
+│       ├── day1_baseline_protocol_freeze.md
+│       ├── day2_baseline_inventory.md
+│       ├── day3_rerun_or_recollect_structure_baselines.md
+│       ├── day4_reviewer_safe_metric_recompute.md
+│       ├── day5_baseline_main_table.md
+│       ├── day6_interpretation_and_paper_positioning.md
+│       ├── day7_week21_closeout.md
+│       └── week21_closeout.md
 ├── results
 │   ├── reference_rows
 │   │   ├── backbone_raw_test
@@ -1470,6 +1479,71 @@
 │   │   ├── ranking_metrics_test_retrieval_main_e2e.json
 │   │   ├── ranking_metrics_test_soft_support_raw_e2e.json
 │   │   └── week20_go_decision.json
+│   ├── week21
+│   │   ├── baseline_interpretation_assets.json
+│   │   ├── baseline_inventory.json
+│   │   ├── baseline_main_table.csv
+│   │   ├── baseline_main_table.json
+│   │   ├── baseline_main_table.tex
+│   │   ├── baseline_outputs
+│   │   │   ├── complex
+│   │   │   │   ├── config.json
+│   │   │   │   ├── model_state.pt
+│   │   │   │   ├── summary.json
+│   │   │   │   ├── test_top20.json
+│   │   │   │   ├── train_log.json
+│   │   │   │   └── valid_top20.json
+│   │   │   ├── distmult
+│   │   │   │   ├── config.json
+│   │   │   │   ├── model_state.pt
+│   │   │   │   ├── summary.json
+│   │   │   │   ├── test_top20.json
+│   │   │   │   ├── train_log.json
+│   │   │   │   └── valid_top20.json
+│   │   │   ├── hrgat
+│   │   │   │   ├── config.json
+│   │   │   │   ├── model_state.pt
+│   │   │   │   ├── summary.json
+│   │   │   │   ├── test_top20.json
+│   │   │   │   ├── train_log.json
+│   │   │   │   └── valid_top20.json
+│   │   │   ├── rgcn
+│   │   │   │   ├── config.json
+│   │   │   │   ├── model_state.pt
+│   │   │   │   ├── summary.json
+│   │   │   │   ├── test_top20.json
+│   │   │   │   ├── train_log.json
+│   │   │   │   └── valid_top20.json
+│   │   │   ├── rotate
+│   │   │   │   ├── config.json
+│   │   │   │   ├── model_state.pt
+│   │   │   │   ├── summary.json
+│   │   │   │   ├── test_top20.json
+│   │   │   │   ├── train_log.json
+│   │   │   │   └── valid_top20.json
+│   │   │   └── transe
+│   │   │       ├── config.json
+│   │   │       ├── model_state.pt
+│   │   │       ├── summary.json
+│   │   │       ├── test_top20.json
+│   │   │       ├── train_log.json
+│   │   │       └── valid_top20.json
+│   │   ├── baseline_positioning_decision.json
+│   │   ├── baseline_protocol_freeze.json
+│   │   ├── baseline_rerun_data_pack_summary.json
+│   │   ├── baseline_rerun_summary.json
+│   │   ├── baseline_reviewer_safe_test.json
+│   │   ├── baseline_reviewer_safe_valid.json
+│   │   ├── day4_reviewer_safe_metrics_all.json
+│   │   ├── fograg_reviewer_safe_test.json
+│   │   ├── fograg_reviewer_safe_valid.json
+│   │   ├── paper_snippet_discussion_week21.md
+│   │   ├── paper_snippet_results_week21.md
+│   │   ├── paper_snippet_reviewer_defense_week21.md
+│   │   ├── paper_snippet_table_caption_week21.tex
+│   │   ├── week21_closeout.json
+│   │   ├── week21_go_decision.json
+│   │   └── week21_paper_positioning_summary.md
 │   ├── week5
 │   │   └── backbone_llama32_3b_rgcn
 │   │       ├── checkpoint-1000
@@ -1603,16 +1677,24 @@
 │   │   ├── 05_build_locked_test_table.py
 │   │   ├── 06_collect_test_cases.py
 │   │   └── 07_write_week19_closeout.py
-│   └── week20
-│       ├── 01_freeze_week20_protocol.py
-│       ├── 02_build_infer_ready.py
-│       ├── 03_collect_e2e_backbone_soft.py
-│       ├── 03_run_e2e_backbone_soft.sh
-│       ├── 04_collect_e2e_retrieval.py
-│       ├── 04_run_e2e_retrieval.sh
-│       ├── 05_build_e2e_table.py
-│       ├── 06_build_paper_assets.py
-│       └── 07_write_week20_closeout.py
+│   ├── week20
+│   │   ├── 01_freeze_week20_protocol.py
+│   │   ├── 02_build_infer_ready.py
+│   │   ├── 03_collect_e2e_backbone_soft.py
+│   │   ├── 03_run_e2e_backbone_soft.sh
+│   │   ├── 04_collect_e2e_retrieval.py
+│   │   ├── 04_run_e2e_retrieval.sh
+│   │   ├── 05_build_e2e_table.py
+│   │   ├── 06_build_paper_assets.py
+│   │   └── 07_write_week20_closeout.py
+│   └── week21
+│       ├── 01_freeze_baseline_protocol.py
+│       ├── 02_inventory_baselines.py
+│       ├── 03_rerun_all_baselines.py
+│       ├── 04_recompute_reviewer_safe_metrics.py
+│       ├── 05_build_baseline_main_table.py
+│       ├── 06_build_interpretation_assets.py
+│       └── 07_write_week21_closeout.py
 └── structure.txt
 
-285 directories, 1331 files
+295 directories, 1403 files
