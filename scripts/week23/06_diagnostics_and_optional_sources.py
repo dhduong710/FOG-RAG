@@ -82,7 +82,21 @@ def safe_case_row(
     fuzzy_detail: dict[str, Any],
 ) -> dict[str, Any]:
     subgraph_summary = fuzzy_detail.get("subgraph_summary", {})
-    soft_stage = soft.get("stage_specific", {})
+
+    # Day 5 final eval rows do not keep direct-T diagnostics.
+    # Recover them from the original Day 3 soft-support detailed rows.
+    soft_debug_rows = soft_detail.get("candidate_debug_rows", [])
+
+    if soft_debug_rows:
+        num_direct_T_candidates_before = int(
+            sum(int(x.get("direct_T_candidate_query_flag", 0)) for x in soft_debug_rows)
+        )
+        num_direct_T_candidates_top5_after = int(
+            sum(int(x.get("direct_T_candidate_query_flag", 0)) for x in soft_debug_rows[:5])
+        )
+    else:
+        num_direct_T_candidates_before = None
+        num_direct_T_candidates_top5_after = None
 
     return {
         "split": split,
@@ -101,8 +115,8 @@ def safe_case_row(
         "rr_backbone": float(backbone["reciprocal_rank_item"]),
         "rr_soft": float(soft["reciprocal_rank_item"]),
         "rr_fuzzy": float(fuzzy["reciprocal_rank_item"]),
-        "num_direct_T_candidates_before": soft_stage.get("num_direct_T_candidates_before"),
-        "num_direct_T_candidates_top5_after": soft_stage.get("num_direct_T_candidates_top5_after"),
+        "num_direct_T_candidates_before": num_direct_T_candidates_before,
+        "num_direct_T_candidates_top5_after": num_direct_T_candidates_top5_after,
         "original_subgraph_size": subgraph_summary.get("original_subgraph_size"),
         "selected_subgraph_size": subgraph_summary.get("selected_subgraph_size"),
         "candidate_coverage_preserved_rate": subgraph_summary.get("candidate_coverage_preserved_rate"),
@@ -226,11 +240,10 @@ def analyze_split(split: str, max_examples: int = 20) -> tuple[dict[str, Any], d
         else:
             add_example(buckets["fuzzy_not_cleaner_or_not_preserved"], case, max_examples)
 
-        stage = soft.get("stage_specific", {})
-        if stage.get("num_direct_T_candidates_before") is not None:
-            direct_before_values.append(int(stage["num_direct_T_candidates_before"]))
-        if stage.get("num_direct_T_candidates_top5_after") is not None:
-            direct_top5_values.append(int(stage["num_direct_T_candidates_top5_after"]))
+        if case.get("num_direct_T_candidates_before") is not None:
+            direct_before_values.append(int(case["num_direct_T_candidates_before"]))
+        if case.get("num_direct_T_candidates_top5_after") is not None:
+            direct_top5_values.append(int(case["num_direct_T_candidates_top5_after"]))
 
     n = max(1, counters["num_rows"])
 

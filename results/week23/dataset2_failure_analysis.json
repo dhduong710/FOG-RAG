@@ -29,8 +29,8 @@
     "fuzzy_rank_changed_rate": 0.0,
     "fuzzy_coverage_preserved_rate": 1.0,
     "avg_subgraph_reduction": 45.0,
-    "avg_direct_T_candidates_before": 0.0,
-    "avg_direct_T_candidates_top5_after": 0.0
+    "avg_direct_T_candidates_before": 8.188,
+    "avg_direct_T_candidates_top5_after": 0.252
   },
   "test": {
     "split": "test",
@@ -59,8 +59,8 @@
     "fuzzy_rank_changed_rate": 0.0,
     "fuzzy_coverage_preserved_rate": 1.0,
     "avg_subgraph_reduction": 45.0,
-    "avg_direct_T_candidates_before": 0.0,
-    "avg_direct_T_candidates_top5_after": 0.0
+    "avg_direct_T_candidates_before": 7.794,
+    "avg_direct_T_candidates_top5_after": 0.208
   },
   "main_diagnostic_conclusion": {
     "raw_bottleneck": "High raw bottleneck remains: valid/test have many Rank21 cases.",

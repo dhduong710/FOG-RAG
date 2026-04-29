@@ -44,8 +44,8 @@ Direct-T penalty effect:
 
 | Split | Avg direct-T before | Avg direct-T in top-5 after |
 |---|---:|---:|
-| valid | 0.000 | 0.000 |
-| test | 0.000 | 0.000 |
+| valid | 8.188 | 0.252 |
+| test | 7.794 | 0.208 |
 
 Interpretation:
 
