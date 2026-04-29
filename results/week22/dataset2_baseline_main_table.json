@@ -1,6 +1,7 @@
 {
   "dataset": "PharmKG-8k task-specific therapeutic_association_proxy benchmark",
   "protocol": {
+    "task": "(?, T, disease)",
     "candidate_universe": "drug_only_from_train_T_heads",
     "top_k": 20,
     "gold_injection": false,
@@ -65,6 +66,84 @@
       "rr_policy": "RR = 1/rank if gold present in top20 else 0",
       "absent_rank_sentinel": 21,
       "model_name": "distmult",
+      "split": "valid"
+    },
+    {
+      "num_rows": 500,
+      "gold_present_at20": 0.07,
+      "mrr_at20": 0.01784647174291137,
+      "hits1_at20": 0.01,
+      "hits3_at20": 0.014,
+      "hits10_at20": 0.034,
+      "hits20_at20": 0.07,
+      "avg_gold_rank_absent_as_21": 20.232,
+      "gold_rank_21_count": 465,
+      "unique_top1_count": 2,
+      "top1_dominance": 0.892,
+      "top1_most_common": [
+        {
+          "entity": "nitric oxide",
+          "count": 446
+        },
+        {
+          "entity": "dexamethasone",
+          "count": 54
+        }
+      ],
+      "rr_policy": "RR = 1/rank if gold present in top20 else 0",
+      "absent_rank_sentinel": 21,
+      "model_name": "rgcn",
+      "split": "valid"
+    },
+    {
+      "num_rows": 500,
+      "gold_present_at20": 0.06,
+      "mrr_at20": 0.01396280161187282,
+      "hits1_at20": 0.006,
+      "hits3_at20": 0.016,
+      "hits10_at20": 0.032,
+      "hits20_at20": 0.06,
+      "avg_gold_rank_absent_as_21": 20.366,
+      "gold_rank_21_count": 470,
+      "unique_top1_count": 8,
+      "top1_dominance": 0.942,
+      "top1_most_common": [
+        {
+          "entity": "dexamethasone",
+          "count": 471
+        },
+        {
+          "entity": "pralatrexate",
+          "count": 14
+        },
+        {
+          "entity": "difluprednate",
+          "count": 9
+        },
+        {
+          "entity": "pazopanib",
+          "count": 2
+        },
+        {
+          "entity": "tetracycline",
+          "count": 1
+        },
+        {
+          "entity": "trimetrexate",
+          "count": 1
+        },
+        {
+          "entity": "tranexamic acid",
+          "count": 1
+        },
+        {
+          "entity": "hydroxychloroquine",
+          "count": 1
+        }
+      ],
+      "rr_policy": "RR = 1/rank if gold present in top20 else 0",
+      "absent_rank_sentinel": 21,
+      "model_name": "hrgat",
       "split": "valid"
     },
     {
@@ -246,6 +325,80 @@
     }
   ],
   "test": [
+    {
+      "num_rows": 500,
+      "gold_present_at20": 0.092,
+      "mrr_at20": 0.02048076984075436,
+      "hits1_at20": 0.008,
+      "hits3_at20": 0.02,
+      "hits10_at20": 0.046,
+      "hits20_at20": 0.092,
+      "avg_gold_rank_absent_as_21": 19.958,
+      "gold_rank_21_count": 454,
+      "unique_top1_count": 2,
+      "top1_dominance": 0.862,
+      "top1_most_common": [
+        {
+          "entity": "nitric oxide",
+          "count": 431
+        },
+        {
+          "entity": "dexamethasone",
+          "count": 69
+        }
+      ],
+      "rr_policy": "RR = 1/rank if gold present in top20 else 0",
+      "absent_rank_sentinel": 21,
+      "model_name": "rgcn",
+      "split": "test"
+    },
+    {
+      "num_rows": 500,
+      "gold_present_at20": 0.094,
+      "mrr_at20": 0.01878343477987441,
+      "hits1_at20": 0.01,
+      "hits3_at20": 0.014,
+      "hits10_at20": 0.044,
+      "hits20_at20": 0.094,
+      "avg_gold_rank_absent_as_21": 20.06,
+      "gold_rank_21_count": 453,
+      "unique_top1_count": 7,
+      "top1_dominance": 0.942,
+      "top1_most_common": [
+        {
+          "entity": "dexamethasone",
+          "count": 471
+        },
+        {
+          "entity": "pralatrexate",
+          "count": 17
+        },
+        {
+          "entity": "difluprednate",
+          "count": 7
+        },
+        {
+          "entity": "tetracycline",
+          "count": 2
+        },
+        {
+          "entity": "trimetrexate",
+          "count": 1
+        },
+        {
+          "entity": "hydroxychloroquine",
+          "count": 1
+        },
+        {
+          "entity": "tranexamic acid",
+          "count": 1
+        }
+      ],
+      "rr_policy": "RR = 1/rank if gold present in top20 else 0",
+      "absent_rank_sentinel": 21,
+      "model_name": "hrgat",
+      "split": "test"
+    },
     {
       "num_rows": 500,
       "gold_present_at20": 0.102,
