@@ -1,0 +1,578 @@
+{
+  "week": 22,
+  "theme": "Dataset 2 feasibility and FOG-RAG transfer setup",
+  "final_decision": "GO_WEEK23_FOGRAG_TRANSFER",
+  "decision_notes": [
+    "Dataset 2 protocol is frozen.",
+    "PharmKG task/schema selected with relation T as therapeutic_association_proxy.",
+    "Coverage-safe split and train_enriched graph are ready.",
+    "Leak checks passed.",
+    "All six baselines are available.",
+    "FOG-RAG-ready package is built with R-GCN as main source."
+  ],
+  "dataset2": {
+    "name": "PharmKG-8k",
+    "setting": "setting_c_pharmkg",
+    "target_relation_raw": "T",
+    "target_relation_normalized": "therapeutic_association_proxy",
+    "paper_label": "therapeutic association proxy",
+    "direction": "drug_or_chemical -> disease",
+    "task_template": "(?, T, disease)",
+    "prediction_type": "predicted_head",
+    "candidate_universe": "drug_only_from_T_heads",
+    "paper_warning": "Do not call relation T clinical indication; use therapeutic association proxy."
+  },
+  "split_and_graph": {
+    "decision": "SPLIT_GRAPH_READY",
+    "final_split_sizes": {
+      "train": 28960,
+      "valid": 500,
+      "test": 500
+    },
+    "entity_relation_counts": {
+      "num_entities": 7247,
+      "num_relations": 28,
+      "num_candidate_drugs": 1342,
+      "num_query_diseases": 803,
+      "train_enriched_triples": 386768,
+      "train_enriched_relation_counts": {
+        "GG": 66774,
+        "Rg": 35103,
+        "E": 31741,
+        "ML": 31529,
+        "Ra": 30540,
+        "T": 28960,
+        "P": 26472,
+        "Q": 26070,
+        "CC": 25658,
+        "B": 15259,
+        "I": 14247,
+        "U": 12281,
+        "Sa": 10843,
+        "Pr": 4949,
+        "Te": 4870,
+        "Iw": 4809,
+        "N": 3281,
+        "X": 2783,
+        "J": 2567,
+        "K": 2157,
+        "D": 1934,
+        "C": 1713,
+        "O": 688,
+        "An": 443,
+        "Z": 384,
+        "Mp": 362,
+        "A": 323,
+        "As": 28
+      }
+    },
+    "leak_decision": "PASS",
+    "exact_leak_checks": {
+      "valid_positive_in_train_count": 0,
+      "test_positive_in_train_count": 0,
+      "valid_test_positive_overlap_count": 0,
+      "selected_valid_or_test_target_in_train_enriched_count": 0
+    },
+    "coverage_checks": {
+      "valid_gold_drug_coverage_in_candidate_universe": 1.0,
+      "test_gold_drug_coverage_in_candidate_universe": 1.0,
+      "valid_query_disease_coverage_in_query_universe": 1.0,
+      "test_query_disease_coverage_in_query_universe": 1.0
+    }
+  },
+  "baseline_summary": {
+    "required_models": [
+      "transe",
+      "distmult",
+      "complex",
+      "rotate",
+      "rgcn",
+      "hrgat"
+    ],
+    "valid_models": [
+      "complex",
+      "distmult",
+      "hrgat",
+      "rgcn",
+      "rotate",
+      "transe"
+    ],
+    "test_models": [
+      "complex",
+      "distmult",
+      "hrgat",
+      "rgcn",
+      "rotate",
+      "transe"
+    ],
+    "missing_valid": [],
+    "missing_test": [],
+    "best_valid": {
+      "num_rows": 500,
+      "gold_present_at20": 0.104,
+      "mrr_at20": 0.019547797257781777,
+      "hits1_at20": 0.008,
+      "hits3_at20": 0.018,
+      "hits10_at20": 0.038,
+      "hits20_at20": 0.104,
+      "avg_gold_rank_absent_as_21": 19.962,
+      "gold_rank_21_count": 448,
+      "unique_top1_count": 138,
+      "top1_dominance": 0.038,
+      "top1_most_common": [
+        {
+          "entity": "baclofen",
+          "count": 19
+        },
+        {
+          "entity": "docetaxel",
+          "count": 18
+        },
+        {
+          "entity": "vitamin e",
+          "count": 17
+        },
+        {
+          "entity": "prednisolone",
+          "count": 17
+        },
+        {
+          "entity": "prednisone",
+          "count": 12
+        },
+        {
+          "entity": "testosterone",
+          "count": 12
+        },
+        {
+          "entity": "thalidomide",
+          "count": 12
+        },
+        {
+          "entity": "simvastatin",
+          "count": 10
+        },
+        {
+          "entity": "rosuvastatin",
+          "count": 9
+        },
+        {
+          "entity": "rivaroxaban",
+          "count": 9
+        }
+      ],
+      "rr_policy": "RR = 1/rank if gold present in top20 else 0",
+      "absent_rank_sentinel": 21,
+      "model_name": "distmult",
+      "split": "valid"
+    },
+    "best_test": {
+      "num_rows": 500,
+      "gold_present_at20": 0.092,
+      "mrr_at20": 0.02048076984075436,
+      "hits1_at20": 0.008,
+      "hits3_at20": 0.02,
+      "hits10_at20": 0.046,
+      "hits20_at20": 0.092,
+      "avg_gold_rank_absent_as_21": 19.958,
+      "gold_rank_21_count": 454,
+      "unique_top1_count": 2,
+      "top1_dominance": 0.862,
+      "top1_most_common": [
+        {
+          "entity": "nitric oxide",
+          "count": 431
+        },
+        {
+          "entity": "dexamethasone",
+          "count": 69
+        }
+      ],
+      "rr_policy": "RR = 1/rank if gold present in top20 else 0",
+      "absent_rank_sentinel": 21,
+      "model_name": "rgcn",
+      "split": "test"
+    },
+    "rgcn_valid": {
+      "num_rows": 500,
+      "gold_present_at20": 0.07,
+      "mrr_at20": 0.01784647174291137,
+      "hits1_at20": 0.01,
+      "hits3_at20": 0.014,
+      "hits10_at20": 0.034,
+      "hits20_at20": 0.07,
+      "avg_gold_rank_absent_as_21": 20.232,
+      "gold_rank_21_count": 465,
+      "unique_top1_count": 2,
+      "top1_dominance": 0.892,
+      "top1_most_common": [
+        {
+          "entity": "nitric oxide",
+          "count": 446
+        },
+        {
+          "entity": "dexamethasone",
+          "count": 54
+        }
+      ],
+      "rr_policy": "RR = 1/rank if gold present in top20 else 0",
+      "absent_rank_sentinel": 21,
+      "model_name": "rgcn",
+      "split": "valid"
+    },
+    "rgcn_test": {
+      "num_rows": 500,
+      "gold_present_at20": 0.092,
+      "mrr_at20": 0.02048076984075436,
+      "hits1_at20": 0.008,
+      "hits3_at20": 0.02,
+      "hits10_at20": 0.046,
+      "hits20_at20": 0.092,
+      "avg_gold_rank_absent_as_21": 19.958,
+      "gold_rank_21_count": 454,
+      "unique_top1_count": 2,
+      "top1_dominance": 0.862,
+      "top1_most_common": [
+        {
+          "entity": "nitric oxide",
+          "count": 431
+        },
+        {
+          "entity": "dexamethasone",
+          "count": 69
+        }
+      ],
+      "rr_policy": "RR = 1/rank if gold present in top20 else 0",
+      "absent_rank_sentinel": 21,
+      "model_name": "rgcn",
+      "split": "test"
+    },
+    "hrgat_valid": {
+      "num_rows": 500,
+      "gold_present_at20": 0.06,
+      "mrr_at20": 0.01396280161187282,
+      "hits1_at20": 0.006,
+      "hits3_at20": 0.016,
+      "hits10_at20": 0.032,
+      "hits20_at20": 0.06,
+      "avg_gold_rank_absent_as_21": 20.366,
+      "gold_rank_21_count": 470,
+      "unique_top1_count": 8,
+      "top1_dominance": 0.942,
+      "top1_most_common": [
+        {
+          "entity": "dexamethasone",
+          "count": 471
+        },
+        {
+          "entity": "pralatrexate",
+          "count": 14
+        },
+        {
+          "entity": "difluprednate",
+          "count": 9
+        },
+        {
+          "entity": "pazopanib",
+          "count": 2
+        },
+        {
+          "entity": "tetracycline",
+          "count": 1
+        },
+        {
+          "entity": "trimetrexate",
+          "count": 1
+        },
+        {
+          "entity": "tranexamic acid",
+          "count": 1
+        },
+        {
+          "entity": "hydroxychloroquine",
+          "count": 1
+        }
+      ],
+      "rr_policy": "RR = 1/rank if gold present in top20 else 0",
+      "absent_rank_sentinel": 21,
+      "model_name": "hrgat",
+      "split": "valid"
+    },
+    "hrgat_test": {
+      "num_rows": 500,
+      "gold_present_at20": 0.094,
+      "mrr_at20": 0.01878343477987441,
+      "hits1_at20": 0.01,
+      "hits3_at20": 0.014,
+      "hits10_at20": 0.044,
+      "hits20_at20": 0.094,
+      "avg_gold_rank_absent_as_21": 20.06,
+      "gold_rank_21_count": 453,
+      "unique_top1_count": 7,
+      "top1_dominance": 0.942,
+      "top1_most_common": [
+        {
+          "entity": "dexamethasone",
+          "count": 471
+        },
+        {
+          "entity": "pralatrexate",
+          "count": 17
+        },
+        {
+          "entity": "difluprednate",
+          "count": 7
+        },
+        {
+          "entity": "tetracycline",
+          "count": 2
+        },
+        {
+          "entity": "trimetrexate",
+          "count": 1
+        },
+        {
+          "entity": "hydroxychloroquine",
+          "count": 1
+        },
+        {
+          "entity": "tranexamic acid",
+          "count": 1
+        }
+      ],
+      "rr_policy": "RR = 1/rank if gold present in top20 else 0",
+      "absent_rank_sentinel": 21,
+      "model_name": "hrgat",
+      "split": "test"
+    },
+    "all_six_ready": true
+  },
+  "source_selection": {
+    "main_fograg_source": "rgcn",
+    "drkgc_aligned_alternative": "hrgat",
+    "best_valid_structure_source": {
+      "num_rows": 500,
+      "gold_present_at20": 0.104,
+      "mrr_at20": 0.019547797257781777,
+      "hits1_at20": 0.008,
+      "hits3_at20": 0.018,
+      "hits10_at20": 0.038,
+      "hits20_at20": 0.104,
+      "avg_gold_rank_absent_as_21": 19.962,
+      "gold_rank_21_count": 448,
+      "unique_top1_count": 138,
+      "top1_dominance": 0.038,
+      "top1_most_common": [
+        {
+          "entity": "baclofen",
+          "count": 19
+        },
+        {
+          "entity": "docetaxel",
+          "count": 18
+        },
+        {
+          "entity": "vitamin e",
+          "count": 17
+        },
+        {
+          "entity": "prednisolone",
+          "count": 17
+        },
+        {
+          "entity": "prednisone",
+          "count": 12
+        },
+        {
+          "entity": "testosterone",
+          "count": 12
+        },
+        {
+          "entity": "thalidomide",
+          "count": 12
+        },
+        {
+          "entity": "simvastatin",
+          "count": 10
+        },
+        {
+          "entity": "rosuvastatin",
+          "count": 9
+        },
+        {
+          "entity": "rivaroxaban",
+          "count": 9
+        }
+      ],
+      "rr_policy": "RR = 1/rank if gold present in top20 else 0",
+      "absent_rank_sentinel": 21,
+      "model_name": "distmult",
+      "split": "valid"
+    },
+    "best_test_structure_source": {
+      "num_rows": 500,
+      "gold_present_at20": 0.092,
+      "mrr_at20": 0.02048076984075436,
+      "hits1_at20": 0.008,
+      "hits3_at20": 0.02,
+      "hits10_at20": 0.046,
+      "hits20_at20": 0.092,
+      "avg_gold_rank_absent_as_21": 19.958,
+      "gold_rank_21_count": 454,
+      "unique_top1_count": 2,
+      "top1_dominance": 0.862,
+      "top1_most_common": [
+        {
+          "entity": "nitric oxide",
+          "count": 431
+        },
+        {
+          "entity": "dexamethasone",
+          "count": 69
+        }
+      ],
+      "rr_policy": "RR = 1/rank if gold present in top20 else 0",
+      "absent_rank_sentinel": 21,
+      "model_name": "rgcn",
+      "split": "test"
+    }
+  },
+  "fograg_ready_package": {
+    "file_checks": [
+      {
+        "path": "dataset/setting_c_pharmkg/06_fograg_ready/train.json",
+        "exists": true,
+        "size_bytes": 233387991
+      },
+      {
+        "path": "dataset/setting_c_pharmkg/06_fograg_ready/valid.json",
+        "exists": true,
+        "size_bytes": 3990413
+      },
+      {
+        "path": "dataset/setting_c_pharmkg/06_fograg_ready/test.json",
+        "exists": true,
+        "size_bytes": 3992631
+      },
+      {
+        "path": "dataset/setting_c_pharmkg/06_fograg_ready/prompt_lexicon.json",
+        "exists": true,
+        "size_bytes": 635
+      },
+      {
+        "path": "dataset/setting_c_pharmkg/06_fograg_ready/rules.json",
+        "exists": true,
+        "size_bytes": 196
+      },
+      {
+        "path": "dataset/setting_c_pharmkg/06_fograg_ready/support_schema.json",
+        "exists": true,
+        "size_bytes": 809
+      },
+      {
+        "path": "dataset/setting_c_pharmkg/06_fograg_ready/prep_manifest.json",
+        "exists": true,
+        "size_bytes": 9783
+      },
+      {
+        "path": "dataset/setting_c_pharmkg/06_fograg_ready/entity2id.pkl",
+        "exists": true,
+        "size_bytes": 104133
+      },
+      {
+        "path": "dataset/setting_c_pharmkg/06_fograg_ready/id2entity.pkl",
+        "exists": true,
+        "size_bytes": 104133
+      },
+      {
+        "path": "dataset/setting_c_pharmkg/06_fograg_ready/relation2id.pkl",
+        "exists": true,
+        "size_bytes": 196
+      },
+      {
+        "path": "dataset/setting_c_pharmkg/06_fograg_ready/id2relation.pkl",
+        "exists": true,
+        "size_bytes": 196
+      }
+    ],
+    "missing_files": [],
+    "num_train_rows": 28960,
+    "num_valid_rows": 500,
+    "num_test_rows": 500,
+    "sample_schema_ok": true,
+    "manifest_decision": "FOGRAG_READY_PACKAGE_BUILT",
+    "leak_sanity": {
+      "valid_target_in_train_enriched_count": 0,
+      "test_target_in_train_enriched_count": 0,
+      "valid_test_target_overlap_count": 0,
+      "decision": "PASS",
+      "examples": {
+        "valid_in_train": [],
+        "test_in_train": [],
+        "valid_test_overlap": []
+      }
+    },
+    "ready_summary": {
+      "train": {
+        "num_rows": 28960,
+        "avg_candidate_size": 20.0,
+        "gold_in_final_list_rate": 1.0,
+        "rank21_count": 0,
+        "avg_subgraph_size": 100.0,
+        "min_subgraph_size": 100,
+        "max_subgraph_size": 100,
+        "rows_with_query_token": 28960,
+        "rows_with_entity_token": 28960
+      },
+      "valid": {
+        "num_rows": 500,
+        "avg_candidate_size": 20.0,
+        "gold_in_final_list_rate": 0.07,
+        "rank21_count": 465,
+        "avg_subgraph_size": 100.0,
+        "min_subgraph_size": 100,
+        "max_subgraph_size": 100,
+        "rows_with_query_token": 500,
+        "rows_with_entity_token": 500
+      },
+      "test": {
+        "num_rows": 500,
+        "avg_candidate_size": 20.0,
+        "gold_in_final_list_rate": 0.092,
+        "rank21_count": 454,
+        "avg_subgraph_size": 100.0,
+        "min_subgraph_size": 100,
+        "max_subgraph_size": 100,
+        "rows_with_query_token": 500,
+        "rows_with_entity_token": 500
+      }
+    },
+    "package_ready": true
+  },
+  "method_alignment_answers": {
+    "primekg_train_gold_in_candidates": "Yes. DrKGC-style supervised training requires the gold answer to be present in the candidate/options list. The reviewer-sensitive issue is valid/test gold injection, not train supervision.",
+    "pharmkg_train_gold_in_candidates": "Yes. Day 6 train_top20_supervised is gold-first for supervised training only. Valid/test remain raw no-injection.",
+    "rules": "PrimeKG used manually fixed/hard-coded biomedical rules because relation semantics were explicit. PharmKG uses a fixed no-rule fallback policy because relation labels are compact codes without explicit semantics. Both avoid rule mining.",
+    "question_lexicon": "Yes. PharmKG has prompt_lexicon.json with the template: What drug is therapeutically associated with {}?"
+  },
+  "known_limitations": [
+    "PharmKG relation T is treated as a therapeutic association proxy, not a confirmed clinical indication relation.",
+    "Entity type map is task-specific: T heads are Drug/Chemical candidates and T tails are Disease queries.",
+    "Current valid/test R-GCN Gold@20 is low, so Week 23 should treat raw candidate bottleneck as central.",
+    "Day 6 subgraphs are fixed at graph_size=100; fuzzy retrieval in Week 23 should test whether smaller weighted evidence can preserve performance.",
+    "HRGAT is retained as a DrKGC-aligned alternative, but R-GCN is selected as main source for pipeline continuity and stronger test MRR@20."
+  ],
+  "week23_recommendation": {
+    "recommended_status": "Start FOG-RAG transfer",
+    "main_rows_to_build": [
+      "backbone_raw",
+      "ontology_raw_negative_control",
+      "soft_support_raw",
+      "fuzzy_retrieval_main"
+    ],
+    "optional_rows": [
+      "hrgat_source_alternative",
+      "fuzzy_encoder_probe_appendix_only"
+    ]
+  }
+}
