@@ -1,0 +1,21 @@
+{
+  "split": "test",
+  "row_name": "fuzzy_retrieval_main",
+  "ready_path": "dataset/setting_c_pharmkg/13_e2e_infer_ready/fuzzy_retrieval_main/test.json",
+  "prediction_path": "results/week23/e2e_pharmkg/main_checkpoint/prediction_test_fuzzy_retrieval_main.json",
+  "gold_at20": 0.092,
+  "candidate_mrr_at20": 0.028159018759,
+  "candidate_hits1_at20": 0.012,
+  "candidate_hits3_at20": 0.03,
+  "candidate_hits10_at20": 0.068,
+  "rank21_count": 454,
+  "num_examples": 500,
+  "reviewer_safe_mrr_at20": 0.020971323121,
+  "reviewer_safe_hits1_at20": 0.002,
+  "reviewer_safe_hits3_at20": 0.03,
+  "reviewer_safe_hits10_at20": 0.062,
+  "gold_present_rate": 0.092,
+  "pred_in_candidate_rate": 0.412,
+  "exact_target_match_rate": 0.002,
+  "invalid_prediction_rate": 0.588
+}

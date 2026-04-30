@@ -1,0 +1,21 @@
+{
+  "split": "valid",
+  "row_name": "backbone_raw",
+  "ready_path": "dataset/setting_c_pharmkg/13_e2e_infer_ready/backbone_raw/valid.json",
+  "prediction_path": "results/week23/e2e_pharmkg/main_checkpoint/prediction_valid_backbone_raw.json",
+  "gold_at20": 0.07,
+  "candidate_mrr_at20": 0.017846471743,
+  "candidate_hits1_at20": 0.01,
+  "candidate_hits3_at20": 0.014,
+  "candidate_hits10_at20": 0.034,
+  "rank21_count": 465,
+  "num_examples": 500,
+  "reviewer_safe_mrr_at20": 0.015410329694,
+  "reviewer_safe_hits1_at20": 0.006,
+  "reviewer_safe_hits3_at20": 0.014,
+  "reviewer_safe_hits10_at20": 0.034,
+  "gold_present_rate": 0.07,
+  "pred_in_candidate_rate": 0.526,
+  "exact_target_match_rate": 0.006,
+  "invalid_prediction_rate": 0.474
+}
