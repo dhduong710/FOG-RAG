@@ -157,7 +157,7 @@ if __name__ == "__main__":
     embed_model = GraphEnhancer(
         kge_embedding,
         kge_embedding_dim,
-        4,
+        args.graph_num_rels,
         128,
         1,
         1024,

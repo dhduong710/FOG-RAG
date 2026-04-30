@@ -15,3 +15,4 @@ dataset/raw/
 .venv/
 
 dataset/setting_c_pharmkg/06_fograg_ready/train.json
+dataset/setting_c_pharmkg/13_e2e_infer_ready/*/train.json

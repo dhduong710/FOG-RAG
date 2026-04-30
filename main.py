@@ -226,7 +226,7 @@ def train():
     embed_model = GraphEnhancer(
         kge_embedding,
         kge_embedding_dim,
-        4,      # num_rels
+        args.graph_num_rels,      # num_rels
         128,    # gnn_hidden_dim
         1,      # gnn_num_hidden_layers
         1024,   # adapter_size
