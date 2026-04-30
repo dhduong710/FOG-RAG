@@ -1000,10 +1000,20 @@
 │   ├── collate.py
 │   ├── dataset.py
 │   ├── __init__.py
-│   └── __pycache__
-│       ├── collate.cpython-312.pyc
-│       ├── dataset.cpython-312.pyc
-│       └── __init__.cpython-312.pyc
+│   ├── __pycache__
+│   │   ├── collate.cpython-312.pyc
+│   │   ├── dataset.cpython-312.pyc
+│   │   └── __init__.cpython-312.pyc
+│   └── raw
+│       └── pharmkg
+│           ├── biomed_AI_README.md
+│           ├── MindRank-Biotech_README.md
+│           └── PharmKG-8k
+│               ├── entity2vec.txt
+│               ├── relation2vec.txt
+│               ├── test.tsv
+│               ├── train.tsv
+│               └── valid.tsv
 ├── dataset
 │   ├── setting_a
 │   │   ├── 00_raw_triples
@@ -1181,6 +1191,125 @@
 │   │       ├── test_ontology_raw_eval.json
 │   │       ├── test_retrieval_main_eval.json
 │   │       └── test_soft_support_raw_eval.json
+│   ├── setting_c_pharmkg
+│   │   ├── 00_raw_inventory
+│   │   │   ├── download_plan.json
+│   │   │   ├── download_status.json
+│   │   │   ├── file_manifest.json
+│   │   │   ├── relation_hint_candidates.json
+│   │   │   └── triple_file_candidates.json
+│   │   ├── 01_task_spec
+│   │   │   ├── entity_type_summary.json
+│   │   │   ├── relation_role_analysis.json
+│   │   │   ├── target_relation_rows_summary.json
+│   │   │   ├── task_spec.json
+│   │   │   └── type_map_preliminary.json
+│   │   ├── 02_splits
+│   │   │   ├── candidate_universe.json
+│   │   │   ├── query_universe.json
+│   │   │   ├── test.json
+│   │   │   ├── test_target.tsv
+│   │   │   ├── train.json
+│   │   │   ├── train_target.tsv
+│   │   │   ├── valid.json
+│   │   │   └── valid_target.tsv
+│   │   ├── 03_graph
+│   │   │   ├── entity2id.json
+│   │   │   ├── id2entity.json
+│   │   │   ├── id2relation.json
+│   │   │   ├── relation2id.json
+│   │   │   ├── train_enriched_relation_counts.json
+│   │   │   ├── train_enriched.tsv
+│   │   │   └── type_map.json
+│   │   ├── 04_baseline_outputs
+│   │   │   ├── complex
+│   │   │   │   ├── config.json
+│   │   │   │   ├── summary.json
+│   │   │   │   ├── test_top20.json
+│   │   │   │   └── valid_top20.json
+│   │   │   ├── distmult
+│   │   │   │   ├── config.json
+│   │   │   │   ├── summary.json
+│   │   │   │   ├── test_top20.json
+│   │   │   │   └── valid_top20.json
+│   │   │   ├── hrgat
+│   │   │   │   ├── config.json
+│   │   │   │   ├── model_state.pt
+│   │   │   │   ├── summary.json
+│   │   │   │   ├── test_top20.json
+│   │   │   │   ├── train_log.json
+│   │   │   │   └── valid_top20.json
+│   │   │   ├── rgcn
+│   │   │   │   ├── config.json
+│   │   │   │   ├── model_state.pt
+│   │   │   │   ├── summary.json
+│   │   │   │   ├── test_top20.json
+│   │   │   │   ├── train_log.json
+│   │   │   │   └── valid_top20.json
+│   │   │   ├── rotate
+│   │   │   │   ├── config.json
+│   │   │   │   ├── summary.json
+│   │   │   │   ├── test_top20.json
+│   │   │   │   └── valid_top20.json
+│   │   │   └── transe
+│   │   │       ├── config.json
+│   │   │       ├── summary.json
+│   │   │       ├── test_top20.json
+│   │   │       └── valid_top20.json
+│   │   ├── 05_backbone_raw_source
+│   │   │   ├── source_selection.json
+│   │   │   ├── test_top20_raw.json
+│   │   │   ├── train_top20_supervised.json
+│   │   │   └── valid_top20_raw.json
+│   │   ├── 06_fograg_ready
+│   │   │   ├── entity2id.json
+│   │   │   ├── entity2id.pkl
+│   │   │   ├── id2entity.json
+│   │   │   ├── id2entity.pkl
+│   │   │   ├── id2relation.json
+│   │   │   ├── id2relation.pkl
+│   │   │   ├── prep_manifest.json
+│   │   │   ├── prompt_lexicon.json
+│   │   │   ├── relation2id.json
+│   │   │   ├── relation2id.pkl
+│   │   │   ├── rules.json
+│   │   │   ├── support_schema.json
+│   │   │   ├── test.json
+│   │   │   ├── train_compressed.zip
+│   │   │   ├── train.json
+│   │   │   └── valid.json
+│   │   ├── 07_transfer_eval_ready
+│   │   │   ├── backbone_raw_test.json
+│   │   │   └── backbone_raw_valid.json
+│   │   ├── 08_support_features
+│   │   │   ├── support_feature_summary.json
+│   │   │   ├── test_support_features.json
+│   │   │   └── valid_support_features.json
+│   │   ├── 09_hard_support_raw
+│   │   │   ├── hard_support_audit.json
+│   │   │   ├── test_top20_hard_support_raw.json
+│   │   │   └── valid_top20_hard_support_raw.json
+│   │   ├── 10_soft_support
+│   │   │   ├── soft_support_config.json
+│   │   │   ├── soft_support_debug_summary.json
+│   │   │   ├── test_top20_soft_support_main.json
+│   │   │   └── valid_top20_soft_support_main.json
+│   │   ├── 11_fuzzy_retrieval
+│   │   │   ├── retrieval_config.json
+│   │   │   ├── retrieval_summary.json
+│   │   │   ├── test_fuzzy_retrieval_main.json
+│   │   │   ├── test_path_features.json
+│   │   │   ├── valid_fuzzy_retrieval_main.json
+│   │   │   └── valid_path_features.json
+│   │   └── 12_eval_rows
+│   │       ├── test_backbone_raw.json
+│   │       ├── test_fuzzy_retrieval_main.json
+│   │       ├── test_hard_support_raw.json
+│   │       ├── test_soft_support_raw.json
+│   │       ├── valid_backbone_raw.json
+│   │       ├── valid_fuzzy_retrieval_main.json
+│   │       ├── valid_hard_support_raw.json
+│   │       └── valid_soft_support_raw.json
 │   └── toy_debug
 │       ├── entity_embeddings.pt
 │       ├── entity_id_map.json
@@ -1206,6 +1335,8 @@
 ├── prompt_subgraph.py
 ├── __pycache__
 │   ├── arguments.cpython-312.pyc
+│   ├── infer.cpython-312.pyc
+│   ├── main.cpython-312.pyc
 │   └── prompt_subgraph.cpython-312.pyc
 ├── README.md
 ├── reports
@@ -1281,15 +1412,31 @@
 │   │   ├── day5_e2e_table_and_ablation.md
 │   │   ├── day6_figures_cases_assets.md
 │   │   └── day7_week20_closeout.md
-│   └── week21
-│       ├── day1_baseline_protocol_freeze.md
-│       ├── day2_baseline_inventory.md
-│       ├── day3_rerun_or_recollect_structure_baselines.md
-│       ├── day4_reviewer_safe_metric_recompute.md
-│       ├── day5_baseline_main_table.md
-│       ├── day6_interpretation_and_paper_positioning.md
-│       ├── day7_week21_closeout.md
-│       └── week21_closeout.md
+│   ├── week21
+│   │   ├── day1_baseline_protocol_freeze.md
+│   │   ├── day2_baseline_inventory.md
+│   │   ├── day3_rerun_or_recollect_structure_baselines.md
+│   │   ├── day4_reviewer_safe_metric_recompute.md
+│   │   ├── day5_baseline_main_table.md
+│   │   ├── day6_interpretation_and_paper_positioning.md
+│   │   ├── day7_week21_closeout.md
+│   │   └── week21_closeout.md
+│   ├── week22
+│   │   ├── day1_dataset2_protocol_freeze.md
+│   │   ├── day2_raw_inventory.md
+│   │   ├── day3_task_and_schema_selection.md
+│   │   ├── day4_split_and_graph_build.md
+│   │   ├── day5_baseline_rerun_dataset2.md
+│   │   ├── day6_fograg_ready_package.md
+│   │   ├── day7_week22_closeout.md
+│   │   └── week22_closeout.md
+│   └── week23
+│       ├── day1_transfer_protocol_and_backbone.md
+│       ├── day2_support_features_and_hard_control.md
+│       ├── day3_soft_support_transfer.md
+│       ├── day4_fuzzy_retrieval_transfer.md
+│       ├── day5_final_eval_and_baseline_comparison.md
+│       └── day6_diagnostics_and_optional_sources.md
 ├── results
 │   ├── reference_rows
 │   │   ├── backbone_raw_test
@@ -1544,6 +1691,58 @@
 │   │   ├── week21_closeout.json
 │   │   ├── week21_go_decision.json
 │   │   └── week21_paper_positioning_summary.md
+│   ├── week22
+│   │   ├── dataset2_baseline_main_table.json
+│   │   ├── dataset2_baseline_reviewer_safe_test.json
+│   │   ├── dataset2_baseline_reviewer_safe_valid.json
+│   │   ├── dataset2_leak_check.json
+│   │   ├── dataset2_protocol_freeze.json
+│   │   ├── dataset2_raw_inventory.json
+│   │   ├── dataset2_source_selection.json
+│   │   ├── dataset2_split_summary.json
+│   │   ├── dataset2_task_spec.json
+│   │   ├── week22_closeout.json
+│   │   └── week22_go_decision.json
+│   ├── week23
+│   │   ├── backbone_raw_eval_test.json
+│   │   ├── backbone_raw_eval_valid.json
+│   │   ├── dataset2_case_buckets.json
+│   │   ├── dataset2_failure_analysis.json
+│   │   ├── dataset2_fograg_main_table_test.json
+│   │   ├── dataset2_fograg_main_table_valid.json
+│   │   ├── dataset2_main_claim_summary.json
+│   │   ├── dataset2_paper_interpretation.json
+│   │   ├── dataset2_transfer_protocol_freeze.json
+│   │   ├── dataset2_vs_structure_baselines.json
+│   │   ├── e2e_backbone_llama32_3b_full
+│   │   │   ├── checkpoint-1000
+│   │   │   │   ├── adapter_model.bin
+│   │   │   │   └── graph_model.bin
+│   │   │   ├── checkpoint-2000
+│   │   │   │   ├── adapter_model.bin
+│   │   │   │   └── graph_model.bin
+│   │   │   ├── checkpoint-3000
+│   │   │   │   ├── adapter_model.bin
+│   │   │   │   └── graph_model.bin
+│   │   │   ├── checkpoint-3620
+│   │   │   │   ├── adapter_model.bin
+│   │   │   │   └── graph_model.bin
+│   │   │   └── checkpoint-final
+│   │   │       ├── adapter_model.bin
+│   │   │       └── graph_model.bin
+│   │   ├── e2e_backbone_tinyllama_smoke
+│   │   │   ├── checkpoint-250
+│   │   │   │   ├── adapter_model.bin
+│   │   │   │   └── graph_model.bin
+│   │   │   └── checkpoint-final
+│   │   │       ├── adapter_model.bin
+│   │   │       └── graph_model.bin
+│   │   ├── fuzzy_retrieval_eval_test.json
+│   │   ├── fuzzy_retrieval_eval_valid.json
+│   │   ├── hard_support_raw_eval_test.json
+│   │   ├── hard_support_raw_eval_valid.json
+│   │   ├── soft_support_raw_eval_test.json
+│   │   └── soft_support_raw_eval_valid.json
 │   ├── week5
 │   │   └── backbone_llama32_3b_rgcn
 │   │       ├── checkpoint-1000
@@ -1687,14 +1886,32 @@
 │   │   ├── 05_build_e2e_table.py
 │   │   ├── 06_build_paper_assets.py
 │   │   └── 07_write_week20_closeout.py
-│   └── week21
-│       ├── 01_freeze_baseline_protocol.py
-│       ├── 02_inventory_baselines.py
-│       ├── 03_rerun_all_baselines.py
-│       ├── 04_recompute_reviewer_safe_metrics.py
-│       ├── 05_build_baseline_main_table.py
-│       ├── 06_build_interpretation_assets.py
-│       └── 07_write_week21_closeout.py
+│   ├── week21
+│   │   ├── 01_freeze_baseline_protocol.py
+│   │   ├── 02_inventory_baselines.py
+│   │   ├── 03_rerun_all_baselines.py
+│   │   ├── 04_recompute_reviewer_safe_metrics.py
+│   │   ├── 05_build_baseline_main_table.py
+│   │   ├── 06_build_interpretation_assets.py
+│   │   └── 07_write_week21_closeout.py
+│   ├── week22
+│   │   ├── 01_freeze_dataset2_protocol.py
+│   │   ├── 02_inventory_dataset2_raw.py
+│   │   ├── 03_select_task_schema.py
+│   │   ├── 04_build_splits_and_graph.py
+│   │   ├── 05b_rerun_dataset2_gnn_baselines.py
+│   │   ├── 05_rerun_dataset2_baselines.py
+│   │   ├── 06_build_fograg_ready_package.py
+│   │   └── 07_write_week22_closeout.py
+│   └── week23
+│       ├── 01_freeze_transfer_and_eval_backbone.py
+│       ├── 02_build_support_features_and_hard_control.py
+│       ├── 03_build_soft_support_transfer.py
+│       ├── 04_build_fuzzy_retrieval_transfer.py
+│       ├── 05_build_final_eval_tables.py
+│       ├── 06_diagnostics_and_optional_sources.py
+│       └── __pycache__
+│           └── 10_build_e2e_soft_fuzzy_eval_folders.cpython-312.pyc
 └── structure.txt
 
-295 directories, 1403 files
+334 directories, 1581 files
