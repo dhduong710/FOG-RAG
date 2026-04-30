@@ -10,6 +10,7 @@ import torch
 from transformers import (
     AutoTokenizer,
     LlamaForCausalLM,
+    AutoModelForCausalLM,
     HfArgumentParser,
     GenerationConfig,
     set_seed,
@@ -142,10 +143,20 @@ if __name__ == "__main__":
 
     generation_config.bos_token_id = tokenizer.bos_token_id
 
-    model = LlamaForCausalLM.from_pretrained(
+    if args.model_type == "llama":
+        pretrained_model_class = LlamaForCausalLM
+    elif args.model_type == "mistral":
+        pretrained_model_class = AutoModelForCausalLM
+    else:
+        raise ValueError(f"Unsupported model_type: {args.model_type}")
+
+    # For E2E inference on a single RTX 4090 24GB, place the full model on GPU 0.
+    # This avoids accelerate meta/offload tensors and prevents DrKGC wrapper .cuda() errors.
+    model = pretrained_model_class.from_pretrained(
         args.model_name_or_path,
         low_cpu_mem_usage=True,
-        device_map="auto",
+        torch_dtype=torch.float16,
+        device_map={"": 0},
     )
     model = PeftModel.from_pretrained(model, args.checkpoint_dir)
     model = model.half()
@@ -169,9 +180,11 @@ if __name__ == "__main__":
     state = torch.load(ckpt_dir / "graph_model.bin", map_location="cpu")
     embed_model.load_state_dict(state)
 
+    # Move only the graph enhancer to GPU. The LLM/PEFT model is already on GPU
+    # through device_map={"": 0}. Do not call .cuda() on the whole DrKGC wrapper.
+    embed_model = embed_model.half().cuda()
+
     model = DrKGC(tokenizer, model, embed_model)
-    model = model.half()
-    model.cuda()
     model.eval()
 
     data_module = DataModule(args, tokenizer)
