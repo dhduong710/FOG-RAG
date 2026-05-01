@@ -1,0 +1,23 @@
+| Model | Split | Row | Gold@20 | Cand MRR | E2E MRR | H@1 | H@3 | H@10 | Pred-in-cand | Invalid | Rank21 |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| llama3_8b | valid | backbone_raw | 0.070 | 0.017846 | 0.013936 | 0.004 | 0.014 | 0.034 | 0.522 | 0.478 | 465 |
+| llama3_8b | valid | soft_support_raw | 0.070 | 0.021308 | 0.015676 | 0.002 | 0.020 | 0.050 | 0.290 | 0.710 | 465 |
+| llama3_8b | valid | fuzzy_retrieval_main | 0.070 | 0.021308 | 0.016767 | 0.004 | 0.020 | 0.052 | 0.364 | 0.636 | 465 |
+| llama3_8b | test | backbone_raw | 0.092 | 0.020481 | 0.016193 | 0.002 | 0.014 | 0.044 | 0.510 | 0.490 | 454 |
+| llama3_8b | test | soft_support_raw | 0.092 | 0.028159 | 0.019072 | 0.000 | 0.026 | 0.064 | 0.304 | 0.696 | 454 |
+| llama3_8b | test | fuzzy_retrieval_main | 0.092 | 0.028159 | 0.020413 | 0.002 | 0.026 | 0.064 | 0.350 | 0.650 | 454 |
+| medllama3_8b | valid | backbone_raw | 0.070 | 0.017846 | 0.011300 | 0.000 | 0.014 | 0.034 | 0.000 | 1.000 | 465 |
+| medllama3_8b | valid | soft_support_raw | 0.070 | 0.021308 | 0.013894 | 0.000 | 0.020 | 0.050 | 0.020 | 0.980 | 465 |
+| medllama3_8b | valid | fuzzy_retrieval_main | 0.070 | 0.021308 | 0.013894 | 0.000 | 0.020 | 0.050 | 0.020 | 0.980 | 465 |
+| medllama3_8b | test | backbone_raw | 0.092 | 0.020481 | 0.014034 | 0.000 | 0.014 | 0.044 | 0.000 | 1.000 | 454 |
+| medllama3_8b | test | soft_support_raw | 0.092 | 0.028159 | 0.018583 | 0.000 | 0.024 | 0.060 | 0.022 | 0.978 | 454 |
+| medllama3_8b | test | fuzzy_retrieval_main | 0.092 | 0.028159 | 0.018583 | 0.000 | 0.024 | 0.060 | 0.022 | 0.978 | 454 |
+| mistral_7b | valid | backbone_raw | 0.070 | 0.017846 | 0.011300 | 0.000 | 0.014 | 0.034 | 0.000 | 1.000 | 465 |
+| mistral_7b | valid | soft_support_raw | 0.070 | 0.021308 | 0.013836 | 0.000 | 0.020 | 0.050 | 0.020 | 0.980 | 465 |
+| mistral_7b | valid | fuzzy_retrieval_main | 0.070 | 0.021308 | 0.013836 | 0.000 | 0.020 | 0.050 | 0.018 | 0.982 | 465 |
+| mistral_7b | test | backbone_raw | 0.092 | 0.020481 | 0.014034 | 0.000 | 0.014 | 0.044 | 0.000 | 1.000 | 454 |
+| mistral_7b | test | soft_support_raw | 0.092 | 0.028159 | 0.018650 | 0.000 | 0.024 | 0.060 | 0.014 | 0.986 | 454 |
+| mistral_7b | test | fuzzy_retrieval_main | 0.092 | 0.028159 | 0.018650 | 0.000 | 0.024 | 0.060 | 0.014 | 0.986 | 454 |
+
+Saved: results/week23/e2e_pharmkg_model_compare/reviewer_safe/model_compare_reviewer_safe_summary.json
+Saved: reports/week23/model_compare/day3_model_compare_reviewer_safe.md
