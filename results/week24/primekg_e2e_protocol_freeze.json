@@ -1,0 +1,31 @@
+{
+  "decision": "PRIMEKG_E2E_PROTOCOL_FREEZED_FOR_WEEK24_DAY1",
+  "dataset": "PrimeKG-derived Setting A",
+  "task": "(? , indication, disease) head prediction",
+  "candidate_universe": "drug_only",
+  "rows": [
+    "backbone_raw",
+    "soft_support_raw",
+    "retrieval_main"
+  ],
+  "splits": [
+    "valid",
+    "test"
+  ],
+  "top_k": 20,
+  "graph_num_rels": 4,
+  "rank_absent_sentinel": 21,
+  "reviewer_safe_rr_rule": "1/rank if rank <= 20 else 0",
+  "do_not_use": [
+    "raw infer.py MRR for paper",
+    "test split for decoding selection",
+    "instruct model as main protocol",
+    "PharmKG graph_num_rels=28"
+  ],
+  "kge_embedding_path": "/home/anhlq/Documents/2026-dhd/FOG-RAG/dataset/setting_a/08_backbone_ready/entity_embeddings_rgcn.pt",
+  "kge_embedding_shape": [
+    10453,
+    256
+  ],
+  "ready_root": "/home/anhlq/Documents/2026-dhd/FOG-RAG/dataset/setting_a/29_n2_e2e_infer_ready"
+}

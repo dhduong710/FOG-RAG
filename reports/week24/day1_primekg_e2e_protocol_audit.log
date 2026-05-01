@@ -1,0 +1,22 @@
+decision = PRIMEKG_E2E_PROTOCOL_READY
+wrote protocol = /home/anhlq/Documents/2026-dhd/FOG-RAG/results/week24/primekg_e2e_protocol_freeze.json
+wrote audit = /home/anhlq/Documents/2026-dhd/FOG-RAG/results/week24/primekg_e2e_ready_audit.json
+wrote report = /home/anhlq/Documents/2026-dhd/FOG-RAG/reports/week24/day1_primekg_e2e_protocol_audit.md
+====================================================================================================
+backbone_raw
+valid rows = 500 Gold@20 = 0.202 MRR@20 = 0.05380338 H@10 = 0.158 Rank21 = 399 avg_subgraph = 60.45 max_rel = 3 errors = 0
+test rows = 500 Gold@20 = 0.24 MRR@20 = 0.06456283 H@10 = 0.192 Rank21 = 380 avg_subgraph = 59.932 max_rel = 3 errors = 0
+====================================================================================================
+soft_support_raw
+valid rows = 500 Gold@20 = 0.202 MRR@20 = 0.09764372 H@10 = 0.182 Rank21 = 399 avg_subgraph = 60.45 max_rel = 3 errors = 0
+test rows = 500 Gold@20 = 0.24 MRR@20 = 0.12532618 H@10 = 0.222 Rank21 = 380 avg_subgraph = 59.932 max_rel = 3 errors = 0
+====================================================================================================
+retrieval_main
+valid rows = 500 Gold@20 = 0.202 MRR@20 = 0.09764372 H@10 = 0.182 Rank21 = 399 avg_subgraph = 32.556 max_rel = 3 errors = 0
+test rows = 500 Gold@20 = 0.24 MRR@20 = 0.12532618 H@10 = 0.222 Rank21 = 380 avg_subgraph = 32.34 max_rel = 3 errors = 0
+====================================================================================================
+cross-row checks
+soft_vs_retrieval_candidate_order_valid = {'num_compared': 500, 'same_candidate_names_rate': 1.0, 'same_candidate_ids_rate': 1.0}
+backbone_vs_soft_candidate_order_valid = {'num_compared': 500, 'same_candidate_names_rate': 0.09, 'same_candidate_ids_rate': 0.09}
+soft_vs_retrieval_candidate_order_test = {'num_compared': 500, 'same_candidate_names_rate': 1.0, 'same_candidate_ids_rate': 1.0}
+backbone_vs_soft_candidate_order_test = {'num_compared': 500, 'same_candidate_names_rate': 0.1, 'same_candidate_ids_rate': 0.1}
