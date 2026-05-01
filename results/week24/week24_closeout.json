@@ -1,0 +1,476 @@
+{
+  "decision": {
+    "decision": "GO_PAPER_E2E_WITH_LIMITATION",
+    "reason": "PrimeKG E2E and PharmKG transfer both show reviewer-safe FOG-RAG improvements over the DrKGC-style raw backbone, and fuzzy retrieval preserves the soft-support gains while reducing subgraph size. However, unconstrained generation and top-1-copy behavior remain important limitations.",
+    "primary_dataset": "PrimeKG Setting A",
+    "secondary_dataset": "PharmKG therapeutic_association_proxy",
+    "primary_e2e_model": "llama3_2_3b",
+    "main_primekg_row": "retrieval_main",
+    "main_pharmkg_row": "fuzzy_retrieval_main",
+    "paper_positioning": {
+      "PrimeKG": "main result",
+      "PharmKG": "secondary transfer evidence",
+      "model_comparison": "diagnostic, with Top1-copy reported"
+    },
+    "week25_recommendation": {
+      "theme": "sensitivity and robustness experiments",
+      "experiments": [
+        "Rule sensitivity: hard-coded rules vs no-rules vs random-rule negative control",
+        "Question-template sensitivity for indication prompts",
+        "Small noise robustness if time permits"
+      ],
+      "goal": "supporting evidence, not a new novelty claim"
+    }
+  },
+  "primekg_final": {
+    "backbone_raw": {
+      "split": "test",
+      "row_name": "backbone_raw",
+      "num_examples": 500,
+      "prediction_path": "/home/anhlq/Documents/2026-dhd/FOG-RAG/results/week24/frozen_decode_test/predictions/prediction_test_backbone_raw.json",
+      "gold_at20": 0.24,
+      "candidate_mrr_at20": 0.06456283,
+      "candidate_hits1_at20": 0.024,
+      "candidate_hits3_at20": 0.07,
+      "candidate_hits10_at20": 0.192,
+      "candidate_hits20_at20": 0.24,
+      "candidate_rank21_count": 380,
+      "reviewer_safe_e2e_mrr_at20": 0.04763573,
+      "reviewer_safe_e2e_hits1_at20": 0.002,
+      "reviewer_safe_e2e_hits3_at20": 0.048,
+      "reviewer_safe_e2e_hits10_at20": 0.178,
+      "reviewer_safe_e2e_hits20_at20": 0.24,
+      "e2e_rank21_count": 380,
+      "gold_present_rate": 0.24,
+      "exact_target_match_rate": 0.002,
+      "pred_in_candidate_rate": 0.98,
+      "invalid_prediction_rate": 0.02,
+      "top1_copy_rate": 0.038,
+      "candidate_list_fragment_rate": 0.046,
+      "empty_prediction_rate": 0.0,
+      "avg_subgraph_size": 59.932,
+      "min_subgraph_size": 43,
+      "max_subgraph_size": 119,
+      "rr_rule": "1/adjusted_rank if adjusted_rank <= 20 else 0",
+      "absent_gold_policy": "RR@20 = 0"
+    },
+    "soft_support_raw": {
+      "split": "test",
+      "row_name": "soft_support_raw",
+      "num_examples": 500,
+      "prediction_path": "/home/anhlq/Documents/2026-dhd/FOG-RAG/results/week24/frozen_decode_test/predictions/prediction_test_soft_support_raw.json",
+      "gold_at20": 0.24,
+      "candidate_mrr_at20": 0.12532618,
+      "candidate_hits1_at20": 0.072,
+      "candidate_hits3_at20": 0.166,
+      "candidate_hits10_at20": 0.222,
+      "candidate_hits20_at20": 0.24,
+      "candidate_rank21_count": 380,
+      "reviewer_safe_e2e_mrr_at20": 0.07467554,
+      "reviewer_safe_e2e_hits1_at20": 0.0,
+      "reviewer_safe_e2e_hits3_at20": 0.132,
+      "reviewer_safe_e2e_hits10_at20": 0.218,
+      "reviewer_safe_e2e_hits20_at20": 0.24,
+      "e2e_rank21_count": 380,
+      "gold_present_rate": 0.24,
+      "exact_target_match_rate": 0.0,
+      "pred_in_candidate_rate": 0.98,
+      "invalid_prediction_rate": 0.02,
+      "top1_copy_rate": 0.008,
+      "candidate_list_fragment_rate": 0.01,
+      "empty_prediction_rate": 0.0,
+      "avg_subgraph_size": 59.932,
+      "min_subgraph_size": 43,
+      "max_subgraph_size": 119,
+      "rr_rule": "1/adjusted_rank if adjusted_rank <= 20 else 0",
+      "absent_gold_policy": "RR@20 = 0"
+    },
+    "retrieval_main": {
+      "split": "test",
+      "row_name": "retrieval_main",
+      "num_examples": 500,
+      "prediction_path": "/home/anhlq/Documents/2026-dhd/FOG-RAG/results/week24/frozen_decode_test/predictions/prediction_test_retrieval_main.json",
+      "gold_at20": 0.24,
+      "candidate_mrr_at20": 0.12532618,
+      "candidate_hits1_at20": 0.072,
+      "candidate_hits3_at20": 0.166,
+      "candidate_hits10_at20": 0.222,
+      "candidate_hits20_at20": 0.24,
+      "candidate_rank21_count": 380,
+      "reviewer_safe_e2e_mrr_at20": 0.07468653,
+      "reviewer_safe_e2e_hits1_at20": 0.0,
+      "reviewer_safe_e2e_hits3_at20": 0.132,
+      "reviewer_safe_e2e_hits10_at20": 0.218,
+      "reviewer_safe_e2e_hits20_at20": 0.24,
+      "e2e_rank21_count": 380,
+      "gold_present_rate": 0.24,
+      "exact_target_match_rate": 0.0,
+      "pred_in_candidate_rate": 0.998,
+      "invalid_prediction_rate": 0.002,
+      "top1_copy_rate": 0.01,
+      "candidate_list_fragment_rate": 0.01,
+      "empty_prediction_rate": 0.0,
+      "avg_subgraph_size": 32.34,
+      "min_subgraph_size": 24,
+      "max_subgraph_size": 51,
+      "avg_candidate_coverage_preserved_rate": 1.0,
+      "selected_source_variant_set": [
+        "soft_support_fuzzy_retrieval_tight"
+      ],
+      "rr_rule": "1/adjusted_rank if adjusted_rank <= 20 else 0",
+      "absent_gold_policy": "RR@20 = 0"
+    },
+    "delta_retrieval_minus_backbone_e2e": 0.0270508,
+    "delta_retrieval_minus_soft_e2e": 1.099e-05,
+    "subgraph_reduction_soft_to_retrieval": 27.592
+  },
+  "primekg_model_comparison": {
+    "metric_best_model": "llama3_8b",
+    "primary_e2e_model": "llama3_2_3b",
+    "diagnostic_top1_copy_models": [],
+    "trend_checks": {
+      "llama3_2_3b": {
+        "soft_improves_backbone_e2e": true,
+        "retrieval_preserves_or_improves_soft_e2e": true,
+        "retrieval_smaller_than_soft": true,
+        "test_delta_retrieval_minus_backbone_e2e": 0.0270508,
+        "test_delta_retrieval_minus_soft_e2e": 1.099e-05
+      },
+      "llama3_8b": {
+        "soft_improves_backbone_e2e": true,
+        "retrieval_preserves_or_improves_soft_e2e": true,
+        "retrieval_smaller_than_soft": true,
+        "test_delta_retrieval_minus_backbone_e2e": 0.06076335,
+        "test_delta_retrieval_minus_soft_e2e": 0.0
+      },
+      "medllama3_8b": {
+        "soft_improves_backbone_e2e": true,
+        "retrieval_preserves_or_improves_soft_e2e": true,
+        "retrieval_smaller_than_soft": true,
+        "test_delta_retrieval_minus_backbone_e2e": 0.06076335,
+        "test_delta_retrieval_minus_soft_e2e": 0.0
+      }
+    }
+  },
+  "primekg_diagnostics": {
+    "primary_failure_buckets": {
+      "counts": {
+        "raw_bottleneck_failure": 380,
+        "candidate_present_but_generation_fail": 118,
+        "exact_target_success": 0,
+        "top1_copy": 5,
+        "other_candidate": 494,
+        "invalid_generation": 1,
+        "candidate_list_fragment": 0
+      },
+      "rates": {
+        "raw_bottleneck_failure_rate": 0.76,
+        "candidate_present_but_generation_fail_rate": 0.236,
+        "exact_target_success_rate": 0.0,
+        "top1_copy_rate": 0.01,
+        "other_candidate_rate": 0.988,
+        "invalid_generation_rate": 0.002,
+        "candidate_list_fragment_rate": 0.0
+      }
+    },
+    "retrieval_cleaner_graph_analysis": {
+      "split": "test",
+      "num_rows": 500,
+      "same_candidate_order_rate": 1.0,
+      "same_rank_rate": 1.0,
+      "retrieval_smaller_graph_rate": 1.0,
+      "same_rank_cleaner_graph_count": 500,
+      "same_rank_cleaner_graph_rate": 1.0,
+      "avg_subgraph_reduction": 27.592,
+      "min_subgraph_reduction": 19,
+      "max_subgraph_reduction": 76,
+      "cases": [
+        {
+          "row_index": 0,
+          "query_entity": "lung abscess (disease)",
+          "gold_entity": "Ticarcillin",
+          "rank": 21,
+          "soft_subgraph_size": 66,
+          "retrieval_subgraph_size": 32,
+          "subgraph_reduction": 34,
+          "top5": [
+            "Cortisone acetate",
+            "Fusidic acid",
+            "Dexamethasone",
+            "Betamethasone",
+            "Triamcinolone"
+          ]
+        },
+        {
+          "row_index": 1,
+          "query_entity": "acquired hyperprolactinemia",
+          "gold_entity": "Cabergoline",
+          "rank": 21,
+          "soft_subgraph_size": 68,
+          "retrieval_subgraph_size": 37,
+          "subgraph_reduction": 31,
+          "top5": [
+            "Cortisone acetate",
+            "Dexamethasone",
+            "Methylprednisolone",
+            "Triamcinolone",
+            "Hydrocortisone"
+          ]
+        },
+        {
+          "row_index": 2,
+          "query_entity": "allergic rhinitis",
+          "gold_entity": "Hydrocortisone",
+          "rank": 3,
+          "soft_subgraph_size": 55,
+          "retrieval_subgraph_size": 30,
+          "subgraph_reduction": 25,
+          "top5": [
+            "Fusidic acid",
+            "Cortisone acetate",
+            "Hydrocortisone",
+            "Betamethasone",
+            "Tetracycline"
+          ]
+        },
+        {
+          "row_index": 3,
+          "query_entity": "blepharoconjunctivitis",
+          "gold_entity": "Hydrocortisone acetate",
+          "rank": 4,
+          "soft_subgraph_size": 54,
+          "retrieval_subgraph_size": 30,
+          "subgraph_reduction": 24,
+          "top5": [
+            "Betamethasone",
+            "Triamcinolone",
+            "Methylprednisolone",
+            "Hydrocortisone acetate",
+            "Ofloxacin"
+          ]
+        },
+        {
+          "row_index": 4,
+          "query_entity": "parkinsonian-pyramidal syndrome",
+          "gold_entity": "Procyclidine",
+          "rank": 21,
+          "soft_subgraph_size": 60,
+          "retrieval_subgraph_size": 33,
+          "subgraph_reduction": 27,
+          "top5": [
+            "Cortisone acetate",
+            "Dexamethasone",
+            "Methylprednisolone",
+            "Triamcinolone",
+            "Hydrocortisone"
+          ]
+        },
+        {
+          "row_index": 5,
+          "query_entity": "pharyngitis",
+          "gold_entity": "Dirithromycin",
+          "rank": 21,
+          "soft_subgraph_size": 52,
+          "retrieval_subgraph_size": 29,
+          "subgraph_reduction": 23,
+          "top5": [
+            "Cortisone acetate",
+            "Hydrocortisone",
+            "Dexamethasone",
+            "Triamcinolone",
+            "Prednisolone"
+          ]
+        },
+        {
+          "row_index": 6,
+          "query_entity": "diabetes mellitus (disease)",
+          "gold_entity": "Voglibose",
+          "rank": 21,
+          "soft_subgraph_size": 61,
+          "retrieval_subgraph_size": 34,
+          "subgraph_reduction": 27,
+          "top5": [
+            "Cortisone acetate",
+            "Dexamethasone",
+            "Methylprednisolone",
+            "Triamcinolone",
+            "Betamethasone"
+          ]
+        },
+        {
+          "row_index": 7,
+          "query_entity": "Trichinella spiralis infectious disease",
+          "gold_entity": "Methylprednisolone",
+          "rank": 5,
+          "soft_subgraph_size": 60,
+          "retrieval_subgraph_size": 33,
+          "subgraph_reduction": 27,
+          "top5": [
+            "Fusidic acid",
+            "Dexamethasone",
+            "Triamcinolone",
+            "Prednisolone",
+            "Methylprednisolone"
+          ]
+        },
+        {
+          "row_index": 8,
+          "query_entity": "type 2 diabetes mellitus",
+          "gold_entity": "Gliclazide",
+          "rank": 21,
+          "soft_subgraph_size": 60,
+          "retrieval_subgraph_size": 33,
+          "subgraph_reduction": 27,
+          "top5": [
+            "Cortisone acetate",
+            "Dexamethasone",
+            "Methylprednisolone",
+            "Triamcinolone",
+            "Betamethasone"
+          ]
+        },
+        {
+          "row_index": 9,
+          "query_entity": "spondyloarthropathy",
+          "gold_entity": "Methylprednisolone",
+          "rank": 2,
+          "soft_subgraph_size": 54,
+          "retrieval_subgraph_size": 30,
+          "subgraph_reduction": 24,
+          "top5": [
+            "Dexamethasone",
+            "Methylprednisolone",
+            "Hydrocortisone",
+            "Hydrocortisone acetate",
+            "Doxorubicin"
+          ]
+        }
+      ]
+    }
+  },
+  "pharmkg_final": {
+    "backbone_raw": {
+      "model_tag": "llama3_2_3b",
+      "split": "test",
+      "row_name": "backbone_raw",
+      "prediction_path": "/home/anhlq/Documents/2026-dhd/FOG-RAG/results/week24/pharmkg_frozen_model_compare/llama3_2_3b/predictions/prediction_test_backbone_raw.json",
+      "num_examples": 500,
+      "gold_at20": 0.092,
+      "candidate_mrr_at20": 0.02048077,
+      "candidate_hits1_at20": 0.008,
+      "candidate_hits3_at20": 0.02,
+      "candidate_hits10_at20": 0.046,
+      "candidate_rank21_count": 454,
+      "reviewer_safe_e2e_mrr_at20": 0.01557513,
+      "reviewer_safe_e2e_hits1_at20": 0.0,
+      "reviewer_safe_e2e_hits3_at20": 0.018,
+      "reviewer_safe_e2e_hits10_at20": 0.044,
+      "e2e_rank21_count": 455,
+      "exact_target_match_rate": 0.0,
+      "pred_in_candidate_rate": 0.504,
+      "invalid_prediction_rate": 0.496,
+      "top1_copy_rate": 0.504,
+      "candidate_list_fragment_rate": 0.49,
+      "empty_prediction_rate": 0.0,
+      "rr_rule": "1/adjusted_rank if adjusted_rank <= 20 else 0",
+      "absent_gold_policy": "RR@20 = 0",
+      "avg_subgraph_size": 100,
+      "min_subgraph_size": 100,
+      "max_subgraph_size": 100
+    },
+    "soft_support_raw": {
+      "model_tag": "llama3_2_3b",
+      "split": "test",
+      "row_name": "soft_support_raw",
+      "prediction_path": "/home/anhlq/Documents/2026-dhd/FOG-RAG/results/week24/pharmkg_frozen_model_compare/llama3_2_3b/predictions/prediction_test_soft_support_raw.json",
+      "num_examples": 500,
+      "gold_at20": 0.092,
+      "candidate_mrr_at20": 0.02815902,
+      "candidate_hits1_at20": 0.012,
+      "candidate_hits3_at20": 0.03,
+      "candidate_hits10_at20": 0.068,
+      "candidate_rank21_count": 454,
+      "reviewer_safe_e2e_mrr_at20": 0.02058712,
+      "reviewer_safe_e2e_hits1_at20": 0.0,
+      "reviewer_safe_e2e_hits3_at20": 0.03,
+      "reviewer_safe_e2e_hits10_at20": 0.062,
+      "e2e_rank21_count": 454,
+      "exact_target_match_rate": 0.0,
+      "pred_in_candidate_rate": 0.39,
+      "invalid_prediction_rate": 0.61,
+      "top1_copy_rate": 0.39,
+      "candidate_list_fragment_rate": 0.604,
+      "empty_prediction_rate": 0.0,
+      "rr_rule": "1/adjusted_rank if adjusted_rank <= 20 else 0",
+      "absent_gold_policy": "RR@20 = 0",
+      "avg_subgraph_size": 100,
+      "min_subgraph_size": 100,
+      "max_subgraph_size": 100
+    },
+    "fuzzy_retrieval_main": {
+      "model_tag": "llama3_2_3b",
+      "split": "test",
+      "row_name": "fuzzy_retrieval_main",
+      "prediction_path": "/home/anhlq/Documents/2026-dhd/FOG-RAG/results/week24/pharmkg_frozen_model_compare/llama3_2_3b/predictions/prediction_test_fuzzy_retrieval_main.json",
+      "num_examples": 500,
+      "gold_at20": 0.092,
+      "candidate_mrr_at20": 0.02815902,
+      "candidate_hits1_at20": 0.012,
+      "candidate_hits3_at20": 0.03,
+      "candidate_hits10_at20": 0.068,
+      "candidate_rank21_count": 454,
+      "reviewer_safe_e2e_mrr_at20": 0.02097132,
+      "reviewer_safe_e2e_hits1_at20": 0.002,
+      "reviewer_safe_e2e_hits3_at20": 0.03,
+      "reviewer_safe_e2e_hits10_at20": 0.062,
+      "e2e_rank21_count": 454,
+      "exact_target_match_rate": 0.002,
+      "pred_in_candidate_rate": 0.412,
+      "invalid_prediction_rate": 0.588,
+      "top1_copy_rate": 0.412,
+      "candidate_list_fragment_rate": 0.582,
+      "empty_prediction_rate": 0.0,
+      "rr_rule": "1/adjusted_rank if adjusted_rank <= 20 else 0",
+      "absent_gold_policy": "RR@20 = 0",
+      "avg_subgraph_size": 55,
+      "min_subgraph_size": 55,
+      "max_subgraph_size": 55
+    },
+    "delta_fuzzy_minus_backbone_e2e": 0.00539619,
+    "delta_fuzzy_minus_soft_e2e": 0.0003842,
+    "subgraph_reduction_soft_to_fuzzy": 45
+  },
+  "pharmkg_model_comparison": {
+    "primary_e2e_model": "llama3_2_3b",
+    "metric_best_test_fuzzy": "llama3_2_3b",
+    "trend_checks": {
+      "llama3_2_3b": {
+        "soft_improves_backbone_e2e": true,
+        "fuzzy_preserves_or_improves_soft_e2e": true,
+        "fuzzy_smaller_than_soft": true,
+        "delta_fuzzy_minus_backbone_e2e": 0.00539619,
+        "delta_fuzzy_minus_soft_e2e": 0.0003842
+      },
+      "llama3_8b": {
+        "soft_improves_backbone_e2e": true,
+        "fuzzy_preserves_or_improves_soft_e2e": true,
+        "fuzzy_smaller_than_soft": true,
+        "delta_fuzzy_minus_backbone_e2e": 0.00408243,
+        "delta_fuzzy_minus_soft_e2e": 0.00130556
+      },
+      "medllama3_8b": {
+        "soft_improves_backbone_e2e": true,
+        "fuzzy_preserves_or_improves_soft_e2e": true,
+        "fuzzy_smaller_than_soft": true,
+        "delta_fuzzy_minus_backbone_e2e": 0.00454935,
+        "delta_fuzzy_minus_soft_e2e": 0.0
+      }
+    }
+  },
+  "paper_assets": {
+    "primekg_e2e_table": "results/week24/paper_assets/primekg_e2e_table_latex.tex",
+    "primekg_model_table": "results/week24/paper_assets/primekg_model_compare_table_latex.tex",
+    "pharmkg_e2e_table": "results/week24/pharmkg_frozen_model_compare/paper_assets/pharmkg_e2e_table_latex.tex",
+    "pharmkg_model_table": "results/week24/pharmkg_frozen_model_compare/paper_assets/pharmkg_model_compare_table_latex.tex"
+  }
+}
