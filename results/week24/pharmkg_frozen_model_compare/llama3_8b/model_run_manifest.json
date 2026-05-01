@@ -1,0 +1,16 @@
+{
+  "model_tag": "llama3_8b",
+  "model_name_or_path": "meta-llama/Meta-Llama-3-8B",
+  "model_type": "llama",
+  "checkpoint_dir": "results/week23/e2e_pharmkg_model_compare/llama3_8b/main_checkpoint/checkpoint-final",
+  "dataset_root": "dataset/setting_c_pharmkg/13_e2e_infer_ready",
+  "kge_embedding_path": "dataset/setting_c_pharmkg/13_e2e_infer_ready/entity_embeddings_rgcn.pt",
+  "graph_num_rels": 28,
+  "frozen_config_id": "cfg02_mnt16_rp105_ng0",
+  "max_new_tokens": 16,
+  "repetition_penalty": 1.05,
+  "no_repeat_ngram_size": 0,
+  "splits": ["valid", "test"],
+  "rows": ["backbone_raw", "soft_support_raw", "fuzzy_retrieval_main"],
+  "paper_metric_note": "Raw infer.py metrics are audit-only. Reviewer-safe metrics are recomputed in collect script."
+}
