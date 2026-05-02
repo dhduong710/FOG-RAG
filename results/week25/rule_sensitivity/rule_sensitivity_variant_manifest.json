@@ -1,0 +1,137 @@
+{
+  "week": 25,
+  "day": 2,
+  "created_at": "2026-05-02T03:46:41",
+  "decision": "RULE_SENSITIVITY_VARIANTS_READY",
+  "source_roots": {
+    "retrieval_main": "dataset/setting_a/29_n2_e2e_infer_ready/retrieval_main",
+    "soft_support_raw": "dataset/setting_a/29_n2_e2e_infer_ready/soft_support_raw"
+  },
+  "output_root": "dataset/setting_a/31_week25_rule_sensitivity",
+  "variants": {
+    "main_rules": {
+      "dir": "dataset/setting_a/31_week25_rule_sensitivity/main_rules",
+      "manifest": "dataset/setting_a/31_week25_rule_sensitivity/main_rules/manifest.json",
+      "splits": {
+        "train": {
+          "split": "train",
+          "num_rows": 8388,
+          "avg_candidate_len": 20.0,
+          "min_candidate_len": 20,
+          "max_candidate_len": 20,
+          "avg_subgraph_size": 73.633405,
+          "min_subgraph_size": 2,
+          "max_subgraph_size": 149,
+          "empty_subgraph_rows": 0
+        },
+        "valid": {
+          "split": "valid",
+          "num_rows": 500,
+          "avg_candidate_len": 20.0,
+          "min_candidate_len": 20,
+          "max_candidate_len": 20,
+          "avg_subgraph_size": 32.556,
+          "min_subgraph_size": 24,
+          "max_subgraph_size": 51,
+          "empty_subgraph_rows": 0
+        },
+        "test": {
+          "split": "test",
+          "num_rows": 500,
+          "avg_candidate_len": 20.0,
+          "min_candidate_len": 20,
+          "max_candidate_len": 20,
+          "avg_subgraph_size": 32.34,
+          "min_subgraph_size": 24,
+          "max_subgraph_size": 51,
+          "empty_subgraph_rows": 0
+        }
+      }
+    },
+    "no_rules": {
+      "dir": "dataset/setting_a/31_week25_rule_sensitivity/no_rules",
+      "manifest": "dataset/setting_a/31_week25_rule_sensitivity/no_rules/manifest.json",
+      "splits": {
+        "train": {
+          "split": "train",
+          "num_rows": 8388,
+          "avg_candidate_len": 20.0,
+          "min_candidate_len": 20,
+          "max_candidate_len": 20,
+          "avg_subgraph_size": 73.633405,
+          "min_subgraph_size": 2,
+          "max_subgraph_size": 149,
+          "empty_subgraph_rows": 0
+        },
+        "valid": {
+          "split": "valid",
+          "num_rows": 500,
+          "avg_candidate_len": 20.0,
+          "min_candidate_len": 20,
+          "max_candidate_len": 20,
+          "avg_subgraph_size": 60.45,
+          "min_subgraph_size": 44,
+          "max_subgraph_size": 121,
+          "empty_subgraph_rows": 0
+        },
+        "test": {
+          "split": "test",
+          "num_rows": 500,
+          "avg_candidate_len": 20.0,
+          "min_candidate_len": 20,
+          "max_candidate_len": 20,
+          "avg_subgraph_size": 59.932,
+          "min_subgraph_size": 43,
+          "max_subgraph_size": 119,
+          "empty_subgraph_rows": 0
+        }
+      }
+    },
+    "random_rules": {
+      "dir": "dataset/setting_a/31_week25_rule_sensitivity/random_rules",
+      "manifest": "dataset/setting_a/31_week25_rule_sensitivity/random_rules/manifest.json",
+      "splits": {
+        "train": {
+          "split": "train",
+          "num_rows": 8388,
+          "avg_candidate_len": 20.0,
+          "min_candidate_len": 20,
+          "max_candidate_len": 20,
+          "avg_subgraph_size": 58.917024,
+          "min_subgraph_size": 2,
+          "max_subgraph_size": 76,
+          "empty_subgraph_rows": 0
+        },
+        "valid": {
+          "split": "valid",
+          "num_rows": 500,
+          "avg_candidate_len": 20.0,
+          "min_candidate_len": 20,
+          "max_candidate_len": 20,
+          "avg_subgraph_size": 32.556,
+          "min_subgraph_size": 24,
+          "max_subgraph_size": 51,
+          "empty_subgraph_rows": 0
+        },
+        "test": {
+          "split": "test",
+          "num_rows": 500,
+          "avg_candidate_len": 20.0,
+          "min_candidate_len": 20,
+          "max_candidate_len": 20,
+          "avg_subgraph_size": 32.34,
+          "min_subgraph_size": 24,
+          "max_subgraph_size": 51,
+          "empty_subgraph_rows": 0
+        }
+      }
+    }
+  },
+  "notes": [
+    "main_rules is an exact copy of retrieval_main.",
+    "no_rules uses soft_support_raw candidate order and source subgraph; it disables the Week15/16 fuzzy rule-selection layer.",
+    "random_rules keeps retrieval_main candidate order but randomizes subgraph selection under the main row budget.",
+    "Candidate metrics may be identical by construction; Day 3 E2E checks whether graph package changes affect LLM output."
+  ],
+  "fatal_errors": []
+}
