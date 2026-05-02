@@ -16,3 +16,6 @@ dataset/raw/
 
 dataset/setting_c_pharmkg/06_fograg_ready/train.json
 dataset/setting_c_pharmkg/13_e2e_infer_ready/*/train.json
+dataset/setting_a/33_week25_noise_robustness/N4_*/train.json
+dataset/setting_a/33_week25_noise_robustness/N5_*/train.json
+dataset/setting_a/33_week25_noise_robustness/N6_*/train.json
