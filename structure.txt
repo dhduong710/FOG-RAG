@@ -1121,19 +1121,92 @@
 │   │   │   ├── valid_encoder_inputs.json
 │   │   │   ├── valid_fuzzy_encoder_probe_v0_dryrun.json
 │   │   │   └── valid_fuzzy_encoder_probe_v0.json
-│   │   └── 29_n2_e2e_infer_ready
-│   │       ├── backbone_raw
-│   │       │   ├── prep_manifest.json
+│   │   ├── 29_n2_e2e_infer_ready
+│   │   │   ├── backbone_raw
+│   │   │   │   ├── prep_manifest.json
+│   │   │   │   ├── test.json
+│   │   │   │   ├── train.json
+│   │   │   │   └── valid.json
+│   │   │   ├── retrieval_main
+│   │   │   │   ├── prep_manifest.json
+│   │   │   │   ├── test.json
+│   │   │   │   ├── train.json
+│   │   │   │   └── valid.json
+│   │   │   └── soft_support_raw
+│   │   │       ├── prep_manifest.json
+│   │   │       ├── test.json
+│   │   │       ├── train.json
+│   │   │       └── valid.json
+│   │   ├── 31_week25_rule_sensitivity
+│   │   │   ├── main_rules
+│   │   │   │   ├── manifest.json
+│   │   │   │   ├── test.json
+│   │   │   │   ├── train.json
+│   │   │   │   └── valid.json
+│   │   │   ├── no_rules
+│   │   │   │   ├── manifest.json
+│   │   │   │   ├── test.json
+│   │   │   │   ├── train.json
+│   │   │   │   └── valid.json
+│   │   │   └── random_rules
+│   │   │       ├── manifest.json
+│   │   │       ├── test.json
+│   │   │       ├── train.json
+│   │   │       └── valid.json
+│   │   ├── 32_week25_template_sensitivity
+│   │   │   ├── T0_canonical
+│   │   │   │   ├── manifest.json
+│   │   │   │   ├── test.json
+│   │   │   │   ├── train.json
+│   │   │   │   └── valid.json
+│   │   │   ├── T1_treatment
+│   │   │   │   ├── manifest.json
+│   │   │   │   ├── test.json
+│   │   │   │   ├── train.json
+│   │   │   │   └── valid.json
+│   │   │   ├── T2_medication
+│   │   │   │   ├── manifest.json
+│   │   │   │   ├── test.json
+│   │   │   │   ├── train.json
+│   │   │   │   └── valid.json
+│   │   │   └── T3_association_neutral
+│   │   │       ├── manifest.json
+│   │   │       ├── test.json
+│   │   │       ├── train.json
+│   │   │       └── valid.json
+│   │   └── 33_week25_noise_robustness
+│   │       ├── N0_no_noise
+│   │       │   ├── manifest.json
 │   │       │   ├── test.json
 │   │       │   ├── train.json
 │   │       │   └── valid.json
-│   │       ├── retrieval_main
-│   │       │   ├── prep_manifest.json
+│   │       ├── N1_support_score_noise_seed1
+│   │       │   ├── manifest.json
 │   │       │   ├── test.json
 │   │       │   ├── train.json
 │   │       │   └── valid.json
-│   │       └── soft_support_raw
-│   │           ├── prep_manifest.json
+│   │       ├── N2_support_score_noise_seed2
+│   │       │   ├── manifest.json
+│   │       │   ├── test.json
+│   │       │   ├── train.json
+│   │       │   └── valid.json
+│   │       ├── N3_support_score_noise_seed3
+│   │       │   ├── manifest.json
+│   │       │   ├── test.json
+│   │       │   ├── train.json
+│   │       │   └── valid.json
+│   │       ├── N4_subgraph_edge_dropout_5_seed1
+│   │       │   ├── manifest.json
+│   │       │   ├── test.json
+│   │       │   ├── train.json
+│   │       │   └── valid.json
+│   │       ├── N5_subgraph_edge_dropout_5_seed2
+│   │       │   ├── manifest.json
+│   │       │   ├── test.json
+│   │       │   ├── train.json
+│   │       │   └── valid.json
+│   │       └── N6_subgraph_edge_dropout_5_seed3
+│   │           ├── manifest.json
 │   │           ├── test.json
 │   │           ├── train.json
 │   │           └── valid.json
@@ -1506,70 +1579,76 @@
 │   │   │   └── day3_model_compare_reviewer_safe.md
 │   │   ├── week23_pharmkg_closeout_build.log
 │   │   └── week23_pharmkg_closeout.md
-│   └── week24
-│       ├── day1_primekg_e2e_protocol_audit.log
-│       ├── day1_primekg_e2e_protocol_audit.md
-│       ├── day2_valid_decoding_sweep_collect.log
-│       ├── day2_valid_decoding_sweep_infer.log
-│       ├── day2_valid_decoding_sweep.md
-│       ├── day3_frozen_decode_test_collect.log
-│       ├── day3_frozen_decode_test_infer.log
-│       ├── day3_frozen_decode_test_rerun.md
-│       ├── day4_model_comparison_train_infer_all.log
-│       ├── day5_model_compare_eval_and_selection.log
-│       ├── day5_model_compare_eval_and_selection.md
-│       ├── day6b_pharmkg_valid_decoding_sweep_collect.log
-│       ├── day6b_pharmkg_valid_decoding_sweep_infer.log
-│       ├── day6b_pharmkg_valid_decoding_sweep.md
-│       ├── day6c_pharmkg_frozen_model_compare_collect.log
-│       ├── day6c_pharmkg_frozen_model_compare_infer.log
-│       ├── day6c_pharmkg_frozen_model_compare.md
-│       ├── day6_e2e_diagnostics_and_paper_assets.log
-│       ├── day6_e2e_diagnostics_and_paper_assets.md
-│       ├── day7_week24_closeout.log
-│       ├── model_compare
-│       │   ├── day4_llama3_2_3b_infer_test_backbone_raw.log
-│       │   ├── day4_llama3_2_3b_infer_test_retrieval_main.log
-│       │   ├── day4_llama3_2_3b_infer_test_soft_support_raw.log
-│       │   ├── day4_llama3_2_3b_infer_valid_backbone_raw.log
-│       │   ├── day4_llama3_2_3b_infer_valid_retrieval_main.log
-│       │   ├── day4_llama3_2_3b_infer_valid_soft_support_raw.log
-│       │   ├── day4_llama3_8b_infer_test_backbone_raw.log
-│       │   ├── day4_llama3_8b_infer_test_retrieval_main.log
-│       │   ├── day4_llama3_8b_infer_test_soft_support_raw.log
-│       │   ├── day4_llama3_8b_infer_valid_backbone_raw.log
-│       │   ├── day4_llama3_8b_infer_valid_retrieval_main.log
-│       │   ├── day4_llama3_8b_infer_valid_soft_support_raw.log
-│       │   ├── day4_llama3_8b_train.log
-│       │   ├── day4_medllama3_8b_infer_test_backbone_raw.log
-│       │   ├── day4_medllama3_8b_infer_test_retrieval_main.log
-│       │   ├── day4_medllama3_8b_infer_test_soft_support_raw.log
-│       │   ├── day4_medllama3_8b_infer_valid_backbone_raw.log
-│       │   ├── day4_medllama3_8b_infer_valid_retrieval_main.log
-│       │   ├── day4_medllama3_8b_infer_valid_soft_support_raw.log
-│       │   ├── day4_medllama3_8b_train.log
-│       │   └── day4_model_status.tsv
-│       ├── pharmkg_frozen_model_compare
-│       │   ├── day6c_llama3_2_3b_infer_test_backbone_raw.log
-│       │   ├── day6c_llama3_2_3b_infer_test_fuzzy_retrieval_main.log
-│       │   ├── day6c_llama3_2_3b_infer_test_soft_support_raw.log
-│       │   ├── day6c_llama3_2_3b_infer_valid_backbone_raw.log
-│       │   ├── day6c_llama3_2_3b_infer_valid_fuzzy_retrieval_main.log
-│       │   ├── day6c_llama3_2_3b_infer_valid_soft_support_raw.log
-│       │   ├── day6c_llama3_8b_infer_test_backbone_raw.log
-│       │   ├── day6c_llama3_8b_infer_test_fuzzy_retrieval_main.log
-│       │   ├── day6c_llama3_8b_infer_test_soft_support_raw.log
-│       │   ├── day6c_llama3_8b_infer_valid_backbone_raw.log
-│       │   ├── day6c_llama3_8b_infer_valid_fuzzy_retrieval_main.log
-│       │   ├── day6c_llama3_8b_infer_valid_soft_support_raw.log
-│       │   ├── day6c_medllama3_8b_infer_test_backbone_raw.log
-│       │   ├── day6c_medllama3_8b_infer_test_fuzzy_retrieval_main.log
-│       │   ├── day6c_medllama3_8b_infer_test_soft_support_raw.log
-│       │   ├── day6c_medllama3_8b_infer_valid_backbone_raw.log
-│       │   ├── day6c_medllama3_8b_infer_valid_fuzzy_retrieval_main.log
-│       │   ├── day6c_medllama3_8b_infer_valid_soft_support_raw.log
-│       │   └── day6c_model_status.tsv
-│       └── week24_closeout.md
+│   ├── week24
+│   │   ├── day1_primekg_e2e_protocol_audit.log
+│   │   ├── day1_primekg_e2e_protocol_audit.md
+│   │   ├── day2_valid_decoding_sweep_collect.log
+│   │   ├── day2_valid_decoding_sweep_infer.log
+│   │   ├── day2_valid_decoding_sweep.md
+│   │   ├── day3_frozen_decode_test_collect.log
+│   │   ├── day3_frozen_decode_test_infer.log
+│   │   ├── day3_frozen_decode_test_rerun.md
+│   │   ├── day4_model_comparison_train_infer_all.log
+│   │   ├── day5_model_compare_eval_and_selection.log
+│   │   ├── day5_model_compare_eval_and_selection.md
+│   │   ├── day6b_pharmkg_valid_decoding_sweep_collect.log
+│   │   ├── day6b_pharmkg_valid_decoding_sweep_infer.log
+│   │   ├── day6b_pharmkg_valid_decoding_sweep.md
+│   │   ├── day6c_pharmkg_frozen_model_compare_collect.log
+│   │   ├── day6c_pharmkg_frozen_model_compare_infer.log
+│   │   ├── day6c_pharmkg_frozen_model_compare.md
+│   │   ├── day6_e2e_diagnostics_and_paper_assets.log
+│   │   ├── day6_e2e_diagnostics_and_paper_assets.md
+│   │   ├── day7_week24_closeout.log
+│   │   ├── model_compare
+│   │   │   ├── day4_llama3_2_3b_infer_test_backbone_raw.log
+│   │   │   ├── day4_llama3_2_3b_infer_test_retrieval_main.log
+│   │   │   ├── day4_llama3_2_3b_infer_test_soft_support_raw.log
+│   │   │   ├── day4_llama3_2_3b_infer_valid_backbone_raw.log
+│   │   │   ├── day4_llama3_2_3b_infer_valid_retrieval_main.log
+│   │   │   ├── day4_llama3_2_3b_infer_valid_soft_support_raw.log
+│   │   │   ├── day4_llama3_8b_infer_test_backbone_raw.log
+│   │   │   ├── day4_llama3_8b_infer_test_retrieval_main.log
+│   │   │   ├── day4_llama3_8b_infer_test_soft_support_raw.log
+│   │   │   ├── day4_llama3_8b_infer_valid_backbone_raw.log
+│   │   │   ├── day4_llama3_8b_infer_valid_retrieval_main.log
+│   │   │   ├── day4_llama3_8b_infer_valid_soft_support_raw.log
+│   │   │   ├── day4_llama3_8b_train.log
+│   │   │   ├── day4_medllama3_8b_infer_test_backbone_raw.log
+│   │   │   ├── day4_medllama3_8b_infer_test_retrieval_main.log
+│   │   │   ├── day4_medllama3_8b_infer_test_soft_support_raw.log
+│   │   │   ├── day4_medllama3_8b_infer_valid_backbone_raw.log
+│   │   │   ├── day4_medllama3_8b_infer_valid_retrieval_main.log
+│   │   │   ├── day4_medllama3_8b_infer_valid_soft_support_raw.log
+│   │   │   ├── day4_medllama3_8b_train.log
+│   │   │   └── day4_model_status.tsv
+│   │   ├── pharmkg_frozen_model_compare
+│   │   │   ├── day6c_llama3_2_3b_infer_test_backbone_raw.log
+│   │   │   ├── day6c_llama3_2_3b_infer_test_fuzzy_retrieval_main.log
+│   │   │   ├── day6c_llama3_2_3b_infer_test_soft_support_raw.log
+│   │   │   ├── day6c_llama3_2_3b_infer_valid_backbone_raw.log
+│   │   │   ├── day6c_llama3_2_3b_infer_valid_fuzzy_retrieval_main.log
+│   │   │   ├── day6c_llama3_2_3b_infer_valid_soft_support_raw.log
+│   │   │   ├── day6c_llama3_8b_infer_test_backbone_raw.log
+│   │   │   ├── day6c_llama3_8b_infer_test_fuzzy_retrieval_main.log
+│   │   │   ├── day6c_llama3_8b_infer_test_soft_support_raw.log
+│   │   │   ├── day6c_llama3_8b_infer_valid_backbone_raw.log
+│   │   │   ├── day6c_llama3_8b_infer_valid_fuzzy_retrieval_main.log
+│   │   │   ├── day6c_llama3_8b_infer_valid_soft_support_raw.log
+│   │   │   ├── day6c_medllama3_8b_infer_test_backbone_raw.log
+│   │   │   ├── day6c_medllama3_8b_infer_test_fuzzy_retrieval_main.log
+│   │   │   ├── day6c_medllama3_8b_infer_test_soft_support_raw.log
+│   │   │   ├── day6c_medllama3_8b_infer_valid_backbone_raw.log
+│   │   │   ├── day6c_medllama3_8b_infer_valid_fuzzy_retrieval_main.log
+│   │   │   ├── day6c_medllama3_8b_infer_valid_soft_support_raw.log
+│   │   │   └── day6c_model_status.tsv
+│   │   └── week24_closeout.md
+│   └── week25
+│       ├── day1_sensitivity_protocol_audit.md
+│       ├── day2_rule_sensitivity_valid.md
+│       ├── day3_rule_sensitivity_test_e2e.md
+│       ├── day4_template_sensitivity.md
+│       └── day5_noise_robustness.md
 ├── results
 │   ├── reference_rows
 │   │   ├── backbone_raw_test
@@ -2704,6 +2783,94 @@
 │   │   ├── primekg_e2e_ready_audit.json
 │   │   ├── week24_closeout.json
 │   │   └── week24_go_decision.json
+│   ├── week25
+│   │   ├── noise_robustness
+│   │   │   ├── noise_configs.json
+│   │   │   ├── noise_robustness_summary.json
+│   │   │   ├── noise_robustness_test.json
+│   │   │   ├── noise_robustness_valid.json
+│   │   │   └── noise_variant_manifest.json
+│   │   ├── paper_assets
+│   │   ├── protocol
+│   │   │   └── week25_sensitivity_protocol.json
+│   │   ├── rule_sensitivity
+│   │   │   ├── e2e_checkpoint
+│   │   │   │   ├── adapter_config.json
+│   │   │   │   ├── adapter_model.bin
+│   │   │   │   ├── graph_model.bin
+│   │   │   │   └── README.md
+│   │   │   ├── logs
+│   │   │   │   ├── test_main_rules.log
+│   │   │   │   ├── test_no_rules.log
+│   │   │   │   ├── test_random_rules.log
+│   │   │   │   ├── valid_main_rules.log
+│   │   │   │   ├── valid_no_rules.log
+│   │   │   │   └── valid_random_rules.log
+│   │   │   ├── metrics_test_week25_rule_main_rules.txt
+│   │   │   ├── metrics_test_week25_rule_no_rules.txt
+│   │   │   ├── metrics_test_week25_rule_random_rules.txt
+│   │   │   ├── metrics_valid_week25_rule_main_rules.txt
+│   │   │   ├── metrics_valid_week25_rule_no_rules.txt
+│   │   │   ├── metrics_valid_week25_rule_random_rules.txt
+│   │   │   ├── prediction_test_week25_rule_main_rules.json
+│   │   │   ├── prediction_test_week25_rule_no_rules.json
+│   │   │   ├── prediction_test_week25_rule_random_rules.json
+│   │   │   ├── prediction_valid_week25_rule_main_rules.json
+│   │   │   ├── prediction_valid_week25_rule_no_rules.json
+│   │   │   ├── prediction_valid_week25_rule_random_rules.json
+│   │   │   ├── ranking_metrics_test_week25_rule_main_rules.json
+│   │   │   ├── ranking_metrics_test_week25_rule_no_rules.json
+│   │   │   ├── ranking_metrics_test_week25_rule_random_rules.json
+│   │   │   ├── ranking_metrics_valid_week25_rule_main_rules.json
+│   │   │   ├── ranking_metrics_valid_week25_rule_no_rules.json
+│   │   │   ├── ranking_metrics_valid_week25_rule_random_rules.json
+│   │   │   ├── rule_sensitivity_e2e_summary.json
+│   │   │   ├── rule_sensitivity_test.json
+│   │   │   ├── rule_sensitivity_valid.json
+│   │   │   └── rule_sensitivity_variant_manifest.json
+│   │   └── template_sensitivity
+│   │       ├── e2e_checkpoint
+│   │       │   ├── adapter_config.json
+│   │       │   ├── adapter_model.bin
+│   │       │   ├── graph_model.bin
+│   │       │   └── README.md
+│   │       ├── logs
+│   │       │   ├── test_T0_canonical.log
+│   │       │   ├── test_T1_treatment.log
+│   │       │   ├── test_T2_medication.log
+│   │       │   ├── test_T3_association_neutral.log
+│   │       │   ├── valid_T0_canonical.log
+│   │       │   ├── valid_T1_treatment.log
+│   │       │   ├── valid_T2_medication.log
+│   │       │   └── valid_T3_association_neutral.log
+│   │       ├── metrics_test_week25_template_T0_canonical.txt
+│   │       ├── metrics_test_week25_template_T1_treatment.txt
+│   │       ├── metrics_test_week25_template_T2_medication.txt
+│   │       ├── metrics_test_week25_template_T3_association_neutral.txt
+│   │       ├── metrics_valid_week25_template_T0_canonical.txt
+│   │       ├── metrics_valid_week25_template_T1_treatment.txt
+│   │       ├── metrics_valid_week25_template_T2_medication.txt
+│   │       ├── metrics_valid_week25_template_T3_association_neutral.txt
+│   │       ├── prediction_test_week25_template_T0_canonical.json
+│   │       ├── prediction_test_week25_template_T1_treatment.json
+│   │       ├── prediction_test_week25_template_T2_medication.json
+│   │       ├── prediction_test_week25_template_T3_association_neutral.json
+│   │       ├── prediction_valid_week25_template_T0_canonical.json
+│   │       ├── prediction_valid_week25_template_T1_treatment.json
+│   │       ├── prediction_valid_week25_template_T2_medication.json
+│   │       ├── prediction_valid_week25_template_T3_association_neutral.json
+│   │       ├── ranking_metrics_test_week25_template_T0_canonical.json
+│   │       ├── ranking_metrics_test_week25_template_T1_treatment.json
+│   │       ├── ranking_metrics_test_week25_template_T2_medication.json
+│   │       ├── ranking_metrics_test_week25_template_T3_association_neutral.json
+│   │       ├── ranking_metrics_valid_week25_template_T0_canonical.json
+│   │       ├── ranking_metrics_valid_week25_template_T1_treatment.json
+│   │       ├── ranking_metrics_valid_week25_template_T2_medication.json
+│   │       ├── ranking_metrics_valid_week25_template_T3_association_neutral.json
+│   │       ├── template_sensitivity_e2e_summary.json
+│   │       ├── template_sensitivity_test.json
+│   │       ├── template_sensitivity_valid.json
+│   │       └── template_variants.json
 │   ├── week5
 │   │   └── backbone_llama32_3b_rgcn
 │   │       ├── checkpoint-1000
@@ -2883,22 +3050,33 @@
 │   │   │   └── day_closeout_week23_pharmkg.py
 │   │   └── __pycache__
 │   │       └── 10_build_e2e_soft_fuzzy_eval_folders.cpython-312.pyc
-│   └── week24
-│       ├── 01_audit_primekg_e2e_protocol.py
-│       ├── 02_collect_valid_decoding_sweep.py
-│       ├── 02_make_decoding_sweep_configs.py
-│       ├── 02_run_valid_decoding_sweep.sh
-│       ├── 03_collect_frozen_decode_metrics.py
-│       ├── 03_run_frozen_decode_test.sh
-│       ├── 04_run_model_compare_train_infer_all.sh
-│       ├── 05_collect_model_compare_metrics.py
-│       ├── 06b_collect_pharmkg_valid_decoding_sweep.py
-│       ├── 06b_make_pharmkg_decoding_sweep_configs.py
-│       ├── 06b_run_pharmkg_valid_decoding_sweep.sh
-│       ├── 06c_collect_pharmkg_frozen_model_compare.py
-│       ├── 06c_run_pharmkg_frozen_model_compare_all.sh
-│       ├── 06_diagnostics_and_paper_assets.py
-│       └── 07_write_week24_closeout.py
+│   ├── week24
+│   │   ├── 01_audit_primekg_e2e_protocol.py
+│   │   ├── 02_collect_valid_decoding_sweep.py
+│   │   ├── 02_make_decoding_sweep_configs.py
+│   │   ├── 02_run_valid_decoding_sweep.sh
+│   │   ├── 03_collect_frozen_decode_metrics.py
+│   │   ├── 03_run_frozen_decode_test.sh
+│   │   ├── 04_run_model_compare_train_infer_all.sh
+│   │   ├── 05_collect_model_compare_metrics.py
+│   │   ├── 06b_collect_pharmkg_valid_decoding_sweep.py
+│   │   ├── 06b_make_pharmkg_decoding_sweep_configs.py
+│   │   ├── 06b_run_pharmkg_valid_decoding_sweep.sh
+│   │   ├── 06c_collect_pharmkg_frozen_model_compare.py
+│   │   ├── 06c_run_pharmkg_frozen_model_compare_all.sh
+│   │   ├── 06_diagnostics_and_paper_assets.py
+│   │   └── 07_write_week24_closeout.py
+│   └── week25
+│       ├── 01_audit_sensitivity_protocol.py
+│       ├── 02_build_rule_sensitivity_variants.py
+│       ├── 02_collect_rule_sensitivity_valid.py
+│       ├── 03_collect_rule_sensitivity_test_e2e.py
+│       ├── 03_run_rule_sensitivity_e2e.sh
+│       ├── 04_build_template_variants.py
+│       ├── 04_collect_template_sensitivity.py
+│       ├── 04_run_template_sensitivity.sh
+│       ├── 05_build_noise_variants.py
+│       └── 05_collect_noise_robustness.py
 └── structure.txt
 
-403 directories, 2499 files
+432 directories, 2648 files
