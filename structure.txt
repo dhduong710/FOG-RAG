@@ -977,6 +977,7 @@
 │           ├── 06_collect_ontology_error_cases.py
 │           └── 07_write_week9_closeout.py
 ├── arguments.py
+├── arguments.py.bak_before_pharmkg_e2e
 ├── backups
 │   └── month1_freeze
 │       ├── day3_pilot_train.log
@@ -1301,15 +1302,67 @@
 │   │   │   ├── test_path_features.json
 │   │   │   ├── valid_fuzzy_retrieval_main.json
 │   │   │   └── valid_path_features.json
-│   │   └── 12_eval_rows
-│   │       ├── test_backbone_raw.json
-│   │       ├── test_fuzzy_retrieval_main.json
-│   │       ├── test_hard_support_raw.json
-│   │       ├── test_soft_support_raw.json
-│   │       ├── valid_backbone_raw.json
-│   │       ├── valid_fuzzy_retrieval_main.json
-│   │       ├── valid_hard_support_raw.json
-│   │       └── valid_soft_support_raw.json
+│   │   ├── 12_eval_rows
+│   │   │   ├── test_backbone_raw.json
+│   │   │   ├── test_fuzzy_retrieval_main.json
+│   │   │   ├── test_hard_support_raw.json
+│   │   │   ├── test_soft_support_raw.json
+│   │   │   ├── valid_backbone_raw.json
+│   │   │   ├── valid_fuzzy_retrieval_main.json
+│   │   │   ├── valid_hard_support_raw.json
+│   │   │   └── valid_soft_support_raw.json
+│   │   └── 13_e2e_infer_ready
+│   │       ├── backbone_raw
+│   │       │   ├── entity2id.json
+│   │       │   ├── entity2id.pkl
+│   │       │   ├── id2entity.json
+│   │       │   ├── id2entity.pkl
+│   │       │   ├── id2relation.json
+│   │       │   ├── id2relation.pkl
+│   │       │   ├── prep_manifest.json
+│   │       │   ├── prompt_lexicon.json
+│   │       │   ├── relation2id.json
+│   │       │   ├── relation2id.pkl
+│   │       │   ├── rules.json
+│   │       │   ├── support_schema.json
+│   │       │   ├── test.json
+│   │       │   ├── train.json
+│   │       │   └── valid.json
+│   │       ├── day1_prepare_manifest.json
+│   │       ├── day1_prepare_report.md
+│   │       ├── entity_embeddings_rgcn.pt
+│   │       ├── fuzzy_retrieval_main
+│   │       │   ├── entity2id.json
+│   │       │   ├── entity2id.pkl
+│   │       │   ├── id2entity.json
+│   │       │   ├── id2entity.pkl
+│   │       │   ├── id2relation.json
+│   │       │   ├── id2relation.pkl
+│   │       │   ├── prep_manifest.json
+│   │       │   ├── prompt_lexicon.json
+│   │       │   ├── relation2id.json
+│   │       │   ├── relation2id.pkl
+│   │       │   ├── rules.json
+│   │       │   ├── support_schema.json
+│   │       │   ├── test.json
+│   │       │   ├── train.json
+│   │       │   └── valid.json
+│   │       └── soft_support_raw
+│   │           ├── entity2id.json
+│   │           ├── entity2id.pkl
+│   │           ├── id2entity.json
+│   │           ├── id2entity.pkl
+│   │           ├── id2relation.json
+│   │           ├── id2relation.pkl
+│   │           ├── prep_manifest.json
+│   │           ├── prompt_lexicon.json
+│   │           ├── relation2id.json
+│   │           ├── relation2id.pkl
+│   │           ├── rules.json
+│   │           ├── support_schema.json
+│   │           ├── test.json
+│   │           ├── train.json
+│   │           └── valid.json
 │   └── toy_debug
 │       ├── entity_embeddings.pt
 │       ├── entity_id_map.json
@@ -1317,6 +1370,8 @@
 │       ├── train.json
 │       └── valid.json
 ├── infer.py
+├── infer.py.bak_before_mistral_meta_fix
+├── infer.py.bak_before_pharmkg_e2e
 ├── lexicon
 │   ├── fb15k237_head_prediction.json
 │   ├── fb15k237_tail_prediction.json
@@ -1324,6 +1379,7 @@
 │   └── wn18rr_tail_prediction.json
 ├── LICENSE
 ├── main.py
+├── main.py.bak_before_pharmkg_e2e
 ├── model
 │   ├── drkgc.py
 │   ├── gnn.py
@@ -1430,13 +1486,90 @@
 │   │   ├── day6_fograg_ready_package.md
 │   │   ├── day7_week22_closeout.md
 │   │   └── week22_closeout.md
-│   └── week23
-│       ├── day1_transfer_protocol_and_backbone.md
-│       ├── day2_support_features_and_hard_control.md
-│       ├── day3_soft_support_transfer.md
-│       ├── day4_fuzzy_retrieval_transfer.md
-│       ├── day5_final_eval_and_baseline_comparison.md
-│       └── day6_diagnostics_and_optional_sources.md
+│   ├── week23
+│   │   ├── day1_e2e_pharmkg_prepare.md
+│   │   ├── day1_transfer_protocol_and_backbone.md
+│   │   ├── day2_e2e_pharmkg_metrics.log
+│   │   ├── day2_e2e_pharmkg_reviewer_safe_metrics.md
+│   │   ├── day2_e2e_pharmkg_train_infer.log
+│   │   ├── day2_support_features_and_hard_control.md
+│   │   ├── day3_soft_support_transfer.md
+│   │   ├── day4_fuzzy_retrieval_transfer.md
+│   │   ├── day5_final_eval_and_baseline_comparison.md
+│   │   ├── day6_diagnostics_and_optional_sources.md
+│   │   ├── model_compare
+│   │   │   ├── day3_collect_metrics.log
+│   │   │   ├── day3_llama3_8b.log
+│   │   │   ├── day3_medllama3_8b.log
+│   │   │   ├── day3_mistral_7b.log
+│   │   │   ├── day3_mistral_7b_rerun_infer.log
+│   │   │   └── day3_model_compare_reviewer_safe.md
+│   │   ├── week23_pharmkg_closeout_build.log
+│   │   └── week23_pharmkg_closeout.md
+│   └── week24
+│       ├── day1_primekg_e2e_protocol_audit.log
+│       ├── day1_primekg_e2e_protocol_audit.md
+│       ├── day2_valid_decoding_sweep_collect.log
+│       ├── day2_valid_decoding_sweep_infer.log
+│       ├── day2_valid_decoding_sweep.md
+│       ├── day3_frozen_decode_test_collect.log
+│       ├── day3_frozen_decode_test_infer.log
+│       ├── day3_frozen_decode_test_rerun.md
+│       ├── day4_model_comparison_train_infer_all.log
+│       ├── day5_model_compare_eval_and_selection.log
+│       ├── day5_model_compare_eval_and_selection.md
+│       ├── day6b_pharmkg_valid_decoding_sweep_collect.log
+│       ├── day6b_pharmkg_valid_decoding_sweep_infer.log
+│       ├── day6b_pharmkg_valid_decoding_sweep.md
+│       ├── day6c_pharmkg_frozen_model_compare_collect.log
+│       ├── day6c_pharmkg_frozen_model_compare_infer.log
+│       ├── day6c_pharmkg_frozen_model_compare.md
+│       ├── day6_e2e_diagnostics_and_paper_assets.log
+│       ├── day6_e2e_diagnostics_and_paper_assets.md
+│       ├── day7_week24_closeout.log
+│       ├── model_compare
+│       │   ├── day4_llama3_2_3b_infer_test_backbone_raw.log
+│       │   ├── day4_llama3_2_3b_infer_test_retrieval_main.log
+│       │   ├── day4_llama3_2_3b_infer_test_soft_support_raw.log
+│       │   ├── day4_llama3_2_3b_infer_valid_backbone_raw.log
+│       │   ├── day4_llama3_2_3b_infer_valid_retrieval_main.log
+│       │   ├── day4_llama3_2_3b_infer_valid_soft_support_raw.log
+│       │   ├── day4_llama3_8b_infer_test_backbone_raw.log
+│       │   ├── day4_llama3_8b_infer_test_retrieval_main.log
+│       │   ├── day4_llama3_8b_infer_test_soft_support_raw.log
+│       │   ├── day4_llama3_8b_infer_valid_backbone_raw.log
+│       │   ├── day4_llama3_8b_infer_valid_retrieval_main.log
+│       │   ├── day4_llama3_8b_infer_valid_soft_support_raw.log
+│       │   ├── day4_llama3_8b_train.log
+│       │   ├── day4_medllama3_8b_infer_test_backbone_raw.log
+│       │   ├── day4_medllama3_8b_infer_test_retrieval_main.log
+│       │   ├── day4_medllama3_8b_infer_test_soft_support_raw.log
+│       │   ├── day4_medllama3_8b_infer_valid_backbone_raw.log
+│       │   ├── day4_medllama3_8b_infer_valid_retrieval_main.log
+│       │   ├── day4_medllama3_8b_infer_valid_soft_support_raw.log
+│       │   ├── day4_medllama3_8b_train.log
+│       │   └── day4_model_status.tsv
+│       ├── pharmkg_frozen_model_compare
+│       │   ├── day6c_llama3_2_3b_infer_test_backbone_raw.log
+│       │   ├── day6c_llama3_2_3b_infer_test_fuzzy_retrieval_main.log
+│       │   ├── day6c_llama3_2_3b_infer_test_soft_support_raw.log
+│       │   ├── day6c_llama3_2_3b_infer_valid_backbone_raw.log
+│       │   ├── day6c_llama3_2_3b_infer_valid_fuzzy_retrieval_main.log
+│       │   ├── day6c_llama3_2_3b_infer_valid_soft_support_raw.log
+│       │   ├── day6c_llama3_8b_infer_test_backbone_raw.log
+│       │   ├── day6c_llama3_8b_infer_test_fuzzy_retrieval_main.log
+│       │   ├── day6c_llama3_8b_infer_test_soft_support_raw.log
+│       │   ├── day6c_llama3_8b_infer_valid_backbone_raw.log
+│       │   ├── day6c_llama3_8b_infer_valid_fuzzy_retrieval_main.log
+│       │   ├── day6c_llama3_8b_infer_valid_soft_support_raw.log
+│       │   ├── day6c_medllama3_8b_infer_test_backbone_raw.log
+│       │   ├── day6c_medllama3_8b_infer_test_fuzzy_retrieval_main.log
+│       │   ├── day6c_medllama3_8b_infer_test_soft_support_raw.log
+│       │   ├── day6c_medllama3_8b_infer_valid_backbone_raw.log
+│       │   ├── day6c_medllama3_8b_infer_valid_fuzzy_retrieval_main.log
+│       │   ├── day6c_medllama3_8b_infer_valid_soft_support_raw.log
+│       │   └── day6c_model_status.tsv
+│       └── week24_closeout.md
 ├── results
 │   ├── reference_rows
 │   │   ├── backbone_raw_test
@@ -1606,6 +1739,42 @@
 │   │   ├── metrics_test_backbone_raw_e2e.txt
 │   │   ├── metrics_test_retrieval_main_e2e.txt
 │   │   ├── metrics_test_soft_support_raw_e2e.txt
+│   │   ├── metrics_test_w24frozen_backbone_raw.txt
+│   │   ├── metrics_test_w24frozen_retrieval_main.txt
+│   │   ├── metrics_test_w24frozen_soft_support_raw.txt
+│   │   ├── metrics_test_w24mc_llama3_2_3b_backbone_raw.txt
+│   │   ├── metrics_test_w24mc_llama3_2_3b_retrieval_main.txt
+│   │   ├── metrics_test_w24mc_llama3_2_3b_soft_support_raw.txt
+│   │   ├── metrics_valid_w24frozen_backbone_raw.txt
+│   │   ├── metrics_valid_w24frozen_retrieval_main.txt
+│   │   ├── metrics_valid_w24frozen_soft_support_raw.txt
+│   │   ├── metrics_valid_w24mc_llama3_2_3b_backbone_raw.txt
+│   │   ├── metrics_valid_w24mc_llama3_2_3b_retrieval_main.txt
+│   │   ├── metrics_valid_w24mc_llama3_2_3b_soft_support_raw.txt
+│   │   ├── metrics_valid_w24valid_cfg01_mnt16_rp100_ng0_backbone_raw.txt
+│   │   ├── metrics_valid_w24valid_cfg01_mnt16_rp100_ng0_retrieval_main.txt
+│   │   ├── metrics_valid_w24valid_cfg01_mnt16_rp100_ng0_soft_support_raw.txt
+│   │   ├── metrics_valid_w24valid_cfg02_mnt16_rp105_ng0_backbone_raw.txt
+│   │   ├── metrics_valid_w24valid_cfg02_mnt16_rp105_ng0_retrieval_main.txt
+│   │   ├── metrics_valid_w24valid_cfg02_mnt16_rp105_ng0_soft_support_raw.txt
+│   │   ├── metrics_valid_w24valid_cfg03_mnt16_rp110_ng0_backbone_raw.txt
+│   │   ├── metrics_valid_w24valid_cfg03_mnt16_rp110_ng0_retrieval_main.txt
+│   │   ├── metrics_valid_w24valid_cfg03_mnt16_rp110_ng0_soft_support_raw.txt
+│   │   ├── metrics_valid_w24valid_cfg04_mnt16_rp110_ng3_backbone_raw.txt
+│   │   ├── metrics_valid_w24valid_cfg04_mnt16_rp110_ng3_retrieval_main.txt
+│   │   ├── metrics_valid_w24valid_cfg04_mnt16_rp110_ng3_soft_support_raw.txt
+│   │   ├── metrics_valid_w24valid_cfg05_mnt24_rp100_ng0_backbone_raw.txt
+│   │   ├── metrics_valid_w24valid_cfg05_mnt24_rp100_ng0_retrieval_main.txt
+│   │   ├── metrics_valid_w24valid_cfg05_mnt24_rp100_ng0_soft_support_raw.txt
+│   │   ├── metrics_valid_w24valid_cfg06_mnt24_rp105_ng0_backbone_raw.txt
+│   │   ├── metrics_valid_w24valid_cfg06_mnt24_rp105_ng0_retrieval_main.txt
+│   │   ├── metrics_valid_w24valid_cfg06_mnt24_rp105_ng0_soft_support_raw.txt
+│   │   ├── metrics_valid_w24valid_cfg07_mnt24_rp110_ng0_backbone_raw.txt
+│   │   ├── metrics_valid_w24valid_cfg07_mnt24_rp110_ng0_retrieval_main.txt
+│   │   ├── metrics_valid_w24valid_cfg07_mnt24_rp110_ng0_soft_support_raw.txt
+│   │   ├── metrics_valid_w24valid_cfg08_mnt24_rp110_ng3_backbone_raw.txt
+│   │   ├── metrics_valid_w24valid_cfg08_mnt24_rp110_ng3_retrieval_main.txt
+│   │   ├── metrics_valid_w24valid_cfg08_mnt24_rp110_ng3_soft_support_raw.txt
 │   │   ├── paper_assets
 │   │   │   ├── table1_locked_test_main.csv
 │   │   │   ├── table1_locked_test_main.tex
@@ -1622,9 +1791,81 @@
 │   │   ├── prediction_test_backbone_raw_e2e.json
 │   │   ├── prediction_test_retrieval_main_e2e.json
 │   │   ├── prediction_test_soft_support_raw_e2e.json
+│   │   ├── prediction_test_w24frozen_backbone_raw.json
+│   │   ├── prediction_test_w24frozen_retrieval_main.json
+│   │   ├── prediction_test_w24frozen_soft_support_raw.json
+│   │   ├── prediction_test_w24mc_llama3_2_3b_backbone_raw.json
+│   │   ├── prediction_test_w24mc_llama3_2_3b_retrieval_main.json
+│   │   ├── prediction_test_w24mc_llama3_2_3b_soft_support_raw.json
+│   │   ├── prediction_valid_w24frozen_backbone_raw.json
+│   │   ├── prediction_valid_w24frozen_retrieval_main.json
+│   │   ├── prediction_valid_w24frozen_soft_support_raw.json
+│   │   ├── prediction_valid_w24mc_llama3_2_3b_backbone_raw.json
+│   │   ├── prediction_valid_w24mc_llama3_2_3b_retrieval_main.json
+│   │   ├── prediction_valid_w24mc_llama3_2_3b_soft_support_raw.json
+│   │   ├── prediction_valid_w24valid_cfg01_mnt16_rp100_ng0_backbone_raw.json
+│   │   ├── prediction_valid_w24valid_cfg01_mnt16_rp100_ng0_retrieval_main.json
+│   │   ├── prediction_valid_w24valid_cfg01_mnt16_rp100_ng0_soft_support_raw.json
+│   │   ├── prediction_valid_w24valid_cfg02_mnt16_rp105_ng0_backbone_raw.json
+│   │   ├── prediction_valid_w24valid_cfg02_mnt16_rp105_ng0_retrieval_main.json
+│   │   ├── prediction_valid_w24valid_cfg02_mnt16_rp105_ng0_soft_support_raw.json
+│   │   ├── prediction_valid_w24valid_cfg03_mnt16_rp110_ng0_backbone_raw.json
+│   │   ├── prediction_valid_w24valid_cfg03_mnt16_rp110_ng0_retrieval_main.json
+│   │   ├── prediction_valid_w24valid_cfg03_mnt16_rp110_ng0_soft_support_raw.json
+│   │   ├── prediction_valid_w24valid_cfg04_mnt16_rp110_ng3_backbone_raw.json
+│   │   ├── prediction_valid_w24valid_cfg04_mnt16_rp110_ng3_retrieval_main.json
+│   │   ├── prediction_valid_w24valid_cfg04_mnt16_rp110_ng3_soft_support_raw.json
+│   │   ├── prediction_valid_w24valid_cfg05_mnt24_rp100_ng0_backbone_raw.json
+│   │   ├── prediction_valid_w24valid_cfg05_mnt24_rp100_ng0_retrieval_main.json
+│   │   ├── prediction_valid_w24valid_cfg05_mnt24_rp100_ng0_soft_support_raw.json
+│   │   ├── prediction_valid_w24valid_cfg06_mnt24_rp105_ng0_backbone_raw.json
+│   │   ├── prediction_valid_w24valid_cfg06_mnt24_rp105_ng0_retrieval_main.json
+│   │   ├── prediction_valid_w24valid_cfg06_mnt24_rp105_ng0_soft_support_raw.json
+│   │   ├── prediction_valid_w24valid_cfg07_mnt24_rp110_ng0_backbone_raw.json
+│   │   ├── prediction_valid_w24valid_cfg07_mnt24_rp110_ng0_retrieval_main.json
+│   │   ├── prediction_valid_w24valid_cfg07_mnt24_rp110_ng0_soft_support_raw.json
+│   │   ├── prediction_valid_w24valid_cfg08_mnt24_rp110_ng3_backbone_raw.json
+│   │   ├── prediction_valid_w24valid_cfg08_mnt24_rp110_ng3_retrieval_main.json
+│   │   ├── prediction_valid_w24valid_cfg08_mnt24_rp110_ng3_soft_support_raw.json
 │   │   ├── ranking_metrics_test_backbone_raw_e2e.json
 │   │   ├── ranking_metrics_test_retrieval_main_e2e.json
 │   │   ├── ranking_metrics_test_soft_support_raw_e2e.json
+│   │   ├── ranking_metrics_test_w24frozen_backbone_raw.json
+│   │   ├── ranking_metrics_test_w24frozen_retrieval_main.json
+│   │   ├── ranking_metrics_test_w24frozen_soft_support_raw.json
+│   │   ├── ranking_metrics_test_w24mc_llama3_2_3b_backbone_raw.json
+│   │   ├── ranking_metrics_test_w24mc_llama3_2_3b_retrieval_main.json
+│   │   ├── ranking_metrics_test_w24mc_llama3_2_3b_soft_support_raw.json
+│   │   ├── ranking_metrics_valid_w24frozen_backbone_raw.json
+│   │   ├── ranking_metrics_valid_w24frozen_retrieval_main.json
+│   │   ├── ranking_metrics_valid_w24frozen_soft_support_raw.json
+│   │   ├── ranking_metrics_valid_w24mc_llama3_2_3b_backbone_raw.json
+│   │   ├── ranking_metrics_valid_w24mc_llama3_2_3b_retrieval_main.json
+│   │   ├── ranking_metrics_valid_w24mc_llama3_2_3b_soft_support_raw.json
+│   │   ├── ranking_metrics_valid_w24valid_cfg01_mnt16_rp100_ng0_backbone_raw.json
+│   │   ├── ranking_metrics_valid_w24valid_cfg01_mnt16_rp100_ng0_retrieval_main.json
+│   │   ├── ranking_metrics_valid_w24valid_cfg01_mnt16_rp100_ng0_soft_support_raw.json
+│   │   ├── ranking_metrics_valid_w24valid_cfg02_mnt16_rp105_ng0_backbone_raw.json
+│   │   ├── ranking_metrics_valid_w24valid_cfg02_mnt16_rp105_ng0_retrieval_main.json
+│   │   ├── ranking_metrics_valid_w24valid_cfg02_mnt16_rp105_ng0_soft_support_raw.json
+│   │   ├── ranking_metrics_valid_w24valid_cfg03_mnt16_rp110_ng0_backbone_raw.json
+│   │   ├── ranking_metrics_valid_w24valid_cfg03_mnt16_rp110_ng0_retrieval_main.json
+│   │   ├── ranking_metrics_valid_w24valid_cfg03_mnt16_rp110_ng0_soft_support_raw.json
+│   │   ├── ranking_metrics_valid_w24valid_cfg04_mnt16_rp110_ng3_backbone_raw.json
+│   │   ├── ranking_metrics_valid_w24valid_cfg04_mnt16_rp110_ng3_retrieval_main.json
+│   │   ├── ranking_metrics_valid_w24valid_cfg04_mnt16_rp110_ng3_soft_support_raw.json
+│   │   ├── ranking_metrics_valid_w24valid_cfg05_mnt24_rp100_ng0_backbone_raw.json
+│   │   ├── ranking_metrics_valid_w24valid_cfg05_mnt24_rp100_ng0_retrieval_main.json
+│   │   ├── ranking_metrics_valid_w24valid_cfg05_mnt24_rp100_ng0_soft_support_raw.json
+│   │   ├── ranking_metrics_valid_w24valid_cfg06_mnt24_rp105_ng0_backbone_raw.json
+│   │   ├── ranking_metrics_valid_w24valid_cfg06_mnt24_rp105_ng0_retrieval_main.json
+│   │   ├── ranking_metrics_valid_w24valid_cfg06_mnt24_rp105_ng0_soft_support_raw.json
+│   │   ├── ranking_metrics_valid_w24valid_cfg07_mnt24_rp110_ng0_backbone_raw.json
+│   │   ├── ranking_metrics_valid_w24valid_cfg07_mnt24_rp110_ng0_retrieval_main.json
+│   │   ├── ranking_metrics_valid_w24valid_cfg07_mnt24_rp110_ng0_soft_support_raw.json
+│   │   ├── ranking_metrics_valid_w24valid_cfg08_mnt24_rp110_ng3_backbone_raw.json
+│   │   ├── ranking_metrics_valid_w24valid_cfg08_mnt24_rp110_ng3_retrieval_main.json
+│   │   ├── ranking_metrics_valid_w24valid_cfg08_mnt24_rp110_ng3_soft_support_raw.json
 │   │   └── week20_go_decision.json
 │   ├── week21
 │   │   ├── baseline_interpretation_assets.json
@@ -1737,12 +1978,732 @@
 │   │   │   └── checkpoint-final
 │   │   │       ├── adapter_model.bin
 │   │   │       └── graph_model.bin
+│   │   ├── e2e_pharmkg
+│   │   │   ├── main_checkpoint
+│   │   │   │   ├── all_results.json
+│   │   │   │   ├── checkpoint-final
+│   │   │   │   │   ├── adapter_config.json
+│   │   │   │   │   ├── adapter_model.bin
+│   │   │   │   │   ├── graph_model.bin
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── metrics_test_backbone_raw.txt
+│   │   │   │   ├── metrics_test_fuzzy_retrieval_main.txt
+│   │   │   │   ├── metrics_test_soft_support_raw.txt
+│   │   │   │   ├── metrics_test_w24pharmfrozen_llama3_2_3b_backbone_raw.txt
+│   │   │   │   ├── metrics_test_w24pharmfrozen_llama3_2_3b_fuzzy_retrieval_main.txt
+│   │   │   │   ├── metrics_test_w24pharmfrozen_llama3_2_3b_soft_support_raw.txt
+│   │   │   │   ├── metrics_valid_backbone_raw.txt
+│   │   │   │   ├── metrics_valid_fuzzy_retrieval_main.txt
+│   │   │   │   ├── metrics_valid_soft_support_raw.txt
+│   │   │   │   ├── metrics_valid_w24pharmfrozen_llama3_2_3b_backbone_raw.txt
+│   │   │   │   ├── metrics_valid_w24pharmfrozen_llama3_2_3b_fuzzy_retrieval_main.txt
+│   │   │   │   ├── metrics_valid_w24pharmfrozen_llama3_2_3b_soft_support_raw.txt
+│   │   │   │   ├── metrics_valid_w24pharmvalid_cfg01_mnt16_rp100_ng0_backbone_raw.txt
+│   │   │   │   ├── metrics_valid_w24pharmvalid_cfg01_mnt16_rp100_ng0_fuzzy_retrieval_main.txt
+│   │   │   │   ├── metrics_valid_w24pharmvalid_cfg01_mnt16_rp100_ng0_soft_support_raw.txt
+│   │   │   │   ├── metrics_valid_w24pharmvalid_cfg02_mnt16_rp105_ng0_backbone_raw.txt
+│   │   │   │   ├── metrics_valid_w24pharmvalid_cfg02_mnt16_rp105_ng0_fuzzy_retrieval_main.txt
+│   │   │   │   ├── metrics_valid_w24pharmvalid_cfg02_mnt16_rp105_ng0_soft_support_raw.txt
+│   │   │   │   ├── metrics_valid_w24pharmvalid_cfg03_mnt16_rp110_ng0_backbone_raw.txt
+│   │   │   │   ├── metrics_valid_w24pharmvalid_cfg03_mnt16_rp110_ng0_fuzzy_retrieval_main.txt
+│   │   │   │   ├── metrics_valid_w24pharmvalid_cfg03_mnt16_rp110_ng0_soft_support_raw.txt
+│   │   │   │   ├── metrics_valid_w24pharmvalid_cfg04_mnt16_rp110_ng3_backbone_raw.txt
+│   │   │   │   ├── metrics_valid_w24pharmvalid_cfg04_mnt16_rp110_ng3_fuzzy_retrieval_main.txt
+│   │   │   │   ├── metrics_valid_w24pharmvalid_cfg04_mnt16_rp110_ng3_soft_support_raw.txt
+│   │   │   │   ├── metrics_valid_w24pharmvalid_cfg05_mnt24_rp100_ng0_backbone_raw.txt
+│   │   │   │   ├── metrics_valid_w24pharmvalid_cfg05_mnt24_rp100_ng0_fuzzy_retrieval_main.txt
+│   │   │   │   ├── metrics_valid_w24pharmvalid_cfg05_mnt24_rp100_ng0_soft_support_raw.txt
+│   │   │   │   ├── metrics_valid_w24pharmvalid_cfg06_mnt24_rp105_ng0_backbone_raw.txt
+│   │   │   │   ├── metrics_valid_w24pharmvalid_cfg06_mnt24_rp105_ng0_fuzzy_retrieval_main.txt
+│   │   │   │   ├── metrics_valid_w24pharmvalid_cfg06_mnt24_rp105_ng0_soft_support_raw.txt
+│   │   │   │   ├── metrics_valid_w24pharmvalid_cfg07_mnt24_rp110_ng0_backbone_raw.txt
+│   │   │   │   ├── metrics_valid_w24pharmvalid_cfg07_mnt24_rp110_ng0_fuzzy_retrieval_main.txt
+│   │   │   │   ├── metrics_valid_w24pharmvalid_cfg07_mnt24_rp110_ng0_soft_support_raw.txt
+│   │   │   │   ├── metrics_valid_w24pharmvalid_cfg08_mnt24_rp110_ng3_backbone_raw.txt
+│   │   │   │   ├── metrics_valid_w24pharmvalid_cfg08_mnt24_rp110_ng3_fuzzy_retrieval_main.txt
+│   │   │   │   ├── metrics_valid_w24pharmvalid_cfg08_mnt24_rp110_ng3_soft_support_raw.txt
+│   │   │   │   ├── prediction_test_backbone_raw.json
+│   │   │   │   ├── prediction_test_fuzzy_retrieval_main.json
+│   │   │   │   ├── prediction_test_soft_support_raw.json
+│   │   │   │   ├── prediction_test_w24pharmfrozen_llama3_2_3b_backbone_raw.json
+│   │   │   │   ├── prediction_test_w24pharmfrozen_llama3_2_3b_fuzzy_retrieval_main.json
+│   │   │   │   ├── prediction_test_w24pharmfrozen_llama3_2_3b_soft_support_raw.json
+│   │   │   │   ├── prediction_valid_backbone_raw.json
+│   │   │   │   ├── prediction_valid_fuzzy_retrieval_main.json
+│   │   │   │   ├── prediction_valid_soft_support_raw.json
+│   │   │   │   ├── prediction_valid_w24pharmfrozen_llama3_2_3b_backbone_raw.json
+│   │   │   │   ├── prediction_valid_w24pharmfrozen_llama3_2_3b_fuzzy_retrieval_main.json
+│   │   │   │   ├── prediction_valid_w24pharmfrozen_llama3_2_3b_soft_support_raw.json
+│   │   │   │   ├── prediction_valid_w24pharmvalid_cfg01_mnt16_rp100_ng0_backbone_raw.json
+│   │   │   │   ├── prediction_valid_w24pharmvalid_cfg01_mnt16_rp100_ng0_fuzzy_retrieval_main.json
+│   │   │   │   ├── prediction_valid_w24pharmvalid_cfg01_mnt16_rp100_ng0_soft_support_raw.json
+│   │   │   │   ├── prediction_valid_w24pharmvalid_cfg02_mnt16_rp105_ng0_backbone_raw.json
+│   │   │   │   ├── prediction_valid_w24pharmvalid_cfg02_mnt16_rp105_ng0_fuzzy_retrieval_main.json
+│   │   │   │   ├── prediction_valid_w24pharmvalid_cfg02_mnt16_rp105_ng0_soft_support_raw.json
+│   │   │   │   ├── prediction_valid_w24pharmvalid_cfg03_mnt16_rp110_ng0_backbone_raw.json
+│   │   │   │   ├── prediction_valid_w24pharmvalid_cfg03_mnt16_rp110_ng0_fuzzy_retrieval_main.json
+│   │   │   │   ├── prediction_valid_w24pharmvalid_cfg03_mnt16_rp110_ng0_soft_support_raw.json
+│   │   │   │   ├── prediction_valid_w24pharmvalid_cfg04_mnt16_rp110_ng3_backbone_raw.json
+│   │   │   │   ├── prediction_valid_w24pharmvalid_cfg04_mnt16_rp110_ng3_fuzzy_retrieval_main.json
+│   │   │   │   ├── prediction_valid_w24pharmvalid_cfg04_mnt16_rp110_ng3_soft_support_raw.json
+│   │   │   │   ├── prediction_valid_w24pharmvalid_cfg05_mnt24_rp100_ng0_backbone_raw.json
+│   │   │   │   ├── prediction_valid_w24pharmvalid_cfg05_mnt24_rp100_ng0_fuzzy_retrieval_main.json
+│   │   │   │   ├── prediction_valid_w24pharmvalid_cfg05_mnt24_rp100_ng0_soft_support_raw.json
+│   │   │   │   ├── prediction_valid_w24pharmvalid_cfg06_mnt24_rp105_ng0_backbone_raw.json
+│   │   │   │   ├── prediction_valid_w24pharmvalid_cfg06_mnt24_rp105_ng0_fuzzy_retrieval_main.json
+│   │   │   │   ├── prediction_valid_w24pharmvalid_cfg06_mnt24_rp105_ng0_soft_support_raw.json
+│   │   │   │   ├── prediction_valid_w24pharmvalid_cfg07_mnt24_rp110_ng0_backbone_raw.json
+│   │   │   │   ├── prediction_valid_w24pharmvalid_cfg07_mnt24_rp110_ng0_fuzzy_retrieval_main.json
+│   │   │   │   ├── prediction_valid_w24pharmvalid_cfg07_mnt24_rp110_ng0_soft_support_raw.json
+│   │   │   │   ├── prediction_valid_w24pharmvalid_cfg08_mnt24_rp110_ng3_backbone_raw.json
+│   │   │   │   ├── prediction_valid_w24pharmvalid_cfg08_mnt24_rp110_ng3_fuzzy_retrieval_main.json
+│   │   │   │   ├── prediction_valid_w24pharmvalid_cfg08_mnt24_rp110_ng3_soft_support_raw.json
+│   │   │   │   ├── ranking_metrics_test_backbone_raw.json
+│   │   │   │   ├── ranking_metrics_test_fuzzy_retrieval_main.json
+│   │   │   │   ├── ranking_metrics_test_soft_support_raw.json
+│   │   │   │   ├── ranking_metrics_test_w24pharmfrozen_llama3_2_3b_backbone_raw.json
+│   │   │   │   ├── ranking_metrics_test_w24pharmfrozen_llama3_2_3b_fuzzy_retrieval_main.json
+│   │   │   │   ├── ranking_metrics_test_w24pharmfrozen_llama3_2_3b_soft_support_raw.json
+│   │   │   │   ├── ranking_metrics_valid_backbone_raw.json
+│   │   │   │   ├── ranking_metrics_valid_fuzzy_retrieval_main.json
+│   │   │   │   ├── ranking_metrics_valid_soft_support_raw.json
+│   │   │   │   ├── ranking_metrics_valid_w24pharmfrozen_llama3_2_3b_backbone_raw.json
+│   │   │   │   ├── ranking_metrics_valid_w24pharmfrozen_llama3_2_3b_fuzzy_retrieval_main.json
+│   │   │   │   ├── ranking_metrics_valid_w24pharmfrozen_llama3_2_3b_soft_support_raw.json
+│   │   │   │   ├── ranking_metrics_valid_w24pharmvalid_cfg01_mnt16_rp100_ng0_backbone_raw.json
+│   │   │   │   ├── ranking_metrics_valid_w24pharmvalid_cfg01_mnt16_rp100_ng0_fuzzy_retrieval_main.json
+│   │   │   │   ├── ranking_metrics_valid_w24pharmvalid_cfg01_mnt16_rp100_ng0_soft_support_raw.json
+│   │   │   │   ├── ranking_metrics_valid_w24pharmvalid_cfg02_mnt16_rp105_ng0_backbone_raw.json
+│   │   │   │   ├── ranking_metrics_valid_w24pharmvalid_cfg02_mnt16_rp105_ng0_fuzzy_retrieval_main.json
+│   │   │   │   ├── ranking_metrics_valid_w24pharmvalid_cfg02_mnt16_rp105_ng0_soft_support_raw.json
+│   │   │   │   ├── ranking_metrics_valid_w24pharmvalid_cfg03_mnt16_rp110_ng0_backbone_raw.json
+│   │   │   │   ├── ranking_metrics_valid_w24pharmvalid_cfg03_mnt16_rp110_ng0_fuzzy_retrieval_main.json
+│   │   │   │   ├── ranking_metrics_valid_w24pharmvalid_cfg03_mnt16_rp110_ng0_soft_support_raw.json
+│   │   │   │   ├── ranking_metrics_valid_w24pharmvalid_cfg04_mnt16_rp110_ng3_backbone_raw.json
+│   │   │   │   ├── ranking_metrics_valid_w24pharmvalid_cfg04_mnt16_rp110_ng3_fuzzy_retrieval_main.json
+│   │   │   │   ├── ranking_metrics_valid_w24pharmvalid_cfg04_mnt16_rp110_ng3_soft_support_raw.json
+│   │   │   │   ├── ranking_metrics_valid_w24pharmvalid_cfg05_mnt24_rp100_ng0_backbone_raw.json
+│   │   │   │   ├── ranking_metrics_valid_w24pharmvalid_cfg05_mnt24_rp100_ng0_fuzzy_retrieval_main.json
+│   │   │   │   ├── ranking_metrics_valid_w24pharmvalid_cfg05_mnt24_rp100_ng0_soft_support_raw.json
+│   │   │   │   ├── ranking_metrics_valid_w24pharmvalid_cfg06_mnt24_rp105_ng0_backbone_raw.json
+│   │   │   │   ├── ranking_metrics_valid_w24pharmvalid_cfg06_mnt24_rp105_ng0_fuzzy_retrieval_main.json
+│   │   │   │   ├── ranking_metrics_valid_w24pharmvalid_cfg06_mnt24_rp105_ng0_soft_support_raw.json
+│   │   │   │   ├── ranking_metrics_valid_w24pharmvalid_cfg07_mnt24_rp110_ng0_backbone_raw.json
+│   │   │   │   ├── ranking_metrics_valid_w24pharmvalid_cfg07_mnt24_rp110_ng0_fuzzy_retrieval_main.json
+│   │   │   │   ├── ranking_metrics_valid_w24pharmvalid_cfg07_mnt24_rp110_ng0_soft_support_raw.json
+│   │   │   │   ├── ranking_metrics_valid_w24pharmvalid_cfg08_mnt24_rp110_ng3_backbone_raw.json
+│   │   │   │   ├── ranking_metrics_valid_w24pharmvalid_cfg08_mnt24_rp110_ng3_fuzzy_retrieval_main.json
+│   │   │   │   ├── ranking_metrics_valid_w24pharmvalid_cfg08_mnt24_rp110_ng3_soft_support_raw.json
+│   │   │   │   ├── trainer_state.json
+│   │   │   │   └── train_results.json
+│   │   │   └── reviewer_safe
+│   │   │       ├── e2e_pharmkg_reviewer_safe_summary.json
+│   │   │       ├── reviewer_safe_metrics_test_backbone_raw.json
+│   │   │       ├── reviewer_safe_metrics_test_fuzzy_retrieval_main.json
+│   │   │       ├── reviewer_safe_metrics_test_soft_support_raw.json
+│   │   │       ├── reviewer_safe_metrics_valid_backbone_raw.json
+│   │   │       ├── reviewer_safe_metrics_valid_fuzzy_retrieval_main.json
+│   │   │       ├── reviewer_safe_metrics_valid_soft_support_raw.json
+│   │   │       ├── reviewer_safe_predictions_test_backbone_raw.json
+│   │   │       ├── reviewer_safe_predictions_test_fuzzy_retrieval_main.json
+│   │   │       ├── reviewer_safe_predictions_test_soft_support_raw.json
+│   │   │       ├── reviewer_safe_predictions_valid_backbone_raw.json
+│   │   │       ├── reviewer_safe_predictions_valid_fuzzy_retrieval_main.json
+│   │   │       └── reviewer_safe_predictions_valid_soft_support_raw.json
+│   │   ├── e2e_pharmkg_model_compare
+│   │   │   ├── llama3_8b
+│   │   │   │   └── main_checkpoint
+│   │   │   │       ├── all_results.json
+│   │   │   │       ├── checkpoint-final
+│   │   │   │       │   ├── adapter_config.json
+│   │   │   │       │   ├── adapter_model.bin
+│   │   │   │       │   ├── graph_model.bin
+│   │   │   │       │   └── README.md
+│   │   │   │       ├── metrics_test_backbone_raw.txt
+│   │   │   │       ├── metrics_test_fuzzy_retrieval_main.txt
+│   │   │   │       ├── metrics_test_soft_support_raw.txt
+│   │   │   │       ├── metrics_test_w24pharmfrozen_llama3_8b_backbone_raw.txt
+│   │   │   │       ├── metrics_test_w24pharmfrozen_llama3_8b_fuzzy_retrieval_main.txt
+│   │   │   │       ├── metrics_test_w24pharmfrozen_llama3_8b_soft_support_raw.txt
+│   │   │   │       ├── metrics_valid_backbone_raw.txt
+│   │   │   │       ├── metrics_valid_fuzzy_retrieval_main.txt
+│   │   │   │       ├── metrics_valid_soft_support_raw.txt
+│   │   │   │       ├── metrics_valid_w24pharmfrozen_llama3_8b_backbone_raw.txt
+│   │   │   │       ├── metrics_valid_w24pharmfrozen_llama3_8b_fuzzy_retrieval_main.txt
+│   │   │   │       ├── metrics_valid_w24pharmfrozen_llama3_8b_soft_support_raw.txt
+│   │   │   │       ├── prediction_test_backbone_raw.json
+│   │   │   │       ├── prediction_test_fuzzy_retrieval_main.json
+│   │   │   │       ├── prediction_test_soft_support_raw.json
+│   │   │   │       ├── prediction_test_w24pharmfrozen_llama3_8b_backbone_raw.json
+│   │   │   │       ├── prediction_test_w24pharmfrozen_llama3_8b_fuzzy_retrieval_main.json
+│   │   │   │       ├── prediction_test_w24pharmfrozen_llama3_8b_soft_support_raw.json
+│   │   │   │       ├── prediction_valid_backbone_raw.json
+│   │   │   │       ├── prediction_valid_fuzzy_retrieval_main.json
+│   │   │   │       ├── prediction_valid_soft_support_raw.json
+│   │   │   │       ├── prediction_valid_w24pharmfrozen_llama3_8b_backbone_raw.json
+│   │   │   │       ├── prediction_valid_w24pharmfrozen_llama3_8b_fuzzy_retrieval_main.json
+│   │   │   │       ├── prediction_valid_w24pharmfrozen_llama3_8b_soft_support_raw.json
+│   │   │   │       ├── ranking_metrics_test_backbone_raw.json
+│   │   │   │       ├── ranking_metrics_test_fuzzy_retrieval_main.json
+│   │   │   │       ├── ranking_metrics_test_soft_support_raw.json
+│   │   │   │       ├── ranking_metrics_test_w24pharmfrozen_llama3_8b_backbone_raw.json
+│   │   │   │       ├── ranking_metrics_test_w24pharmfrozen_llama3_8b_fuzzy_retrieval_main.json
+│   │   │   │       ├── ranking_metrics_test_w24pharmfrozen_llama3_8b_soft_support_raw.json
+│   │   │   │       ├── ranking_metrics_valid_backbone_raw.json
+│   │   │   │       ├── ranking_metrics_valid_fuzzy_retrieval_main.json
+│   │   │   │       ├── ranking_metrics_valid_soft_support_raw.json
+│   │   │   │       ├── ranking_metrics_valid_w24pharmfrozen_llama3_8b_backbone_raw.json
+│   │   │   │       ├── ranking_metrics_valid_w24pharmfrozen_llama3_8b_fuzzy_retrieval_main.json
+│   │   │   │       ├── ranking_metrics_valid_w24pharmfrozen_llama3_8b_soft_support_raw.json
+│   │   │   │       ├── trainer_state.json
+│   │   │   │       └── train_results.json
+│   │   │   ├── medllama3_8b
+│   │   │   │   └── main_checkpoint
+│   │   │   │       ├── all_results.json
+│   │   │   │       ├── checkpoint-final
+│   │   │   │       │   ├── adapter_config.json
+│   │   │   │       │   ├── adapter_model.bin
+│   │   │   │       │   ├── graph_model.bin
+│   │   │   │       │   └── README.md
+│   │   │   │       ├── metrics_test_backbone_raw.txt
+│   │   │   │       ├── metrics_test_fuzzy_retrieval_main.txt
+│   │   │   │       ├── metrics_test_soft_support_raw.txt
+│   │   │   │       ├── metrics_test_w24pharmfrozen_medllama3_8b_backbone_raw.txt
+│   │   │   │       ├── metrics_test_w24pharmfrozen_medllama3_8b_fuzzy_retrieval_main.txt
+│   │   │   │       ├── metrics_test_w24pharmfrozen_medllama3_8b_soft_support_raw.txt
+│   │   │   │       ├── metrics_valid_backbone_raw.txt
+│   │   │   │       ├── metrics_valid_fuzzy_retrieval_main.txt
+│   │   │   │       ├── metrics_valid_soft_support_raw.txt
+│   │   │   │       ├── metrics_valid_w24pharmfrozen_medllama3_8b_backbone_raw.txt
+│   │   │   │       ├── metrics_valid_w24pharmfrozen_medllama3_8b_fuzzy_retrieval_main.txt
+│   │   │   │       ├── metrics_valid_w24pharmfrozen_medllama3_8b_soft_support_raw.txt
+│   │   │   │       ├── prediction_test_backbone_raw.json
+│   │   │   │       ├── prediction_test_fuzzy_retrieval_main.json
+│   │   │   │       ├── prediction_test_soft_support_raw.json
+│   │   │   │       ├── prediction_test_w24pharmfrozen_medllama3_8b_backbone_raw.json
+│   │   │   │       ├── prediction_test_w24pharmfrozen_medllama3_8b_fuzzy_retrieval_main.json
+│   │   │   │       ├── prediction_test_w24pharmfrozen_medllama3_8b_soft_support_raw.json
+│   │   │   │       ├── prediction_valid_backbone_raw.json
+│   │   │   │       ├── prediction_valid_fuzzy_retrieval_main.json
+│   │   │   │       ├── prediction_valid_soft_support_raw.json
+│   │   │   │       ├── prediction_valid_w24pharmfrozen_medllama3_8b_backbone_raw.json
+│   │   │   │       ├── prediction_valid_w24pharmfrozen_medllama3_8b_fuzzy_retrieval_main.json
+│   │   │   │       ├── prediction_valid_w24pharmfrozen_medllama3_8b_soft_support_raw.json
+│   │   │   │       ├── ranking_metrics_test_backbone_raw.json
+│   │   │   │       ├── ranking_metrics_test_fuzzy_retrieval_main.json
+│   │   │   │       ├── ranking_metrics_test_soft_support_raw.json
+│   │   │   │       ├── ranking_metrics_test_w24pharmfrozen_medllama3_8b_backbone_raw.json
+│   │   │   │       ├── ranking_metrics_test_w24pharmfrozen_medllama3_8b_fuzzy_retrieval_main.json
+│   │   │   │       ├── ranking_metrics_test_w24pharmfrozen_medllama3_8b_soft_support_raw.json
+│   │   │   │       ├── ranking_metrics_valid_backbone_raw.json
+│   │   │   │       ├── ranking_metrics_valid_fuzzy_retrieval_main.json
+│   │   │   │       ├── ranking_metrics_valid_soft_support_raw.json
+│   │   │   │       ├── ranking_metrics_valid_w24pharmfrozen_medllama3_8b_backbone_raw.json
+│   │   │   │       ├── ranking_metrics_valid_w24pharmfrozen_medllama3_8b_fuzzy_retrieval_main.json
+│   │   │   │       ├── ranking_metrics_valid_w24pharmfrozen_medllama3_8b_soft_support_raw.json
+│   │   │   │       ├── trainer_state.json
+│   │   │   │       └── train_results.json
+│   │   │   ├── mistral_7b
+│   │   │   │   └── main_checkpoint
+│   │   │   │       ├── all_results.json
+│   │   │   │       ├── checkpoint-final
+│   │   │   │       │   ├── adapter_config.json
+│   │   │   │       │   ├── adapter_model.bin
+│   │   │   │       │   ├── graph_model.bin
+│   │   │   │       │   └── README.md
+│   │   │   │       ├── metrics_test_backbone_raw.txt
+│   │   │   │       ├── metrics_test_fuzzy_retrieval_main.txt
+│   │   │   │       ├── metrics_test_soft_support_raw.txt
+│   │   │   │       ├── metrics_valid_backbone_raw.txt
+│   │   │   │       ├── metrics_valid_fuzzy_retrieval_main.txt
+│   │   │   │       ├── metrics_valid_soft_support_raw.txt
+│   │   │   │       ├── prediction_test_backbone_raw.json
+│   │   │   │       ├── prediction_test_fuzzy_retrieval_main.json
+│   │   │   │       ├── prediction_test_soft_support_raw.json
+│   │   │   │       ├── prediction_valid_backbone_raw.json
+│   │   │   │       ├── prediction_valid_fuzzy_retrieval_main.json
+│   │   │   │       ├── prediction_valid_soft_support_raw.json
+│   │   │   │       ├── ranking_metrics_test_backbone_raw.json
+│   │   │   │       ├── ranking_metrics_test_fuzzy_retrieval_main.json
+│   │   │   │       ├── ranking_metrics_test_soft_support_raw.json
+│   │   │   │       ├── ranking_metrics_valid_backbone_raw.json
+│   │   │   │       ├── ranking_metrics_valid_fuzzy_retrieval_main.json
+│   │   │   │       ├── ranking_metrics_valid_soft_support_raw.json
+│   │   │   │       ├── trainer_state.json
+│   │   │   │       └── train_results.json
+│   │   │   └── reviewer_safe
+│   │   │       └── model_compare_reviewer_safe_summary.json
 │   │   ├── fuzzy_retrieval_eval_test.json
 │   │   ├── fuzzy_retrieval_eval_valid.json
 │   │   ├── hard_support_raw_eval_test.json
 │   │   ├── hard_support_raw_eval_valid.json
 │   │   ├── soft_support_raw_eval_test.json
-│   │   └── soft_support_raw_eval_valid.json
+│   │   ├── soft_support_raw_eval_valid.json
+│   │   └── week23_pharmkg_closeout_summary.json
+│   ├── week24
+│   │   ├── decoding_sweep_valid
+│   │   │   ├── config_lines.tsv
+│   │   │   ├── configs.json
+│   │   │   ├── decoding_sweep_best_config.json
+│   │   │   ├── decoding_sweep_predictions
+│   │   │   │   ├── cfg01_mnt16_rp100_ng0
+│   │   │   │   │   ├── prediction_valid_backbone_raw.json
+│   │   │   │   │   ├── prediction_valid_retrieval_main.json
+│   │   │   │   │   ├── prediction_valid_soft_support_raw.json
+│   │   │   │   │   ├── raw_metrics_valid_backbone_raw.txt
+│   │   │   │   │   ├── raw_metrics_valid_retrieval_main.txt
+│   │   │   │   │   ├── raw_metrics_valid_soft_support_raw.txt
+│   │   │   │   │   ├── raw_ranking_metrics_valid_backbone_raw.json
+│   │   │   │   │   ├── raw_ranking_metrics_valid_retrieval_main.json
+│   │   │   │   │   └── raw_ranking_metrics_valid_soft_support_raw.json
+│   │   │   │   ├── cfg02_mnt16_rp105_ng0
+│   │   │   │   │   ├── prediction_valid_backbone_raw.json
+│   │   │   │   │   ├── prediction_valid_retrieval_main.json
+│   │   │   │   │   ├── prediction_valid_soft_support_raw.json
+│   │   │   │   │   ├── raw_metrics_valid_backbone_raw.txt
+│   │   │   │   │   ├── raw_metrics_valid_retrieval_main.txt
+│   │   │   │   │   ├── raw_metrics_valid_soft_support_raw.txt
+│   │   │   │   │   ├── raw_ranking_metrics_valid_backbone_raw.json
+│   │   │   │   │   ├── raw_ranking_metrics_valid_retrieval_main.json
+│   │   │   │   │   └── raw_ranking_metrics_valid_soft_support_raw.json
+│   │   │   │   ├── cfg03_mnt16_rp110_ng0
+│   │   │   │   │   ├── prediction_valid_backbone_raw.json
+│   │   │   │   │   ├── prediction_valid_retrieval_main.json
+│   │   │   │   │   ├── prediction_valid_soft_support_raw.json
+│   │   │   │   │   ├── raw_metrics_valid_backbone_raw.txt
+│   │   │   │   │   ├── raw_metrics_valid_retrieval_main.txt
+│   │   │   │   │   ├── raw_metrics_valid_soft_support_raw.txt
+│   │   │   │   │   ├── raw_ranking_metrics_valid_backbone_raw.json
+│   │   │   │   │   ├── raw_ranking_metrics_valid_retrieval_main.json
+│   │   │   │   │   └── raw_ranking_metrics_valid_soft_support_raw.json
+│   │   │   │   ├── cfg04_mnt16_rp110_ng3
+│   │   │   │   │   ├── prediction_valid_backbone_raw.json
+│   │   │   │   │   ├── prediction_valid_retrieval_main.json
+│   │   │   │   │   ├── prediction_valid_soft_support_raw.json
+│   │   │   │   │   ├── raw_metrics_valid_backbone_raw.txt
+│   │   │   │   │   ├── raw_metrics_valid_retrieval_main.txt
+│   │   │   │   │   ├── raw_metrics_valid_soft_support_raw.txt
+│   │   │   │   │   ├── raw_ranking_metrics_valid_backbone_raw.json
+│   │   │   │   │   ├── raw_ranking_metrics_valid_retrieval_main.json
+│   │   │   │   │   └── raw_ranking_metrics_valid_soft_support_raw.json
+│   │   │   │   ├── cfg05_mnt24_rp100_ng0
+│   │   │   │   │   ├── prediction_valid_backbone_raw.json
+│   │   │   │   │   ├── prediction_valid_retrieval_main.json
+│   │   │   │   │   ├── prediction_valid_soft_support_raw.json
+│   │   │   │   │   ├── raw_metrics_valid_backbone_raw.txt
+│   │   │   │   │   ├── raw_metrics_valid_retrieval_main.txt
+│   │   │   │   │   ├── raw_metrics_valid_soft_support_raw.txt
+│   │   │   │   │   ├── raw_ranking_metrics_valid_backbone_raw.json
+│   │   │   │   │   ├── raw_ranking_metrics_valid_retrieval_main.json
+│   │   │   │   │   └── raw_ranking_metrics_valid_soft_support_raw.json
+│   │   │   │   ├── cfg06_mnt24_rp105_ng0
+│   │   │   │   │   ├── prediction_valid_backbone_raw.json
+│   │   │   │   │   ├── prediction_valid_retrieval_main.json
+│   │   │   │   │   ├── prediction_valid_soft_support_raw.json
+│   │   │   │   │   ├── raw_metrics_valid_backbone_raw.txt
+│   │   │   │   │   ├── raw_metrics_valid_retrieval_main.txt
+│   │   │   │   │   ├── raw_metrics_valid_soft_support_raw.txt
+│   │   │   │   │   ├── raw_ranking_metrics_valid_backbone_raw.json
+│   │   │   │   │   ├── raw_ranking_metrics_valid_retrieval_main.json
+│   │   │   │   │   └── raw_ranking_metrics_valid_soft_support_raw.json
+│   │   │   │   ├── cfg07_mnt24_rp110_ng0
+│   │   │   │   │   ├── prediction_valid_backbone_raw.json
+│   │   │   │   │   ├── prediction_valid_retrieval_main.json
+│   │   │   │   │   ├── prediction_valid_soft_support_raw.json
+│   │   │   │   │   ├── raw_metrics_valid_backbone_raw.txt
+│   │   │   │   │   ├── raw_metrics_valid_retrieval_main.txt
+│   │   │   │   │   ├── raw_metrics_valid_soft_support_raw.txt
+│   │   │   │   │   ├── raw_ranking_metrics_valid_backbone_raw.json
+│   │   │   │   │   ├── raw_ranking_metrics_valid_retrieval_main.json
+│   │   │   │   │   └── raw_ranking_metrics_valid_soft_support_raw.json
+│   │   │   │   └── cfg08_mnt24_rp110_ng3
+│   │   │   │       ├── prediction_valid_backbone_raw.json
+│   │   │   │       ├── prediction_valid_retrieval_main.json
+│   │   │   │       ├── prediction_valid_soft_support_raw.json
+│   │   │   │       ├── raw_metrics_valid_backbone_raw.txt
+│   │   │   │       ├── raw_metrics_valid_retrieval_main.txt
+│   │   │   │       ├── raw_metrics_valid_soft_support_raw.txt
+│   │   │   │       ├── raw_ranking_metrics_valid_backbone_raw.json
+│   │   │   │       ├── raw_ranking_metrics_valid_retrieval_main.json
+│   │   │   │       └── raw_ranking_metrics_valid_soft_support_raw.json
+│   │   │   ├── decoding_sweep_summary.json
+│   │   │   ├── infer_w24valid_cfg01_mnt16_rp100_ng0_backbone_raw.log
+│   │   │   ├── infer_w24valid_cfg01_mnt16_rp100_ng0_retrieval_main.log
+│   │   │   ├── infer_w24valid_cfg01_mnt16_rp100_ng0_soft_support_raw.log
+│   │   │   ├── infer_w24valid_cfg02_mnt16_rp105_ng0_backbone_raw.log
+│   │   │   ├── infer_w24valid_cfg02_mnt16_rp105_ng0_retrieval_main.log
+│   │   │   ├── infer_w24valid_cfg02_mnt16_rp105_ng0_soft_support_raw.log
+│   │   │   ├── infer_w24valid_cfg03_mnt16_rp110_ng0_backbone_raw.log
+│   │   │   ├── infer_w24valid_cfg03_mnt16_rp110_ng0_retrieval_main.log
+│   │   │   ├── infer_w24valid_cfg03_mnt16_rp110_ng0_soft_support_raw.log
+│   │   │   ├── infer_w24valid_cfg04_mnt16_rp110_ng3_backbone_raw.log
+│   │   │   ├── infer_w24valid_cfg04_mnt16_rp110_ng3_retrieval_main.log
+│   │   │   ├── infer_w24valid_cfg04_mnt16_rp110_ng3_soft_support_raw.log
+│   │   │   ├── infer_w24valid_cfg05_mnt24_rp100_ng0_backbone_raw.log
+│   │   │   ├── infer_w24valid_cfg05_mnt24_rp100_ng0_retrieval_main.log
+│   │   │   ├── infer_w24valid_cfg05_mnt24_rp100_ng0_soft_support_raw.log
+│   │   │   ├── infer_w24valid_cfg06_mnt24_rp105_ng0_backbone_raw.log
+│   │   │   ├── infer_w24valid_cfg06_mnt24_rp105_ng0_retrieval_main.log
+│   │   │   ├── infer_w24valid_cfg06_mnt24_rp105_ng0_soft_support_raw.log
+│   │   │   ├── infer_w24valid_cfg07_mnt24_rp110_ng0_backbone_raw.log
+│   │   │   ├── infer_w24valid_cfg07_mnt24_rp110_ng0_retrieval_main.log
+│   │   │   ├── infer_w24valid_cfg07_mnt24_rp110_ng0_soft_support_raw.log
+│   │   │   ├── infer_w24valid_cfg08_mnt24_rp110_ng3_backbone_raw.log
+│   │   │   ├── infer_w24valid_cfg08_mnt24_rp110_ng3_retrieval_main.log
+│   │   │   └── infer_w24valid_cfg08_mnt24_rp110_ng3_soft_support_raw.log
+│   │   ├── diagnostics
+│   │   │   ├── primekg_case_samples.json
+│   │   │   ├── primekg_e2e_failure_analysis.json
+│   │   │   ├── primekg_e2e_paper_interpretation.json
+│   │   │   └── primekg_generation_error_buckets.json
+│   │   ├── frozen_decode_test
+│   │   │   ├── frozen_decode_config.json
+│   │   │   ├── infer_test_backbone_raw.log
+│   │   │   ├── infer_test_retrieval_main.log
+│   │   │   ├── infer_test_soft_support_raw.log
+│   │   │   ├── infer_valid_backbone_raw.log
+│   │   │   ├── infer_valid_retrieval_main.log
+│   │   │   ├── infer_valid_soft_support_raw.log
+│   │   │   ├── predictions
+│   │   │   │   ├── prediction_test_backbone_raw.json
+│   │   │   │   ├── prediction_test_retrieval_main.json
+│   │   │   │   ├── prediction_test_soft_support_raw.json
+│   │   │   │   ├── prediction_valid_backbone_raw.json
+│   │   │   │   ├── prediction_valid_retrieval_main.json
+│   │   │   │   ├── prediction_valid_soft_support_raw.json
+│   │   │   │   ├── raw_metrics_test_backbone_raw.txt
+│   │   │   │   ├── raw_metrics_test_retrieval_main.txt
+│   │   │   │   ├── raw_metrics_test_soft_support_raw.txt
+│   │   │   │   ├── raw_metrics_valid_backbone_raw.txt
+│   │   │   │   ├── raw_metrics_valid_retrieval_main.txt
+│   │   │   │   ├── raw_metrics_valid_soft_support_raw.txt
+│   │   │   │   ├── raw_ranking_metrics_test_backbone_raw.json
+│   │   │   │   ├── raw_ranking_metrics_test_retrieval_main.json
+│   │   │   │   ├── raw_ranking_metrics_test_soft_support_raw.json
+│   │   │   │   ├── raw_ranking_metrics_valid_backbone_raw.json
+│   │   │   │   ├── raw_ranking_metrics_valid_retrieval_main.json
+│   │   │   │   └── raw_ranking_metrics_valid_soft_support_raw.json
+│   │   │   ├── primekg_e2e_final_table_test.json
+│   │   │   ├── primekg_e2e_final_table_valid.json
+│   │   │   ├── primekg_frozen_decode_summary.json
+│   │   │   └── week20_vs_week24_e2e_comparison.json
+│   │   ├── model_compare
+│   │   │   ├── llama3_2_3b
+│   │   │   │   ├── model_run_manifest.json
+│   │   │   │   └── predictions
+│   │   │   │       ├── prediction_test_backbone_raw.json
+│   │   │   │       ├── prediction_test_retrieval_main.json
+│   │   │   │       ├── prediction_test_soft_support_raw.json
+│   │   │   │       ├── prediction_valid_backbone_raw.json
+│   │   │   │       ├── prediction_valid_retrieval_main.json
+│   │   │   │       ├── prediction_valid_soft_support_raw.json
+│   │   │   │       ├── raw_metrics_test_backbone_raw.txt
+│   │   │   │       ├── raw_metrics_test_retrieval_main.txt
+│   │   │   │       ├── raw_metrics_test_soft_support_raw.txt
+│   │   │   │       ├── raw_metrics_valid_backbone_raw.txt
+│   │   │   │       ├── raw_metrics_valid_retrieval_main.txt
+│   │   │   │       ├── raw_metrics_valid_soft_support_raw.txt
+│   │   │   │       ├── raw_ranking_metrics_test_backbone_raw.json
+│   │   │   │       ├── raw_ranking_metrics_test_retrieval_main.json
+│   │   │   │       ├── raw_ranking_metrics_test_soft_support_raw.json
+│   │   │   │       ├── raw_ranking_metrics_valid_backbone_raw.json
+│   │   │   │       ├── raw_ranking_metrics_valid_retrieval_main.json
+│   │   │   │       └── raw_ranking_metrics_valid_soft_support_raw.json
+│   │   │   ├── llama3_8b
+│   │   │   │   ├── main_checkpoint
+│   │   │   │   │   ├── all_results.json
+│   │   │   │   │   ├── checkpoint-final
+│   │   │   │   │   │   ├── adapter_config.json
+│   │   │   │   │   │   ├── adapter_model.bin
+│   │   │   │   │   │   ├── graph_model.bin
+│   │   │   │   │   │   └── README.md
+│   │   │   │   │   ├── metrics_test_w24mc_llama3_8b_backbone_raw.txt
+│   │   │   │   │   ├── metrics_test_w24mc_llama3_8b_retrieval_main.txt
+│   │   │   │   │   ├── metrics_test_w24mc_llama3_8b_soft_support_raw.txt
+│   │   │   │   │   ├── metrics_valid_w24mc_llama3_8b_backbone_raw.txt
+│   │   │   │   │   ├── metrics_valid_w24mc_llama3_8b_retrieval_main.txt
+│   │   │   │   │   ├── metrics_valid_w24mc_llama3_8b_soft_support_raw.txt
+│   │   │   │   │   ├── prediction_test_w24mc_llama3_8b_backbone_raw.json
+│   │   │   │   │   ├── prediction_test_w24mc_llama3_8b_retrieval_main.json
+│   │   │   │   │   ├── prediction_test_w24mc_llama3_8b_soft_support_raw.json
+│   │   │   │   │   ├── prediction_valid_w24mc_llama3_8b_backbone_raw.json
+│   │   │   │   │   ├── prediction_valid_w24mc_llama3_8b_retrieval_main.json
+│   │   │   │   │   ├── prediction_valid_w24mc_llama3_8b_soft_support_raw.json
+│   │   │   │   │   ├── ranking_metrics_test_w24mc_llama3_8b_backbone_raw.json
+│   │   │   │   │   ├── ranking_metrics_test_w24mc_llama3_8b_retrieval_main.json
+│   │   │   │   │   ├── ranking_metrics_test_w24mc_llama3_8b_soft_support_raw.json
+│   │   │   │   │   ├── ranking_metrics_valid_w24mc_llama3_8b_backbone_raw.json
+│   │   │   │   │   ├── ranking_metrics_valid_w24mc_llama3_8b_retrieval_main.json
+│   │   │   │   │   ├── ranking_metrics_valid_w24mc_llama3_8b_soft_support_raw.json
+│   │   │   │   │   ├── trainer_state.json
+│   │   │   │   │   └── train_results.json
+│   │   │   │   ├── model_run_manifest.json
+│   │   │   │   └── predictions
+│   │   │   │       ├── prediction_test_backbone_raw.json
+│   │   │   │       ├── prediction_test_retrieval_main.json
+│   │   │   │       ├── prediction_test_soft_support_raw.json
+│   │   │   │       ├── prediction_valid_backbone_raw.json
+│   │   │   │       ├── prediction_valid_retrieval_main.json
+│   │   │   │       ├── prediction_valid_soft_support_raw.json
+│   │   │   │       ├── raw_metrics_test_backbone_raw.txt
+│   │   │   │       ├── raw_metrics_test_retrieval_main.txt
+│   │   │   │       ├── raw_metrics_test_soft_support_raw.txt
+│   │   │   │       ├── raw_metrics_valid_backbone_raw.txt
+│   │   │   │       ├── raw_metrics_valid_retrieval_main.txt
+│   │   │   │       ├── raw_metrics_valid_soft_support_raw.txt
+│   │   │   │       ├── raw_ranking_metrics_test_backbone_raw.json
+│   │   │   │       ├── raw_ranking_metrics_test_retrieval_main.json
+│   │   │   │       ├── raw_ranking_metrics_test_soft_support_raw.json
+│   │   │   │       ├── raw_ranking_metrics_valid_backbone_raw.json
+│   │   │   │       ├── raw_ranking_metrics_valid_retrieval_main.json
+│   │   │   │       └── raw_ranking_metrics_valid_soft_support_raw.json
+│   │   │   ├── medllama3_8b
+│   │   │   │   ├── main_checkpoint
+│   │   │   │   │   ├── all_results.json
+│   │   │   │   │   ├── checkpoint-final
+│   │   │   │   │   │   ├── adapter_config.json
+│   │   │   │   │   │   ├── adapter_model.bin
+│   │   │   │   │   │   ├── graph_model.bin
+│   │   │   │   │   │   └── README.md
+│   │   │   │   │   ├── metrics_test_w24mc_medllama3_8b_backbone_raw.txt
+│   │   │   │   │   ├── metrics_test_w24mc_medllama3_8b_retrieval_main.txt
+│   │   │   │   │   ├── metrics_test_w24mc_medllama3_8b_soft_support_raw.txt
+│   │   │   │   │   ├── metrics_valid_w24mc_medllama3_8b_backbone_raw.txt
+│   │   │   │   │   ├── metrics_valid_w24mc_medllama3_8b_retrieval_main.txt
+│   │   │   │   │   ├── metrics_valid_w24mc_medllama3_8b_soft_support_raw.txt
+│   │   │   │   │   ├── prediction_test_w24mc_medllama3_8b_backbone_raw.json
+│   │   │   │   │   ├── prediction_test_w24mc_medllama3_8b_retrieval_main.json
+│   │   │   │   │   ├── prediction_test_w24mc_medllama3_8b_soft_support_raw.json
+│   │   │   │   │   ├── prediction_valid_w24mc_medllama3_8b_backbone_raw.json
+│   │   │   │   │   ├── prediction_valid_w24mc_medllama3_8b_retrieval_main.json
+│   │   │   │   │   ├── prediction_valid_w24mc_medllama3_8b_soft_support_raw.json
+│   │   │   │   │   ├── ranking_metrics_test_w24mc_medllama3_8b_backbone_raw.json
+│   │   │   │   │   ├── ranking_metrics_test_w24mc_medllama3_8b_retrieval_main.json
+│   │   │   │   │   ├── ranking_metrics_test_w24mc_medllama3_8b_soft_support_raw.json
+│   │   │   │   │   ├── ranking_metrics_valid_w24mc_medllama3_8b_backbone_raw.json
+│   │   │   │   │   ├── ranking_metrics_valid_w24mc_medllama3_8b_retrieval_main.json
+│   │   │   │   │   ├── ranking_metrics_valid_w24mc_medllama3_8b_soft_support_raw.json
+│   │   │   │   │   ├── trainer_state.json
+│   │   │   │   │   └── train_results.json
+│   │   │   │   ├── model_run_manifest.json
+│   │   │   │   └── predictions
+│   │   │   │       ├── prediction_test_backbone_raw.json
+│   │   │   │       ├── prediction_test_retrieval_main.json
+│   │   │   │       ├── prediction_test_soft_support_raw.json
+│   │   │   │       ├── prediction_valid_backbone_raw.json
+│   │   │   │       ├── prediction_valid_retrieval_main.json
+│   │   │   │       ├── prediction_valid_soft_support_raw.json
+│   │   │   │       ├── raw_metrics_test_backbone_raw.txt
+│   │   │   │       ├── raw_metrics_test_retrieval_main.txt
+│   │   │   │       ├── raw_metrics_test_soft_support_raw.txt
+│   │   │   │       ├── raw_metrics_valid_backbone_raw.txt
+│   │   │   │       ├── raw_metrics_valid_retrieval_main.txt
+│   │   │   │       ├── raw_metrics_valid_soft_support_raw.txt
+│   │   │   │       ├── raw_ranking_metrics_test_backbone_raw.json
+│   │   │   │       ├── raw_ranking_metrics_test_retrieval_main.json
+│   │   │   │       ├── raw_ranking_metrics_test_soft_support_raw.json
+│   │   │   │       ├── raw_ranking_metrics_valid_backbone_raw.json
+│   │   │   │       ├── raw_ranking_metrics_valid_retrieval_main.json
+│   │   │   │       └── raw_ranking_metrics_valid_soft_support_raw.json
+│   │   │   ├── model_compare_best_model.json
+│   │   │   ├── model_compare_case_samples.json
+│   │   │   ├── model_compare_reviewer_safe_summary.json
+│   │   │   ├── model_compare_table_test.json
+│   │   │   └── model_compare_table_valid.json
+│   │   ├── paper_assets
+│   │   │   ├── primekg_e2e_limitation_paragraph.md
+│   │   │   ├── primekg_e2e_result_paragraph.md
+│   │   │   ├── primekg_e2e_table_latex.tex
+│   │   │   ├── primekg_model_compare_paragraph.md
+│   │   │   └── primekg_model_compare_table_latex.tex
+│   │   ├── pharmkg_decoding_sweep_valid
+│   │   │   ├── config_lines.tsv
+│   │   │   ├── configs.json
+│   │   │   ├── decoding_sweep_predictions
+│   │   │   │   ├── cfg01_mnt16_rp100_ng0
+│   │   │   │   │   ├── prediction_valid_backbone_raw.json
+│   │   │   │   │   ├── prediction_valid_fuzzy_retrieval_main.json
+│   │   │   │   │   ├── prediction_valid_soft_support_raw.json
+│   │   │   │   │   ├── raw_metrics_valid_backbone_raw.txt
+│   │   │   │   │   ├── raw_metrics_valid_fuzzy_retrieval_main.txt
+│   │   │   │   │   ├── raw_metrics_valid_soft_support_raw.txt
+│   │   │   │   │   ├── raw_ranking_metrics_valid_backbone_raw.json
+│   │   │   │   │   ├── raw_ranking_metrics_valid_fuzzy_retrieval_main.json
+│   │   │   │   │   └── raw_ranking_metrics_valid_soft_support_raw.json
+│   │   │   │   ├── cfg02_mnt16_rp105_ng0
+│   │   │   │   │   ├── prediction_valid_backbone_raw.json
+│   │   │   │   │   ├── prediction_valid_fuzzy_retrieval_main.json
+│   │   │   │   │   ├── prediction_valid_soft_support_raw.json
+│   │   │   │   │   ├── raw_metrics_valid_backbone_raw.txt
+│   │   │   │   │   ├── raw_metrics_valid_fuzzy_retrieval_main.txt
+│   │   │   │   │   ├── raw_metrics_valid_soft_support_raw.txt
+│   │   │   │   │   ├── raw_ranking_metrics_valid_backbone_raw.json
+│   │   │   │   │   ├── raw_ranking_metrics_valid_fuzzy_retrieval_main.json
+│   │   │   │   │   └── raw_ranking_metrics_valid_soft_support_raw.json
+│   │   │   │   ├── cfg03_mnt16_rp110_ng0
+│   │   │   │   │   ├── prediction_valid_backbone_raw.json
+│   │   │   │   │   ├── prediction_valid_fuzzy_retrieval_main.json
+│   │   │   │   │   ├── prediction_valid_soft_support_raw.json
+│   │   │   │   │   ├── raw_metrics_valid_backbone_raw.txt
+│   │   │   │   │   ├── raw_metrics_valid_fuzzy_retrieval_main.txt
+│   │   │   │   │   ├── raw_metrics_valid_soft_support_raw.txt
+│   │   │   │   │   ├── raw_ranking_metrics_valid_backbone_raw.json
+│   │   │   │   │   ├── raw_ranking_metrics_valid_fuzzy_retrieval_main.json
+│   │   │   │   │   └── raw_ranking_metrics_valid_soft_support_raw.json
+│   │   │   │   ├── cfg04_mnt16_rp110_ng3
+│   │   │   │   │   ├── prediction_valid_backbone_raw.json
+│   │   │   │   │   ├── prediction_valid_fuzzy_retrieval_main.json
+│   │   │   │   │   ├── prediction_valid_soft_support_raw.json
+│   │   │   │   │   ├── raw_metrics_valid_backbone_raw.txt
+│   │   │   │   │   ├── raw_metrics_valid_fuzzy_retrieval_main.txt
+│   │   │   │   │   ├── raw_metrics_valid_soft_support_raw.txt
+│   │   │   │   │   ├── raw_ranking_metrics_valid_backbone_raw.json
+│   │   │   │   │   ├── raw_ranking_metrics_valid_fuzzy_retrieval_main.json
+│   │   │   │   │   └── raw_ranking_metrics_valid_soft_support_raw.json
+│   │   │   │   ├── cfg05_mnt24_rp100_ng0
+│   │   │   │   │   ├── prediction_valid_backbone_raw.json
+│   │   │   │   │   ├── prediction_valid_fuzzy_retrieval_main.json
+│   │   │   │   │   ├── prediction_valid_soft_support_raw.json
+│   │   │   │   │   ├── raw_metrics_valid_backbone_raw.txt
+│   │   │   │   │   ├── raw_metrics_valid_fuzzy_retrieval_main.txt
+│   │   │   │   │   ├── raw_metrics_valid_soft_support_raw.txt
+│   │   │   │   │   ├── raw_ranking_metrics_valid_backbone_raw.json
+│   │   │   │   │   ├── raw_ranking_metrics_valid_fuzzy_retrieval_main.json
+│   │   │   │   │   └── raw_ranking_metrics_valid_soft_support_raw.json
+│   │   │   │   ├── cfg06_mnt24_rp105_ng0
+│   │   │   │   │   ├── prediction_valid_backbone_raw.json
+│   │   │   │   │   ├── prediction_valid_fuzzy_retrieval_main.json
+│   │   │   │   │   ├── prediction_valid_soft_support_raw.json
+│   │   │   │   │   ├── raw_metrics_valid_backbone_raw.txt
+│   │   │   │   │   ├── raw_metrics_valid_fuzzy_retrieval_main.txt
+│   │   │   │   │   ├── raw_metrics_valid_soft_support_raw.txt
+│   │   │   │   │   ├── raw_ranking_metrics_valid_backbone_raw.json
+│   │   │   │   │   ├── raw_ranking_metrics_valid_fuzzy_retrieval_main.json
+│   │   │   │   │   └── raw_ranking_metrics_valid_soft_support_raw.json
+│   │   │   │   ├── cfg07_mnt24_rp110_ng0
+│   │   │   │   │   ├── prediction_valid_backbone_raw.json
+│   │   │   │   │   ├── prediction_valid_fuzzy_retrieval_main.json
+│   │   │   │   │   ├── prediction_valid_soft_support_raw.json
+│   │   │   │   │   ├── raw_metrics_valid_backbone_raw.txt
+│   │   │   │   │   ├── raw_metrics_valid_fuzzy_retrieval_main.txt
+│   │   │   │   │   ├── raw_metrics_valid_soft_support_raw.txt
+│   │   │   │   │   ├── raw_ranking_metrics_valid_backbone_raw.json
+│   │   │   │   │   ├── raw_ranking_metrics_valid_fuzzy_retrieval_main.json
+│   │   │   │   │   └── raw_ranking_metrics_valid_soft_support_raw.json
+│   │   │   │   └── cfg08_mnt24_rp110_ng3
+│   │   │   │       ├── prediction_valid_backbone_raw.json
+│   │   │   │       ├── prediction_valid_fuzzy_retrieval_main.json
+│   │   │   │       ├── prediction_valid_soft_support_raw.json
+│   │   │   │       ├── raw_metrics_valid_backbone_raw.txt
+│   │   │   │       ├── raw_metrics_valid_fuzzy_retrieval_main.txt
+│   │   │   │       ├── raw_metrics_valid_soft_support_raw.txt
+│   │   │   │       ├── raw_ranking_metrics_valid_backbone_raw.json
+│   │   │   │       ├── raw_ranking_metrics_valid_fuzzy_retrieval_main.json
+│   │   │   │       └── raw_ranking_metrics_valid_soft_support_raw.json
+│   │   │   ├── infer_w24pharmvalid_cfg01_mnt16_rp100_ng0_backbone_raw.log
+│   │   │   ├── infer_w24pharmvalid_cfg01_mnt16_rp100_ng0_fuzzy_retrieval_main.log
+│   │   │   ├── infer_w24pharmvalid_cfg01_mnt16_rp100_ng0_soft_support_raw.log
+│   │   │   ├── infer_w24pharmvalid_cfg02_mnt16_rp105_ng0_backbone_raw.log
+│   │   │   ├── infer_w24pharmvalid_cfg02_mnt16_rp105_ng0_fuzzy_retrieval_main.log
+│   │   │   ├── infer_w24pharmvalid_cfg02_mnt16_rp105_ng0_soft_support_raw.log
+│   │   │   ├── infer_w24pharmvalid_cfg03_mnt16_rp110_ng0_backbone_raw.log
+│   │   │   ├── infer_w24pharmvalid_cfg03_mnt16_rp110_ng0_fuzzy_retrieval_main.log
+│   │   │   ├── infer_w24pharmvalid_cfg03_mnt16_rp110_ng0_soft_support_raw.log
+│   │   │   ├── infer_w24pharmvalid_cfg04_mnt16_rp110_ng3_backbone_raw.log
+│   │   │   ├── infer_w24pharmvalid_cfg04_mnt16_rp110_ng3_fuzzy_retrieval_main.log
+│   │   │   ├── infer_w24pharmvalid_cfg04_mnt16_rp110_ng3_soft_support_raw.log
+│   │   │   ├── infer_w24pharmvalid_cfg05_mnt24_rp100_ng0_backbone_raw.log
+│   │   │   ├── infer_w24pharmvalid_cfg05_mnt24_rp100_ng0_fuzzy_retrieval_main.log
+│   │   │   ├── infer_w24pharmvalid_cfg05_mnt24_rp100_ng0_soft_support_raw.log
+│   │   │   ├── infer_w24pharmvalid_cfg06_mnt24_rp105_ng0_backbone_raw.log
+│   │   │   ├── infer_w24pharmvalid_cfg06_mnt24_rp105_ng0_fuzzy_retrieval_main.log
+│   │   │   ├── infer_w24pharmvalid_cfg06_mnt24_rp105_ng0_soft_support_raw.log
+│   │   │   ├── infer_w24pharmvalid_cfg07_mnt24_rp110_ng0_backbone_raw.log
+│   │   │   ├── infer_w24pharmvalid_cfg07_mnt24_rp110_ng0_fuzzy_retrieval_main.log
+│   │   │   ├── infer_w24pharmvalid_cfg07_mnt24_rp110_ng0_soft_support_raw.log
+│   │   │   ├── infer_w24pharmvalid_cfg08_mnt24_rp110_ng3_backbone_raw.log
+│   │   │   ├── infer_w24pharmvalid_cfg08_mnt24_rp110_ng3_fuzzy_retrieval_main.log
+│   │   │   ├── infer_w24pharmvalid_cfg08_mnt24_rp110_ng3_soft_support_raw.log
+│   │   │   ├── pharmkg_decoding_sweep_best_config.json
+│   │   │   └── pharmkg_decoding_sweep_summary.json
+│   │   ├── pharmkg_frozen_model_compare
+│   │   │   ├── frozen_decode_config.json
+│   │   │   ├── llama3_2_3b
+│   │   │   │   ├── model_run_manifest.json
+│   │   │   │   └── predictions
+│   │   │   │       ├── prediction_test_backbone_raw.json
+│   │   │   │       ├── prediction_test_fuzzy_retrieval_main.json
+│   │   │   │       ├── prediction_test_soft_support_raw.json
+│   │   │   │       ├── prediction_valid_backbone_raw.json
+│   │   │   │       ├── prediction_valid_fuzzy_retrieval_main.json
+│   │   │   │       ├── prediction_valid_soft_support_raw.json
+│   │   │   │       ├── raw_metrics_test_backbone_raw.txt
+│   │   │   │       ├── raw_metrics_test_fuzzy_retrieval_main.txt
+│   │   │   │       ├── raw_metrics_test_soft_support_raw.txt
+│   │   │   │       ├── raw_metrics_valid_backbone_raw.txt
+│   │   │   │       ├── raw_metrics_valid_fuzzy_retrieval_main.txt
+│   │   │   │       ├── raw_metrics_valid_soft_support_raw.txt
+│   │   │   │       ├── raw_ranking_metrics_test_backbone_raw.json
+│   │   │   │       ├── raw_ranking_metrics_test_fuzzy_retrieval_main.json
+│   │   │   │       ├── raw_ranking_metrics_test_soft_support_raw.json
+│   │   │   │       ├── raw_ranking_metrics_valid_backbone_raw.json
+│   │   │   │       ├── raw_ranking_metrics_valid_fuzzy_retrieval_main.json
+│   │   │   │       └── raw_ranking_metrics_valid_soft_support_raw.json
+│   │   │   ├── llama3_8b
+│   │   │   │   ├── model_run_manifest.json
+│   │   │   │   └── predictions
+│   │   │   │       ├── prediction_test_backbone_raw.json
+│   │   │   │       ├── prediction_test_fuzzy_retrieval_main.json
+│   │   │   │       ├── prediction_test_soft_support_raw.json
+│   │   │   │       ├── prediction_valid_backbone_raw.json
+│   │   │   │       ├── prediction_valid_fuzzy_retrieval_main.json
+│   │   │   │       ├── prediction_valid_soft_support_raw.json
+│   │   │   │       ├── raw_metrics_test_backbone_raw.txt
+│   │   │   │       ├── raw_metrics_test_fuzzy_retrieval_main.txt
+│   │   │   │       ├── raw_metrics_test_soft_support_raw.txt
+│   │   │   │       ├── raw_metrics_valid_backbone_raw.txt
+│   │   │   │       ├── raw_metrics_valid_fuzzy_retrieval_main.txt
+│   │   │   │       ├── raw_metrics_valid_soft_support_raw.txt
+│   │   │   │       ├── raw_ranking_metrics_test_backbone_raw.json
+│   │   │   │       ├── raw_ranking_metrics_test_fuzzy_retrieval_main.json
+│   │   │   │       ├── raw_ranking_metrics_test_soft_support_raw.json
+│   │   │   │       ├── raw_ranking_metrics_valid_backbone_raw.json
+│   │   │   │       ├── raw_ranking_metrics_valid_fuzzy_retrieval_main.json
+│   │   │   │       └── raw_ranking_metrics_valid_soft_support_raw.json
+│   │   │   ├── medllama3_8b
+│   │   │   │   ├── model_run_manifest.json
+│   │   │   │   └── predictions
+│   │   │   │       ├── prediction_test_backbone_raw.json
+│   │   │   │       ├── prediction_test_fuzzy_retrieval_main.json
+│   │   │   │       ├── prediction_test_soft_support_raw.json
+│   │   │   │       ├── prediction_valid_backbone_raw.json
+│   │   │   │       ├── prediction_valid_fuzzy_retrieval_main.json
+│   │   │   │       ├── prediction_valid_soft_support_raw.json
+│   │   │   │       ├── raw_metrics_test_backbone_raw.txt
+│   │   │   │       ├── raw_metrics_test_fuzzy_retrieval_main.txt
+│   │   │   │       ├── raw_metrics_test_soft_support_raw.txt
+│   │   │   │       ├── raw_metrics_valid_backbone_raw.txt
+│   │   │   │       ├── raw_metrics_valid_fuzzy_retrieval_main.txt
+│   │   │   │       ├── raw_metrics_valid_soft_support_raw.txt
+│   │   │   │       ├── raw_ranking_metrics_test_backbone_raw.json
+│   │   │   │       ├── raw_ranking_metrics_test_fuzzy_retrieval_main.json
+│   │   │   │       ├── raw_ranking_metrics_test_soft_support_raw.json
+│   │   │   │       ├── raw_ranking_metrics_valid_backbone_raw.json
+│   │   │   │       ├── raw_ranking_metrics_valid_fuzzy_retrieval_main.json
+│   │   │   │       └── raw_ranking_metrics_valid_soft_support_raw.json
+│   │   │   ├── paper_assets
+│   │   │   │   ├── pharmkg_e2e_table_latex.tex
+│   │   │   │   ├── pharmkg_limitation_paragraph.md
+│   │   │   │   ├── pharmkg_model_compare_table_latex.tex
+│   │   │   │   └── pharmkg_result_paragraph.md
+│   │   │   ├── pharmkg_model_compare_best_model.json
+│   │   │   ├── pharmkg_model_compare_reviewer_safe_summary.json
+│   │   │   ├── pharmkg_model_compare_table_test.json
+│   │   │   └── pharmkg_model_compare_table_valid.json
+│   │   ├── primekg_e2e_protocol_freeze.json
+│   │   ├── primekg_e2e_ready_audit.json
+│   │   ├── week24_closeout.json
+│   │   └── week24_go_decision.json
 │   ├── week5
 │   │   └── backbone_llama32_3b_rgcn
 │   │       ├── checkpoint-1000
@@ -1903,15 +2864,41 @@
 │   │   ├── 05_rerun_dataset2_baselines.py
 │   │   ├── 06_build_fograg_ready_package.py
 │   │   └── 07_write_week22_closeout.py
-│   └── week23
-│       ├── 01_freeze_transfer_and_eval_backbone.py
-│       ├── 02_build_support_features_and_hard_control.py
-│       ├── 03_build_soft_support_transfer.py
-│       ├── 04_build_fuzzy_retrieval_transfer.py
-│       ├── 05_build_final_eval_tables.py
-│       ├── 06_diagnostics_and_optional_sources.py
-│       └── __pycache__
-│           └── 10_build_e2e_soft_fuzzy_eval_folders.cpython-312.pyc
+│   ├── week23
+│   │   ├── 01_freeze_transfer_and_eval_backbone.py
+│   │   ├── 02_build_support_features_and_hard_control.py
+│   │   ├── 03_build_soft_support_transfer.py
+│   │   ├── 04_build_fuzzy_retrieval_transfer.py
+│   │   ├── 05_build_final_eval_tables.py
+│   │   ├── 06_diagnostics_and_optional_sources.py
+│   │   ├── e2e_pharmkg
+│   │   │   ├── day1_patch_graph_num_rels.py
+│   │   │   ├── day1_prepare_e2e_pharmkg_ready.py
+│   │   │   ├── day2_reviewer_safe_e2e_metrics.py
+│   │   │   ├── day2_run_train_infer.sh
+│   │   │   ├── day3_collect_model_compare_metrics.py
+│   │   │   ├── day3_patch_infer_mistral_meta.py
+│   │   │   ├── day3_rerun_infer_one_model.sh
+│   │   │   ├── day3_run_one_model.sh
+│   │   │   └── day_closeout_week23_pharmkg.py
+│   │   └── __pycache__
+│   │       └── 10_build_e2e_soft_fuzzy_eval_folders.cpython-312.pyc
+│   └── week24
+│       ├── 01_audit_primekg_e2e_protocol.py
+│       ├── 02_collect_valid_decoding_sweep.py
+│       ├── 02_make_decoding_sweep_configs.py
+│       ├── 02_run_valid_decoding_sweep.sh
+│       ├── 03_collect_frozen_decode_metrics.py
+│       ├── 03_run_frozen_decode_test.sh
+│       ├── 04_run_model_compare_train_infer_all.sh
+│       ├── 05_collect_model_compare_metrics.py
+│       ├── 06b_collect_pharmkg_valid_decoding_sweep.py
+│       ├── 06b_make_pharmkg_decoding_sweep_configs.py
+│       ├── 06b_run_pharmkg_valid_decoding_sweep.sh
+│       ├── 06c_collect_pharmkg_frozen_model_compare.py
+│       ├── 06c_run_pharmkg_frozen_model_compare_all.sh
+│       ├── 06_diagnostics_and_paper_assets.py
+│       └── 07_write_week24_closeout.py
 └── structure.txt
 
-334 directories, 1581 files
+403 directories, 2499 files
