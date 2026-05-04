@@ -1648,7 +1648,10 @@
 │       ├── day2_rule_sensitivity_valid.md
 │       ├── day3_rule_sensitivity_test_e2e.md
 │       ├── day4_template_sensitivity.md
-│       └── day5_noise_robustness.md
+│       ├── day5_noise_robustness.md
+│       ├── day6_sensitivity_paper_assets.md
+│       ├── day7_week25_closeout.md
+│       └── week25_closeout.md
 ├── results
 │   ├── reference_rows
 │   │   ├── backbone_raw_test
@@ -2791,6 +2794,12 @@
 │   │   │   ├── noise_robustness_valid.json
 │   │   │   └── noise_variant_manifest.json
 │   │   ├── paper_assets
+│   │   │   ├── noise_robustness_table_latex.tex
+│   │   │   ├── rule_sensitivity_table_latex.tex
+│   │   │   ├── template_sensitivity_table_latex.tex
+│   │   │   ├── week25_limitation_paragraph.md
+│   │   │   ├── week25_paper_assets_summary.json
+│   │   │   └── week25_sensitivity_paragraph.md
 │   │   ├── protocol
 │   │   │   └── week25_sensitivity_protocol.json
 │   │   ├── rule_sensitivity
@@ -2828,49 +2837,51 @@
 │   │   │   ├── rule_sensitivity_test.json
 │   │   │   ├── rule_sensitivity_valid.json
 │   │   │   └── rule_sensitivity_variant_manifest.json
-│   │   └── template_sensitivity
-│   │       ├── e2e_checkpoint
-│   │       │   ├── adapter_config.json
-│   │       │   ├── adapter_model.bin
-│   │       │   ├── graph_model.bin
-│   │       │   └── README.md
-│   │       ├── logs
-│   │       │   ├── test_T0_canonical.log
-│   │       │   ├── test_T1_treatment.log
-│   │       │   ├── test_T2_medication.log
-│   │       │   ├── test_T3_association_neutral.log
-│   │       │   ├── valid_T0_canonical.log
-│   │       │   ├── valid_T1_treatment.log
-│   │       │   ├── valid_T2_medication.log
-│   │       │   └── valid_T3_association_neutral.log
-│   │       ├── metrics_test_week25_template_T0_canonical.txt
-│   │       ├── metrics_test_week25_template_T1_treatment.txt
-│   │       ├── metrics_test_week25_template_T2_medication.txt
-│   │       ├── metrics_test_week25_template_T3_association_neutral.txt
-│   │       ├── metrics_valid_week25_template_T0_canonical.txt
-│   │       ├── metrics_valid_week25_template_T1_treatment.txt
-│   │       ├── metrics_valid_week25_template_T2_medication.txt
-│   │       ├── metrics_valid_week25_template_T3_association_neutral.txt
-│   │       ├── prediction_test_week25_template_T0_canonical.json
-│   │       ├── prediction_test_week25_template_T1_treatment.json
-│   │       ├── prediction_test_week25_template_T2_medication.json
-│   │       ├── prediction_test_week25_template_T3_association_neutral.json
-│   │       ├── prediction_valid_week25_template_T0_canonical.json
-│   │       ├── prediction_valid_week25_template_T1_treatment.json
-│   │       ├── prediction_valid_week25_template_T2_medication.json
-│   │       ├── prediction_valid_week25_template_T3_association_neutral.json
-│   │       ├── ranking_metrics_test_week25_template_T0_canonical.json
-│   │       ├── ranking_metrics_test_week25_template_T1_treatment.json
-│   │       ├── ranking_metrics_test_week25_template_T2_medication.json
-│   │       ├── ranking_metrics_test_week25_template_T3_association_neutral.json
-│   │       ├── ranking_metrics_valid_week25_template_T0_canonical.json
-│   │       ├── ranking_metrics_valid_week25_template_T1_treatment.json
-│   │       ├── ranking_metrics_valid_week25_template_T2_medication.json
-│   │       ├── ranking_metrics_valid_week25_template_T3_association_neutral.json
-│   │       ├── template_sensitivity_e2e_summary.json
-│   │       ├── template_sensitivity_test.json
-│   │       ├── template_sensitivity_valid.json
-│   │       └── template_variants.json
+│   │   ├── template_sensitivity
+│   │   │   ├── e2e_checkpoint
+│   │   │   │   ├── adapter_config.json
+│   │   │   │   ├── adapter_model.bin
+│   │   │   │   ├── graph_model.bin
+│   │   │   │   └── README.md
+│   │   │   ├── logs
+│   │   │   │   ├── test_T0_canonical.log
+│   │   │   │   ├── test_T1_treatment.log
+│   │   │   │   ├── test_T2_medication.log
+│   │   │   │   ├── test_T3_association_neutral.log
+│   │   │   │   ├── valid_T0_canonical.log
+│   │   │   │   ├── valid_T1_treatment.log
+│   │   │   │   ├── valid_T2_medication.log
+│   │   │   │   └── valid_T3_association_neutral.log
+│   │   │   ├── metrics_test_week25_template_T0_canonical.txt
+│   │   │   ├── metrics_test_week25_template_T1_treatment.txt
+│   │   │   ├── metrics_test_week25_template_T2_medication.txt
+│   │   │   ├── metrics_test_week25_template_T3_association_neutral.txt
+│   │   │   ├── metrics_valid_week25_template_T0_canonical.txt
+│   │   │   ├── metrics_valid_week25_template_T1_treatment.txt
+│   │   │   ├── metrics_valid_week25_template_T2_medication.txt
+│   │   │   ├── metrics_valid_week25_template_T3_association_neutral.txt
+│   │   │   ├── prediction_test_week25_template_T0_canonical.json
+│   │   │   ├── prediction_test_week25_template_T1_treatment.json
+│   │   │   ├── prediction_test_week25_template_T2_medication.json
+│   │   │   ├── prediction_test_week25_template_T3_association_neutral.json
+│   │   │   ├── prediction_valid_week25_template_T0_canonical.json
+│   │   │   ├── prediction_valid_week25_template_T1_treatment.json
+│   │   │   ├── prediction_valid_week25_template_T2_medication.json
+│   │   │   ├── prediction_valid_week25_template_T3_association_neutral.json
+│   │   │   ├── ranking_metrics_test_week25_template_T0_canonical.json
+│   │   │   ├── ranking_metrics_test_week25_template_T1_treatment.json
+│   │   │   ├── ranking_metrics_test_week25_template_T2_medication.json
+│   │   │   ├── ranking_metrics_test_week25_template_T3_association_neutral.json
+│   │   │   ├── ranking_metrics_valid_week25_template_T0_canonical.json
+│   │   │   ├── ranking_metrics_valid_week25_template_T1_treatment.json
+│   │   │   ├── ranking_metrics_valid_week25_template_T2_medication.json
+│   │   │   ├── ranking_metrics_valid_week25_template_T3_association_neutral.json
+│   │   │   ├── template_sensitivity_e2e_summary.json
+│   │   │   ├── template_sensitivity_test.json
+│   │   │   ├── template_sensitivity_valid.json
+│   │   │   └── template_variants.json
+│   │   ├── week25_closeout.json
+│   │   └── week25_go_decision.json
 │   ├── week5
 │   │   └── backbone_llama32_3b_rgcn
 │   │       ├── checkpoint-1000
@@ -3076,7 +3087,9 @@
 │       ├── 04_collect_template_sensitivity.py
 │       ├── 04_run_template_sensitivity.sh
 │       ├── 05_build_noise_variants.py
-│       └── 05_collect_noise_robustness.py
+│       ├── 05_collect_noise_robustness.py
+│       ├── 06_build_sensitivity_paper_assets.py
+│       └── 07_write_week25_closeout.py
 └── structure.txt
 
-432 directories, 2648 files
+432 directories, 2661 files
