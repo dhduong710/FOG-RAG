@@ -28,3 +28,7 @@ dataset/setting_d_hetionet/00_raw_inventory/hetionet-v1.0.0.zip
 dataset/setting_e_drkg/00_raw_inventory/**/*.tsv
 dataset/setting_e_drkg/00_raw_inventory/**/*.npy
 dataset/setting_e_drkg/00_raw_inventory/**/*.tar.gz
+
+dataset/setting_e_drkg/10_fuzzy_retrieval/**/*.json
+
+dataset/setting_e_drkg/11_e2e_fuzzy_retrieval_ready/rgcn/train.json
