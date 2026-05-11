@@ -1,0 +1,475 @@
+{
+  "created_at": "2026-05-11T16:34:41.029444+00:00",
+  "decision": "DAY2_DRKG_TASK_SCHEMA_READY",
+  "task_spec": {
+    "created_at": "2026-05-11T16:34:41.029413+00:00",
+    "setting": "setting_e_drkg",
+    "dataset": "DRKG",
+    "status": "FROZEN_DAY2",
+    "task_name": "drkg_drugbank_treats_disease_head_prediction",
+    "task_form": "(?, DRUGBANK::treats, disease)",
+    "prediction_type": "predicted_head",
+    "target_relation": "DRUGBANK::treats::Compound:Disease",
+    "target_relation_normalized": "drugbank_treats",
+    "target_relation_direction": "Compound->Disease",
+    "target_source": "DRUGBANK",
+    "query_entity_type": "Disease",
+    "missing_entity_type": "Compound",
+    "candidate_universe_policy": "train_target_relation_compound_heads",
+    "candidate_universe_description": "Candidate compounds are compounds that appear as heads of the frozen target relation in the training split. Coverage-safe split ensures valid/test gold compounds remain in this universe.",
+    "top_k": 20,
+    "gold_injection": false,
+    "absent_gold_rank_sentinel": 21,
+    "paper_claim_level": "DrugBank treatment-relation prediction within DRKG; not clinical validation.",
+    "recommended_wording": "treatment-like drugdisease prediction / DrugBank treats relation",
+    "target_edges_path": "dataset/setting_e_drkg/01_task_spec/target_edges_unique.tsv",
+    "target_relation_glossary": {
+      "Relation-name": "DRUGBANK::treats::Compound:Disease",
+      "Data-source": "DRUGBANK",
+      "Connected entity-types": "Compound:Disease",
+      "Interaction-type": "Compound treats the disease",
+      "Description": "We extract  the  associated  conditions  related  to  compound entities in the drugbank.",
+      "Reference for the description": ""
+    }
+  },
+  "target_relation_feasibility": {
+    "created_at": "2026-05-11T16:34:41.029441+00:00",
+    "target_relation": "DRUGBANK::treats::Compound:Disease",
+    "num_rows_seen": 4968,
+    "num_unique_edges": 4968,
+    "num_duplicates_removed": 0,
+    "bad_direction_count": 0,
+    "num_unique_compounds": 1542,
+    "num_unique_diseases": 1182,
+    "compound_degree_min": 1,
+    "compound_degree_max": 71,
+    "disease_degree_min": 1,
+    "disease_degree_max": 63,
+    "compound_degree_hist_head": {
+      "1": 753,
+      "2": 260,
+      "3": 164,
+      "4": 94,
+      "5": 61,
+      "6": 48,
+      "7": 36,
+      "8": 29,
+      "9": 16,
+      "10": 15,
+      "11": 10,
+      "12": 9,
+      "13": 3,
+      "14": 7,
+      "15": 3,
+      "16": 5,
+      "17": 4,
+      "18": 4,
+      "20": 3,
+      "21": 1,
+      "22": 1,
+      "23": 1,
+      "25": 1,
+      "26": 1,
+      "28": 1,
+      "30": 1,
+      "34": 1,
+      "38": 1,
+      "39": 1,
+      "47": 1,
+      "51": 1,
+      "53": 1,
+      "60": 1,
+      "66": 1,
+      "71": 3
+    },
+    "disease_degree_hist_head": {
+      "1": 450,
+      "2": 200,
+      "3": 111,
+      "4": 91,
+      "5": 67,
+      "6": 48,
+      "7": 35,
+      "8": 34,
+      "9": 28,
+      "10": 18,
+      "11": 13,
+      "12": 9,
+      "13": 10,
+      "14": 10,
+      "15": 6,
+      "16": 10,
+      "17": 4,
+      "18": 7,
+      "19": 3,
+      "20": 1,
+      "21": 3,
+      "23": 2,
+      "24": 3,
+      "25": 1,
+      "26": 4,
+      "27": 2,
+      "28": 1,
+      "29": 2,
+      "30": 3,
+      "33": 1,
+      "36": 1,
+      "42": 1,
+      "45": 1,
+      "48": 1,
+      "63": 1
+    },
+    "num_singleton_compounds": 753,
+    "num_singleton_diseases": 450,
+    "sample_edges": [
+      {
+        "head": "Compound::DB00003",
+        "relation": "DRUGBANK::treats::Compound:Disease",
+        "tail": "Disease::MESH:D003550",
+        "head_type": "Compound",
+        "tail_type": "Disease"
+      },
+      {
+        "head": "Compound::DB00004",
+        "relation": "DRUGBANK::treats::Compound:Disease",
+        "tail": "Disease::MESH:C063419",
+        "head_type": "Compound",
+        "tail_type": "Disease"
+      },
+      {
+        "head": "Compound::DB00005",
+        "relation": "DRUGBANK::treats::Compound:Disease",
+        "tail": "Disease::MESH:D013167",
+        "head_type": "Compound",
+        "tail_type": "Disease"
+      },
+      {
+        "head": "Compound::DB00005",
+        "relation": "DRUGBANK::treats::Compound:Disease",
+        "tail": "Disease::MESH:D006086",
+        "head_type": "Compound",
+        "tail_type": "Disease"
+      },
+      {
+        "head": "Compound::DB00005",
+        "relation": "DRUGBANK::treats::Compound:Disease",
+        "tail": "Disease::MESH:D017497",
+        "head_type": "Compound",
+        "tail_type": "Disease"
+      },
+      {
+        "head": "Compound::DB00005",
+        "relation": "DRUGBANK::treats::Compound:Disease",
+        "tail": "Disease::MESH:D001171",
+        "head_type": "Compound",
+        "tail_type": "Disease"
+      },
+      {
+        "head": "Compound::DB00005",
+        "relation": "DRUGBANK::treats::Compound:Disease",
+        "tail": "Disease::MESH:D011565",
+        "head_type": "Compound",
+        "tail_type": "Disease"
+      },
+      {
+        "head": "Compound::DB00005",
+        "relation": "DRUGBANK::treats::Compound:Disease",
+        "tail": "Disease::MESH:D015535",
+        "head_type": "Compound",
+        "tail_type": "Disease"
+      },
+      {
+        "head": "Compound::DB00005",
+        "relation": "DRUGBANK::treats::Compound:Disease",
+        "tail": "Disease::MESH:D017511",
+        "head_type": "Compound",
+        "tail_type": "Disease"
+      },
+      {
+        "head": "Compound::DB00005",
+        "relation": "DRUGBANK::treats::Compound:Disease",
+        "tail": "Disease::MESH:D001172",
+        "head_type": "Compound",
+        "tail_type": "Disease"
+      },
+      {
+        "head": "Compound::DB00005",
+        "relation": "DRUGBANK::treats::Compound:Disease",
+        "tail": "Disease::MESH:D013262",
+        "head_type": "Compound",
+        "tail_type": "Disease"
+      },
+      {
+        "head": "Compound::DB00006",
+        "relation": "DRUGBANK::treats::Compound:Disease",
+        "tail": "Disease::MESH:D054058",
+        "head_type": "Compound",
+        "tail_type": "Disease"
+      },
+      {
+        "head": "Compound::DB00006",
+        "relation": "DRUGBANK::treats::Compound:Disease",
+        "tail": "Disease::MESH:D013927",
+        "head_type": "Compound",
+        "tail_type": "Disease"
+      },
+      {
+        "head": "Compound::DB00007",
+        "relation": "DRUGBANK::treats::Compound:Disease",
+        "tail": "Disease::MESH:D001943",
+        "head_type": "Compound",
+        "tail_type": "Disease"
+      },
+      {
+        "head": "Compound::DB00007",
+        "relation": "DRUGBANK::treats::Compound:Disease",
+        "tail": "Disease::MESH:D011629",
+        "head_type": "Compound",
+        "tail_type": "Disease"
+      },
+      {
+        "head": "Compound::DB00007",
+        "relation": "DRUGBANK::treats::Compound:Disease",
+        "tail": "Disease::MESH:D004715",
+        "head_type": "Compound",
+        "tail_type": "Disease"
+      },
+      {
+        "head": "Compound::DB00007",
+        "relation": "DRUGBANK::treats::Compound:Disease",
+        "tail": "Disease::MESH:D007246",
+        "head_type": "Compound",
+        "tail_type": "Disease"
+      },
+      {
+        "head": "Compound::DB00007",
+        "relation": "DRUGBANK::treats::Compound:Disease",
+        "tail": "Disease::MESH:D010146",
+        "head_type": "Compound",
+        "tail_type": "Disease"
+      },
+      {
+        "head": "Compound::DB00007",
+        "relation": "DRUGBANK::treats::Compound:Disease",
+        "tail": "Disease::MESH:D010262",
+        "head_type": "Compound",
+        "tail_type": "Disease"
+      },
+      {
+        "head": "Compound::DB00007",
+        "relation": "DRUGBANK::treats::Compound:Disease",
+        "tail": "Disease::MESH:D007889",
+        "head_type": "Compound",
+        "tail_type": "Disease"
+      }
+    ],
+    "recommended_split": {
+      "recommended_valid_size": 500,
+      "recommended_test_size": 500,
+      "recommended_train_size": 3968,
+      "attempts": [
+        {
+          "requested_valid_size": 500,
+          "requested_test_size": 500,
+          "requested_holdout": 1000,
+          "feasible": true,
+          "attempt_used": 0,
+          "actual_holdout_possible": 1000,
+          "projected_train_size": 3968,
+          "projected_valid_size": 500,
+          "projected_test_size": 500,
+          "coverage_policy": "valid/test compounds and diseases remain in train target relation"
+        }
+      ],
+      "decision": "SPLIT_SIZE_FEASIBLE"
+    }
+  },
+  "recommended_split": {
+    "recommended_valid_size": 500,
+    "recommended_test_size": 500,
+    "recommended_train_size": 3968,
+    "attempts": [
+      {
+        "requested_valid_size": 500,
+        "requested_test_size": 500,
+        "requested_holdout": 1000,
+        "feasible": true,
+        "attempt_used": 0,
+        "actual_holdout_possible": 1000,
+        "projected_train_size": 3968,
+        "projected_valid_size": 500,
+        "projected_test_size": 500,
+        "coverage_policy": "valid/test compounds and diseases remain in train target relation"
+      }
+    ],
+    "decision": "SPLIT_SIZE_FEASIBLE"
+  },
+  "protocol_freeze": {
+    "created_at": "2026-05-11T16:34:41.029436+00:00",
+    "setting": "setting_e_drkg",
+    "dataset": "DRKG",
+    "target_relation": "DRUGBANK::treats::Compound:Disease",
+    "reviewer_safe_policy": {
+      "top_k": 20,
+      "gold_injection": false,
+      "absent_gold_rank_sentinel": 21,
+      "rr_definition": "RR = 1/rank if rank <= 20 else 0"
+    },
+    "split_policy": {
+      "coverage_safe": true,
+      "valid_test_gold_compounds_in_train_candidate_universe": true,
+      "valid_test_query_diseases_seen_in_train_target": true,
+      "recommended_split": {
+        "recommended_valid_size": 500,
+        "recommended_test_size": 500,
+        "recommended_train_size": 3968,
+        "attempts": [
+          {
+            "requested_valid_size": 500,
+            "requested_test_size": 500,
+            "requested_holdout": 1000,
+            "feasible": true,
+            "attempt_used": 0,
+            "actual_holdout_possible": 1000,
+            "projected_train_size": 3968,
+            "projected_valid_size": 500,
+            "projected_test_size": 500,
+            "coverage_policy": "valid/test compounds and diseases remain in train target relation"
+          }
+        ],
+        "decision": "SPLIT_SIZE_FEASIBLE"
+      }
+    },
+    "graph_construction_policy": {
+      "do_not_use_full_graph_blindly": true,
+      "reason": "DRKG has 5.87M triples; full graph is too large/noisy for fast baseline and subgraph retrieval.",
+      "target_relation_handling": "Include only train target DRUGBANK::treats edges; remove valid/test target edges.",
+      "candidate_universe": "Compounds from train target heads.",
+      "initial_train_graph_relation_families": [
+        "target train DRUGBANK::treats edges",
+        "Compound-Gene relations",
+        "Disease-Gene relations",
+        "Gene-Gene relations",
+        "selected auxiliary Compound-Disease evidence relations with shortcut penalties"
+      ],
+      "degree_cap_policy_day3": {
+        "cap_high_degree_genes": true,
+        "max_edges_target_for_graph": "Prefer <= 1.5M edges for initial DRKG Setting E graph.",
+        "keep_all_target_train_edges": true,
+        "keep_all_candidate_query_target_nodes": true,
+        "apply_relation_and_node_degree_filtering": true
+      },
+      "leakage_policy": "Exact valid/test target triples must be removed from train graph and subgraphs."
+    },
+    "auxiliary_compound_disease_relations": [
+      {
+        "relation": "GNBR::T::Compound:Disease",
+        "direction": "Compound->Disease",
+        "count": 54020,
+        "num_unique_compounds": 6628,
+        "num_unique_diseases": 3300,
+        "source_hint": "GNBR",
+        "role": "direct_cd_auxiliary",
+        "caution": [
+          "very_large_relation_use_degree_cap_or_penalty"
+        ]
+      },
+      {
+        "relation": "GNBR::Sa::Compound:Disease",
+        "direction": "Compound->Disease",
+        "count": 16923,
+        "num_unique_compounds": 3833,
+        "num_unique_diseases": 1666,
+        "source_hint": "GNBR",
+        "role": "direct_cd_auxiliary",
+        "caution": []
+      },
+      {
+        "relation": "GNBR::Pa::Compound:Disease",
+        "direction": "Compound->Disease",
+        "count": 2619,
+        "num_unique_compounds": 1498,
+        "num_unique_diseases": 513,
+        "source_hint": "GNBR",
+        "role": "direct_cd_auxiliary",
+        "caution": []
+      },
+      {
+        "relation": "GNBR::C::Compound:Disease",
+        "direction": "Compound->Disease",
+        "count": 1739,
+        "num_unique_compounds": 1225,
+        "num_unique_diseases": 213,
+        "source_hint": "GNBR",
+        "role": "direct_cd_auxiliary",
+        "caution": []
+      },
+      {
+        "relation": "GNBR::J::Compound:Disease",
+        "direction": "Compound->Disease",
+        "count": 1020,
+        "num_unique_compounds": 388,
+        "num_unique_diseases": 642,
+        "source_hint": "GNBR",
+        "role": "direct_cd_auxiliary",
+        "caution": []
+      },
+      {
+        "relation": "GNBR::Pr::Compound:Disease",
+        "direction": "Compound->Disease",
+        "count": 966,
+        "num_unique_compounds": 760,
+        "num_unique_diseases": 274,
+        "source_hint": "GNBR",
+        "role": "direct_cd_auxiliary",
+        "caution": []
+      },
+      {
+        "relation": "Hetionet::CtD::Compound:Disease",
+        "direction": "Compound->Disease",
+        "count": 755,
+        "num_unique_compounds": 387,
+        "num_unique_diseases": 77,
+        "source_hint": "Hetionet",
+        "role": "direct_cd_auxiliary",
+        "caution": [
+          "overlaps_with_week26_hetionet_source"
+        ]
+      },
+      {
+        "relation": "GNBR::Mp::Compound:Disease",
+        "direction": "Compound->Disease",
+        "count": 495,
+        "num_unique_compounds": 425,
+        "num_unique_diseases": 154,
+        "source_hint": "GNBR",
+        "role": "direct_cd_auxiliary",
+        "caution": []
+      },
+      {
+        "relation": "Hetionet::CpD::Compound:Disease",
+        "direction": "Compound->Disease",
+        "count": 390,
+        "num_unique_compounds": 221,
+        "num_unique_diseases": 50,
+        "source_hint": "Hetionet",
+        "role": "direct_cd_auxiliary",
+        "caution": [
+          "overlaps_with_week26_hetionet_source"
+        ]
+      }
+    ],
+    "baseline_policy": {
+      "run_all_structure_baselines_if_compute_allows": [
+        "TransE",
+        "DistMult",
+        "ComplEx",
+        "RotatE",
+        "R-GCN",
+        "HRGAT"
+      ],
+      "source_selection_rule": "Prefer a graph-compatible source such as R-GCN if it has non-trivial Gold@20; otherwise use best-valid non-degenerate structure model as a diagnostic source."
+    }
+  },
+  "next_step": "Day 3 build actual split + filtered train graph + mappings."
+}
