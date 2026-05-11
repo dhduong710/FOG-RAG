@@ -1,0 +1,60 @@
+{
+  "row_name": "fuzzy_retrieval_main",
+  "split": "test",
+  "candidate_metrics": {
+    "num_rows": 100,
+    "candidate_gold_at20": 0.44,
+    "candidate_mrr_at20": 0.09543863489451723,
+    "candidate_hits1": 0.01,
+    "candidate_hits3": 0.11,
+    "candidate_hits10": 0.28,
+    "candidate_rank21_count": 56,
+    "avg_subgraph_size": 44.0,
+    "top1_dominance": 0.37,
+    "top1_most_common": [
+      {
+        "entity": "Chlorambucil",
+        "count": 37
+      },
+      {
+        "entity": "Vincristine",
+        "count": 32
+      },
+      {
+        "entity": "Dactinomycin",
+        "count": 13
+      },
+      {
+        "entity": "Methotrexate",
+        "count": 8
+      },
+      {
+        "entity": "Triamcinolone",
+        "count": 4
+      },
+      {
+        "entity": "Betamethasone",
+        "count": 3
+      },
+      {
+        "entity": "Doxorubicin",
+        "count": 3
+      }
+    ]
+  },
+  "e2e_metrics": {
+    "num_rows": 100,
+    "e2e_adjusted_mrr_at20": 0.09914238947327185,
+    "e2e_adjusted_hits1": 0.02,
+    "e2e_adjusted_hits3": 0.11,
+    "e2e_adjusted_hits10": 0.28,
+    "e2e_adjusted_rank21_count": 56,
+    "strict_exact_match_rate": 0.02,
+    "strict_exact_match_mrr_at20": 0.015,
+    "pred_in_candidate_rate": 1.0,
+    "invalid_rate": 0.0,
+    "invalid_count": 0,
+    "exact_match_count": 2,
+    "metric_note": "Paper-facing metric should be the adjusted E2E rank for consistency with prior PrimeKG/PharmKG analyses; strict exact-match is diagnostic."
+  }
+}
