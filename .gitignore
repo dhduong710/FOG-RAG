@@ -21,3 +21,6 @@ dataset/setting_a/33_week25_noise_robustness/N5_*/train.json
 dataset/setting_a/33_week25_noise_robustness/N6_*/train.json
 
 .vscode
+
+dataset/setting_d_hetionet/00_raw_inventory/extracted/dhimmel-hetionet-4933ca1/hetnet/neo4j/hetionet-v1.0.db.tar.bz2
+dataset/setting_d_hetionet/00_raw_inventory/hetionet-v1.0.0.zip
