@@ -1,0 +1,224 @@
+{
+  "created_at": "2026-05-12T01:21:27.348093+00:00",
+  "decision": "DAY2_REPODB_TASK_SCHEMA_READY",
+  "normalization_summary": {
+    "created_at": "2026-05-12T01:21:27.344899+00:00",
+    "raw_rows": 10800,
+    "raw_columns": [
+      "Drug",
+      "Indication",
+      "drug_name",
+      "drug_id",
+      "ind_name",
+      "ind_id",
+      "sem_type",
+      "TrialStatus",
+      "status",
+      "phase",
+      "DetailedStatus"
+    ],
+    "label_counts_raw": {
+      "approved": 6677,
+      "failed_like": 4123
+    },
+    "valid_drugbank_and_cui_counts": {
+      "True": 10800
+    },
+    "approved_unique_pairs": 6677,
+    "failed_like_unique_pairs_before_conflict_removal": 3281,
+    "failed_like_unique_pairs_after_conflict_removal": 3260,
+    "conflict_pair_count": 21,
+    "unique_approved_drugs": 1519,
+    "unique_approved_diseases": 1229,
+    "unique_failed_drugs": 458,
+    "unique_failed_diseases": 989,
+    "target_relation": "repoDB::approved_indication::Compound:Disease",
+    "failed_diagnostic_relation": "repoDB::failed_or_suspended::Compound:Disease"
+  },
+  "target_relation_feasibility": {
+    "created_at": "2026-05-12T01:21:27.347092+00:00",
+    "target_relation": "repoDB::approved_indication::Compound:Disease",
+    "num_unique_target_edges": 6677,
+    "num_unique_compounds": 1519,
+    "num_unique_diseases": 1229,
+    "recommended_split": {
+      "decision": "SPLIT_SIZE_FEASIBLE",
+      "recommended_valid_size": 500,
+      "recommended_test_size": 500,
+      "recommended_train_size": 5677,
+      "attempts": [
+        {
+          "requested_valid_size": 500,
+          "requested_test_size": 500,
+          "requested_holdout": 1000,
+          "feasible": true,
+          "attempt_used": 0,
+          "actual_holdout_possible": 1000,
+          "projected_train_size": 5677,
+          "projected_valid_size": 500,
+          "projected_test_size": 500,
+          "coverage_policy": "valid/test drugs and diseases remain in train approved target relation"
+        }
+      ]
+    }
+  },
+  "mapping_probe": {
+    "drkg_entity_map_found": true,
+    "drkg_num_entities": 13918,
+    "num_unique_compounds_repodb": 1571,
+    "num_unique_diseases_repodb": 2051,
+    "num_unique_approved_compounds": 1519,
+    "num_unique_approved_diseases": 1229,
+    "compound_exact_hits_in_drkg": 1130,
+    "compound_exact_hit_rate": 0.7192870782940802,
+    "approved_compound_exact_hits_in_drkg": 1106,
+    "approved_compound_exact_hit_rate": 0.728110599078341,
+    "disease_exact_umls_hits_in_drkg": 0,
+    "disease_any_exact_hits_in_drkg": 0,
+    "disease_any_exact_hit_rate": 0.0,
+    "sample_compound_hits": [
+      "Compound::DB00003",
+      "Compound::DB00004",
+      "Compound::DB00005",
+      "Compound::DB00007",
+      "Compound::DB00008",
+      "Compound::DB00009",
+      "Compound::DB00012",
+      "Compound::DB00013",
+      "Compound::DB00014",
+      "Compound::DB00015",
+      "Compound::DB00016",
+      "Compound::DB00017",
+      "Compound::DB00019",
+      "Compound::DB00020",
+      "Compound::DB00022",
+      "Compound::DB00023",
+      "Compound::DB00026",
+      "Compound::DB00027",
+      "Compound::DB00030",
+      "Compound::DB00031"
+    ],
+    "sample_compound_misses": [
+      "Compound::DB00001",
+      "Compound::DB00002",
+      "Compound::DB00010",
+      "Compound::DB00041",
+      "Compound::DB00074",
+      "Compound::DB00088",
+      "Compound::DB00092",
+      "Compound::DB00095",
+      "Compound::DB00106",
+      "Compound::DB00111",
+      "Compound::DB00112",
+      "Compound::DB00121",
+      "Compound::DB00122",
+      "Compound::DB00128",
+      "Compound::DB00130",
+      "Compound::DB00131",
+      "Compound::DB00133",
+      "Compound::DB00137",
+      "Compound::DB00139",
+      "Compound::DB00145"
+    ],
+    "sample_disease_hits": [],
+    "sample_disease_misses": [
+      "Disease::UMLS:C0000810",
+      "Disease::UMLS:C0000814",
+      "Disease::UMLS:C0001126",
+      "Disease::UMLS:C0001127",
+      "Disease::UMLS:C0001144",
+      "Disease::UMLS:C0001206",
+      "Disease::UMLS:C0001207",
+      "Disease::UMLS:C0001261",
+      "Disease::UMLS:C0001263",
+      "Disease::UMLS:C0001264",
+      "Disease::UMLS:C0001314",
+      "Disease::UMLS:C0001403",
+      "Disease::UMLS:C0001418",
+      "Disease::UMLS:C0001622",
+      "Disease::UMLS:C0001624",
+      "Disease::UMLS:C0001627",
+      "Disease::UMLS:C0001723",
+      "Disease::UMLS:C0001815",
+      "Disease::UMLS:C0001956",
+      "Disease::UMLS:C0001957"
+    ],
+    "disease_form_hits_sample": {}
+  },
+  "task_spec": {
+    "created_at": "2026-05-12T01:21:27.347936+00:00",
+    "setting": "setting_f_repodb",
+    "dataset": "repoDB",
+    "status": "FROZEN_DAY2",
+    "task_name": "repodb_approved_indication_head_prediction",
+    "task_form": "(?, repoDB_approved_indication, disease)",
+    "prediction_type": "predicted_head",
+    "target_relation": "repoDB::approved_indication::Compound:Disease",
+    "target_relation_normalized": "repodb_approved_indication",
+    "failed_diagnostic_relation": "repoDB::failed_or_suspended::Compound:Disease",
+    "target_relation_direction": "Compound->Disease",
+    "query_entity_type": "Disease",
+    "query_entity_namespace": "UMLS CUI",
+    "missing_entity_type": "Compound",
+    "compound_namespace": "DrugBank ID",
+    "entity_format": {
+      "compound": "Compound::DBxxxxx",
+      "disease": "Disease::UMLS:Cxxxxxxx"
+    },
+    "candidate_universe_policy": "train_approved_relation_compound_heads",
+    "top_k": 20,
+    "gold_injection": false,
+    "absent_gold_rank_sentinel": 21,
+    "paper_claim_level": "Clinical drug-repositioning external validation using approved repoDB pairs; not a claim of prospective clinical validation.",
+    "recommended_wording": "repoDB approved drug-indication prediction / clinical drug-repositioning external validation",
+    "target_edges_path": "dataset/setting_f_repodb/01_task_spec/target_edges_unique.tsv",
+    "failed_diagnostic_edges_path": "dataset/setting_f_repodb/01_task_spec/failed_diagnostic_edges_unique.tsv"
+  },
+  "protocol_freeze": {
+    "created_at": "2026-05-12T01:21:27.348020+00:00",
+    "setting": "setting_f_repodb",
+    "dataset": "repoDB",
+    "reviewer_safe_policy": {
+      "top_k": 20,
+      "gold_injection": false,
+      "absent_gold_rank_sentinel": 21,
+      "rr_definition": "RR = 1/rank if rank <= 20 else 0"
+    },
+    "split_policy": {
+      "coverage_safe": true,
+      "valid_test_gold_drugs_in_train_candidate_universe": true,
+      "valid_test_query_diseases_seen_in_train_target": true,
+      "recommended_split": {
+        "decision": "SPLIT_SIZE_FEASIBLE",
+        "recommended_valid_size": 500,
+        "recommended_test_size": 500,
+        "recommended_train_size": 5677,
+        "attempts": [
+          {
+            "requested_valid_size": 500,
+            "requested_test_size": 500,
+            "requested_holdout": 1000,
+            "feasible": true,
+            "attempt_used": 0,
+            "actual_holdout_possible": 1000,
+            "projected_train_size": 5677,
+            "projected_valid_size": 500,
+            "projected_test_size": 500,
+            "coverage_policy": "valid/test drugs and diseases remain in train approved target relation"
+          }
+        ]
+      }
+    },
+    "label_policy": {
+      "positive_target": "Approved repoDB pairs only",
+      "failed_like_pairs": "Reserved for diagnostic/negative evidence; not used as positive labels",
+      "conflict_policy": "If a pair is both approved and failed-like, keep as approved positive and remove from failed-like diagnostic set."
+    },
+    "mapping_policy": {
+      "compound_mapping_to_drkg": "Exact Compound::DBxxxxx mapping where possible",
+      "disease_mapping_to_drkg": "Probe exact CUI forms; if weak, use repoDB-local UMLS disease nodes",
+      "day3_graph_policy": "Build repoDB target graph and optionally attach DRKG evidence for mapped compounds/diseases."
+    }
+  },
+  "next_step": "Day 3 build actual split and evidence graph."
+}
