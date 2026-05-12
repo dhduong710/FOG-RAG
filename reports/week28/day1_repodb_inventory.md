@@ -1,0 +1,206 @@
+# Week 28 Day 1  repoDB raw inventory
+
+- Decision: `DAY1_REPODB_RAW_INVENTORY_READY`
+- Created at: `2026-05-12T01:13:53.594210+00:00`
+- Setting: `setting_f_repodb`
+
+## Source notes
+
+- repoDB is used as a clinical drug-repositioning external validation benchmark.
+- The official web app describes repoDB as containing repositioning successes and failures.
+- Current repoDB web data links drugs to DrugCentral/DrugBank IDs and diseases to UMLS terms.
+
+## Download/export status
+
+```json
+{
+  "status": "downloaded",
+  "path": "dataset/setting_f_repodb/00_raw_inventory/downloads/shiny.RData",
+  "size_mb": 0.2919,
+  "url_used": "https://raw.githubusercontent.com/adam-sam-brown/repoDB/master/Shiny_Application/data/shiny.RData"
+}
+```
+
+## RData export status
+
+```json
+{
+  "pyreadr": {
+    "method": "pyreadr",
+    "status": "success",
+    "exported_files": [
+      {
+        "object_name": "drug.fr",
+        "path": "dataset/setting_f_repodb/00_raw_inventory/exported_tables/pyreadr_drug.fr.tsv",
+        "rows": 10800,
+        "cols": 11
+      }
+    ]
+  },
+  "Rscript": {
+    "method": "Rscript",
+    "status": "skipped_pyreadr_success",
+    "exported_files": []
+  }
+}
+```
+
+## Tables found
+
+| Rank | Rows | Cols | Score | Path | Status cols | DrugBank cols | UMLS cols |
+|---:|---:|---:|---:|---|---|---|---|
+| 1 | 10800 | 11 | 31.90 | `exported_tables/pyreadr_drug.fr.tsv` | `['TrialStatus', 'status', 'DetailedStatus']` | `[]` | `[]` |
+
+## Best table probe
+
+```json
+{
+  "path": "dataset/setting_f_repodb/00_raw_inventory/exported_tables/pyreadr_drug.fr.tsv",
+  "relative_path": "exported_tables/pyreadr_drug.fr.tsv",
+  "size_mb": 2.9765,
+  "num_rows": 10800,
+  "num_cols": 11,
+  "columns": [
+    "Drug",
+    "Indication",
+    "drug_name",
+    "drug_id",
+    "ind_name",
+    "ind_id",
+    "sem_type",
+    "TrialStatus",
+    "status",
+    "phase",
+    "DetailedStatus"
+  ],
+  "column_groups": {
+    "status": [
+      "TrialStatus",
+      "status",
+      "DetailedStatus"
+    ],
+    "phase": [
+      "phase"
+    ],
+    "drug_name": [
+      "Drug",
+      "drug_name",
+      "drug_id"
+    ],
+    "drugbank_id": [],
+    "drugcentral_id": [],
+    "disease_name": [],
+    "umls": [],
+    "indication": [
+      "Indication"
+    ],
+    "nct": []
+  },
+  "status_summary": {
+    "TrialStatus": {
+      "value_counts_top50": {
+        "Approved": 6677,
+        "<a href=\"https://clinicaltrials.gov/ct2/show/NCT01652014\" target=\"_blank\">Suspended (Phase 2)</a>": 336,
+        "<a href=\"https://clinicaltrials.gov/ct2/show/NCT01419795\" target=\"_blank\">Terminated (Phase 2)</a>": 93,
+        "<a href=\"https://clinicaltrials.gov/ct2/show/NCT01342887\" target=\"_blank\">Terminated (Phase 1/Phase 2)</a>": 70,
+        "<a href=\"https://clinicaltrials.gov/ct2/show/NCT00096148\" target=\"_blank\">Terminated (Phase 2)</a>": 66,
+        "<a href=\"https://clinicaltrials.gov/ct2/show/NCT00906360\" target=\"_blank\">Terminated (Phase 1)</a>": 62,
+        "<a href=\"https://clinicaltrials.gov/ct2/show/NCT00096005\" target=\"_blank\">Terminated (Phase 1)</a>": 56,
+        "<a href=\"https://clinicaltrials.gov/ct2/show/NCT00068692\" target=\"_blank\">Terminated (Phase 3)</a>": 55,
+        "<a href=\"https://clinicaltrials.gov/ct2/show/NCT00945009\" target=\"_blank\">Suspended (Phase 3)</a>": 50,
+        "<a href=\"https://clinicaltrials.gov/ct2/show/NCT02029417\" target=\"_blank\">Terminated (Phase 2)</a>": 48,
+        "<a href=\"https://clinicaltrials.gov/ct2/show/NCT01260714\" target=\"_blank\">Terminated (Phase 1)</a>": 44,
+        "<a href=\"https://clinicaltrials.gov/ct2/show/NCT01639521\" target=\"_blank\">Withdrawn (Phase 2)</a>": 40,
+        "<a href=\"https://clinicaltrials.gov/ct2/show/NCT01728480\" target=\"_blank\">Withdrawn (Phase 1)</a>": 36,
+        "<a href=\"https://clinicaltrials.gov/ct2/show/NCT01320683\" target=\"_blank\">Terminated (Phase 2)</a>": 35,
+        "<a href=\"https://clinicaltrials.gov/ct2/show/NCT00060112\" target=\"_blank\">Terminated (Phase 1)</a>": 34,
+        "<a href=\"https://clinicaltrials.gov/ct2/show/NCT01564277\" target=\"_blank\">Terminated (Phase 2)</a>": 34,
+        "<a href=\"https://clinicaltrials.gov/ct2/show/NCT00052585\" target=\"_blank\">Terminated (Phase 2)</a>": 32,
+        "<a href=\"https://clinicaltrials.gov/ct2/show/NCT01332279\" target=\"_blank\">Withdrawn (Phase 1)</a>": 30,
+        "<a href=\"https://clinicaltrials.gov/ct2/show/NCT02235324\" target=\"_blank\">Withdrawn (Phase 2)</a>": 30,
+        "<a href=\"https://clinicaltrials.gov/ct2/show/NCT00387426\" target=\"_blank\">Terminated (Phase 2)</a>": 29,
+        "<a href=\"https://clinicaltrials.gov/ct2/show/NCT00070122\" target=\"_blank\">Terminated (Phase 3)</a>": 28,
+        "<a href=\"https://clinicaltrials.gov/ct2/show/NCT00088881\" target=\"_blank\">Terminated (Phase 2)</a>": 28,
+        "<a href=\"https://clinicaltrials.gov/ct2/show/NCT02620865\" target=\"_blank\">Suspended (Phase 1/Phase 2)</a>": 27,
+        "<a href=\"https://clinicaltrials.gov/ct2/show/NCT00012298\" target=\"_blank\">Terminated (Phase 1/Phase 2)</a>": 24,
+        "<a href=\"https://clinicaltrials.gov/ct2/show/NCT02101788\" target=\"_blank\">Suspended (Phase 2/Phase 3)</a>": 24,
+        "<a href=\"https://clinicaltrials.gov/ct2/show/NCT01076556\" target=\"_blank\">Terminated (Phase 1)</a>": 22,
+        "<a href=\"https://clinicaltrials.gov/ct2/show/NCT01282333\" target=\"_blank\">Terminated (Phase 1)</a>": 22,
+        "<a href=\"https://clinicaltrials.gov/ct2/show/NCT00064259\" target=\"_blank\">Terminated (Phase 1/Phase 2)</a>": 20,
+        "<a href=\"https://clinicaltrials.gov/ct2/show/NCT00080847\" target=\"_blank\">Terminated (Phase 2)</a>": 20,
+        "<a href=\"https://clinicaltrials.gov/ct2/show/NCT01539174\" target=\"_blank\">Withdrawn (Phase 2)</a>": 20,
+        "<a href=\"https://clinicaltrials.gov/ct2/show/NCT00429702\" target=\"_blank\">Terminated (Phase 2)</a>": 18,
+        "<a href=\"https://clinicaltrials.gov/ct2/show/NCT00960063\" target=\"_blank\">Terminated (Phase 1)</a>": 18,
+        "<a href=\"https://clinicaltrials.gov/ct2/show/NCT00801931\" target=\"_blank\">Terminated (Phase 1/Phase 2)</a>": 17,
+        "<a href=\"https://clinicaltrials.gov/ct2/show/NCT00033449\" target=\"_blank\">Terminated (Phase 1)</a>": 16,
+        "<a href=\"https://clinicaltrials.gov/ct2/show/NCT01212887\" target=\"_blank\">Terminated (Phase 1)</a>": 16,
+        "<a href=\"https://clinicaltrials.gov/ct2/show/NCT01538459\" target=\"_blank\">Withdrawn (Phase 3)</a>": 15,
+        "<a href=\"https://clinicaltrials.gov/ct2/show/NCT01682031\" target=\"_blank\">Terminated (Phase 2)</a>": 15,
+        "<a href=\"https://clinicaltrials.gov/ct2/show/NCT01932554\" target=\"_blank\">Withdrawn (Phase 2)</a>": 15,
+        "<a href=\"https://clinicaltrials.gov/ct2/show/NCT02212210\" target=\"_blank\">Terminated (Phase 0)</a>": 15,
+        "<a href=\"https://clinicaltrials.gov/ct2/show/NCT00066417\" target=\"_blank\">Terminated (Phase 2)</a>": 14,
+        "<a href=\"https://clinicaltrials.gov/ct2/show/NCT00095693\" target=\"_blank\">Terminated (Phase 2)</a>": 14,
+        "<a href=\"https://clinicaltrials.gov/ct2/show/NCT00673153\" target=\"_blank\">Terminated (Phase 2)</a>": 14,
+        "<a href=\"https://clinicaltrials.gov/ct2/show/NCT00827099\" target=\"_blank\">Terminated (Phase 2)</a>": 14,
+        "<a href=\"https://clinicaltrials.gov/ct2/show/NCT00863434\" target=\"_blank\">Terminated (Phase 2)</a>": 14,
+        "<a href=\"https://clinicaltrials.gov/ct2/show/NCT01005914\" target=\"_blank\">Terminated (Phase 2)</a>": 14,
+        "<a href=\"https://clinicaltrials.gov/ct2/show/NCT01726465\" target=\"_blank\">Terminated (Phase 2)</a>": 14,
+        "<a href=\"https://clinicaltrials.gov/ct2/show/NCT00049582\" target=\"_blank\">Terminated (Phase 1)</a>": 13,
+        "<a href=\"https://clinicaltrials.gov/ct2/show/NCT01521936\" target=\"_blank\">Terminated (Phase 2)</a>": 13,
+        "<a href=\"https://clinicaltrials.gov/ct2/show/NCT00016276\" target=\"_blank\">Terminated (Phase 3)</a>": 12,
+        "<a href=\"https://clinicaltrials.gov/ct2/show/NCT00052598\" target=\"_blank\">Terminated (Phase 1/Phase 2)</a>": 12
+      },
+      "approved_like_count": 6677,
+      "failed_like_count": 1708
+    },
+    "status": {
+      "value_counts_top50": {
+        "Approved": 6677,
+        "Terminated": 2877,
+        "Withdrawn": 662,
+        "Suspended": 584
+      },
+      "approved_like_count": 6677,
+      "failed_like_count": 4123
+    },
+    "DetailedStatus": {
+      "value_counts_top50": {
+        "": 7612,
+        "Funding unavailable": 339,
+        "Administratively complete.": 290,
+        "Lack of funding": 122,
+        "Low accrual": 114,
+        "low accrual": 67,
+        "Temporarily stopped for assessment": 60,
+        "Slow accrual": 53,
+        "Major revisions needed in study": 48,
+        "Inadequate accrual rate": 44,
+        "Drug supply issues": 42,
+        "Financial Sponsor requested termination": 36,
+        "This study will not be written up.": 35,
+        "Poor accrual": 34,
+        "Pharmaceutical co. withdrew support. Study was never activated and did not accrue any": 30,
+        "Pending administrative documentation": 27,
+        "Trial completed prematurely.": 24,
+        "Discontinued development of G3139 (oblimersen)": 20,
+        "No Funding Source and Competing Trials": 20,
+        "slow accrual": 19,
+        "Closed due to poor accrual and lack of feasibility to finish st
+```
+
+## Day 2 next step
+
+Day 2 should normalize the best table into canonical fields:
+
+```text
+drug_name
+drugbank_id
+drugcentral_id
+disease_name / indication
+umls_cui
+status
+phase
+label: approved vs failed-like
+```
+
+If automatic RData export failed, manually download the full repoDB dataset from the repoDB web app and place it under `dataset/setting_f_repodb/00_raw_inventory/manual/`, then rerun Day 1 with `--skip-download`.
