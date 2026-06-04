@@ -1,0 +1,19 @@
+{
+  "method": "HRGAT",
+  "protocol": "Setting A structure-only baseline",
+  "num_valid_queries": 500,
+  "drug_universe_size": 1801,
+  "mrr": 0.09550672,
+  "hits1": 0.016,
+  "hits3": 0.066,
+  "hits10": 0.29,
+  "top1_dominance_ratio": 0.054,
+  "unique_top1_count": 161,
+  "checkpoint_path": "results/week8/hrgat_baseline_full_v1/hrgat_checkpoint.pt",
+  "checkpoint_best_epoch": 9,
+  "meta_path": "results/week8/hrgat_baseline_full_v1/hrgat_meta.json",
+  "graph_path": "dataset/setting_a/02_graph/train_enriched_deg1000_final.tsv",
+  "valid_queries_path": "dataset/setting_a/01_split/valid.tsv",
+  "device": "cuda",
+  "skipped_graph_rows": 0
+}

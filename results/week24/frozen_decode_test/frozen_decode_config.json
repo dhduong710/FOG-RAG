@@ -1,0 +1,24 @@
+{
+  "decision": "PRIMEKG_DECODING_CONFIG_FROZEN_FROM_VALID",
+  "best_config": {
+    "config_id": "cfg01_mnt16_rp100_ng0",
+    "max_new_tokens": 16,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "retrieval_main_valid_mrr": 0.05851818,
+    "retrieval_main_invalid": 0.008,
+    "retrieval_main_pred_in_candidate": 0.992,
+    "avg_valid_mrr_all_rows": 0.05552675,
+    "avg_invalid_all_rows": 0.02333333,
+    "avg_pred_in_candidate_all_rows": 0.97666667
+  },
+  "use_for_day3": {
+    "max_new_tokens": 16,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "do_sample": false,
+    "num_beams": 1,
+    "temperature": 1.0
+  },
+  "important_note": "Selected on valid only. Do not change after looking at test."
+}

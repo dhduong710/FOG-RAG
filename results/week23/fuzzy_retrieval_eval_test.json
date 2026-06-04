@@ -1,0 +1,20 @@
+{
+  "eval_row_name": "fuzzy_retrieval_main",
+  "num_rows": 500,
+  "gold_present_at20": 0.092,
+  "mrr_at20": 0.028159018759018762,
+  "mrr_present_only": 0.3060762908588996,
+  "hits1_at20": 0.012,
+  "hits3_at20": 0.03,
+  "hits10_at20": 0.068,
+  "hits20_at20": 0.092,
+  "avg_gold_rank_absent_as_21": 19.67,
+  "gold_rank_21_count": 454,
+  "avg_candidate_size": 20.0,
+  "min_candidate_size": 20,
+  "max_candidate_size": 20,
+  "top_k": 20,
+  "gold_injection": false,
+  "rr_policy": "RR = 1/rank if gold is present in top-20 else 0",
+  "rank_absent_sentinel": 21
+}

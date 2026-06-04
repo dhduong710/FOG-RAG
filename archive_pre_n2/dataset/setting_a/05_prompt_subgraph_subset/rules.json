@@ -1,0 +1,13 @@
+{
+  "indication": [
+    [
+      "associated_with",
+      "target"
+    ],
+    [
+      "associated_with",
+      "ppi",
+      "target"
+    ]
+  ]
+}

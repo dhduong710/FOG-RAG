@@ -1,0 +1,1 @@
+PharmKG remains a difficult secondary transfer benchmark. The top-20 candidate bottleneck is strong, and unconstrained generation frequently produces invalid or fragmentary outputs for the Llama-3.2-3B run. Therefore, PharmKG is reported as transfer evidence for the direction of FOG-RAG improvements, not as a full-universe PharmKG KGC superiority claim.

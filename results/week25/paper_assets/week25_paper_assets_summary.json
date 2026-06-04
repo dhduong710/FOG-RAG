@@ -1,0 +1,24 @@
+{
+  "week": 25,
+  "day": 6,
+  "created_at": "2026-05-02T22:03:29",
+  "decision": "WEEK25_SENSITIVITY_PAPER_ASSETS_READY",
+  "inputs": {
+    "rule": "results/week25/rule_sensitivity/rule_sensitivity_e2e_summary.json",
+    "template": "results/week25/template_sensitivity/template_sensitivity_e2e_summary.json",
+    "noise": "results/week25/noise_robustness/noise_robustness_summary.json"
+  },
+  "outputs": {
+    "rule_sensitivity_table_latex": "results/week25/paper_assets/rule_sensitivity_table_latex.tex",
+    "template_sensitivity_table_latex": "results/week25/paper_assets/template_sensitivity_table_latex.tex",
+    "noise_robustness_table_latex": "results/week25/paper_assets/noise_robustness_table_latex.tex",
+    "week25_sensitivity_paragraph": "results/week25/paper_assets/week25_sensitivity_paragraph.md",
+    "week25_limitation_paragraph": "results/week25/paper_assets/week25_limitation_paragraph.md",
+    "day6_report": "reports/week25/day6_sensitivity_paper_assets.md"
+  },
+  "notes": [
+    "Use the sensitivity paragraph in the appendix or robustness section.",
+    "Use the limitation paragraph to avoid overclaiming support-score robustness.",
+    "Tables are appendix-ready but may need resizing depending on final paper format."
+  ]
+}

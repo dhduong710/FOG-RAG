@@ -1,0 +1,14 @@
+{
+  "pilot_input_dir": "dataset/setting_a/06_pilot_subset",
+  "split_dir": "dataset/setting_a/01_split",
+  "graph_path": "dataset/setting_a/02_graph/train_enriched_deg1000_final.tsv",
+  "graph_size": 100,
+  "bkg": true,
+  "train_input_count": 839,
+  "valid_input_count": 100,
+  "test_input_count": 100,
+  "train_raw_subset_count": 839,
+  "valid_raw_subset_count": 100,
+  "test_raw_subset_count": 100,
+  "note": "train_raw passed to prompt_subgraph.py is the full train-only retrieval graph, not the pilot raw train split, to follow the week-2 prompt_subgraph logic while staying train-only for retrieval."
+}

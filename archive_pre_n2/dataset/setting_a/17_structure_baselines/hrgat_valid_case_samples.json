@@ -1,0 +1,142 @@
+[
+  {
+    "idx": 0,
+    "query_disease": "leukemia, lymphocytic, susceptibility to",
+    "gold_drug": "Cortisone acetate",
+    "gold_rank": 10,
+    "top1_pred": "Prednisone",
+    "top5_pred": [
+      "Prednisone",
+      "Methylprednisolone",
+      "Triamcinolone",
+      "Teniposide",
+      "Dexamethasone"
+    ]
+  },
+  {
+    "idx": 1,
+    "query_disease": "streptococcal infection",
+    "gold_drug": "Cefixime",
+    "gold_rank": 84,
+    "top1_pred": "Fusidic acid",
+    "top5_pred": [
+      "Fusidic acid",
+      "Norfloxacin",
+      "Ceftazidime",
+      "Cefuroxime",
+      "Ofloxacin"
+    ]
+  },
+  {
+    "idx": 2,
+    "query_disease": "dyspepsia",
+    "gold_drug": "Magnesium trisilicate",
+    "gold_rank": 31,
+    "top1_pred": "Cimetidine",
+    "top5_pred": [
+      "Cimetidine",
+      "Aluminum hydroxide",
+      "Nizatidine",
+      "Magnesium hydroxide",
+      "Magnesium carbonate"
+    ]
+  },
+  {
+    "idx": 3,
+    "query_disease": "basal cell carcinoma",
+    "gold_drug": "Vismodegib",
+    "gold_rank": 5,
+    "top1_pred": "Sonidegib",
+    "top5_pred": [
+      "Sonidegib",
+      "Docetaxel",
+      "Capecitabine",
+      "Oteracil",
+      "Vismodegib"
+    ]
+  },
+  {
+    "idx": 4,
+    "query_disease": "obsessive-compulsive disorder",
+    "gold_drug": "Fluoxetine",
+    "gold_rank": 131,
+    "top1_pred": "Clomipramine",
+    "top5_pred": [
+      "Clomipramine",
+      "Fluvoxamine",
+      "Epinephrine",
+      "Norepinephrine",
+      "Lidocaine"
+    ]
+  },
+  {
+    "idx": 5,
+    "query_disease": "Norwegian scabies",
+    "gold_drug": "Lindane",
+    "gold_rank": 2,
+    "top1_pred": "Phenothrin",
+    "top5_pred": [
+      "Phenothrin",
+      "Lindane",
+      "Lidocaine",
+      "Permethrin",
+      "Crotamiton"
+    ]
+  },
+  {
+    "idx": 6,
+    "query_disease": "hypertension",
+    "gold_drug": "Amiloride",
+    "gold_rank": 150,
+    "top1_pred": "Candesartan cilexetil",
+    "top5_pred": [
+      "Candesartan cilexetil",
+      "Delapril",
+      "Tienilic acid",
+      "Mibefradil",
+      "Torasemide"
+    ]
+  },
+  {
+    "idx": 7,
+    "query_disease": "pneumococcal meningitis",
+    "gold_drug": "Meropenem",
+    "gold_rank": 71,
+    "top1_pred": "Ofloxacin",
+    "top5_pred": [
+      "Ofloxacin",
+      "Ampicillin",
+      "Norfloxacin",
+      "Benzylpenicillin",
+      "Ciprofloxacin"
+    ]
+  },
+  {
+    "idx": 8,
+    "query_disease": "obsessive-compulsive disorder",
+    "gold_drug": "Paroxetine",
+    "gold_rank": 100,
+    "top1_pred": "Clomipramine",
+    "top5_pred": [
+      "Clomipramine",
+      "Fluvoxamine",
+      "Epinephrine",
+      "Norepinephrine",
+      "Lidocaine"
+    ]
+  },
+  {
+    "idx": 9,
+    "query_disease": "arthropathy",
+    "gold_drug": "Diflunisal",
+    "gold_rank": 54,
+    "top1_pred": "Etodolac",
+    "top5_pred": [
+      "Etodolac",
+      "Ibuprofen",
+      "Choline magnesium trisalicylate",
+      "Magnesium salicylate",
+      "Nabumetone"
+    ]
+  }
+]

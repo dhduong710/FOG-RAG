@@ -1,0 +1,325 @@
+{
+  "week": 8,
+  "stage": "posthoc_debias",
+  "goal": "Apply best valid lambda from post-hoc debias sweep to all splits.",
+  "config": {
+    "seed": 2025,
+    "train_scores_path": "dataset/setting_a/11_ranker_v2/train_scores.pt",
+    "valid_scores_path": "dataset/setting_a/11_ranker_v2/valid_scores.pt",
+    "test_scores_path": "dataset/setting_a/11_ranker_v2/test_scores.pt",
+    "drug_bias_stats_path": "dataset/setting_a/13_retrieval_v3_prep/drug_bias_stats.json",
+    "week7_candidate_report_path": "dataset/setting_a/11_ranker_v2/candidate_report.json",
+    "output_dir": "dataset/setting_a/15_posthoc_debias",
+    "report_dir": "reports/week8",
+    "bias_field": "collapse_score",
+    "bias_normalization": "minmax",
+    "lambdas": [
+      0.0,
+      0.05,
+      0.1,
+      0.2,
+      0.3,
+      0.5,
+      0.75,
+      1.0,
+      1.5,
+      2.0
+    ],
+    "recall_drop_tolerance": 0.01,
+    "min_top1_dominance_improve": 0.03,
+    "min_unique_top1_gain": 2,
+    "apply_best_to_all_splits": true,
+    "k": 20
+  },
+  "best_lambda": 0.05,
+  "accepted_under_rule": true,
+  "splits": {
+    "train": {
+      "split": "train",
+      "num_queries": 8388,
+      "k": 20,
+      "recall_at_k_raw": 0.211254,
+      "top1_hit_ratio_raw": 0.018598,
+      "inject_count_ready": 6616,
+      "inject_ratio_ready": 0.788746,
+      "rank_distribution_raw_top50": {
+        "49": 28,
+        "48": 31,
+        "46": 20,
+        "37": 34,
+        "35": 28,
+        "34": 42,
+        "36": 31,
+        "14": 65,
+        "11": 57,
+        "1": 156,
+        "5": 130,
+        "4": 107,
+        "2": 143,
+        "8": 114,
+        "12": 79,
+        "7": 113,
+        "22": 39,
+        "19": 45,
+        "6": 133,
+        "9": 92,
+        "43": 28,
+        "44": 33,
+        "42": 28,
+        "39": 35,
+        "3": 120,
+        "18": 47,
+        "10": 116,
+        "23": 49,
+        "31": 32,
+        "33": 41,
+        "28": 25,
+        "29": 12,
+        "50": 27,
+        "38": 46,
+        "32": 36,
+        "13": 74,
+        "17": 33,
+        "16": 53,
+        "15": 60,
+        "30": 35,
+        "24": 33,
+        "27": 30,
+        "47": 23,
+        "21": 37,
+        "25": 39,
+        "20": 35,
+        "40": 33,
+        "26": 46,
+        "41": 29,
+        "45": 24
+      },
+      "unique_top1_count_raw": 10,
+      "top1_dominance_ratio_raw": 0.377325,
+      "top1_frequency_raw_top10": [
+        {
+          "drug": "Betamethasone",
+          "count": 3165
+        },
+        {
+          "drug": "Fusidic acid",
+          "count": 2665
+        },
+        {
+          "drug": "Methylprednisolone",
+          "count": 1212
+        },
+        {
+          "drug": "Dexamethasone",
+          "count": 425
+        },
+        {
+          "drug": "Hydrocortisone",
+          "count": 417
+        },
+        {
+          "drug": "Triamcinolone",
+          "count": 203
+        },
+        {
+          "drug": "Oxytetracycline",
+          "count": 192
+        },
+        {
+          "drug": "Cortisone acetate",
+          "count": 101
+        },
+        {
+          "drug": "Prednisolone",
+          "count": 6
+        },
+        {
+          "drug": "Ofloxacin",
+          "count": 2
+        }
+      ]
+    },
+    "valid": {
+      "split": "valid",
+      "num_queries": 500,
+      "k": 20,
+      "recall_at_k_raw": 0.192,
+      "top1_hit_ratio_raw": 0.018,
+      "inject_count_ready": 404,
+      "inject_ratio_ready": 0.808,
+      "rank_distribution_raw_top50": {
+        "5": 6,
+        "10": 11,
+        "1": 9,
+        "2": 5,
+        "3": 7,
+        "4": 13,
+        "17": 4,
+        "38": 5,
+        "21": 5,
+        "9": 4,
+        "28": 3,
+        "41": 2,
+        "7": 9,
+        "30": 5,
+        "12": 5,
+        "34": 3,
+        "11": 2,
+        "6": 7,
+        "14": 3,
+        "16": 2,
+        "15": 1,
+        "29": 1,
+        "24": 3,
+        "22": 5,
+        "45": 1,
+        "8": 2,
+        "48": 2,
+        "18": 2,
+        "43": 1,
+        "33": 1,
+        "46": 1,
+        "13": 2,
+        "39": 1,
+        "32": 1,
+        "27": 2,
+        "44": 1,
+        "37": 1,
+        "50": 1,
+        "19": 2,
+        "47": 1
+      },
+      "unique_top1_count_raw": 9,
+      "top1_dominance_ratio_raw": 0.416,
+      "top1_frequency_raw_top10": [
+        {
+          "drug": "Betamethasone",
+          "count": 208
+        },
+        {
+          "drug": "Fusidic acid",
+          "count": 147
+        },
+        {
+          "drug": "Methylprednisolone",
+          "count": 72
+        },
+        {
+          "drug": "Hydrocortisone",
+          "count": 19
+        },
+        {
+          "drug": "Dexamethasone",
+          "count": 19
+        },
+        {
+          "drug": "Triamcinolone",
+          "count": 19
+        },
+        {
+          "drug": "Oxytetracycline",
+          "count": 9
+        },
+        {
+          "drug": "Cortisone acetate",
+          "count": 6
+        },
+        {
+          "drug": "Prednisolone",
+          "count": 1
+        }
+      ]
+    },
+    "test": {
+      "split": "test",
+      "num_queries": 500,
+      "k": 20,
+      "recall_at_k_raw": 0.234,
+      "top1_hit_ratio_raw": 0.018,
+      "inject_count_ready": 383,
+      "inject_ratio_ready": 0.766,
+      "rank_distribution_raw_top50": {
+        "7": 12,
+        "11": 4,
+        "4": 11,
+        "5": 13,
+        "37": 2,
+        "44": 4,
+        "6": 9,
+        "10": 10,
+        "9": 8,
+        "2": 8,
+        "30": 6,
+        "25": 2,
+        "20": 1,
+        "14": 2,
+        "34": 3,
+        "22": 3,
+        "1": 9,
+        "21": 2,
+        "47": 2,
+        "19": 1,
+        "3": 7,
+        "35": 1,
+        "8": 11,
+        "16": 2,
+        "38": 3,
+        "24": 3,
+        "39": 5,
+        "23": 2,
+        "26": 1,
+        "32": 2,
+        "15": 1,
+        "33": 5,
+        "28": 1,
+        "40": 2,
+        "29": 1,
+        "18": 2,
+        "27": 1,
+        "17": 3,
+        "42": 1,
+        "12": 3,
+        "45": 1,
+        "36": 2,
+        "43": 1
+      },
+      "unique_top1_count_raw": 8,
+      "top1_dominance_ratio_raw": 0.368,
+      "top1_frequency_raw_top10": [
+        {
+          "drug": "Betamethasone",
+          "count": 184
+        },
+        {
+          "drug": "Fusidic acid",
+          "count": 161
+        },
+        {
+          "drug": "Methylprednisolone",
+          "count": 83
+        },
+        {
+          "drug": "Hydrocortisone",
+          "count": 25
+        },
+        {
+          "drug": "Dexamethasone",
+          "count": 23
+        },
+        {
+          "drug": "Oxytetracycline",
+          "count": 11
+        },
+        {
+          "drug": "Triamcinolone",
+          "count": 7
+        },
+        {
+          "drug": "Cortisone acetate",
+          "count": 6
+        }
+      ]
+    }
+  },
+  "important_note": "This is a post-hoc debias adjustment on week7-v2 scores, not a retrained ranker."
+}

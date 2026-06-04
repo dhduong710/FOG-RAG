@@ -1,0 +1,42 @@
+{
+  "input": "dataset/setting_a/19_contra_aware/contra_candidate_flags_test.json",
+  "lambdas": [
+    2.0
+  ],
+  "saved_paths": [
+    "dataset/setting_a/19_contra_aware_test_build/valid_top20_soft_lambda_2.0.json"
+  ],
+  "summaries": [
+    {
+      "lambda_contra": 2.0,
+      "num_queries": 500,
+      "total_candidates": 3865,
+      "avg_candidate_size": 7.73,
+      "contra_candidates_final": 68,
+      "QueryHasContraCandidateRate": 0.074,
+      "gold_in_topk": 140,
+      "gold_in_topk_rate": 0.28,
+      "top1_changed_queries": 1,
+      "top5_changed_queries": 10,
+      "soft_demoted_contra_candidates": 42,
+      "strict_empty_after_soft": 0,
+      "fallback_after_soft": 0
+    }
+  ],
+  "best_row": {
+    "lambda_contra": 2.0,
+    "num_queries": 500,
+    "total_candidates": 3865,
+    "avg_candidate_size": 7.73,
+    "contra_candidates_final": 68,
+    "QueryHasContraCandidateRate": 0.074,
+    "gold_in_topk": 140,
+    "gold_in_topk_rate": 0.28,
+    "top1_changed_queries": 1,
+    "top5_changed_queries": 10,
+    "soft_demoted_contra_candidates": 42,
+    "strict_empty_after_soft": 0,
+    "fallback_after_soft": 0
+  },
+  "best_alias_path": "dataset/setting_a/19_contra_aware_test_build/valid_top20_soft_best.json"
+}

@@ -1,0 +1,33 @@
+{
+  "args": {
+    "dataset_path": "dataset/setting_a/07_pilot_ready",
+    "model_name_or_path": "TinyLlama/TinyLlama-1.1B-Chat-v1.0",
+    "checkpoint_dir": "results/week4/pilot_train_tinyllama_mock/checkpoint-final",
+    "kge_embedding_path": "dataset/setting_a/07_pilot_ready/mock_entity_embeddings.pt",
+    "output_dir": "results/week4/pilot_infer_tinyllama_mock",
+    "source_max_len": 768,
+    "target_max_len": 32,
+    "seed": 2025,
+    "max_new_tokens": 16
+  },
+  "valid": {
+    "num_samples": 100,
+    "exact_match": 1.0,
+    "mrr": 1.0,
+    "hits1": 1.0,
+    "hits3": 1.0,
+    "hits10": 1.0,
+    "avg_subgraph_size": 74.15,
+    "all_coarse_rank_is_one": true
+  },
+  "test": {
+    "num_samples": 100,
+    "exact_match": 1.0,
+    "mrr": 1.0,
+    "hits1": 1.0,
+    "hits3": 1.0,
+    "hits10": 1.0,
+    "avg_subgraph_size": 73.63,
+    "all_coarse_rank_is_one": true
+  }
+}

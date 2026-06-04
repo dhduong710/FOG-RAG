@@ -1,0 +1,332 @@
+{
+  "source_summaries": {
+    "backbone": {
+      "row_source": "backbone",
+      "num_rows_input": 500,
+      "num_rows_matched": 500,
+      "num_rows_unmatched": 0,
+      "avg_candidate_size": 20.0,
+      "rows_with_gold_in_topk": 500,
+      "rows_with_any_contra_candidate_final": 7,
+      "candidate_type_distribution_top": [
+        [
+          "Drug",
+          10000
+        ]
+      ],
+      "sample_rows": [
+        {
+          "query_disease": "leukemia, lymphocytic, susceptibility to",
+          "gold_drug": "Cortisone acetate",
+          "candidate_count_final": 20,
+          "row_has_gold_in_topk": 1,
+          "has_any_contra_candidate_final": 0,
+          "top5_candidates": [
+            "Betamethasone",
+            "Hydrocortisone",
+            "Methylprednisolone",
+            "Triamcinolone",
+            "Cortisone acetate"
+          ]
+        },
+        {
+          "query_disease": "streptococcal infection",
+          "gold_drug": "Cefixime",
+          "candidate_count_final": 20,
+          "row_has_gold_in_topk": 1,
+          "has_any_contra_candidate_final": 0,
+          "top5_candidates": [
+            "Fusidic acid",
+            "Oxytetracycline",
+            "Dexamethasone",
+            "Methylprednisolone",
+            "Prednisolone"
+          ]
+        },
+        {
+          "query_disease": "dyspepsia",
+          "gold_drug": "Magnesium trisilicate",
+          "candidate_count_final": 20,
+          "row_has_gold_in_topk": 1,
+          "has_any_contra_candidate_final": 0,
+          "top5_candidates": [
+            "Fusidic acid",
+            "Oxytetracycline",
+            "Dexamethasone",
+            "Methylprednisolone",
+            "Methdilazine"
+          ]
+        },
+        {
+          "query_disease": "basal cell carcinoma",
+          "gold_drug": "Vismodegib",
+          "candidate_count_final": 20,
+          "row_has_gold_in_topk": 1,
+          "has_any_contra_candidate_final": 0,
+          "top5_candidates": [
+            "Betamethasone",
+            "Hydrocortisone",
+            "Triamcinolone",
+            "Methylprednisolone",
+            "Cortisone acetate"
+          ]
+        },
+        {
+          "query_disease": "obsessive-compulsive disorder",
+          "gold_drug": "Fluoxetine",
+          "candidate_count_final": 20,
+          "row_has_gold_in_topk": 1,
+          "has_any_contra_candidate_final": 0,
+          "top5_candidates": [
+            "Betamethasone",
+            "Methylprednisolone",
+            "Hydrocortisone",
+            "Cortisone acetate",
+            "Triamcinolone"
+          ]
+        }
+      ]
+    },
+    "ontology": {
+      "row_source": "ontology",
+      "num_rows_input": 500,
+      "num_rows_matched": 500,
+      "num_rows_unmatched": 0,
+      "avg_candidate_size": 7.65,
+      "rows_with_gold_in_topk": 118,
+      "rows_with_any_contra_candidate_final": 5,
+      "candidate_type_distribution_top": [
+        [
+          "Drug",
+          3825
+        ]
+      ],
+      "sample_rows": [
+        {
+          "query_disease": "leukemia, lymphocytic, susceptibility to",
+          "gold_drug": "Cortisone acetate",
+          "candidate_count_final": 11,
+          "row_has_gold_in_topk": 0,
+          "has_any_contra_candidate_final": 0,
+          "top5_candidates": [
+            "Betamethasone",
+            "Hydrocortisone",
+            "Methylprednisolone",
+            "Triamcinolone",
+            "Prednisolone"
+          ]
+        },
+        {
+          "query_disease": "streptococcal infection",
+          "gold_drug": "Cefixime",
+          "candidate_count_final": 4,
+          "row_has_gold_in_topk": 0,
+          "has_any_contra_candidate_final": 0,
+          "top5_candidates": [
+            "Fusidic acid",
+            "Ofloxacin",
+            "Benzylpenicillin",
+            "Ciprofloxacin"
+          ]
+        },
+        {
+          "query_disease": "dyspepsia",
+          "gold_drug": "Magnesium trisilicate",
+          "candidate_count_final": 20,
+          "row_has_gold_in_topk": 1,
+          "has_any_contra_candidate_final": 0,
+          "top5_candidates": [
+            "Fusidic acid",
+            "Oxytetracycline",
+            "Dexamethasone",
+            "Methylprednisolone",
+            "Methdilazine"
+          ]
+        },
+        {
+          "query_disease": "basal cell carcinoma",
+          "gold_drug": "Vismodegib",
+          "candidate_count_final": 1,
+          "row_has_gold_in_topk": 1,
+          "has_any_contra_candidate_final": 0,
+          "top5_candidates": [
+            "Vismodegib"
+          ]
+        },
+        {
+          "query_disease": "obsessive-compulsive disorder",
+          "gold_drug": "Fluoxetine",
+          "candidate_count_final": 2,
+          "row_has_gold_in_topk": 0,
+          "has_any_contra_candidate_final": 0,
+          "top5_candidates": [
+            "Propranolol",
+            "Paroxetine"
+          ]
+        }
+      ]
+    },
+    "hard_main": {
+      "row_source": "hard_main",
+      "num_rows_input": 500,
+      "num_rows_matched": 500,
+      "num_rows_unmatched": 0,
+      "avg_candidate_size": 8.184,
+      "rows_with_gold_in_topk": 156,
+      "rows_with_any_contra_candidate_final": 0,
+      "candidate_type_distribution_top": [
+        [
+          "Drug",
+          4092
+        ]
+      ],
+      "sample_rows": [
+        {
+          "query_disease": "leukemia, lymphocytic, susceptibility to",
+          "gold_drug": "Cortisone acetate",
+          "candidate_count_final": 11,
+          "row_has_gold_in_topk": 0,
+          "has_any_contra_candidate_final": 0,
+          "top5_candidates": [
+            "Betamethasone",
+            "Hydrocortisone",
+            "Methylprednisolone",
+            "Triamcinolone",
+            "Prednisolone"
+          ]
+        },
+        {
+          "query_disease": "streptococcal infection",
+          "gold_drug": "Cefixime",
+          "candidate_count_final": 4,
+          "row_has_gold_in_topk": 0,
+          "has_any_contra_candidate_final": 0,
+          "top5_candidates": [
+            "Fusidic acid",
+            "Ofloxacin",
+            "Benzylpenicillin",
+            "Ciprofloxacin"
+          ]
+        },
+        {
+          "query_disease": "dyspepsia",
+          "gold_drug": "Magnesium trisilicate",
+          "candidate_count_final": 20,
+          "row_has_gold_in_topk": 1,
+          "has_any_contra_candidate_final": 0,
+          "top5_candidates": [
+            "Fusidic acid",
+            "Oxytetracycline",
+            "Dexamethasone",
+            "Methylprednisolone",
+            "Methdilazine"
+          ]
+        },
+        {
+          "query_disease": "basal cell carcinoma",
+          "gold_drug": "Vismodegib",
+          "candidate_count_final": 1,
+          "row_has_gold_in_topk": 1,
+          "has_any_contra_candidate_final": 0,
+          "top5_candidates": [
+            "Vismodegib"
+          ]
+        },
+        {
+          "query_disease": "obsessive-compulsive disorder",
+          "gold_drug": "Fluoxetine",
+          "candidate_count_final": 1,
+          "row_has_gold_in_topk": 0,
+          "has_any_contra_candidate_final": 0,
+          "top5_candidates": [
+            "Propranolol"
+          ]
+        }
+      ]
+    },
+    "soft_best": {
+      "row_source": "soft_best",
+      "num_rows_input": 500,
+      "num_rows_matched": 500,
+      "num_rows_unmatched": 0,
+      "avg_candidate_size": 7.836,
+      "rows_with_gold_in_topk": 146,
+      "rows_with_any_contra_candidate_final": 5,
+      "candidate_type_distribution_top": [
+        [
+          "Drug",
+          3918
+        ]
+      ],
+      "sample_rows": [
+        {
+          "query_disease": "leukemia, lymphocytic, susceptibility to",
+          "gold_drug": "Cortisone acetate",
+          "candidate_count_final": 11,
+          "row_has_gold_in_topk": 0,
+          "has_any_contra_candidate_final": 0,
+          "top5_candidates": [
+            "Betamethasone",
+            "Hydrocortisone",
+            "Methylprednisolone",
+            "Triamcinolone",
+            "Prednisolone"
+          ]
+        },
+        {
+          "query_disease": "streptococcal infection",
+          "gold_drug": "Cefixime",
+          "candidate_count_final": 4,
+          "row_has_gold_in_topk": 0,
+          "has_any_contra_candidate_final": 0,
+          "top5_candidates": [
+            "Fusidic acid",
+            "Ofloxacin",
+            "Benzylpenicillin",
+            "Ciprofloxacin"
+          ]
+        },
+        {
+          "query_disease": "dyspepsia",
+          "gold_drug": "Magnesium trisilicate",
+          "candidate_count_final": 20,
+          "row_has_gold_in_topk": 1,
+          "has_any_contra_candidate_final": 0,
+          "top5_candidates": [
+            "Fusidic acid",
+            "Oxytetracycline",
+            "Dexamethasone",
+            "Methylprednisolone",
+            "Methdilazine"
+          ]
+        },
+        {
+          "query_disease": "basal cell carcinoma",
+          "gold_drug": "Vismodegib",
+          "candidate_count_final": 1,
+          "row_has_gold_in_topk": 1,
+          "has_any_contra_candidate_final": 0,
+          "top5_candidates": [
+            "Vismodegib"
+          ]
+        },
+        {
+          "query_disease": "obsessive-compulsive disorder",
+          "gold_drug": "Fluoxetine",
+          "candidate_count_final": 1,
+          "row_has_gold_in_topk": 0,
+          "has_any_contra_candidate_final": 0,
+          "top5_candidates": [
+            "Propranolol"
+          ]
+        }
+      ]
+    }
+  },
+  "unmatched_examples": {
+    "backbone": [],
+    "ontology": [],
+    "hard_main": [],
+    "soft_best": []
+  }
+}

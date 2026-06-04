@@ -1,0 +1,95 @@
+{
+  "week": 11,
+  "title": "Setting B evaluation + variant decision + ablation v1",
+  "goal": "Evaluate Novelty 1 on Setting B using valid-first protocol, compare backbone / ontology / hard_main / soft_best, and choose the main paper variant before moving to month 4.",
+  "references": {
+    "backbone_reference": "week7-v2",
+    "ontology_reference": "week9_ontology_only",
+    "safety_main_candidate": "week10_hard_main",
+    "safety_supporting_candidate": "week10_soft_best"
+  },
+  "rows": [
+    {
+      "row_id": "backbone",
+      "source": "week7-v2",
+      "role": "reference",
+      "description": "Backbone reference row evaluated under Setting B protocol"
+    },
+    {
+      "row_id": "ontology",
+      "source": "week9_ontology_only",
+      "role": "reference",
+      "description": "Ontology-only supporting row"
+    },
+    {
+      "row_id": "hard_main",
+      "source": "week10_hard_main",
+      "role": "main_candidate",
+      "description": "Ontology + contraindication-aware hard filtering row"
+    },
+    {
+      "row_id": "soft_best",
+      "source": "week10_soft_best",
+      "role": "supporting_candidate",
+      "description": "Ontology + contraindication-aware soft penalty row"
+    }
+  ],
+  "evaluation_scope": {
+    "setting": "Setting B",
+    "decision_split": "valid",
+    "test_policy": "run_only_after_valid_protocol_is_clean",
+    "novelty_injection_point": "candidate_stage_only",
+    "retrain_backbone": false
+  },
+  "main_metrics": {
+    "ranking": [
+      "MRR",
+      "Hits@1",
+      "Hits@3",
+      "Hits@10"
+    ],
+    "safety": [
+      "SafetyViolation@10",
+      "Contra@10"
+    ],
+    "constraint": [
+      "ConstraintViolationRate",
+      "QueryHasConstraintViolationRate"
+    ]
+  },
+  "deliverables_this_week": [
+    "setting_b_valid_metrics_for_all_rows",
+    "variant_comparison_json",
+    "ablation_novelty1_v1_md",
+    "week11_closeout"
+  ],
+  "non_goals": [
+    "no_new_fuzzy_module",
+    "no_hard_soft_logic_rewrite",
+    "no_backbone_retraining",
+    "no_new_structure_baseline",
+    "no_final_acceptance_claim"
+  ],
+  "decision_rule": {
+    "default_main_variant": "hard_main",
+    "supporting_variant": "soft_best",
+    "main_selection_rule": "Prefer the row that keeps ranking stable while improving Setting B safety and constraint metrics most clearly.",
+    "override_condition": "Only replace hard_main if soft_best produces clearly better end-to-end Setting B trade-off or hard_main shows unacceptable fallback artifacts."
+  },
+  "expected_outputs": {
+    "results_dirs": [
+      "results/week11/backbone_valid",
+      "results/week11/ontology_valid",
+      "results/week11/hard_main_valid",
+      "results/week11/soft_best_valid"
+    ],
+    "comparison_files": [
+      "results/week11/variant_comparison.json",
+      "results/week11/ablation_novelty1_v1.json",
+      "results/week11/ablation_novelty1_v1.md"
+    ],
+    "reports": [
+      "reports/week11/day1_protocol_freeze.md"
+    ]
+  }
+}

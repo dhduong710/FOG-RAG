@@ -1,0 +1,95 @@
+{
+  "split": "valid",
+  "num_queries": 500,
+  "k": 20,
+  "recall_at_k_raw": 0.18,
+  "top1_hit_ratio_raw": 0.01,
+  "inject_count_ready": 410,
+  "inject_ratio_ready": 0.82,
+  "rank_distribution_raw_top50": {
+    "3": 8,
+    "10": 9,
+    "7": 5,
+    "1": 5,
+    "46": 1,
+    "2": 8,
+    "17": 4,
+    "41": 2,
+    "21": 4,
+    "8": 6,
+    "30": 6,
+    "40": 1,
+    "9": 3,
+    "4": 8,
+    "36": 1,
+    "34": 2,
+    "6": 6,
+    "38": 5,
+    "35": 1,
+    "14": 4,
+    "15": 2,
+    "29": 1,
+    "23": 3,
+    "5": 10,
+    "20": 3,
+    "12": 1,
+    "45": 3,
+    "48": 2,
+    "50": 2,
+    "18": 1,
+    "43": 1,
+    "33": 1,
+    "22": 3,
+    "16": 1,
+    "13": 1,
+    "19": 3,
+    "32": 1,
+    "27": 2,
+    "24": 1,
+    "28": 1,
+    "11": 2,
+    "44": 1,
+    "26": 1,
+    "39": 1
+  },
+  "unique_top1_count_raw": 9,
+  "top1_dominance_ratio_raw": 0.276,
+  "top1_frequency_raw_top10": [
+    {
+      "drug": "Hydrocortisone",
+      "count": 138
+    },
+    {
+      "drug": "Betamethasone",
+      "count": 91
+    },
+    {
+      "drug": "Oxytetracycline",
+      "count": 79
+    },
+    {
+      "drug": "Fusidic acid",
+      "count": 53
+    },
+    {
+      "drug": "Dexamethasone",
+      "count": 49
+    },
+    {
+      "drug": "Cortisone acetate",
+      "count": 45
+    },
+    {
+      "drug": "Triamcinolone",
+      "count": 41
+    },
+    {
+      "drug": "Tobramycin",
+      "count": 3
+    },
+    {
+      "drug": "Tetracycline",
+      "count": 1
+    }
+  ]
+}

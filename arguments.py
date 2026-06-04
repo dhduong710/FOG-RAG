@@ -12,11 +12,21 @@ class Arguments:
     model_type: str = field(default="llama", metadata={"help": "The type of LLM, llama or mistral"})
     
     kge_embedding_path: str = field(default=None, metadata={ "help": "Path of structure pretrained embeddings"})
+    graph_num_rels: int = field(default=4, metadata={"help": "Number of graph relation types for GraphEnhancer/R-GCN"})
     
     source_max_len: int = field(default=2048, metadata={"help": "Maximum source sequence length."},)
     target_max_len: int = field(default=64, metadata={"help": "Maximum target sequence length."},)
     
     checkpoint_dir: str = field(default=None, metadata={"help": "Checkpoint saveing directory"})
+
+    eval_split: str = field(
+        default="test",
+        metadata={"help": "Which split to evaluate: valid or test"}
+    )
+    output_suffix: str = field(
+        default="",
+        metadata={"help": "Extra suffix for output files, e.g. rerun"}
+    )
 
 
 @dataclass

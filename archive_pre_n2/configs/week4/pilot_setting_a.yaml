@@ -1,0 +1,17 @@
+dataset_path: dataset/setting_a/07_pilot_ready
+model_name_or_path: TinyLlama/TinyLlama-1.1B-Chat-v1.0
+kge_embedding_path: dataset/setting_a/07_pilot_ready/mock_entity_embeddings.pt
+
+source_max_len: 768
+target_max_len: 32
+batch_size: 2
+steps: 2
+
+num_rels: 4
+gnn_hidden_dim: 128
+gnn_num_hidden_layers: 1
+
+notes:
+  - day2 uses mock entity embeddings only for plumbing check
+  - candidate size remains K=20 as locked in week2
+  - no tuning, no long training, no scientific claim

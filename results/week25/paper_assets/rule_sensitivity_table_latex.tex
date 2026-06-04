@@ -1,0 +1,15 @@
+\begin{table}[t]
+\centering
+\small
+\caption{Rule-sensitivity analysis on the locked PrimeKG test split. All variants use the same candidate set; changes mainly affect the graph evidence package.}
+\label{tab:rule-sensitivity}
+\begin{tabular}{lcccccc}
+\toprule
+Variant & Gold@20 & Cand. MRR & E2E MRR & H@10 & Invalid & Avg. graph \\
+\midrule
+Main rules & 0.240 & 0.1253 & 0.0747 & 0.218 & 0.002 & 32.34 \\
+No rules & 0.240 & 0.1253 & 0.0747 & 0.218 & 0.020 & 59.93 \\
+Random rules & 0.240 & 0.1253 & 0.0747 & 0.218 & 0.002 & 32.34 \\
+\bottomrule
+\end{tabular}
+\end{table}

@@ -1,0 +1,20 @@
+{
+  "num_queries": 500,
+  "metrics": {
+    "SafetyViolation@1": 0.006,
+    "Contra@1": 0.006,
+    "SafetyViolation@3": 0.026,
+    "Contra@3": 0.026,
+    "SafetyViolation@5": 0.042,
+    "Contra@5": 0.046,
+    "SafetyViolation@10": 0.072,
+    "Contra@10": 0.104
+  },
+  "input_path": "dataset/setting_b/02_eval_ready/valid_b_annotations.json",
+  "ks": [
+    1,
+    3,
+    5,
+    10
+  ]
+}

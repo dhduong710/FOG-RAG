@@ -1,0 +1,16 @@
+{
+  "model_tag": "medllama3_8b",
+  "model_name_or_path": "johnsnowlabs/JSL-MedLlama-3-8B-v2.0",
+  "model_type": "llama",
+  "checkpoint_dir": "results/week24/model_compare/medllama3_8b/main_checkpoint/checkpoint-final",
+  "dataset_root": "dataset/setting_a/29_n2_e2e_infer_ready",
+  "kge_embedding_path": "dataset/setting_a/08_backbone_ready/entity_embeddings_rgcn.pt",
+  "graph_num_rels": 4,
+  "frozen_config_id": "cfg01_mnt16_rp100_ng0",
+  "max_new_tokens": 16,
+  "repetition_penalty": 1.0,
+  "no_repeat_ngram_size": 0,
+  "splits": ["valid", "test"],
+  "rows": ["backbone_raw", "soft_support_raw", "retrieval_main"],
+  "paper_metric_note": "Raw infer.py metrics are audit-only. Day 5 recomputes reviewer-safe metrics."
+}

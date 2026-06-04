@@ -1,0 +1,13 @@
+{
+  "num_queries": 500,
+  "contra_candidates_final": 0,
+  "QueryHasContraCandidateRate": 0.0,
+  "strict_empty_after_hard": 0,
+  "fallback_after_hard": 0,
+  "fallback_after_soft": 0,
+  "gold_in_topk": 140,
+  "gold_in_topk_rate": 0.28,
+  "avg_candidate_size": 7.73,
+  "hard_removed_candidates": 0,
+  "soft_demoted_contra_candidates": 0
+}

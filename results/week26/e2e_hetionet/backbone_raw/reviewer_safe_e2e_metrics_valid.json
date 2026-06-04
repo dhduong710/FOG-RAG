@@ -1,0 +1,36 @@
+{
+  "row_name": "backbone_raw",
+  "split": "valid",
+  "candidate_metrics": {
+    "num_rows": 100,
+    "candidate_gold_at20": 0.43,
+    "candidate_mrr_at20": 0.057457932375502035,
+    "candidate_hits1": 0.01,
+    "candidate_hits3": 0.04,
+    "candidate_hits10": 0.19,
+    "candidate_rank21_count": 57,
+    "avg_subgraph_size": 80.0,
+    "top1_dominance": 1.0,
+    "top1_most_common": [
+      {
+        "entity": "Doxorubicin",
+        "count": 100
+      }
+    ]
+  },
+  "e2e_metrics": {
+    "num_rows": 100,
+    "e2e_adjusted_mrr_at20": 0.07203693949669182,
+    "e2e_adjusted_hits1": 0.03,
+    "e2e_adjusted_hits3": 0.06,
+    "e2e_adjusted_hits10": 0.19,
+    "e2e_adjusted_rank21_count": 58,
+    "strict_exact_match_rate": 0.02,
+    "strict_exact_match_mrr_at20": 0.0027142857142857147,
+    "pred_in_candidate_rate": 1.0,
+    "invalid_rate": 0.0,
+    "invalid_count": 0,
+    "exact_match_count": 2,
+    "metric_note": "Paper-facing metric should be the adjusted E2E rank for consistency with prior PrimeKG/PharmKG analyses; strict exact-match is diagnostic."
+  }
+}

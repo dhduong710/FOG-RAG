@@ -1,0 +1,278 @@
+{
+  "best_epoch": 16,
+  "best_probe": {
+    "num_probe_queries": 100,
+    "recall20": 0.27,
+    "top1_hit_ratio": 0.05,
+    "unique_top1_count": 3,
+    "top1_dominance_ratio": 0.63,
+    "top1_counter": {
+      "2042": 63,
+      "3121": 25,
+      "2378": 12
+    },
+    "top1_examples": [
+      {
+        "query_disease": "potassium deficiency disease",
+        "gold_drug": "Potassium bicarbonate",
+        "top1_drug_id": 2042
+      },
+      {
+        "query_disease": "Klebsiella pneumonia",
+        "gold_drug": "Norfloxacin",
+        "top1_drug_id": 3121
+      },
+      {
+        "query_disease": "thyroiditis (disease)",
+        "gold_drug": "Hydrocortisone",
+        "top1_drug_id": 2042
+      },
+      {
+        "query_disease": "ovarian clear cell adenocarcinoma",
+        "gold_drug": "Belotecan",
+        "top1_drug_id": 2042
+      },
+      {
+        "query_disease": "conjunctivitis",
+        "gold_drug": "Erythromycin",
+        "top1_drug_id": 3121
+      },
+      {
+        "query_disease": "non-small cell lung carcinoma (disease)",
+        "gold_drug": "Brigatinib",
+        "top1_drug_id": 2378
+      },
+      {
+        "query_disease": "pseudotumor cerebri",
+        "gold_drug": "Mannitol",
+        "top1_drug_id": 2042
+      },
+      {
+        "query_disease": "systemic mastocytosis",
+        "gold_drug": "Rabeprazole",
+        "top1_drug_id": 2042
+      },
+      {
+        "query_disease": "tinea infection",
+        "gold_drug": "Zinc oxide",
+        "top1_drug_id": 3121
+      },
+      {
+        "query_disease": "partial epilepsy",
+        "gold_drug": "Brivaracetam",
+        "top1_drug_id": 2042
+      },
+      {
+        "query_disease": "multiple system atrophy",
+        "gold_drug": "Droxidopa",
+        "top1_drug_id": 2378
+      },
+      {
+        "query_disease": "primary cutaneous T-cell lymphoma",
+        "gold_drug": "Mechlorethamine",
+        "top1_drug_id": 2042
+      },
+      {
+        "query_disease": "malignant non-dysgerminomatous germ cell tumor of ovary",
+        "gold_drug": "Altretamine",
+        "top1_drug_id": 2042
+      },
+      {
+        "query_disease": "dermatophytosis of groin and perianal area",
+        "gold_drug": "Tolnaftate",
+        "top1_drug_id": 3121
+      },
+      {
+        "query_disease": "obsolete neurogenic bladder (disease)",
+        "gold_drug": "Butacaine",
+        "top1_drug_id": 2042
+      },
+      {
+        "query_disease": "osteoarthritis",
+        "gold_drug": "Lumiracoxib",
+        "top1_drug_id": 2042
+      },
+      {
+        "query_disease": "follicular lymphoma",
+        "gold_drug": "Idelalisib",
+        "top1_drug_id": 2042
+      },
+      {
+        "query_disease": "peptic esophagitis",
+        "gold_drug": "Omeprazole",
+        "top1_drug_id": 2042
+      },
+      {
+        "query_disease": "angle-closure glaucoma",
+        "gold_drug": "Diclofenamide",
+        "top1_drug_id": 2042
+      },
+      {
+        "query_disease": "breast neoplasm",
+        "gold_drug": "Epirubicin",
+        "top1_drug_id": 2378
+      },
+      {
+        "query_disease": "mycosis fungoides and variants",
+        "gold_drug": "Triamcinolone",
+        "top1_drug_id": 2042
+      },
+      {
+        "query_disease": "classic Hodgkin lymphoma",
+        "gold_drug": "Lomustine",
+        "top1_drug_id": 2042
+      },
+      {
+        "query_disease": "papillary conjunctivitis",
+        "gold_drug": "Mepyramine",
+        "top1_drug_id": 3121
+      },
+      {
+        "query_disease": "adrenal gland hyperfunction",
+        "gold_drug": "Ketoconazole",
+        "top1_drug_id": 2042
+      },
+      {
+        "query_disease": "pulmonary emphysema",
+        "gold_drug": "Orciprenaline",
+        "top1_drug_id": 2042
+      },
+      {
+        "query_disease": "chromomycosis",
+        "gold_drug": "Ketoconazole",
+        "top1_drug_id": 3121
+      },
+      {
+        "query_disease": "ovarian endometrioid adenocarcinoma",
+        "gold_drug": "Paclitaxel",
+        "top1_drug_id": 2042
+      },
+      {
+        "query_disease": "endogenous depression",
+        "gold_drug": "Vilazodone",
+        "top1_drug_id": 2378
+      },
+      {
+        "query_disease": "urinary bladder neoplasm",
+        "gold_drug": "Thiotepa",
+        "top1_drug_id": 2042
+      },
+      {
+        "query_disease": "familial nephrotic syndrome",
+        "gold_drug": "Prednisolone",
+        "top1_drug_id": 2042
+      },
+      {
+        "query_disease": "nephrocalcinosis",
+        "gold_drug": "Calcium lactate",
+        "top1_drug_id": 2042
+      },
+      {
+        "query_disease": "unipolar depression",
+        "gold_drug": "Venlafaxine",
+        "top1_drug_id": 2378
+      },
+      {
+        "query_disease": "juvenile arthritis due to defect in LACC1",
+        "gold_drug": "Sodium aurothiomalate",
+        "top1_drug_id": 2042
+      },
+      {
+        "query_disease": "motion sickness",
+        "gold_drug": "Cyclizine",
+        "top1_drug_id": 3121
+      },
+      {
+        "query_disease": "granuloma annulare",
+        "gold_drug": "Desoximetasone",
+        "top1_drug_id": 2042
+      },
+      {
+        "query_disease": "acute lymphoblastic/lymphocytic leukemia",
+        "gold_drug": "Prednisone",
+        "top1_drug_id": 2042
+      },
+      {
+        "query_disease": "diffuse large B-cell lymphoma",
+        "gold_drug": "Doxorubicin",
+        "top1_drug_id": 2378
+      },
+      {
+        "query_disease": "primary cutaneous T-cell lymphoma",
+        "gold_drug": "Methotrexate",
+        "top1_drug_id": 2042
+      },
+      {
+        "query_disease": "X-linked adrenoleukodystrophy",
+        "gold_drug": "Solriamfetol",
+        "top1_drug_id": 2042
+      },
+      {
+        "query_disease": "blepharospasm",
+        "gold_drug": "Procyclidine",
+        "top1_drug_id": 2042
+      },
+      {
+        "query_disease": "hemoglobinopathy",
+        "gold_drug": "Phenprocoumon",
+        "top1_drug_id": 2042
+      },
+      {
+        "query_disease": "hemoglobinopathy",
+        "gold_drug": "Deferasirox",
+        "top1_drug_id": 2042
+      },
+      {
+        "query_disease": "diffuse large B-cell lymphoma of the central nervous system",
+        "gold_drug": "Doxorubicin",
+        "top1_drug_id": 2378
+      },
+      {
+        "query_disease": "primary central nervous system lymphoma",
+        "gold_drug": "Dexamethasone",
+        "top1_drug_id": 2378
+      },
+      {
+        "query_disease": "cerebellar degeneration",
+        "gold_drug": "Rivastigmine",
+        "top1_drug_id": 2378
+      },
+      {
+        "query_disease": "allergic rhinitis",
+        "gold_drug": "Cromoglicic acid",
+        "top1_drug_id": 3121
+      },
+      {
+        "query_disease": "papillary conjunctivitis",
+        "gold_drug": "Alimemazine",
+        "top1_drug_id": 3121
+      },
+      {
+        "query_disease": "Norwegian scabies",
+        "gold_drug": "Lindane",
+        "top1_drug_id": 3121
+      },
+      {
+        "query_disease": "Plasmodium vivax malaria",
+        "gold_drug": "Pyronaridine",
+        "top1_drug_id": 3121
+      },
+      {
+        "query_disease": "osteoarthritis",
+        "gold_drug": "Celecoxib",
+        "top1_drug_id": 2042
+      }
+    ]
+  },
+  "best_stats": {
+    "epoch": 16,
+    "avg_epoch_loss": 0.5981656073330127,
+    "avg_grad_norm": 0.7604339333141551,
+    "pos_score_mean": 1.2867722511291504,
+    "pos_score_std": 2.2431352138519287,
+    "neg_score_mean": -0.36282971501350403,
+    "neg_score_std": 2.375532388687134,
+    "score_gap_mean": 1.6496020555496216,
+    "score_gap_std": 3.7302446365356445
+  }
+}

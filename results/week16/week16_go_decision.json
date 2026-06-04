@@ -1,0 +1,66 @@
+{
+  "week": 16,
+  "decision": "GO",
+  "main_input_row": "soft_support_raw",
+  "main_output_row": "soft_support_fuzzy_retrieval_main",
+  "selected_source_variant": "soft_support_fuzzy_retrieval_tight",
+  "reference_retrieval_row": "soft_support_fuzzy_retrieval_v1",
+  "week16_main_findings": {
+    "mrr_like_main": 0.097644,
+    "hits1_like_main": 0.056,
+    "hits3_like_main": 0.134,
+    "hits10_like_main": 0.182,
+    "avg_gold_rank_main": 17.676,
+    "avg_subgraph_size_main": 32.556,
+    "avg_triple_score_main": 0.499203,
+    "direct_shortcut_path_rate_main": 0.105536,
+    "candidate_coverage_preserved_rate_main": 1.0
+  },
+  "comparison_summary": {
+    "vs_soft_support_raw": {
+      "mrr_like_delta": 0.0,
+      "avg_gold_rank_delta": 0.0,
+      "shortcut_gain": 0.079239,
+      "subgraph_size_gain": 27.894,
+      "avg_query_touch_count_delta": -15.68,
+      "avg_non_direct_query_touch_count_delta": -8.728
+    },
+    "vs_v1": {
+      "mrr_like_delta": 0.0,
+      "avg_gold_rank_delta": 0.0,
+      "shortcut_gain": 0.023977,
+      "subgraph_size_gain": 4.158,
+      "avg_query_touch_count_delta": -1.556,
+      "avg_non_direct_query_touch_count_delta": -0.04
+    }
+  },
+  "case_review_support": {
+    "tight_same_rank_cleaner_than_v1": 217,
+    "tight_preserved_backbone_gain": 80,
+    "tight_anchor_caution_same_rank": 13,
+    "directplus_redundant_vs_v1": 373,
+    "raw_bottleneck_failure": 399
+  },
+  "week16_go_checks": {
+    "retrieval_main_row_selected": true,
+    "retrieval_main_row_frozen_cleanly": true,
+    "ranking_like_proxy_not_collapsed_vs_soft_support": true,
+    "main_row_beats_v1_on_retrieval_tradeoff": true
+  },
+  "main_takeaway": [
+    "Week 16 selected and froze a single retrieval main row on valid.",
+    "The selected row preserves ranking-like proxy relative to soft_support_raw.",
+    "The selected row improves retrieval-side trade-off over week-15 v1 by reducing shortcut-heavy evidence and shrinking the subgraph.",
+    "Remaining failure is still dominated by raw bottleneck and weak-evidence cases, with only a small anchoring caution bucket."
+  ],
+  "week17_recommendation": {
+    "mode": "encoder_readiness_check",
+    "main_goal": "evaluate whether retrieval is stable enough to justify a careful encoder-stage entry",
+    "do_not_do": [
+      "do_not_change_raw_source",
+      "do_not_reopen_candidate_stage",
+      "do_not_run_test_yet",
+      "do_not_commit_to_encoder_without_a_day1_readiness_check"
+    ]
+  }
+}

@@ -1,0 +1,12 @@
+[DONE] Reviewer-safe E2E metrics complete.
+Summary JSON: results/week23/e2e_pharmkg/reviewer_safe/e2e_pharmkg_reviewer_safe_summary.json
+Report MD: reports/week23/day2_e2e_pharmkg_reviewer_safe_metrics.md
+
+| Split | Row | Gold@20 | Candidate MRR@20 | E2E MRR@20 | E2E H@1 | E2E H@3 | E2E H@10 | Pred-in-cand | Invalid pred | Rank21 |
+|---|---|---|---|---|---|---|---|---|---|---|
+| valid | backbone_raw | 0.070 | 0.017846 | 0.015410 | 0.006 | 0.014 | 0.034 | 0.526 | 0.474 | 465 |
+| valid | soft_support_raw | 0.070 | 0.021308 | 0.017157 | 0.004 | 0.020 | 0.052 | 0.360 | 0.640 | 465 |
+| valid | fuzzy_retrieval_main | 0.070 | 0.021308 | 0.017184 | 0.004 | 0.020 | 0.052 | 0.376 | 0.624 | 465 |
+| test | backbone_raw | 0.092 | 0.020481 | 0.015575 | 0.000 | 0.018 | 0.044 | 0.510 | 0.490 | 454 |
+| test | soft_support_raw | 0.092 | 0.028159 | 0.020587 | 0.000 | 0.030 | 0.062 | 0.390 | 0.610 | 454 |
+| test | fuzzy_retrieval_main | 0.092 | 0.028159 | 0.020971 | 0.002 | 0.030 | 0.062 | 0.412 | 0.588 | 454 |

@@ -1,0 +1,71 @@
+{
+  "title": "Novelty 1 ablation v1",
+  "rows": [
+    {
+      "row_name": "backbone",
+      "role_in_story": "reference",
+      "paper_position": "main_table_reference",
+      "MRR": 0.42424878,
+      "Hits@1": 0.368,
+      "Hits@3": 0.39399999,
+      "Hits@10": 0.50999999,
+      "SafetyViolation@10": 0.0,
+      "Contra@10": 0.0,
+      "ConstraintViolationRate@10": 0.0,
+      "QueryHasConstraintViolationRate@10": 0.0,
+      "GoldInTopKRate": 1.0
+    },
+    {
+      "row_name": "ontology",
+      "role_in_story": "intermediate_ablation",
+      "paper_position": "main_table_ablation",
+      "MRR": 0.31301793,
+      "Hits@1": 0.244,
+      "Hits@3": 0.278,
+      "Hits@10": 0.434,
+      "SafetyViolation@10": 0.0,
+      "Contra@10": 0.0,
+      "ConstraintViolationRate@10": 0.0,
+      "QueryHasConstraintViolationRate@10": 0.0,
+      "GoldInTopKRate": 0.236
+    },
+    {
+      "row_name": "hard_main",
+      "role_in_story": "main_variant",
+      "paper_position": "main_table_main_row",
+      "MRR": 0.39310116,
+      "Hits@1": 0.33,
+      "Hits@3": 0.358,
+      "Hits@10": 0.524,
+      "SafetyViolation@10": 0.0,
+      "Contra@10": 0.0,
+      "ConstraintViolationRate@10": 0.0,
+      "QueryHasConstraintViolationRate@10": 0.0,
+      "GoldInTopKRate": 0.312
+    },
+    {
+      "row_name": "soft_best",
+      "role_in_story": "supporting_ablation",
+      "paper_position": "main_table_supporting_row",
+      "MRR": 0.39310116,
+      "Hits@1": 0.33,
+      "Hits@3": 0.358,
+      "Hits@10": 0.524,
+      "SafetyViolation@10": 0.0,
+      "Contra@10": 0.0,
+      "ConstraintViolationRate@10": 0.0,
+      "QueryHasConstraintViolationRate@10": 0.0,
+      "GoldInTopKRate": 0.292
+    }
+  ],
+  "decision": {
+    "main_row": "hard_main",
+    "supporting_row": "soft_best",
+    "reason": "hard_main and soft_best tie on Setting B @10 safety/constraint metrics, but hard_main has higher GoldInTopKRate and cleaner week10 candidate-stage safety proxies."
+  },
+  "main_takeaways": [
+    "The ontology-only row is more conservative than backbone and loses substantial ranking coverage.",
+    "The hard_main row recovers ranking relative to ontology while remaining fully clean on Setting B @10.",
+    "The soft_best row does not outperform hard_main and is therefore kept as a supporting ablation."
+  ]
+}

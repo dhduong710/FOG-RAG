@@ -1,0 +1,57 @@
+{
+  "week": 25,
+  "day": 5,
+  "created_at": "2026-05-02T04:44:03",
+  "source_row": "dataset/setting_a/29_n2_e2e_infer_ready/retrieval_main",
+  "output_root": "dataset/setting_a/33_week25_noise_robustness",
+  "primary_role": "small-noise robustness, appendix only",
+  "configs": {
+    "N0_no_noise": {
+      "kind": "none",
+      "seed": null,
+      "support_noise_std": 0.0,
+      "edge_dropout_rate": 0.0
+    },
+    "N1_support_score_noise_seed1": {
+      "kind": "support_score_noise",
+      "seed": 25051,
+      "support_noise_std": 0.03,
+      "edge_dropout_rate": 0.0
+    },
+    "N2_support_score_noise_seed2": {
+      "kind": "support_score_noise",
+      "seed": 25052,
+      "support_noise_std": 0.03,
+      "edge_dropout_rate": 0.0
+    },
+    "N3_support_score_noise_seed3": {
+      "kind": "support_score_noise",
+      "seed": 25053,
+      "support_noise_std": 0.03,
+      "edge_dropout_rate": 0.0
+    },
+    "N4_subgraph_edge_dropout_5_seed1": {
+      "kind": "subgraph_edge_dropout",
+      "seed": 25054,
+      "support_noise_std": 0.0,
+      "edge_dropout_rate": 0.05
+    },
+    "N5_subgraph_edge_dropout_5_seed2": {
+      "kind": "subgraph_edge_dropout",
+      "seed": 25055,
+      "support_noise_std": 0.0,
+      "edge_dropout_rate": 0.05
+    },
+    "N6_subgraph_edge_dropout_5_seed3": {
+      "kind": "subgraph_edge_dropout",
+      "seed": 25056,
+      "support_noise_std": 0.0,
+      "edge_dropout_rate": 0.05
+    }
+  },
+  "notes": [
+    "Support-score noise uses Gaussian noise std=0.03 and stable re-ranking.",
+    "Subgraph dropout removes approximately 5% of edges while preserving query/candidate coverage where possible.",
+    "These variants do not replace Week24 main results."
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "label": "backbone_test",
+  "candidate_json": "dataset/setting_a/12_backbone_ready_ranker_v2/test.json",
+  "metrics_txt": "results/week11_test/backbone_test/metrics.txt",
+  "num_rows": 500
+}

@@ -1,0 +1,13 @@
+{
+  "num_queries": 1,
+  "metrics": {
+    "ConstraintViolationRate@2": 0.5,
+    "QueryHasConstraintViolation@2": 1.0
+  },
+  "input_path": "dataset/setting_b/02_eval_ready/mock_constraint_eval.json",
+  "type_map_path": "dataset/setting_b/01_annotations/type_map.tsv",
+  "schema_path": "dataset/setting_b/01_annotations/schema_rules.json",
+  "ks": [
+    2
+  ]
+}

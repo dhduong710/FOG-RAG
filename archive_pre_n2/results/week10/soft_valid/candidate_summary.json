@@ -1,0 +1,6 @@
+{
+  "label": "soft_valid",
+  "candidate_json": "dataset/setting_a/19_contra_aware/valid_top20_soft_best.json",
+  "metrics_txt": "results/week10/soft_valid/metrics.txt",
+  "num_rows": 500
+}

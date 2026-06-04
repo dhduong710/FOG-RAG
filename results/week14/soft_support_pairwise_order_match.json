@@ -1,0 +1,17 @@
+{
+  "b025_vs_b050": {
+    "exact_order_match_rate": 1.0,
+    "top5_order_match_rate": 1.0,
+    "top1_match_rate": 1.0
+  },
+  "b025_vs_bcap": {
+    "exact_order_match_rate": 0.432,
+    "top5_order_match_rate": 0.562,
+    "top1_match_rate": 0.662
+  },
+  "b050_vs_bcap": {
+    "exact_order_match_rate": 0.432,
+    "top5_order_match_rate": 0.562,
+    "top1_match_rate": 0.662
+  }
+}

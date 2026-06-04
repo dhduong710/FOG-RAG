@@ -1,0 +1,83 @@
+{
+  "week": 13,
+  "branch": "week_13",
+  "main_truth": "raw_no_injection",
+  "decision_split": "valid",
+  "read_only_inputs": {
+    "setting_a_main_source": [
+      "dataset/setting_a/23_noinj_source/valid_top20_raw.json",
+      "dataset/setting_a/23_noinj_source/test_top20_raw.json",
+      "dataset/setting_a/23_noinj_source/raw_source_manifest.json"
+    ],
+    "setting_a_negative_control": [
+      "dataset/setting_a/24_noinj_ontology/valid_top20_ontology_raw.json",
+      "dataset/setting_a/24_noinj_ontology/test_top20_ontology_raw.json",
+      "dataset/setting_a/24_noinj_ontology/valid_top20_type_filtered_raw.json",
+      "dataset/setting_a/24_noinj_ontology/test_top20_type_filtered_raw.json",
+      "dataset/setting_a/24_noinj_ontology/schema_validity_valid.json",
+      "dataset/setting_a/24_noinj_ontology/schema_validity_test.json",
+      "dataset/setting_a/24_noinj_ontology/ontology_filter_report_valid.json",
+      "dataset/setting_a/24_noinj_ontology/ontology_filter_report_test.json"
+    ],
+    "setting_a_evidence_bridge": [
+      "dataset/setting_a/24b_noinj_evidence/train_aligned_evidence.json",
+      "dataset/setting_a/24b_noinj_evidence/valid_aligned_evidence.json",
+      "dataset/setting_a/24b_noinj_evidence/test_aligned_evidence.json",
+      "dataset/setting_a/24b_noinj_evidence/alignment_manifest.json"
+    ],
+    "ontology_safety_lookup": [
+      "dataset/setting_b/01_annotations/type_map.tsv",
+      "dataset/setting_b/01_annotations/schema_rules.json",
+      "dataset/setting_b/01_annotations/path_templates.yaml",
+      "dataset/setting_b/01_annotations/contraindication_pairs.tsv",
+      "dataset/setting_b/01_ontology/domain_range_rules.json",
+      "dataset/setting_b/04_contra_checked/contra_lookup_by_disease.json",
+      "dataset/setting_b/04_contra_checked/contra_lookup_by_drug.json",
+      "dataset/setting_b/04_contra_checked/valid_b_annotations_contra_checked.json",
+      "dataset/setting_b/04_contra_checked/test_b_annotations_contra_checked.json"
+    ],
+    "reference_backbone_assets": [
+      "dataset/setting_a/04_drkgc_json/entity2id.pkl",
+      "dataset/setting_a/04_drkgc_json/id2entity.pkl",
+      "dataset/setting_a/04_drkgc_json/relation2id.pkl",
+      "dataset/setting_a/04_drkgc_json/id2relation.pkl",
+      "dataset/setting_a/08_backbone_ready/entity_embeddings_rgcn.pt"
+    ]
+  },
+  "forbidden_inputs_as_main_path": [
+    "dataset/setting_a/18_ontology_only",
+    "dataset/setting_a/18_ontology_only_eval_ready",
+    "dataset/setting_a/19_contra_aware",
+    "dataset/setting_a/19_contra_aware_eval_ready",
+    "dataset/setting_a/19_contra_aware_eval_ready_test",
+    "dataset/setting_a/19_contra_aware_test_build",
+    "dataset/setting_a/20_test_rerun_eval_ready",
+    "injected novelty-1 hard_main/soft_best branches"
+  ],
+  "legacy_supporting_only": [
+    "reports/week9",
+    "reports/week10",
+    "reports/week11",
+    "results/week9",
+    "results/week10",
+    "results/week11",
+    "results/week11_test",
+    "results/week11_rerun_fix",
+    "results/week11_rerun_fix_strict"
+  ],
+  "new_outputs_week13": [
+    "reports/week13/day1_protocol_freeze.md",
+    "results/week13/n2_file_registry.json",
+    "dataset/setting_a/25_n2_support_features/valid_support_features.json",
+    "dataset/setting_a/25_n2_support_features/support_feature_manifest.json",
+    "results/week13/support_feature_summary.json",
+    "results/week13/support_formula_probe.json",
+    "results/week13/week13_go_decision.json"
+  ],
+  "notes": [
+    "Week 13 is support-feature audit only.",
+    "No fuzzy encoder work in week 13.",
+    "No test decision in week 13.",
+    "Do not change raw source during week 13."
+  ]
+}

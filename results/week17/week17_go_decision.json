@@ -1,0 +1,59 @@
+{
+  "week": 17,
+  "theme": "encoder_readiness_check_on_top_of_frozen_retrieval_main",
+  "final_decision": "NO_GO_FOR_FULL_ENCODER_STAGE",
+  "week18_recommendation": "keep_retrieval_main_as_final_row_or_only_redesign_encoder_as_side_probe",
+  "main_row_after_week17": "soft_support_fuzzy_retrieval_main",
+  "promote_encoder_probe_to_main_row": false,
+  "week17_status": {
+    "readiness_check_completed": true,
+    "encoder_input_package_built": true,
+    "encoder_probe_built": true,
+    "probe_compare_completed": true,
+    "probe_case_review_completed": true
+  },
+  "core_findings": {
+    "retrieval_main_mrr_like": 0.135644,
+    "retrieval_main_hits1_like": 0.056,
+    "retrieval_main_avg_gold_rank": 17.676,
+    "encoder_probe_mrr_like": 0.091707,
+    "encoder_probe_hits1_like": 0.012,
+    "encoder_probe_avg_gold_rank": 17.98,
+    "encoder_probe_avg_bridge_norm": 0.0135,
+    "improved_vs_retrieval_main": 8,
+    "worsened_vs_retrieval_main": 70,
+    "avg_rank_delta_probe_minus_retrieval": 0.304,
+    "anchor_caution_cases": 266
+  },
+  "successes_of_week17": [
+    "Encoder readiness was checked in a controlled, valid-only setting.",
+    "Encoder inputs were built cleanly from the frozen retrieval main row.",
+    "A minimal fuzzy encoder probe v0 was successfully constructed and compared.",
+    "The project avoided prematurely committing to a full encoder stage."
+  ],
+  "failures_or_limits_of_probe": [
+    "Probe v0 underperforms retrieval main on ranking-like proxy metrics.",
+    "Bridge signal is too sparse to support promotion of encoder stage now.",
+    "Probe changes ordering in many cases without reliable gains.",
+    "Anchor caution cases are too frequent."
+  ],
+  "paper_narrative_lock": [
+    "Candidate-stage freeze: soft_support_raw.",
+    "Retrieval-stage freeze: soft_support_fuzzy_retrieval_main.",
+    "Week 17 checks encoder readiness instead of jumping directly to full encoder training.",
+    "Encoder probe v0 is reported as a controlled but not-yet-successful probe.",
+    "Retrieval main remains the strongest frozen row after week 17."
+  ],
+  "next_step_options": [
+    "Option A: keep retrieval main as the final N2 row and move toward locked evaluation / interpretation.",
+    "Option B: revisit encoder only as an explicitly redesigned side experiment, not as the default week-18 main path."
+  ],
+  "source_artifacts": {
+    "readiness_manifest": "results/week17/encoder_readiness_manifest.json",
+    "encoder_input_summary": "results/week17/encoder_input_summary.json",
+    "encoder_probe_manifest": "dataset/setting_a/28_n2_fuzzy_encoder/encoder_probe_manifest.json",
+    "encoder_probe_compare": "results/week17/encoder_probe_compare.json",
+    "encoder_case_samples": "results/week17/encoder_case_samples.json",
+    "encoder_freeze_report": "results/week17/encoder_freeze_report.json"
+  }
+}

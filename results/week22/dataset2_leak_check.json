@@ -1,0 +1,44 @@
+{
+  "decision": "PASS",
+  "failures": [],
+  "target_relation": "T",
+  "target_relation_normalized": "therapeutic_association_proxy",
+  "gold_injection": false,
+  "sizes": {
+    "train": 28960,
+    "valid": 500,
+    "test": 500,
+    "candidate_universe_size": 1342,
+    "query_universe_size": 803,
+    "train_enriched_triples": 386768
+  },
+  "exact_leak_checks": {
+    "valid_positive_in_train_count": 0,
+    "test_positive_in_train_count": 0,
+    "valid_test_positive_overlap_count": 0,
+    "selected_valid_or_test_target_in_train_enriched_count": 0
+  },
+  "coverage_checks": {
+    "valid_gold_drug_coverage_in_candidate_universe": 1.0,
+    "test_gold_drug_coverage_in_candidate_universe": 1.0,
+    "valid_query_disease_coverage_in_query_universe": 1.0,
+    "test_query_disease_coverage_in_query_universe": 1.0
+  },
+  "type_checks": {
+    "type_counts": {
+      "Disease_from_train_T_tail": 803,
+      "Unknown_or_Other": 5102,
+      "Drug_or_Chemical_from_train_T_head": 1342
+    },
+    "candidate_non_drug_count": 0,
+    "query_non_disease_count": 0,
+    "candidate_non_drug_examples": [],
+    "query_non_disease_examples": []
+  },
+  "examples": {
+    "valid_positive_in_train_examples": [],
+    "test_positive_in_train_examples": [],
+    "valid_test_positive_overlap_examples": [],
+    "selected_eval_target_in_enriched_examples": []
+  }
+}

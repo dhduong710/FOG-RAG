@@ -1,0 +1,12 @@
+{
+  "target_relation": "indication",
+  "candidate_universe": "drug_only",
+  "k": 20,
+  "embedding_dim": 128,
+  "hidden_dim": 128,
+  "num_layers": 2,
+  "learning_rate": 5e-05,
+  "negatives_per_query": 32,
+  "decision_split": "valid",
+  "output_dir": "dataset/setting_a/21_ranker_rescue"
+}

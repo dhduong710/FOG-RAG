@@ -1,0 +1,67 @@
+{
+  "week": 18,
+  "day": 3,
+  "metric_policy": {
+    "main_metric_name": "mrr_at20",
+    "rr_rule": "1/rank if gold_rank <= 20 else 0",
+    "descriptive_rank_rule": "gold_rank=21 when gold is out of top20"
+  },
+  "main_row_after_week17": "soft_support_fuzzy_retrieval_main",
+  "comparisons": {
+    "backbone_to_ontology_negative_control": {
+      "delta_mrr_at20": -0.049886,
+      "delta_hits1_at20": -0.022,
+      "delta_avg_gold_rank": 2.442,
+      "delta_gold_present_rate": -0.188,
+      "interpretation": "ontology_raw is a brittle negative control under raw/no-injection."
+    },
+    "backbone_to_soft_support": {
+      "delta_mrr_at20": 0.043841,
+      "delta_hits1_at20": 0.032,
+      "delta_avg_gold_rank": -0.7,
+      "delta_gold_present_rate": 0.0,
+      "interpretation": "soft support improves the candidate-stage row over backbone_raw."
+    },
+    "soft_support_to_retrieval_main": {
+      "delta_mrr_at20": 0.0,
+      "delta_hits1_at20": 0.0,
+      "delta_avg_gold_rank": 0.0,
+      "delta_gold_present_rate": 0.0,
+      "ranking_preserved": true,
+      "graph_side_note": {
+        "avg_subgraph_size": 32.556,
+        "avg_direct_shortcut_path_rate": 0.105536,
+        "avg_contradiction_path_rate": 0.006804,
+        "candidate_coverage_preserved_rate": 1.0
+      },
+      "interpretation": "retrieval main preserves reviewer-safe ranking metrics while providing a cleaner graph/evidence package."
+    },
+    "backbone_to_retrieval_main": {
+      "delta_mrr_at20": 0.043841,
+      "delta_hits1_at20": 0.032,
+      "delta_avg_gold_rank": -0.7,
+      "delta_gold_present_rate": 0.0,
+      "interpretation": "retrieval main is the strongest current row over the raw backbone reference."
+    }
+  },
+  "appendix_probe_summary": {
+    "row_name": "soft_support_fuzzy_encoder_probe_v0",
+    "positioning": "supporting_appendix_only",
+    "gold_present_rate": 0.202,
+    "mrr_at20": 0.053707,
+    "mrr_present_only": 0.265878,
+    "hits1_at20": 0.012,
+    "avg_gold_rank": 17.98,
+    "avg_bridge_norm": 0.0135,
+    "improved_vs_retrieval_main": 8,
+    "worsened_vs_retrieval_main": 70,
+    "avg_rank_delta_probe_minus_retrieval": 0.304,
+    "decision": "deferred_not_promoted"
+  },
+  "key_takeaways": [
+    "ontology_raw remains a valid negative control and should not be treated as a competitive row.",
+    "soft_support_raw is the candidate-stage main intermediate row.",
+    "soft_support_fuzzy_retrieval_main preserves reviewer-safe ranking metrics over soft_support_raw while improving graph-side packaging.",
+    "encoder probe remains appendix/supporting only and is not promoted to main row."
+  ]
+}

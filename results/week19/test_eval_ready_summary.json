@@ -1,0 +1,86 @@
+{
+  "week": 19,
+  "stage": "build_test_eval_ready",
+  "status": "BUILT",
+  "output_paths": {
+    "backbone_raw": "/home/duong/code/FOG-RAG/dataset/setting_b/08_n2_eval_test/test_backbone_raw_eval.json",
+    "ontology_raw": "/home/duong/code/FOG-RAG/dataset/setting_b/08_n2_eval_test/test_ontology_raw_eval.json",
+    "soft_support_raw": "/home/duong/code/FOG-RAG/dataset/setting_b/08_n2_eval_test/test_soft_support_raw_eval.json",
+    "retrieval_main": "/home/duong/code/FOG-RAG/dataset/setting_b/08_n2_eval_test/test_retrieval_main_eval.json"
+  },
+  "row_summaries": {
+    "backbone_raw": {
+      "num_rows": 500,
+      "gold_present_rate": 0.24,
+      "mrr_at20": 0.06456283,
+      "mrr_present_only": 0.26901179,
+      "hits1_at20": 0.024,
+      "hits3_at20": 0.07,
+      "hits10_at20": 0.192,
+      "avg_gold_rank": 17.652,
+      "top_keys_match_valid": true,
+      "metrics_keys_match_valid": true,
+      "gold_rank_21_count": 380
+    },
+    "ontology_raw": {
+      "num_rows": 500,
+      "gold_present_rate": 0.012,
+      "mrr_at20": 0.00313975,
+      "mrr_present_only": 0.26164622,
+      "hits1_at20": 0.002,
+      "hits3_at20": 0.002,
+      "hits10_at20": 0.01,
+      "avg_gold_rank": 20.84,
+      "top_keys_match_valid": true,
+      "metrics_keys_match_valid": true,
+      "gold_rank_21_count": 494
+    },
+    "soft_support_raw": {
+      "num_rows": 500,
+      "gold_present_rate": 0.24,
+      "mrr_at20": 0.12532618,
+      "mrr_present_only": 0.52219244,
+      "hits1_at20": 0.072,
+      "hits3_at20": 0.166,
+      "hits10_at20": 0.222,
+      "avg_gold_rank": 16.804,
+      "top_keys_match_valid": true,
+      "metrics_keys_match_valid": true,
+      "gold_rank_21_count": 380
+    },
+    "retrieval_main": {
+      "num_rows": 500,
+      "gold_present_rate": 0.24,
+      "mrr_at20": 0.12532618,
+      "mrr_present_only": 0.52219244,
+      "hits1_at20": 0.072,
+      "hits3_at20": 0.166,
+      "hits10_at20": 0.222,
+      "avg_gold_rank": 16.804,
+      "top_keys_match_valid": true,
+      "metrics_keys_match_valid": true,
+      "gold_rank_21_count": 380
+    }
+  },
+  "global_checks": {
+    "all_rows_have_500_examples": true,
+    "all_query_sets_match": true,
+    "all_top_level_keys_match_across_test_rows": true,
+    "all_gold_rank_use_21_sentinel_when_missing": true,
+    "all_row_metrics_keys_match_valid_refs": true,
+    "all_top_keys_match_valid_refs": true
+  },
+  "metric_policy": {
+    "main_metric": "mrr_at20",
+    "rr_rule": "1/rank if rank <= 20 else 0",
+    "gold_rank_out_of_top20": 21,
+    "secondary_metrics": [
+      "gold_present_rate",
+      "mrr_present_only",
+      "hits1_at20",
+      "hits3_at20",
+      "hits10_at20",
+      "avg_gold_rank"
+    ]
+  }
+}

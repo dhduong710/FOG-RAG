@@ -1,0 +1,57 @@
+run_name: backbone_valid_v2_8b_full
+
+model_name_or_path: meta-llama/Meta-Llama-3.1-8B-Instruct
+model_type: llama
+
+dataset_path: dataset/setting_a/12_backbone_ready_ranker_v2
+kge_embedding_path: dataset/setting_a/08_backbone_ready/entity_embeddings_rgcn.pt
+
+output_dir: results/week7/backbone_valid_v2_8b_full
+checkpoint_dir: results/week7/backbone_valid_v2_8b_full/checkpoint-final
+
+source_max_len: 768
+target_max_len: 64
+
+# keep protocol close to current path
+num_train_epochs: 1.0
+per_device_train_batch_size: 1
+gradient_accumulation_steps: 8
+dataloader_num_workers: 4
+
+learning_rate: 2.0e-4
+lora_r: 32
+lora_alpha: 32
+lora_dropout: 0.1
+
+optim: paged_adamw_32bit
+lr_scheduler_type: constant
+warmup_ratio: 0.03
+
+logging_steps: 50
+save_steps: 2000
+save_total_limit: 2
+seed: 2025
+
+report_to: none
+overwrite_output_dir: true
+
+# 8B memory plan
+use_quant: false
+bits: 4
+double_quant: true
+quant_type: nf4
+
+precision: bf16
+
+generation:
+  max_new_tokens: 64
+  min_new_tokens: 1
+  do_sample: false
+  num_beams: 1
+  num_return_sequences: 1
+  use_cache: true
+
+compare_against:
+  week6_valid_metrics: results/week6/backbone_llama32_3b_rgcn_real/valid_eval/eval_valid_metrics.json
+  week7_3b_valid_metrics: results/week7/backbone_valid_v2_short/valid_eval_v2/eval_valid_v2_metrics.json
+  week7_candidate_report: dataset/setting_a/11_ranker_v2/candidate_report.json

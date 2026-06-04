@@ -1,0 +1,55 @@
+{
+  "current_pilot_config": {
+    "model_name": "TinyLlama/TinyLlama-1.1B-Chat-v1.0",
+    "kge_path": "dataset/setting_a/07_pilot_ready/mock_entity_embeddings.pt",
+    "seq_len": 768,
+    "per_device_train_batch_size": 1,
+    "gradient_accumulation_steps": 8,
+    "effective_batch": 8,
+    "device_note": "Current local GPU used in week-4 pilot"
+  },
+  "observed_runtime_memory": {
+    "dryrun_peak_vram_mb": 4757.14,
+    "train_runtime_seconds": 63.3561,
+    "train_steps_per_second": 0.316,
+    "train_samples_per_second": 2.525,
+    "sec_per_step": 3.167805,
+    "infer_elapsed_seconds_pilot_valid_test": 56.59,
+    "infer_seconds_per_sample": 0.28295000000000003,
+    "infer_max_rss_kb": 4217580
+  },
+  "storage": {
+    "pilot_ready_size": "22.18 MB",
+    "train_output_size": "81.44 MB",
+    "infer_output_size": "205.51 KB",
+    "checkpoints": [
+      {
+        "name": "checkpoint-10",
+        "bytes": 28462786,
+        "human": "27.14 MB"
+      },
+      {
+        "name": "checkpoint-20",
+        "bytes": 28462786,
+        "human": "27.14 MB"
+      },
+      {
+        "name": "checkpoint-final",
+        "bytes": 28462786,
+        "human": "27.14 MB"
+      }
+    ]
+  },
+  "extrapolation_to_month2": {
+    "full_train_samples": 8388,
+    "full_epoch_optimizer_steps": 1049,
+    "estimated_full_epoch_seconds": 3323.027445,
+    "estimated_full_epoch_minutes": 55.38379075,
+    "estimated_3epoch_hours": 2.7691895375000004,
+    "estimated_5epoch_hours": 4.615315895833334,
+    "estimated_full_valid_test_seconds": 282.95000000000005,
+    "estimated_full_valid_test_minutes": 4.715833333333334
+  },
+  "final_plan": "B",
+  "note": "These estimates are based on the week-4 debug setup (TinyLlama + mock entity embeddings + pilot-ready JSON), so they are engineering estimates, not final month-2 scientific run estimates."
+}

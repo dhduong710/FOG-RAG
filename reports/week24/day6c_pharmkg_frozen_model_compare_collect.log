@@ -1,0 +1,15 @@
+decision = PHARMKG_FROZEN_MODEL_COMPARE_READY
+summary = /home/anhlq/Documents/2026-dhd/FOG-RAG/results/week24/pharmkg_frozen_model_compare/pharmkg_model_compare_reviewer_safe_summary.json
+valid = /home/anhlq/Documents/2026-dhd/FOG-RAG/results/week24/pharmkg_frozen_model_compare/pharmkg_model_compare_table_valid.json
+test = /home/anhlq/Documents/2026-dhd/FOG-RAG/results/week24/pharmkg_frozen_model_compare/pharmkg_model_compare_table_test.json
+best = /home/anhlq/Documents/2026-dhd/FOG-RAG/results/week24/pharmkg_frozen_model_compare/pharmkg_model_compare_best_model.json
+e2e_tex = /home/anhlq/Documents/2026-dhd/FOG-RAG/results/week24/pharmkg_frozen_model_compare/paper_assets/pharmkg_e2e_table_latex.tex
+model_tex = /home/anhlq/Documents/2026-dhd/FOG-RAG/results/week24/pharmkg_frozen_model_compare/paper_assets/pharmkg_model_compare_table_latex.tex
+result_para = /home/anhlq/Documents/2026-dhd/FOG-RAG/results/week24/pharmkg_frozen_model_compare/paper_assets/pharmkg_result_paragraph.md
+limit_para = /home/anhlq/Documents/2026-dhd/FOG-RAG/results/week24/pharmkg_frozen_model_compare/paper_assets/pharmkg_limitation_paragraph.md
+report = /home/anhlq/Documents/2026-dhd/FOG-RAG/reports/week24/day6c_pharmkg_frozen_model_compare.md
+
+Ranked test fuzzy:
+1 llama3_2_3b MRR= 0.02097132 H10= 0.062 pred_in= 0.412 invalid= 0.588 top1= 0.412 list_frag= 0.582
+2 llama3_8b MRR= 0.0202752 H10= 0.064 pred_in= 0.274 invalid= 0.726 top1= 0.274 list_frag= 0.096
+3 medllama3_8b MRR= 0.01858289 H10= 0.06 pred_in= 0.022 invalid= 0.978 top1= 0.022 list_frag= 0.598

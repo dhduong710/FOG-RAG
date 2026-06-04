@@ -1,0 +1,132 @@
+{
+  "created_at": "2026-05-11T16:40:18.381821+00:00",
+  "decision": "DAY3_DRKG_SPLIT_GRAPH_READY",
+  "split_summary": {
+    "created_at": "2026-05-11T16:40:18.381790+00:00",
+    "setting": "setting_e_drkg",
+    "dataset": "DRKG",
+    "target_relation": "DRUGBANK::treats::Compound:Disease",
+    "target_relation_normalized": "drugbank_treats",
+    "task_form": "(?, DRUGBANK::treats, disease)",
+    "prediction_type": "predicted_head",
+    "train_size": 3968,
+    "valid_size": 500,
+    "test_size": 500,
+    "split_info": {
+      "requested_valid_size": 500,
+      "requested_test_size": 500,
+      "actual_train_size": 3968,
+      "actual_valid_size": 500,
+      "actual_test_size": 500,
+      "attempt_used": 0,
+      "coverage_policy": "valid/test compounds and diseases remain in train target relation"
+    },
+    "candidate_universe": "train_target_relation_compound_heads",
+    "candidate_universe_size": 1542,
+    "query_universe": "target_relation_diseases",
+    "query_universe_size": 1182,
+    "top_k": 20,
+    "gold_injection": false,
+    "absent_gold_rank_sentinel": 21
+  },
+  "graph_summary": {
+    "created_at": "2026-05-11T16:40:18.381812+00:00",
+    "setting": "setting_e_drkg",
+    "dataset": "DRKG",
+    "target_relation": "DRUGBANK::treats::Compound:Disease",
+    "train_enriched_path": "dataset/setting_e_drkg/03_graph/train_enriched.tsv",
+    "train_enriched_ids_path": "dataset/setting_e_drkg/03_graph/train_enriched_ids.tsv",
+    "train_enriched_num_edges": 187962,
+    "num_entities": 13918,
+    "num_relations": 85,
+    "graph_num_rels_for_future_training": 85,
+    "target_relation_id": 16,
+    "kept_by_family": {
+      "compound_gene": 44197,
+      "target_treats": 3968,
+      "aux_compound_disease": 14333,
+      "disease_gene": 23235,
+      "gene_gene": 102229
+    },
+    "num_candidate_compounds": 1542,
+    "num_target_diseases": 1182,
+    "num_touched_genes": 11194,
+    "graph_build_stats": {
+      "num_kept_edges": 187962,
+      "kept_by_family": {
+        "compound_gene": 44197,
+        "target_treats": 3968,
+        "aux_compound_disease": 14333,
+        "disease_gene": 23235,
+        "gene_gene": 102229
+      },
+      "num_graph_entities": 13918,
+      "num_graph_relations": 85,
+      "num_candidate_compounds": 1542,
+      "num_target_diseases": 1182,
+      "num_touched_genes": 11194,
+      "skipped_heldout_target": 1000,
+      "exact_leak_seen": 0,
+      "caps": {
+        "max_compound_gene_per_compound": 80,
+        "max_disease_gene_per_disease": 120,
+        "max_aux_cd_per_compound": 80,
+        "max_aux_cd_per_disease": 80,
+        "max_aux_cd_total": 120000,
+        "max_gene_gene_per_gene": 40,
+        "max_gene_gene_total": 500000,
+        "max_total_graph_edges": 1500000
+      }
+    },
+    "id_range_check": {
+      "entity_id_min": 0,
+      "entity_id_max": 13917,
+      "relation_id_min": 0,
+      "relation_id_max": 84,
+      "entity_id_range_pass": true,
+      "relation_id_range_pass": true
+    },
+    "aux_cd_relations_used": [
+      "GNBR::T::Compound:Disease",
+      "GNBR::Sa::Compound:Disease",
+      "GNBR::Pa::Compound:Disease",
+      "GNBR::C::Compound:Disease",
+      "GNBR::J::Compound:Disease",
+      "GNBR::Pr::Compound:Disease",
+      "GNBR::Mp::Compound:Disease"
+    ]
+  },
+  "checks": {
+    "coverage": {
+      "valid_missing_gold_compounds_in_train": [],
+      "valid_missing_query_diseases_in_train": [],
+      "test_missing_gold_compounds_in_train": [],
+      "test_missing_query_diseases_in_train": [],
+      "coverage_pass": true
+    },
+    "leak_check": {
+      "valid_heldout_size": 500,
+      "test_heldout_size": 500,
+      "valid_exact_leaks": [],
+      "test_exact_leaks": [],
+      "valid_exact_leak_count": 0,
+      "test_exact_leak_count": 0,
+      "exact_leak_count": 0,
+      "exact_leak_pass": true
+    },
+    "schema_check": {
+      "entity_id_min": 0,
+      "entity_id_max": 13917,
+      "relation_id_min": 0,
+      "relation_id_max": 84,
+      "entity_id_range_pass": true,
+      "relation_id_range_pass": true
+    }
+  },
+  "important_next_arguments": {
+    "graph_num_rels": 85,
+    "target_relation_id": 16,
+    "candidate_universe_size": 1542,
+    "query_universe_size": 1182
+  }
+}

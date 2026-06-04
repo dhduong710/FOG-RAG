@@ -1,0 +1,1250 @@
+{
+  "week": 20,
+  "stage": "paper_case_pack",
+  "status": "BUILT",
+  "source": {
+    "week19_case_shortlist": "/home/duong/code/FOG-RAG/results/week19/test_case_shortlist.json",
+    "week19_go_decision": "/home/duong/code/FOG-RAG/results/week19/week19_go_decision.json",
+    "week20_predictions_used_if_available": true
+  },
+  "case_pack": {
+    "main_paper": {
+      "backbone_to_retrieval_improved": [
+        {
+          "row_index": 348,
+          "query_entity": "lymphosarcoma",
+          "query_entity_id": 9897,
+          "gold_entity": "Vincristine",
+          "gold_entity_id": 8955,
+          "backbone_gold_present": true,
+          "backbone_gold_rank": 16,
+          "ontology_gold_present": false,
+          "ontology_gold_rank": 21,
+          "soft_gold_present": true,
+          "soft_gold_rank": 2,
+          "retrieval_gold_present": true,
+          "retrieval_gold_rank": 2,
+          "backbone_top1": "Cortisone acetate",
+          "ontology_top1": "Cortisone acetate",
+          "soft_top1": "Prednisolone",
+          "retrieval_top1": "Prednisolone",
+          "soft_top5": [
+            "Prednisolone",
+            "Vincristine",
+            "Propranolol",
+            "Cortisone acetate",
+            "Dexamethasone"
+          ],
+          "retrieval_top5": [
+            "Prednisolone",
+            "Vincristine",
+            "Propranolol",
+            "Cortisone acetate",
+            "Dexamethasone"
+          ],
+          "selected_source_variant": "soft_support_fuzzy_retrieval_tight",
+          "avg_triple_score": 0.4242,
+          "direct_shortcut_path_rate": 0.76,
+          "contradiction_path_rate": 0.0,
+          "original_subgraph_size": 45,
+          "selected_subgraph_size": 25,
+          "num_original_direct_shortcuts": 34,
+          "num_selected_direct_shortcuts": 19,
+          "candidate_coverage_preserved_rate": 1.0,
+          "top_band_coverage_preserved_rate": 1.0,
+          "subgraph_shrink": 20,
+          "direct_shortcut_reduction": 15,
+          "delta_backbone_to_retrieval": 14,
+          "e2e_predictions": {
+            "backbone_raw": {
+              "target": "Vincristine",
+              "pred": "Mechlorethamine",
+              "pred_rank": 17,
+              "rank": 16,
+              "top5": [
+                "Cortisone acetate",
+                "Dexamethasone",
+                "Methylprednisolone",
+                "Hydrocortisone",
+                "Triamcinolone"
+              ]
+            },
+            "soft_support_raw": {
+              "target": "Vincristine",
+              "pred": "Desonide",
+              "pred_rank": 3,
+              "rank": 2,
+              "top5": [
+                "Prednisolone",
+                "Vincristine",
+                "Propranolol",
+                "Cortisone acetate",
+                "Dexamethasone"
+              ]
+            },
+            "retrieval_main": {
+              "target": "Vincristine",
+              "pred": "Desonide",
+              "pred_rank": 3,
+              "rank": 2,
+              "top5": [
+                "Prednisolone",
+                "Vincristine",
+                "Propranolol",
+                "Cortisone acetate",
+                "Dexamethasone"
+              ]
+            }
+          }
+        },
+        {
+          "row_index": 56,
+          "query_entity": "lymphoma",
+          "query_entity_id": 9894,
+          "gold_entity": "Vincristine",
+          "gold_entity_id": 8955,
+          "backbone_gold_present": true,
+          "backbone_gold_rank": 17,
+          "ontology_gold_present": false,
+          "ontology_gold_rank": 21,
+          "soft_gold_present": true,
+          "soft_gold_rank": 3,
+          "retrieval_gold_present": true,
+          "retrieval_gold_rank": 3,
+          "backbone_top1": "Cortisone acetate",
+          "ontology_top1": "Dexamethasone",
+          "soft_top1": "Cortisone acetate",
+          "retrieval_top1": "Cortisone acetate",
+          "soft_top5": [
+            "Cortisone acetate",
+            "Fusidic acid",
+            "Vincristine",
+            "Propranolol",
+            "Dexamethasone"
+          ],
+          "retrieval_top5": [
+            "Cortisone acetate",
+            "Fusidic acid",
+            "Vincristine",
+            "Propranolol",
+            "Dexamethasone"
+          ],
+          "selected_source_variant": "soft_support_fuzzy_retrieval_tight",
+          "avg_triple_score": 0.466,
+          "direct_shortcut_path_rate": 0.68,
+          "contradiction_path_rate": 0.0,
+          "original_subgraph_size": 45,
+          "selected_subgraph_size": 25,
+          "num_original_direct_shortcuts": 32,
+          "num_selected_direct_shortcuts": 17,
+          "candidate_coverage_preserved_rate": 1.0,
+          "top_band_coverage_preserved_rate": 1.0,
+          "subgraph_shrink": 20,
+          "direct_shortcut_reduction": 15,
+          "delta_backbone_to_retrieval": 14,
+          "e2e_predictions": {
+            "backbone_raw": {
+              "target": "Vincristine",
+              "pred": "Desonide",
+              "pred_rank": 18,
+              "rank": 17,
+              "top5": [
+                "Cortisone acetate",
+                "Dexamethasone",
+                "Methylprednisolone",
+                "Hydrocortisone",
+                "Triamcinolone"
+              ]
+            },
+            "soft_support_raw": {
+              "target": "Vincristine",
+              "pred": "Desonide",
+              "pred_rank": 4,
+              "rank": 3,
+              "top5": [
+                "Cortisone acetate",
+                "Fusidic acid",
+                "Vincristine",
+                "Propranolol",
+                "Dexamethasone"
+              ]
+            },
+            "retrieval_main": {
+              "target": "Vincristine",
+              "pred": "Desonide",
+              "pred_rank": 4,
+              "rank": 3,
+              "top5": [
+                "Cortisone acetate",
+                "Fusidic acid",
+                "Vincristine",
+                "Propranolol",
+                "Dexamethasone"
+              ]
+            }
+          }
+        },
+        {
+          "row_index": 381,
+          "query_entity": "rheumatoid arthritis",
+          "query_entity_id": 10247,
+          "gold_entity": "Methotrexate",
+          "gold_entity_id": 5415,
+          "backbone_gold_present": true,
+          "backbone_gold_rank": 19,
+          "ontology_gold_present": true,
+          "ontology_gold_rank": 10,
+          "soft_gold_present": true,
+          "soft_gold_rank": 8,
+          "retrieval_gold_present": true,
+          "retrieval_gold_rank": 8,
+          "backbone_top1": "Cortisone acetate",
+          "ontology_top1": "Cortisone acetate",
+          "soft_top1": "Doxorubicin",
+          "retrieval_top1": "Doxorubicin",
+          "soft_top5": [
+            "Doxorubicin",
+            "Carmustine",
+            "Vinblastine",
+            "Bleomycin",
+            "Thiotepa"
+          ],
+          "retrieval_top5": [
+            "Doxorubicin",
+            "Carmustine",
+            "Vinblastine",
+            "Bleomycin",
+            "Thiotepa"
+          ],
+          "selected_source_variant": "soft_support_fuzzy_retrieval_tight",
+          "avg_triple_score": 0.470862,
+          "direct_shortcut_path_rate": 0.310345,
+          "contradiction_path_rate": 0.0,
+          "original_subgraph_size": 52,
+          "selected_subgraph_size": 29,
+          "num_original_direct_shortcuts": 25,
+          "num_selected_direct_shortcuts": 9,
+          "candidate_coverage_preserved_rate": 1.0,
+          "top_band_coverage_preserved_rate": 1.0,
+          "subgraph_shrink": 23,
+          "direct_shortcut_reduction": 16,
+          "delta_backbone_to_retrieval": 11,
+          "e2e_predictions": {
+            "backbone_raw": {
+              "target": "Methotrexate",
+              "pred": "Hydrocortisone",
+              "pred_rank": 19,
+              "rank": 19,
+              "top5": [
+                "Cortisone acetate",
+                "Dexamethasone",
+                "Methylprednisolone",
+                "Hydrocortisone",
+                "Betamethasone"
+              ]
+            },
+            "soft_support_raw": {
+              "target": "Methotrexate",
+              "pred": "Desonide",
+              "pred_rank": 9,
+              "rank": 8,
+              "top5": [
+                "Doxorubicin",
+                "Carmustine",
+                "Vinblastine",
+                "Bleomycin",
+                "Thiotepa"
+              ]
+            },
+            "retrieval_main": {
+              "target": "Methotrexate",
+              "pred": "Cortisone acetate",
+              "pred_rank": 9,
+              "rank": 8,
+              "top5": [
+                "Doxorubicin",
+                "Carmustine",
+                "Vinblastine",
+                "Bleomycin",
+                "Thiotepa"
+              ]
+            }
+          }
+        }
+      ],
+      "ontology_failure_retrieval_success": [
+        {
+          "row_index": 22,
+          "query_entity": "seborrheic dermatitis",
+          "query_entity_id": 10270,
+          "gold_entity": "Cortisone acetate",
+          "gold_entity_id": 2042,
+          "backbone_gold_present": true,
+          "backbone_gold_rank": 1,
+          "ontology_gold_present": false,
+          "ontology_gold_rank": 21,
+          "soft_gold_present": true,
+          "soft_gold_rank": 1,
+          "retrieval_gold_present": true,
+          "retrieval_gold_rank": 1,
+          "backbone_top1": "Cortisone acetate",
+          "ontology_top1": "Dexamethasone",
+          "soft_top1": "Cortisone acetate",
+          "retrieval_top1": "Cortisone acetate",
+          "soft_top5": [
+            "Cortisone acetate",
+            "Hydrocortisone acetate",
+            "Prednisone",
+            "Ofloxacin",
+            "Ciprofloxacin"
+          ],
+          "retrieval_top5": [
+            "Cortisone acetate",
+            "Hydrocortisone acetate",
+            "Prednisone",
+            "Ofloxacin",
+            "Ciprofloxacin"
+          ],
+          "selected_source_variant": "soft_support_fuzzy_retrieval_tight",
+          "avg_triple_score": 0.44871,
+          "direct_shortcut_path_rate": 0.225806,
+          "contradiction_path_rate": 0.0,
+          "original_subgraph_size": 57,
+          "selected_subgraph_size": 31,
+          "num_original_direct_shortcuts": 18,
+          "num_selected_direct_shortcuts": 7,
+          "candidate_coverage_preserved_rate": 1.0,
+          "top_band_coverage_preserved_rate": 1.0,
+          "subgraph_shrink": 26,
+          "direct_shortcut_reduction": 11,
+          "delta_ontology_to_retrieval": 20,
+          "e2e_predictions": {
+            "backbone_raw": {
+              "target": "Cortisone acetate",
+              "pred": "Alimemazine",
+              "pred_rank": 2,
+              "rank": 1,
+              "top5": [
+                "Cortisone acetate",
+                "Dexamethasone",
+                "Hydrocortisone",
+                "Betamethasone",
+                "Triamcinolone"
+              ]
+            },
+            "soft_support_raw": {
+              "target": "Cortisone acetate",
+              "pred": "Alimemazine",
+              "pred_rank": 2,
+              "rank": 1,
+              "top5": [
+                "Cortisone acetate",
+                "Hydrocortisone acetate",
+                "Prednisone",
+                "Ofloxacin",
+                "Ciprofloxacin"
+              ]
+            },
+            "retrieval_main": {
+              "target": "Cortisone acetate",
+              "pred": "Methylprednisolone",
+              "pred_rank": 2,
+              "rank": 1,
+              "top5": [
+                "Cortisone acetate",
+                "Hydrocortisone acetate",
+                "Prednisone",
+                "Ofloxacin",
+                "Ciprofloxacin"
+              ]
+            }
+          }
+        },
+        {
+          "row_index": 41,
+          "query_entity": "acute lymphoblastic leukemia (disease)",
+          "query_entity_id": 9243,
+          "gold_entity": "Dexamethasone",
+          "gold_entity_id": 2378,
+          "backbone_gold_present": true,
+          "backbone_gold_rank": 2,
+          "ontology_gold_present": false,
+          "ontology_gold_rank": 21,
+          "soft_gold_present": true,
+          "soft_gold_rank": 1,
+          "retrieval_gold_present": true,
+          "retrieval_gold_rank": 1,
+          "backbone_top1": "Cortisone acetate",
+          "ontology_top1": "Cortisone acetate",
+          "soft_top1": "Dexamethasone",
+          "retrieval_top1": "Dexamethasone",
+          "soft_top5": [
+            "Dexamethasone",
+            "Betamethasone",
+            "Carmustine",
+            "Vinblastine",
+            "Bleomycin"
+          ],
+          "retrieval_top5": [
+            "Dexamethasone",
+            "Betamethasone",
+            "Carmustine",
+            "Vinblastine",
+            "Bleomycin"
+          ],
+          "selected_source_variant": "soft_support_fuzzy_retrieval_tight",
+          "avg_triple_score": 0.513571,
+          "direct_shortcut_path_rate": 0.428571,
+          "contradiction_path_rate": 0.0,
+          "original_subgraph_size": 50,
+          "selected_subgraph_size": 28,
+          "num_original_direct_shortcuts": 26,
+          "num_selected_direct_shortcuts": 12,
+          "candidate_coverage_preserved_rate": 1.0,
+          "top_band_coverage_preserved_rate": 1.0,
+          "subgraph_shrink": 22,
+          "direct_shortcut_reduction": 14,
+          "delta_ontology_to_retrieval": 20,
+          "e2e_predictions": {
+            "backbone_raw": {
+              "target": "Dexamethasone",
+              "pred": "Testosterone",
+              "pred_rank": 3,
+              "rank": 2,
+              "top5": [
+                "Cortisone acetate",
+                "Dexamethasone",
+                "Methylprednisolone",
+                "Hydrocortisone",
+                "Betamethasone"
+              ]
+            },
+            "soft_support_raw": {
+              "target": "Dexamethasone",
+              "pred": "Testosterone",
+              "pred_rank": 2,
+              "rank": 1,
+              "top5": [
+                "Dexamethasone",
+                "Betamethasone",
+                "Carmustine",
+                "Vinblastine",
+                "Bleomycin"
+              ]
+            },
+            "retrieval_main": {
+              "target": "Dexamethasone",
+              "pred": "Cortisone acetate",
+              "pred_rank": 2,
+              "rank": 1,
+              "top5": [
+                "Dexamethasone",
+                "Betamethasone",
+                "Carmustine",
+                "Vinblastine",
+                "Bleomycin"
+              ]
+            }
+          }
+        },
+        {
+          "row_index": 48,
+          "query_entity": "acquired angioedema",
+          "query_entity_id": 9221,
+          "gold_entity": "Betamethasone",
+          "gold_entity_id": 962,
+          "backbone_gold_present": true,
+          "backbone_gold_rank": 5,
+          "ontology_gold_present": false,
+          "ontology_gold_rank": 21,
+          "soft_gold_present": true,
+          "soft_gold_rank": 1,
+          "retrieval_gold_present": true,
+          "retrieval_gold_rank": 1,
+          "backbone_top1": "Cortisone acetate",
+          "ontology_top1": "Cortisone acetate",
+          "soft_top1": "Betamethasone",
+          "retrieval_top1": "Betamethasone",
+          "soft_top5": [
+            "Betamethasone",
+            "Fusidic acid",
+            "Ofloxacin",
+            "Ciprofloxacin",
+            "Demeclocycline"
+          ],
+          "retrieval_top5": [
+            "Betamethasone",
+            "Fusidic acid",
+            "Ofloxacin",
+            "Ciprofloxacin",
+            "Demeclocycline"
+          ],
+          "selected_source_variant": "soft_support_fuzzy_retrieval_tight",
+          "avg_triple_score": 0.458667,
+          "direct_shortcut_path_rate": 0.366667,
+          "contradiction_path_rate": 0.0,
+          "original_subgraph_size": 54,
+          "selected_subgraph_size": 30,
+          "num_original_direct_shortcuts": 29,
+          "num_selected_direct_shortcuts": 11,
+          "candidate_coverage_preserved_rate": 1.0,
+          "top_band_coverage_preserved_rate": 1.0,
+          "subgraph_shrink": 24,
+          "direct_shortcut_reduction": 18,
+          "delta_ontology_to_retrieval": 20,
+          "e2e_predictions": {
+            "backbone_raw": {
+              "target": "Betamethasone",
+              "pred": "Benzylpenicillin",
+              "pred_rank": 6,
+              "rank": 5,
+              "top5": [
+                "Cortisone acetate",
+                "Dexamethasone",
+                "Hydrocortisone",
+                "Triamcinolone",
+                "Betamethasone"
+              ]
+            },
+            "soft_support_raw": {
+              "target": "Betamethasone",
+              "pred": "Cortisone acetate",
+              "pred_rank": 2,
+              "rank": 1,
+              "top5": [
+                "Betamethasone",
+                "Fusidic acid",
+                "Ofloxacin",
+                "Ciprofloxacin",
+                "Demeclocycline"
+              ]
+            },
+            "retrieval_main": {
+              "target": "Betamethasone",
+              "pred": "Cortisone acetate",
+              "pred_rank": 2,
+              "rank": 1,
+              "top5": [
+                "Betamethasone",
+                "Fusidic acid",
+                "Ofloxacin",
+                "Ciprofloxacin",
+                "Demeclocycline"
+              ]
+            }
+          }
+        }
+      ],
+      "same_rank_cleaner_graph": [
+        {
+          "row_index": 282,
+          "query_entity": "chronic tubotympanic suppurative otitis media",
+          "query_entity_id": 9450,
+          "gold_entity": "Norfloxacin",
+          "gold_entity_id": 5864,
+          "backbone_gold_present": true,
+          "backbone_gold_rank": 4,
+          "ontology_gold_present": false,
+          "ontology_gold_rank": 21,
+          "soft_gold_present": true,
+          "soft_gold_rank": 4,
+          "retrieval_gold_present": true,
+          "retrieval_gold_rank": 4,
+          "backbone_top1": "Fusidic acid",
+          "ontology_top1": "Ofloxacin",
+          "soft_top1": "Fusidic acid",
+          "retrieval_top1": "Fusidic acid",
+          "soft_top5": [
+            "Fusidic acid",
+            "Cortisone acetate",
+            "Dexamethasone",
+            "Norfloxacin",
+            "Hydrocortisone"
+          ],
+          "retrieval_top5": [
+            "Fusidic acid",
+            "Cortisone acetate",
+            "Dexamethasone",
+            "Norfloxacin",
+            "Hydrocortisone"
+          ],
+          "selected_source_variant": "soft_support_fuzzy_retrieval_tight",
+          "avg_triple_score": 0.652,
+          "direct_shortcut_path_rate": 0.057143,
+          "contradiction_path_rate": 0.0,
+          "original_subgraph_size": 73,
+          "selected_subgraph_size": 35,
+          "num_original_direct_shortcuts": 21,
+          "num_selected_direct_shortcuts": 2,
+          "candidate_coverage_preserved_rate": 1.0,
+          "top_band_coverage_preserved_rate": 1.0,
+          "subgraph_shrink": 38,
+          "direct_shortcut_reduction": 19,
+          "same_rank_vs_soft": true,
+          "e2e_predictions": {
+            "backbone_raw": {
+              "target": "Norfloxacin",
+              "pred": "Ofloxacin",
+              "pred_rank": 5,
+              "rank": 4,
+              "top5": [
+                "Fusidic acid",
+                "Cortisone acetate",
+                "Dexamethasone",
+                "Norfloxacin",
+                "Hydrocortisone"
+              ]
+            },
+            "soft_support_raw": {
+              "target": "Norfloxacin",
+              "pred": "Ofloxacin",
+              "pred_rank": 5,
+              "rank": 4,
+              "top5": [
+                "Fusidic acid",
+                "Cortisone acetate",
+                "Dexamethasone",
+                "Norfloxacin",
+                "Hydrocortisone"
+              ]
+            },
+            "retrieval_main": {
+              "target": "Norfloxacin",
+              "pred": "Ofloxacin",
+              "pred_rank": 5,
+              "rank": 4,
+              "top5": [
+                "Fusidic acid",
+                "Cortisone acetate",
+                "Dexamethasone",
+                "Norfloxacin",
+                "Hydrocortisone"
+              ]
+            }
+          }
+        },
+        {
+          "row_index": 187,
+          "query_entity": "cholera",
+          "query_entity_id": 9432,
+          "gold_entity": "Fusidic acid",
+          "gold_entity_id": 3121,
+          "backbone_gold_present": true,
+          "backbone_gold_rank": 1,
+          "ontology_gold_present": false,
+          "ontology_gold_rank": 21,
+          "soft_gold_present": true,
+          "soft_gold_rank": 1,
+          "retrieval_gold_present": true,
+          "retrieval_gold_rank": 1,
+          "backbone_top1": "Fusidic acid",
+          "ontology_top1": "Doxycycline",
+          "soft_top1": "Fusidic acid",
+          "retrieval_top1": "Fusidic acid",
+          "soft_top5": [
+            "Fusidic acid",
+            "Cortisone acetate",
+            "Dexamethasone",
+            "Betamethasone",
+            "Hydrocortisone"
+          ],
+          "retrieval_top5": [
+            "Fusidic acid",
+            "Cortisone acetate",
+            "Dexamethasone",
+            "Betamethasone",
+            "Hydrocortisone"
+          ],
+          "selected_source_variant": "soft_support_fuzzy_retrieval_tight",
+          "avg_triple_score": 0.552429,
+          "direct_shortcut_path_rate": 0.028571,
+          "contradiction_path_rate": 0.0,
+          "original_subgraph_size": 68,
+          "selected_subgraph_size": 35,
+          "num_original_direct_shortcuts": 10,
+          "num_selected_direct_shortcuts": 1,
+          "candidate_coverage_preserved_rate": 1.0,
+          "top_band_coverage_preserved_rate": 1.0,
+          "subgraph_shrink": 33,
+          "direct_shortcut_reduction": 9,
+          "same_rank_vs_soft": true,
+          "e2e_predictions": {
+            "backbone_raw": {
+              "target": "Fusidic acid",
+              "pred": "Doxycycline",
+              "pred_rank": 2,
+              "rank": 1,
+              "top5": [
+                "Fusidic acid",
+                "Cortisone acetate",
+                "Norfloxacin",
+                "Dexamethasone",
+                "Betamethasone"
+              ]
+            },
+            "soft_support_raw": {
+              "target": "Fusidic acid",
+              "pred": "Doxycycline",
+              "pred_rank": 2,
+              "rank": 1,
+              "top5": [
+                "Fusidic acid",
+                "Cortisone acetate",
+                "Dexamethasone",
+                "Betamethasone",
+                "Hydrocortisone"
+              ]
+            },
+            "retrieval_main": {
+              "target": "Fusidic acid",
+              "pred": "Doxycycline",
+              "pred_rank": 2,
+              "rank": 1,
+              "top5": [
+                "Fusidic acid",
+                "Cortisone acetate",
+                "Dexamethasone",
+                "Betamethasone",
+                "Hydrocortisone"
+              ]
+            }
+          }
+        },
+        {
+          "row_index": 68,
+          "query_entity": "botulism",
+          "query_entity_id": 9377,
+          "gold_entity": "Ofloxacin",
+          "gold_entity_id": 5947,
+          "backbone_gold_present": true,
+          "backbone_gold_rank": 12,
+          "ontology_gold_present": false,
+          "ontology_gold_rank": 21,
+          "soft_gold_present": true,
+          "soft_gold_rank": 10,
+          "retrieval_gold_present": true,
+          "retrieval_gold_rank": 10,
+          "backbone_top1": "Fusidic acid",
+          "ontology_top1": "Ciprofloxacin",
+          "soft_top1": "Fusidic acid",
+          "retrieval_top1": "Fusidic acid",
+          "soft_top5": [
+            "Fusidic acid",
+            "Cortisone acetate",
+            "Dexamethasone",
+            "Hydrocortisone",
+            "Triamcinolone"
+          ],
+          "retrieval_top5": [
+            "Fusidic acid",
+            "Cortisone acetate",
+            "Dexamethasone",
+            "Hydrocortisone",
+            "Triamcinolone"
+          ],
+          "selected_source_variant": "soft_support_fuzzy_retrieval_tight",
+          "avg_triple_score": 0.535588,
+          "direct_shortcut_path_rate": 0.117647,
+          "contradiction_path_rate": 0.0,
+          "original_subgraph_size": 64,
+          "selected_subgraph_size": 34,
+          "num_original_direct_shortcuts": 22,
+          "num_selected_direct_shortcuts": 4,
+          "candidate_coverage_preserved_rate": 1.0,
+          "top_band_coverage_preserved_rate": 1.0,
+          "subgraph_shrink": 30,
+          "direct_shortcut_reduction": 18,
+          "same_rank_vs_soft": true,
+          "e2e_predictions": {
+            "backbone_raw": {
+              "target": "Ofloxacin",
+              "pred": "Benzylpenicillin",
+              "pred_rank": 13,
+              "rank": 12,
+              "top5": [
+                "Fusidic acid",
+                "Cortisone acetate",
+                "Dexamethasone",
+                "Norfloxacin",
+                "Hydrocortisone"
+              ]
+            },
+            "soft_support_raw": {
+              "target": "Ofloxacin",
+              "pred": "Ciprofloxacin",
+              "pred_rank": 11,
+              "rank": 10,
+              "top5": [
+                "Fusidic acid",
+                "Cortisone acetate",
+                "Dexamethasone",
+                "Hydrocortisone",
+                "Triamcinolone"
+              ]
+            },
+            "retrieval_main": {
+              "target": "Ofloxacin",
+              "pred": "Ciprofloxacin",
+              "pred_rank": 11,
+              "rank": 10,
+              "top5": [
+                "Fusidic acid",
+                "Cortisone acetate",
+                "Dexamethasone",
+                "Hydrocortisone",
+                "Triamcinolone"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "appendix": {
+      "same_rank_cleaner_graph_extra": [
+        {
+          "row_index": 12,
+          "query_entity": "rat-bite fever",
+          "query_entity_id": 10223,
+          "gold_entity": "Procaine benzylpenicillin",
+          "gold_entity_id": 6836,
+          "backbone_gold_present": false,
+          "backbone_gold_rank": 21,
+          "ontology_gold_present": false,
+          "ontology_gold_rank": 21,
+          "soft_gold_present": false,
+          "soft_gold_rank": 21,
+          "retrieval_gold_present": false,
+          "retrieval_gold_rank": 21,
+          "backbone_top1": "Cortisone acetate",
+          "ontology_top1": "Benzylpenicillin",
+          "soft_top1": "Cortisone acetate",
+          "retrieval_top1": "Cortisone acetate",
+          "soft_top5": [
+            "Cortisone acetate",
+            "Dexamethasone",
+            "Fusidic acid",
+            "Betamethasone",
+            "Hydrocortisone"
+          ],
+          "retrieval_top5": [
+            "Cortisone acetate",
+            "Dexamethasone",
+            "Fusidic acid",
+            "Betamethasone",
+            "Hydrocortisone"
+          ],
+          "selected_source_variant": "soft_support_fuzzy_retrieval_tight",
+          "avg_triple_score": 0.634677,
+          "direct_shortcut_path_rate": 0.064516,
+          "contradiction_path_rate": 0.0,
+          "original_subgraph_size": 64,
+          "selected_subgraph_size": 31,
+          "num_original_direct_shortcuts": 21,
+          "num_selected_direct_shortcuts": 2,
+          "candidate_coverage_preserved_rate": 1.0,
+          "top_band_coverage_preserved_rate": 1.0,
+          "subgraph_shrink": 33,
+          "direct_shortcut_reduction": 19,
+          "same_rank_vs_soft": true,
+          "e2e_predictions": {
+            "backbone_raw": {
+              "target": "Procaine benzylpenicillin",
+              "pred": "Benzylpenicillin",
+              "pred_rank": 21,
+              "rank": 21,
+              "top5": [
+                "Cortisone acetate",
+                "Dexamethasone",
+                "Fusidic acid",
+                "Betamethasone",
+                "Hydrocortisone"
+              ]
+            },
+            "soft_support_raw": {
+              "target": "Procaine benzylpenicillin",
+              "pred": "Benzylpenicillin",
+              "pred_rank": 21,
+              "rank": 21,
+              "top5": [
+                "Cortisone acetate",
+                "Dexamethasone",
+                "Fusidic acid",
+                "Betamethasone",
+                "Hydrocortisone"
+              ]
+            },
+            "retrieval_main": {
+              "target": "Procaine benzylpenicillin",
+              "pred": "Benzylpenicillin",
+              "pred_rank": 21,
+              "rank": 21,
+              "top5": [
+                "Cortisone acetate",
+                "Dexamethasone",
+                "Fusidic acid",
+                "Betamethasone",
+                "Hydrocortisone"
+              ]
+            }
+          }
+        },
+        {
+          "row_index": 187,
+          "query_entity": "cholera",
+          "query_entity_id": 9432,
+          "gold_entity": "Fusidic acid",
+          "gold_entity_id": 3121,
+          "backbone_gold_present": true,
+          "backbone_gold_rank": 1,
+          "ontology_gold_present": false,
+          "ontology_gold_rank": 21,
+          "soft_gold_present": true,
+          "soft_gold_rank": 1,
+          "retrieval_gold_present": true,
+          "retrieval_gold_rank": 1,
+          "backbone_top1": "Fusidic acid",
+          "ontology_top1": "Doxycycline",
+          "soft_top1": "Fusidic acid",
+          "retrieval_top1": "Fusidic acid",
+          "soft_top5": [
+            "Fusidic acid",
+            "Cortisone acetate",
+            "Dexamethasone",
+            "Betamethasone",
+            "Hydrocortisone"
+          ],
+          "retrieval_top5": [
+            "Fusidic acid",
+            "Cortisone acetate",
+            "Dexamethasone",
+            "Betamethasone",
+            "Hydrocortisone"
+          ],
+          "selected_source_variant": "soft_support_fuzzy_retrieval_tight",
+          "avg_triple_score": 0.552429,
+          "direct_shortcut_path_rate": 0.028571,
+          "contradiction_path_rate": 0.0,
+          "original_subgraph_size": 68,
+          "selected_subgraph_size": 35,
+          "num_original_direct_shortcuts": 10,
+          "num_selected_direct_shortcuts": 1,
+          "candidate_coverage_preserved_rate": 1.0,
+          "top_band_coverage_preserved_rate": 1.0,
+          "subgraph_shrink": 33,
+          "direct_shortcut_reduction": 9,
+          "same_rank_vs_soft": true,
+          "e2e_predictions": {
+            "backbone_raw": {
+              "target": "Fusidic acid",
+              "pred": "Doxycycline",
+              "pred_rank": 2,
+              "rank": 1,
+              "top5": [
+                "Fusidic acid",
+                "Cortisone acetate",
+                "Norfloxacin",
+                "Dexamethasone",
+                "Betamethasone"
+              ]
+            },
+            "soft_support_raw": {
+              "target": "Fusidic acid",
+              "pred": "Doxycycline",
+              "pred_rank": 2,
+              "rank": 1,
+              "top5": [
+                "Fusidic acid",
+                "Cortisone acetate",
+                "Dexamethasone",
+                "Betamethasone",
+                "Hydrocortisone"
+              ]
+            },
+            "retrieval_main": {
+              "target": "Fusidic acid",
+              "pred": "Doxycycline",
+              "pred_rank": 2,
+              "rank": 1,
+              "top5": [
+                "Fusidic acid",
+                "Cortisone acetate",
+                "Dexamethasone",
+                "Betamethasone",
+                "Hydrocortisone"
+              ]
+            }
+          }
+        },
+        {
+          "row_index": 131,
+          "query_entity": "pyelonephritis",
+          "query_entity_id": 10220,
+          "gold_entity": "Loracarbef",
+          "gold_entity_id": 4686,
+          "backbone_gold_present": false,
+          "backbone_gold_rank": 21,
+          "ontology_gold_present": false,
+          "ontology_gold_rank": 21,
+          "soft_gold_present": false,
+          "soft_gold_rank": 21,
+          "retrieval_gold_present": false,
+          "retrieval_gold_rank": 21,
+          "backbone_top1": "Cortisone acetate",
+          "ontology_top1": "Ofloxacin",
+          "soft_top1": "Cortisone acetate",
+          "retrieval_top1": "Cortisone acetate",
+          "soft_top5": [
+            "Cortisone acetate",
+            "Dexamethasone",
+            "Hydrocortisone",
+            "Betamethasone",
+            "Triamcinolone"
+          ],
+          "retrieval_top5": [
+            "Cortisone acetate",
+            "Dexamethasone",
+            "Hydrocortisone",
+            "Betamethasone",
+            "Triamcinolone"
+          ],
+          "selected_source_variant": "soft_support_fuzzy_retrieval_tight",
+          "avg_triple_score": 0.495526,
+          "direct_shortcut_path_rate": 0.052632,
+          "contradiction_path_rate": 0.0,
+          "original_subgraph_size": 70,
+          "selected_subgraph_size": 38,
+          "num_original_direct_shortcuts": 15,
+          "num_selected_direct_shortcuts": 2,
+          "candidate_coverage_preserved_rate": 1.0,
+          "top_band_coverage_preserved_rate": 1.0,
+          "subgraph_shrink": 32,
+          "direct_shortcut_reduction": 13,
+          "same_rank_vs_soft": true,
+          "e2e_predictions": {
+            "backbone_raw": {
+              "target": "Loracarbef",
+              "pred": "Ofloxacin",
+              "pred_rank": 21,
+              "rank": 21,
+              "top5": [
+                "Cortisone acetate",
+                "Dexamethasone",
+                "Hydrocortisone",
+                "Betamethasone",
+                "Triamcinolone"
+              ]
+            },
+            "soft_support_raw": {
+              "target": "Loracarbef",
+              "pred": "Ofloxacin",
+              "pred_rank": 21,
+              "rank": 21,
+              "top5": [
+                "Cortisone acetate",
+                "Dexamethasone",
+                "Hydrocortisone",
+                "Betamethasone",
+                "Triamcinolone"
+              ]
+            },
+            "retrieval_main": {
+              "target": "Loracarbef",
+              "pred": "Ofloxacin",
+              "pred_rank": 21,
+              "rank": 21,
+              "top5": [
+                "Cortisone acetate",
+                "Dexamethasone",
+                "Hydrocortisone",
+                "Betamethasone",
+                "Triamcinolone"
+              ]
+            }
+          }
+        },
+        {
+          "row_index": 68,
+          "query_entity": "botulism",
+          "query_entity_id": 9377,
+          "gold_entity": "Ofloxacin",
+          "gold_entity_id": 5947,
+          "backbone_gold_present": true,
+          "backbone_gold_rank": 12,
+          "ontology_gold_present": false,
+          "ontology_gold_rank": 21,
+          "soft_gold_present": true,
+          "soft_gold_rank": 10,
+          "retrieval_gold_present": true,
+          "retrieval_gold_rank": 10,
+          "backbone_top1": "Fusidic acid",
+          "ontology_top1": "Ciprofloxacin",
+          "soft_top1": "Fusidic acid",
+          "retrieval_top1": "Fusidic acid",
+          "soft_top5": [
+            "Fusidic acid",
+            "Cortisone acetate",
+            "Dexamethasone",
+            "Hydrocortisone",
+            "Triamcinolone"
+          ],
+          "retrieval_top5": [
+            "Fusidic acid",
+            "Cortisone acetate",
+            "Dexamethasone",
+            "Hydrocortisone",
+            "Triamcinolone"
+          ],
+          "selected_source_variant": "soft_support_fuzzy_retrieval_tight",
+          "avg_triple_score": 0.535588,
+          "direct_shortcut_path_rate": 0.117647,
+          "contradiction_path_rate": 0.0,
+          "original_subgraph_size": 64,
+          "selected_subgraph_size": 34,
+          "num_original_direct_shortcuts": 22,
+          "num_selected_direct_shortcuts": 4,
+          "candidate_coverage_preserved_rate": 1.0,
+          "top_band_coverage_preserved_rate": 1.0,
+          "subgraph_shrink": 30,
+          "direct_shortcut_reduction": 18,
+          "same_rank_vs_soft": true,
+          "e2e_predictions": {
+            "backbone_raw": {
+              "target": "Ofloxacin",
+              "pred": "Benzylpenicillin",
+              "pred_rank": 13,
+              "rank": 12,
+              "top5": [
+                "Fusidic acid",
+                "Cortisone acetate",
+                "Dexamethasone",
+                "Norfloxacin",
+                "Hydrocortisone"
+              ]
+            },
+            "soft_support_raw": {
+              "target": "Ofloxacin",
+              "pred": "Ciprofloxacin",
+              "pred_rank": 11,
+              "rank": 10,
+              "top5": [
+                "Fusidic acid",
+                "Cortisone acetate",
+                "Dexamethasone",
+                "Hydrocortisone",
+                "Triamcinolone"
+              ]
+            },
+            "retrieval_main": {
+              "target": "Ofloxacin",
+              "pred": "Ciprofloxacin",
+              "pred_rank": 11,
+              "rank": 10,
+              "top5": [
+                "Fusidic acid",
+                "Cortisone acetate",
+                "Dexamethasone",
+                "Hydrocortisone",
+                "Triamcinolone"
+              ]
+            }
+          }
+        },
+        {
+          "row_index": 109,
+          "query_entity": "polycythemia (disease)",
+          "query_entity_id": 10156,
+          "gold_entity": "Uracil mustard",
+          "gold_entity_id": 8869,
+          "backbone_gold_present": false,
+          "backbone_gold_rank": 21,
+          "ontology_gold_present": false,
+          "ontology_gold_rank": 21,
+          "soft_gold_present": false,
+          "soft_gold_rank": 21,
+          "retrieval_gold_present": false,
+          "retrieval_gold_rank": 21,
+          "backbone_top1": "Cortisone acetate",
+          "ontology_top1": "Mechlorethamine",
+          "soft_top1": "Cortisone acetate",
+          "retrieval_top1": "Cortisone acetate",
+          "soft_top5": [
+            "Cortisone acetate",
+            "Dexamethasone",
+            "Methylprednisolone",
+            "Hydrocortisone",
+            "Triamcinolone"
+          ],
+          "retrieval_top5": [
+            "Cortisone acetate",
+            "Dexamethasone",
+            "Methylprednisolone",
+            "Hydrocortisone",
+            "Triamcinolone"
+          ],
+          "selected_source_variant": "soft_support_fuzzy_retrieval_tight",
+          "avg_triple_score": 0.621875,
+          "direct_shortcut_path_rate": 0.0625,
+          "contradiction_path_rate": 0.0,
+          "original_subgraph_size": 61,
+          "selected_subgraph_size": 32,
+          "num_original_direct_shortcuts": 19,
+          "num_selected_direct_shortcuts": 2,
+          "candidate_coverage_preserved_rate": 1.0,
+          "top_band_coverage_preserved_rate": 1.0,
+          "subgraph_shrink": 29,
+          "direct_shortcut_reduction": 17,
+          "same_rank_vs_soft": true,
+          "e2e_predictions": {
+            "backbone_raw": {
+              "target": "Uracil mustard",
+              "pred": "Mechlorethamine",
+              "pred_rank": 21,
+              "rank": 21,
+              "top5": [
+                "Cortisone acetate",
+                "Dexamethasone",
+                "Methylprednisolone",
+                "Hydrocortisone",
+                "Triamcinolone"
+              ]
+            },
+            "soft_support_raw": {
+              "target": "Uracil mustard",
+              "pred": "Mechlorethamine",
+              "pred_rank": 21,
+              "rank": 21,
+              "top5": [
+                "Cortisone acetate",
+                "Dexamethasone",
+                "Methylprednisolone",
+                "Hydrocortisone",
+                "Triamcinolone"
+              ]
+            },
+            "retrieval_main": {
+              "target": "Uracil mustard",
+              "pred": "Mechlorethamine",
+              "pred_rank": 21,
+              "rank": 21,
+              "top5": [
+                "Cortisone acetate",
+                "Dexamethasone",
+                "Methylprednisolone",
+                "Hydrocortisone",
+                "Triamcinolone"
+              ]
+            }
+          }
+        }
+      ],
+      "encoder_appendix_deferred": [
+        {
+          "bucket_name": "encoder_appendix_deferred",
+          "encoder_probe_status": "deferred_appendix_only",
+          "encoder_probe_not_in_main_table": true,
+          "note": "Encoder remains appendix-only on locked test. No promoted test-side encoder row is shortlisted for the main paper."
+        }
+      ]
+    }
+  }
+}

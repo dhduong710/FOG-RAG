@@ -1,0 +1,14 @@
+{
+  "reference_rows": {
+    "backbone_raw_valid": "results/reference_rows/backbone_raw_valid",
+    "backbone_raw_test": "results/reference_rows/backbone_raw_test"
+  },
+  "copied_from": {
+    "backbone_raw_valid": "results/week11/backbone_valid",
+    "backbone_raw_test": "results/week11_test/backbone_test"
+  },
+  "notes": [
+    "These rows are kept outside the legacy week11 tree for clean Novelty 2 access.",
+    "Novelty 2 main comparisons should always include backbone_raw."
+  ]
+}

@@ -1,0 +1,17 @@
+Saved report json: dataset/setting_a/24_noinj_ontology/schema_validity_valid.json
+Saved report md:   dataset/setting_a/24_noinj_ontology/schema_validity_valid.md
+Summary:
+  candidate_type_violations = 0
+  unknown_candidate_types = 0
+  valid_evidence_triples = 19372
+  invalid_evidence_triples = 10858
+  missing_relation_rules = 0
+  incomplete_relation_rules = 0
+  valid_mechanism_templates_loaded = 2
+  invalid_explanation_relations_loaded = 0
+  total_path_sequences_checked = 28484
+  valid_mechanism_path_sequences = 139
+  direct_task_edge_sequences = 1870
+  blocked_explanation_sequences = 0
+  unsupported_path_sequences = 26475
+  queries_with_no_candidate_to_query_path = 23

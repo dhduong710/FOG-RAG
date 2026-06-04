@@ -1,0 +1,1528 @@
+{
+  "safety_violation_cases": [],
+  "constraint_violation_cases": [],
+  "gold_missing_cases": [
+    {
+      "query_disease": "leukemia, lymphocytic, susceptibility to",
+      "gold_drug": "Cortisone acetate",
+      "candidate_count_final": 11,
+      "top10_candidates": [
+        "Betamethasone",
+        "Hydrocortisone",
+        "Methylprednisolone",
+        "Triamcinolone",
+        "Prednisolone",
+        "Dexamethasone",
+        "Prednisone",
+        "Hydrocortisone acetate",
+        "Doxorubicin",
+        "Vincristine"
+      ],
+      "top10_types": [
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug"
+      ],
+      "top10_contra_flags": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "top10_conflict_flags": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "row_has_gold_in_topk": 0
+    },
+    {
+      "query_disease": "streptococcal infection",
+      "gold_drug": "Cefixime",
+      "candidate_count_final": 4,
+      "top10_candidates": [
+        "Fusidic acid",
+        "Ofloxacin",
+        "Benzylpenicillin",
+        "Ciprofloxacin"
+      ],
+      "top10_types": [
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug"
+      ],
+      "top10_contra_flags": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "top10_conflict_flags": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "row_has_gold_in_topk": 0
+    },
+    {
+      "query_disease": "obsessive-compulsive disorder",
+      "gold_drug": "Fluoxetine",
+      "candidate_count_final": 2,
+      "top10_candidates": [
+        "Propranolol",
+        "Paroxetine"
+      ],
+      "top10_types": [
+        "Drug",
+        "Drug"
+      ],
+      "top10_contra_flags": [
+        0,
+        0
+      ],
+      "top10_conflict_flags": [
+        0,
+        0
+      ],
+      "row_has_gold_in_topk": 0
+    },
+    {
+      "query_disease": "hypertension",
+      "gold_drug": "Amiloride",
+      "candidate_count_final": 1,
+      "top10_candidates": [
+        "Dexamethasone"
+      ],
+      "top10_types": [
+        "Drug"
+      ],
+      "top10_contra_flags": [
+        0
+      ],
+      "top10_conflict_flags": [
+        0
+      ],
+      "row_has_gold_in_topk": 0
+    },
+    {
+      "query_disease": "pneumococcal meningitis",
+      "gold_drug": "Meropenem",
+      "candidate_count_final": 1,
+      "top10_candidates": [
+        "Benzylpenicillin"
+      ],
+      "top10_types": [
+        "Drug"
+      ],
+      "top10_contra_flags": [
+        0
+      ],
+      "top10_conflict_flags": [
+        0
+      ],
+      "row_has_gold_in_topk": 0
+    },
+    {
+      "query_disease": "arthropathy",
+      "gold_drug": "Diflunisal",
+      "candidate_count_final": 1,
+      "top10_candidates": [
+        "Fusidic acid"
+      ],
+      "top10_types": [
+        "Drug"
+      ],
+      "top10_contra_flags": [
+        0
+      ],
+      "top10_conflict_flags": [
+        0
+      ],
+      "row_has_gold_in_topk": 0
+    },
+    {
+      "query_disease": "diffuse large B-cell lymphoma",
+      "gold_drug": "Doxorubicin",
+      "candidate_count_final": 5,
+      "top10_candidates": [
+        "Dexamethasone",
+        "Prednisone",
+        "Carmustine",
+        "Bleomycin",
+        "Methotrexate"
+      ],
+      "top10_types": [
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug"
+      ],
+      "top10_contra_flags": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "top10_conflict_flags": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "row_has_gold_in_topk": 0
+    },
+    {
+      "query_disease": "obsolete Hodgkin's granuloma",
+      "gold_drug": "Betamethasone",
+      "candidate_count_final": 13,
+      "top10_candidates": [
+        "Hydrocortisone",
+        "Methylprednisolone",
+        "Cortisone acetate",
+        "Dexamethasone",
+        "Hydrocortisone acetate",
+        "Prednisone",
+        "Doxorubicin",
+        "Carmustine",
+        "Bleomycin",
+        "Vincristine"
+      ],
+      "top10_types": [
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug"
+      ],
+      "top10_contra_flags": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "top10_conflict_flags": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "row_has_gold_in_topk": 0
+    },
+    {
+      "query_disease": "infectious anterior uveitis",
+      "gold_drug": "Dexamethasone",
+      "candidate_count_final": 3,
+      "top10_candidates": [
+        "Cortisone acetate",
+        "Hydrocortisone",
+        "Scopolamine"
+      ],
+      "top10_types": [
+        "Drug",
+        "Drug",
+        "Drug"
+      ],
+      "top10_contra_flags": [
+        0,
+        0,
+        0
+      ],
+      "top10_conflict_flags": [
+        0,
+        0,
+        0
+      ],
+      "row_has_gold_in_topk": 0
+    },
+    {
+      "query_disease": "proctitis",
+      "gold_drug": "Pramocaine",
+      "candidate_count_final": 1,
+      "top10_candidates": [
+        "Hydrocortisone"
+      ],
+      "top10_types": [
+        "Drug"
+      ],
+      "top10_contra_flags": [
+        0
+      ],
+      "top10_conflict_flags": [
+        0
+      ],
+      "row_has_gold_in_topk": 0
+    },
+    {
+      "query_disease": "nasopharyngitis",
+      "gold_drug": "Ammonium chloride",
+      "candidate_count_final": 1,
+      "top10_candidates": [
+        "Scopolamine"
+      ],
+      "top10_types": [
+        "Drug"
+      ],
+      "top10_contra_flags": [
+        0
+      ],
+      "top10_conflict_flags": [
+        0
+      ],
+      "row_has_gold_in_topk": 0
+    },
+    {
+      "query_disease": "acquired thrombocytopenia",
+      "gold_drug": "Cortisone acetate",
+      "candidate_count_final": 7,
+      "top10_candidates": [
+        "Methylprednisolone",
+        "Dexamethasone",
+        "Prednisolone",
+        "Hydrocortisone",
+        "Betamethasone",
+        "Hydrocortisone acetate",
+        "Prednisone"
+      ],
+      "top10_types": [
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug"
+      ],
+      "top10_contra_flags": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "top10_conflict_flags": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "row_has_gold_in_topk": 0
+    },
+    {
+      "query_disease": "hemoglobinopathy",
+      "gold_drug": "Phenprocoumon",
+      "candidate_count_final": 2,
+      "top10_candidates": [
+        "Dexamethasone",
+        "Hydrocortisone acetate"
+      ],
+      "top10_types": [
+        "Drug",
+        "Drug"
+      ],
+      "top10_contra_flags": [
+        0,
+        0
+      ],
+      "top10_conflict_flags": [
+        0,
+        0
+      ],
+      "row_has_gold_in_topk": 0
+    },
+    {
+      "query_disease": "chronic cutaneous lupus erythematosus",
+      "gold_drug": "Prednisolone",
+      "candidate_count_final": 6,
+      "top10_candidates": [
+        "Methylprednisolone",
+        "Cortisone acetate",
+        "Dexamethasone",
+        "Triamcinolone",
+        "Betamethasone",
+        "Fluticasone propionate"
+      ],
+      "top10_types": [
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug"
+      ],
+      "top10_contra_flags": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "top10_conflict_flags": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "row_has_gold_in_topk": 0
+    },
+    {
+      "query_disease": "pulmonary emphysema",
+      "gold_drug": "Ipratropium",
+      "candidate_count_final": 20,
+      "top10_candidates": [
+        "Betamethasone",
+        "Hydrocortisone",
+        "Methylprednisolone",
+        "Triamcinolone",
+        "Cortisone acetate",
+        "Prednisolone",
+        "Dexamethasone",
+        "Prednisone",
+        "Hydrocortisone acetate",
+        "Doxorubicin"
+      ],
+      "top10_types": [
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug"
+      ],
+      "top10_contra_flags": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "top10_conflict_flags": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "row_has_gold_in_topk": 0
+    },
+    {
+      "query_disease": "common cold",
+      "gold_drug": "Cefprozil",
+      "candidate_count_final": 4,
+      "top10_candidates": [
+        "Methdilazine",
+        "Scopolamine",
+        "Clemastine",
+        "Methapyrilene"
+      ],
+      "top10_types": [
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug"
+      ],
+      "top10_contra_flags": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "top10_conflict_flags": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "row_has_gold_in_topk": 0
+    },
+    {
+      "query_disease": "classic Hodgkin lymphoma",
+      "gold_drug": "Mechlorethamine",
+      "candidate_count_final": 13,
+      "top10_candidates": [
+        "Betamethasone",
+        "Hydrocortisone",
+        "Cortisone acetate",
+        "Triamcinolone",
+        "Prednisolone",
+        "Dexamethasone",
+        "Hydrocortisone acetate",
+        "Prednisone",
+        "Carmustine",
+        "Bleomycin"
+      ],
+      "top10_types": [
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug"
+      ],
+      "top10_contra_flags": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "top10_conflict_flags": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "row_has_gold_in_topk": 0
+    },
+    {
+      "query_disease": "mental disorder",
+      "gold_drug": "Paliperidone",
+      "candidate_count_final": 2,
+      "top10_candidates": [
+        "Propranolol",
+        "Chlorpromazine"
+      ],
+      "top10_types": [
+        "Drug",
+        "Drug"
+      ],
+      "top10_contra_flags": [
+        0,
+        0
+      ],
+      "top10_conflict_flags": [
+        0,
+        0
+      ],
+      "row_has_gold_in_topk": 0
+    },
+    {
+      "query_disease": "aspiration pneumonia (disease)",
+      "gold_drug": "Cortisone acetate",
+      "candidate_count_final": 9,
+      "top10_candidates": [
+        "Methylprednisolone",
+        "Hydrocortisone",
+        "Prednisolone",
+        "Triamcinolone",
+        "Betamethasone",
+        "Hydrocortisone acetate",
+        "Benzylpenicillin",
+        "Dexamethasone",
+        "Minocycline"
+      ],
+      "top10_types": [
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug"
+      ],
+      "top10_contra_flags": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "top10_conflict_flags": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "row_has_gold_in_topk": 0
+    },
+    {
+      "query_disease": "autoimmune thrombocytopenic",
+      "gold_drug": "Romiplostim",
+      "candidate_count_final": 9,
+      "top10_candidates": [
+        "Methylprednisolone",
+        "Cortisone acetate",
+        "Hydrocortisone",
+        "Prednisolone",
+        "Dexamethasone",
+        "Triamcinolone",
+        "Betamethasone",
+        "Hydrocortisone acetate",
+        "Prednisone"
+      ],
+      "top10_types": [
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug"
+      ],
+      "top10_contra_flags": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "top10_conflict_flags": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "row_has_gold_in_topk": 0
+    }
+  ],
+  "clean_cases": [
+    {
+      "query_disease": "dyspepsia",
+      "gold_drug": "Magnesium trisilicate",
+      "candidate_count_final": 20,
+      "top10_candidates": [
+        "Fusidic acid",
+        "Oxytetracycline",
+        "Dexamethasone",
+        "Methylprednisolone",
+        "Methdilazine",
+        "Prednisolone",
+        "Ofloxacin",
+        "Tobramycin",
+        "Benzylpenicillin",
+        "Cortisone acetate"
+      ],
+      "top10_types": [
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug"
+      ],
+      "top10_contra_flags": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "top10_conflict_flags": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "row_has_gold_in_topk": 1
+    },
+    {
+      "query_disease": "basal cell carcinoma",
+      "gold_drug": "Vismodegib",
+      "candidate_count_final": 1,
+      "top10_candidates": [
+        "Vismodegib"
+      ],
+      "top10_types": [
+        "Drug"
+      ],
+      "top10_contra_flags": [
+        0
+      ],
+      "top10_conflict_flags": [
+        0
+      ],
+      "row_has_gold_in_topk": 1
+    },
+    {
+      "query_disease": "Norwegian scabies",
+      "gold_drug": "Lindane",
+      "candidate_count_final": 20,
+      "top10_candidates": [
+        "Fusidic acid",
+        "Oxytetracycline",
+        "Tetracycline",
+        "Tobramycin",
+        "Dexamethasone",
+        "Methdilazine",
+        "Benzylpenicillin",
+        "Ofloxacin",
+        "Methylprednisolone",
+        "Scopolamine"
+      ],
+      "top10_types": [
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug"
+      ],
+      "top10_contra_flags": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "top10_conflict_flags": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "row_has_gold_in_topk": 1
+    },
+    {
+      "query_disease": "obsessive-compulsive disorder",
+      "gold_drug": "Paroxetine",
+      "candidate_count_final": 2,
+      "top10_candidates": [
+        "Propranolol",
+        "Paroxetine"
+      ],
+      "top10_types": [
+        "Drug",
+        "Drug"
+      ],
+      "top10_contra_flags": [
+        0,
+        0
+      ],
+      "top10_conflict_flags": [
+        0,
+        0
+      ],
+      "row_has_gold_in_topk": 1
+    },
+    {
+      "query_disease": "migraine with or without aura, susceptibility to",
+      "gold_drug": "Acetylsalicylic acid",
+      "candidate_count_final": 20,
+      "top10_candidates": [
+        "Fusidic acid",
+        "Methylprednisolone",
+        "Dexamethasone",
+        "Prednisolone",
+        "Cortisone acetate",
+        "Triamcinolone",
+        "Hydrocortisone",
+        "Oxytetracycline",
+        "Ofloxacin",
+        "Tobramycin"
+      ],
+      "top10_types": [
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug"
+      ],
+      "top10_contra_flags": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "top10_conflict_flags": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "row_has_gold_in_topk": 1
+    },
+    {
+      "query_disease": "chromomycosis",
+      "gold_drug": "Ketoconazole",
+      "candidate_count_final": 20,
+      "top10_candidates": [
+        "Fusidic acid",
+        "Prednisolone",
+        "Dexamethasone",
+        "Methylprednisolone",
+        "Cortisone acetate",
+        "Oxytetracycline",
+        "Ofloxacin",
+        "Triamcinolone",
+        "Hydrocortisone",
+        "Benzylpenicillin"
+      ],
+      "top10_types": [
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug"
+      ],
+      "top10_contra_flags": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "top10_conflict_flags": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "row_has_gold_in_topk": 1
+    },
+    {
+      "query_disease": "prostate cancer",
+      "gold_drug": "Estramustine",
+      "candidate_count_final": 8,
+      "top10_candidates": [
+        "Hydrocortisone",
+        "Methylprednisolone",
+        "Dexamethasone",
+        "Hydrocortisone acetate",
+        "Doxorubicin",
+        "Propranolol",
+        "Methotrexate",
+        "Estramustine"
+      ],
+      "top10_types": [
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug"
+      ],
+      "top10_contra_flags": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "top10_conflict_flags": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "row_has_gold_in_topk": 1
+    },
+    {
+      "query_disease": "hemiparkinsonism-hemiatrophy syndrome",
+      "gold_drug": "Biperiden",
+      "candidate_count_final": 20,
+      "top10_candidates": [
+        "Betamethasone",
+        "Hydrocortisone",
+        "Cortisone acetate",
+        "Triamcinolone",
+        "Methylprednisolone",
+        "Prednisolone",
+        "Dexamethasone",
+        "Prednisone",
+        "Hydrocortisone acetate",
+        "Doxorubicin"
+      ],
+      "top10_types": [
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug"
+      ],
+      "top10_contra_flags": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "top10_conflict_flags": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "row_has_gold_in_topk": 1
+    },
+    {
+      "query_disease": "mental disorder",
+      "gold_drug": "Chlorpromazine",
+      "candidate_count_final": 2,
+      "top10_candidates": [
+        "Propranolol",
+        "Chlorpromazine"
+      ],
+      "top10_types": [
+        "Drug",
+        "Drug"
+      ],
+      "top10_contra_flags": [
+        0,
+        0
+      ],
+      "top10_conflict_flags": [
+        0,
+        0
+      ],
+      "row_has_gold_in_topk": 1
+    },
+    {
+      "query_disease": "acute myeloid leukemia with minimal differentiation",
+      "gold_drug": "Gilteritinib",
+      "candidate_count_final": 2,
+      "top10_candidates": [
+        "Doxorubicin",
+        "Gilteritinib"
+      ],
+      "top10_types": [
+        "Drug",
+        "Drug"
+      ],
+      "top10_contra_flags": [
+        0,
+        0
+      ],
+      "top10_conflict_flags": [
+        0,
+        0
+      ],
+      "row_has_gold_in_topk": 1
+    },
+    {
+      "query_disease": "hereditary angioedema with C1Inh deficiency",
+      "gold_drug": "Icatibant",
+      "candidate_count_final": 20,
+      "top10_candidates": [
+        "Methylprednisolone",
+        "Betamethasone",
+        "Hydrocortisone",
+        "Triamcinolone",
+        "Cortisone acetate",
+        "Prednisolone",
+        "Dexamethasone",
+        "Hydrocortisone acetate",
+        "Prednisone",
+        "Propranolol"
+      ],
+      "top10_types": [
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug"
+      ],
+      "top10_contra_flags": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "top10_conflict_flags": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "row_has_gold_in_topk": 1
+    },
+    {
+      "query_disease": "early-onset parkinsonism-intellectual disability syndrome",
+      "gold_drug": "Ropinirole",
+      "candidate_count_final": 1,
+      "top10_candidates": [
+        "Ropinirole"
+      ],
+      "top10_types": [
+        "Drug"
+      ],
+      "top10_contra_flags": [
+        0
+      ],
+      "top10_conflict_flags": [
+        0
+      ],
+      "row_has_gold_in_topk": 1
+    },
+    {
+      "query_disease": "hyperparathyroidism",
+      "gold_drug": "Alfacalcidol",
+      "candidate_count_final": 20,
+      "top10_candidates": [
+        "Betamethasone",
+        "Methylprednisolone",
+        "Triamcinolone",
+        "Hydrocortisone",
+        "Cortisone acetate",
+        "Prednisolone",
+        "Dexamethasone",
+        "Hydrocortisone acetate",
+        "Prednisone",
+        "Doxorubicin"
+      ],
+      "top10_types": [
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug"
+      ],
+      "top10_contra_flags": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "top10_conflict_flags": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "row_has_gold_in_topk": 1
+    },
+    {
+      "query_disease": "Pediculus humanus corporis infestation",
+      "gold_drug": "Permethrin",
+      "candidate_count_final": 20,
+      "top10_candidates": [
+        "Fusidic acid",
+        "Oxytetracycline",
+        "Tobramycin",
+        "Dexamethasone",
+        "Tetracycline",
+        "Benzylpenicillin",
+        "Methylprednisolone",
+        "Scopolamine",
+        "Ofloxacin",
+        "Methdilazine"
+      ],
+      "top10_types": [
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug"
+      ],
+      "top10_contra_flags": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "top10_conflict_flags": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "row_has_gold_in_topk": 1
+    },
+    {
+      "query_disease": "Zollinger-Ellison syndrome",
+      "gold_drug": "Famotidine",
+      "candidate_count_final": 20,
+      "top10_candidates": [
+        "Betamethasone",
+        "Methylprednisolone",
+        "Hydrocortisone",
+        "Triamcinolone",
+        "Cortisone acetate",
+        "Prednisolone",
+        "Dexamethasone",
+        "Hydrocortisone acetate",
+        "Prednisone",
+        "Doxorubicin"
+      ],
+      "top10_types": [
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug"
+      ],
+      "top10_contra_flags": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "top10_conflict_flags": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "row_has_gold_in_topk": 1
+    },
+    {
+      "query_disease": "visual epilepsy",
+      "gold_drug": "Lamotrigine",
+      "candidate_count_final": 4,
+      "top10_candidates": [
+        "Dexamethasone",
+        "Propranolol",
+        "Vinblastine",
+        "Lamotrigine"
+      ],
+      "top10_types": [
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug"
+      ],
+      "top10_contra_flags": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "top10_conflict_flags": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "row_has_gold_in_topk": 1
+    },
+    {
+      "query_disease": "gastroesophageal reflux disease",
+      "gold_drug": "Pantoprazole",
+      "candidate_count_final": 20,
+      "top10_candidates": [
+        "Fusidic acid",
+        "Methylprednisolone",
+        "Dexamethasone",
+        "Cortisone acetate",
+        "Prednisolone",
+        "Hydrocortisone",
+        "Triamcinolone",
+        "Betamethasone",
+        "Hydrocortisone acetate",
+        "Oxytetracycline"
+      ],
+      "top10_types": [
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug"
+      ],
+      "top10_contra_flags": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "top10_conflict_flags": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "row_has_gold_in_topk": 1
+    },
+    {
+      "query_disease": "patent ductus arteriosus",
+      "gold_drug": "Ibuprofen",
+      "candidate_count_final": 20,
+      "top10_candidates": [
+        "Betamethasone",
+        "Methylprednisolone",
+        "Hydrocortisone",
+        "Triamcinolone",
+        "Cortisone acetate",
+        "Prednisolone",
+        "Dexamethasone",
+        "Prednisone",
+        "Hydrocortisone acetate",
+        "Doxorubicin"
+      ],
+      "top10_types": [
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug"
+      ],
+      "top10_contra_flags": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "top10_conflict_flags": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "row_has_gold_in_topk": 1
+    },
+    {
+      "query_disease": "morphine dependence",
+      "gold_drug": "Levacetylmethadol",
+      "candidate_count_final": 2,
+      "top10_candidates": [
+        "Propranolol",
+        "Levacetylmethadol"
+      ],
+      "top10_types": [
+        "Drug",
+        "Drug"
+      ],
+      "top10_contra_flags": [
+        0,
+        0
+      ],
+      "top10_conflict_flags": [
+        0,
+        0
+      ],
+      "row_has_gold_in_topk": 1
+    },
+    {
+      "query_disease": "disseminated intravascular coagulation",
+      "gold_drug": "Adomiparin",
+      "candidate_count_final": 20,
+      "top10_candidates": [
+        "Fusidic acid",
+        "Methylprednisolone",
+        "Triamcinolone",
+        "Dexamethasone",
+        "Prednisolone",
+        "Cortisone acetate",
+        "Hydrocortisone",
+        "Betamethasone",
+        "Hydrocortisone acetate",
+        "Ofloxacin"
+      ],
+      "top10_types": [
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug",
+        "Drug"
+      ],
+      "top10_contra_flags": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "top10_conflict_flags": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "row_has_gold_in_topk": 1
+    }
+  ]
+}

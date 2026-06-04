@@ -1,0 +1,41 @@
+/home/duong/miniconda3/envs/drkgc/lib/python3.12/site-packages/huggingface_hub/file_download.py:949: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+/home/duong/miniconda3/envs/drkgc/lib/python3.12/site-packages/outdated/__init__.py:36: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  from pkg_resources import parse_version
+/home/duong/miniconda3/envs/drkgc/lib/python3.12/site-packages/huggingface_hub/file_download.py:949: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+You are calling `save_pretrained` to a 4-bit converted model, but your `bitsandbytes` version doesn't support it. If you want to save 4-bit models, make sure to have `bitsandbytes>=0.41.3` installed.
+You are using 8-bit optimizers with a version of `bitsandbytes` < 0.41.1. It is recommended to update your version as a major bug has been fixed in 8-bit optimizers.
+Seed: 2025
+Load LLM: TinyLlama/TinyLlama-1.1B-Chat-v1.0
+  0%|          | 0/20 [00:00<?, ?it/s]  5%|▌         | 1/20 [00:04<01:19,  4.18s/it]                                                5%|▌         | 1/20 [00:04<01:19,  4.18s/it] 10%|█         | 2/20 [00:07<01:03,  3.54s/it]                                               10%|█         | 2/20 [00:07<01:03,  3.54s/it] 15%|█▌        | 3/20 [00:10<00:56,  3.33s/it]                                               15%|█▌        | 3/20 [00:10<00:56,  3.33s/it] 20%|██        | 4/20 [00:13<00:51,  3.24s/it]                                               20%|██        | 4/20 [00:13<00:51,  3.24s/it] 25%|██▌       | 5/20 [00:16<00:47,  3.19s/it]                                               25%|██▌       | 5/20 [00:16<00:47,  3.19s/it] 30%|███       | 6/20 [00:19<00:44,  3.14s/it]                                               30%|███       | 6/20 [00:19<00:44,  3.14s/it] 35%|███▌      | 7/20 [00:22<00:40,  3.13s/it]                                               35%|███▌      | 7/20 [00:22<00:40,  3.13s/it] 40%|████      | 8/20 [00:25<00:36,  3.05s/it]                                               40%|████      | 8/20 [00:25<00:36,  3.05s/it] 45%|████▌     | 9/20 [00:28<00:33,  3.04s/it]                                               45%|████▌     | 9/20 [00:28<00:33,  3.04s/it] 50%|█████     | 10/20 [00:32<00:32,  3.26s/it]                                                50%|█████     | 10/20 [00:32<00:32,  3.26s/it] 55%|█████▌    | 11/20 [00:36<00:31,  3.55s/it]                                                55%|█████▌    | 11/20 [00:36<00:31,  3.55s/it] 60%|██████    | 12/20 [00:39<00:26,  3.35s/it]                                                60%|██████    | 12/20 [00:39<00:26,  3.35s/it] 65%|██████▌   | 13/20 [00:42<00:22,  3.20s/it]                                                65%|██████▌   | 13/20 [00:42<00:22,  3.20s/it] 70%|███████   | 14/20 [00:45<00:18,  3.10s/it]                                                70%|███████   | 14/20 [00:45<00:18,  3.10s/it] 75%|███████▌  | 15/20 [00:48<00:15,  3.04s/it]                                                75%|███████▌  | 15/20 [00:48<00:15,  3.04s/it] 80%|████████  | 16/20 [00:50<00:11,  2.98s/it]                                                80%|████████  | 16/20 [00:50<00:11,  2.98s/it] 85%|████████▌ | 17/20 [00:53<00:08,  2.94s/it]                                                85%|████████▌ | 17/20 [00:53<00:08,  2.94s/it] 90%|█████████ | 18/20 [00:56<00:05,  2.92s/it]                                                90%|█████████ | 18/20 [00:56<00:05,  2.92s/it] 95%|█████████▌| 19/20 [00:59<00:02,  2.91s/it]                                                95%|█████████▌| 19/20 [00:59<00:02,  2.91s/it]100%|██████████| 20/20 [01:02<00:00,  2.90s/it]                                               100%|██████████| 20/20 [01:02<00:00,  2.90s/it]                                               100%|██████████| 20/20 [01:03<00:00,  2.90s/it]100%|██████████| 20/20 [01:03<00:00,  3.17s/it]
+{'loss': 0.6501, 'grad_norm': 6.312127113342285, 'learning_rate': 0.0002, 'epoch': 0.01}
+{'loss': 0.3384, 'grad_norm': 4.068727970123291, 'learning_rate': 0.0002, 'epoch': 0.02}
+{'loss': 0.2403, 'grad_norm': 3.887317180633545, 'learning_rate': 0.0002, 'epoch': 0.03}
+{'loss': 0.0557, 'grad_norm': 2.184432029724121, 'learning_rate': 0.0002, 'epoch': 0.04}
+{'loss': 0.0138, 'grad_norm': 0.3517695367336273, 'learning_rate': 0.0002, 'epoch': 0.05}
+{'loss': 0.004, 'grad_norm': 0.1221352070569992, 'learning_rate': 0.0002, 'epoch': 0.06}
+{'loss': 0.0134, 'grad_norm': 0.6643077731132507, 'learning_rate': 0.0002, 'epoch': 0.07}
+{'loss': 0.0089, 'grad_norm': 0.3383300006389618, 'learning_rate': 0.0002, 'epoch': 0.08}
+{'loss': 0.019, 'grad_norm': 1.0586539506912231, 'learning_rate': 0.0002, 'epoch': 0.09}
+{'loss': 0.0012, 'grad_norm': 0.04088721424341202, 'learning_rate': 0.0002, 'epoch': 0.1}
+Saving checkpoint at step 10 to: results/week4/pilot_train_tinyllama_mock/checkpoint-10
+{'loss': 0.0006, 'grad_norm': 0.018187817186117172, 'learning_rate': 0.0002, 'epoch': 0.1}
+{'loss': 0.0007, 'grad_norm': 0.07342386245727539, 'learning_rate': 0.0002, 'epoch': 0.11}
+{'loss': 0.0002, 'grad_norm': 0.004470242187380791, 'learning_rate': 0.0002, 'epoch': 0.12}
+{'loss': 0.0045, 'grad_norm': 0.3831990361213684, 'learning_rate': 0.0002, 'epoch': 0.13}
+{'loss': 0.0002, 'grad_norm': 0.008267986588180065, 'learning_rate': 0.0002, 'epoch': 0.14}
+{'loss': 0.0048, 'grad_norm': 1.0433564186096191, 'learning_rate': 0.0002, 'epoch': 0.15}
+{'loss': 0.0014, 'grad_norm': 0.07965552806854248, 'learning_rate': 0.0002, 'epoch': 0.16}
+{'loss': 0.0595, 'grad_norm': 2.252373695373535, 'learning_rate': 0.0002, 'epoch': 0.17}
+{'loss': 0.0002, 'grad_norm': 0.005514724180102348, 'learning_rate': 0.0002, 'epoch': 0.18}
+{'loss': 0.0022, 'grad_norm': 0.16567111015319824, 'learning_rate': 0.0002, 'epoch': 0.19}
+Saving checkpoint at step 20 to: results/week4/pilot_train_tinyllama_mock/checkpoint-20
+{'train_runtime': 63.3561, 'train_samples_per_second': 2.525, 'train_steps_per_second': 0.316, 'train_loss': 0.07094827135151718, 'epoch': 0.19}
+Saving the final checkpoint to: results/week4/pilot_train_tinyllama_mock/checkpoint-final
+***** train metrics *****
+  epoch                    =       0.19
+  train_loss               =     0.0709
+  train_runtime            = 0:01:03.35
+  train_samples_per_second =      2.525
+  train_steps_per_second   =      0.316

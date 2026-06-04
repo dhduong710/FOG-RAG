@@ -1,0 +1,18 @@
+{
+  "row_name": "backbone_test",
+  "ranking_metrics": {
+    "mrr": 0.39310116,
+    "hits1": 0.33,
+    "hits3": 0.358,
+    "hits10": 0.524
+  },
+  "setting_b_metrics": {
+    "num_queries": 500,
+    "K": 10,
+    "SafetyViolation@10": 0.006,
+    "Contra@10": 0.006,
+    "ConstraintViolationRate@10": 0.0,
+    "QueryHasConstraintViolationRate@10": 0.0,
+    "GoldInTopKRate": 1.0
+  }
+}

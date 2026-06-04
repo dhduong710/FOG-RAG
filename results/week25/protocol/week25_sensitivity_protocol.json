@@ -1,0 +1,932 @@
+{
+  "week": 25,
+  "day": 1,
+  "title": "Sensitivity protocol audit and freeze",
+  "created_at": "2026-05-02T03:39:45",
+  "decision": "WEEK25_SENSITIVITY_PROTOCOL_READY",
+  "primary_dataset": "PrimeKG Setting A",
+  "primary_task": "(?, indication, disease), drug-only head prediction",
+  "primary_model": "Llama-3.2-3B",
+  "main_row": "retrieval_main",
+  "graph_num_rels": 4,
+  "frozen_decoding": {
+    "config_name": "cfg01_mnt16_rp100_ng0",
+    "selected_on": "valid_only",
+    "max_new_tokens": 16,
+    "min_new_tokens": 1,
+    "do_sample": false,
+    "num_beams": 1,
+    "temperature": 1.0,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0
+  },
+  "metric_policy": {
+    "reviewer_safe_rr_at20": "RR=1/rank if rank<=20 else 0",
+    "rank21_policy": "rank21 is descriptive only; reciprocal rank is zero outside top-20",
+    "raw_infer_py_mrr": "audit_only_not_paper_metric",
+    "gold_injection": false,
+    "test_tuning": false
+  },
+  "week24_reference": {
+    "primekg_locked_test_llama3_2_3b": {
+      "backbone_raw": {
+        "gold_at20": 0.24,
+        "candidate_mrr_at20": 0.064563,
+        "e2e_mrr_at20": 0.047636,
+        "hits3_at20": 0.048,
+        "hits10_at20": 0.178,
+        "pred_in_candidate_rate": 0.98,
+        "invalid_rate": 0.02,
+        "top1_copy_rate": 0.038,
+        "avg_graph_size": 59.93
+      },
+      "soft_support_raw": {
+        "gold_at20": 0.24,
+        "candidate_mrr_at20": 0.125326,
+        "e2e_mrr_at20": 0.074676,
+        "hits3_at20": 0.132,
+        "hits10_at20": 0.218,
+        "pred_in_candidate_rate": 0.98,
+        "invalid_rate": 0.02,
+        "top1_copy_rate": 0.008,
+        "avg_graph_size": 59.93
+      },
+      "retrieval_main": {
+        "gold_at20": 0.24,
+        "candidate_mrr_at20": 0.125326,
+        "e2e_mrr_at20": 0.074687,
+        "hits3_at20": 0.132,
+        "hits10_at20": 0.218,
+        "pred_in_candidate_rate": 0.998,
+        "invalid_rate": 0.002,
+        "top1_copy_rate": 0.01,
+        "avg_graph_size": 32.34
+      }
+    }
+  },
+  "sensitivity_groups": {
+    "rule_sensitivity": {
+      "role": "appendix sensitivity / negative-control analysis",
+      "main_row": "retrieval_main",
+      "variants": [
+        {
+          "name": "main_rules",
+          "description": "Current FOG-RAG retrieval_main with frozen Week 24 rules/support/retrieval behavior.",
+          "may_change_main_result": false
+        },
+        {
+          "name": "no_rules",
+          "description": "Disable hard-coded rule contribution while keeping candidate source and evaluation policy fixed.",
+          "may_change_main_result": false
+        },
+        {
+          "name": "random_rules",
+          "description": "Negative control: randomize/shuffle rule support mapping under comparable budget.",
+          "may_change_main_result": false
+        }
+      ],
+      "splits": [
+        "valid",
+        "test"
+      ],
+      "metrics": [
+        "Gold@20",
+        "candidate_mrr_at20",
+        "hits1_at20",
+        "hits3_at20",
+        "hits10_at20",
+        "avg_subgraph_size",
+        "candidate_coverage_preserved_rate",
+        "same_candidate_order_rate_vs_main",
+        "same_rank_rate_vs_main",
+        "support_score_shift",
+        "e2e_mrr_at20",
+        "pred_in_candidate_rate",
+        "invalid_rate",
+        "top1_copy_rate"
+      ]
+    },
+    "template_sensitivity": {
+      "role": "appendix prompt wording sensitivity",
+      "main_row": "retrieval_main",
+      "variants": [
+        {
+          "name": "T0_canonical",
+          "template": "What drug is indicated for {}?"
+        },
+        {
+          "name": "T1_treatment",
+          "template": "Which drug is used to treat {}?"
+        },
+        {
+          "name": "T2_medication",
+          "template": "Which medication is indicated for {}?"
+        },
+        {
+          "name": "T3_association_neutral",
+          "template": "What drug is therapeutically associated with {}?"
+        }
+      ],
+      "splits": [
+        "valid",
+        "test"
+      ],
+      "metrics": [
+        "E2E MRR@20",
+        "H@3",
+        "H@10",
+        "pred_in_candidate_rate",
+        "invalid_rate",
+        "list_fragment_rate",
+        "top1_copy_rate"
+      ]
+    },
+    "small_noise_robustness": {
+      "role": "appendix robustness under small perturbations",
+      "main_row": "retrieval_main",
+      "variants": [
+        {
+          "name": "N0_no_noise"
+        },
+        {
+          "name": "N1_support_score_noise_seed1"
+        },
+        {
+          "name": "N2_support_score_noise_seed2"
+        },
+        {
+          "name": "N3_support_score_noise_seed3"
+        },
+        {
+          "name": "N4_subgraph_edge_dropout_5_seed1_optional"
+        },
+        {
+          "name": "N5_subgraph_edge_dropout_5_seed2_optional"
+        },
+        {
+          "name": "N6_subgraph_edge_dropout_5_seed3_optional"
+        }
+      ],
+      "preferred_if_time_limited": [
+        "N0_no_noise",
+        "N1_support_score_noise_seed1",
+        "N2_support_score_noise_seed2",
+        "N3_support_score_noise_seed3"
+      ],
+      "metrics": [
+        "candidate_mrr_at20",
+        "rank_change_rate",
+        "same_top1_rate",
+        "avg_abs_rank_shift",
+        "avg_subgraph_size",
+        "coverage_preserved_rate"
+      ]
+    }
+  },
+  "input_audit": {
+    "e2e_rows": {
+      "backbone_raw": {
+        "row_dir": "dataset/setting_a/29_n2_e2e_infer_ready/backbone_raw",
+        "exists": true,
+        "splits": {
+          "train": {
+            "path": "dataset/setting_a/29_n2_e2e_infer_ready/backbone_raw/train.json",
+            "exists": true,
+            "is_file": true,
+            "num_rows": 8388,
+            "top_keys": [
+              "triple",
+              "triple_id",
+              "type",
+              "query_entity",
+              "query_entity_id",
+              "rank_entities",
+              "rank_entities_id",
+              "rank",
+              "input",
+              "output",
+              "subgraph"
+            ],
+            "sha256": "68acae05b35e21fbd20e6a90c3fbedd234119b5bc1281a2aba61c40af212c2f3",
+            "required_missing_field_rows": 0,
+            "bad_candidate_len_rows": 0,
+            "bad_rank_id_len_rows": 0,
+            "bad_subgraph_rows": 0,
+            "prompt_missing_query_token_rows": 0,
+            "prompt_missing_entity_token_rows": 0,
+            "prompt_missing_question_rows": 0,
+            "prompt_missing_answer_rows": 0,
+            "candidate_len": {
+              "min": 20.0,
+              "max": 20.0,
+              "avg": 20.0
+            },
+            "subgraph_size": {
+              "min": 2.0,
+              "max": 149.0,
+              "avg": 73.633405
+            },
+            "sample_question": "What drug is indicated for hypertensive disorder?",
+            "sample_output": "Fosinopril",
+            "json_kind": "list",
+            "rank_id_len": {
+              "min": 20.0,
+              "max": 20.0,
+              "avg": 20.0
+            }
+          },
+          "valid": {
+            "path": "dataset/setting_a/29_n2_e2e_infer_ready/backbone_raw/valid.json",
+            "exists": true,
+            "is_file": true,
+            "num_rows": 500,
+            "top_keys": [
+              "triple",
+              "triple_id",
+              "type",
+              "query_entity",
+              "query_entity_id",
+              "rank_entities",
+              "rank_entities_id",
+              "rank",
+              "gold_entity",
+              "gold_entity_id",
+              "gold_in_topk_raw",
+              "gold_rank_in_full_universe",
+              "split",
+              "subgraph",
+              "input",
+              "output",
+              "infer_row_name",
+              "candidate_entities",
+              "candidate_entity_ids",
+              "question_text",
+              "source_variant"
+            ],
+            "sha256": "d685929e4e6bb32bd60e4f95d2dea8ba6c0e48d042a3af4c92810b259d773666",
+            "required_missing_field_rows": 0,
+            "bad_candidate_len_rows": 0,
+            "bad_rank_id_len_rows": 0,
+            "bad_subgraph_rows": 0,
+            "prompt_missing_query_token_rows": 0,
+            "prompt_missing_entity_token_rows": 0,
+            "prompt_missing_question_rows": 0,
+            "prompt_missing_answer_rows": 0,
+            "candidate_len": {
+              "min": 20.0,
+              "max": 20.0,
+              "avg": 20.0
+            },
+            "subgraph_size": {
+              "min": 44.0,
+              "max": 121.0,
+              "avg": 60.45
+            },
+            "sample_question": "What drug is indicated for leukemia, lymphocytic, susceptibility to?",
+            "sample_output": "Cortisone acetate",
+            "json_kind": "list",
+            "rank_id_len": {
+              "min": 20.0,
+              "max": 20.0,
+              "avg": 20.0
+            }
+          },
+          "test": {
+            "path": "dataset/setting_a/29_n2_e2e_infer_ready/backbone_raw/test.json",
+            "exists": true,
+            "is_file": true,
+            "num_rows": 500,
+            "top_keys": [
+              "triple",
+              "triple_id",
+              "type",
+              "query_entity",
+              "query_entity_id",
+              "rank_entities",
+              "rank_entities_id",
+              "rank",
+              "gold_entity",
+              "gold_entity_id",
+              "gold_in_topk_raw",
+              "gold_rank_in_full_universe",
+              "split",
+              "subgraph",
+              "input",
+              "output",
+              "infer_row_name",
+              "candidate_entities",
+              "candidate_entity_ids",
+              "question_text",
+              "source_variant"
+            ],
+            "sha256": "e617e4e2e01565825856de63d020b37bb33f99413ee3fc4678ced11de2efa708",
+            "required_missing_field_rows": 0,
+            "bad_candidate_len_rows": 0,
+            "bad_rank_id_len_rows": 0,
+            "bad_subgraph_rows": 0,
+            "prompt_missing_query_token_rows": 0,
+            "prompt_missing_entity_token_rows": 0,
+            "prompt_missing_question_rows": 0,
+            "prompt_missing_answer_rows": 0,
+            "candidate_len": {
+              "min": 20.0,
+              "max": 20.0,
+              "avg": 20.0
+            },
+            "subgraph_size": {
+              "min": 43.0,
+              "max": 119.0,
+              "avg": 59.932
+            },
+            "sample_question": "What drug is indicated for lung abscess (disease)?",
+            "sample_output": "Ticarcillin",
+            "json_kind": "list",
+            "rank_id_len": {
+              "min": 20.0,
+              "max": 20.0,
+              "avg": 20.0
+            }
+          }
+        },
+        "map_files": {
+          "entity2id.pkl": {
+            "path": "dataset/setting_a/29_n2_e2e_infer_ready/backbone_raw/entity2id.pkl",
+            "exists": false,
+            "size_bytes": null
+          },
+          "id2entity.pkl": {
+            "path": "dataset/setting_a/29_n2_e2e_infer_ready/backbone_raw/id2entity.pkl",
+            "exists": false,
+            "size_bytes": null
+          },
+          "relation2id.pkl": {
+            "path": "dataset/setting_a/29_n2_e2e_infer_ready/backbone_raw/relation2id.pkl",
+            "exists": false,
+            "size_bytes": null
+          },
+          "id2relation.pkl": {
+            "path": "dataset/setting_a/29_n2_e2e_infer_ready/backbone_raw/id2relation.pkl",
+            "exists": false,
+            "size_bytes": null
+          }
+        },
+        "prep_manifest": {
+          "path": "dataset/setting_a/29_n2_e2e_infer_ready/backbone_raw/prep_manifest.json",
+          "exists": true,
+          "top_keys": [
+            "row_name",
+            "train_rows",
+            "valid_rows",
+            "test_rows",
+            "contract_fields_required",
+            "sample_test_top_keys"
+          ]
+        }
+      },
+      "soft_support_raw": {
+        "row_dir": "dataset/setting_a/29_n2_e2e_infer_ready/soft_support_raw",
+        "exists": true,
+        "splits": {
+          "train": {
+            "path": "dataset/setting_a/29_n2_e2e_infer_ready/soft_support_raw/train.json",
+            "exists": true,
+            "is_file": true,
+            "num_rows": 8388,
+            "top_keys": [
+              "triple",
+              "triple_id",
+              "type",
+              "query_entity",
+              "query_entity_id",
+              "rank_entities",
+              "rank_entities_id",
+              "rank",
+              "input",
+              "output",
+              "subgraph"
+            ],
+            "sha256": "68acae05b35e21fbd20e6a90c3fbedd234119b5bc1281a2aba61c40af212c2f3",
+            "required_missing_field_rows": 0,
+            "bad_candidate_len_rows": 0,
+            "bad_rank_id_len_rows": 0,
+            "bad_subgraph_rows": 0,
+            "prompt_missing_query_token_rows": 0,
+            "prompt_missing_entity_token_rows": 0,
+            "prompt_missing_question_rows": 0,
+            "prompt_missing_answer_rows": 0,
+            "candidate_len": {
+              "min": 20.0,
+              "max": 20.0,
+              "avg": 20.0
+            },
+            "subgraph_size": {
+              "min": 2.0,
+              "max": 149.0,
+              "avg": 73.633405
+            },
+            "sample_question": "What drug is indicated for hypertensive disorder?",
+            "sample_output": "Fosinopril",
+            "json_kind": "list",
+            "rank_id_len": {
+              "min": 20.0,
+              "max": 20.0,
+              "avg": 20.0
+            }
+          },
+          "valid": {
+            "path": "dataset/setting_a/29_n2_e2e_infer_ready/soft_support_raw/valid.json",
+            "exists": true,
+            "is_file": true,
+            "num_rows": 500,
+            "top_keys": [
+              "triple",
+              "triple_id",
+              "type",
+              "query_entity",
+              "query_entity_id",
+              "rank_entities",
+              "rank_entities_id",
+              "rank",
+              "gold_entity",
+              "gold_entity_id",
+              "gold_in_topk_raw",
+              "gold_rank_in_full_universe",
+              "split",
+              "subgraph",
+              "input",
+              "output",
+              "infer_row_name",
+              "candidate_entities",
+              "candidate_entity_ids",
+              "question_text",
+              "variant_name",
+              "support_scores",
+              "support_rank_order",
+              "candidate_debug_rows"
+            ],
+            "sha256": "6b1ba5d3f7418a1810bf96afd74b8b192a7b32d5a1bcdbfe2106c1c9ea0bb40e",
+            "required_missing_field_rows": 0,
+            "bad_candidate_len_rows": 0,
+            "bad_rank_id_len_rows": 0,
+            "bad_subgraph_rows": 0,
+            "prompt_missing_query_token_rows": 0,
+            "prompt_missing_entity_token_rows": 0,
+            "prompt_missing_question_rows": 0,
+            "prompt_missing_answer_rows": 0,
+            "candidate_len": {
+              "min": 20.0,
+              "max": 20.0,
+              "avg": 20.0
+            },
+            "subgraph_size": {
+              "min": 44.0,
+              "max": 121.0,
+              "avg": 60.45
+            },
+            "sample_question": "What drug is indicated for leukemia, lymphocytic, susceptibility to?",
+            "sample_output": "Cortisone acetate",
+            "json_kind": "list",
+            "rank_id_len": {
+              "min": 20.0,
+              "max": 20.0,
+              "avg": 20.0
+            }
+          },
+          "test": {
+            "path": "dataset/setting_a/29_n2_e2e_infer_ready/soft_support_raw/test.json",
+            "exists": true,
+            "is_file": true,
+            "num_rows": 500,
+            "top_keys": [
+              "triple",
+              "triple_id",
+              "type",
+              "query_entity",
+              "query_entity_id",
+              "rank_entities",
+              "rank_entities_id",
+              "rank",
+              "gold_entity",
+              "gold_entity_id",
+              "gold_in_topk_raw",
+              "gold_rank_in_full_universe",
+              "split",
+              "subgraph",
+              "input",
+              "output",
+              "infer_row_name",
+              "candidate_entities",
+              "candidate_entity_ids",
+              "question_text",
+              "variant_name",
+              "support_scores",
+              "support_rank_order",
+              "candidate_debug_rows"
+            ],
+            "sha256": "b34139f73d120bd0d8f19deb3648d796187ca5725944c5a2724a54aad313bc0d",
+            "required_missing_field_rows": 0,
+            "bad_candidate_len_rows": 0,
+            "bad_rank_id_len_rows": 0,
+            "bad_subgraph_rows": 0,
+            "prompt_missing_query_token_rows": 0,
+            "prompt_missing_entity_token_rows": 0,
+            "prompt_missing_question_rows": 0,
+            "prompt_missing_answer_rows": 0,
+            "candidate_len": {
+              "min": 20.0,
+              "max": 20.0,
+              "avg": 20.0
+            },
+            "subgraph_size": {
+              "min": 43.0,
+              "max": 119.0,
+              "avg": 59.932
+            },
+            "sample_question": "What drug is indicated for lung abscess (disease)?",
+            "sample_output": "Ticarcillin",
+            "json_kind": "list",
+            "rank_id_len": {
+              "min": 20.0,
+              "max": 20.0,
+              "avg": 20.0
+            }
+          }
+        },
+        "map_files": {
+          "entity2id.pkl": {
+            "path": "dataset/setting_a/29_n2_e2e_infer_ready/soft_support_raw/entity2id.pkl",
+            "exists": false,
+            "size_bytes": null
+          },
+          "id2entity.pkl": {
+            "path": "dataset/setting_a/29_n2_e2e_infer_ready/soft_support_raw/id2entity.pkl",
+            "exists": false,
+            "size_bytes": null
+          },
+          "relation2id.pkl": {
+            "path": "dataset/setting_a/29_n2_e2e_infer_ready/soft_support_raw/relation2id.pkl",
+            "exists": false,
+            "size_bytes": null
+          },
+          "id2relation.pkl": {
+            "path": "dataset/setting_a/29_n2_e2e_infer_ready/soft_support_raw/id2relation.pkl",
+            "exists": false,
+            "size_bytes": null
+          }
+        },
+        "prep_manifest": {
+          "path": "dataset/setting_a/29_n2_e2e_infer_ready/soft_support_raw/prep_manifest.json",
+          "exists": true,
+          "top_keys": [
+            "row_name",
+            "train_rows",
+            "valid_rows",
+            "test_rows",
+            "contract_fields_required",
+            "sample_test_top_keys"
+          ]
+        }
+      },
+      "retrieval_main": {
+        "row_dir": "dataset/setting_a/29_n2_e2e_infer_ready/retrieval_main",
+        "exists": true,
+        "splits": {
+          "train": {
+            "path": "dataset/setting_a/29_n2_e2e_infer_ready/retrieval_main/train.json",
+            "exists": true,
+            "is_file": true,
+            "num_rows": 8388,
+            "top_keys": [
+              "triple",
+              "triple_id",
+              "type",
+              "query_entity",
+              "query_entity_id",
+              "rank_entities",
+              "rank_entities_id",
+              "rank",
+              "input",
+              "output",
+              "subgraph"
+            ],
+            "sha256": "68acae05b35e21fbd20e6a90c3fbedd234119b5bc1281a2aba61c40af212c2f3",
+            "required_missing_field_rows": 0,
+            "bad_candidate_len_rows": 0,
+            "bad_rank_id_len_rows": 0,
+            "bad_subgraph_rows": 0,
+            "prompt_missing_query_token_rows": 0,
+            "prompt_missing_entity_token_rows": 0,
+            "prompt_missing_question_rows": 0,
+            "prompt_missing_answer_rows": 0,
+            "candidate_len": {
+              "min": 20.0,
+              "max": 20.0,
+              "avg": 20.0
+            },
+            "subgraph_size": {
+              "min": 2.0,
+              "max": 149.0,
+              "avg": 73.633405
+            },
+            "sample_question": "What drug is indicated for hypertensive disorder?",
+            "sample_output": "Fosinopril",
+            "json_kind": "list",
+            "rank_id_len": {
+              "min": 20.0,
+              "max": 20.0,
+              "avg": 20.0
+            }
+          },
+          "valid": {
+            "path": "dataset/setting_a/29_n2_e2e_infer_ready/retrieval_main/valid.json",
+            "exists": true,
+            "is_file": true,
+            "num_rows": 500,
+            "top_keys": [
+              "triple",
+              "triple_id",
+              "type",
+              "query_entity",
+              "query_entity_id",
+              "rank_entities",
+              "rank_entities_id",
+              "rank",
+              "gold_entity",
+              "gold_entity_id",
+              "gold_in_topk_raw",
+              "gold_rank_in_full_universe",
+              "split",
+              "subgraph",
+              "input",
+              "output",
+              "infer_row_name",
+              "candidate_entities",
+              "candidate_entity_ids",
+              "question_text",
+              "variant_name",
+              "selected_source_variant",
+              "support_scores",
+              "candidate_support_bands",
+              "contra_flags",
+              "selected_subgraph",
+              "triple_score_rows",
+              "path_scores",
+              "subgraph_summary"
+            ],
+            "sha256": "066761acda66b06021cf83efd98629f8aae60bb2eb2ef65b08f72e5d4264dd04",
+            "required_missing_field_rows": 0,
+            "bad_candidate_len_rows": 0,
+            "bad_rank_id_len_rows": 0,
+            "bad_subgraph_rows": 0,
+            "prompt_missing_query_token_rows": 0,
+            "prompt_missing_entity_token_rows": 0,
+            "prompt_missing_question_rows": 0,
+            "prompt_missing_answer_rows": 0,
+            "candidate_len": {
+              "min": 20.0,
+              "max": 20.0,
+              "avg": 20.0
+            },
+            "subgraph_size": {
+              "min": 24.0,
+              "max": 51.0,
+              "avg": 32.556
+            },
+            "sample_question": "What drug is indicated for leukemia, lymphocytic, susceptibility to?",
+            "sample_output": "Cortisone acetate",
+            "json_kind": "list",
+            "rank_id_len": {
+              "min": 20.0,
+              "max": 20.0,
+              "avg": 20.0
+            }
+          },
+          "test": {
+            "path": "dataset/setting_a/29_n2_e2e_infer_ready/retrieval_main/test.json",
+            "exists": true,
+            "is_file": true,
+            "num_rows": 500,
+            "top_keys": [
+              "triple",
+              "triple_id",
+              "type",
+              "query_entity",
+              "query_entity_id",
+              "rank_entities",
+              "rank_entities_id",
+              "rank",
+              "gold_entity",
+              "gold_entity_id",
+              "gold_in_topk_raw",
+              "gold_rank_in_full_universe",
+              "split",
+              "subgraph",
+              "input",
+              "output",
+              "infer_row_name",
+              "candidate_entities",
+              "candidate_entity_ids",
+              "question_text",
+              "variant_name",
+              "selected_source_variant",
+              "support_scores",
+              "candidate_support_bands",
+              "contra_flags",
+              "selected_subgraph",
+              "triple_score_rows",
+              "path_scores",
+              "subgraph_summary"
+            ],
+            "sha256": "81a46ab9b824f2daab5bf90ab7e3a25933616b4a4999f815f7d7acab044cff99",
+            "required_missing_field_rows": 0,
+            "bad_candidate_len_rows": 0,
+            "bad_rank_id_len_rows": 0,
+            "bad_subgraph_rows": 0,
+            "prompt_missing_query_token_rows": 0,
+            "prompt_missing_entity_token_rows": 0,
+            "prompt_missing_question_rows": 0,
+            "prompt_missing_answer_rows": 0,
+            "candidate_len": {
+              "min": 20.0,
+              "max": 20.0,
+              "avg": 20.0
+            },
+            "subgraph_size": {
+              "min": 24.0,
+              "max": 51.0,
+              "avg": 32.34
+            },
+            "sample_question": "What drug is indicated for lung abscess (disease)?",
+            "sample_output": "Ticarcillin",
+            "json_kind": "list",
+            "rank_id_len": {
+              "min": 20.0,
+              "max": 20.0,
+              "avg": 20.0
+            }
+          }
+        },
+        "map_files": {
+          "entity2id.pkl": {
+            "path": "dataset/setting_a/29_n2_e2e_infer_ready/retrieval_main/entity2id.pkl",
+            "exists": false,
+            "size_bytes": null
+          },
+          "id2entity.pkl": {
+            "path": "dataset/setting_a/29_n2_e2e_infer_ready/retrieval_main/id2entity.pkl",
+            "exists": false,
+            "size_bytes": null
+          },
+          "relation2id.pkl": {
+            "path": "dataset/setting_a/29_n2_e2e_infer_ready/retrieval_main/relation2id.pkl",
+            "exists": false,
+            "size_bytes": null
+          },
+          "id2relation.pkl": {
+            "path": "dataset/setting_a/29_n2_e2e_infer_ready/retrieval_main/id2relation.pkl",
+            "exists": false,
+            "size_bytes": null
+          }
+        },
+        "prep_manifest": {
+          "path": "dataset/setting_a/29_n2_e2e_infer_ready/retrieval_main/prep_manifest.json",
+          "exists": true,
+          "top_keys": [
+            "row_name",
+            "train_rows",
+            "valid_rows",
+            "test_rows",
+            "contract_fields_required",
+            "sample_test_top_keys"
+          ]
+        }
+      }
+    },
+    "checkpoint": {
+      "selected_checkpoint": {
+        "path": "results/week20/e2e_primary_checkpoint",
+        "exists": true,
+        "adapter_config": true,
+        "graph_model": true,
+        "adapter_model_bin": true,
+        "adapter_model_safetensors": false,
+        "is_valid_checkpoint": true
+      },
+      "checked_candidates": [
+        {
+          "path": "results/week20/e2e_primary_checkpoint/checkpoint-final",
+          "exists": false,
+          "adapter_config": false,
+          "graph_model": false,
+          "adapter_model_bin": false,
+          "adapter_model_safetensors": false,
+          "is_valid_checkpoint": false
+        },
+        {
+          "path": "results/week20/e2e_primary_checkpoint",
+          "exists": true,
+          "adapter_config": true,
+          "graph_model": true,
+          "adapter_model_bin": true,
+          "adapter_model_safetensors": false,
+          "is_valid_checkpoint": true
+        },
+        {
+          "path": "results/week24/e2e_primary_checkpoint/checkpoint-final",
+          "exists": false,
+          "adapter_config": false,
+          "graph_model": false,
+          "adapter_model_bin": false,
+          "adapter_model_safetensors": false,
+          "is_valid_checkpoint": false
+        },
+        {
+          "path": "results/week24/e2e_primary_checkpoint",
+          "exists": false,
+          "adapter_config": false,
+          "graph_model": false,
+          "adapter_model_bin": false,
+          "adapter_model_safetensors": false,
+          "is_valid_checkpoint": false
+        }
+      ]
+    },
+    "week24_artifacts": {
+      "primekg_e2e_protocol_freeze": {
+        "path": "results/week24/primekg_e2e_protocol_freeze.json",
+        "exists": true,
+        "is_file": true,
+        "is_dir": false,
+        "size_bytes": 895,
+        "top_keys": [
+          "decision",
+          "dataset",
+          "task",
+          "candidate_universe",
+          "rows",
+          "splits",
+          "top_k",
+          "graph_num_rels",
+          "rank_absent_sentinel",
+          "reviewer_safe_rr_rule",
+          "do_not_use",
+          "kge_embedding_path",
+          "kge_embedding_shape",
+          "ready_root"
+        ]
+      },
+      "week24_go_decision": {
+        "path": "results/week24/week24_go_decision.json",
+        "exists": true,
+        "is_file": true,
+        "is_dir": false,
+        "size_bytes": 1118,
+        "top_keys": [
+          "decision",
+          "reason",
+          "primary_dataset",
+          "secondary_dataset",
+          "primary_e2e_model",
+          "main_primekg_row",
+          "main_pharmkg_row",
+          "paper_positioning",
+          "week25_recommendation"
+        ]
+      },
+      "frozen_decode_test_dir": {
+        "path": "results/week24/frozen_decode_test",
+        "exists": true,
+        "is_file": false,
+        "is_dir": true,
+        "size_bytes": null
+      },
+      "model_compare_dir": {
+        "path": "results/week24/model_compare",
+        "exists": true,
+        "is_file": false,
+        "is_dir": true,
+        "size_bytes": null
+      },
+      "diagnostics_dir": {
+        "path": "results/week24/diagnostics",
+        "exists": true,
+        "is_file": false,
+        "is_dir": true,
+        "size_bytes": null
+      }
+    }
+  },
+  "fatal_errors": [],
+  "warnings": [],
+  "do_not_change": [
+    "Do not overwrite results/week24 artifacts.",
+    "Do not change dataset/setting_a/29_n2_e2e_infer_ready source packages.",
+    "Do not tune decoding/template/rules on test.",
+    "Do not promote Week 25 sensitivity variants as a new contribution.",
+    "Do not use raw infer.py MRR as the paper metric."
+  ],
+  "outputs": {
+    "protocol_json": "results/week25/protocol/week25_sensitivity_protocol.json",
+    "audit_report_md": "reports/week25/day1_sensitivity_protocol_audit.md"
+  }
+}

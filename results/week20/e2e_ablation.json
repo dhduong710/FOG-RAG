@@ -1,0 +1,83 @@
+{
+  "week": 20,
+  "stage": "e2e_ablation_reviewer_safe",
+  "status": "BUILT_REVIEWER_SAFE",
+  "reference_row": "backbone_raw",
+  "candidate_stage_intermediate": "soft_support_raw",
+  "main_row": "soft_support_fuzzy_retrieval_main",
+  "soft_minus_backbone": {
+    "candidate_ceiling": {
+      "delta_gold_present_rate": 0.0,
+      "delta_mrr_at20": 0.06076335,
+      "delta_hits1_at20": 0.048,
+      "delta_hits3_at20": 0.096,
+      "delta_hits10_at20": 0.03,
+      "delta_hits20_at20": 0.0
+    },
+    "e2e_generation": {
+      "delta_gold_present_rate": 0.0,
+      "delta_mrr_at20": 0.02703981,
+      "delta_hits1_at20": -0.002,
+      "delta_hits3_at20": 0.084,
+      "delta_hits10_at20": 0.04,
+      "delta_hits20_at20": 0.0
+    },
+    "graph_package": {
+      "delta_avg_subgraph_size": 0.0
+    }
+  },
+  "retrieval_minus_soft": {
+    "candidate_ceiling": {
+      "delta_gold_present_rate": 0.0,
+      "delta_mrr_at20": 0.0,
+      "delta_hits1_at20": 0.0,
+      "delta_hits3_at20": 0.0,
+      "delta_hits10_at20": 0.0,
+      "delta_hits20_at20": 0.0
+    },
+    "e2e_generation": {
+      "delta_gold_present_rate": 0.0,
+      "delta_mrr_at20": 1.099e-05,
+      "delta_hits1_at20": 0.0,
+      "delta_hits3_at20": 0.0,
+      "delta_hits10_at20": 0.0,
+      "delta_hits20_at20": 0.0
+    },
+    "graph_package": {
+      "delta_avg_subgraph_size": -27.592,
+      "retrieval_avg_subgraph_size": 32.34,
+      "soft_avg_subgraph_size": 59.932,
+      "retrieval_selected_source_variant_set": [
+        "soft_support_fuzzy_retrieval_tight"
+      ],
+      "retrieval_avg_candidate_coverage_preserved_rate": 1.0,
+      "retrieval_avg_direct_shortcut_path_rate": 0.11081471
+    }
+  },
+  "retrieval_minus_backbone": {
+    "candidate_ceiling": {
+      "delta_gold_present_rate": 0.0,
+      "delta_mrr_at20": 0.06076335,
+      "delta_hits1_at20": 0.048,
+      "delta_hits3_at20": 0.096,
+      "delta_hits10_at20": 0.03,
+      "delta_hits20_at20": 0.0
+    },
+    "e2e_generation": {
+      "delta_gold_present_rate": 0.0,
+      "delta_mrr_at20": 0.0270508,
+      "delta_hits1_at20": -0.002,
+      "delta_hits3_at20": 0.084,
+      "delta_hits10_at20": 0.04,
+      "delta_hits20_at20": 0.0
+    },
+    "graph_package": {
+      "delta_avg_subgraph_size": -27.592
+    }
+  },
+  "interpretation": {
+    "candidate_stage_claim": "soft_support_raw improves candidate ceiling and E2E reviewer-safe MRR over backbone_raw.",
+    "retrieval_stage_claim": "retrieval_main preserves soft_support_raw performance while reducing evidence subgraph size.",
+    "known_limitation": "E2E Hits@1 remains weak because the frozen LLM often generates a plausible candidate instead of the exact gold string even when gold is ranked first."
+  }
+}

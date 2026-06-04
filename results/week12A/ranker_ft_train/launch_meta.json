@@ -1,0 +1,19 @@
+{
+  "timestamp_start": "2026-04-15T23:58:43.762478",
+  "trainer": "scripts/week7/02_train_rgcn_ranker_v2.py",
+  "config": "configs/week12A/rgcn_ranker_ft.yaml",
+  "command": [
+    "/home/duong/miniconda3/envs/drkgc/bin/python",
+    "scripts/week7/02_train_rgcn_ranker_v2.py",
+    "--config",
+    "configs/week12A/rgcn_ranker_ft.yaml"
+  ],
+  "cwd": "/home/duong/code/FOG-RAG",
+  "expected_outputs": {
+    "checkpoint": "dataset/setting_a/21_ranker_rescue/rgcn_ranker_v2_checkpoint.pt",
+    "train_log": "dataset/setting_a/21_ranker_rescue/ranker_v2_train_log.jsonl",
+    "meta": "dataset/setting_a/21_ranker_rescue/ranker_v2_meta.json"
+  },
+  "timestamp_end": "2026-04-15T23:59:00.279242",
+  "return_code": 0
+}

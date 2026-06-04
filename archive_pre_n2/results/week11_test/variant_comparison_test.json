@@ -1,0 +1,77 @@
+{
+  "rows": [
+    {
+      "row_name": "backbone",
+      "mrr": 0.39310116,
+      "hits1": 0.33,
+      "hits3": 0.358,
+      "hits10": 0.524,
+      "SafetyViolation@10": 0.006,
+      "Contra@10": 0.006,
+      "ConstraintViolationRate@10": 0.0,
+      "QueryHasConstraintViolationRate@10": 0.0,
+      "GoldInTopKRate": 1.0,
+      "SafetyViolation@final": 0.014,
+      "Contra@final": 0.014,
+      "AvgCandidateSize": 20.0,
+      "GoldInFinalListRate": 1.0,
+      "RowsWithContraFinal": 7
+    },
+    {
+      "row_name": "ontology",
+      "mrr": 0.43548887,
+      "hits1": 0.26,
+      "hits3": 0.486,
+      "hits10": 0.936,
+      "SafetyViolation@10": 0.006,
+      "Contra@10": 0.006,
+      "ConstraintViolationRate@10": 0.0,
+      "QueryHasConstraintViolationRate@10": 0.0,
+      "GoldInTopKRate": 0.28,
+      "SafetyViolation@final": 0.012,
+      "Contra@final": 0.012,
+      "AvgCandidateSize": 7.73,
+      "GoldInFinalListRate": 0.28,
+      "RowsWithContraFinal": 6
+    },
+    {
+      "row_name": "hard_main",
+      "mrr": 0.44890444,
+      "hits1": 0.29,
+      "hits3": 0.48,
+      "hits10": 0.932,
+      "SafetyViolation@10": 0.002,
+      "Contra@10": 0.002,
+      "ConstraintViolationRate@10": 0.0,
+      "QueryHasConstraintViolationRate@10": 0.0,
+      "GoldInTopKRate": 0.31,
+      "SafetyViolation@final": 0.002,
+      "Contra@final": 0.002,
+      "AvgCandidateSize": 8.278,
+      "GoldInFinalListRate": 0.31,
+      "RowsWithContraFinal": 1
+    },
+    {
+      "row_name": "soft_best",
+      "mrr": 0.41719476,
+      "hits1": 0.24,
+      "hits3": 0.468,
+      "hits10": 0.918,
+      "SafetyViolation@10": 0.002,
+      "Contra@10": 0.002,
+      "ConstraintViolationRate@10": 0.0,
+      "QueryHasConstraintViolationRate@10": 0.0,
+      "GoldInTopKRate": 0.28,
+      "SafetyViolation@final": 0.012,
+      "Contra@final": 0.012,
+      "AvgCandidateSize": 7.73,
+      "GoldInFinalListRate": 0.28,
+      "RowsWithContraFinal": 6
+    }
+  ],
+  "decision": {
+    "main_row": "hard_main",
+    "supporting_row": "soft_best",
+    "reason": "hard_main is at least as safe as soft_best on final-list test metrics and is not worse on ranking."
+  }
+}

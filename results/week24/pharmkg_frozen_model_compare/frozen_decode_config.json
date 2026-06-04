@@ -1,0 +1,29 @@
+{
+  "decision": "PHARMKG_DECODING_CONFIG_FROZEN_FROM_VALID",
+  "best_config": {
+    "config_id": "cfg02_mnt16_rp105_ng0",
+    "max_new_tokens": 16,
+    "repetition_penalty": 1.05,
+    "no_repeat_ngram_size": 0,
+    "fuzzy_valid_mrr": 0.01718446,
+    "fuzzy_invalid": 0.624,
+    "fuzzy_pred_in_candidate": 0.376,
+    "fuzzy_top1_copy": 0.376,
+    "fuzzy_list_fragment": 0.618,
+    "avg_valid_mrr_all_rows": 0.01658118,
+    "avg_invalid_all_rows": 0.58,
+    "avg_pred_in_candidate_all_rows": 0.42,
+    "avg_top1_copy_all_rows": 0.42,
+    "avg_list_fragment_all_rows": 0.57533333,
+    "top1_collapsed": false
+  },
+  "use_for_day6c": {
+    "max_new_tokens": 16,
+    "repetition_penalty": 1.05,
+    "no_repeat_ngram_size": 0,
+    "do_sample": false,
+    "num_beams": 1,
+    "temperature": 1.0
+  },
+  "important_note": "Selected on PharmKG valid only. Do not change after looking at test."
+}

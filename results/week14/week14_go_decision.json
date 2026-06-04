@@ -1,0 +1,128 @@
+{
+  "week": 14,
+  "decision": "GO_TO_WEEK15",
+  "main_truth": "raw_no_injection",
+  "decision_split": "valid",
+  "selected_main_row": "soft_support_raw",
+  "selected_variant_origin": "soft_support_raw_b050",
+  "checks": {
+    "soft_support_main_selected": true,
+    "reference_roles_frozen": true,
+    "candidate_stage_not_reopened": true,
+    "raw_source_unchanged_policy": true,
+    "failure_modes_understood": true
+  },
+  "week14_summary": {
+    "backbone_raw": {
+      "row_name": "backbone_raw",
+      "num_queries": 500,
+      "avg_candidate_size": 20.0,
+      "gold_present_rate": 0.202,
+      "mrr_like": 0.091803,
+      "hits1_like": 0.024,
+      "hits3_like": 0.046,
+      "hits10_like": 0.158,
+      "avg_gold_rank": 18.376,
+      "avg_top5_direct_link_rate": 0.2408,
+      "avg_top5_evidence_positive_rate": 0.9396,
+      "avg_top5_ontology_keep_rate": 0.5392,
+      "avg_top5_contra_rate": 0.0,
+      "num_queries_top1_changed_vs_backbone_raw": 0,
+      "top1_changed_rate_vs_backbone_raw": 0.0,
+      "improved_rate_vs_backbone_raw": 0.0,
+      "worsened_rate_vs_backbone_raw": 0.0
+    },
+    "ontology_raw": {
+      "row_name": "ontology_raw",
+      "num_queries": 500,
+      "avg_candidate_size": 8.796,
+      "gold_present_rate": 0.014,
+      "mrr_like": 0.050869,
+      "hits1_like": 0.002,
+      "hits3_like": 0.004,
+      "hits10_like": 0.012,
+      "avg_gold_rank": 20.818,
+      "avg_top5_direct_link_rate": 0.5296,
+      "avg_top5_evidence_positive_rate": 0.9784,
+      "avg_top5_ontology_keep_rate": 1.0,
+      "avg_top5_contra_rate": 0.0,
+      "num_queries_top1_changed_vs_backbone_raw": 211,
+      "top1_changed_rate_vs_backbone_raw": 0.422,
+      "improved_rate_vs_backbone_raw": 0.0,
+      "worsened_rate_vs_backbone_raw": 0.19
+    },
+    "soft_support_raw": {
+      "row_name": "soft_support_raw_b050",
+      "num_queries": 500,
+      "avg_candidate_size": 20.0,
+      "gold_present_rate": 0.202,
+      "mrr_like": 0.135644,
+      "hits1_like": 0.056,
+      "hits3_like": 0.134,
+      "hits10_like": 0.182,
+      "avg_gold_rank": 17.676,
+      "avg_top5_direct_link_rate": 0.0072,
+      "avg_top5_evidence_positive_rate": 1.0,
+      "avg_top5_ontology_keep_rate": 0.3068,
+      "avg_top5_contra_rate": 0.0,
+      "num_queries_top1_changed_vs_backbone_raw": 150,
+      "top1_changed_rate_vs_backbone_raw": 0.3,
+      "improved_rate_vs_backbone_raw": 0.16,
+      "worsened_rate_vs_backbone_raw": 0.0
+    },
+    "contrast_row": {
+      "row_name": "soft_support_raw_bcap",
+      "num_queries": 500,
+      "avg_candidate_size": 20.0,
+      "gold_present_rate": 0.202,
+      "mrr_like": 0.092464,
+      "hits1_like": 0.022,
+      "hits3_like": 0.05,
+      "hits10_like": 0.158,
+      "avg_gold_rank": 18.252,
+      "avg_top5_direct_link_rate": 0.2452,
+      "avg_top5_evidence_positive_rate": 1.0,
+      "avg_top5_ontology_keep_rate": 0.544,
+      "avg_top5_contra_rate": 0.0,
+      "num_queries_top1_changed_vs_backbone_raw": 26,
+      "top1_changed_rate_vs_backbone_raw": 0.052,
+      "improved_rate_vs_backbone_raw": 0.056,
+      "worsened_rate_vs_backbone_raw": 0.01
+    },
+    "case_summary": {
+      "num_queries": 500,
+      "num_improved_vs_backbone": 80,
+      "num_worsened_vs_backbone": 0,
+      "num_unchanged_bad_vs_backbone": 401,
+      "num_improved_vs_bcap": 80,
+      "num_worsened_vs_bcap": 1,
+      "improved_rate_vs_backbone": 0.16,
+      "worsened_rate_vs_backbone": 0.0,
+      "improved_rate_vs_bcap": 0.16,
+      "worsened_rate_vs_bcap": 0.002
+    }
+  },
+  "scientific_takeaway": [
+    "Week 14 establishes soft_support_raw as the main intermediate row for Novelty 2 candidate-stage work.",
+    "Ontology_raw is retained only as a negative control and should not be revived as a positive main signal.",
+    "The main remaining weakness is raw-candidate bottleneck, which motivates retrieval-stage work next."
+  ],
+  "week15_entry_conditions": [
+    "soft_support_raw remains frozen",
+    "raw source remains unchanged",
+    "candidate-stage formula search is not reopened",
+    "week15 starts from the frozen row soft_support_raw"
+  ],
+  "week15_allowed": [
+    "prepare retrieval-stage logic on top of frozen soft_support_raw",
+    "analyze path/subgraph selection quality",
+    "design confidence-aware retrieval without changing the raw source"
+  ],
+  "week15_forbidden": [
+    "reopening b025 vs b050",
+    "reviving hard ontology gating",
+    "changing 23_noinj_source",
+    "mixing injected artifacts into the main path",
+    "using ontology_raw as a positive main signal"
+  ]
+}

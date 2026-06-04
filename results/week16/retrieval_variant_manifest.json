@@ -1,0 +1,193 @@
+{
+  "week": 16,
+  "theme": "retrieval_sweep_and_main_row_selection",
+  "decision_split": "valid",
+  "main_truth": "raw/no-injection",
+  "reference_row": "backbone_raw",
+  "negative_control": "ontology_raw",
+  "main_intermediate_input": "soft_support_raw",
+  "reference_retrieval_row": "soft_support_fuzzy_retrieval_v1",
+  "target_output_row": "soft_support_fuzzy_retrieval_main",
+  "allowed_main_inputs": {
+    "raw_source": {
+      "path": "dataset/setting_a/23_noinj_source/valid_top20_raw.json",
+      "sha256": "3aa2e7bca558367f2c3cb8ad4dbabd8022f61353db29c8d49bf7778a6c51afe5",
+      "num_rows": 500,
+      "first_row_keys": [
+        "split",
+        "query_entity",
+        "query_entity_id",
+        "gold_entity",
+        "gold_entity_id",
+        "candidate_entities",
+        "candidate_entity_ids",
+        "gold_rank_in_full_universe",
+        "gold_in_topk_raw"
+      ],
+      "split": "valid",
+      "query_entity": "leukemia, lymphocytic, susceptibility to",
+      "query_entity_id": 9871,
+      "gold_entity": "Cortisone acetate",
+      "gold_entity_id": 2042,
+      "variant_name": null
+    },
+    "aligned_evidence": {
+      "path": "dataset/setting_a/24b_noinj_evidence/valid_aligned_evidence.json",
+      "sha256": "76cb1bc43b7477dd22cef116e3d42d35bfadd69ce340df122d573c0716eab283",
+      "num_rows": 500,
+      "first_row_keys": [
+        "triple",
+        "triple_id",
+        "type",
+        "query_entity",
+        "query_entity_id",
+        "rank_entities",
+        "rank_entities_id",
+        "rank",
+        "gold_entity",
+        "gold_entity_id",
+        "gold_in_topk_raw",
+        "gold_rank_in_full_universe",
+        "split",
+        "subgraph",
+        "input",
+        "output"
+      ],
+      "split": "valid",
+      "query_entity": "leukemia, lymphocytic, susceptibility to",
+      "query_entity_id": 9871,
+      "gold_entity": "Cortisone acetate",
+      "gold_entity_id": 2042,
+      "variant_name": null
+    },
+    "soft_support_main": {
+      "path": "dataset/setting_a/26_n2_soft_support/valid_top20_soft_support_main.json",
+      "sha256": "67910b9d97b09a7cce9155c1a709a06b06848bedd438f0680fde5a9bd52f456e",
+      "num_rows": 500,
+      "first_row_keys": [
+        "split",
+        "query_entity",
+        "query_entity_id",
+        "gold_entity",
+        "gold_entity_id",
+        "gold_rank_in_full_universe",
+        "gold_in_topk_raw",
+        "variant_name",
+        "candidate_entities",
+        "candidate_entity_ids",
+        "support_scores",
+        "support_rank_order",
+        "candidate_debug_rows"
+      ],
+      "split": "valid",
+      "query_entity": "leukemia, lymphocytic, susceptibility to",
+      "query_entity_id": 9871,
+      "gold_entity": "Cortisone acetate",
+      "gold_entity_id": 2042,
+      "variant_name": "soft_support_raw_b050"
+    },
+    "retrieval_v1": {
+      "path": "dataset/setting_a/27_n2_fuzzy_retrieval/valid_fuzzy_retrieval_v1.json",
+      "sha256": "a71f9b177fe71119199ea8f0af09718a7c4c69bbbfa7ae0d71370abbe7ae2d88",
+      "num_rows": 500,
+      "first_row_keys": [
+        "row_index",
+        "row_uid",
+        "split",
+        "query_entity",
+        "query_entity_id",
+        "gold_entity",
+        "gold_entity_id",
+        "variant_name",
+        "candidate_entities",
+        "candidate_entity_ids",
+        "support_scores",
+        "candidate_support_bands",
+        "contra_flags",
+        "selected_subgraph",
+        "triple_score_rows",
+        "path_scores",
+        "subgraph_summary"
+      ],
+      "split": "valid",
+      "query_entity": "leukemia, lymphocytic, susceptibility to",
+      "query_entity_id": 9871,
+      "gold_entity": "Cortisone acetate",
+      "gold_entity_id": 2042,
+      "variant_name": "soft_support_fuzzy_retrieval_v1"
+    },
+    "retrieval_v1_manifest": {
+      "path": "dataset/setting_a/27_n2_fuzzy_retrieval/path_score_manifest.json",
+      "sha256": "b1ec7c7b514667769dcb47fe0baa68ceee1ee46722dda04d7346f68433c78c4d"
+    }
+  },
+  "lookup_inputs": {
+    "type_map": "dataset/setting_b/01_annotations/type_map.tsv",
+    "schema_rules": "dataset/setting_b/01_annotations/schema_rules.json",
+    "path_templates": "dataset/setting_b/01_annotations/path_templates.yaml",
+    "valid_b_annotations": "dataset/setting_b/04_contra_checked/valid_b_annotations_contra_checked.json"
+  },
+  "comparison_only_inputs": {
+    "reference_backbone_dir": "results/reference_rows/backbone_raw_valid",
+    "ontology_raw": "dataset/setting_a/24_noinj_ontology/valid_top20_ontology_raw.json"
+  },
+  "planned_variants": [
+    {
+      "name": "soft_support_fuzzy_retrieval_v1",
+      "role": "frozen_reference_row_from_week15"
+    },
+    {
+      "name": "soft_support_fuzzy_retrieval_tight",
+      "role": "smaller_budget_variant",
+      "allowed_changes": [
+        "retain_ratio",
+        "min_keep"
+      ]
+    },
+    {
+      "name": "soft_support_fuzzy_retrieval_directplus",
+      "role": "stronger_direct_shortcut_penalty_variant",
+      "allowed_changes": [
+        "direct_shortcut_penalty"
+      ]
+    },
+    {
+      "name": "soft_support_fuzzy_retrieval_loose",
+      "role": "optional_looser_budget_variant",
+      "allowed_changes": [
+        "retain_ratio",
+        "min_keep"
+      ],
+      "optional": true
+    }
+  ],
+  "allowed_sweep_axes": [
+    "retrieval_budget_or_retain_ratio",
+    "direct_shortcut_penalty",
+    "at_most_one_small_coverage_policy_tweak"
+  ],
+  "forbidden_actions": [
+    "change_raw_source",
+    "reopen_candidate_stage",
+    "change_soft_support_raw",
+    "use_ontology_raw_as_positive_signal",
+    "run_test",
+    "enable_fuzzy_encoder",
+    "run_end_to_end_reranker_training",
+    "open_too_many_retrieval_variants"
+  ],
+  "week15_bridge": {
+    "decision": "GO",
+    "main_output_row": "soft_support_fuzzy_retrieval_v1",
+    "shortcut_gain_vs_soft_support": 0.055262,
+    "candidate_coverage_preserved_rate": 1.0,
+    "ranking_proxy_hold": {
+      "mrr_like_soft_support": 0.097644,
+      "mrr_like_fuzzy_v1": 0.097644,
+      "hits1_like_soft_support": 0.056,
+      "hits1_like_fuzzy_v1": 0.056,
+      "avg_gold_rank_soft_support": 17.676,
+      "avg_gold_rank_fuzzy_v1": 17.676
+    }
+  }
+}

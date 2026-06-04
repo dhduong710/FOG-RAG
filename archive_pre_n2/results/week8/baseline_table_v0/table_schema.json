@@ -1,0 +1,38 @@
+{
+  "table_a_structure_only": {
+    "title": "Setting A structure-only baselines",
+    "columns": [
+      "Method",
+      "Category",
+      "Valid MRR",
+      "Hits@1",
+      "Hits@3",
+      "Hits@10",
+      "Notes"
+    ],
+    "notes": [
+      "All rows must use the same evaluator.",
+      "Task = head prediction (?, indication, disease).",
+      "Universe = drug-only.",
+      "Decision split = valid."
+    ]
+  },
+  "table_b_reference_rows": {
+    "title": "Candidate-aware reranker reference rows",
+    "columns": [
+      "Method",
+      "Protocol",
+      "Valid MRR",
+      "Hits@1",
+      "Hits@3",
+      "Hits@10",
+      "Notes"
+    ],
+    "notes": [
+      "Reference/supporting rows only.",
+      "Do not mix directly with structure-only baselines without explicit protocol note.",
+      "week7-v2 is the main backbone reference.",
+      "posthoc debias is supporting retrieval-side analysis only."
+    ]
+  }
+}

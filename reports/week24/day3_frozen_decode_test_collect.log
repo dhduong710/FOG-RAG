@@ -1,0 +1,15 @@
+decision = PRIMEKG_FROZEN_DECODE_E2E_READY
+wrote valid = /home/anhlq/Documents/2026-dhd/FOG-RAG/results/week24/frozen_decode_test/primekg_e2e_final_table_valid.json
+wrote test = /home/anhlq/Documents/2026-dhd/FOG-RAG/results/week24/frozen_decode_test/primekg_e2e_final_table_test.json
+wrote comparison = /home/anhlq/Documents/2026-dhd/FOG-RAG/results/week24/frozen_decode_test/week20_vs_week24_e2e_comparison.json
+wrote summary = /home/anhlq/Documents/2026-dhd/FOG-RAG/results/week24/frozen_decode_test/primekg_frozen_decode_summary.json
+wrote report = /home/anhlq/Documents/2026-dhd/FOG-RAG/reports/week24/day3_frozen_decode_test_rerun.md
+
+| Split | Row | Gold@20 | Cand MRR | E2E MRR | E2E H@1 | E2E H@3 | E2E H@10 | Pred-in-cand | Invalid | Top1-copy | List-frag | Avg subgraph |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| valid | backbone_raw | 0.202 | 0.053803 | 0.048118 | 0.012 | 0.048 | 0.150 | 0.974 | 0.026 | 0.022 | 0.024 | 60.450 |
+| valid | soft_support_raw | 0.202 | 0.097644 | 0.059944 | 0.002 | 0.102 | 0.172 | 0.964 | 0.036 | 0.002 | 0.012 | 60.450 |
+| valid | retrieval_main | 0.202 | 0.097644 | 0.058518 | 0.000 | 0.100 | 0.174 | 0.992 | 0.008 | 0.008 | 0.010 | 32.556 |
+| test | backbone_raw | 0.240 | 0.064563 | 0.047636 | 0.002 | 0.048 | 0.178 | 0.980 | 0.020 | 0.038 | 0.046 | 59.932 |
+| test | soft_support_raw | 0.240 | 0.125326 | 0.074676 | 0.000 | 0.132 | 0.218 | 0.980 | 0.020 | 0.008 | 0.010 | 59.932 |
+| test | retrieval_main | 0.240 | 0.125326 | 0.074687 | 0.000 | 0.132 | 0.218 | 0.998 | 0.002 | 0.010 | 0.010 | 32.340 |

@@ -1,0 +1,44 @@
+{
+  "model_name": "rgcn",
+  "config": {
+    "model_name": "rgcn",
+    "seed": 2025,
+    "dim": 128,
+    "epochs": 40,
+    "lr": 0.001,
+    "weight_decay": 1e-05,
+    "top_k": 20,
+    "gold_injection": false,
+    "candidate_universe": "drug_only",
+    "candidate_universe_size": 1801,
+    "num_entities": 17742,
+    "num_relations": 4,
+    "num_train_triples": 136351,
+    "num_train_indication_pairs": 8388,
+    "train_rows_path": "dataset/setting_a/29_n2_e2e_infer_ready/backbone_raw/train.json",
+    "enriched_kg_path": "dataset/setting_a/02_graph/train_enriched_deg1000_final.tsv",
+    "elapsed_seconds": 0.5685410499572754
+  },
+  "valid_summary": {
+    "split": "valid",
+    "model_name": "rgcn",
+    "num_rows": 500,
+    "candidate_size_min": 20,
+    "candidate_size_max": 20,
+    "gold_present_at20_raw": 0.162,
+    "gold_rank_21_count": 419,
+    "avg_gold_rank_absent_as_21": 18.59,
+    "output_path": "results/week21/baseline_outputs/rgcn/valid_top20.json"
+  },
+  "test_summary": {
+    "split": "test",
+    "model_name": "rgcn",
+    "num_rows": 500,
+    "candidate_size_min": 20,
+    "candidate_size_max": 20,
+    "gold_present_at20_raw": 0.22,
+    "gold_rank_21_count": 390,
+    "avg_gold_rank_absent_as_21": 17.854,
+    "output_path": "results/week21/baseline_outputs/rgcn/test_top20.json"
+  }
+}

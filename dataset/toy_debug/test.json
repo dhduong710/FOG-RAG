@@ -1,0 +1,29 @@
+[
+  {
+    "input": "You are a biomedical scientist. The task is to predict the answer based on the given question, and you only need to answer one entity. The answer must be in ('Losartan', 'Metformin', 'Lisinopril').\nYou can refer to the entity embeddings: 'Type 2 Diabetes': [QUERY], 'Losartan': [ENTITY], 'Metformin': [ENTITY], 'Lisinopril': [ENTITY].\n\nQuestion: What drug can be used to treat type 2 diabetes?\nAnswer: ",
+    "output": "Metformin",
+    "query_entity_id": 11,
+    "rank_entities_id": [
+      1,
+      2,
+      4
+    ],
+    "subgraph": [
+      [
+        2,
+        3,
+        22
+      ],
+      [
+        22,
+        1,
+        11
+      ],
+      [
+        4,
+        2,
+        11
+      ]
+    ]
+  }
+]

@@ -1,0 +1,128 @@
+{
+  "week": 22,
+  "day": 4,
+  "decision": "SPLIT_GRAPH_READY",
+  "dataset": "PharmKG-8k",
+  "setting": "setting_c_pharmkg",
+  "task": {
+    "task_template": "(?, T, disease)",
+    "target_relation_raw": "T",
+    "target_relation_normalized": "therapeutic_association_proxy",
+    "prediction_type": "predicted_head",
+    "missing_entity_type": "Drug_or_Chemical",
+    "query_entity_type": "Disease",
+    "candidate_universe": "drug_only_from_train_T_heads",
+    "query_universe": "disease_only_from_train_T_tails",
+    "gold_injection": false
+  },
+  "raw_target_counts": {
+    "train": 33411,
+    "valid": 4082,
+    "test": 4177
+  },
+  "filtering": {
+    "valid": {
+      "before_filter": 4082,
+      "after_coverage_filter": 4058,
+      "coverage_removed": 24,
+      "after_remove_train_overlap": 3173,
+      "train_overlap_removed": 885,
+      "after_remove_extra_forbidden": 3173,
+      "extra_forbidden_removed": 0,
+      "after_dedup": 3141,
+      "duplicate_removed": 32,
+      "num_unique_heads_after_filter": 915,
+      "num_unique_tails_after_filter": 562
+    },
+    "test": {
+      "before_filter": 4177,
+      "after_coverage_filter": 4157,
+      "coverage_removed": 20,
+      "after_remove_train_overlap": 3235,
+      "train_overlap_removed": 922,
+      "after_remove_extra_forbidden": 3227,
+      "extra_forbidden_removed": 8,
+      "after_dedup": 3200,
+      "duplicate_removed": 27,
+      "num_unique_heads_after_filter": 904,
+      "num_unique_tails_after_filter": 583
+    }
+  },
+  "sampling": {
+    "valid": {
+      "split": "valid",
+      "requested_n": 500,
+      "available_after_filter": 3141,
+      "final_n": 500,
+      "mode": "sampled_fixed_n",
+      "seed": 2025
+    },
+    "test": {
+      "split": "test",
+      "requested_n": 500,
+      "available_after_filter": 3200,
+      "final_n": 500,
+      "mode": "sampled_fixed_n",
+      "seed": 2026
+    }
+  },
+  "final_split_sizes": {
+    "train": 28960,
+    "valid": 500,
+    "test": 500
+  },
+  "entity_relation_counts": {
+    "num_entities": 7247,
+    "num_relations": 28,
+    "num_candidate_drugs": 1342,
+    "num_query_diseases": 803,
+    "train_enriched_triples": 386768,
+    "train_enriched_relation_counts": {
+      "GG": 66774,
+      "Rg": 35103,
+      "E": 31741,
+      "ML": 31529,
+      "Ra": 30540,
+      "T": 28960,
+      "P": 26472,
+      "Q": 26070,
+      "CC": 25658,
+      "B": 15259,
+      "I": 14247,
+      "U": 12281,
+      "Sa": 10843,
+      "Pr": 4949,
+      "Te": 4870,
+      "Iw": 4809,
+      "N": 3281,
+      "X": 2783,
+      "J": 2567,
+      "K": 2157,
+      "D": 1934,
+      "C": 1713,
+      "O": 688,
+      "An": 443,
+      "Z": 384,
+      "Mp": 362,
+      "A": 323,
+      "As": 28
+    }
+  },
+  "leak_check_decision": "PASS",
+  "files": {
+    "train_json": "dataset/setting_c_pharmkg/02_splits/train.json",
+    "valid_json": "dataset/setting_c_pharmkg/02_splits/valid.json",
+    "test_json": "dataset/setting_c_pharmkg/02_splits/test.json",
+    "train_target_tsv": "dataset/setting_c_pharmkg/02_splits/train_target.tsv",
+    "valid_target_tsv": "dataset/setting_c_pharmkg/02_splits/valid_target.tsv",
+    "test_target_tsv": "dataset/setting_c_pharmkg/02_splits/test_target.tsv",
+    "candidate_universe": "dataset/setting_c_pharmkg/02_splits/candidate_universe.json",
+    "query_universe": "dataset/setting_c_pharmkg/02_splits/query_universe.json",
+    "entity2id": "dataset/setting_c_pharmkg/03_graph/entity2id.json",
+    "id2entity": "dataset/setting_c_pharmkg/03_graph/id2entity.json",
+    "relation2id": "dataset/setting_c_pharmkg/03_graph/relation2id.json",
+    "id2relation": "dataset/setting_c_pharmkg/03_graph/id2relation.json",
+    "type_map": "dataset/setting_c_pharmkg/03_graph/type_map.json",
+    "train_enriched_tsv": "dataset/setting_c_pharmkg/03_graph/train_enriched.tsv"
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "week": 22,
+  "day": 1,
+  "created_at_utc": "2026-04-29T12:03:07.130625+00:00",
+  "decision": "DATASET2_PROTOCOL_FROZEN_RELATION_PENDING",
+  "dataset_2_name": "PharmKG candidate",
+  "dataset_2_setting_name": "setting_c_pharmkg",
+  "paper_role": {
+    "purpose": "test_transferability_of_FOG_RAG_pipeline",
+    "not_purpose": [
+      "introduce_a_new_metric",
+      "replace_PrimeKG_Setting_A_main_claim",
+      "use_gold_injection",
+      "run_full_FOG_RAG_stage_A_B_C_before_dataset_is_clean"
+    ],
+    "paper_framing": "Dataset 2 is evaluated under the same top-20 no-injection reviewer-safe protocol as Setting A. The purpose is to test transferability of the FOG-RAG pipeline, not to introduce a different KGC metric."
+  },
+  "task_template": {
+    "incomplete_triple": "(?, therapeutic_relation_candidate, disease)",
+    "missing_entity_type": "drug",
+    "query_entity_type": "disease",
+    "candidate_universe": "drug_only",
+    "target_relation_status": "unresolved_until_day3",
+    "target_relation_placeholder": "therapeutic_relation_candidate",
+    "allowed_normalized_target_relation_names": [
+      "indication",
+      "treatment",
+      "therapeutic_association",
+      "therapeutic_association_proxy"
+    ],
+    "relation_warning": "Do not call the selected PharmKG relation 'clinical indication' unless Day 3 schema inspection confirms that semantics."
+  },
+  "candidate_protocol": {
+    "top_k": 20,
+    "gold_injection": false,
+    "gold_injection_policy": "forbidden",
+    "candidate_universe": "drug_only",
+    "candidate_source_day1_status": "not_selected_yet",
+    "main_fograg_source_preference": "DrKGC-compatible structure source such as R-GCN or HRGAT; stronger sources such as ComplEx can be recorded as optional future/appendix branch if they outperform the DrKGC-compatible source."
+  },
+  "reviewer_safe_metric_policy": {
+    "main_metric": "reviewer_safe_mrr_at20",
+    "rank_absent_sentinel": 21,
+    "rr_policy": "RR = 1/rank if gold is present and rank <= 20 else 0",
+    "rr_absent_policy": 0.0,
+    "do_not_use": [
+      "1/21 reciprocal rank for absent gold",
+      "classical full-ranking filtered KGC metric name",
+      "gold-injected candidate evaluation as main claim"
+    ],
+    "reported_metrics": [
+      "gold_present_at20",
+      "mrr_at20",
+      "hits1_at20",
+      "hits3_at20",
+      "hits10_at20",
+      "hits20_at20",
+      "avg_gold_rank_absent_as_21",
+      "gold_rank_21_count",
+      "candidate_universe_size",
+      "unique_top1_count",
+      "top1_dominance"
+    ]
+  },
+  "split_policy_later_days": {
+    "seed": 2025,
+    "preferred_valid_size": 500,
+    "preferred_test_size": 500,
+    "fallback_if_small_dataset": "valid/test = 10%/10%",
+    "coverage_rule": [
+      "valid/test gold drugs must appear in train",
+      "valid/test query diseases must appear in train"
+    ],
+    "leak_policy": [
+      "no exact valid positive triple in train",
+      "no exact test positive triple in train",
+      "no duplicate positive triples across train/valid/test",
+      "no valid/test target triples included in train_enriched.tsv"
+    ]
+  },
+  "day1_checks_expected": {
+    "candidate_universe_is_drug_only": true,
+    "top_k_is_20": true,
+    "gold_injection_forbidden": true,
+    "absent_rank_sentinel_is_21": true,
+    "rr_absent_policy_is_zero": true,
+    "target_relation_not_selected_yet": true
+  }
+}

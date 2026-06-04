@@ -1,0 +1,67 @@
+{
+  "decision": "PHARMKG_VALID_DECODING_SWEEP_CONFIGS_READY",
+  "dataset": "PharmKG therapeutic_association_proxy task",
+  "selection_split": "valid",
+  "selection_row": "fuzzy_retrieval_main",
+  "graph_num_rels": 28,
+  "top1_copy_collapse_threshold": 0.9,
+  "selection_rule": [
+    "maximize fuzzy_retrieval_main valid reviewer_safe_mrr_at20",
+    "avoid top1-copy collapse if possible",
+    "then minimize invalid_prediction_rate",
+    "then maximize pred_in_candidate_rate",
+    "then minimize candidate_list_fragment_rate",
+    "then minimize top1_copy_rate",
+    "then maximize average valid MRR across rows"
+  ],
+  "configs": [
+    {
+      "config_id": "cfg01_mnt16_rp100_ng0",
+      "max_new_tokens": 16,
+      "repetition_penalty": 1.0,
+      "no_repeat_ngram_size": 0
+    },
+    {
+      "config_id": "cfg02_mnt16_rp105_ng0",
+      "max_new_tokens": 16,
+      "repetition_penalty": 1.05,
+      "no_repeat_ngram_size": 0
+    },
+    {
+      "config_id": "cfg03_mnt16_rp110_ng0",
+      "max_new_tokens": 16,
+      "repetition_penalty": 1.1,
+      "no_repeat_ngram_size": 0
+    },
+    {
+      "config_id": "cfg04_mnt16_rp110_ng3",
+      "max_new_tokens": 16,
+      "repetition_penalty": 1.1,
+      "no_repeat_ngram_size": 3
+    },
+    {
+      "config_id": "cfg05_mnt24_rp100_ng0",
+      "max_new_tokens": 24,
+      "repetition_penalty": 1.0,
+      "no_repeat_ngram_size": 0
+    },
+    {
+      "config_id": "cfg06_mnt24_rp105_ng0",
+      "max_new_tokens": 24,
+      "repetition_penalty": 1.05,
+      "no_repeat_ngram_size": 0
+    },
+    {
+      "config_id": "cfg07_mnt24_rp110_ng0",
+      "max_new_tokens": 24,
+      "repetition_penalty": 1.1,
+      "no_repeat_ngram_size": 0
+    },
+    {
+      "config_id": "cfg08_mnt24_rp110_ng3",
+      "max_new_tokens": 24,
+      "repetition_penalty": 1.1,
+      "no_repeat_ngram_size": 3
+    }
+  ]
+}

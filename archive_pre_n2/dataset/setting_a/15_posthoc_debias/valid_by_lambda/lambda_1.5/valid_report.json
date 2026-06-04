@@ -1,0 +1,96 @@
+{
+  "split": "valid",
+  "num_queries": 500,
+  "k": 20,
+  "recall_at_k_raw": 0.164,
+  "top1_hit_ratio_raw": 0.006,
+  "inject_count_ready": 418,
+  "inject_ratio_ready": 0.836,
+  "rank_distribution_raw_top50": {
+    "3": 4,
+    "50": 3,
+    "10": 4,
+    "14": 3,
+    "5": 6,
+    "17": 4,
+    "2": 9,
+    "21": 4,
+    "7": 9,
+    "42": 1,
+    "41": 2,
+    "8": 6,
+    "6": 8,
+    "35": 2,
+    "30": 4,
+    "34": 2,
+    "4": 10,
+    "1": 3,
+    "23": 4,
+    "38": 4,
+    "32": 3,
+    "9": 5,
+    "13": 2,
+    "15": 2,
+    "29": 1,
+    "18": 2,
+    "45": 2,
+    "48": 3,
+    "24": 1,
+    "19": 3,
+    "31": 1,
+    "40": 1,
+    "33": 1,
+    "22": 3,
+    "12": 1,
+    "27": 2,
+    "28": 1,
+    "25": 1,
+    "44": 1,
+    "11": 1,
+    "26": 1
+  },
+  "unique_top1_count_raw": 16,
+  "top1_dominance_ratio_raw": 0.406,
+  "top1_frequency_raw_top10": [
+    {
+      "drug": "Hydrocortisone",
+      "count": 203
+    },
+    {
+      "drug": "Oxytetracycline",
+      "count": 112
+    },
+    {
+      "drug": "Dexamethasone",
+      "count": 60
+    },
+    {
+      "drug": "Triamcinolone",
+      "count": 55
+    },
+    {
+      "drug": "Cortisone acetate",
+      "count": 25
+    },
+    {
+      "drug": "Methdilazine",
+      "count": 14
+    },
+    {
+      "drug": "Betamethasone",
+      "count": 14
+    },
+    {
+      "drug": "Tobramycin",
+      "count": 4
+    },
+    {
+      "drug": "Oxiconazole",
+      "count": 3
+    },
+    {
+      "drug": "Propranolol",
+      "count": 2
+    }
+  ]
+}

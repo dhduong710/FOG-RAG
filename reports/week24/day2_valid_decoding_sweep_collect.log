@@ -1,0 +1,25 @@
+[DONE] valid decoding sweep metrics collected
+summary = /home/anhlq/Documents/2026-dhd/FOG-RAG/results/week24/decoding_sweep_valid/decoding_sweep_summary.json
+best_config = /home/anhlq/Documents/2026-dhd/FOG-RAG/results/week24/decoding_sweep_valid/decoding_sweep_best_config.json
+report = /home/anhlq/Documents/2026-dhd/FOG-RAG/reports/week24/day2_valid_decoding_sweep.md
+
+Best config:
+{
+  "config_id": "cfg01_mnt16_rp100_ng0",
+  "max_new_tokens": 16,
+  "repetition_penalty": 1.0,
+  "no_repeat_ngram_size": 0,
+  "retrieval_main_valid_mrr": 0.05851818,
+  "retrieval_main_invalid": 0.008,
+  "retrieval_main_pred_in_candidate": 0.992,
+  "avg_valid_mrr_all_rows": 0.05552675,
+  "avg_invalid_all_rows": 0.02333333,
+  "avg_pred_in_candidate_all_rows": 0.97666667
+}
+
+Top configs:
+1 cfg01_mnt16_rp100_ng0 retr_mrr= 0.05851818 retr_invalid= 0.008 retr_pred_in_cand= 0.992 avg_mrr= 0.05552675
+2 cfg02_mnt16_rp105_ng0 retr_mrr= 0.05851818 retr_invalid= 0.008 retr_pred_in_cand= 0.992 avg_mrr= 0.05552675
+3 cfg03_mnt16_rp110_ng0 retr_mrr= 0.05851818 retr_invalid= 0.008 retr_pred_in_cand= 0.992 avg_mrr= 0.05552675
+4 cfg04_mnt16_rp110_ng3 retr_mrr= 0.05851818 retr_invalid= 0.008 retr_pred_in_cand= 0.992 avg_mrr= 0.05552675
+5 cfg05_mnt24_rp100_ng0 retr_mrr= 0.05851818 retr_invalid= 0.008 retr_pred_in_cand= 0.992 avg_mrr= 0.05552675
