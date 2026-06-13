@@ -1436,6 +1436,690 @@
 │   │           ├── test.json
 │   │           ├── train.json
 │   │           └── valid.json
+│   ├── setting_d_hetionet
+│   │   ├── 00_raw_inventory
+│   │   │   ├── extracted
+│   │   │   │   └── dhimmel-hetionet-4933ca1
+│   │   │   │       ├── describe
+│   │   │   │       │   ├── degree
+│   │   │   │       │   │   ├── degrees.pdf
+│   │   │   │       │   │   └── degrees.xlsx
+│   │   │   │       │   ├── edges
+│   │   │   │       │   │   ├── metaedges.tsv
+│   │   │   │       │   │   └── metaedge-styles.tsv
+│   │   │   │       │   └── nodes
+│   │   │   │       │       └── metanodes.tsv
+│   │   │   │       ├── hetnet
+│   │   │   │       │   ├── json
+│   │   │   │       │   │   ├── hetionet-v1.0.json.bz2
+│   │   │   │       │   │   ├── hetionet-v1.0-metagraph.json
+│   │   │   │       │   │   └── README.md
+│   │   │   │       │   ├── neo4j
+│   │   │   │       │   │   ├── docker
+│   │   │   │       │   │   │   ├── Dockerfile
+│   │   │   │       │   │   │   ├── files
+│   │   │   │       │   │   │   │   ├── neo4j.conf
+│   │   │   │       │   │   │   │   ├── neo4j-guide-extension-3.0.1.jar
+│   │   │   │       │   │   │   │   └── piwik.html
+│   │   │   │       │   │   │   ├── guides
+│   │   │   │       │   │   │   │   ├── convert.sh
+│   │   │   │       │   │   │   │   ├── graphstyle.grass
+│   │   │   │       │   │   │   │   ├── hetionet.adoc
+│   │   │   │       │   │   │   │   └── hetionet.html
+│   │   │   │       │   │   │   ├── host
+│   │   │   │       │   │   │   │   ├── README.md
+│   │   │   │       │   │   │   │   ├── run-docker.sh
+│   │   │   │       │   │   │   │   ├── ssl
+│   │   │   │       │   │   │   │   │   ├── install.sh
+│   │   │   │       │   │   │   │   │   └── renew.sh
+│   │   │   │       │   │   │   │   ├── stop-docker.sh
+│   │   │   │       │   │   │   │   └── update-docker.sh
+│   │   │   │       │   │   │   ├── README.md
+│   │   │   │       │   │   │   └── scripts
+│   │   │   │       │   │   │       ├── get_data_run_neo4j.sh
+│   │   │   │       │   │   │       └── get_data.sh
+│   │   │   │       │   │   ├── labels.tsv
+│   │   │   │       │   │   ├── README.md
+│   │   │   │       │   │   └── types.tsv
+│   │   │   │       │   ├── permuted
+│   │   │   │       │   │   ├── json
+│   │   │   │       │   │   │   ├── hetionet-v1.0-perm-1.json.bz2
+│   │   │   │       │   │   │   ├── hetionet-v1.0-perm-2.json.bz2
+│   │   │   │       │   │   │   ├── hetionet-v1.0-perm-3.json.bz2
+│   │   │   │       │   │   │   ├── hetionet-v1.0-perm-4.json.bz2
+│   │   │   │       │   │   │   └── hetionet-v1.0-perm-5.json.bz2
+│   │   │   │       │   │   └── neo4j
+│   │   │   │       │   │       └── README.md
+│   │   │   │       │   └── tsv
+│   │   │   │       │       ├── hetionet-v1.0-edges.sif.gz
+│   │   │   │       │       ├── hetionet-v1.0-nodes.tsv
+│   │   │   │       │       └── README.md
+│   │   │   │       ├── import.ipynb
+│   │   │   │       └── README.md
+│   │   │   ├── hetionet_task_candidate_summary.json
+│   │   │   └── raw_inventory.json
+│   │   ├── 01_task_spec
+│   │   │   └── task_spec_draft.json
+│   │   ├── 02_splits
+│   │   │   ├── candidate_universe_compound.json
+│   │   │   ├── query_universe_disease.json
+│   │   │   ├── split_summary.json
+│   │   │   ├── test_node_ids.tsv
+│   │   │   ├── test_target_rows.json
+│   │   │   ├── test.tsv
+│   │   │   ├── train_node_ids.tsv
+│   │   │   ├── train_target_rows.json
+│   │   │   ├── train.tsv
+│   │   │   ├── valid_node_ids.tsv
+│   │   │   ├── valid_target_rows.json
+│   │   │   └── valid.tsv
+│   │   ├── 03_graph
+│   │   │   ├── entity2id.json
+│   │   │   ├── entity2id.pkl
+│   │   │   ├── graph_summary.json
+│   │   │   ├── id2entity.json
+│   │   │   ├── id2entity.pkl
+│   │   │   ├── id2relation.json
+│   │   │   ├── id2relation.pkl
+│   │   │   ├── leak_check.json
+│   │   │   ├── node_metadata.json
+│   │   │   ├── relation2id.json
+│   │   │   ├── relation2id.pkl
+│   │   │   ├── train_enriched_ids.tsv
+│   │   │   ├── train_enriched.tsv
+│   │   │   └── type_map.json
+│   │   ├── 04_baseline_outputs
+│   │   │   ├── complex
+│   │   │   │   ├── config.json
+│   │   │   │   ├── summary.json
+│   │   │   │   ├── test_top20.json
+│   │   │   │   └── valid_top20.json
+│   │   │   ├── distmult
+│   │   │   │   ├── config.json
+│   │   │   │   ├── summary.json
+│   │   │   │   ├── test_top20.json
+│   │   │   │   └── valid_top20.json
+│   │   │   ├── hrgat
+│   │   │   │   ├── config_v2.json
+│   │   │   │   ├── entity_embeddings_hrgat.pt
+│   │   │   │   ├── model_state.pt
+│   │   │   │   ├── summary.json
+│   │   │   │   ├── test_top20.json
+│   │   │   │   ├── train_log_v2.json
+│   │   │   │   └── valid_top20.json
+│   │   │   ├── rgcn
+│   │   │   │   ├── config.json
+│   │   │   │   ├── config_v2.json
+│   │   │   │   ├── entity_embeddings_rgcn.pt
+│   │   │   │   ├── model_state.pt
+│   │   │   │   ├── summary.json
+│   │   │   │   ├── test_top20.json
+│   │   │   │   ├── train_log.json
+│   │   │   │   ├── train_log_v2.json
+│   │   │   │   └── valid_top20.json
+│   │   │   ├── rotate
+│   │   │   │   ├── config.json
+│   │   │   │   ├── summary.json
+│   │   │   │   ├── test_top20.json
+│   │   │   │   └── valid_top20.json
+│   │   │   └── transe
+│   │   │       ├── config.json
+│   │   │       ├── summary.json
+│   │   │       ├── test_top20.json
+│   │   │       └── valid_top20.json
+│   │   ├── 05_backbone_raw_source
+│   │   │   ├── source_manifest.json
+│   │   │   ├── test_top20_raw.json
+│   │   │   ├── train_top20_raw.json
+│   │   │   └── valid_top20_raw.json
+│   │   ├── 06_fograg_ready
+│   │   │   ├── entity2id.json
+│   │   │   ├── entity2id.pkl
+│   │   │   ├── entity_embeddings_rgcn.pt
+│   │   │   ├── graph_summary.json
+│   │   │   ├── id2entity.json
+│   │   │   ├── id2entity.pkl
+│   │   │   ├── id2relation.json
+│   │   │   ├── id2relation.pkl
+│   │   │   ├── leak_check.json
+│   │   │   ├── prep_manifest.json
+│   │   │   ├── prompt_lexicon.json
+│   │   │   ├── relation2id.json
+│   │   │   ├── relation2id.pkl
+│   │   │   ├── rules.json
+│   │   │   ├── support_schema.json
+│   │   │   ├── test.json
+│   │   │   ├── train.json
+│   │   │   ├── type_map.json
+│   │   │   └── valid.json
+│   │   ├── 07_support_features
+│   │   │   ├── test_support_features.json
+│   │   │   ├── train_support_features.json
+│   │   │   └── valid_support_features.json
+│   │   ├── 08_soft_support
+│   │   │   ├── soft_support_manifest.json
+│   │   │   ├── test_top20_soft_support_main.json
+│   │   │   ├── train_top20_soft_support_main.json
+│   │   │   └── valid_top20_soft_support_main.json
+│   │   ├── 09_e2e_soft_support_ready
+│   │   │   ├── entity2id.json
+│   │   │   ├── entity2id.pkl
+│   │   │   ├── entity_embeddings_rgcn.pt
+│   │   │   ├── graph_summary.json
+│   │   │   ├── id2entity.json
+│   │   │   ├── id2entity.pkl
+│   │   │   ├── id2relation.json
+│   │   │   ├── id2relation.pkl
+│   │   │   ├── leak_check.json
+│   │   │   ├── prep_manifest.json
+│   │   │   ├── prompt_lexicon.json
+│   │   │   ├── relation2id.json
+│   │   │   ├── relation2id.pkl
+│   │   │   ├── rules.json
+│   │   │   ├── support_schema.json
+│   │   │   ├── test.json
+│   │   │   ├── train.json
+│   │   │   ├── type_map.json
+│   │   │   └── valid.json
+│   │   ├── 10_fuzzy_retrieval
+│   │   │   ├── fuzzy_retrieval_manifest.json
+│   │   │   ├── test_fuzzy_retrieval_main.json
+│   │   │   ├── train_fuzzy_retrieval_main.json
+│   │   │   └── valid_fuzzy_retrieval_main.json
+│   │   └── 11_e2e_fuzzy_retrieval_ready
+│   │       ├── entity2id.json
+│   │       ├── entity2id.pkl
+│   │       ├── entity_embeddings_rgcn.pt
+│   │       ├── graph_summary.json
+│   │       ├── id2entity.json
+│   │       ├── id2entity.pkl
+│   │       ├── id2relation.json
+│   │       ├── id2relation.pkl
+│   │       ├── leak_check.json
+│   │       ├── prep_manifest.json
+│   │       ├── prompt_lexicon.json
+│   │       ├── relation2id.json
+│   │       ├── relation2id.pkl
+│   │       ├── rules.json
+│   │       ├── support_schema.json
+│   │       ├── test.json
+│   │       ├── train.json
+│   │       ├── type_map.json
+│   │       └── valid.json
+│   ├── setting_e_drkg
+│   │   ├── 00_raw_inventory
+│   │   │   ├── compound_disease_relation_candidates.json
+│   │   │   ├── drkg.tar.gz
+│   │   │   ├── entity_pair_counts.json
+│   │   │   ├── entity_type_counts.json
+│   │   │   ├── extracted
+│   │   │   │   ├── drkg.tsv
+│   │   │   │   ├── embed
+│   │   │   │   │   ├── DRKG_TransE_l2_entity.npy
+│   │   │   │   │   ├── DRKG_TransE_l2_relation.npy
+│   │   │   │   │   ├── entities.tsv
+│   │   │   │   │   ├── mol_contextpred.npy
+│   │   │   │   │   ├── mol_edgepred.npy
+│   │   │   │   │   ├── mol_infomax.npy
+│   │   │   │   │   ├── mol_masking.npy
+│   │   │   │   │   ├── Readme.md
+│   │   │   │   │   └── relations.tsv
+│   │   │   │   ├── entity2src.tsv
+│   │   │   │   └── relation_glossary.tsv
+│   │   │   ├── raw_file_manifest.json
+│   │   │   ├── raw_inventory.json
+│   │   │   └── relation_counts.json
+│   │   ├── 01_task_spec
+│   │   │   ├── protocol_freeze.json
+│   │   │   ├── target_edges_unique.tsv
+│   │   │   ├── target_relation_feasibility.json
+│   │   │   ├── target_relation_samples.json
+│   │   │   ├── task_schema_candidates_day1.json
+│   │   │   └── task_spec.json
+│   │   ├── 02_splits
+│   │   │   ├── candidate_universe_compound.json
+│   │   │   ├── query_universe_disease.json
+│   │   │   ├── split_summary.json
+│   │   │   ├── test_target_rows.json
+│   │   │   ├── test.tsv
+│   │   │   ├── train_target_rows.json
+│   │   │   ├── train.tsv
+│   │   │   ├── valid_target_rows.json
+│   │   │   └── valid.tsv
+│   │   ├── 03_graph
+│   │   │   ├── entity2id.json
+│   │   │   ├── entity2id.pkl
+│   │   │   ├── graph_summary.json
+│   │   │   ├── id2entity.json
+│   │   │   ├── id2entity.pkl
+│   │   │   ├── id2relation.json
+│   │   │   ├── id2relation.pkl
+│   │   │   ├── leak_check.json
+│   │   │   ├── relation2id.json
+│   │   │   ├── relation2id.pkl
+│   │   │   ├── train_enriched_ids.tsv
+│   │   │   ├── train_enriched.tsv
+│   │   │   └── type_map.json
+│   │   ├── 04_baseline_outputs
+│   │   │   ├── complex
+│   │   │   │   ├── config.json
+│   │   │   │   ├── summary.json
+│   │   │   │   ├── test_top20.json
+│   │   │   │   └── valid_top20.json
+│   │   │   ├── distmult
+│   │   │   │   ├── config.json
+│   │   │   │   ├── summary.json
+│   │   │   │   ├── test_top20.json
+│   │   │   │   └── valid_top20.json
+│   │   │   ├── hrgat
+│   │   │   │   ├── config_v2.json
+│   │   │   │   ├── entity_embeddings_hrgat.pt
+│   │   │   │   ├── model_state.pt
+│   │   │   │   ├── summary.json
+│   │   │   │   ├── test_top20.json
+│   │   │   │   ├── train_log_v2.json
+│   │   │   │   └── valid_top20.json
+│   │   │   ├── rgcn
+│   │   │   │   ├── config_v2.json
+│   │   │   │   ├── entity_embeddings_rgcn.pt
+│   │   │   │   ├── model_state.pt
+│   │   │   │   ├── summary.json
+│   │   │   │   ├── test_top20.json
+│   │   │   │   ├── train_log_v2.json
+│   │   │   │   └── valid_top20.json
+│   │   │   ├── rotate
+│   │   │   │   ├── config.json
+│   │   │   │   ├── summary.json
+│   │   │   │   ├── test_top20.json
+│   │   │   │   └── valid_top20.json
+│   │   │   └── transe
+│   │   │       ├── config.json
+│   │   │       ├── summary.json
+│   │   │       ├── test_top20.json
+│   │   │       └── valid_top20.json
+│   │   ├── 05_backbone_raw_source
+│   │   │   ├── distmult
+│   │   │   │   ├── source_manifest.json
+│   │   │   │   ├── test_top20_raw.json
+│   │   │   │   ├── train_top20_raw.json
+│   │   │   │   └── valid_top20_raw.json
+│   │   │   └── rgcn
+│   │   │       ├── source_manifest.json
+│   │   │       ├── test_top20_raw.json
+│   │   │       ├── train_top20_raw.json
+│   │   │       └── valid_top20_raw.json
+│   │   ├── 06_fograg_ready
+│   │   │   ├── distmult
+│   │   │   │   ├── entity2id.json
+│   │   │   │   ├── entity2id.pkl
+│   │   │   │   ├── entity_embeddings_rgcn.pt
+│   │   │   │   ├── graph_summary.json
+│   │   │   │   ├── id2entity.json
+│   │   │   │   ├── id2entity.pkl
+│   │   │   │   ├── id2relation.json
+│   │   │   │   ├── id2relation.pkl
+│   │   │   │   ├── leak_check.json
+│   │   │   │   ├── prep_manifest.json
+│   │   │   │   ├── prompt_lexicon.json
+│   │   │   │   ├── relation2id.json
+│   │   │   │   ├── relation2id.pkl
+│   │   │   │   ├── rules.json
+│   │   │   │   ├── support_schema.json
+│   │   │   │   ├── test.json
+│   │   │   │   ├── train.json
+│   │   │   │   ├── type_map.json
+│   │   │   │   └── valid.json
+│   │   │   └── rgcn
+│   │   │       ├── entity2id.json
+│   │   │       ├── entity2id.pkl
+│   │   │       ├── entity_embeddings_rgcn.pt
+│   │   │       ├── graph_summary.json
+│   │   │       ├── id2entity.json
+│   │   │       ├── id2entity.pkl
+│   │   │       ├── id2relation.json
+│   │   │       ├── id2relation.pkl
+│   │   │       ├── leak_check.json
+│   │   │       ├── prep_manifest.json
+│   │   │       ├── prompt_lexicon.json
+│   │   │       ├── relation2id.json
+│   │   │       ├── relation2id.pkl
+│   │   │       ├── rules.json
+│   │   │       ├── support_schema.json
+│   │   │       ├── test.json
+│   │   │       ├── train.json
+│   │   │       ├── type_map.json
+│   │   │       └── valid.json
+│   │   ├── 07_support_features
+│   │   │   ├── distmult
+│   │   │   │   ├── test_support_features.json
+│   │   │   │   ├── train_support_features.json
+│   │   │   │   └── valid_support_features.json
+│   │   │   └── rgcn
+│   │   │       ├── test_support_features.json
+│   │   │       ├── train_support_features.json
+│   │   │       └── valid_support_features.json
+│   │   ├── 08_soft_support
+│   │   │   ├── distmult
+│   │   │   │   ├── soft_support_manifest.json
+│   │   │   │   ├── test_top20_soft_support_main.json
+│   │   │   │   ├── train_top20_soft_support_main.json
+│   │   │   │   └── valid_top20_soft_support_main.json
+│   │   │   ├── rgcn
+│   │   │   │   ├── soft_support_manifest.json
+│   │   │   │   ├── test_top20_soft_support_main.json
+│   │   │   │   ├── train_top20_soft_support_main.json
+│   │   │   │   └── valid_top20_soft_support_main.json
+│   │   │   └── rgcn_sweep_selected
+│   │   │       ├── test_top20_soft_support_main.json
+│   │   │       ├── train_top20_soft_support_main.json
+│   │   │       └── valid_top20_soft_support_main.json
+│   │   ├── 09_e2e_soft_support_ready
+│   │   │   ├── distmult
+│   │   │   │   ├── entity2id.json
+│   │   │   │   ├── entity2id.pkl
+│   │   │   │   ├── entity_embeddings_rgcn.pt
+│   │   │   │   ├── graph_summary.json
+│   │   │   │   ├── id2entity.json
+│   │   │   │   ├── id2entity.pkl
+│   │   │   │   ├── id2relation.json
+│   │   │   │   ├── id2relation.pkl
+│   │   │   │   ├── leak_check.json
+│   │   │   │   ├── prep_manifest.json
+│   │   │   │   ├── prompt_lexicon.json
+│   │   │   │   ├── relation2id.json
+│   │   │   │   ├── relation2id.pkl
+│   │   │   │   ├── rules.json
+│   │   │   │   ├── support_schema.json
+│   │   │   │   ├── test.json
+│   │   │   │   ├── train.json
+│   │   │   │   ├── type_map.json
+│   │   │   │   └── valid.json
+│   │   │   ├── rgcn
+│   │   │   │   ├── entity2id.json
+│   │   │   │   ├── entity2id.pkl
+│   │   │   │   ├── entity_embeddings_rgcn.pt
+│   │   │   │   ├── graph_summary.json
+│   │   │   │   ├── id2entity.json
+│   │   │   │   ├── id2entity.pkl
+│   │   │   │   ├── id2relation.json
+│   │   │   │   ├── id2relation.pkl
+│   │   │   │   ├── leak_check.json
+│   │   │   │   ├── prep_manifest.json
+│   │   │   │   ├── prompt_lexicon.json
+│   │   │   │   ├── relation2id.json
+│   │   │   │   ├── relation2id.pkl
+│   │   │   │   ├── rules.json
+│   │   │   │   ├── support_schema.json
+│   │   │   │   ├── test.json
+│   │   │   │   ├── train.json
+│   │   │   │   ├── type_map.json
+│   │   │   │   └── valid.json
+│   │   │   └── rgcn_sweep_selected
+│   │   │       ├── entity2id.json
+│   │   │       ├── entity2id.pkl
+│   │   │       ├── entity_embeddings_rgcn.pt
+│   │   │       ├── graph_summary.json
+│   │   │       ├── id2entity.json
+│   │   │       ├── id2entity.pkl
+│   │   │       ├── id2relation.json
+│   │   │       ├── id2relation.pkl
+│   │   │       ├── leak_check.json
+│   │   │       ├── prep_manifest.json
+│   │   │       ├── prompt_lexicon.json
+│   │   │       ├── relation2id.json
+│   │   │       ├── relation2id.pkl
+│   │   │       ├── rules.json
+│   │   │       ├── support_schema.json
+│   │   │       ├── test.json
+│   │   │       ├── train.json
+│   │   │       ├── type_map.json
+│   │   │       └── valid.json
+│   │   ├── 10_fuzzy_retrieval
+│   │   │   └── rgcn
+│   │   │       ├── fuzzy_retrieval_manifest.json
+│   │   │       ├── test_fuzzy_retrieval_main.json
+│   │   │       ├── train_fuzzy_retrieval_main.json
+│   │   │       └── valid_fuzzy_retrieval_main.json
+│   │   └── 11_e2e_fuzzy_retrieval_ready
+│   │       └── rgcn
+│   │           ├── entity2id.json
+│   │           ├── entity2id.pkl
+│   │           ├── entity_embeddings_rgcn.pt
+│   │           ├── graph_summary.json
+│   │           ├── id2entity.json
+│   │           ├── id2entity.pkl
+│   │           ├── id2relation.json
+│   │           ├── id2relation.pkl
+│   │           ├── leak_check.json
+│   │           ├── prep_manifest.json
+│   │           ├── prompt_lexicon.json
+│   │           ├── relation2id.json
+│   │           ├── relation2id.pkl
+│   │           ├── rules.json
+│   │           ├── support_schema.json
+│   │           ├── test.json
+│   │           ├── train.json
+│   │           ├── type_map.json
+│   │           └── valid.json
+│   ├── setting_f_repodb
+│   │   ├── 00_raw_inventory
+│   │   │   ├── best_table_probe.json
+│   │   │   ├── downloads
+│   │   │   │   └── shiny.RData
+│   │   │   ├── exported_tables
+│   │   │   │   └── pyreadr_drug.fr.tsv
+│   │   │   ├── manual
+│   │   │   ├── raw_file_manifest.json
+│   │   │   ├── raw_inventory_summary.json
+│   │   │   ├── repodb_best_table_raw.tsv
+│   │   │   └── table_inventory.json
+│   │   ├── 01_task_spec
+│   │   │   ├── approved_pairs_unique.json
+│   │   │   ├── approved_pairs_unique.tsv
+│   │   │   ├── conflict_pairs.json
+│   │   │   ├── conflict_pairs.tsv
+│   │   │   ├── failed_diagnostic_edges_unique.tsv
+│   │   │   ├── failed_pairs_unique.json
+│   │   │   ├── failed_pairs_unique.tsv
+│   │   │   ├── mapping_probe_drkg.json
+│   │   │   ├── normalization_summary.json
+│   │   │   ├── normalized_repodb_rows.json
+│   │   │   ├── normalized_repodb_rows.tsv
+│   │   │   ├── protocol_freeze.json
+│   │   │   ├── target_edges_unique.tsv
+│   │   │   ├── target_relation_feasibility.json
+│   │   │   └── task_spec.json
+│   │   ├── 02_splits
+│   │   │   ├── candidate_universe_compound.json
+│   │   │   ├── query_universe_disease.json
+│   │   │   ├── split_summary.json
+│   │   │   ├── test_target_rows.json
+│   │   │   ├── test.tsv
+│   │   │   ├── train_target_rows.json
+│   │   │   ├── train.tsv
+│   │   │   ├── valid_target_rows.json
+│   │   │   └── valid.tsv
+│   │   ├── 03_graph
+│   │   │   ├── entity2id.json
+│   │   │   ├── entity2id.pkl
+│   │   │   ├── graph_summary.json
+│   │   │   ├── id2entity.json
+│   │   │   ├── id2entity.pkl
+│   │   │   ├── id2relation.json
+│   │   │   ├── id2relation.pkl
+│   │   │   ├── leak_check.json
+│   │   │   ├── relation2id.json
+│   │   │   ├── relation2id.pkl
+│   │   │   ├── train_enriched_ids.tsv
+│   │   │   ├── train_enriched.tsv
+│   │   │   └── type_map.json
+│   │   ├── 04_baseline_outputs
+│   │   │   ├── complex
+│   │   │   │   ├── config.json
+│   │   │   │   ├── summary.json
+│   │   │   │   ├── test_top20.json
+│   │   │   │   └── valid_top20.json
+│   │   │   ├── distmult
+│   │   │   │   ├── config.json
+│   │   │   │   ├── summary.json
+│   │   │   │   ├── test_top20.json
+│   │   │   │   └── valid_top20.json
+│   │   │   ├── hrgat
+│   │   │   │   ├── config_v2.json
+│   │   │   │   ├── entity_embeddings_hrgat.pt
+│   │   │   │   ├── model_state.pt
+│   │   │   │   ├── summary.json
+│   │   │   │   ├── test_top20.json
+│   │   │   │   ├── train_log_v2.json
+│   │   │   │   └── valid_top20.json
+│   │   │   ├── rgcn
+│   │   │   │   ├── config_v2.json
+│   │   │   │   ├── entity_embeddings_rgcn.pt
+│   │   │   │   ├── model_state.pt
+│   │   │   │   ├── summary.json
+│   │   │   │   ├── test_top20.json
+│   │   │   │   ├── train_log_v2.json
+│   │   │   │   └── valid_top20.json
+│   │   │   ├── rotate
+│   │   │   │   ├── config.json
+│   │   │   │   ├── summary.json
+│   │   │   │   ├── test_top20.json
+│   │   │   │   └── valid_top20.json
+│   │   │   └── transe
+│   │   │       ├── config.json
+│   │   │       ├── summary.json
+│   │   │       ├── test_top20.json
+│   │   │       └── valid_top20.json
+│   │   ├── 05_backbone_raw_source
+│   │   │   ├── distmult
+│   │   │   │   ├── source_manifest.json
+│   │   │   │   ├── test_top20_raw.json
+│   │   │   │   ├── train_top20_raw.json
+│   │   │   │   └── valid_top20_raw.json
+│   │   │   └── rgcn
+│   │   │       ├── source_manifest.json
+│   │   │       ├── test_top20_raw.json
+│   │   │       ├── train_top20_raw.json
+│   │   │       └── valid_top20_raw.json
+│   │   ├── 06_fograg_ready
+│   │   │   ├── distmult
+│   │   │   │   ├── entity2id.json
+│   │   │   │   ├── entity2id.pkl
+│   │   │   │   ├── entity_embeddings_rgcn.pt
+│   │   │   │   ├── graph_summary.json
+│   │   │   │   ├── id2entity.json
+│   │   │   │   ├── id2entity.pkl
+│   │   │   │   ├── id2relation.json
+│   │   │   │   ├── id2relation.pkl
+│   │   │   │   ├── leak_check.json
+│   │   │   │   ├── prep_manifest.json
+│   │   │   │   ├── prompt_lexicon.json
+│   │   │   │   ├── relation2id.json
+│   │   │   │   ├── relation2id.pkl
+│   │   │   │   ├── rules.json
+│   │   │   │   ├── support_schema.json
+│   │   │   │   ├── test.json
+│   │   │   │   ├── train.json
+│   │   │   │   ├── type_map.json
+│   │   │   │   └── valid.json
+│   │   │   └── rgcn
+│   │   │       ├── entity2id.json
+│   │   │       ├── entity2id.pkl
+│   │   │       ├── entity_embeddings_rgcn.pt
+│   │   │       ├── graph_summary.json
+│   │   │       ├── id2entity.json
+│   │   │       ├── id2entity.pkl
+│   │   │       ├── id2relation.json
+│   │   │       ├── id2relation.pkl
+│   │   │       ├── leak_check.json
+│   │   │       ├── prep_manifest.json
+│   │   │       ├── prompt_lexicon.json
+│   │   │       ├── relation2id.json
+│   │   │       ├── relation2id.pkl
+│   │   │       ├── rules.json
+│   │   │       ├── support_schema.json
+│   │   │       ├── test.json
+│   │   │       ├── train.json
+│   │   │       ├── type_map.json
+│   │   │       └── valid.json
+│   │   ├── 07_support_features
+│   │   │   └── rgcn
+│   │   │       ├── test_support_features.json
+│   │   │       ├── train_support_features.json
+│   │   │       └── valid_support_features.json
+│   │   ├── 08_soft_support
+│   │   │   └── rgcn_sweep_selected
+│   │   │       ├── test_top20_soft_support_main.json
+│   │   │       ├── train_top20_soft_support_main.json
+│   │   │       └── valid_top20_soft_support_main.json
+│   │   ├── 09_e2e_soft_support_ready
+│   │   │   ├── rgcn_raw_display_control
+│   │   │   │   ├── entity2id.json
+│   │   │   │   ├── entity2id.pkl
+│   │   │   │   ├── entity_embeddings_rgcn.pt
+│   │   │   │   ├── graph_summary.json
+│   │   │   │   ├── id2entity.json
+│   │   │   │   ├── id2entity.pkl
+│   │   │   │   ├── id2relation.json
+│   │   │   │   ├── id2relation.pkl
+│   │   │   │   ├── leak_check.json
+│   │   │   │   ├── prep_manifest.json
+│   │   │   │   ├── prompt_lexicon.json
+│   │   │   │   ├── relation2id.json
+│   │   │   │   ├── relation2id.pkl
+│   │   │   │   ├── rules.json
+│   │   │   │   ├── support_schema.json
+│   │   │   │   ├── test.json
+│   │   │   │   ├── train.json
+│   │   │   │   ├── type_map.json
+│   │   │   │   └── valid.json
+│   │   │   └── rgcn_sweep_selected
+│   │   │       ├── entity2id.json
+│   │   │       ├── entity2id.pkl
+│   │   │       ├── entity_embeddings_rgcn.pt
+│   │   │       ├── graph_summary.json
+│   │   │       ├── id2entity.json
+│   │   │       ├── id2entity.pkl
+│   │   │       ├── id2relation.json
+│   │   │       ├── id2relation.pkl
+│   │   │       ├── leak_check.json
+│   │   │       ├── prep_manifest.json
+│   │   │       ├── prompt_lexicon.json
+│   │   │       ├── relation2id.json
+│   │   │       ├── relation2id.pkl
+│   │   │       ├── rules.json
+│   │   │       ├── support_schema.json
+│   │   │       ├── test.json
+│   │   │       ├── train.json
+│   │   │       ├── type_map.json
+│   │   │       └── valid.json
+│   │   ├── 10_fuzzy_retrieval
+│   │   │   └── rgcn
+│   │   │       ├── fuzzy_retrieval_manifest.json
+│   │   │       ├── test_fuzzy_retrieval_main.json
+│   │   │       ├── train_fuzzy_retrieval_main.json
+│   │   │       └── valid_fuzzy_retrieval_main.json
+│   │   └── 11_e2e_fuzzy_retrieval_ready
+│   │       └── rgcn
+│   │           ├── entity2id.json
+│   │           ├── entity2id.pkl
+│   │           ├── entity_embeddings_rgcn.pt
+│   │           ├── graph_summary.json
+│   │           ├── id2entity.json
+│   │           ├── id2entity.pkl
+│   │           ├── id2relation.json
+│   │           ├── id2relation.pkl
+│   │           ├── leak_check.json
+│   │           ├── prep_manifest.json
+│   │           ├── prompt_lexicon.json
+│   │           ├── relation2id.json
+│   │           ├── relation2id.pkl
+│   │           ├── rules.json
+│   │           ├── support_schema.json
+│   │           ├── test.json
+│   │           ├── train.json
+│   │           ├── type_map.json
+│   │           └── valid.json
 │   └── toy_debug
 │       ├── entity_embeddings.pt
 │       ├── entity_id_map.json
@@ -1451,6 +2135,78 @@
 │   ├── wn18rr_head_prediction.json
 │   └── wn18rr_tail_prediction.json
 ├── LICENSE
+├── logs
+│   ├── week26
+│   │   ├── day3_gnn_baselines.log
+│   │   ├── day3_gnn_hrgat.log
+│   │   ├── day3_gnn_rgcn.log
+│   │   ├── day3_hrgat_chunked_v2_dim64.log
+│   │   ├── day3_hrgat_chunked_v2.log
+│   │   ├── day3_kge_baselines.log
+│   │   ├── day3_rgcn_balanced_v2.log
+│   │   ├── day3_source_selection.log
+│   │   ├── day4_hetionet_fograg_ready.log
+│   │   ├── day5_hetionet_soft_support.log
+│   │   ├── day6_hetionet_fuzzy_retrieval.log
+│   │   ├── day7_collect_hetionet_e2e_metrics.log
+│   │   ├── day7_hetionet_e2e_all_rows.log
+│   │   ├── day7_infer_backbone_raw_test.log
+│   │   ├── day7_infer_backbone_raw_valid.log
+│   │   ├── day7_infer_fuzzy_retrieval_main_test.log
+│   │   ├── day7_infer_fuzzy_retrieval_main_valid.log
+│   │   ├── day7_infer_soft_support_raw_test.log
+│   │   ├── day7_infer_soft_support_raw_valid.log
+│   │   ├── day7_train_backbone_raw.log
+│   │   ├── day7_train_fuzzy_retrieval_main.log
+│   │   └── day7_train_soft_support_raw.log
+│   ├── week27
+│   │   ├── day1_drkg_inventory.log
+│   │   ├── day2_drkg_task_schema.log
+│   │   ├── day3_drkg_split_graph.log
+│   │   ├── day4_drkg_hrgat_baseline.log
+│   │   ├── day4_drkg_kge_baselines.log
+│   │   ├── day4_drkg_rgcn_baseline.log
+│   │   ├── day4_drkg_source_selection.log
+│   │   ├── day5_drkg_fograg_ready.log
+│   │   ├── day6b_drkg_soft_support_rgcn_sweep.log
+│   │   ├── day6_drkg_soft_support_distmult.log
+│   │   ├── day6_drkg_soft_support_rgcn.log
+│   │   ├── day7_drkg_fuzzy_retrieval_rgcn.log
+│   │   ├── day8_collect_drkg_e2e_metrics.log
+│   │   ├── day8_drkg_e2e_rgcn_all_rows.log
+│   │   ├── day8_infer_backbone_raw_test.log
+│   │   ├── day8_infer_backbone_raw_valid.log
+│   │   ├── day8_infer_fuzzy_retrieval_main_test.log
+│   │   ├── day8_infer_fuzzy_retrieval_main_valid.log
+│   │   ├── day8_infer_soft_support_sweep_test.log
+│   │   ├── day8_infer_soft_support_sweep_valid.log
+│   │   ├── day8_train_backbone_raw.log
+│   │   ├── day8_train_fuzzy_retrieval_main.log
+│   │   └── day8_train_soft_support_sweep.log
+│   └── week28
+│       ├── day1_repodb_inventory.log
+│       ├── day2_repodb_task_schema.log
+│       ├── day3_repodb_split_graph.log
+│       ├── day4_repodb_hrgat_baseline.log
+│       ├── day4_repodb_kge_baselines.log
+│       ├── day4_repodb_rgcn_baseline.log
+│       ├── day4_repodb_source_selection.log
+│       ├── day5_repodb_fograg_ready.log
+│       ├── day6c_repodb_rgcn_raw_display_control.log
+│       ├── day6_repodb_soft_support_rgcn_conservative.log
+│       ├── day6_repodb_soft_support_rgcn.log
+│       ├── day7_repodb_fuzzy_retrieval_rgcn.log
+│       ├── day8_collect_repodb_e2e_metrics.log
+│       ├── day8_infer_backbone_raw_test.log
+│       ├── day8_infer_backbone_raw_valid.log
+│       ├── day8_infer_fuzzy_retrieval_main_test.log
+│       ├── day8_infer_fuzzy_retrieval_main_valid.log
+│       ├── day8_infer_soft_support_sweep_test.log
+│       ├── day8_infer_soft_support_sweep_valid.log
+│       ├── day8_repodb_e2e_all_rows.log
+│       ├── day8_train_backbone_raw.log
+│       ├── day8_train_fuzzy_retrieval_main.log
+│       └── day8_train_soft_support_sweep.log
 ├── main.py
 ├── main.py.bak_before_pharmkg_e2e
 ├── model
@@ -1643,15 +2399,49 @@
 │   │   │   ├── day6c_medllama3_8b_infer_valid_soft_support_raw.log
 │   │   │   └── day6c_model_status.tsv
 │   │   └── week24_closeout.md
-│   └── week25
-│       ├── day1_sensitivity_protocol_audit.md
-│       ├── day2_rule_sensitivity_valid.md
-│       ├── day3_rule_sensitivity_test_e2e.md
-│       ├── day4_template_sensitivity.md
-│       ├── day5_noise_robustness.md
-│       ├── day6_sensitivity_paper_assets.md
-│       ├── day7_week25_closeout.md
-│       └── week25_closeout.md
+│   ├── week25
+│   │   ├── day1_sensitivity_protocol_audit.md
+│   │   ├── day2_rule_sensitivity_valid.md
+│   │   ├── day3_rule_sensitivity_test_e2e.md
+│   │   ├── day4_template_sensitivity.md
+│   │   ├── day5_noise_robustness.md
+│   │   ├── day6_sensitivity_paper_assets.md
+│   │   ├── day7_week25_closeout.md
+│   │   └── week25_closeout.md
+│   ├── week26
+│   │   ├── day1_hetionet_inventory.md
+│   │   ├── day2_hetionet_split_graph.md
+│   │   ├── day3_hetionet_source_selection.md
+│   │   ├── day3_hetionet_structure_baselines.md
+│   │   ├── day4_hetionet_fograg_ready.md
+│   │   ├── day5_hetionet_soft_support.md
+│   │   ├── day6_hetionet_fuzzy_retrieval.md
+│   │   ├── day7_hetionet_e2e_closeout.md
+│   │   └── week26_hetionet_closeout.md
+│   ├── week27
+│   │   ├── day1_drkg_inventory.md
+│   │   ├── day2_drkg_task_schema.md
+│   │   ├── day3_drkg_split_graph.md
+│   │   ├── day4_drkg_source_selection.md
+│   │   ├── day4_drkg_structure_baselines.md
+│   │   ├── day5_drkg_fograg_ready.md
+│   │   ├── day6b_drkg_soft_support_rgcn_sweep.md
+│   │   ├── day6_drkg_soft_support_distmult.md
+│   │   ├── day6_drkg_soft_support_rgcn.md
+│   │   ├── day7_drkg_fuzzy_retrieval_rgcn.md
+│   │   ├── day8_drkg_e2e_rgcn_closeout.md
+│   │   └── week27_drkg_closeout.md
+│   └── week28
+│       ├── day1_repodb_inventory.md
+│       ├── day2_repodb_task_schema.md
+│       ├── day3_repodb_split_graph.md
+│       ├── day4_repodb_source_selection.md
+│       ├── day4_repodb_structure_baselines.md
+│       ├── day5_repodb_fograg_ready.md
+│       ├── day6_repodb_soft_support_rgcn.md
+│       ├── day7_repodb_fuzzy_retrieval_rgcn.md
+│       ├── day8_repodb_e2e_rgcn_closeout.md
+│       └── week28_repodb_closeout.md
 ├── results
 │   ├── reference_rows
 │   │   ├── backbone_raw_test
@@ -2882,6 +3672,279 @@
 │   │   │   └── template_variants.json
 │   │   ├── week25_closeout.json
 │   │   └── week25_go_decision.json
+│   ├── week26
+│   │   ├── day1_hetionet_protocol_freeze.json
+│   │   ├── day2_hetionet_split_graph_summary.json
+│   │   ├── day3_hetionet_final_decision.json
+│   │   ├── day3_hetionet_source_selection.json
+│   │   ├── day4_hetionet_fograg_ready_audit.json
+│   │   ├── day5_hetionet_soft_support_summary.json
+│   │   ├── day6_hetionet_fuzzy_retrieval_summary.json
+│   │   ├── e2e_hetionet
+│   │   │   ├── backbone_raw
+│   │   │   │   ├── all_results.json
+│   │   │   │   ├── checkpoint-69
+│   │   │   │   │   ├── adapter_config.json
+│   │   │   │   │   ├── adapter_model.bin
+│   │   │   │   │   ├── graph_model.bin
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── checkpoint-final
+│   │   │   │   │   ├── adapter_config.json
+│   │   │   │   │   ├── adapter_model.bin
+│   │   │   │   │   ├── graph_model.bin
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── metrics_test.txt
+│   │   │   │   ├── metrics_valid.txt
+│   │   │   │   ├── prediction_test.json
+│   │   │   │   ├── prediction_valid.json
+│   │   │   │   ├── ranking_metrics_test.json
+│   │   │   │   ├── ranking_metrics_valid.json
+│   │   │   │   ├── reviewer_safe_e2e_metrics_test.json
+│   │   │   │   ├── reviewer_safe_e2e_metrics_valid.json
+│   │   │   │   ├── reviewer_safe_e2e_rows_test.json
+│   │   │   │   ├── reviewer_safe_e2e_rows_valid.json
+│   │   │   │   ├── trainer_state.json
+│   │   │   │   └── train_results.json
+│   │   │   ├── fuzzy_retrieval_main
+│   │   │   │   ├── all_results.json
+│   │   │   │   ├── checkpoint-69
+│   │   │   │   │   ├── adapter_config.json
+│   │   │   │   │   ├── adapter_model.bin
+│   │   │   │   │   ├── graph_model.bin
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── checkpoint-final
+│   │   │   │   │   ├── adapter_config.json
+│   │   │   │   │   ├── adapter_model.bin
+│   │   │   │   │   ├── graph_model.bin
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── metrics_test.txt
+│   │   │   │   ├── metrics_valid.txt
+│   │   │   │   ├── prediction_test.json
+│   │   │   │   ├── prediction_valid.json
+│   │   │   │   ├── ranking_metrics_test.json
+│   │   │   │   ├── ranking_metrics_valid.json
+│   │   │   │   ├── reviewer_safe_e2e_metrics_test.json
+│   │   │   │   ├── reviewer_safe_e2e_metrics_valid.json
+│   │   │   │   ├── reviewer_safe_e2e_rows_test.json
+│   │   │   │   ├── reviewer_safe_e2e_rows_valid.json
+│   │   │   │   ├── trainer_state.json
+│   │   │   │   └── train_results.json
+│   │   │   └── soft_support_raw
+│   │   │       ├── all_results.json
+│   │   │       ├── checkpoint-69
+│   │   │       │   ├── adapter_config.json
+│   │   │       │   ├── adapter_model.bin
+│   │   │       │   ├── graph_model.bin
+│   │   │       │   └── README.md
+│   │   │       ├── checkpoint-final
+│   │   │       │   ├── adapter_config.json
+│   │   │       │   ├── adapter_model.bin
+│   │   │       │   ├── graph_model.bin
+│   │   │       │   └── README.md
+│   │   │       ├── metrics_test.txt
+│   │   │       ├── metrics_valid.txt
+│   │   │       ├── prediction_test.json
+│   │   │       ├── prediction_valid.json
+│   │   │       ├── ranking_metrics_test.json
+│   │   │       ├── ranking_metrics_valid.json
+│   │   │       ├── reviewer_safe_e2e_metrics_test.json
+│   │   │       ├── reviewer_safe_e2e_metrics_valid.json
+│   │   │       ├── reviewer_safe_e2e_rows_test.json
+│   │   │       ├── reviewer_safe_e2e_rows_valid.json
+│   │   │       ├── trainer_state.json
+│   │   │       └── train_results.json
+│   │   ├── hetionet_baseline_main_table.json
+│   │   ├── hetionet_baseline_reviewer_safe_test.json
+│   │   ├── hetionet_baseline_reviewer_safe_valid.json
+│   │   └── hetionet_e2e_summary.json
+│   ├── week27
+│   │   ├── day1_drkg_inventory_summary.json
+│   │   ├── day2_drkg_task_schema_summary.json
+│   │   ├── day3_drkg_split_graph_summary.json
+│   │   ├── day4_drkg_source_selection.json
+│   │   ├── day5_drkg_fograg_ready_summary.json
+│   │   ├── day6b_drkg_soft_support_rgcn_sweep_summary.json
+│   │   ├── day6_drkg_soft_support_distmult_summary.json
+│   │   ├── day6_drkg_soft_support_rgcn_summary.json
+│   │   ├── day7_drkg_fuzzy_retrieval_rgcn_summary.json
+│   │   ├── drkg_baseline_main_table.json
+│   │   ├── drkg_baseline_reviewer_safe_test.json
+│   │   ├── drkg_baseline_reviewer_safe_valid.json
+│   │   ├── drkg_e2e_rgcn_summary.json
+│   │   └── e2e_drkg_rgcn
+│   │       ├── backbone_raw
+│   │       │   ├── all_results.json
+│   │       │   ├── checkpoint-496
+│   │       │   │   ├── adapter_config.json
+│   │       │   │   ├── adapter_model.bin
+│   │       │   │   ├── graph_model.bin
+│   │       │   │   └── README.md
+│   │       │   ├── checkpoint-final
+│   │       │   │   ├── adapter_config.json
+│   │       │   │   ├── adapter_model.bin
+│   │       │   │   ├── graph_model.bin
+│   │       │   │   └── README.md
+│   │       │   ├── metrics_test.txt
+│   │       │   ├── metrics_valid.txt
+│   │       │   ├── prediction_test.json
+│   │       │   ├── prediction_valid.json
+│   │       │   ├── ranking_metrics_test.json
+│   │       │   ├── ranking_metrics_valid.json
+│   │       │   ├── reviewer_safe_e2e_metrics_test.json
+│   │       │   ├── reviewer_safe_e2e_metrics_valid.json
+│   │       │   ├── reviewer_safe_e2e_rows_test.json
+│   │       │   ├── reviewer_safe_e2e_rows_valid.json
+│   │       │   ├── trainer_state.json
+│   │       │   └── train_results.json
+│   │       ├── fuzzy_retrieval_main
+│   │       │   ├── all_results.json
+│   │       │   ├── checkpoint-496
+│   │       │   │   ├── adapter_config.json
+│   │       │   │   ├── adapter_model.bin
+│   │       │   │   ├── graph_model.bin
+│   │       │   │   └── README.md
+│   │       │   ├── checkpoint-final
+│   │       │   │   ├── adapter_config.json
+│   │       │   │   ├── adapter_model.bin
+│   │       │   │   ├── graph_model.bin
+│   │       │   │   └── README.md
+│   │       │   ├── metrics_test.txt
+│   │       │   ├── metrics_valid.txt
+│   │       │   ├── prediction_test.json
+│   │       │   ├── prediction_valid.json
+│   │       │   ├── ranking_metrics_test.json
+│   │       │   ├── ranking_metrics_valid.json
+│   │       │   ├── reviewer_safe_e2e_metrics_test.json
+│   │       │   ├── reviewer_safe_e2e_metrics_valid.json
+│   │       │   ├── reviewer_safe_e2e_rows_test.json
+│   │       │   ├── reviewer_safe_e2e_rows_valid.json
+│   │       │   ├── trainer_state.json
+│   │       │   └── train_results.json
+│   │       └── soft_support_sweep
+│   │           ├── all_results.json
+│   │           ├── checkpoint-496
+│   │           │   ├── adapter_config.json
+│   │           │   ├── adapter_model.bin
+│   │           │   ├── graph_model.bin
+│   │           │   └── README.md
+│   │           ├── checkpoint-final
+│   │           │   ├── adapter_config.json
+│   │           │   ├── adapter_model.bin
+│   │           │   ├── graph_model.bin
+│   │           │   └── README.md
+│   │           ├── metrics_test.txt
+│   │           ├── metrics_valid.txt
+│   │           ├── prediction_test.json
+│   │           ├── prediction_valid.json
+│   │           ├── ranking_metrics_test.json
+│   │           ├── ranking_metrics_valid.json
+│   │           ├── reviewer_safe_e2e_metrics_test.json
+│   │           ├── reviewer_safe_e2e_metrics_valid.json
+│   │           ├── reviewer_safe_e2e_rows_test.json
+│   │           ├── reviewer_safe_e2e_rows_valid.json
+│   │           ├── trainer_state.json
+│   │           └── train_results.json
+│   ├── week28
+│   │   ├── day1_repodb_inventory_summary.json
+│   │   ├── day2_repodb_task_schema_summary.json
+│   │   ├── day3_repodb_split_graph_summary.json
+│   │   ├── day4_repodb_source_selection.json
+│   │   ├── day5_repodb_fograg_ready_summary.json
+│   │   ├── day6c_repodb_rgcn_raw_display_control_summary.json
+│   │   ├── day6_repodb_soft_support_rgcn_summary.json
+│   │   ├── day7_repodb_fuzzy_retrieval_rgcn_summary.json
+│   │   ├── e2e_repodb_rgcn
+│   │   │   ├── backbone_raw
+│   │   │   │   ├── all_results.json
+│   │   │   │   ├── checkpoint-500
+│   │   │   │   │   ├── adapter_config.json
+│   │   │   │   │   ├── adapter_model.bin
+│   │   │   │   │   ├── graph_model.bin
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── checkpoint-709
+│   │   │   │   │   ├── adapter_config.json
+│   │   │   │   │   ├── adapter_model.bin
+│   │   │   │   │   ├── graph_model.bin
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── checkpoint-final
+│   │   │   │   │   ├── adapter_config.json
+│   │   │   │   │   ├── adapter_model.bin
+│   │   │   │   │   ├── graph_model.bin
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── metrics_test.txt
+│   │   │   │   ├── metrics_valid.txt
+│   │   │   │   ├── prediction_test.json
+│   │   │   │   ├── prediction_valid.json
+│   │   │   │   ├── ranking_metrics_test.json
+│   │   │   │   ├── ranking_metrics_valid.json
+│   │   │   │   ├── reviewer_safe_e2e_metrics_test.json
+│   │   │   │   ├── reviewer_safe_e2e_metrics_valid.json
+│   │   │   │   ├── reviewer_safe_e2e_rows_test.json
+│   │   │   │   ├── reviewer_safe_e2e_rows_valid.json
+│   │   │   │   ├── trainer_state.json
+│   │   │   │   └── train_results.json
+│   │   │   ├── fuzzy_retrieval_main
+│   │   │   │   ├── all_results.json
+│   │   │   │   ├── checkpoint-500
+│   │   │   │   │   ├── adapter_config.json
+│   │   │   │   │   ├── adapter_model.bin
+│   │   │   │   │   ├── graph_model.bin
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── checkpoint-709
+│   │   │   │   │   ├── adapter_config.json
+│   │   │   │   │   ├── adapter_model.bin
+│   │   │   │   │   ├── graph_model.bin
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── checkpoint-final
+│   │   │   │   │   ├── adapter_config.json
+│   │   │   │   │   ├── adapter_model.bin
+│   │   │   │   │   ├── graph_model.bin
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── metrics_test.txt
+│   │   │   │   ├── metrics_valid.txt
+│   │   │   │   ├── prediction_test.json
+│   │   │   │   ├── prediction_valid.json
+│   │   │   │   ├── ranking_metrics_test.json
+│   │   │   │   ├── ranking_metrics_valid.json
+│   │   │   │   ├── reviewer_safe_e2e_metrics_test.json
+│   │   │   │   ├── reviewer_safe_e2e_metrics_valid.json
+│   │   │   │   ├── reviewer_safe_e2e_rows_test.json
+│   │   │   │   ├── reviewer_safe_e2e_rows_valid.json
+│   │   │   │   ├── trainer_state.json
+│   │   │   │   └── train_results.json
+│   │   │   └── soft_support_sweep
+│   │   │       ├── all_results.json
+│   │   │       ├── checkpoint-500
+│   │   │       │   ├── adapter_config.json
+│   │   │       │   ├── adapter_model.bin
+│   │   │       │   ├── graph_model.bin
+│   │   │       │   └── README.md
+│   │   │       ├── checkpoint-709
+│   │   │       │   ├── adapter_config.json
+│   │   │       │   ├── adapter_model.bin
+│   │   │       │   ├── graph_model.bin
+│   │   │       │   └── README.md
+│   │   │       ├── checkpoint-final
+│   │   │       │   ├── adapter_config.json
+│   │   │       │   ├── adapter_model.bin
+│   │   │       │   ├── graph_model.bin
+│   │   │       │   └── README.md
+│   │   │       ├── metrics_test.txt
+│   │   │       ├── metrics_valid.txt
+│   │   │       ├── prediction_test.json
+│   │   │       ├── prediction_valid.json
+│   │   │       ├── ranking_metrics_test.json
+│   │   │       ├── ranking_metrics_valid.json
+│   │   │       ├── reviewer_safe_e2e_metrics_test.json
+│   │   │       ├── reviewer_safe_e2e_metrics_valid.json
+│   │   │       ├── reviewer_safe_e2e_rows_test.json
+│   │   │       ├── reviewer_safe_e2e_rows_valid.json
+│   │   │       ├── trainer_state.json
+│   │   │       └── train_results.json
+│   │   ├── repodb_baseline_main_table.json
+│   │   ├── repodb_baseline_reviewer_safe_test.json
+│   │   ├── repodb_baseline_reviewer_safe_valid.json
+│   │   └── repodb_e2e_rgcn_summary.json
 │   ├── week5
 │   │   └── backbone_llama32_3b_rgcn
 │   │       ├── checkpoint-1000
@@ -3077,19 +4140,95 @@
 │   │   ├── 06c_run_pharmkg_frozen_model_compare_all.sh
 │   │   ├── 06_diagnostics_and_paper_assets.py
 │   │   └── 07_write_week24_closeout.py
-│   └── week25
-│       ├── 01_audit_sensitivity_protocol.py
-│       ├── 02_build_rule_sensitivity_variants.py
-│       ├── 02_collect_rule_sensitivity_valid.py
-│       ├── 03_collect_rule_sensitivity_test_e2e.py
-│       ├── 03_run_rule_sensitivity_e2e.sh
-│       ├── 04_build_template_variants.py
-│       ├── 04_collect_template_sensitivity.py
-│       ├── 04_run_template_sensitivity.sh
-│       ├── 05_build_noise_variants.py
-│       ├── 05_collect_noise_robustness.py
-│       ├── 06_build_sensitivity_paper_assets.py
-│       └── 07_write_week25_closeout.py
+│   ├── week25
+│   │   ├── 01_audit_sensitivity_protocol.py
+│   │   ├── 02_build_rule_sensitivity_variants.py
+│   │   ├── 02_collect_rule_sensitivity_valid.py
+│   │   ├── 03_collect_rule_sensitivity_test_e2e.py
+│   │   ├── 03_run_rule_sensitivity_e2e.sh
+│   │   ├── 04_build_template_variants.py
+│   │   ├── 04_collect_template_sensitivity.py
+│   │   ├── 04_run_template_sensitivity.sh
+│   │   ├── 05_build_noise_variants.py
+│   │   ├── 05_collect_noise_robustness.py
+│   │   ├── 06_build_sensitivity_paper_assets.py
+│   │   └── 07_write_week25_closeout.py
+│   ├── week26
+│   │   ├── 01_download_inventory_hetionet.py
+│   │   ├── 02_build_hetionet_splits_graph.py
+│   │   ├── 03a_run_hetionet_kge_baselines.py
+│   │   ├── 03b_run_hetionet_gnn_baselines.py
+│   │   ├── 03b_run_hetionet_gnn_baselines_v2.py
+│   │   ├── 03c_select_hetionet_source.py
+│   │   ├── 03_patch_hetionet_baseline_scripts.py
+│   │   ├── 04_build_hetionet_fograg_ready.py
+│   │   ├── 05_build_hetionet_support_soft.py
+│   │   ├── 06_build_hetionet_fuzzy_retrieval.py
+│   │   ├── 07_collect_hetionet_e2e_metrics.py
+│   │   ├── 07_run_hetionet_e2e_all_rows.sh
+│   │   └── __pycache__
+│   │       ├── 03a_run_hetionet_kge_baselines.cpython-312.pyc
+│   │       ├── 03b_run_hetionet_gnn_baselines.cpython-312.pyc
+│   │       ├── 03b_run_hetionet_gnn_baselines_v2.cpython-312.pyc
+│   │       ├── 03c_select_hetionet_source.cpython-312.pyc
+│   │       ├── 04_build_hetionet_fograg_ready.cpython-312.pyc
+│   │       ├── 05_build_hetionet_support_soft.cpython-312.pyc
+│   │       ├── 06_build_hetionet_fuzzy_retrieval.cpython-312.pyc
+│   │       └── 07_collect_hetionet_e2e_metrics.cpython-312.pyc
+│   ├── week27
+│   │   ├── 01_download_inventory_drkg.py
+│   │   ├── 02_freeze_drkg_task_schema.py
+│   │   ├── 03_build_drkg_splits_graph.py
+│   │   ├── 04a_run_drkg_kge_baselines.py
+│   │   ├── 04b_run_drkg_gnn_baselines.py
+│   │   ├── 04c_select_drkg_source.py
+│   │   ├── 04_patch_drkg_baseline_scripts.py
+│   │   ├── 05_build_drkg_fograg_ready.py
+│   │   ├── 06b_sweep_drkg_soft_support_rgcn.py
+│   │   ├── 06_build_drkg_support_soft.py
+│   │   ├── 07_build_drkg_fuzzy_retrieval_rgcn.py
+│   │   ├── 08_collect_drkg_e2e_metrics.py
+│   │   ├── 08_run_drkg_e2e_rgcn_rows.sh
+│   │   └── __pycache__
+│   │       ├── 01_download_inventory_drkg.cpython-312.pyc
+│   │       ├── 02_freeze_drkg_task_schema.cpython-312.pyc
+│   │       ├── 03_build_drkg_splits_graph.cpython-312.pyc
+│   │       ├── 04a_run_drkg_kge_baselines.cpython-312.pyc
+│   │       ├── 04b_run_drkg_gnn_baselines.cpython-312.pyc
+│   │       ├── 04c_select_drkg_source.cpython-312.pyc
+│   │       ├── 04_patch_drkg_baseline_scripts.cpython-312.pyc
+│   │       ├── 05_build_drkg_fograg_ready.cpython-312.pyc
+│   │       ├── 06b_sweep_drkg_soft_support_rgcn.cpython-312.pyc
+│   │       ├── 06_build_drkg_support_soft.cpython-312.pyc
+│   │       ├── 07_build_drkg_fuzzy_retrieval_rgcn.cpython-312.pyc
+│   │       └── 08_collect_drkg_e2e_metrics.cpython-312.pyc
+│   └── week28
+│       ├── 01_download_inventory_repodb.py
+│       ├── 02_normalize_freeze_repodb_task.py
+│       ├── 03_build_repodb_splits_graph.py
+│       ├── 04a_run_repodb_kge_baselines.py
+│       ├── 04b_run_repodb_gnn_baselines.py
+│       ├── 04c_select_repodb_source.py
+│       ├── 04_patch_repodb_baseline_scripts.py
+│       ├── 05_build_repodb_fograg_ready.py
+│       ├── 06_build_repodb_soft_support_rgcn.py
+│       ├── 06c_make_repodb_rgcn_raw_display_control.py
+│       ├── 07_build_repodb_fuzzy_retrieval_rgcn.py
+│       ├── 08_collect_repodb_e2e_metrics.py
+│       ├── 08_run_repodb_e2e_all_rows.sh
+│       └── __pycache__
+│           ├── 01_download_inventory_repodb.cpython-312.pyc
+│           ├── 02_normalize_freeze_repodb_task.cpython-312.pyc
+│           ├── 03_build_repodb_splits_graph.cpython-312.pyc
+│           ├── 04a_run_repodb_kge_baselines.cpython-312.pyc
+│           ├── 04b_run_repodb_gnn_baselines.cpython-312.pyc
+│           ├── 04c_select_repodb_source.cpython-312.pyc
+│           ├── 04_patch_repodb_baseline_scripts.cpython-312.pyc
+│           ├── 05_build_repodb_fograg_ready.cpython-312.pyc
+│           ├── 06_build_repodb_soft_support_rgcn.cpython-312.pyc
+│           ├── 06c_make_repodb_rgcn_raw_display_control.cpython-312.pyc
+│           ├── 07_build_repodb_fuzzy_retrieval_rgcn.cpython-312.pyc
+│           └── 08_collect_repodb_e2e_metrics.cpython-312.pyc
 └── structure.txt
 
-432 directories, 2661 files
+586 directories, 3646 files
