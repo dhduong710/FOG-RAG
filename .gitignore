@@ -33,8 +33,8 @@ dataset/setting_e_drkg/10_fuzzy_retrieval/**/*.json
 
 dataset/setting_e_drkg/11_e2e_fuzzy_retrieval_ready/rgcn/train.json
 
-dataset/setting_f_repodb/07_support_features/**/*.json
-dataset/setting_f_repodb/08_soft_support/**/*.json
+dataset/setting_f_repodb/07_support_features/**/train_support_features.json
+dataset/setting_f_repodb/08_soft_support/**/train_top20_soft_support_main.json
 dataset/setting_f_repodb/09_e2e_soft_support_ready/**/*.json
 
 dataset/setting_f_repodb/10_fuzzy_retrieval/**/*.json
