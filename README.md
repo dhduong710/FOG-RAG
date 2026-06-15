@@ -1,63 +1,72 @@
 # SoftFuse-KGC
 
-SoftFuse-KGC is a research codebase for biomedical knowledge graph completion with
-three progressively richer candidate packages:
+<p align="center">
+  <img alt="Python" src="https://img.shields.io/badge/Python-3.10%2B-3776AB">
+  <img alt="Task" src="https://img.shields.io/badge/Task-Biomedical%20KGC-0F766E">
+  <img alt="Method" src="https://img.shields.io/badge/Method-SoftFuse-7C3AED">
+  <img alt="Backbone" src="https://img.shields.io/badge/Backbone-Graph%20%2B%20LLM-C2410C">
+</p>
 
-- `backbone_raw`: structure-only top-20 candidates and graph context.
-- `soft_support_raw`: re-ranked candidates using typed, contradiction-aware soft support.
-- `fuzzy_retrieval_main`: the SoftFuse retrieval row, which keeps the candidate order stable while selecting a smaller confidence-aware subgraph for E2E LLM inference.
+SoftFuse-KGC is a biomedical knowledge graph completion repository for studying
+how lightweight symbolic and graph evidence can improve retrieval-augmented LLM
+prediction. The method starts from structure-only top-k candidates, adds
+typed soft support signals, and then applies confidence-aware fuzzy retrieval to
+select a compact graph context for end-to-end generation.
 
-The repository keeps reusable code and release-facing artifacts. Generated logs,
-checkpoints, and tables are written under `outputs/`, which is ignored by git.
+The code supports a main PrimeKG indication task and transfer experiments on
+PharmKG, Hetionet, DRKG, and repoDB. This README is written as a public artifact
+guide: it explains how to obtain raw data, rebuild intermediate artifacts, and
+run candidate-stage and E2E evaluation.
 
-## Repository Layout
+## Method Overview
 
-```text
-configs/
-  backbone/            PrimeKG backbone ranker config
-  soft_support/        PrimeKG soft-support formulas
-  fuzzy_retrieval/     PrimeKG retrieval scoring formulas
+```mermaid
+flowchart LR
+    A["Raw biomedical KG"] --> B["Task preprocessing<br/>splits + graph"]
+    B --> C["Backbone candidates<br/>top-20"]
+    C --> D["Soft support<br/>typed evidence + constraints"]
+    D --> E["Fuzzy retrieval<br/>confidence-aware subgraph"]
+    E --> F["Graph-enhanced LLM<br/>train + infer"]
+    F --> G["Candidate and E2E metrics"]
 
-data/raw/pharmkg/      PharmKG-8k raw split files used by the PharmKG pipeline
-
-dataset/
-  setting_a/           PrimeKG main setting
-  setting_b/           PrimeKG annotation and evaluation rows
-  setting_c_pharmkg/   PharmKG transfer setting
-  setting_d_hetionet/  Hetionet transfer setting
-  setting_e_drkg/      DRKG transfer setting
-  setting_f_repodb/    repoDB transfer setting
-
-scripts/
-  backbone/            PrimeKG backbone helper scripts
-  soft_support/        PrimeKG soft-support build and selection
-  fuzzy_retrieval/     PrimeKG fuzzy retrieval build and selection
-  evaluation/          PrimeKG candidate-stage evaluation tables
-  e2e/                 PrimeKG E2E package, inference, and reporting scripts
-  pharmkg/             PharmKG transfer pipeline
-  hetionet/            Hetionet transfer pipeline
-  drkg/                DRKG transfer pipeline
-  repodb/              repoDB transfer pipeline
-  sensitivity/         Optional robustness checks
-
-main.py                LoRA training for the graph-enhanced LLM
-infer.py               E2E inference and ranking metrics
+    style A fill:#EFF6FF,stroke:#2563EB,stroke-width:2px
+    style B fill:#ECFDF5,stroke:#059669,stroke-width:2px
+    style C fill:#FFF7ED,stroke:#EA580C,stroke-width:2px
+    style D fill:#F5F3FF,stroke:#7C3AED,stroke-width:2px
+    style E fill:#FDF2F8,stroke:#DB2777,stroke-width:2px
+    style F fill:#FEFCE8,stroke:#CA8A04,stroke-width:2px
+    style G fill:#F8FAFC,stroke:#475569,stroke-width:2px
 ```
 
-Important PrimeKG paths after cleanup:
+| Row | What changes | Main artifact |
+|---|---|---|
+| `backbone_raw` | Structure-only candidate order and graph context | `dataset/setting_a/backbone_candidates/` |
+| `soft_support_raw` | Candidate order is adjusted with typed evidence, direct-link penalties, and contradiction checks | `dataset/setting_a/soft_support_ranked_candidates/` |
+| `fuzzy_retrieval_main` | Candidate order is preserved while graph context is compressed by confidence-aware retrieval | `dataset/setting_a/fuzzy_retrieval/` |
+| E2E packages | Rows are converted to the `main.py` / `infer.py` contract | `dataset/setting_a/e2e_infer_ready/` |
 
-- `dataset/setting_a/raw_triples/primekg_indication_only.tsv`
-- `dataset/setting_a/splits/{train,valid,test}.tsv`
-- `dataset/setting_a/graph/train_enriched_deg1000_final.tsv`
-- `dataset/setting_a/drkgc_json/`
-- `dataset/setting_a/backbone_ready/`
-- `dataset/setting_b/annotations/`
-- `dataset/setting_b/contra_checked/`
-- `dataset/setting_b/eval_valid/` and `dataset/setting_b/eval_test/`
+## Repository Map
 
-## Environment
+| Path | Role |
+|---|---|
+| `configs/` | PrimeKG backbone, soft-support, and fuzzy-retrieval configurations |
+| `data/raw/pharmkg/` | PharmKG-8k raw files used by the PharmKG transfer pipeline |
+| `dataset/setting_a/` | PrimeKG main task artifacts |
+| `dataset/setting_b/` | PrimeKG annotation and candidate-stage evaluation artifacts |
+| `dataset/setting_c_pharmkg/` | PharmKG transfer artifacts |
+| `dataset/setting_d_hetionet/` | Hetionet transfer artifacts |
+| `dataset/setting_e_drkg/` | DRKG transfer artifacts |
+| `dataset/setting_f_repodb/` | repoDB transfer artifacts |
+| `scripts/` | Rebuild, scoring, retrieval, transfer, and E2E scripts |
+| `main.py` | Graph-enhanced LoRA training |
+| `infer.py` | E2E inference and ranking metrics |
 
-Use Python 3.10 or 3.11 for the least friction with the CUDA stack.
+Generated logs, checkpoints, and reports are written under `outputs/`.
+
+## Installation
+
+Use Python 3.10 or 3.11. Install the PyTorch build that matches your CUDA
+driver before running E2E training.
 
 ```bash
 conda create -n softfuse-kgc python=3.10 -y
@@ -68,24 +77,26 @@ pip install transformers==4.38.2 peft==0.4.0 accelerate==0.27.2 \
   bitsandbytes==0.40.2 safetensors==0.4.3 tokenizers==0.15.2 \
   datasets==2.20.0
 
-# Install the PyTorch build that matches your CUDA driver.
-# Example for CUDA 11.8:
+# Example for CUDA 11.8. Change this line for your CUDA runtime.
 pip install torch==2.3.1 --index-url https://download.pytorch.org/whl/cu118
 ```
 
-`pyreadr` is only needed for the repoDB downloader. If `pyreadr` cannot read the
-RData file, `scripts/repodb/inventory_raw.py` also tries `Rscript` when it is
-available on `PATH`.
+`pyreadr` is only required for repoDB raw-data export. If it is unavailable,
+the repoDB inventory script can also use `Rscript`.
 
-## Download Raw Datasets
+## Raw Data
 
-Run all commands from the repository root.
+Run commands from the repository root.
 
-### PrimeKG
+| Dataset | Raw-data command | Expected location |
+|---|---|---|
+| PrimeKG | Manual download from Dataverse | `dataset/raw/primekg/kg.csv` |
+| PharmKG | `python scripts/pharmkg/inventory_raw.py` | `data/raw/pharmkg/PharmKG-8k/` |
+| Hetionet | `python scripts/hetionet/inventory_raw.py` | `dataset/setting_d_hetionet/raw_inventory/` |
+| DRKG | `python scripts/drkg/inventory_raw.py` | `dataset/setting_e_drkg/raw_inventory/` |
+| repoDB | `python scripts/repodb/inventory_raw.py` | `dataset/setting_f_repodb/raw_inventory/` |
 
-PrimeKG is the main setting. The release already includes the processed
-PrimeKG artifacts used by the paper-facing pipeline. To audit or rebuild from
-raw data, download the official PrimeKG CSV:
+PrimeKG raw CSV:
 
 ```bash
 mkdir -p dataset/raw/primekg
@@ -93,85 +104,43 @@ curl -L -o dataset/raw/primekg/kg.csv \
   https://dataverse.harvard.edu/api/access/datafile/6180620
 ```
 
-The current pipeline expects the indication-only raw triple file at:
+The PrimeKG release artifacts in this repository start from the
+indication-only task file:
 
 ```text
 dataset/setting_a/raw_triples/primekg_indication_only.tsv
 ```
 
-If you regenerate it from `kg.csv`, keep a three-column TSV with header:
+If you regenerate it from `kg.csv`, keep a three-column TSV with header
+`head`, `relation`, `tail`, where `relation` is `indication`, `head` is the
+drug, and `tail` is the disease.
 
-```text
-head    relation    tail
-```
-
-where `relation` is `indication`, `head` is the drug, and `tail` is the disease.
-The checked-in `splits`, `graph`, `drkgc_json`, and `backbone_ready` directories
-are the release snapshot for this setting.
-
-### PharmKG
-
-The PharmKG pipeline can download PharmKG-8k split files and optional Zenodo raw
-files:
+For PharmKG, the inventory script downloads the PharmKG-8k split files by
+default. To additionally inventory the official Zenodo archive:
 
 ```bash
-python scripts/pharmkg/inventory_raw.py
-
-# Optional: also download the official raw archive from Zenodo.
 python scripts/pharmkg/inventory_raw.py --download-zenodo
 ```
 
-Expected PharmKG-8k files:
+## Reproducing The PrimeKG Pipeline
 
-```text
-data/raw/pharmkg/PharmKG-8k/train.tsv
-data/raw/pharmkg/PharmKG-8k/valid.tsv
-data/raw/pharmkg/PharmKG-8k/test.tsv
-```
+The PrimeKG pipeline uses the checked-in preprocessing artifacts under
+`dataset/setting_a/` and `dataset/setting_b/`, then rebuilds SoftFuse rows and
+metrics from them.
 
-### Hetionet, DRKG, repoDB
+### 1. Preprocessing And Backbone Inputs
 
-These scripts download and inventory their raw sources under the corresponding
-`dataset/setting_*/*raw_inventory*` directories:
+The release contains the fixed PrimeKG splits, enriched graph, DrKGC-compatible
+ID maps, aligned evidence, backbone candidates, and ontology-control rows.
 
-```bash
-python scripts/hetionet/inventory_raw.py
-python scripts/drkg/inventory_raw.py
-python scripts/repodb/inventory_raw.py
-```
-
-For offline machines, run the same scripts once on a machine with network
-access, then copy the created `raw_inventory` directories into the same paths.
-
-## PrimeKG Pipeline
-
-The PrimeKG release snapshot starts from checked-in preprocessing artifacts. The
-commands below rebuild all downstream SoftFuse artifacts from those artifacts.
-
-### 1. Data Preprocessing And Backbone Inputs
-
-The core preprocessed inputs are already in:
-
-```text
-dataset/setting_a/raw_triples/
-dataset/setting_a/splits/
-dataset/setting_a/graph/
-dataset/setting_a/drkgc_json/
-dataset/setting_a/backbone_ready/
-dataset/setting_a/aligned_evidence/
-dataset/setting_a/backbone_candidates/
-dataset/setting_a/ontology_control/
-```
-
-If a script or ablation asks for
-`dataset/setting_a/backbone_candidates/train_top20_raw.json`, create it from the
+If an experiment needs the optional train candidate file, export it from the
 included aligned train evidence:
 
 ```bash
 python scripts/backbone/export_primekg_train_candidates.py
 ```
 
-To rerun structure baselines from the release artifacts:
+To rerun structure-only baselines:
 
 ```bash
 python scripts/baselines/rerun_structure_baselines.py \
@@ -183,9 +152,6 @@ python scripts/baselines/build_baseline_comparison.py
 
 ### 2. Soft Support
 
-Build support features on validation, score soft-support variants, compare
-them, select the main validation row, then build the locked test row:
-
 ```bash
 python scripts/soft_support/build_support_features.py
 python scripts/soft_support/build_soft_support_variants.py
@@ -195,7 +161,7 @@ python scripts/soft_support/select_soft_support_main.py
 python scripts/soft_support/build_soft_support_test.py
 ```
 
-Main outputs:
+Primary outputs:
 
 ```text
 dataset/setting_a/support_features/valid_support_features.json
@@ -204,9 +170,6 @@ dataset/setting_a/soft_support_ranked_candidates/test_top20_soft_support_main.js
 ```
 
 ### 3. Fuzzy Retrieval
-
-Build path features, score retrieval variants, select the main validation row,
-and build the locked test row:
 
 ```bash
 python scripts/fuzzy_retrieval/build_path_features.py
@@ -220,7 +183,7 @@ python scripts/fuzzy_retrieval/select_fuzzy_retrieval_main.py
 python scripts/fuzzy_retrieval/build_fuzzy_retrieval_test.py
 ```
 
-Main outputs:
+Primary outputs:
 
 ```text
 dataset/setting_a/fuzzy_retrieval/valid_fuzzy_retrieval_main.json
@@ -228,9 +191,6 @@ dataset/setting_a/fuzzy_retrieval/test_fuzzy_retrieval_main.json
 ```
 
 ### 4. Candidate-Stage Evaluation
-
-Build validation and test evaluation rows, then write the main comparison
-tables:
 
 ```bash
 python scripts/evaluation/build_valid_eval_ready.py
@@ -240,7 +200,7 @@ python scripts/evaluation/build_test_main_table.py
 python scripts/evaluation/collect_test_cases.py
 ```
 
-Main outputs:
+Primary outputs:
 
 ```text
 dataset/setting_b/eval_valid/
@@ -250,21 +210,13 @@ outputs/evaluation/
 
 ### 5. E2E Training And Inference
 
-First build the three `infer.py`-ready PrimeKG packages:
+Build `infer.py`-ready packages:
 
 ```bash
 python scripts/e2e/build_infer_ready.py
 ```
 
-This creates:
-
-```text
-dataset/setting_a/e2e_infer_ready/backbone_raw/
-dataset/setting_a/e2e_infer_ready/soft_support_raw/
-dataset/setting_a/e2e_infer_ready/retrieval_main/
-```
-
-Train one graph-enhanced LoRA checkpoint on the backbone row:
+Train one graph-enhanced LoRA checkpoint:
 
 ```bash
 export MODEL_NAME_OR_PATH=meta-llama/Llama-3.2-3B
@@ -297,13 +249,7 @@ python main.py \
   --report_to none
 ```
 
-The checkpoint used by inference is:
-
-```text
-outputs/e2e/e2e_primary_checkpoint/checkpoint-final
-```
-
-Run E2E inference for all PrimeKG rows:
+Run test inference and collect the PrimeKG E2E table:
 
 ```bash
 bash scripts/e2e/run_backbone_soft_e2e.sh
@@ -323,12 +269,14 @@ bash scripts/e2e/run_selected_decode_test.sh
 python scripts/e2e/collect_selected_decode_metrics.py
 ```
 
-## Transfer Pipelines
+## Transfer Experiments
 
-The transfer settings follow the same order: raw inventory, preprocessing,
-backbone candidates, SoftFuse package, soft support, fuzzy retrieval, then E2E.
+The transfer datasets use the same conceptual order: inventory raw data,
+construct the task graph, rerun structure baselines, build SoftFuse-ready
+packages, apply soft support, apply fuzzy retrieval, and run E2E inference.
 
-### PharmKG
+<details>
+<summary><strong>PharmKG</strong></summary>
 
 ```bash
 python scripts/pharmkg/inventory_raw.py
@@ -350,13 +298,10 @@ MODEL_NAME=meta-llama/Llama-3.2-3B bash scripts/pharmkg/e2e/run_train_infer.sh
 python scripts/pharmkg/e2e/reviewer_safe_e2e_metrics.py
 ```
 
-Main E2E package:
+</details>
 
-```text
-dataset/setting_c_pharmkg/e2e_infer_ready/
-```
-
-### Hetionet
+<details>
+<summary><strong>Hetionet</strong></summary>
 
 ```bash
 python scripts/hetionet/inventory_raw.py
@@ -375,7 +320,10 @@ bash scripts/hetionet/e2e/run_all_rows.sh
 python scripts/hetionet/e2e/collect_metrics.py
 ```
 
-### DRKG
+</details>
+
+<details>
+<summary><strong>DRKG</strong></summary>
 
 ```bash
 python scripts/drkg/inventory_raw.py
@@ -397,7 +345,10 @@ bash scripts/drkg/e2e/run_rgcn_rows.sh
 python scripts/drkg/e2e/collect_metrics.py
 ```
 
-### repoDB
+</details>
+
+<details>
+<summary><strong>repoDB</strong></summary>
 
 ```bash
 python scripts/repodb/inventory_raw.py
@@ -418,40 +369,22 @@ bash scripts/repodb/e2e/run_all_rows.sh
 python scripts/repodb/e2e/collect_metrics.py
 ```
 
-## Generated And Large Files
+</details>
 
-The following files are generated and can be rebuilt:
+## Data Sources
 
-- `outputs/**`
-- E2E `train.json` packages under `dataset/setting_a/e2e_infer_ready/*/`
-- transfer E2E train packages listed in `.gitignore`
-- model checkpoints under `checkpoints/` or `outputs/**/checkpoint-*`
+| Dataset | Source |
+|---|---|
+| PrimeKG | https://zitniklab.hms.harvard.edu/projects/PrimeKG/ |
+| PrimeKG GitHub | https://github.com/mims-harvard/PrimeKG |
+| PrimeKG Dataverse | https://doi.org/10.7910/DVN/IXA7BM |
+| PharmKG | https://github.com/biomed-AI/PharmKG |
+| PharmKG Zenodo | https://zenodo.org/records/4077338 |
+| Hetionet | https://zenodo.org/records/268568 |
+| DRKG | https://dgl-data.s3-us-west-2.amazonaws.com/dataset/DRKG/drkg.tar.gz |
+| repoDB | https://github.com/adam-sam-brown/repoDB |
 
-If a required train package is missing, rerun the package builder for that
-setting:
+## Citation
 
-- PrimeKG: `python scripts/e2e/build_infer_ready.py`
-- PharmKG: `python scripts/pharmkg/e2e/prepare_e2e_ready.py`
-- Hetionet: `python scripts/hetionet/build_softfuse_ready.py`, then the soft support and fuzzy retrieval builders
-- DRKG: `python scripts/drkg/build_softfuse_ready.py`, then the soft support sweep and fuzzy retrieval builders
-- repoDB: `python scripts/repodb/build_softfuse_ready.py`, then the soft support, display-control, and fuzzy retrieval builders
-
-## Sanity Checks
-
-Run these after editing code or moving artifacts:
-
-```bash
-python -m py_compile $(find scripts -name '*.py' | sort)
-find scripts -name '*.sh' -print0 | xargs -0 -n1 bash -n
-```
-
-## Data Source Links
-
-- PrimeKG project: https://zitniklab.hms.harvard.edu/projects/PrimeKG/
-- PrimeKG GitHub: https://github.com/mims-harvard/PrimeKG
-- PrimeKG Dataverse: https://doi.org/10.7910/DVN/IXA7BM
-- PharmKG GitHub mirror: https://github.com/biomed-AI/PharmKG
-- PharmKG Zenodo raw archive: https://zenodo.org/records/4077338
-- Hetionet Zenodo: https://zenodo.org/records/268568
-- DRKG DGL data: https://dgl-data.s3-us-west-2.amazonaws.com/dataset/DRKG/drkg.tar.gz
-- repoDB source repository: https://github.com/adam-sam-brown/repoDB
+If you use this repository, please cite the accompanying paper. A BibTeX entry
+will be added here once the archival metadata is available.
