@@ -1,6 +1,6 @@
 # PrimeKG Validation Eval Rows
 
-This directory contains reviewer-safe validation rows for:
+This directory contains validation rows for:
 
 - `backbone_raw`
 - `ontology_raw`

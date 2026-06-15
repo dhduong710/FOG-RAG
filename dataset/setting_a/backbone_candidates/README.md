@@ -1,6 +1,6 @@
 # PrimeKG Backbone Candidates
 
-This directory contains the reviewer-safe raw backbone candidate lists used by
+This directory contains the raw backbone candidate lists used by
 the first PrimeKG soft-support step:
 
 - `valid_top20_raw.json`

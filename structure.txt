@@ -1,6 +1,4 @@
 .
-├── .agents
-├── .codex
 ├── .gitignore
 ├── LICENSE
 ├── README.md
