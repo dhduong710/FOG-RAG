@@ -14,8 +14,7 @@ typed soft support signals, and then applies confidence-aware fuzzy retrieval to
 select a compact graph context for end-to-end generation.
 
 The code supports a main PrimeKG indication task and transfer experiments on
-PharmKG, Hetionet, DRKG, and repoDB. This README is written as a public artifact
-guide: it explains how to obtain raw data, rebuild intermediate artifacts, and
+PharmKG, Hetionet, DRKG, and repoDB. This README explains how to obtain raw data, rebuild intermediate artifacts, and
 run candidate-stage and E2E evaluation.
 
 ## Method Overview
