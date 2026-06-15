@@ -1,5 +1,0 @@
-Variant,MRR,Hits@1,Hits@3,Hits@10,ΔMRR_vs_Backbone,ΔHits@10_vs_Backbone,NumExamples
-Backbone,0.42424875,0.368,0.394,0.51,0.0,0.0,500
-+ Ontology,0.36873155,0.176,0.454,0.846,-0.0555,0.336,500
-+ Ontology + Hard,0.4674545,0.294,0.538,0.922,0.0432,0.412,500
-+ Ontology + Soft,0.43221936,0.246,0.518,0.9,0.008,0.39,500

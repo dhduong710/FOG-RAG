@@ -1,5 +1,0 @@
-Structure-only ordering by MRR:
-ComplEx: MRR=0.13171101, Hits@10=0.41
-HRGAT: MRR=0.09550672, Hits@10=0.29
-TransE: MRR=0.08074941, Hits@10=0.244
-R-GCN: MRR=0.05388868, Hits@10=0.152

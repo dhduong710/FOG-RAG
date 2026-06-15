@@ -1,9 +1,0 @@
-{
-  "decision": "DAY3_HETIONET_ALL_STRUCTURE_BASELINES_READY",
-  "main_softfuse_source": "rgcn",
-  "main_source_status": "usable_with_top1_collapse_caution",
-  "best_valid_structure_baseline": "complex",
-  "best_test_mrr_model": "hrgat",
-  "caution": "R-GCN and HRGAT have Top1Dom = 1.0, so their high test MRR should be interpreted cautiously. R-GCN is retained as the DrKGC/SoftFuse source because it is graph-compatible, has competitive Gold@20, and provides entity_embeddings_rgcn.pt.",
-  "next_step": "Build R-GCN backbone_raw source, then apply soft-support re-ranking and fuzzy retrieval. Optionally build a ComplEx-source diagnostic row after the main R-GCN row is complete."
-}

@@ -1,6 +1,0 @@
-{
-  "label": "hard_valid",
-  "candidate_json": "dataset/setting_a/19_contra_aware/valid_top20_hard_main.json",
-  "metrics_txt": "results/week10/hard_valid/metrics.txt",
-  "num_rows": 500
-}

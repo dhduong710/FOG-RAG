@@ -1,7 +1,0 @@
-comparison,layer,delta_mrr,delta_h1,delta_h3,delta_h10,delta_h20
-soft_support_raw - backbone_raw,candidate_ceiling,0.06076335,0.048,0.096,0.03,0.0
-soft_support_raw - backbone_raw,e2e_generation,0.02703981,-0.002,0.084,0.04,0.0
-retrieval_main - soft_support_raw,candidate_ceiling,0.0,0.0,0.0,0.0,0.0
-retrieval_main - soft_support_raw,e2e_generation,1.099e-05,0.0,0.0,0.0,0.0
-retrieval_main - backbone_raw,candidate_ceiling,0.06076335,0.048,0.096,0.03,0.0
-retrieval_main - backbone_raw,e2e_generation,0.0270508,-0.002,0.084,0.04,0.0

@@ -1,4 +1,0 @@
-row,candidate_mrr,candidate_h1,candidate_h3,candidate_h10,e2e_mrr,e2e_h1,e2e_h3,e2e_h10,exact_gen,pred_in_candidates,avg_subgraph_size
-backbone_raw,0.06456283,0.024,0.07,0.192,0.04763573,0.002,0.048,0.178,0.002,0.98,59.932
-soft_support_raw,0.12532618,0.072,0.166,0.222,0.07467554,0.0,0.132,0.218,0.0,0.98,59.932
-soft_support_fuzzy_retrieval_main,0.12532618,0.072,0.166,0.222,0.07468653,0.0,0.132,0.218,0.0,0.998,32.34

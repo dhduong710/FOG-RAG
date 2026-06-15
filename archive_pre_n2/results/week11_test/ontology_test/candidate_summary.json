@@ -1,6 +1,0 @@
-{
-  "label": "ontology_test",
-  "candidate_json": "dataset/setting_a/18_ontology_only/test_top20_ontology_only.json",
-  "metrics_txt": "results/week11_test/ontology_test/metrics.txt",
-  "num_rows": 500
-}

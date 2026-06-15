@@ -1,1 +1,0 @@
-ranking metrics: {'mrr': 0.09797309, 'hits1': 0.002, 'hits3': 0.102, 'hits10': 0.174, 'num_examples': 500}

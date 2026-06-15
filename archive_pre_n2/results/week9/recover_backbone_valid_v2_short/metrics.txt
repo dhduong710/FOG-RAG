@@ -1,1 +1,0 @@
-ranking metrics: {'mrr': np.float64(0.31301793), 'hits1': np.float64(0.244), 'hits3': np.float64(0.278), 'hits10': np.float64(0.434)}

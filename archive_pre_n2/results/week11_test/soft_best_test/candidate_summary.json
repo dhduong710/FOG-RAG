@@ -1,6 +1,0 @@
-{
-  "label": "soft_best_test",
-  "candidate_json": "dataset/setting_a/19_contra_aware/test_top20_soft_best.json",
-  "metrics_txt": "results/week11_test/soft_best_test/metrics.txt",
-  "num_rows": 500
-}

@@ -104,7 +104,7 @@ def main() -> None:
     parser.add_argument(
         "--output",
         type=str,
-        default="reports/week3/safety_eval_summary.json",
+        default="outputs/evaluation/safety_eval_summary.json",
         help="Output JSON summary path",
     )
     args = parser.parse_args()

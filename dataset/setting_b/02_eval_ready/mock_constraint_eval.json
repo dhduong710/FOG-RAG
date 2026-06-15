@@ -1,7 +1,0 @@
-[
-  {
-    "query_disease": "hypertension",
-    "setting_a_relation": "indication",
-    "candidate_drugs": ["Abacavir", "A1BG"]
-  }
-]
